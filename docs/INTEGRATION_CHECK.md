@@ -1,15 +1,27 @@
-# B3 四服务接口集成检查
+# A3/B3 四服务接口集成检查
 
 ## 范围与方法
 
 本记录检查仓库中的人工 JSON fixture、服务专有 Schema、公共 Job Schema 和产物引用，不代表真实服务、镜像构建、检测算法或跨组网络联调已经运行。
 
-本次实际执行了：
+第一轮由 B3 完成跨文件值比较和文档检查。2026-09-20，A3 在最新 `main` 上进行第二轮独立复核，实际执行了：
 
-- 用 PowerShell `ConvertFrom-Json` 解析仓库内 19 个 JSON 文件；全部解析成功。
+- 用 `jq` 解析仓库内 19 个 JSON 文件；全部解析成功。
+- 用 `check-jsonschema` 完成公共 Schema 元校验，并验证八个服务请求/响应样例；全部通过。
+- 使用 `jsonschema 4.23.0` 和 `referencing 0.30.2` 运行四个服务的 `validate.py`；全部通过。
 - 对四个完成态响应检查八个公共字段、四种 `job_type`、六种公共状态、成功态 `error: null` 和 MD/RD findings 语义。
 - 跨文件比较镜像、`producer_job_id`、`configuration_id`、依赖图/报告 URI 和 REPAIR 消费的 finding 类型。
-- 尝试运行四个已有 `validate.py`；当前 Python 环境缺少 `jsonschema`，四个脚本均在导入阶段退出，因此未记为通过。
+
+## 自动校验结果
+
+| 服务 | 合法生命周期样例 | 负向与交接检查 | 结果 |
+| --- | ---: | ---: | --- |
+| BuildChecker | 5 | 14 | 通过 |
+| EChecker | 6 | 37，另有 1 条预期警告 | 通过 |
+| DRAFT | 5 | 22 | 通过 |
+| MDFixer | 6 | 17 | 通过 |
+
+EChecker 的预期警告来自 `base_commit` 与 `baseline.commit` 不一致的测试。按照 A2 当前契约，该情况记录警告但不直接拒绝；是否作为最终跨组政策仍列在开放问题中。
 
 ## 衔接结果
 

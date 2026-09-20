@@ -8,11 +8,11 @@
 - B 组编号：TODO（仓库中未记录）
 - 配对关系：G16（具体 A/B 组号待确认）
 - A1：焦龙，Git 作者 `illusiri`，负责 BuildChecker 接口
-- A3：Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
 - A2：万宇，Git 作者 `adscfe`，负责 EChecker 接口
-- B2：Git 作者 `jinglsn`
+- A3：Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
 - B1：郭德林，Git 作者 `DelinGuo`，负责 DRAFT 接口
-- B3：姓名和 Git 身份待对应成员补充
+- B2：Git 提交作者 `jenicifor`，负责 MDFixer 接口；姓名待本人补充
+- B3：Git 提交作者 `Lilyly9`，负责公共契约与集成；姓名待本人补充
 
 ## 成员分工
 
@@ -110,7 +110,7 @@ DRAFT
   → 重新构建、测试、重检
 ```
 
-B3 已对样例链路进行离线字段核对。DRAFT 的固定镜像、配置和生产任务编号能进入三个下游；FULL_CHECK 的实际依赖图及 findings 报告能作为 EChecker 基线和 MDFixer 输入；INCREMENTAL_CHECK 明确记录基线、当前提交、配置、更新后图以及新增/消除 findings；REPAIR 只消费 `MISSING`，并用 Patch、summary 和 build/test/recheck 结果表达修复过程。详细证据和边界见 [`docs/INTEGRATION_CHECK.md`](docs/INTEGRATION_CHECK.md)。
+A3 与 B3 已对样例链路进行离线字段核对。DRAFT 的固定镜像、配置和生产任务编号能进入三个下游；FULL_CHECK 的实际依赖图及 findings 报告能作为 EChecker 基线和 MDFixer 输入；INCREMENTAL_CHECK 明确记录基线、当前提交、配置、更新后图以及新增/消除 findings；REPAIR 只消费 `MISSING`，并用 Patch、summary 和 build/test/recheck 结果表达修复过程。详细证据和边界见 [`docs/INTEGRATION_CHECK.md`](docs/INTEGRATION_CHECK.md)。
 
 ## 状态与错误语义
 
@@ -132,16 +132,16 @@ B3 已对样例链路进行离线字段核对。DRAFT 的固定镜像、配置�
 jq empty contracts/task.schema.json
 ```
 
-安装 `check-jsonschema` 后可检查 Schema 自身：
+可使用 `uvx` 临时运行校验器，无需修改项目依赖：
 
 ```bash
-check-jsonschema --check-metaschema contracts/task.schema.json
+uvx check-jsonschema --check-metaschema contracts/task.schema.json
 ```
 
 四个服务的样例文件完成后，分别使用公共 Schema 校验：
 
 ```bash
-check-jsonschema --schemafile contracts/task.schema.json \
+uvx check-jsonschema --schemafile contracts/task.schema.json \
   contracts/buildchecker/request.json \
   contracts/buildchecker/response.json \
   contracts/echecker/request.json \
@@ -168,41 +168,50 @@ check-jsonschema --schemafile contracts/task.schema.json \
 - [x] Unified Job contract
 - [x] Interface integration check（离线样例字段与产物引用检查；非实际服务联调）
 - [x] ADR
-- [x] AI_USAGE（B3 记录已补充；其他成员记录保持不变）
+- [x] A3 独立公共字段与四服务校验复核
+- [x] AI_USAGE（六个角色均已有记录）
 - [ ] A/B 两组确认集成检查记录中的开放问题
 
-四类接口的请求/响应、专有 Schema、人工产物和校验脚本均已存在。B3 已完成公共字段与样例链路复核；实际服务联调、真实构建/检测/修复以及全员最终签字不在本次离线检查的完成声明内。
+四类接口的请求/响应、专有 Schema、人工产物和校验脚本均已存在。A3/B3 已完成公共字段与样例链路复核；实际服务联调、真实构建/检测/修复以及全员最终签字不在本次离线检查的完成声明内。
 
 ## 现有成员验证记录
 
-A1 校验命令（Python 环境需安装 `jsonschema`）：
+A1 校验命令：
 
 ```bash
-python contracts/buildchecker/validate.py
+uv run --with jsonschema==4.23.0 --with referencing==0.30.2 \
+  python contracts/buildchecker/validate.py
 ```
 
-A1 已通过公共及专有 Schema 校验、产物读取与内容一致性检查，以及非法输入和交接不一致反例检查；已补充本人 AI 使用和贡献记录。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。
+A1 已通过公共及专有 Schema 校验、产物读取与内容一致性检查，以及非法输入和交接不一致反例检查；A3 已独立复跑通过。以上不代表全组确认或实际服务联调已经完成。
 
-A2 校验命令（Python 环境需安装 `jsonschema`）：
+A2 校验命令：
 
 ```bash
-python contracts/echecker/validate.py
+uv run --with jsonschema==4.23.0 --with referencing==0.30.2 \
+  python contracts/echecker/validate.py
 ```
 
-A2 已通过公共及专有 Schema 校验、读取 A1 产物作为基线后的来源/提交/配置一致性检查、基线增量闭合与图合并检查，以及缺少 `baseline` 等非法输入和交接不一致反例检查；已补充本人 AI 使用和贡献记录。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。
+A2 已通过公共及专有 Schema 校验、读取 A1 产物作为基线后的来源/提交/配置一致性检查、基线增量闭合与图合并检查，以及缺少 `baseline` 等非法输入和交接不一致反例检查；A3 已独立复跑通过，其中 `base_commit` 与 `baseline.commit` 不一致按 A2 约定产生警告而非拒绝。以上不代表全组确认或实际服务联调已经完成。
 
-B2 校验命令（Python 环境需安装 `jsonschema`）：
+B2 校验命令：
 
 ```bash
-python contracts/mdfixer/validate.py
+uv run --with jsonschema==4.23.0 --with referencing==0.30.2 \
+  python contracts/mdfixer/validate.py
 ```
 
-B2 已通过公共及专有 Schema 校验、ERROR_REPORT 读取与仅消费 MISSING 检查、Patch 产物读取与内容核对，以及非法输入和交接不一致反例检查。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。
+B2 已通过公共及专有 Schema 校验、ERROR_REPORT 读取与仅消费 MISSING 检查、Patch 产物读取与内容核对，以及非法输入和交接不一致反例检查；A3 已独立复跑通过。以上不代表全组确认或实际服务联调已经完成。
 
-B1 校验命令（Python 环境需安装 `jsonschema`）：
+B1 校验命令：
 
 ```bash
-python contracts/draft/validate.py
+uv run --with jsonschema==4.23.0 --with referencing==0.30.2 \
+  python contracts/draft/validate.py
 ```
 
-B1 已通过公共及专有 Schema 校验、Dockerfile 与逐轮日志产物读取及内容一致性检查、A1/A2/B2 下游请求的镜像/配置/任务来源核对，以及非法输入和交接不一致反例检查；已补充本人 AI 使用和贡献记录。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。
+B1 已通过公共及专有 Schema 校验、Dockerfile 与逐轮日志产物读取及内容一致性检查、A1/A2/B2 下游请求的镜像/配置/任务来源核对，以及非法输入和交接不一致反例检查；A3 已独立复跑通过。以上不代表全组确认或实际服务联调已经完成。
+
+## 最终离线复核结论
+
+2026-09-20，A3 在最新 `main` 上完成独立复核：公共 Schema 元校验通过，八个请求/响应样例全部通过公共 Schema，仓库内 19 个 JSON 文件均可解析，四个服务的 `validate.py` 均完整通过。当前剩余工作只包括 README 中未确认的 A/B 组号、B2/B3 姓名，以及 [`docs/INTEGRATION_CHECK.md`](docs/INTEGRATION_CHECK.md) 中需要两组共同决定的开放问题。
