@@ -1,3 +1,7 @@
+
+
+
+
 # 成员贡献记录
 
 每位成员记录本人负责的文件、提交说明和提交 SHA。未知信息不得由其他成员代填。
@@ -35,7 +39,14 @@
 
 ## B1
 
-待 B1 填写。
+- 成员：郭德林；Git 作者：`DelinGuo`。
+- 负责内容：DRAFT 环境生成接口的请求、结果、Dockerfile 与逐轮日志产物读取约定。
+- 已完成：`contracts/draft/request.json`、`response.json`、接口 README、服务专有 `contract.schema.json`、三份人工产物及 `validate.py`。
+- 文档补充：README 中 B1 姓名/职责/进度、AI_USAGE 的 B1 部分、本贡献记录。
+- 验证：五种合法生命周期消息、十三个非法消息反例、三份产物实际读取及内容核对、A1/A2/B2 下游请求的镜像/配置/任务来源核对，以及九个非法交接反例，均达到预期。
+- 待协作：A1/A2/B2 交接互查、A3 独立字段复核、B3 汇总公共设计决定；尚未实施实际服务或声称全组已确认。
+- 接口提交：`8021fd2`（`feat(contracts): add B1 DRAFT environment handoff examples`），作者 `DelinGuo`。
+- 文档提交说明：`docs(e2): record B1 contribution and progress`；可通过 `git log --oneline --author=DelinGuo` 查到文档提交 SHA，避免在提交内部填写自身尚未生成的 SHA。
 
 ## B2
 

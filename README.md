@@ -9,7 +9,8 @@
 - A3：Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
 - A2：万宇，Git 作者 `adscfe`，负责 EChecker 接口
 - B2：Git 作者 `jinglsn`
-- B1、B3：姓名和 Git 身份待对应成员补充
+- B1：郭德林，Git 作者 `DelinGuo`，负责 DRAFT 接口
+- B3：姓名和 Git 身份待对应成员补充
 
 ## 成员分工
 
@@ -57,6 +58,8 @@ A1 的 BuildChecker 目录还包含服务专有 `contract.schema.json`、离线�
 A2 的 EChecker 目录同样包含服务专有 `contract.schema.json`、离线校验脚本 `validate.py` 和 `artifacts/` 下的三份人工产物，字段说明和交接待确认项见 [EChecker 接口说明](contracts/echecker/README.md)。其中 `request.json` 是增量检测的创建请求，`response.json` 是任务完成后的查询结果；其基线是 A1 的 `ACTUAL_GRAPH` 与 `ERROR_REPORT` 样例，全部字段值仍为占位数据，不代表检测服务已运行。
 
 B2 的 MDFixer 目录同样包含服务专有 `contract.schema.json`、离线校验脚本 `validate.py` 和 `artifacts/` 下的 Git Patch 人工产物。字段说明和交接待确认项见 [MDFixer 接口说明](contracts/mdfixer/README.md)。`request.json` 是创建请求，`response.json` 是修复完成后的查询结果；Patch 和验证结果均为人工样例，仓库、镜像和被修复提交均为占位值，不代表修复服务已运行。
+
+B1 的 DRAFT 目录同样包含服务专有 `contract.schema.json`、离线校验脚本 `validate.py` 和 `artifacts/` 下的 Dockerfile 与逐轮构建日志人工产物。字段说明和交接待确认项见 [DRAFT 接口说明](contracts/draft/README.md)。`request.json` 是创建请求，`response.json` 是环境生成完成后的查询结果；Dockerfile、日志和验证结果均为人工样例，仓库、镜像和被构建提交均为占位值，不代表环境生成服务已运行。
 
 ## 公共任务模型
 
@@ -136,7 +139,7 @@ check-jsonschema --schemafile contracts/task.schema.json \
 - [ ] 六名成员共同确认公共字段和枚举
 - [x] A1：焦龙完成 BuildChecker 请求与响应样例、可读取的人工报告/依赖图和离线校验；与 A2/B1/B2 的交接互查仍待进行
 - [x] A2：完成 EChecker 请求与响应样例、专有 Schema、基线与增量的离线校验；与 A1/B2 的交接互查仍待进行
-- [ ] B1：完成 DRAFT 请求与响应样例
+- [x] B1：郭德林完成 DRAFT 请求与响应样例、Dockerfile 与逐轮日志产物和离线校验；与 A1/A2/B2 的交接互查仍待进行
 - [x] B2：完成 MDFixer 请求与响应样例、Git Patch 产物和离线校验；与 A1 的交接互查仍待进行
 - [ ] A3：A1/A2 文件出现后执行公共字段一致性检查
 - [ ] B3：整理 Backlog 和 ADR
@@ -166,3 +169,11 @@ python contracts/mdfixer/validate.py
 ```
 
 B2 已通过公共及专有 Schema 校验、ERROR_REPORT 读取与仅消费 MISSING 检查、Patch 产物读取与内容核对，以及非法输入和交接不一致反例检查。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。
+
+B1 校验命令（Python 环境需安装 `jsonschema`）：
+
+```bash
+python contracts/draft/validate.py
+```
+
+B1 已通过公共及专有 Schema 校验、Dockerfile 与逐轮日志产物读取及内容一致性检查、A1/A2/B2 下游请求的镜像/配置/任务来源核对，以及非法输入和交接不一致反例检查；已补充本人 AI 使用和贡献记录。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。

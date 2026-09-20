@@ -106,7 +106,34 @@
 
 ## B1
 
-待 B1 填写。
+### 工具与任务
+
+- 成员：郭德林；Git 作者：`DelinGuo`。
+- 工具：Claude Code（模型 Claude Sonnet 4.6）。
+- 任务：在 A3 公共任务模型和 A1/A2/B2 既有样例的基础上，完成 DRAFT 环境生成接口样例，并只更新 README 中 B1 的信息与进度。
+
+### 提示摘要与 AI 建议
+
+- 用户要求完成成员 B1 对应的部分。AI 发现当前仓库不存在 `contracts/draft/` 文件且 git 历史无 B1 提交，判断前次会话生成的样例随仓库重新克隆丢失，本次在当前仓库重建。
+- AI 从课程 PPT《E2_需求与接口契约_20260910.pptx》备查页提取 DRAFT 语义：输入为 `repository.url + commit`、`build.command + verify_command`、`max_iterations` 与时间限制（slide 20）；输出为 Dockerfile 与镜像引用、每轮日志/修改/选择理由、最终构建和验证结果；创建端点参考 slide 27 的 `POST /v1/dockerfile-jobs`；slide 4 确认 DRAFT 交接内容为环境、镜像、日志。
+- AI 建议用两轮迭代样例说明迭代语义：第 1 轮缺 bison 构建失败，第 2 轮补齐后通过两条成功判据，产出 DOCKERFILE 一份与 BUILD_LOG 两份共三份产物。
+- AI 建议 `validate.py` 除 Schema 校验外，实际读取 A1/A2/B2 的请求样例，核对 `producer_job_id`、镜像 digest 和 `configuration_id` 一致，把「三个下游消费 DRAFT 输出」变成可执行的检查。
+
+### 人工指示与本次处理
+
+- 已确认的人工指示：本人在 README/AI_USAGE/CONTRIBUTIONS 中写入姓名「郭德林」（Git 作者 `DelinGuo`）；其余接口细节为 B1 提案，未声称全组已采纳。
+- `configuration_id` 放入 DRAFT 输入、成功判据职责划分、「源码级无法构建时 DRAFT 报 FAILED 还是让 BuildChecker 继续诊断」、迭代耗尽错误码是否复用 `ENV_3002`，均列为待确认项写入接口 README 的交接段。
+- 样例全部标明 `MANUAL_FIXTURE`，使用占位仓库、镜像和提交；未运行 DRAFT，未构建真实镜像。
+- 未代做 A1/A2/B2 的接口或 B3 的公共设计文档，未修改其他成员的文件与记录段。
+
+### 验证
+
+- 使用 Python 3.14.5 的 `jsonschema 4.26.0` Draft 2020-12 校验器及 `referencing`，离线解析公共 Schema 引用。
+- 两份 Schema 元校验通过；创建、受理、完成、失败、超时共五种合法消息通过公共和服务 Schema。
+- 实际读取 Dockerfile 与两份逐轮日志，核对 `MANUAL_FIXTURE` 标注、成功判据标记行与请求 commit 一致；实际读取 A1/A2/B2 请求样例核对镜像、配置与生产任务来源。
+- 十三个非法消息反例被拒绝；九个非法交接反例（配置不一致、产物引用缺失/类型错误、轮次不连续、末轮非 SUCCESS、生产任务不一致、路径越界、commit 不一致、下游镜像不一致）被拒绝。
+- 校验命令：`python contracts/draft/validate.py`；仅为离线契约检查，不是环境构建验证或组间联调。
+- 关联文件：`contracts/draft/`、README 的 B1 信息、本记录及 CONTRIBUTIONS 的 B1 部分。提交版本见 CONTRIBUTIONS。
 
 ## B2
 
