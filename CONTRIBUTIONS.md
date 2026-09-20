@@ -59,4 +59,10 @@
 
 ## B3
 
-待 B3 填写并最终汇总。
+- 负责：公共 Job 契约检查与完善、任务状态和错误语义统一、四服务接口集成检查、README 完善、Backlog 公共任务补充、ADR 编写、AI_USAGE 更新。
+- 公共契约：复核 `contracts/task.schema.json` 的八个完成态字段、四种任务类型、六种状态和错误对象规则；补充 MD/RD 非系统错误及 artifact URI 的语义说明。
+- 集成检查：核对 DRAFT 镜像/配置/生产任务、FULL_CHECK 图与 findings 报告、EChecker baseline/增量结果、MDFixer MISSING-only 输入及 Patch/build/test/recheck 输出。
+- 文档：更新 `README.md`、`AI_USAGE.md` 和本记录；新增 `docs/Backlog.md`、`docs/ADR.md`、`docs/INTEGRATION_CHECK.md`。
+- 边界：未修改 A1/A2/B1/B2 的接口样例和服务专有 Schema；未把离线 fixture 检查表述为真实服务联调。
+- 验证：19 个 JSON 文件通过语法解析；公共字段、枚举和跨文件衔接检查通过。四个服务校验脚本因当前环境缺少 `jsonschema` 未能运行，已如实记录。
+- Commit SHA: TODO（提交后填写）

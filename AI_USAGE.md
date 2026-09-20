@@ -166,6 +166,35 @@
 - 校验命令：`python contracts/mdfixer/validate.py`；仅为离线契约检查，不是算法验证或组间联调。
 - 关联文件：`contracts/mdfixer/`、README 的 B2 信息、本记录及 CONTRIBUTIONS 的 B2 部分。提交版本见 CONTRIBUTIONS。
 
-## B3
+## B3 - 公共契约与集成
 
-待 B3 填写并最终汇总。
+### 工具
+
+OpenAI Codex
+
+### 任务
+
+检查 DRAFT、FULL_CHECK、INCREMENTAL_CHECK、REPAIR 四类接口契约的一致性，并补充公共 Job 模型的状态/错误语义、README、Backlog、ADR、接口集成检查和 B3 贡献记录。
+
+### AI 建议
+
+- 保留 A1/A2/B1/B2 的服务专有字段，通过现有 `contracts/task.schema.json` 统一公共生命周期字段，不重建第二套 Schema。
+- 把 MD/RD 作为 `SUCCEEDED + output.findings`，只把系统执行异常放入 `job.error`。
+- 用 artifact reference/URI 传递图、报告、日志和 Patch，不在课程尚未确定时绑定具体对象存储。
+- 通过跨文件值比较核对 DRAFT 镜像、FULL_CHECK 图/报告、EChecker 基线和 MDFixer 的 MISSING-only 消费规则。
+- 将 `trace_id` 不连续、线性 fixture 缺口、基线字段重复和 build 字段差异列为待两组确认事项，不自行改写成员接口。
+
+### 人工判断
+
+- 采纳了统一 Job 字段、状态/错误分离、通用产物引用和 B3 文档记录建议，并只对公共 Schema 增补语义说明。
+- 将建议中的接口“统一”限定为公共字段和可验证的交接关系；服务专有 build 字段、EChecker 的双基线字段和现有 `ERROR_REPORT` 命名仅作为评审事项保留。
+- 未修改 A1/A2/B1/B2 的 request、response、服务专有 Schema、校验脚本和产物，因为现有文件内部一致，且未确认的命名/策略不能由 B3 单方面决定。
+- 现有贡献文件名为 `CONTRIBUTIONS.md`（复数），因此在该文件追加 B3 记录，没有另建重复的 `docs/CONTRIBUTION.md`。
+
+### 验证
+
+- 已人工检查 DRAFT → FULL_CHECK、FULL_CHECK → INCREMENTAL_CHECK、FULL_CHECK → REPAIR 的数据链路，并确认单条 INCREMENTAL_CHECK → REPAIR fixture 尚缺，已记录为待确认问题。
+- 已使用 PowerShell `ConvertFrom-Json` 检查仓库内 19 个 JSON 文件，全部通过语法解析。
+- 已执行公共字段/枚举与跨文件值比较：四个完成态响应公共字段齐全，job type/status 枚举一致，DRAFT 镜像/配置/生产任务衔接一致，FULL_CHECK 产物 URI 可被 EChecker/MDFixer 引用，REPAIR 只消费 MISSING，MD/RD 未被当成 FAILED；检查结果均通过。
+- 已尝试运行 `contracts/draft/validate.py`、`contracts/buildchecker/validate.py`、`contracts/echecker/validate.py`、`contracts/mdfixer/validate.py`，但当前 Python 环境缺少 `jsonschema`，均在导入阶段退出；因此未将服务专有 Schema 校验记录为通过，也未安装额外依赖。
+- 已检查 Markdown 本地链接、代码围栏和尾随空白；结果以本次最终检查输出为准。

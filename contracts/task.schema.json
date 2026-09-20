@@ -35,6 +35,7 @@
     },
     "jobStatus": {
       "type": "string",
+      "description": "Lifecycle status. Analysis findings such as MISSING/REDUNDANT do not change a normally completed job from SUCCEEDED to FAILED.",
       "enum": [
         "QUEUED",
         "RUNNING",
@@ -50,6 +51,7 @@
     },
     "error": {
       "type": "object",
+      "description": "System execution failure only (for example ENV_3002 image build failure, EXEC_4002 timeout, or ANALYSIS_5001 analyzer failure). Domain findings belong in output.findings.",
       "required": [
         "code",
         "message"
@@ -66,7 +68,8 @@
           "description": "Human-readable explanation without secrets."
         },
         "details": {
-          "type": "object"
+          "type": "object",
+          "description": "Optional structured diagnostic context; it must not contain MD/RD findings as job failures."
         },
         "retriable": {
           "type": "boolean"
@@ -93,7 +96,8 @@
         },
         "uri": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "Resolvable artifact reference. The storage scheme is deployment-defined; this repository uses repo:// for offline fixtures."
         },
         "media_type": {
           "type": "string",

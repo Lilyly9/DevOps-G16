@@ -1,10 +1,12 @@
-# DevOps-G16 E2 接口契约
+# DevOps E2 - 需求与接口契约
 
 本仓库用于完成 DevOps 教学实验 E2。当前阶段只约定 DRAFT、BuildChecker、EChecker 和 MDFixer 四个服务之间的数据接口，保留接口样例、设计记录和个人贡献；不实现完整服务。
 
 ## 小组信息
 
-- 配对组编号：G16
+- A 组编号：TODO（仓库中未记录）
+- B 组编号：TODO（仓库中未记录）
+- 配对关系：G16（具体 A/B 组号待确认）
 - A1：焦龙，Git 作者 `illusiri`，负责 BuildChecker 接口
 - A3：Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
 - A2：万宇，Git 作者 `adscfe`，负责 EChecker 接口
@@ -21,9 +23,17 @@
 | A3 | 公共任务模型 | `contracts/task.schema.json`，检查 A 组公共字段一致性 |
 | B1 | DRAFT 接口 | `contracts/draft/request.json`、`response.json` |
 | B2 | MDFixer 接口 | `contracts/mdfixer/request.json`、`response.json` |
-| B3 | 公共设计文档 | `docs/backlog.md`、`docs/adr.md`，负责最终整理 |
+| B3 | 公共契约与集成 | 检查统一 Job Schema 和四服务衔接，统一状态/错误语义，维护 `README.md`、`docs/Backlog.md`、`docs/ADR.md`、`docs/INTEGRATION_CHECK.md`、`AI_USAGE.md` |
 
 所有成员还要补充自己的 `AI_USAGE.md` 和 `CONTRIBUTIONS.md` 记录。A3 与 B3 共同维护本 README。
+
+B3 负责：
+
+- 检查并完善统一 Job Schema；
+- 统一任务状态与系统错误/检测发现语义；
+- 检查 DRAFT、BuildChecker、EChecker、MDFixer 四服务接口衔接；
+- 完善 README、ADR、AI_USAGE 和 B 组公共设计记录；
+- 协助 A/B 两组进行接口联调并汇总待确认问题。
 
 ## 目录约定
 
@@ -44,8 +54,9 @@
 │       ├── request.json
 │       └── response.json
 ├── docs/
-│   ├── backlog.md
-│   └── adr.md
+│   ├── ADR.md
+│   ├── Backlog.md
+│   └── INTEGRATION_CHECK.md
 ├── AI_USAGE.md
 ├── CONTRIBUTIONS.md
 └── README.md
@@ -89,14 +100,29 @@ Schema 区分三类生命周期消息：
 
 各服务把专有字段放在 `input` 和 `output` 内。Schema 允许新增可选字段，以便进行兼容扩展；删除字段、改名、改变字段含义或修改枚举时，应更新 `schema_version` 并与消费方确认。
 
+## 四服务流程
+
+```text
+DRAFT
+  → BuildChecker（FULL_CHECK）
+  → EChecker（INCREMENTAL_CHECK）
+  → MDFixer（REPAIR）
+  → 重新构建、测试、重检
+```
+
+B3 已对样例链路进行离线字段核对。DRAFT 的固定镜像、配置和生产任务编号能进入三个下游；FULL_CHECK 的实际依赖图及 findings 报告能作为 EChecker 基线和 MDFixer 输入；INCREMENTAL_CHECK 明确记录基线、当前提交、配置、更新后图以及新增/消除 findings；REPAIR 只消费 `MISSING`，并用 Patch、summary 和 build/test/recheck 结果表达修复过程。详细证据和边界见 [`docs/INTEGRATION_CHECK.md`](docs/INTEGRATION_CHECK.md)。
+
 ## 状态与错误语义
 
 - 检测到 MD 或 RD 表示分析正常完成，任务状态应为 `SUCCEEDED`，发现写入 `output.findings`。
 - 环境构建失败、任务超时或分析器失败才写入 `error`，并使用 `FAILED` 或 `TIMED_OUT`。
+- 参考错误码包括镜像构建失败 `ENV_3002`、任务超时 `EXEC_4002`、分析器失败 `ANALYSIS_5001`；公共 Schema 不把错误码封闭为枚举，以兼容各服务已有错误码。
 - `SUCCEEDED` 必须有对象类型的 `output`，且 `error` 必须为 `null`。
 - `FAILED` 和 `TIMED_OUT` 必须提供至少含 `code` 和 `message` 的错误对象。
 
 大型依赖图、日志和 Patch 应作为产物传递。公共 Schema 已定义 `artifact_id`、`type`、`uri`、`media_type`、`producer_job_id` 和可选的 `sha256`。
+
+产物 URI 的存储实现不在本实验中绑定到特定平台。仓库离线样例使用 `repo://`，消费方应先在 Job 的 `artifacts` 中按 `artifact_id` 找到元数据，再解析对应 `uri`；生产环境采用其他 URI scheme 时需由 A/B 两组共同确认。
 
 ## 校验方法
 
@@ -133,18 +159,21 @@ check-jsonschema --schemafile contracts/task.schema.json \
 - `FAILED` 或 `TIMED_OUT` 任务没有错误对象；
 - EChecker 请求缺少 `baseline`。最后一项属于 EChecker 专有输入规则，已由 A2 的接口契约（`contracts/echecker/contract.schema.json` 与 `validate.py`）补充，并覆盖了 `baseline` 缺少必填字段的正反例。
 
-## 当前进度
+## 当前完成情况
 
-- [x] A3：定义公共 `task.schema.json`
-- [ ] 六名成员共同确认公共字段和枚举
-- [x] A1：焦龙完成 BuildChecker 请求与响应样例、可读取的人工报告/依赖图和离线校验；与 A2/B1/B2 的交接互查仍待进行
-- [x] A2：完成 EChecker 请求与响应样例、专有 Schema、基线与增量的离线校验；与 A1/B2 的交接互查仍待进行
-- [x] B1：郭德林完成 DRAFT 请求与响应样例、Dockerfile 与逐轮日志产物和离线校验；与 A1/A2/B2 的交接互查仍待进行
-- [x] B2：完成 MDFixer 请求与响应样例、Git Patch 产物和离线校验；与 A1 的交接互查仍待进行
-- [ ] A3：A1/A2 文件出现后执行公共字段一致性检查
-- [ ] B3：整理 Backlog 和 ADR
-- [ ] A3/B3：全员信息和接口完成后最终更新 README
-- [ ] 所有人：补齐 AI 使用记录和贡献记录
+- [x] DRAFT interface
+- [x] FULL_CHECK interface
+- [x] INCREMENTAL_CHECK interface
+- [x] REPAIR interface
+- [x] Unified Job contract
+- [x] Interface integration check（离线样例字段与产物引用检查；非实际服务联调）
+- [x] ADR
+- [x] AI_USAGE（B3 记录已补充；其他成员记录保持不变）
+- [ ] A/B 两组确认集成检查记录中的开放问题
+
+四类接口的请求/响应、专有 Schema、人工产物和校验脚本均已存在。B3 已完成公共字段与样例链路复核；实际服务联调、真实构建/检测/修复以及全员最终签字不在本次离线检查的完成声明内。
+
+## 现有成员验证记录
 
 A1 校验命令（Python 环境需安装 `jsonschema`）：
 
