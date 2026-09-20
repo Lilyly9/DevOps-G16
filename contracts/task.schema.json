@@ -1,0 +1,333 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devops-g16.example/contracts/task.schema.json",
+  "title": "DevOps E2 unified asynchronous job contract",
+  "description": "Defines the shared fields and lifecycle messages used by DRAFT, BuildChecker, EChecker, and MDFixer.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/jobSubmission"
+    },
+    {
+      "$ref": "#/$defs/jobAccepted"
+    },
+    {
+      "$ref": "#/$defs/jobRecord"
+    }
+  ],
+  "$defs": {
+    "schemaVersion": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Version of this contract, for example 1.0.0."
+    },
+    "identifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "jobType": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "FULL_CHECK",
+        "INCREMENTAL_CHECK",
+        "REPAIR"
+      ]
+    },
+    "jobStatus": {
+      "type": "string",
+      "enum": [
+        "QUEUED",
+        "RUNNING",
+        "SUCCEEDED",
+        "FAILED",
+        "TIMED_OUT",
+        "CANCELLED"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "description": "Service-specific data. Each service owns the fields inside this object."
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Stable machine-readable error code, for example ENV_3002."
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human-readable explanation without secrets."
+        },
+        "details": {
+          "type": "object"
+        },
+        "retriable": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "artifact_id",
+        "type",
+        "uri",
+        "media_type",
+        "producer_job_id"
+      ],
+      "properties": {
+        "artifact_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "producer_job_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "started_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "finished_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": true
+    },
+    "jobSubmission": {
+      "title": "Create-job request",
+      "type": "object",
+      "required": [
+        "schema_version",
+        "trace_id",
+        "job_type",
+        "input"
+      ],
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/schemaVersion"
+        },
+        "trace_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "job_type": {
+          "$ref": "#/$defs/jobType"
+        },
+        "input": {
+          "$ref": "#/$defs/payload"
+        },
+        "idempotency_key": {
+          "$ref": "#/$defs/identifier"
+        },
+        "job_id": false,
+        "status": false,
+        "output": false,
+        "error": false
+      },
+      "additionalProperties": true
+    },
+    "jobAccepted": {
+      "title": "HTTP 202 accepted response",
+      "type": "object",
+      "required": [
+        "schema_version",
+        "job_id",
+        "trace_id",
+        "job_type",
+        "status"
+      ],
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/schemaVersion"
+        },
+        "job_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "trace_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "job_type": {
+          "$ref": "#/$defs/jobType"
+        },
+        "status": {
+          "const": "QUEUED"
+        },
+        "input": false,
+        "output": false,
+        "error": false
+      },
+      "additionalProperties": true
+    },
+    "jobRecord": {
+      "title": "Queryable job record",
+      "type": "object",
+      "required": [
+        "schema_version",
+        "job_id",
+        "trace_id",
+        "job_type",
+        "status",
+        "input",
+        "output",
+        "error"
+      ],
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/schemaVersion"
+        },
+        "job_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "trace_id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "job_type": {
+          "$ref": "#/$defs/jobType"
+        },
+        "status": {
+          "$ref": "#/$defs/jobStatus"
+        },
+        "input": {
+          "$ref": "#/$defs/payload"
+        },
+        "output": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/payload"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "error": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/error"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution": {
+          "$ref": "#/$defs/execution"
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifact"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "QUEUED",
+                  "RUNNING"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "error": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "SUCCEEDED"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "output": {
+                "$ref": "#/$defs/payload"
+              },
+              "error": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "FAILED",
+                  "TIMED_OUT"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "error": {
+                "$ref": "#/$defs/error"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": true
+    }
+  }
+}
