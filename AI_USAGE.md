@@ -83,6 +83,7 @@
 - AI 建议沿用 `jobSubmission` / `jobAccepted` / `jobRecord` 分层，`job_type` 使用公共枚举中的 `INCREMENTAL_CHECK`。
 - 用户提供课程《E2 需求与接口契约》PPT 路径后，AI 提取备查页（EChecker 输入输出），发现自己的初版字段名与模板不同：模板是 `input.base_commit` 与扁平的 `baseline.{actual_graph_uri, commit, configuration_id}`。人工决定改向模板对齐，把 A2 自己的补充（`producer_job_id`、`error_report_uri`）单独标注为待确认项，而不是默默发明字段。
 - 用户提供姓名（万宇）和 Git 身份（`adscfe`）后，AI 填入 README 小组信息、CONTRIBUTIONS 与 AI_USAGE，未改动其他成员的姓名和贡献。
+- AI 把“模板之外的补充字段是否保留”“`base_commit` 与 `baseline.commit` 的冗余如何处理”列为待确认项并保持硬校验；用户的口径是“冗余跳过，提示，命名合理即可，不强制”，于是 AI 把重复值的一致性从拒收条件降为 `WARN` 提示（并补一条正向测试证明“不一致也受理”），其余项按提示、不强制处理。这说明人工比 AI 更愿意接受课程模板带来的冗余，AI 只负责把口径写回契约与校验。
 - AI 建议把 `baseline` 定义为“上一次检测任务 + 基线提交 + 配置 + `ACTUAL_GRAPH` + `ERROR_REPORT`”，并用基线的 `ERROR_REPORT` 判定 `NEW` / `CARRIED_OVER` / `RESOLVED`，而不是凭猜测推断历史发现。
 - AI 建议实际图采用“受影响目标重建、其余边复用基线”的合并策略，使 EChecker 产出的 `ACTUAL_GRAPH` 能继续作为下一次增量检测的基线。
 
@@ -99,7 +100,7 @@
 - 两份 Schema 元校验通过；创建、完成、受理、运行中、失败、超时共六个合法消息通过公共和服务 Schema。
 - 实际读取 A1 的 `ACTUAL_GRAPH` 与 `ERROR_REPORT`，核对仓库、提交、配置和任务来源，并检查基线增量闭合（基线发现 = 复用 + 解决）与未重检目标的图合并。
 - 二十五个非法消息反例被拒绍，包括缺少 `baseline`、`baseline` 缺少 `commit` / `actual_graph_uri` / `error_report_uri`、`base_commit` 与头提交相同、结论计数不一致等。
-- 十三个交接反例被拒绍，包括 `base_commit` 与 `baseline.commit` 不一致、基线配置不一致、基线产物来源不一致、增量未闭合、产物路径越界、未重检目标被改动。
+- 十二个交接反例被拒绍，包括基线配置不一致、基线产物来源不一致、增量未闭合、产物路径越界、未重检目标被改动；`base_commit` 与 `baseline.commit` 不一致则故意保留为可受理，只输出提示。
 - 校验命令：`python contracts/echecker/validate.py`；仅为离线契约检查，不是算法验证或组间联调。
 - 关联文件：`contracts/echecker/`、README 的 A2 信息、本记录及 CONTRIBUTIONS 的 A2 部分。提交版本见 CONTRIBUTIONS。
 
