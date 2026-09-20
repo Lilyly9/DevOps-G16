@@ -4,7 +4,14 @@
 
 ## A1
 
-待 A1 填写。
+- 成员：焦龙；Git 作者：`illusiri`。
+- 负责内容：BuildChecker 全量检测接口的请求、结果、MD/RD 表示和产物读取约定。
+- 已完成：`contracts/buildchecker/request.json`、`response.json`、接口 README、服务专有 `contract.schema.json`、三份人工产物及 `validate.py`。
+- 文档补充：README 中 A1 姓名/职责/进度、AI_USAGE 的 A1 部分、本贡献记录。
+- 验证：五种合法生命周期消息、十个非法消息反例、三份产物实际读取及一致性检查、四个非法交接反例，均达到预期。
+- 待协作：A2/B1/B2 交接互查、A3 独立字段复核、B3 汇总公共设计决定；尚未实施实际服务或声称全组已确认。
+- 接口提交：`0370ef7111d582c05ac4f283ff033daa94971b84`（`feat(contracts): add A1 BuildChecker handoff examples`），作者 `illusiri`。
+- 文档提交说明：`docs(e2): record A1 contribution and progress`；可通过 `git log --oneline --author=illusiri` 查到文档提交 SHA，避免在提交内部填写自身尚未生成的 SHA。
 
 ## A2
 

@@ -5,8 +5,9 @@
 ## 小组信息
 
 - 配对组编号：G16
+- A1：焦龙，Git 作者 `illusiri`，负责 BuildChecker 接口
 - A3：Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
-- A1、A2、B1、B2、B3：姓名和 Git 身份待对应成员补充
+- A2、B1、B2、B3：姓名和 Git 身份待对应成员补充
 
 ## 成员分工
 
@@ -48,6 +49,8 @@
 ```
 
 目录中的文件由对应负责人创建。不要在自己的提交中替其他成员填写姓名、贡献或尚未确认的接口内容。
+
+A1 的 BuildChecker 目录还包含服务专有 `contract.schema.json`、离线校验脚本 `validate.py` 和 `artifacts/` 下的三份人工产物。字段说明和交接待确认项见 [BuildChecker 接口说明](contracts/buildchecker/README.md)。其中 `request.json` 是创建请求，`response.json` 是任务完成后的查询结果；报告和依赖图均为人工样例，仓库、镜像和被检测提交均为占位值，不代表检测服务已运行。
 
 ## 公共任务模型
 
@@ -125,7 +128,7 @@ check-jsonschema --schemafile contracts/task.schema.json \
 
 - [x] A3：定义公共 `task.schema.json`
 - [ ] 六名成员共同确认公共字段和枚举
-- [ ] A1：完成 BuildChecker 请求与响应样例
+- [x] A1：焦龙完成 BuildChecker 请求与响应样例、可读取的人工报告/依赖图和离线校验；与 A2/B1/B2 的交接互查仍待进行
 - [ ] A2：完成 EChecker 请求与响应样例
 - [ ] B1：完成 DRAFT 请求与响应样例
 - [ ] B2：完成 MDFixer 请求与响应样例
@@ -133,3 +136,11 @@ check-jsonschema --schemafile contracts/task.schema.json \
 - [ ] B3：整理 Backlog 和 ADR
 - [ ] A3/B3：全员信息和接口完成后最终更新 README
 - [ ] 所有人：补齐 AI 使用记录和贡献记录
+
+A1 校验命令（Python 环境需安装 `jsonschema`）：
+
+```bash
+python contracts/buildchecker/validate.py
+```
+
+A1 已通过公共及专有 Schema 校验、产物读取与内容一致性检查，以及非法输入和交接不一致反例检查；已补充本人 AI 使用和贡献记录。以上不代表 A3 的独立复核、全组确认或实际服务联调已经完成。

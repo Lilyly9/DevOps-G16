@@ -39,7 +39,35 @@
 
 ## A1
 
-待 A1 填写。
+### 工具与任务
+
+- 成员：焦龙（Git 作者 `illusiri`）。
+- 工具：OpenAI Codex。
+- 任务：阅读课程 PPT、论文背景及成员分工，检查 A3 的公共模型，在指定 DevOps-G16 仓库内完成 BuildChecker 接口样例，并仅更新 README 中 A1 相关信息和进度。
+
+### 提示摘要与 AI 建议
+
+- 用户先要求解释 E2，再明确本人为 A1，并要求等待 A3 完成公共模型后开展工作。
+- A3 完成后，用户指定 `第2次上机实验/Project/DevOps-G16`，要求完成 A1 工作并更新 README；随后明确姓名为焦龙，其他无关 A1 的信息不要动。
+- AI 建议沿用 `jobSubmission` / `jobAccepted` / `jobRecord` 分层，FULL_CHECK 的发现使用 `SUCCEEDED` + `output.findings`。
+- AI 建议补充人工 MD/RD 样例、可实际读取的图和报告、服务专有 Schema 与离线校验，检查下游交接所需的仓库版本、配置和任务来源。
+
+### 人工指示与本次处理
+
+- 已确认的人工指示：本人角色为 A1、姓名为焦龙；只处理指定仓库内的 A1 内容，不修改其他成员信息。
+- 本次按 A3 模型保留公共字段，将专有约束放入 BuildChecker 自己的 Schema，未修改公共 Schema。
+- 样例全部标明 `MANUAL_FIXTURE`，使用占位仓库、镜像和提交；未声称运行真实检测器。
+- `repo://`、图格式、镜像 digest 和幂等处理属于 AI 辅助形成的 A1 提案，待本人及消费方审阅；没有代写“全组已采纳”或伪造人工确认。
+- 未代做 A2/B1/B2 的接口或 B3 的公共设计文档。
+
+### 验证
+
+- 使用 Python `jsonschema 4.23.0` 的 Draft 2020-12 校验器及 `referencing 0.30.2`，离线解析公共 Schema 引用。
+- 两份 Schema 元校验通过；创建、完成、受理、失败、超时共五种合法消息通过公共和服务 Schema。
+- 读取三份 `repo://` 产物，核对生产任务、仓库/commit、配置、内联与文件报告、图节点/边及 MD/RD 示例证据。
+- 十个非法消息反例被拒绝；四个交接反例（提交不一致、生产任务不一致、统计不一致、路径越界）被拒绝。
+- 校验命令：`python contracts/buildchecker/validate.py`；仅为离线契约检查，不是算法验证或组间联调。
+- 关联文件：`contracts/buildchecker/`、README 的 A1 信息、本记录及 CONTRIBUTIONS 的 A1 部分。提交版本见 CONTRIBUTIONS。
 
 ## A2
 
