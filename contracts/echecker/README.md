@@ -29,8 +29,8 @@
 | --- | --- | --- |
 | `repository.url` | string / 是 | 被检测项目 Git 仓库地址，须与基线产物一致 |
 | `repository.commit` | string / 是 | 本次待检测的头提交（课程材料中的 C1）完整 40 位 SHA；必须与 `base_commit` 不同 |
-| `base_commit` | string / 是 | 课程模板字段：基线提交（课程材料中的 C0）完整 40 位 SHA，必须等于 `baseline.commit` |
-| `baseline.commit` | string / 是 | 基线产物所对应的提交，必须等于 `input.base_commit` |
+| `base_commit` | string / 是 | 课程模板字段：基线提交（课程材料中的 C0）完整 40 位 SHA |
+| `baseline.commit` | string / 是 | 基线产物所对应的提交；与 `input.base_commit` 重复，二者不一致时只给出提示，不作为拒收条件 |
 | `baseline.configuration_id` | string / 是 | 必须与 `input.configuration_id` 相同，否则基线图不可比 |
 | `baseline.producer_job_id` | string / 是 | 产生基线图与报告的任务编号，可以是 `FULL_CHECK` 或更早的 `INCREMENTAL_CHECK`（**A2 补充**，模板未列） |
 | `baseline.actual_graph_uri` | string / 是 | 基线实际图入口；本样例指向 A1 的 `ACTUAL_GRAPH` |
@@ -44,7 +44,7 @@
 | `changed_paths` | string[] / 否 | 调用方给出的变更路径提示，相对于 `build.project_root`；权威范围是结果里的 `scope.changed_paths` |
 | `timeout_seconds` | integer > 0 / 是 | 增量检测总超时秒数 |
 
-`baseline` 是 EChecker 的专有必填输入：缺少 `baseline`、或 `baseline` 缺少 `commit`、`configuration_id`、`actual_graph_uri`、`error_report_uri`、`producer_job_id` 的请求必须被拒绝；`input.base_commit` 缺失，或与 `baseline.commit` 不一致，同样必须被拒绝。本目录 `validate.py` 覆盖了这些反例。
+`baseline` 是 EChecker 的专有必填输入：缺少 `baseline`、或 `baseline` 缺少 `commit`、`configuration_id`、`actual_graph_uri`、`error_report_uri`、`producer_job_id` 的请求必须被拒绝；`input.base_commit` 缺失也属于非法请求。本目录 `validate.py` 覆盖了这些反例。字段缺失是硬错误，值重复（`base_commit` 与 `baseline.commit`）不是。
 
 ### 与课程模板的对应关系
 
@@ -59,7 +59,9 @@
                            "configuration_id": "cc-MODE0" } } }
 ```
 
-本目录的字段名与该骨架一致，并做了两处**需要搭档组确认**的补充：`baseline.producer_job_id`（追溯基线由哪个任务产生）和 `baseline.error_report_uri`（没有基线发现列表就无法确定“新增”与“消除”）。模板同时在 `input.base_commit` 和 `baseline.commit` 给出同一信息，本接口要求二者一致；这个冗余是否保留待确认。
+本目录的字段名与该骨架一致，并做了两处**模板之外的补充**：`baseline.producer_job_id`（追溯基线由哪个任务产生）和 `baseline.error_report_uri`（没有基线发现列表就无法确定“新增”与“消除”）。两个字段的命名沿用模板风格，按“合理即可”保留。
+
+模板在 `input.base_commit` 和 `baseline.commit` 给出同一信息，本接口保留两处以对齐模板骨架，但不把“两处不一致”当作拒收条件，仅在 `validate.py` 中输出 `WARN` 提示；真正的基线归属仍以 `baseline.commit` 与基线产物自身记录为准。
 
 课程模板的产物地址写作 `artifact://...`，A1 为了离线可读选择了 `repo://`；两种写法都不违背公共 Schema，最终存储与下载方式属于 B3 的 ADR 待决项。
 
@@ -102,7 +104,7 @@
 
 三份产物均带有 `schema_version`、`sample_origin`、`producer_job_id`、`repository`、`configuration_id`。图使用 `nodes`（相对路径字符串列表）和 `edges`（`target`、`dependency` 对象列表），边的方向是构建目标指向依赖文件，与 A1 格式一致。`actual-graph.json` 另有 `merge_policy` 和 `baseline` 块（`commit`、`configuration_id`、`producer_job_id`、`actual_graph_uri`），记录合并策略与来源基线，便于消费方核对；`error-report.json` 的 `findings`、`resolved_findings` 与任务内联列表相同，目的是演示文件交接与直接查询，后续修改须同步。这份人工误差报告仍是 A1 的实现选择，并非已公开的标准格式。
 
-`sha256` 在公共 Schema 中是可选字段。本样例未填写，避免在仓库内部产生哈希耦合；生产环境是否强制固定基线产物哈希，属于待确认项。
+`sha256` 在公共 Schema 中是可选字段。本样例未填写，避免在仓库内部产生哈希耦合；A2 的口径是**不强制**填写，需要核验产物完整性的一方可以自行使用。
 
 ## 与其他成员的交接
 
@@ -112,13 +114,15 @@
 | B1 / DRAFT | 增量检测仍需可用镜像；`environment.producer_job_id` 的语义沿用 A1 提案，待 B1 确认 DRAFT 响应是否直接给出镜像 digest |
 | B2 / MDFixer | 只消费 `ERROR_REPORT` 中标为 `MISSING` 的 `findings`；`resolved_findings` 表示不再检出，MDFixer 不应把它当作待修项 |
 | A3 | 检查本目录的公共字段和枚举是否与 `task.schema.json` 一致（`INCREMENTAL_CHECK`、状态枚举、`jobRecord` 八个公共字段、产物结构）；`schema_version` 仍为 `1.0.0`，未修改公共模型 |
-| B3 | 将基线版本策略（是否强制 sha256、基线产物保留多久、`artifact://` 与 `repo://` 如何统一）、错误码统一、幂等和“变化波及全部目标时改交 FULL_CHECK”写入公共 ADR 或 Backlog |
+| B3 | 将基线版本策略（基线产物保留多久、`artifact://` 与 `repo://` 如何统一）、错误码统一、“变化波及全部目标时改交 FULL_CHECK”和幂等行为写入公共 ADR 或 Backlog；`sha256` 按不强制处理 |
 
-未确认项汇总（均为 A2 提案）：`baseline.producer_job_id` 与 `baseline.error_report_uri` 这两个模板之外的补充字段是否保留；`input.base_commit` 与 `baseline.commit` 的冗余是否保留；`changed_paths` 是提示还是权威输入；`resolution` 的命名与语义；基线产物哈希是否强制；`reused_targets` 的粒度（目标级还是文件级）。
+A2 已定的口径：`baseline.producer_job_id` 与 `baseline.error_report_uri` 保留，命名按模板风格合理即可；`base_commit` 与 `baseline.commit` 的重复不强制一致（仅提示）；`changed_paths` 是调用方提示，结果必须覆盖它；基线产物 `sha256` 不强制填写；`resolution` 沿用 `NO_LONGER_DETECTED` / `OUT_OF_SCOPE`；`reused_targets` 以构建目标为粒度。
+
+仍需搭档组确认：A1 产物字段与 `nodes`/`edges` 是否长期稳定；`artifact://` 与 `repo://` 如何统一（B3 的 ADR）；公共错误码与幂等行为的最终统一（B3）。
 
 ## 校验
 
-`contract.schema.json` 通过引用复用 A3 的公共模型，补充 `INCREMENTAL_CHECK` 的输入和结果约束；没有修改公共 Schema。跨实例规则无法用 JSON Schema 表达（`input.base_commit` 必须等于 `baseline.commit`、基线配置必须与请求一致、`base_commit` 必须不同于头提交、头提交发现必须与基线闭合、实际图不得改动未重检目标），由 `validate.py` 检查。
+`contract.schema.json` 通过引用复用 A3 的公共模型，补充 `INCREMENTAL_CHECK` 的输入和结果约束；没有修改公共 Schema。必填字段缺失由 Schema 拒绝；跨实例的一致性规则无法用 JSON Schema 表达（基线配置必须与请求一致、`base_commit` 必须不同于头提交、头提交发现必须与基线闭合、实际图不得改动未重检目标、结果必须覆盖变更提示），由 `validate.py` 检查。`base_commit` 与 `baseline.commit` 的重复值不属于拒收条件，仅输出提示。
 
 在仓库根目录运行（Python 3.9+；缺少依赖时先执行 `python -m pip install "jsonschema>=4.18,<5"`）：
 

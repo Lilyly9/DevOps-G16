@@ -21,6 +21,10 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def warn(message):
+    print(f"WARN: {message}")
+
+
 def resolve_artifact(uri):
     require(uri.startswith("repo://"), "Expected a repo:// fixture URI")
     relative = uri[len("repo://"):]
@@ -45,7 +49,8 @@ def check_handoff(request, response):
     require(request["job_type"] == response["job_type"] == "INCREMENTAL_CHECK", "Unexpected job type")
     payload = request["input"]
     baseline = payload["baseline"]
-    require(payload["base_commit"] == baseline["commit"], "base_commit differs from baseline.commit")
+    if payload["base_commit"] != baseline["commit"]:
+        warn("base_commit and baseline.commit differ; the course template repeats this value, so A2 reports it as a hint instead of rejecting the request")
     require(baseline["configuration_id"] == payload["configuration_id"], "Baseline configuration differs from the requested configuration")
     require(payload["base_commit"] != payload["repository"]["commit"], "Incremental check needs a head commit different from the base commit")
     baseline_graph = read(resolve_artifact(baseline["actual_graph_uri"]))
@@ -206,6 +211,11 @@ if __name__ == "__main__":
         print(f"PASS: {label} (common + service schemas)")
     check_handoff(request, response)
     print("PASS: baseline reads, provenance, delta closure and graph merge consistency")
+    tolerated_request, tolerated_response = with_mutated_request(
+        request, response, lambda document: document["input"].update(base_commit="2" * 40)
+    )
+    check_handoff(tolerated_request, tolerated_response)
+    print("PASS: tolerate a base_commit/baseline.commit mismatch with a warning instead of rejecting it")
     def edited(base, path, value=None, remove=False):
         document = copy.deepcopy(base)
         parent = document
@@ -259,7 +269,6 @@ if __name__ == "__main__":
         print(f"PASS: reject {label}")
 
     cases = [
-        ("base_commit differs from baseline commit", (lambda document: document["input"].update(base_commit="2" * 40))),
         ("baseline configuration mismatch", (lambda document: document["input"]["baseline"].update(configuration_id="gcc-o2-v2"))),
         ("head commit equals base commit", (lambda document: document["input"]["repository"].update(commit="1" * 40))),
         ("baseline producer mismatch", (lambda document: document["input"]["baseline"].update(producer_job_id="wrong-job"))),
