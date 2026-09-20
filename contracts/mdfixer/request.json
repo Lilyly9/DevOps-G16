@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "trace_id": "g16-example-flow-001",
+  "job_type": "REPAIR",
+  "idempotency_key": "g16-example-repair-001",
+  "input": {
+    "repository": {
+      "url": "https://example.invalid/g16/build-demo.git",
+      "commit": "1111111111111111111111111111111111111111"
+    },
+    "environment": {
+      "image": "registry.example.invalid/g16/build-demo@sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "producer_job_id": "g16-example-draft-001"
+    },
+    "configuration_id": "gcc-default-v1",
+    "build": {
+      "project_root": ".",
+      "command": "make all",
+      "verify_command": "make clean && make all"
+    },
+    "error_report_uri": "repo://contracts/buildchecker/artifacts/error-report.json",
+    "makefile_path": "Makefile",
+    "timeout_seconds": 900
+  }
+}

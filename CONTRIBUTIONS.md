@@ -31,7 +31,12 @@
 
 ## B2
 
-待 B2 填写。
+- 负责内容：MDFixer（REPAIR）修复缺失依赖接口的请求、结果、Git Patch 产物与读取约定。
+- 已完成文件：`contracts/mdfixer/request.json`、`response.json`、接口 README、服务专有 `contract.schema.json`、`artifacts/fix-missing-config-h.patch` 及 `validate.py`。
+- 文档补充：README 中 B2 的目录说明、进度勾选与校验命令、AI_USAGE 的 B2 部分、本贡献记录。
+- 验证：六种合法生命周期消息、十二个非法消息反例、ERROR_REPORT 与 Patch 产物实际读取及一致性检查、五个非法交接反例，均达到预期。
+- 待协作：A1/A2/B1 交接互查、A3 独立字段复核、B3 汇总公共设计决定；尚未实施实际服务或声称全组已确认。
+- 接口提交说明：`feat(contracts): add B2 MDFixer repair handoff examples`；提交 SHA 待提交后通过 `git log --oneline` 查到，避免在提交内部填写自身尚未生成的 SHA。
 
 ## B3
 

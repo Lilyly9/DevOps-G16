@@ -79,7 +79,34 @@
 
 ## B2
 
-待 B2 填写。
+### 工具与任务
+
+- 工具：claude+deepseek v4-pro
+- 任务：完成 MDFixer（REPAIR）接口样例
+
+### 提示摘要与 AI 建议
+
+- 用户先要求明确项目目标并填写 gitignore，随后确认本人为 B2，要求按 A1 的既有风格完成 MDFixer 接口，最后同步进度到 README。
+- AI 建议沿用 `jobSubmission` / `jobAccepted` / `jobRecord` 分层，REPAIR 的修复结果使用 `SUCCEEDED` + `output` 表示。
+- AI 建议 MDFixer 仅消费 `type == MISSING` 的发现，通过 `error_report_uri` 引用 BuildChecker 的 ERROR_REPORT，并把 Patch 作为 `GIT_PATCH` 产物传递。
+- AI 建议补充服务专有 Schema、可实际读取的 Git Patch 产物和离线校验，检查报告来源的仓库、commit、配置与生产任务一致性。
+
+### 人工采纳、修改与拒绝
+
+- 采纳生命周期分层与公共字段，将专有约束放入 MDFixer 自己的 Schema，未修改公共 Schema。
+- 采纳「只消费 MISSING、不删除 RD」的边界，与课程「修复只针对 Missing Dependency」一致。
+- 样例全部标明 `MANUAL_FIXTURE`，使用占位仓库、镜像和提交；未声称运行真实修复或重检。
+- `repo://`、`error_report_uri`、Patch 产物和「拒绝候选仍为 SUCCEEDED」属于 AI 辅助形成的 B2 提案，待本人及消费方审阅；没有代写「全组已采纳」或伪造人工确认。
+- 未代做 A2/B1 的接口或 B3 的公共设计文档，也未代填本人姓名或其他成员信息。
+
+### 验证
+
+- 使用 Python `jsonschema`（4.18+）的 Draft 2020-12 校验器及 `referencing`，离线解析公共 Schema 引用。
+- 两份 Schema 元校验通过；创建、完成、受理、失败、超时、拒绝候选共六种合法消息通过公共和服务 Schema。
+- 读取引用的 ERROR_REPORT 与 Git Patch 产物，核对报告仓库/commit/配置、仅消费 MISSING、Patch 内容与生产任务来源。
+- 十二个非法消息反例被拒绝；五个非法交接反例（消费 RD、报告 commit 不一致、Patch 引用缺失产物、生产任务不一致、路径越界）被拒绝。
+- 校验命令：`python contracts/mdfixer/validate.py`；仅为离线契约检查，不是算法验证或组间联调。
+- 关联文件：`contracts/mdfixer/`、README 的 B2 信息、本记录及 CONTRIBUTIONS 的 B2 部分。提交版本见 CONTRIBUTIONS。
 
 ## B3
 

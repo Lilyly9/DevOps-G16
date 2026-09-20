@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devops-g16.example/contracts/mdfixer/contract.schema.json",
+  "title": "B2 REPAIR service contract proposal",
+  "allOf": [{ "$ref": "../task.schema.json" }],
+  "type": "object",
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "job_type": { "const": "REPAIR" },
+    "input": { "$ref": "#/$defs/input" },
+    "output": {
+      "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/output" }]
+    }
+  },
+  "$comment": "The common schema owns lifecycle requirements; this schema refines service payloads only.",
+  "$defs": {
+    "text": { "type": "string", "minLength": 1 },
+    "commit": { "type": "string", "pattern": "^[a-fA-F0-9]{40}$" },
+    "repoUri": { "type": "string", "pattern": "^repo://" },
+    "input": {
+      "type": "object",
+      "required": ["repository", "environment", "configuration_id", "build", "error_report_uri", "makefile_path", "timeout_seconds"],
+      "properties": {
+        "repository": {
+          "type": "object",
+          "required": ["url", "commit"],
+          "properties": {
+            "url": { "$ref": "#/$defs/text" },
+            "commit": { "$ref": "#/$defs/commit" }
+          }
+        },
+        "environment": {
+          "type": "object",
+          "required": ["image"],
+          "properties": {
+            "image": { "type": "string", "pattern": "^.+@sha256:[a-fA-F0-9]{64}$" },
+            "producer_job_id": { "$ref": "#/$defs/text" }
+          }
+        },
+        "configuration_id": { "$ref": "#/$defs/text" },
+        "build": {
+          "type": "object",
+          "required": ["project_root", "command", "verify_command"],
+          "properties": {
+            "project_root": { "$ref": "#/$defs/text" },
+            "command": { "$ref": "#/$defs/text" },
+            "verify_command": { "$ref": "#/$defs/text" }
+          }
+        },
+        "error_report_uri": { "$ref": "#/$defs/repoUri" },
+        "makefile_path": { "$ref": "#/$defs/text" },
+        "timeout_seconds": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "patch": {
+      "type": "object",
+      "required": ["target_finding_id", "declaration_style", "files_changed", "artifact_ref"],
+      "properties": {
+        "target_finding_id": { "$ref": "#/$defs/text" },
+        "declaration_style": { "$ref": "#/$defs/text" },
+        "files_changed": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+        "artifact_ref": { "$ref": "#/$defs/text" }
+      }
+    },
+    "rejected": {
+      "type": "object",
+      "required": ["finding_id", "reason"],
+      "properties": {
+        "finding_id": { "$ref": "#/$defs/text" },
+        "reason": { "$ref": "#/$defs/text" }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["build", "test", "recheck"],
+      "properties": {
+        "build": { "enum": ["PASS", "FAIL", "SKIPPED"] },
+        "test": { "enum": ["PASS", "FAIL", "SKIPPED"] },
+        "recheck": {
+          "type": "object",
+          "required": ["status", "remaining_missing"],
+          "properties": {
+            "status": { "enum": ["PASS", "FAIL", "SKIPPED"] },
+            "remaining_missing": { "type": "integer", "minimum": 0 },
+            "recheck_job_id": { "$ref": "#/$defs/text" }
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["summary", "patches", "verification"],
+      "properties": {
+        "summary": {
+          "type": "object",
+          "required": ["consumed_finding_ids", "fixed_count", "rejected_count"],
+          "properties": {
+            "consumed_finding_ids": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+            "fixed_count": { "type": "integer", "minimum": 0 },
+            "rejected_count": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "patches": { "type": "array", "items": { "$ref": "#/$defs/patch" } },
+        "rejected": { "type": "array", "items": { "$ref": "#/$defs/rejected" } },
+        "verification": { "$ref": "#/$defs/verification" }
+      }
+    }
+  }
+}
