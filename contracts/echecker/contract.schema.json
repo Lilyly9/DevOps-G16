@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devops-g16.example/contracts/echecker/contract.schema.json",
+  "title": "A2 INCREMENTAL_CHECK service contract proposal",
+  "allOf": [{ "$ref": "../task.schema.json" }],
+  "type": "object",
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "job_type": { "const": "INCREMENTAL_CHECK" },
+    "input": { "$ref": "#/$defs/input" },
+    "output": {
+      "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/output" }]
+    }
+  },
+  "$comment": "The common schema owns lifecycle requirements; this schema refines INCREMENTAL_CHECK payloads only. Cross-instance rules (baseline configuration equality, base commit different from head commit, delta closure, graph merge) cannot be expressed in JSON Schema and are checked by validate.py.",
+  "$defs": {
+    "text": { "type": "string", "minLength": 1 },
+    "commit": { "type": "string", "pattern": "^[a-fA-F0-9]{40}$" },
+    "uri": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Producer artifact entry point. The course template shows artifact://...; the offline samples in this repository use repo://, which resolves relative to the DevOps-G16 repository root."
+    },
+    "input": {
+      "type": "object",
+      "required": ["repository", "base_commit", "baseline", "environment", "configuration_id", "build", "timeout_seconds"],
+      "properties": {
+        "repository": {
+          "type": "object",
+          "required": ["url", "commit"],
+          "properties": {
+            "url": { "$ref": "#/$defs/text" },
+            "commit": {
+              "$ref": "#/$defs/commit",
+              "description": "Head commit to check; must differ from base_commit."
+            }
+          }
+        },
+        "base_commit": {
+          "$ref": "#/$defs/commit",
+          "description": "Course-template field: the base commit of the incremental check. Must equal baseline.commit; checked offline by validate.py."
+        },
+        "baseline": {
+          "type": "object",
+          "description": "History entry owned by the previous check job: its commit, its configuration, its actual graph and its findings.",
+          "required": ["commit", "configuration_id", "producer_job_id", "actual_graph_uri", "error_report_uri"],
+          "properties": {
+            "commit": { "$ref": "#/$defs/commit" },
+            "configuration_id": {
+              "$ref": "#/$defs/text",
+              "description": "Must equal input.configuration_id; checked offline by validate.py."
+            },
+            "producer_job_id": {
+              "$ref": "#/$defs/text",
+              "description": "Job that produced the baseline graph and report, either a FULL_CHECK or an earlier INCREMENTAL_CHECK. A2 addition: the course template does not list this field."
+            },
+            "actual_graph_uri": { "$ref": "#/$defs/uri" },
+            "error_report_uri": {
+              "$ref": "#/$defs/uri",
+              "description": "A2 addition: baseline findings are required to classify NEW / CARRIED_OVER / resolved findings."
+            }
+          }
+        },
+        "environment": {
+          "type": "object",
+          "required": ["image"],
+          "properties": {
+            "image": { "type": "string", "pattern": "^.+@sha256:[a-fA-F0-9]{64}$" },
+            "producer_job_id": { "$ref": "#/$defs/text" }
+          }
+        },
+        "configuration_id": { "$ref": "#/$defs/text" },
+        "build": {
+          "type": "object",
+          "required": ["project_root", "clean_command", "command"],
+          "properties": {
+            "project_root": { "$ref": "#/$defs/text" },
+            "clean_command": { "$ref": "#/$defs/text" },
+            "command": { "$ref": "#/$defs/text" }
+          }
+        },
+        "changed_paths": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/text" },
+          "description": "Optional caller hint, relative to build.project_root. The authoritative scope is output.scope.changed_paths."
+        },
+        "timeout_seconds": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": ["finding_id", "type", "target", "dependency", "commit", "configuration_id", "detector", "status", "location", "evidence"],
+      "properties": {
+        "finding_id": { "$ref": "#/$defs/text" },
+        "type": { "enum": ["MISSING", "REDUNDANT"] },
+        "target": { "$ref": "#/$defs/text" },
+        "dependency": { "$ref": "#/$defs/text" },
+        "commit": { "$ref": "#/$defs/commit" },
+        "configuration_id": { "$ref": "#/$defs/text" },
+        "detector": { "$ref": "#/$defs/text" },
+        "status": {
+          "enum": ["NEW", "CARRIED_OVER"],
+          "description": "NEW is absent from the baseline findings; CARRIED_OVER is present in both."
+        },
+        "location": {
+          "type": "object",
+          "required": ["path", "line"],
+          "properties": {
+            "path": { "$ref": "#/$defs/text" },
+            "line": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "Real reports must supply detector evidence; examples explicitly identify manual evidence."
+        }
+      }
+    },
+    "resolvedFinding": {
+      "type": "object",
+      "required": ["finding_id", "type", "target", "dependency", "baseline_commit", "resolution"],
+      "properties": {
+        "finding_id": { "$ref": "#/$defs/text" },
+        "type": { "enum": ["MISSING", "REDUNDANT"] },
+        "target": { "$ref": "#/$defs/text" },
+        "dependency": { "$ref": "#/$defs/text" },
+        "baseline_commit": { "$ref": "#/$defs/commit" },
+        "resolution": {
+          "enum": ["NO_LONGER_DETECTED", "OUT_OF_SCOPE"],
+          "description": "NO_LONGER_DETECTED means the baseline finding is not reproduced by this run; it does not claim that a human fixed it."
+        },
+        "evidence": {
+          "type": "object",
+          "minProperties": 1
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["scope", "summary", "findings", "resolved_findings"],
+      "properties": {
+        "sample_origin": { "$ref": "#/$defs/text" },
+        "scope": {
+          "type": "object",
+          "required": ["changed_paths", "checked_targets", "reused_targets"],
+          "properties": {
+            "changed_paths": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+            "checked_targets": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/$defs/text" }
+            },
+            "reused_targets": { "type": "array", "items": { "$ref": "#/$defs/text" } }
+          }
+        },
+        "summary": {
+          "type": "object",
+          "required": ["missing_count", "redundant_count", "new_count", "carried_over_count", "resolved_count", "checked_target_count"],
+          "properties": {
+            "missing_count": { "type": "integer", "minimum": 0 },
+            "redundant_count": { "type": "integer", "minimum": 0 },
+            "new_count": { "type": "integer", "minimum": 0 },
+            "carried_over_count": { "type": "integer", "minimum": 0 },
+            "resolved_count": { "type": "integer", "minimum": 0 },
+            "checked_target_count": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } },
+        "resolved_findings": { "type": "array", "items": { "$ref": "#/$defs/resolvedFinding" } }
+      }
+    }
+  }
+}
