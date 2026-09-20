@@ -9,7 +9,7 @@
 - 配对关系：G16（具体 A/B 组号待确认）
 - A1：焦龙，Git 作者 `illusiri`，负责 BuildChecker 接口
 - A2：万宇，Git 作者 `adscfe`，负责 EChecker 接口
-- A3：Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
+- A3：林涵，Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
 - B1：郭德林，Git 作者 `DelinGuo`，负责 DRAFT 接口
 - B2：Git 提交作者 `jenicifor`，负责 MDFixer 接口；姓名待本人补充
 - B3：Git 提交作者 `Lilyly9`，负责公共契约与集成；姓名待本人补充

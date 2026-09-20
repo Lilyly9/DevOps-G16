@@ -27,13 +27,13 @@
 
 ## A3
 
-- Git 作者：`WhiteNights`。
+- 成员：林涵；Git 作者：`WhiteNights`。
 - 负责内容：公共异步任务模型、A 组接口公共字段一致性检查、与 B3 共同维护 README。
 - 已完成：`contracts/task.schema.json`；在 A1/A2/B1/B2 接口完成后独立复核公共字段、生命周期、服务 Schema、产物读取和跨服务交接。
 - Schema 提交：`381a951b353d899699aa63001297cb982ba8cce5`（`feat(contracts): define shared job schema`）。
 - 初始文档提交：`bf520bfd832d0d904b659c8c8470cfb9682f6617`（`docs(e2): record A3 contract decisions`）。
 - 最终文档：更新 `README.md`、`AI_USAGE.md`、`CONTRIBUTIONS.md`、`docs/Backlog.md` 和 `docs/INTEGRATION_CHECK.md`，提交说明为 `docs(e2): finalize A3 contract review`。
-- 验证：公共 Schema 元校验、八个公共请求/响应样例、19 个 JSON 语法解析和四个服务的完整 `validate.py` 均通过；未声称运行真实服务。
+- 验证：公共 Schema 元校验、八个公共请求/响应样例、19 个 JSON 语法解析和四个服务的完整 `validate.py` 均通过。
 
 ## B1
 
