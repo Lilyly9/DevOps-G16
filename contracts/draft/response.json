@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "g16-example-draft-001",
+  "trace_id": "g16-example-flow-001",
+  "job_type": "DRAFT",
+  "status": "SUCCEEDED",
+  "input": {
+    "repository": {
+      "url": "https://example.invalid/g16/build-demo.git",
+      "commit": "1111111111111111111111111111111111111111"
+    },
+    "configuration_id": "gcc-default-v1",
+    "build": {
+      "project_root": ".",
+      "command": "make all",
+      "verify_command": "make clean && make all"
+    },
+    "max_iterations": 3,
+    "timeout_seconds": 1200
+  },
+  "output": {
+    "sample_origin": "MANUAL_FIXTURE",
+    "image": "registry.example.invalid/g16/build-demo@sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "configuration_id": "gcc-default-v1",
+    "dockerfile_artifact_ref": "g16-dockerfile-001",
+    "attempts": [
+      {
+        "iteration": 1,
+        "outcome": "BUILD_FAILED",
+        "modification": "初版 Dockerfile：基于 gcc:12 基础镜像安装 make，并检出 build-demo 源码。",
+        "rationale": "首轮按 configuration_id 的默认工具链生成，尚无历史日志可参考。",
+        "log_artifact_ref": "g16-dlog-001"
+      },
+      {
+        "iteration": 2,
+        "outcome": "SUCCESS",
+        "modification": "在 apt 安装列表中加入 bison，并固定基础镜像与 apt 版本。",
+        "rationale": "第 1 轮日志显示 bison 缺失导致语法表生成失败，属于环境依赖缺失，与源码本身无关。",
+        "log_artifact_ref": "g16-dlog-002"
+      }
+    ],
+    "verification": {
+      "build": "PASS",
+      "verify": "PASS"
+    }
+  },
+  "error": null,
+  "artifacts": [
+    {
+      "artifact_id": "g16-dockerfile-001",
+      "type": "DOCKERFILE",
+      "uri": "repo://contracts/draft/artifacts/Dockerfile",
+      "media_type": "text/plain",
+      "producer_job_id": "g16-example-draft-001"
+    },
+    {
+      "artifact_id": "g16-dlog-001",
+      "type": "BUILD_LOG",
+      "uri": "repo://contracts/draft/artifacts/build-log-iter1.txt",
+      "media_type": "text/plain",
+      "producer_job_id": "g16-example-draft-001"
+    },
+    {
+      "artifact_id": "g16-dlog-002",
+      "type": "BUILD_LOG",
+      "uri": "repo://contracts/draft/artifacts/build-log-iter2.txt",
+      "media_type": "text/plain",
+      "producer_job_id": "g16-example-draft-001"
+    }
+  ]
+}

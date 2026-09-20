@@ -1,0 +1,36 @@
+# MANUAL_FIXTURE: 人工教学样例，模拟 g16-example-draft-001 第 2 轮（最终）构建日志；未实际执行。
+# 用途：说明最终环境通过成功判据：build.command 与 verify_command 均成功。
+
+$ git checkout 1111111111111111111111111111111111111111
+HEAD is now at 1111111 (fixture placeholder commit)
+
+$ docker build -f Dockerfile -t build-demo:iter2 .
+Step 1/4 : FROM gcc:12-bookworm
+ ---> 3a4b5c6d7e8f
+Step 2/4 : RUN apt-get update && apt-get install -y --no-install-recommends make bison
+ ---> Running in 2b3c4d5e6f7a
+Setting up bison (2:3.8.2+dfsg-1) ...
+ ---> 8e9f0a1b2c3d
+Step 3/4 : WORKDIR /src
+ ---> 4c5d6e7f8a9b
+Step 4/4 : LABEL devops-g16.configuration=gcc-default-v1
+ ---> Successfully built build-demo:iter2
+
+$ docker run --rm -v /src:/src build-demo:iter2 make all
+bison -y grammar.y
+gcc -c main.c -o main.o
+gcc -c utils.c -o utils.o
+gcc main.o utils.o -o build-demo
+build.command PASS（退出码 0）
+
+$ docker run --rm -v /src:/src build-demo:iter2 make clean && make all
+rm -f main.o utils.o build-demo grammar.c
+bison -y grammar.y
+gcc -c main.c -o main.o
+gcc -c utils.c -o utils.o
+gcc main.o utils.o -o build-demo
+verify_command PASS（退出码 0）
+
+最终结论：第 2 轮镜像通过成功判据，固定为
+registry.example.invalid/g16/build-demo@sha256:2222222222222222222222222222222222222222222222222222222222222222
+（占位 digest），交付三个下游服务使用。

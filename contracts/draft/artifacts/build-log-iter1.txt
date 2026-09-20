@@ -1,0 +1,28 @@
+# MANUAL_FIXTURE: 人工教学样例，模拟 g16-example-draft-001 第 1 轮构建日志；未实际执行。
+# 用途：说明第 1 轮失败原因（环境缺 bison），驱动第 2 轮修改。
+
+$ git checkout 1111111111111111111111111111111111111111
+HEAD is now at 1111111 (fixture placeholder commit)
+
+$ docker build -f Dockerfile.iter1 -t build-demo:iter1 .
+Step 1/5 : FROM gcc:12-bookworm
+ ---> 3a4b5c6d7e8f
+Step 2/5 : RUN apt-get update && apt-get install -y --no-install-recommends make
+ ---> Using cache
+ ---> 9c8b7a6f5e4d
+Step 3/5 : WORKDIR /src
+ ---> Using cache
+ ---> 1f2e3d4c5b6a
+Step 4/5 : COPY . .
+ ---> 5d6e7f8a9b0c
+Step 5/5 : RUN make all
+ ---> Running in 7a8b9c0d1e2f
+make: bison: Command not found
+make[1]: *** [grammar.c] Error 127
+make[1]: *** Waiting for unfinished jobs....
+make[1]: Leaving directory '/src'
+make: *** [all] Error 2
+The command '/bin/sh -c make all' returned a non-zero code: 2
+
+一轮结论：构建命令在容器内失败，退出码 2；
+日志显示 bison 不存在，属于环境依赖缺失，进入第 2 轮修改。

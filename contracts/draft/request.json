@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "trace_id": "g16-example-flow-001",
+  "job_type": "DRAFT",
+  "idempotency_key": "g16-example-draft-001",
+  "input": {
+    "repository": {
+      "url": "https://example.invalid/g16/build-demo.git",
+      "commit": "1111111111111111111111111111111111111111"
+    },
+    "configuration_id": "gcc-default-v1",
+    "build": {
+      "project_root": ".",
+      "command": "make all",
+      "verify_command": "make clean && make all"
+    },
+    "max_iterations": 3,
+    "timeout_seconds": 1200
+  }
+}
