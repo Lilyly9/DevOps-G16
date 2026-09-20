@@ -71,7 +71,37 @@
 
 ## A2
 
-待 A2 填写。
+### 工具与任务
+
+- 成员：万宇；Git 作者：`adscfe <asdfs1243@noreply.gitcode.com>`。
+- 工具：GitHub Copilot（VS Code，模型 DeepSeek V4 Flash）。
+- 任务：在 A3 公共任务模型和 A1 BuildChecker 交接约定的基础上，完成 EChecker 增量检测接口样例，并只更新 README 中 A2 的信息与进度。
+
+### 提示摘要与 AI 建议
+
+- 用户先说明本人为 A2，要求完成任务并只更新属于本人的内容，姓名等未知信息不得由他人代填。
+- AI 建议沿用 `jobSubmission` / `jobAccepted` / `jobRecord` 分层，`job_type` 使用公共枚举中的 `INCREMENTAL_CHECK`。
+- 用户提供课程《E2 需求与接口契约》PPT 路径后，AI 提取备查页（EChecker 输入输出），发现自己的初版字段名与模板不同：模板是 `input.base_commit` 与扁平的 `baseline.{actual_graph_uri, commit, configuration_id}`。人工决定改向模板对齐，把 A2 自己的补充（`producer_job_id`、`error_report_uri`）单独标注为待确认项，而不是默默发明字段。
+- 用户提供姓名（万宇）和 Git 身份（`adscfe`）后，AI 填入 README 小组信息、CONTRIBUTIONS 与 AI_USAGE，未改动其他成员的姓名和贡献。
+- AI 建议把 `baseline` 定义为“上一次检测任务 + 基线提交 + 配置 + `ACTUAL_GRAPH` + `ERROR_REPORT`”，并用基线的 `ERROR_REPORT` 判定 `NEW` / `CARRIED_OVER` / `RESOLVED`，而不是凭猜测推断历史发现。
+- AI 建议实际图采用“受影响目标重建、其余边复用基线”的合并策略，使 EChecker 产出的 `ACTUAL_GRAPH` 能继续作为下一次增量检测的基线。
+
+### 人工指示与本次处理
+
+- 已确认的人工指示：角色为 A2；交付完整版（请求/结果样例、专有 Schema、离线校验、接口 README、人工产物）；只更新本人负责的文件与本人条目。
+- `baseline` 的字段集合、`resolution` 的语义（只表示不再检出，不表示某人修复）、`changed_paths` 作为提示、基线哈希是否强制、`reused_targets` 的粒度，均标记为 A2 提案或待确认项并写入接口 README 的交接表，没有声称全组已采纳。
+- 样例全部标明 `MANUAL_FIXTURE`，使用占位仓库、镜像和提交；未运行检测器，未构建镜像。
+- 未代做 A1/B1/B2 的接口或 B3 的公共设计文档，也未填写其他成员的姓名和贡献。
+
+### 验证
+
+- 使用 Python 3.11.9 的 `jsonschema` Draft 2020-12 校验器及 `referencing` 离线解析公共 Schema 引用。
+- 两份 Schema 元校验通过；创建、完成、受理、运行中、失败、超时共六个合法消息通过公共和服务 Schema。
+- 实际读取 A1 的 `ACTUAL_GRAPH` 与 `ERROR_REPORT`，核对仓库、提交、配置和任务来源，并检查基线增量闭合（基线发现 = 复用 + 解决）与未重检目标的图合并。
+- 二十五个非法消息反例被拒绍，包括缺少 `baseline`、`baseline` 缺少 `commit` / `actual_graph_uri` / `error_report_uri`、`base_commit` 与头提交相同、结论计数不一致等。
+- 十三个交接反例被拒绍，包括 `base_commit` 与 `baseline.commit` 不一致、基线配置不一致、基线产物来源不一致、增量未闭合、产物路径越界、未重检目标被改动。
+- 校验命令：`python contracts/echecker/validate.py`；仅为离线契约检查，不是算法验证或组间联调。
+- 关联文件：`contracts/echecker/`、README 的 A2 信息、本记录及 CONTRIBUTIONS 的 A2 部分。提交版本见 CONTRIBUTIONS。
 
 ## B1
 

@@ -15,7 +15,14 @@
 
 ## A2
 
-待 A2 填写。
+- 成员：万宇；Git 作者：`adscfe <asdfs1243@noreply.gitcode.com>`。
+- 负责内容：EChecker 增量检测接口的请求、基线引用、增量结果与产物读取约定。
+- 已完成：`contracts/echecker/request.json`、`response.json`、接口 README、服务专有 `contract.schema.json`、三份人工产物及 `validate.py`。
+- 文档补充：README 中 A2 进度、AI_USAGE 的 A2 部分、本贡献记录。
+- 验证：六个合法生命周期消息、二十五个非法消息反例、十三个交接与基线反例，均达到预期；校验脚本实际读取 A1 的 `ACTUAL_GRAPH` 与 `ERROR_REPORT`，核对提交、配置和任务来源，并检查基线增量闭合与未重检目标的图合并。接口字段名已按课程备查页的 EChecker 骨架对齐（`input.base_commit` + `baseline.actual_graph_uri`）。
+- 待协作：A1/B2 交接互查、A3 独立字段复核、B3 汇总基线版本策略；尚未实施实际服务或声称全组已确认。
+- 接口提交：`330b787416afcfeb9789e77666dae197df57847f`（`feat(contracts): add A2 EChecker handoff examples`），作者 `adscfe`。
+- 文档提交说明：`docs(e2): record A2 contribution and progress`；可通过 `git log --oneline --author=<A2 作者名>` 查到文档提交 SHA，避免在提交内部填写自身尚未生成的 SHA。
 
 ## A3
 
