@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "sample_origin": "MANUAL_FIXTURE",
+  "producer_job_id": "g16-example-incr-001",
+  "repository": {
+    "url": "https://example.invalid/g16/build-demo.git",
+    "commit": "3333333333333333333333333333333333333333"
+  },
+  "configuration_id": "gcc-default-v1",
+  "findings": [
+    {
+      "finding_id": "g16-inc-md-001",
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "util.h",
+      "commit": "3333333333333333333333333333333333333333",
+      "configuration_id": "gcc-default-v1",
+      "detector": "MANUAL_FIXTURE",
+      "status": "NEW",
+      "location": {
+        "path": "Makefile",
+        "line": 1
+      },
+      "evidence": {
+        "kind": "MANUAL_FIXTURE",
+        "actual_edge": {
+          "target": "main.o",
+          "dependency": "util.h"
+        },
+        "declared_edge_present": false,
+        "baseline_had_finding": false,
+        "description": "人工构造的教学样例：本次提交的 main.c 新增 #include \"util.h\"，Makefile 的 main.o 规则未同步；未运行检测器。"
+      }
+    }
+  ],
+  "resolved_findings": [
+    {
+      "finding_id": "g16-md-001",
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h",
+      "baseline_commit": "1111111111111111111111111111111111111111",
+      "resolution": "NO_LONGER_DETECTED",
+      "evidence": {
+        "kind": "MANUAL_FIXTURE",
+        "declared_edge_present_now": true,
+        "description": "人工构造的教学样例：本次提交的 Makefile 已把 config.h 加入 main.o 规则，基线的 g16-md-001 不再被检出；未运行检测器。"
+      }
+    },
+    {
+      "finding_id": "g16-rd-001",
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h",
+      "baseline_commit": "1111111111111111111111111111111111111111",
+      "resolution": "NO_LONGER_DETECTED",
+      "evidence": {
+        "kind": "MANUAL_FIXTURE",
+        "declared_edge_present_now": false,
+        "description": "人工构造的教学样例：本次提交的 Makefile 已删除 unused.h，基线的 g16-rd-001 不再被检出；未运行检测器。"
+      }
+    }
+  ]
+}
