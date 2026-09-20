@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "job_id": "g16-example-full-001",
+  "trace_id": "g16-example-flow-001",
+  "job_type": "FULL_CHECK",
+  "status": "SUCCEEDED",
+  "input": {
+    "repository": {
+      "url": "https://example.invalid/g16/build-demo.git",
+      "commit": "1111111111111111111111111111111111111111"
+    },
+    "environment": {
+      "image": "registry.example.invalid/g16/build-demo@sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "producer_job_id": "g16-example-draft-001"
+    },
+    "configuration_id": "gcc-default-v1",
+    "build": {
+      "project_root": ".",
+      "clean_command": "make clean",
+      "command": "make all"
+    },
+    "timeout_seconds": 600
+  },
+  "output": {
+    "sample_origin": "MANUAL_FIXTURE",
+    "summary": { "missing_count": 1, "redundant_count": 1 },
+    "findings": [
+      {
+        "finding_id": "g16-md-001",
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h",
+        "commit": "1111111111111111111111111111111111111111",
+        "configuration_id": "gcc-default-v1",
+        "detector": "MANUAL_FIXTURE",
+        "location": { "path": "Makefile", "line": 1 },
+        "evidence": {
+          "kind": "MANUAL_FIXTURE",
+          "actual_edge": { "target": "main.o", "dependency": "config.h" },
+          "declared_edge_present": false,
+          "description": "人工构造的教学样例：main.c 包含 config.h，但 main.o 的规则未声明 config.h；未运行检测器。"
+        }
+      },
+      {
+        "finding_id": "g16-rd-001",
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h",
+        "commit": "1111111111111111111111111111111111111111",
+        "configuration_id": "gcc-default-v1",
+        "detector": "MANUAL_FIXTURE",
+        "location": { "path": "Makefile", "line": 1 },
+        "evidence": {
+          "kind": "MANUAL_FIXTURE",
+          "declared_edge": { "target": "main.o", "dependency": "unused.h" },
+          "actual_edge_present": false,
+          "description": "人工构造的教学样例：规则声明 unused.h，但 gcc-default-v1 配置下未使用它；不代表其他配置也未使用。"
+        }
+      }
+    ]
+  },
+  "error": null,
+  "artifacts": [
+    {
+      "artifact_id": "g16-actual-001",
+      "type": "ACTUAL_GRAPH",
+      "uri": "repo://contracts/buildchecker/artifacts/actual-graph.json",
+      "media_type": "application/json",
+      "producer_job_id": "g16-example-full-001"
+    },
+    {
+      "artifact_id": "g16-declared-001",
+      "type": "DECLARED_GRAPH",
+      "uri": "repo://contracts/buildchecker/artifacts/declared-graph.json",
+      "media_type": "application/json",
+      "producer_job_id": "g16-example-full-001"
+    },
+    {
+      "artifact_id": "g16-report-001",
+      "type": "ERROR_REPORT",
+      "uri": "repo://contracts/buildchecker/artifacts/error-report.json",
+      "media_type": "application/json",
+      "producer_job_id": "g16-example-full-001"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "sample_origin": "MANUAL_FIXTURE",
+  "producer_job_id": "g16-example-full-001",
+  "repository": {
+    "url": "https://example.invalid/g16/build-demo.git",
+    "commit": "1111111111111111111111111111111111111111"
+  },
+  "configuration_id": "gcc-default-v1",
+  "nodes": [
+    "main.o",
+    "main.c",
+    "unused.h"
+  ],
+  "edges": [
+    {
+      "target": "main.o",
+      "dependency": "main.c"
+    },
+    {
+      "target": "main.o",
+      "dependency": "unused.h"
+    }
+  ]
+}

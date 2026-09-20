@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devops-g16.example/contracts/buildchecker/contract.schema.json",
+  "title": "A1 FULL_CHECK service contract proposal",
+  "allOf": [{ "$ref": "../task.schema.json" }],
+  "type": "object",
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "job_type": { "const": "FULL_CHECK" },
+    "input": { "$ref": "#/$defs/input" },
+    "output": {
+      "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/output" }]
+    }
+  },
+  "$comment": "The common schema owns lifecycle requirements; this schema refines service payloads only.",
+  "$defs": {
+    "text": { "type": "string", "minLength": 1 },
+    "commit": { "type": "string", "pattern": "^[a-fA-F0-9]{40}$" },
+    "input": {
+      "type": "object",
+      "required": ["repository", "environment", "configuration_id", "build", "timeout_seconds"],
+      "properties": {
+        "repository": {
+          "type": "object",
+          "required": ["url", "commit"],
+          "properties": {
+            "url": { "$ref": "#/$defs/text" },
+            "commit": { "$ref": "#/$defs/commit" }
+          }
+        },
+        "environment": {
+          "type": "object",
+          "required": ["image"],
+          "properties": {
+            "image": { "type": "string", "pattern": "^.+@sha256:[a-fA-F0-9]{64}$" },
+            "producer_job_id": { "$ref": "#/$defs/text" }
+          }
+        },
+        "configuration_id": { "$ref": "#/$defs/text" },
+        "build": {
+          "type": "object",
+          "required": ["project_root", "clean_command", "command"],
+          "properties": {
+            "project_root": { "$ref": "#/$defs/text" },
+            "clean_command": { "$ref": "#/$defs/text" },
+            "command": { "$ref": "#/$defs/text" }
+          }
+        },
+        "timeout_seconds": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": ["finding_id", "type", "target", "dependency", "commit", "configuration_id", "detector", "location", "evidence"],
+      "properties": {
+        "finding_id": { "$ref": "#/$defs/text" },
+        "type": { "enum": ["MISSING", "REDUNDANT"] },
+        "target": { "$ref": "#/$defs/text" },
+        "dependency": { "$ref": "#/$defs/text" },
+        "commit": { "$ref": "#/$defs/commit" },
+        "configuration_id": { "$ref": "#/$defs/text" },
+        "detector": { "$ref": "#/$defs/text" },
+        "location": {
+          "type": "object",
+          "required": ["path", "line"],
+          "properties": {
+            "path": { "$ref": "#/$defs/text" },
+            "line": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "minProperties": 1,
+          "description": "Real reports must supply detector evidence; examples explicitly identify manual evidence."
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["summary", "findings"],
+      "properties": {
+        "summary": {
+          "type": "object",
+          "required": ["missing_count", "redundant_count"],
+          "properties": {
+            "missing_count": { "type": "integer", "minimum": 0 },
+            "redundant_count": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } }
+      }
+    }
+  }
+}
