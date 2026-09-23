@@ -4,9 +4,9 @@
 
 ## 小组信息
 
-- A 组编号：TODO（仓库中未记录）
-- B 组编号：TODO（仓库中未记录）
-- 配对关系：G16（具体 A/B 组号待确认）
+- A 组编号：A16
+- B 组编号：B16
+- 配对关系：G16
 - A1：焦龙，Git 作者 `illusiri`，负责 BuildChecker 接口
 - A2：万宇，Git 作者 `adscfe`，负责 EChecker 接口
 - A3：林涵，Git 作者 `WhiteNights`，负责公共任务模型和 A 组接口字段一致性检查
@@ -16,14 +16,14 @@
 
 ## 成员分工
 
-| 成员 | 负责内容 | 主要交付物 |
-| --- | --- | --- |
-| A1 | BuildChecker 接口 | `contracts/buildchecker/request.json`、`response.json` |
-| A2 | EChecker 接口 | `contracts/echecker/request.json`、`response.json` |
-| A3 | 公共任务模型 | `contracts/task.schema.json`，检查 A 组公共字段一致性 |
-| B1 | DRAFT 接口 | `contracts/draft/request.json`、`response.json` |
-| B2 | MDFixer 接口 | `contracts/mdfixer/request.json`、`response.json` |
-| B3 | 公共契约与集成 | 检查统一 Job Schema 和四服务衔接，统一状态/错误语义，维护 `README.md`、`docs/Backlog.md`、`docs/ADR.md`、`docs/INTEGRATION_CHECK.md`、`AI_USAGE.md` |
+| 成员 | 负责内容          | 主要交付物                                                                                                                                          |
+| ---- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A1   | BuildChecker 接口 | `contracts/buildchecker/request.json`、`response.json`                                                                                              |
+| A2   | EChecker 接口     | `contracts/echecker/request.json`、`response.json`                                                                                                  |
+| A3   | 公共任务模型      | `contracts/task.schema.json`，检查 A 组公共字段一致性                                                                                               |
+| B1   | DRAFT 接口        | `contracts/draft/request.json`、`response.json`                                                                                                     |
+| B2   | MDFixer 接口      | `contracts/mdfixer/request.json`、`response.json`                                                                                                   |
+| B3   | 公共契约与集成    | 检查统一 Job Schema 和四服务衔接，统一状态/错误语义，维护 `README.md`、`docs/Backlog.md`、`docs/ADR.md`、`docs/INTEGRATION_CHECK.md`、`AI_USAGE.md` |
 
 所有成员还要补充自己的 `AI_USAGE.md` 和 `CONTRIBUTIONS.md` 记录。A3 与 B3 共同维护本 README。
 
