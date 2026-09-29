@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "provenance": "MANUAL_EXPECTED",
+  "source": "按 E3 PPT main.o/config.h/unused.h 示例手工等价搭建；不是工具检测结果",
+  "repository": {
+    "url": "https://github.com/Lilyly9/DevOps-G16",
+    "commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "project_root": "e3/fixtures/md-rd"
+  },
+  "configuration": {
+    "id": "a1-project-headers-default",
+    "target": "main.o",
+    "cflags": "-O0 -Wall -Wextra",
+    "scope": "只针对 main.o 和项目文件，不包括系统头文件",
+    "compiler": "运行时指定的 C 编译器；实际版本与操作系统分别记录在 work/environment.json"
+  },
+  "findings": [
+    {
+      "finding_id": "A1-MD-config-h",
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h",
+      "location": {"path": "Makefile", "line": 18},
+      "rationale": "main.c 第 2 行包含 config.h 并使用 VALUE；main.o 的声明仅列 main.c 和 unused.h，遗漏了实际使用的 config.h。",
+      "expected_behavior": "首次构建 VALUE=1；仅把 config.h 改为 VALUE=2 后，普通 make 仍输出 1；相同源码 clean 重建输出 2。"
+    },
+    {
+      "finding_id": "A1-RD-unused-h",
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h",
+      "location": {"path": "Makefile", "line": 18},
+      "rationale": "Makefile 声明 unused.h，但 main.c 及 config.h 都没有包含或使用它；在本例固定配置和项目文件范围内，该依赖冗余。",
+      "expected_behavior": "只改 unused.h 的注释，普通 make 仍执行编译和链接；功能输出保持 2。"
+    }
+  ],
+  "accuracy_policy": "人工 oracle 不计入 BuildChecker 工具准确率；真实观察另存 work 与 evidence。",
+  "linux_policy": "只看到 openat 还不足以直接判 MD；Linux 原始跟踪、声明解析和构建行为用于核对依据，完整构图及归一化属于后续实现。"
+}
