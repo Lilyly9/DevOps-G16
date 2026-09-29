@@ -1,0 +1,39 @@
+execve("/usr/bin/make", ["/usr/bin/make", "CC=/usr/bin/cc", "PYTHON=/usr/bin/python3"], 0x7ffc20ef02b8 /* 21 vars */) = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=63820, ...}, AT_EMPTY_PATH) = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=8872448, ...}, AT_EMPTY_PATH) = 0
+getcwd("/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/trace-runtime", 4096) = 102
+newfstatat(AT_FDCWD, "/usr/gnu/include", 0x7ffcff9d2020, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/include", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/include", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/include", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, ".", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+newfstatat(3, "", {st_mode=S_IFDIR|0755, st_size=4096, ...}, AT_EMPTY_PATH) = 0
+openat(AT_FDCWD, "Makefile", O_RDONLY)  = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=434, ...}, AT_EMPTY_PATH) = 0
+newfstatat(AT_FDCWD, "RCS", 0x7ffcff9d1fb0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "SCCS", 0x7ffcff9d1fb0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "Makefile", {st_mode=S_IFREG|0644, st_size=434, ...}, 0) = 0
+newfstatat(AT_FDCWD, "app", 0x7ffcff9cfdd0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "main.o", 0x7ffcff9cfcb0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "main.c", {st_mode=S_IFREG|0644, st_size=100, ...}, 0) = 0
+newfstatat(AT_FDCWD, "unused.h", {st_mode=S_IFREG|0644, st_size=56, ...}, 0) = 0
+newfstatat(1, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+newfstatat(AT_FDCWD, "/usr/bin/cc", {st_mode=S_IFREG|0755, st_size=928584, ...}, 0) = 0
+access("/usr/bin/cc", X_OK)             = 0
+clone3({flags=CLONE_VM|CLONE_VFORK, exit_signal=SIGCHLD, stack=0x77fb3c787000, stack_size=0x9000}, 88) = 11089
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 11089
+newfstatat(AT_FDCWD, "main.o", {st_mode=S_IFREG|0644, st_size=1504, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/bin/cc", {st_mode=S_IFREG|0755, st_size=928584, ...}, 0) = 0
+access("/usr/bin/cc", X_OK)             = 0
+clone3({flags=CLONE_VM|CLONE_VFORK, exit_signal=SIGCHLD, stack=0x77fb3c787000, stack_size=0x9000}, 88) = 11094
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 11094
+newfstatat(AT_FDCWD, "app", {st_mode=S_IFREG|0755, st_size=15960, ...}, 0) = 0
+chdir("/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/trace-runtime") = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

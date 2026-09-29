@@ -1,0 +1,2 @@
+E:/winlibs/mingw64/bin/gcc.exe -O0 -Wall -Wextra -c main.c -o main.o
+E:/winlibs/mingw64/bin/gcc.exe main.o -o app.exe

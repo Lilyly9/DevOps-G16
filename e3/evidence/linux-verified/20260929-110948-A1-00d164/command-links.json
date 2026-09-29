@@ -1,0 +1,8 @@
+{
+  "work": "e3/work/20260929-110948-A1-00d164",
+  "commands": [
+    "linux-trace-clean",
+    "linux-strace-build",
+    "linux-make-pn"
+  ]
+}

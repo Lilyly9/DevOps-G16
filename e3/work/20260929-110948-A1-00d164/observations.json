@@ -1,0 +1,17 @@
+{
+  "member": "A1",
+  "run_id": "20260929-110948-A1-00d164",
+  "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+  "observation_type": "ACTUAL_RUN",
+  "behavior_status": "PASSED",
+  "linux_trace_status": "PASSED",
+  "failures": [],
+  "initial_output": "1",
+  "md_incremental_output": "1",
+  "clean_rebuild_output": "2",
+  "rd_output": "2",
+  "md_object_unchanged": true,
+  "rd_recompiled": true,
+  "source_comparison": "Same VALUE=2 sources before and after clean build",
+  "linux_evidence": "e3/evidence/linux-verified/20260929-110948-A1-00d164"
+}

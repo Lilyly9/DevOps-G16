@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/Lilyly9/DevOps-G16",
+  "fixture_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+  "script_commit": "f94237f996c8e0ade467f9ab180d469942b6356b",
+  "files": {
+    "e3/fixtures/md-rd/main.c": "f3834cb89a3d12451e993ea2d6e762a2a56184f5c215868129259b9da7931aeb",
+    "e3/fixtures/md-rd/config.h": "df2e4e33fa16872bc70c043223591b0cb66ca5d5ebd48b9ace7b703f79b933b7",
+    "e3/fixtures/md-rd/unused.h": "cadbb4cdd0d41a0812367f4d7b487a796fed93e40948090b757e2ddc5f1de5a4",
+    "e3/fixtures/md-rd/Makefile": "57a1ce1d69a137f7d1742fcf872ce8118d558071cb423e4faa0aa84b713ac76e",
+    "e3/fixtures/md-rd/Makefile.before": "57a1ce1d69a137f7d1742fcf872ce8118d558071cb423e4faa0aa84b713ac76e",
+    "e3/fixtures/md-rd/.gitignore": "6d6f9ab3d080b7a201143b5233314ea9e0f09c8819632ee4b8b210d588c0cbff",
+    "e3/fixtures/md-rd/README.md": "34cd527acb56af719ae619ba383ae286e483c85b4f4673f00735fe90bb800673",
+    "e3/scripts/a1_run_baseline.py": "d9f3c03f1f0d8618320d9bdf8532b03f7244659526ce11d022bafa29d90eb037"
+  }
+}

@@ -47,13 +47,14 @@ def main():
     commit = args.source_commit or git("rev-parse", "HEAD")
     if not re.fullmatch(r"[a-fA-F0-9]{40}", commit):
         parser.error("A complete 40-character source commit is required")
-    if not args.source_commit and git("diff", "--", "e3/fixtures/md-rd"):
+    if not args.source_commit and git("diff", "HEAD", "--", "e3/fixtures/md-rd"):
         parser.error("Commit the frozen fixture before recording a new run")
 
     run_id = datetime.now().strftime("%Y%m%d-%H%M%S") + "-A1-" + uuid.uuid4().hex[:6]
     work = E3 / "work" / run_id
     work.mkdir(parents=True, exist_ok=False)
     (work / ".gitignore").write_text("/runtime/\n/trace-runtime/\n", encoding="utf-8")
+    (work / ".gitattributes").write_text("* -text\n", encoding="utf-8")
     logs = work / "logs"
     logs.mkdir()
     runtime = work / "runtime"
@@ -171,6 +172,7 @@ def main():
         if platform.system() == "Linux" and trace_executable:
             trace_dir = E3 / "evidence" / "linux-verified" / run_id
             trace_dir.mkdir(parents=True, exist_ok=False)
+            (trace_dir / ".gitattributes").write_text("* -text\n", encoding="utf-8")
             trace_runtime = work / "trace-runtime"
             shutil.copytree(FIXTURE, trace_runtime)
             run("linux-trace-clean", make + ["clean"], cwd=trace_runtime)

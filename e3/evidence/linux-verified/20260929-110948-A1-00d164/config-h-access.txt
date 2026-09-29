@@ -1,0 +1,2 @@
+trace.log.11088: newfstatat(AT_FDCWD, "unused.h", {st_mode=S_IFREG|0644, st_size=56, ...}, 0) = 0
+trace.log.11091: openat(AT_FDCWD, "config.h", O_RDONLY|O_NOCTTY) = 4

@@ -1,0 +1,253 @@
+[
+  {
+    "id": "env-git",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.520850+00:00",
+    "duration_seconds": 0.0085,
+    "exit_code": 0,
+    "stdout": "logs/env-git.stdout.log",
+    "stderr": "logs/env-git.stderr.log"
+  },
+  {
+    "id": "env-make",
+    "argv": [
+      "/usr/bin/make",
+      "--version"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.529474+00:00",
+    "duration_seconds": 0.0023,
+    "exit_code": 0,
+    "stdout": "logs/env-make.stdout.log",
+    "stderr": "logs/env-make.stderr.log"
+  },
+  {
+    "id": "env-cc",
+    "argv": [
+      "/usr/bin/cc",
+      "--version"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.531904+00:00",
+    "duration_seconds": 0.0043,
+    "exit_code": 0,
+    "stdout": "logs/env-cc.stdout.log",
+    "stderr": "logs/env-cc.stderr.log"
+  },
+  {
+    "id": "env-python",
+    "argv": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.536538+00:00",
+    "duration_seconds": 0.0012,
+    "exit_code": 0,
+    "stdout": "logs/env-python.stdout.log",
+    "stderr": "logs/env-python.stderr.log"
+  },
+  {
+    "id": "env-strace",
+    "argv": [
+      "/usr/bin/strace",
+      "--version"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.537923+00:00",
+    "duration_seconds": 0.0082,
+    "exit_code": 0,
+    "stdout": "logs/env-strace.stdout.log",
+    "stderr": "logs/env-strace.stderr.log"
+  },
+  {
+    "id": "md-rd-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.547173+00:00",
+    "duration_seconds": 0.0587,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-clean.stdout.log",
+    "stderr": "logs/md-rd-clean.stderr.log"
+  },
+  {
+    "id": "md-rd-clean-run",
+    "argv": [
+      "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime/app"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:48.606081+00:00",
+    "duration_seconds": 0.0007,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-clean-run.stdout.log",
+    "stderr": "logs/md-rd-clean-run.stderr.log"
+  },
+  {
+    "id": "md-rd-touch-header",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:49.709474+00:00",
+    "duration_seconds": 0.0011,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-touch-header.stdout.log",
+    "stderr": "logs/md-rd-touch-header.stderr.log"
+  },
+  {
+    "id": "md-rd-touch-header-run",
+    "argv": [
+      "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime/app"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:49.710777+00:00",
+    "duration_seconds": 0.0007,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-touch-header-run.stdout.log",
+    "stderr": "logs/md-rd-touch-header-run.stderr.log"
+  },
+  {
+    "id": "md-rd-clean-rebuild-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:49.712230+00:00",
+    "duration_seconds": 0.0185,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-clean-rebuild-clean.stdout.log",
+    "stderr": "logs/md-rd-clean-rebuild-clean.stderr.log"
+  },
+  {
+    "id": "md-rd-clean-rebuild",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:49.730976+00:00",
+    "duration_seconds": 0.0215,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-clean-rebuild.stdout.log",
+    "stderr": "logs/md-rd-clean-rebuild.stderr.log"
+  },
+  {
+    "id": "md-rd-clean-rebuild-run",
+    "argv": [
+      "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime/app"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:49.752679+00:00",
+    "duration_seconds": 0.0005,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-clean-rebuild-run.stdout.log",
+    "stderr": "logs/md-rd-clean-rebuild-run.stderr.log"
+  },
+  {
+    "id": "md-rd-redundant",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:50.855198+00:00",
+    "duration_seconds": 0.0216,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-redundant.stdout.log",
+    "stderr": "logs/md-rd-redundant.stderr.log"
+  },
+  {
+    "id": "md-rd-redundant-run",
+    "argv": [
+      "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime/app"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:50.877057+00:00",
+    "duration_seconds": 0.0006,
+    "exit_code": 0,
+    "stdout": "logs/md-rd-redundant-run.stdout.log",
+    "stderr": "logs/md-rd-redundant-run.stderr.log"
+  },
+  {
+    "id": "linux-trace-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/trace-runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:50.878516+00:00",
+    "duration_seconds": 0.0147,
+    "exit_code": 0,
+    "stdout": "logs/linux-trace-clean.stdout.log",
+    "stderr": "logs/linux-trace-clean.stderr.log"
+  },
+  {
+    "id": "linux-strace-build",
+    "argv": [
+      "/usr/bin/strace",
+      "-ff",
+      "-o",
+      "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/evidence/linux-verified/20260929-110948-A1-00d164/trace.log",
+      "-e",
+      "trace=%file,%process",
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/trace-runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:50.893642+00:00",
+    "duration_seconds": 0.277,
+    "exit_code": 0,
+    "stdout": "logs/linux-strace-build.stdout.log",
+    "stderr": "logs/linux-strace-build.stderr.log"
+  },
+  {
+    "id": "linux-make-pn",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "-pn"
+    ],
+    "cwd": "/home/soyo/e3-a1-20260929-110934/DevOps-G16-A1-export/e3/work/20260929-110948-A1-00d164/trace-runtime",
+    "source_commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "started_at": "2026-09-29T03:09:51.170989+00:00",
+    "duration_seconds": 0.0021,
+    "exit_code": 0,
+    "stdout": "logs/linux-make-pn.stdout.log",
+    "stderr": "logs/linux-make-pn.stderr.log"
+  }
+]
