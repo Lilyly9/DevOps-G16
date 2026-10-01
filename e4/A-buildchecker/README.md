@@ -1,0 +1,45 @@
+# BuildChecker 服务（E4 骨架）
+
+本仓库在 E4 中建立可重复环境，E5 起在 `services/buildchecker/` 中实现论文方法。
+
+## 第一次使用
+
+```sh
+mkdir -p ~/<学号> && cd ~/<学号>
+git clone https://github.com/Lilyly9/DevOps-G16.git
+cd DevOps-G16
+git config --local user.name  "<学号>"
+git config --local user.email "<学号>@localhost"
+git rev-parse HEAD
+cd e4/A-buildchecker
+make all
+```
+
+`git remote -v` 应指向真正的本组远程仓库。课堂试跑所用的 `/root/E4实验包/A-buildchecker` 只是本地模板；从它克隆不会自动同步到课程平台。共享服务器上的学号目录与 Git 身份只隔离个人工作和标记未来的提交，运行 `make all` 本身不会产生 Git 提交。
+
+本组沿用 E2/E3 的共享仓库，A 模板位于 `e4/A-buildchecker/`。以下所有 `make` 命令均在这个子目录运行，构建上下文也为这个子目录。该目录使用父级仓库的 Git 身份和完整 HEAD，不要另行 `git init`。B 组模板可由 B1 在 `e4/B-draft/` 独立接入。
+
+## 命令
+
+| 命令 | 作用 | 证据（work/<时间>/） |
+| --- | --- | --- |
+| `make doctor` | 服务器与 Git 身份自检 | env.json |
+| `make build` | 构建服务镜像 | build.log、image.json、toolchain.lock |
+| `make test` | 容器内运行单元测试 | test.log |
+| `make smoke` | 用 E3 样例做冒烟测试 | smoke.json |
+| `make scan` | 密钥检查（工作区、Git 历史、镜像） | secret-scan.txt |
+| `make all` | 以上五步 | 同一个证据目录 |
+| `make shell` | 进入服务容器；仓库的 `work/` 挂到容器的 `/app/work`，在那里保存的文件退出后仍保留 | — |
+| `make lock` | 修改 requirements-dev.in 后重新生成锁文件 | requirements-dev.lock |
+
+预期：`make test` 全部通过；`make smoke` 输出 `"passed": true`，strace 记录中能看到 `config.h` 被打开，`app_output` 为 `1`；`make scan` 显示"未发现问题"。
+
+## 约定
+
+- 基础镜像按 digest 固定，升级时只改 `services/buildchecker/Dockerfile` 的 `ARG BASE_IMAGE` 一行，并在提交说明中写明新 digest。
+- 新增 Python 依赖：写进 `requirements-dev.in`，执行 `make lock`，两个文件一起提交。
+- 密钥只放在 `.env`（权限 600），不提交、不进镜像、不打印到日志。
+- E4 每名组员各自在学号目录运行一次 `make all`，记录成功的 `work/<时间>/` 和所测源码 SHA，再与另一名组员对照。`work/` 默认不提交；E4 不要求个人创建分支、提交或合并。后续课程若要求提交原始证据，另按当时要求处理。
+- `env.json` 的 `template_sha` 和 `template_subdirectory` 将运行证据对应到共享仓库版本；A1/A2 需使用相同的完整 SHA。
+- `make scan` 检查共享仓库全部已跟踪文件和 Git 历史，以及本人的服务镜像；同时检查 A 子目录本地 `.env` 的权限。
+- A 组验收：单测 `3 passed`；冒烟的 `make_exit_code=0`、`app_output="1"`、`config_h_opened` 非空、`passed=true` 四项均满足；密钥扫描未发现问题。
