@@ -37,9 +37,11 @@ make all
 ## 约定
 
 - 基础镜像按 digest 固定，升级时只改 `services/buildchecker/Dockerfile` 的 `ARG BASE_IMAGE` 一行，并在提交说明中写明新 digest。
+- A16 ECS 到 Debian 默认源下载缓慢。本组在 Dockerfile 中仅将 `debian.sources` 的 Debian 包源改为 `https://mirrors.aliyun.com/debian`，安全更新源改为 `https://mirrors.aliyun.com/debian-security`。两处地址使用 HTTPS，原有 `Signed-By`、发行版及组件保持不变，`apt` 继续验证 Debian 签名；基础镜像 digest、`requirements-dev.lock` 和工具版本记录方式不变。这是组级网络配置修订，需形成新的模板提交，不属于 A1 个人运行日志。
 - 新增 Python 依赖：写进 `requirements-dev.in`，执行 `make lock`，两个文件一起提交。
 - 密钥只放在 `.env`（权限 600），不提交、不进镜像、不打印到日志。
 - E4 每名组员各自在学号目录运行一次 `make all`，记录成功的 `work/<时间>/` 和所测源码 SHA，再与另一名组员对照。`work/` 默认不提交；E4 不要求个人创建分支、提交或合并。后续课程若要求提交原始证据，另按当时要求处理。
 - `env.json` 的 `template_sha` 和 `template_subdirectory` 将运行证据对应到共享仓库版本；A1/A2 需使用相同的完整 SHA。
+- 网络配置修订后，以新模板提交的完整 `git rev-parse HEAD` 为准。A1 记录其成功运行的 SHA；A2 在自己的独立克隆中执行 `git checkout --detach <A1记录的完整SHA>`，核对 HEAD 后再进入 `e4/A-buildchecker/` 运行 `make all`，以同一模板版本对照结果。
 - `make scan` 检查共享仓库全部已跟踪文件和 Git 历史，以及本人的服务镜像；同时检查 A 子目录本地 `.env` 的权限。
 - A 组验收：单测 `3 passed`；冒烟的 `make_exit_code=0`、`app_output="1"`、`config_h_opened` 非空、`passed=true` 四项均满足；密钥扫描未发现问题。

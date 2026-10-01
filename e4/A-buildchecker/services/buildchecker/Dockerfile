@@ -1,4 +1,4 @@
-# BuildChecker 服务镜像（A 组）。构建上下文是仓库根目录：docker compose build 或 make build。
+# BuildChecker 服务镜像（A 组）。构建上下文是 e4/A-buildchecker/：docker compose build 或 make build。
 #   1. 基础镜像按 digest 固定；升级时只改 BASE_IMAGE 这一行，并在提交说明里写新 digest
 #   2. 系统工具和 Python 包的实际版本在构建时写入 /opt/toolchain.lock
 #   3. Python 依赖按锁文件和哈希安装
@@ -12,7 +12,15 @@ ENV LC_ALL=C.UTF-8 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-RUN apt-get update \
+# A16 ECS 到 Debian 默认源下载缓慢；仅切换软件包下载地址。
+# 保留 debian.sources 中的 Suites、Components、Signed-By 和 apt 的签名校验。
+RUN sed -i \
+      -e 's#http://deb.debian.org/debian-security#https://mirrors.aliyun.com/debian-security#g' \
+      -e 's#http://deb.debian.org/debian#https://mirrors.aliyun.com/debian#g' \
+      /etc/apt/sources.list.d/debian.sources \
+ && grep -q '^URIs: https://mirrors.aliyun.com/debian-security$' /etc/apt/sources.list.d/debian.sources \
+ && grep -q '^URIs: https://mirrors.aliyun.com/debian$' /etc/apt/sources.list.d/debian.sources \
+ && apt-get update \
  && apt-get install -y --no-install-recommends gcc make libc6-dev strace git \
  && rm -rf /var/lib/apt/lists/* \
  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock \
