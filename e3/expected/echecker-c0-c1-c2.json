@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "provenance": "MANUAL_EXPECTED",
+  "sample_origin": "MANUAL_FIXTURE",
+  "source": "按 E3 PPT《E3 并行测试基线》A 组步骤 9（页脚 E3/24）与 E3_TASKS.md 的 A2-1~A2-5 手工等价搭建。本机没有课程 E3 实验包，未运行课程 scripts/run_lab.py；本文件是人工预期答案，不是检测器输出。",
+  "member": "A2",
+  "task": "EChecker C0/C1/C2 增量基线",
+  "repository": {
+    "url": "https://github.com/Lilyly9/DevOps-G16",
+    "project_root": "e3/fixtures/commits/lab",
+    "snapshot_root": "e3/fixtures/commits",
+    "refs": {
+      "C0": "ca57cfb89643e19f0c2ab73637ae2f962f8f7658",
+      "C1": "ef88dd77c8a452fb4f11b2978d0e1157f425e1db",
+      "C2": "900d64c1a60d81d106beb84e4c4593cb576e5a92"
+    }
+  },
+  "configuration": {
+    "id": "a2-windows-gcc-default",
+    "baseline_configuration_id": "a2-windows-gcc-default",
+    "compile_flags": {"C0": "-O0", "C1": "-O0", "C2": "-O0 -DMODE=7"},
+    "build": {
+      "project_root": "e3/fixtures/commits/lab",
+      "clean_command": "make clean",
+      "command": "make",
+      "program": "./app (Windows: ./app.exe)",
+      "scope": "只覆盖 main.o 与本项目头文件；不包含系统头文件"
+    },
+    "explanation": "增量与全量必须使用同一 configuration_id、同一提交和同一规范化方式，否则 E10 的增量/全量对照不可比。程序输出的取值范围只由源码、头文件与 CFLAGS 决定。"
+  },
+  "versions": [
+    {
+      "tag": "C0",
+      "commit": "ca57cfb89643e19f0c2ab73637ae2f962f8f7658",
+      "role": "历史基线（声明正确）",
+      "changed_paths_from_previous": [],
+      "declared_rule": "main.o: main.c config.h",
+      "actual_project_includes": ["config.h"],
+      "expected_findings": [],
+      "program_behavior": {"incremental": "10", "clean": "10"},
+      "basis": "main.c 只读取 config.h，Makefile 已经把 config.h 写进 main.o 的依赖；本例范围内没有 MD/RD。这份提交的图作为 EChecker 的历史基线。"
+    },
+    {
+      "tag": "C1",
+      "commit": "ef88dd77c8a452fb4f11b2978d0e1157f425e1db",
+      "role": "新增 include 但漏声明",
+      "changed_paths_from_previous": ["feature.h", "main.c"],
+      "declared_rule": "main.o: main.c config.h",
+      "actual_project_includes": ["config.h", "feature.h"],
+      "expected_findings": [
+        {
+          "finding_id": "a2-c1-md-feature-h",
+          "type": "MISSING",
+          "target": "main.o",
+          "dependency": "feature.h",
+          "commit": "ef88dd77c8a452fb4f11b2978d0e1157f425e1db",
+          "configuration_id": "a2-windows-gcc-default",
+          "status": "NEW",
+          "location": {"path": "Makefile", "line": 20},
+          "detector": "MANUAL_FIXTURE",
+          "basis": "main.c 第 4 行 #include \"feature.h\" 并使用 FEATURE；main.o 的声明仍只有 main.c 与 config.h。",
+          "declared_edge_present": false
+        }
+      ],
+      "program_behavior": {"incremental": "12", "clean": "12"},
+      "basis": "C0→C1 改了 main.c，所以本次 make 一定会重编译并输出 12；这并不说明声明正确。只有随后单独修改 feature.h 时暴露漏重建。"
+    },
+    {
+      "tag": "C2",
+      "commit": "900d64c1a60d81d106beb84e4c4593cb576e5a92",
+      "role": "只改编译命令",
+      "changed_paths_from_previous": ["Makefile"],
+      "declared_rule": "main.o: main.c config.h",
+      "actual_project_includes": ["config.h", "feature.h"],
+      "expected_findings": [
+        {
+          "finding_id": "a2-c1-md-feature-h",
+          "type": "MISSING",
+          "target": "main.o",
+          "dependency": "feature.h",
+          "commit": "900d64c1a60d81d106beb84e4c4593cb576e5a92",
+          "configuration_id": "a2-windows-gcc-default",
+          "status": "UNCHANGED",
+          "detector": "MANUAL_FIXTURE",
+          "basis": "C2 只改了 CFLAGS，main.c 与 Makefile 的声明都没有变化，C1 的 MD 仍然存在。"
+        }
+      ],
+      "program_behavior": {"incremental": "12", "clean": "19"},
+      "basis": "复用 C1 的 main.o 时普通 make 的时间戳检查看不到 CFLAGS 变化，输出仍是 12；clean 重建才用上 -DMODE=7，输出 19。"
+    }
+  ],
+  "expected_missing_dependency_evidence": {
+    "step": "只把 feature.h 的 FEATURE 从 2 改成 3（mtime 晚于 main.o），不 clean 直接 make",
+    "expected": "不出现 gcc -c main.c，main.o 不变，程序仍输出 12",
+    "contrast": "make clean && make 后输出 13",
+    "conclusion": "12 与 13 的差异就是 main.o 缺 feature.h 的可核验依据"
+  },
+  "expected_command_change_evidence": {
+    "snapshot_command": "make -n -B main.o",
+    "expected": {
+      "C0": "-O0 -c main.c -o main.o",
+      "C1": "-O0 -c main.c -o main.o",
+      "C2": "-O0 -DMODE=7 -c main.c -o main.o"
+    },
+    "conclusion": "C0 与 C1 的命令完全相同，C2 与 C1 不同；普通 make 不会因命令变化重建目标，必须靠命令快照或全量重建才能发现"
+  },
+  "accuracy_policy": "人工 oracle 不计入 EChecker 工具准确率；实际运行记录另存 e3/work/<run-id>/。",
+  "not_in_scope": [
+    "不实现 EChecker 检测器（属于 E8）",
+    "不做真实增量/全量报告一致性与耗时对照（属于 E10）",
+    "不接入 B 组真实数据（属于 E12）",
+    "系统头文件不在本人工答案集合内"
+  ]
+}
