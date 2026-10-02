@@ -1,0 +1,2 @@
+C:/Users/hydl/mingw64/bin/gcc.exe -O0 -c main.c -o main.o
+C:/Users/hydl/mingw64/bin/gcc.exe main.o -o app.exe

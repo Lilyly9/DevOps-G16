@@ -1,0 +1,1 @@
+C:/Users/hydl/mingw64/bin/gcc.exe -O0 -DMODE=7 -c main.c -o main.o

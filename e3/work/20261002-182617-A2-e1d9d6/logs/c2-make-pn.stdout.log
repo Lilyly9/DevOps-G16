@@ -1,0 +1,1393 @@
+make: 对“all”无需做任何事。
+# GNU Make 4.4.1
+# 为 x86_64-pc-msys 编译
+# Copyright (C) 1988-2023 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# make 数据基础，打印在 Fri Oct  2 18:26:23 2026
+
+# 变量
+
+# 环境
+COPILOT_DEBUG_NONCE = 50ac3e82cf31640d0c81b30a8bb53448
+# 默认
+PREPROCESS.S = $(CPP) $(CPPFLAGS)
+# 环境
+SYSTEMDRIVE = C:
+# 环境
+PYDEVD_DISABLE_FILE_VALIDATION = 1
+# 默认
+COMPILE.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# 默认
+ARFLAGS = -rv
+# 默认
+AS = as
+# 默认
+AR = ar
+# 环境
+PYTHONIOENCODING = utf-8
+# 环境
+USERPROFILE = C:\Users\hydl
+# 环境
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+# 环境
+ProgramW6432 = C:\Program Files
+# 默认
+OBJC = cc
+# 环境
+LOCALAPPDATA = C:\Users\hydl\AppData\Local
+# 命令行
+PYTHON = C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe
+# 默认
+LINK.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_MACH)
+# 环境
+SYSTEMROOT = C:\WINDOWS
+# 默认
+LINK.s = $(CC) $(ASFLAGS) $(LDFLAGS) $(TARGET_MACH)
+# 环境
+PROCESSOR_LEVEL = 6
+# 默认
+MAKE_COMMAND := /usr/bin/make
+# 环境
+VSCODE_INJECTION = 1
+# 环境
+COPILOT_AGENT = 1
+# 环境
+VSCODE_GIT_ASKPASS_EXTRA_ARGS = 
+# 自动
+@D = $(patsubst %/,%,$(dir $@))
+# 环境
+PYTHONSTARTUP = c:\Users\hydl\AppData\Roaming\Code\User\workspaceStorage\efc3c05b23ed6f3b9d8af4a5ec6e5cc8\ms-python.python\pythonrc.py
+# 环境
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_271416_OTUGVVGYEEZVFTDW
+# 默认
+COFLAGS = 
+# 环境
+PYTHON_BASIC_REPL = 1
+# 默认
+COMPILE.mod = $(M2C) $(M2FLAGS) $(MODFLAGS) $(TARGET_ARCH)
+# 默认
+.VARIABLES := 
+# 自动
+%D = $(patsubst %/,%,$(dir $%))
+# 默认
+LINK.o = $(CC) $(LDFLAGS) $(TARGET_ARCH)
+# 环境
+IGCCSVC_DB = AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7fzxxRcP30qhvxV6MROAkAQAAAACAAAAAAAQZgAAAAEAACAAAABpfC94RlPlGaHjZoewg1UlKA0tXq07vRhc/qP3Koyf+gAAAAAOgAAAAAIAACAAAAC/7Io9y+tVbeY/alsNJyyueM/UgtY9fVZDj0vp3DI+JmAAAACHT1ahKSnt5quwCfuWn/xdgoEatmZJwsIN3O4ap+lncHUC+JGD5gtYQwLPbrCXVW0JPyC0QHRThDn7HWsKSnqLBj6jrB3zo/OZQMxR0hl6SrW10jz8Hl10YjQtlNggQnBAAAAAsWQJobQYGqFipxjraS0byVbSF2q3qw7PQxsvyYSglrJwKCjgmSnVy4ikIv+a7Fa89X/FY6tBN962XyN6Xu3XlA==
+# 默认
+TEXI2DVI = texi2dvi
+# 自动
+^D = $(patsubst %/,%,$(dir $^))
+# 自动
+%F = $(notdir $%)
+# 环境
+GIT_PAGER = cat
+# 默认
+LEX.l = $(LEX) $(LFLAGS) -t
+# 环境
+LANG = zh_CN.UTF-8
+# 默认
+.LOADED := 
+# 环境
+TMP = /c/Users/hydl/AppData/Local/Temp
+# 默认
+.INCLUDE_DIRS := /usr/include
+# 环境
+EFC_229548_1592913036 = 1
+# 默认
+COMPILE.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# makefile
+MAKEFLAGS = np -- $(MAKEOVERRIDES)
+# 默认
+LINK.f = $(FC) $(FFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 环境
+GIT_EDITOR = :
+# 环境
+CLion = C:\Program Files\JetBrains\CLion 2025.3\bin
+# 默认
+TANGLE = tangle
+# makefile
+CURDIR := /c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/e3/work/20261002-182617-A2-e1d9d6/runtime/C1
+# 默认
+PREPROCESS.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -F
+# 环境
+EFC_229548_4126798990 = 1
+# 自动
+*D = $(patsubst %/,%,$(dir $*))
+# 环境
+PROGRAMFILES = C:\Program Files
+# 环境
+MFLAGS = -np
+# 默认
+COMPILE.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# 默认
+.SHELLFLAGS := -c
+# 环境
+!C: = C:\Users\hydl\AppData\Local\Programs\Microsoft VS Code
+# 默认
+M2C = m2c
+# 默认
+COMPILE.cpp = $(COMPILE.cc)
+# 默认
+TEX = tex
+# 环境
+PSModulePath = C:\Users\hydl\OneDrive\文档\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# 自动
++D = $(patsubst %/,%,$(dir $+))
+# 环境
+GIT_ASKPASS = c:\Users\hydl\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh
+# makefile (从“Makefile”，行 1)
+MAKEFILE_LIST := Makefile
+# 默认
+F77FLAGS = $(FFLAGS)
+# 自动
+@F = $(notdir $@)
+# 自动
+?D = $(patsubst %/,%,$(dir $?))
+# 默认
+COMPILE.def = $(M2C) $(M2FLAGS) $(DEFFLAGS) $(TARGET_ARCH)
+# 默认
+CTANGLE = ctangle
+# 环境
+ProgramFiles(x86) = C:\Program Files (x86)
+# 环境
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS = c:\Users\hydl\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-34d4d20f39e34f93.txt
+# 环境
+OneDriveConsumer = C:\Users\hydl\OneDrive
+# 自动
+*F = $(notdir $*)
+# 自动
+<D = $(patsubst %/,%,$(dir $<))
+# 环境
+OneDrive = C:\Users\hydl\OneDrive
+# 默认
+COMPILE.C = $(COMPILE.cc)
+# 默认
+YACC.m = $(YACC) $(YFLAGS)
+# 默认
+LINK.C = $(LINK.cc)
+# 默认
+MAKE_HOST := x86_64-pc-msys
+# 默认
+LINK.c = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 默认
+SHELL := /bin/sh
+# 环境
+HOMEPATH = \Users\hydl
+# 默认
+LINK.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 环境
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# 环境
+WINDIR = C:\WINDOWS
+# 环境
+MAKELEVEL := 0
+# 默认
+MAKE = $(MAKE_COMMAND)
+# 环境
+ACSetupSvcPort = 23210
+# 环境
+PATH = /c/Users/hydl/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/c/Users/hydl/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli:/c/Users/hydl/.vscode/extensions/vadimcn.vscode-lldb-1.12.0/bin:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/Program Files/dotnet:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/jdk/bin:/d/latex/texlive:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files (x86)/Bitvise SSH Client:/c/Program Files/JetBrains/CLion 2024.2.3/bin/mingw/bin:/c/Program Files/nodejs:/c/Program Files/Git/mingw64/bin:/c/Users/hydl/vcpkg:/c/Users/hydl/mingw64/bin:/c/Program Files/Docker/Docker/resources/bin:/e/texlive/2026/bin/windows:/e/texlive/texlive/2026/bin/windows:/c/Users/hydl/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/hydl/AppData/Local/Programs/Python/Python311:/c/Program Files/MySQL/MySQL Shell 8.0/bin:/c/Users/hydl/AppData/Local/Microsoft/WindowsApps:/c/Program Files/JetBrains/CLion 2025.3/bin:/c/Users/hydl/AppData/Local/Programs/FFmpeg/bin:/c/idea/IntelliJ IDEA Community Edition 2024.3.3/bin:/d/latex/texlive/2025/bin/windows:/c/Users/hydl/AppData/Local/GitHubDesktop/bin:/c/Users/hydl/AppData/Roaming/npm:/c/Users/hydl/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/hydl/.dotnet/tools:/c/Users/hydl/AppData/Local/Programs/Ollama:/c/Users/hydl/.lmstudio/bin:/c/Program Files/MySQL/MySQL Server 8.0/bin:/c/Users/hydl/AppData/Local/Programs/cursor/resources/app/bin:/c/Users/hydl/AppData/Local/Programs/Python/Python311:/c/Users/hydl/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/hydl/AppData/Local/Microsoft/WinGet/Packages/astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe:/e/texlive/texlive/2026/bin/windows:/c/Users/hydl/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts
+# 环境
+ZES_ENABLE_SYSMAN = 1
+# 默认
+FC = f77
+# 默认
+LINT = lint
+# 环境
+COMPUTERNAME = LAPTOP-RJGVA6FC
+# 默认
+PC = pc
+# 默认
+MAKEFILES := 
+# 环境
+VSCODE_GIT_IPC_HANDLE = \\.\pipe\vscode-git-24c486a715-sock
+# makefile (从“Makefile”，行 8)
+EXEEXT = .exe
+# 环境
+VSCODE_GIT_ASKPASS_NODE = C:\Users\hydl\AppData\Local\Programs\Microsoft VS Code\Code.exe
+# 自动
+^F = $(notdir $^)
+# 环境
+CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
+# 默认
+LEX.m = $(LEX) $(LFLAGS) -t
+# 环境
+VSCODE_GIT_ASKPASS_MAIN = c:\Users\hydl\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass-main.js
+# 默认
+.LIBPATTERNS = lib%.dll.a %.dll.a lib%.a %.lib lib%.dll %.dll
+# 环境
+IntelliJ IDEA Community Edition = C:\idea\IntelliJ IDEA Community Edition 2024.3.3\bin;
+# 默认
+CPP = $(CC) -E
+# 默认
+LINK.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 环境
+LOGONSERVER = \\LAPTOP-RJGVA6FC
+# 环境
+USERNAME = hydl
+# 环境
+TERM_PROGRAM = vscode
+# 默认
+CHECKOUT,v = +$(if $(wildcard $@),,$(CO) $(COFLAGS) $< $@)
+# 默认
+COMPILE.f = $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+# 默认
+COMPILE.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -c
+# 环境
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# 默认
+COMPILE.S = $(CC) $(ASFLAGS) $(CPPFLAGS) $(TARGET_MACH) -c
+# 环境
+ACSvcPort = 17532
+# 自动
+?F = $(notdir $?)
+# 默认
+GET = get
+# 默认
+LINK.r = $(FC) $(FFLAGS) $(RFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 环境
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+# 自动
++F = $(notdir $+)
+# 默认
+MAKEINFO = makeinfo
+# 环境
+USERDOMAIN = LAPTOP-RJGVA6FC
+# “override”指令
+GNUMAKEFLAGS := 
+# 默认
+PREPROCESS.r = $(FC) $(FFLAGS) $(RFLAGS) $(TARGET_ARCH) -F
+# 环境
+GIT_MERGE_AUTOEDIT = no
+# 环境
+OS = Windows_NT
+# 默认
+LINK.m = $(OBJC) $(OBJCFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 默认
+LINK.p = $(PC) $(PFLAGS) $(CPPFLAGS) $(LDFLAGS) $(TARGET_ARCH)
+# 默认
+YACC = yacc
+# makefile
+.DEFAULT_GOAL := all
+# 默认
+RM = rm -f
+# 默认
+WEAVE = weave
+# 默认
+MAKE_VERSION := 4.4.1
+# 默认
+MAKEOVERRIDES = ${-*-command-variables-*-}
+# 默认
+F77 = $(FC)
+# 环境
+java-home = C:\jdk
+# 环境
+USERDOMAIN_ROAMINGPROFILE = LAPTOP-RJGVA6FC
+# 环境
+NUMBER_OF_PROCESSORS = 32
+# 环境
+PUBLIC = C:\Users\Public
+# 环境
+ProgramData = C:\ProgramData
+# 默认
+CWEAVE = cweave
+# 自动
+-*-command-variables-*- := PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe CC=C:/Users/hydl/mingw64/bin/gcc.exe
+# 默认
+YACC.y = $(YACC) $(YFLAGS)
+# 默认
+LINK.cpp = $(LINK.cc)
+# 默认
+CO = co
+# 环境
+APPDATA = C:\Users\hydl\AppData\Roaming
+# makefile (从“Makefile”，行 4)
+CFLAGS = -O0 -DMODE=7
+# 环境
+HOMEDRIVE = C:
+# 环境
+COLORTERM = truecolor
+# 环境
+AI_AGENT = github_copilot_vscode_agent
+# 默认
+OUTPUT_OPTION = -o $@
+# 环境
+PROCESSOR_ARCHITECTURE = AMD64
+# 默认
+COMPILE.s = $(AS) $(ASFLAGS) $(TARGET_MACH)
+# 环境
+VSCODE_PYTHON_AUTOACTIVATE_GUARD = 1
+# 环境
+!:: = ::\
+# 环境
+DriverData = C:\Windows\System32\Drivers\DriverData
+# 环境
+DEBIAN_FRONTEND = noninteractive
+# 环境
+BUNDLED_DEBUGPY_PATH = c:\Users\hydl\.vscode\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy
+# 环境
+HOME = /home/hydl
+# 环境
+CommonProgramW6432 = C:\Program Files\Common Files
+# 默认
+LEX = lex
+# 环境
+TEMP = /c/Users/hydl/AppData/Local/Temp
+# 环境
+TERM = xterm-256color
+# 默认
+LINT.c = $(LINT) $(LINTFLAGS) $(CPPFLAGS) $(TARGET_ARCH)
+# 默认
+COMPILE.F = $(FC) $(FFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# 默认
+.RECIPEPREFIX := 
+# 自动
+<F = $(notdir $<)
+# 默认
+SUFFIXES := .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el
+# 环境
+ALLUSERSPROFILE = C:\ProgramData
+# 默认
+LD = ld
+# 环境
+SESSIONNAME = Console
+# 环境
+RlsSvcPort = 22112
+# 默认
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver output-sync check-symlink load dospaths
+# 环境
+PROCESSOR_REVISION = b701
+# 默认
+CXX = g++
+# 命令行
+CC = C:/Users/hydl/mingw64/bin/gcc.exe
+# 环境
+TERM_PROGRAM_VERSION = 1.140.0
+# 默认
+COMPILE.cc = $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
+# 环境
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 183 Stepping 1, GenuineIntel
+# 环境
+CODELLDB_LAUNCH_CONNECT_FILE = c:\Users\hydl\AppData\Roaming\Code\User\workspaceStorage\efc3c05b23ed6f3b9d8af4a5ec6e5cc8\vadimcn.vscode-lldb\rpcaddress.txt
+# 变量的杂凑表状态:
+# 负载=181/1024=18%, 重新杂凑=0, 碰撞=19/217=9%
+
+# Pattern-specific 变量值
+
+# 没有 pattern-specific 变量的值。
+
+# 目录
+
+# RCS：无法对其进行 stat 操作。
+# SCCS：无法对其进行 stat 操作。
+# . (设备 3289941729，i-节点 3377699720639718)：8 文件， 22 不可能.
+
+# 8 文件， 22 不可能在 3 目录中。
+
+# 隐含规则
+
+%.out:
+
+%.a:
+
+%.ln:
+
+%.o:
+
+%: %.o
+#  要执行的配方 (内置)：
+	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.c:
+
+%: %.c
+#  要执行的配方 (内置)：
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.ln: %.c
+#  要执行的配方 (内置)：
+	$(LINT.c) -C$* $<
+
+%.o: %.c
+#  要执行的配方 (内置)：
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+%.cc:
+
+%: %.cc
+#  要执行的配方 (内置)：
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.cc
+#  要执行的配方 (内置)：
+	$(COMPILE.cc) $(OUTPUT_OPTION) $<
+
+%.C:
+
+%: %.C
+#  要执行的配方 (内置)：
+	$(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.C
+#  要执行的配方 (内置)：
+	$(COMPILE.C) $(OUTPUT_OPTION) $<
+
+%.cpp:
+
+%: %.cpp
+#  要执行的配方 (内置)：
+	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.cpp
+#  要执行的配方 (内置)：
+	$(COMPILE.cpp) $(OUTPUT_OPTION) $<
+
+%.p:
+
+%: %.p
+#  要执行的配方 (内置)：
+	$(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.p
+#  要执行的配方 (内置)：
+	$(COMPILE.p) $(OUTPUT_OPTION) $<
+
+%.f:
+
+%: %.f
+#  要执行的配方 (内置)：
+	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.f
+#  要执行的配方 (内置)：
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+%.F:
+
+%: %.F
+#  要执行的配方 (内置)：
+	$(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.F
+#  要执行的配方 (内置)：
+	$(COMPILE.F) $(OUTPUT_OPTION) $<
+
+%.f: %.F
+#  要执行的配方 (内置)：
+	$(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+%.m:
+
+%: %.m
+#  要执行的配方 (内置)：
+	$(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.m
+#  要执行的配方 (内置)：
+	$(COMPILE.m) $(OUTPUT_OPTION) $<
+
+%.r:
+
+%: %.r
+#  要执行的配方 (内置)：
+	$(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.r
+#  要执行的配方 (内置)：
+	$(COMPILE.r) $(OUTPUT_OPTION) $<
+
+%.f: %.r
+#  要执行的配方 (内置)：
+	$(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+%.y:
+
+%.ln: %.y
+#  要执行的配方 (内置)：
+	$(YACC.y) $< 
+	 $(LINT.c) -C$* y.tab.c 
+	 $(RM) y.tab.c
+
+%.c: %.y
+#  要执行的配方 (内置)：
+	$(YACC.y) $< 
+	 mv -f y.tab.c $@
+
+%.l:
+
+%.ln: %.l
+#  要执行的配方 (内置)：
+	@$(RM) $*.c
+	 $(LEX.l) $< > $*.c
+	$(LINT.c) -i $*.c -o $@
+	 $(RM) $*.c
+
+%.c: %.l
+#  要执行的配方 (内置)：
+	@$(RM) $@ 
+	 $(LEX.l) $< > $@
+
+%.r: %.l
+#  要执行的配方 (内置)：
+	$(LEX.l) $< > $@ 
+	 mv -f lex.yy.r $@
+
+%.ym:
+
+%.m: %.ym
+#  要执行的配方 (内置)：
+	$(YACC.m) $< 
+	 mv -f y.tab.c $@
+
+%.yl:
+
+%.s:
+
+%: %.s
+#  要执行的配方 (内置)：
+	$(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.s
+#  要执行的配方 (内置)：
+	$(COMPILE.s) -o $@ $<
+
+%.S:
+
+%: %.S
+#  要执行的配方 (内置)：
+	$(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+%.o: %.S
+#  要执行的配方 (内置)：
+	$(COMPILE.S) -o $@ $<
+
+%.s: %.S
+#  要执行的配方 (内置)：
+	$(PREPROCESS.S) $< > $@
+
+%.mod:
+
+%: %.mod
+#  要执行的配方 (内置)：
+	$(COMPILE.mod) -o $@ -e $@ $^
+
+%.o: %.mod
+#  要执行的配方 (内置)：
+	$(COMPILE.mod) -o $@ $<
+
+%.sym:
+
+%.def:
+
+%.sym: %.def
+#  要执行的配方 (内置)：
+	$(COMPILE.def) -o $@ $<
+
+%.h:
+
+%.info:
+
+%.dvi:
+
+%.tex:
+
+%.dvi: %.tex
+#  要执行的配方 (内置)：
+	$(TEX) $<
+
+%.texinfo:
+
+%.info: %.texinfo
+#  要执行的配方 (内置)：
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+%.dvi: %.texinfo
+#  要执行的配方 (内置)：
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.texi:
+
+%.info: %.texi
+#  要执行的配方 (内置)：
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+%.dvi: %.texi
+#  要执行的配方 (内置)：
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.txinfo:
+
+%.info: %.txinfo
+#  要执行的配方 (内置)：
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+%.dvi: %.txinfo
+#  要执行的配方 (内置)：
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+%.w:
+
+%.c: %.w
+#  要执行的配方 (内置)：
+	$(CTANGLE) $< - $@
+
+%.tex: %.w
+#  要执行的配方 (内置)：
+	$(CWEAVE) $< - $@
+
+%.ch:
+
+%.web:
+
+%.p: %.web
+#  要执行的配方 (内置)：
+	$(TANGLE) $<
+
+%.tex: %.web
+#  要执行的配方 (内置)：
+	$(WEAVE) $<
+
+%.sh:
+
+%: %.sh
+#  要执行的配方 (内置)：
+	cat $< >$@ 
+	 chmod a+x $@
+
+%.elc:
+
+%.el:
+
+(%): %
+#  要执行的配方 (内置)：
+	$(AR) $(ARFLAGS) $@ $<
+
+%.out: %
+#  要执行的配方 (内置)：
+	@rm -f $@ 
+	 cp $< $@
+
+%.c: %.w %.ch
+#  要执行的配方 (内置)：
+	$(CTANGLE) $^ $@
+
+%.tex: %.w %.ch
+#  要执行的配方 (内置)：
+	$(CWEAVE) $^ $@
+
+%:: %,v
+#  要执行的配方 (内置)：
+	$(CHECKOUT,v)
+
+%:: RCS/%,v
+#  要执行的配方 (内置)：
+	$(CHECKOUT,v)
+
+%:: RCS/%
+#  要执行的配方 (内置)：
+	$(CHECKOUT,v)
+
+%:: s.%
+#  要执行的配方 (内置)：
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+%:: SCCS/s.%
+#  要执行的配方 (内置)：
+	$(GET) $(GFLAGS) $(SCCS_OUTPUT_OPTION) $<
+
+# 92 条隐含规则，5 (5.4%) 为末端。
+# 文件
+
+# 不是一个目标：
+.cpp:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.cpp) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.c.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.c) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.h:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.sh:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	cat $< >$@ 
+	 chmod a+x $@
+
+# 不是一个目标：
+.ch:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.r.f:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(PREPROCESS.r) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.dvi:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.def.sym:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.def) -o $@ $<
+
+# 不是一个目标：
+.m.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.m) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.lm.m:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	@$(RM) $@ 
+	 $(LEX.m) $< > $@
+
+# 不是一个目标：
+.p.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.p) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.texinfo:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.ln:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.C:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.C) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.web:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.elc:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.y.ln:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(YACC.y) $< 
+	 $(LINT.c) -C$* y.tab.c 
+	 $(RM) y.tab.c
+
+# 不是一个目标：
+.l.c:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	@$(RM) $@ 
+	 $(LEX.l) $< > $@
+
+# 不是一个目标：
+Makefile:
+#  对隐含规则的搜索已完成。
+#  File is secondary (prerequisite of .SECONDARY).
+#  最近更新 2026-10-02 18:26:23.6233132
+#  文件已经被更新。
+#  更新成功。
+
+# 不是一个目标：
+.sym:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.r.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.r) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.mod:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.mod) -o $@ -e $@ $^
+
+# 不是一个目标：
+.def:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.S:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.S) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.texi.dvi:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# 不是一个目标：
+.txinfo.dvi:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+clean:
+#  假目标 (.PHONY的前提)。
+#  对隐含规则的搜索尚未完成。
+#  文件不存在。
+#  文件尚未被更新。
+#  要执行的配方 (从“Makefile”，行 24)：
+	$(PYTHON) -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('main.o', 'app', 'app.exe')]"
+
+# 不是一个目标：
+.y.c:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(YACC.y) $< 
+	 mv -f y.tab.c $@
+
+# 不是一个目标：
+.cpp.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.cpp) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.el:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.cc:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.tex:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.m:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.m) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.F:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.F) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.web.tex:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(WEAVE) $<
+
+# 不是一个目标：
+.texinfo.info:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# 不是一个目标：
+.ym.m:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(YACC.m) $< 
+	 mv -f y.tab.c $@
+
+# 不是一个目标：
+.l:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.f:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.texi:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.DEFAULT:
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.r:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.r) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.a:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+all: app.exe
+#  假目标 (.PHONY的前提)。
+#  对隐含规则的搜索尚未完成。
+#  文件不存在。
+#  文件已经被更新。
+#  更新成功。
+
+# 不是一个目标：
+.w.tex:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(CWEAVE) $< - $@
+
+# 不是一个目标：
+.s.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.s) -o $@ $<
+
+# 不是一个目标：
+.txinfo:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.c.ln:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINT.c) -C$* $<
+
+# 不是一个目标：
+.tex.dvi:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(TEX) $<
+
+# 不是一个目标：
+.info:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.out:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.texinfo.dvi:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(TEXI2DVI) $(TEXI2DVI_FLAGS) $<
+
+# 不是一个目标：
+.F.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.F) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+main.c:
+#  对隐含规则的搜索已完成。
+#  File is secondary (prerequisite of .SECONDARY).
+#  最近更新 2026-10-02 18:26:21.9744551
+#  文件已经被更新。
+#  更新成功。
+
+main.o: main.c config.h
+#  对隐含规则的搜索尚未完成。
+#  File is secondary (prerequisite of .SECONDARY).
+#  最近更新 2026-10-02 18:26:22.1809975
+#  文件已经被更新。
+#  更新成功。
+#  要执行的配方 (从“Makefile”，行 21)：
+	$(CC) $(CFLAGS) -c main.c -o $@
+
+# 不是一个目标：
+.yl:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.s:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.s) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.S.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.S) -o $@ $<
+
+# 不是一个目标：
+config.h:
+#  对隐含规则的搜索已完成。
+#  File is secondary (prerequisite of .SECONDARY).
+#  最近更新 2026-10-02 18:26:21.9737653
+#  文件已经被更新。
+#  更新成功。
+
+# 不是一个目标：
+.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.C.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.C) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.c:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.txinfo.info:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# 不是一个目标：
+.texi.info:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(MAKEINFO) $(MAKEINFO_FLAGS) $< -o $@
+
+# 不是一个目标：
+.y:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.l.r:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LEX.l) $< > $@ 
+	 mv -f lex.yy.r $@
+
+# 不是一个目标：
+.p:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(LINK.p) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+# 不是一个目标：
+.l.ln:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	@$(RM) $*.c
+	 $(LEX.l) $< > $*.c
+	$(LINT.c) -i $*.c -o $@
+	 $(RM) $*.c
+
+# 不是一个目标：
+.w:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.SUFFIXES: .out .a .ln .o .c .cc .C .cpp .p .f .F .m .r .y .l .ym .yl .s .S .mod .sym .def .h .info .dvi .tex .texinfo .texi .txinfo .w .ch .web .sh .elc .el
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+.PHONY: all clean
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.mod.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.mod) -o $@ $<
+
+# 不是一个目标：
+.web.p:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(TANGLE) $<
+
+# 不是一个目标：
+.S.s:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(PREPROCESS.S) $< > $@
+
+# 不是一个目标：
+.f.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.f) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.ym:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+
+# 不是一个目标：
+.cc.o:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(COMPILE.cc) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.F.f:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(PREPROCESS.F) $(OUTPUT_OPTION) $<
+
+# 不是一个目标：
+.w.c:
+#  内建规则
+#  对隐含规则的搜索尚未完成。
+#  从不检查修改时间。
+#  文件尚未被更新。
+#  要执行的配方 (内置)：
+	$(CTANGLE) $< - $@
+
+app.exe: main.o
+#  对隐含规则的搜索尚未完成。
+#  File is secondary (prerequisite of .SECONDARY).
+#  最近更新 2026-10-02 18:26:22.2661137
+#  文件已经被更新。
+#  更新成功。
+#  要执行的配方 (从“Makefile”，行 17)：
+	$(CC) main.o -o $@
+
+# 文件杂凑表状态:
+# 负载=80/1024=8%, 重新杂凑=0, 碰撞=125/1527=8%
+# VPATH 搜索路径
+
+# 没有“vpath”搜索路径。
+
+# 没有通用搜索路径(“VPATH”变量)。
+
+# strcache 缓冲: 1 (0) / 字串 = 274 / 空间 = 2803 B / 平均 = 10 B
+# 目前缓冲: 尺寸 = 8162 B / 已用 = 2803 B / 数量 = 274 / 平均 = 10 B
+
+# strcache 性能：查找 = 483 / 命中率 = 43%
+# 杂凑表统计数据:
+# 负载=274/8192=3%, 重新杂凑=0, 碰撞=10/483=2%
+# 在 Fri Oct  2 18:26:23 2026
+ 上完成 make 数据基础

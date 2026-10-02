@@ -1,0 +1,392 @@
+[
+  {
+    "id": "env-git",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16",
+    "started_at": "2026-10-02T10:26:17.982939+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/env-git.stdout.log",
+    "stderr": "logs/env-git.stderr.log"
+  },
+  {
+    "id": "env-make",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "--version"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16",
+    "started_at": "2026-10-02T10:26:18.077067+00:00",
+    "duration_seconds": 0.093,
+    "exit_code": 0,
+    "stdout": "logs/env-make.stdout.log",
+    "stderr": "logs/env-make.stderr.log"
+  },
+  {
+    "id": "env-cc",
+    "argv": [
+      "C:/Users/hydl/mingw64/bin/gcc.exe",
+      "--version"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16",
+    "started_at": "2026-10-02T10:26:18.091842+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/env-cc.stdout.log",
+    "stderr": "logs/env-cc.stderr.log"
+  },
+  {
+    "id": "env-python",
+    "argv": [
+      "C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "--version"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16",
+    "started_at": "2026-10-02T10:26:18.106218+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/env-python.stdout.log",
+    "stderr": "logs/env-python.stderr.log"
+  },
+  {
+    "id": "c0-clean",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "clean"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:18.260685+00:00",
+    "duration_seconds": 0.125,
+    "exit_code": 0,
+    "stdout": "logs/c0-clean.stdout.log",
+    "stderr": "logs/c0-clean.stderr.log"
+  },
+  {
+    "id": "c0-build",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:18.495600+00:00",
+    "duration_seconds": 0.234,
+    "exit_code": 0,
+    "stdout": "logs/c0-build.stdout.log",
+    "stderr": "logs/c0-build.stderr.log"
+  },
+  {
+    "id": "c0-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:18.685320+00:00",
+    "duration_seconds": 0.188,
+    "exit_code": 0,
+    "stdout": "logs/c0-run.stdout.log",
+    "stderr": "logs/c0-run.stderr.log"
+  },
+  {
+    "id": "c0-main-o-command",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "-n",
+      "-B",
+      "main.o"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:18.758912+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/c0-main-o-command.stdout.log",
+    "stderr": "logs/c0-main-o-command.stderr.log"
+  },
+  {
+    "id": "c0-make-pn",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "-pn"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:18.825674+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/c0-make-pn.stdout.log",
+    "stderr": "logs/c0-make-pn.stderr.log"
+  },
+  {
+    "id": "c1-incremental",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:20.156911+00:00",
+    "duration_seconds": 0.203,
+    "exit_code": 0,
+    "stdout": "logs/c1-incremental.stdout.log",
+    "stderr": "logs/c1-incremental.stderr.log"
+  },
+  {
+    "id": "c1-incremental-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:20.210870+00:00",
+    "duration_seconds": 0.047,
+    "exit_code": 0,
+    "stdout": "logs/c1-incremental-run.stdout.log",
+    "stderr": "logs/c1-incremental-run.stderr.log"
+  },
+  {
+    "id": "c1-main-o-command",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "-n",
+      "-B",
+      "main.o"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:20.276273+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/c1-main-o-command.stdout.log",
+    "stderr": "logs/c1-main-o-command.stderr.log"
+  },
+  {
+    "id": "c1-make-pn",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "-pn"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:20.338423+00:00",
+    "duration_seconds": 0.063,
+    "exit_code": 0,
+    "stdout": "logs/c1-make-pn.stdout.log",
+    "stderr": "logs/c1-make-pn.stderr.log"
+  },
+  {
+    "id": "c1-touch-feature",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:21.509013+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/c1-touch-feature.stdout.log",
+    "stderr": "logs/c1-touch-feature.stderr.log"
+  },
+  {
+    "id": "c1-touch-feature-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:21.515353+00:00",
+    "duration_seconds": 0.0,
+    "exit_code": 0,
+    "stdout": "logs/c1-touch-feature-run.stdout.log",
+    "stderr": "logs/c1-touch-feature-run.stderr.log"
+  },
+  {
+    "id": "c1-clean-rebuild-clean",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "clean"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:21.635409+00:00",
+    "duration_seconds": 0.125,
+    "exit_code": 0,
+    "stdout": "logs/c1-clean-rebuild-clean.stdout.log",
+    "stderr": "logs/c1-clean-rebuild-clean.stderr.log"
+  },
+  {
+    "id": "c1-clean-rebuild",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:21.892914+00:00",
+    "duration_seconds": 0.25,
+    "exit_code": 0,
+    "stdout": "logs/c1-clean-rebuild.stdout.log",
+    "stderr": "logs/c1-clean-rebuild.stderr.log"
+  },
+  {
+    "id": "c1-clean-rebuild-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C0",
+    "started_at": "2026-10-02T10:26:21.963015+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/c1-clean-rebuild-run.stdout.log",
+    "stderr": "logs/c1-clean-rebuild-run.stderr.log"
+  },
+  {
+    "id": "c2-c1-baseline-clean",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "clean"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:22.080094+00:00",
+    "duration_seconds": 0.109,
+    "exit_code": 0,
+    "stdout": "logs/c2-c1-baseline-clean.stdout.log",
+    "stderr": "logs/c2-c1-baseline-clean.stderr.log"
+  },
+  {
+    "id": "c2-c1-baseline-build",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:22.320077+00:00",
+    "duration_seconds": 0.235,
+    "exit_code": 0,
+    "stdout": "logs/c2-c1-baseline-build.stdout.log",
+    "stderr": "logs/c2-c1-baseline-build.stderr.log"
+  },
+  {
+    "id": "c2-c1-baseline-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:22.500470+00:00",
+    "duration_seconds": 0.172,
+    "exit_code": 0,
+    "stdout": "logs/c2-c1-baseline-run.stdout.log",
+    "stderr": "logs/c2-c1-baseline-run.stderr.log"
+  },
+  {
+    "id": "c2-incremental",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:23.689898+00:00",
+    "duration_seconds": 0.063,
+    "exit_code": 0,
+    "stdout": "logs/c2-incremental.stdout.log",
+    "stderr": "logs/c2-incremental.stderr.log"
+  },
+  {
+    "id": "c2-incremental-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:23.699004+00:00",
+    "duration_seconds": 0.015,
+    "exit_code": 0,
+    "stdout": "logs/c2-incremental-run.stdout.log",
+    "stderr": "logs/c2-incremental-run.stderr.log"
+  },
+  {
+    "id": "c2-main-o-command",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "-n",
+      "-B",
+      "main.o"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:23.778753+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/c2-main-o-command.stdout.log",
+    "stderr": "logs/c2-main-o-command.stderr.log"
+  },
+  {
+    "id": "c2-make-pn",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "-pn"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:23.863940+00:00",
+    "duration_seconds": 0.079,
+    "exit_code": 0,
+    "stdout": "logs/c2-make-pn.stdout.log",
+    "stderr": "logs/c2-make-pn.stderr.log"
+  },
+  {
+    "id": "c2-clean-rebuild-clean",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe",
+      "clean"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:23.974732+00:00",
+    "duration_seconds": 0.109,
+    "exit_code": 0,
+    "stdout": "logs/c2-clean-rebuild-clean.stdout.log",
+    "stderr": "logs/c2-clean-rebuild-clean.stderr.log"
+  },
+  {
+    "id": "c2-clean-rebuild",
+    "argv": [
+      "C:/msys64/usr/bin/make.exe",
+      "CC=C:/Users/hydl/mingw64/bin/gcc.exe",
+      "PYTHON=C:/Users/hydl/AppData/Local/Programs/Python/Python311/python.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:24.194155+00:00",
+    "duration_seconds": 0.219,
+    "exit_code": 0,
+    "stdout": "logs/c2-clean-rebuild.stdout.log",
+    "stderr": "logs/c2-clean-rebuild.stderr.log"
+  },
+  {
+    "id": "c2-clean-rebuild-run",
+    "argv": [
+      "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1\\app.exe"
+    ],
+    "cwd": "C:\\Users\\hydl\\OneDrive\\Desktop\\codeing\\DevOps-G16\\e3\\work\\20261002-182617-A2-e1d9d6\\runtime\\C1",
+    "started_at": "2026-10-02T10:26:24.289951+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/c2-clean-rebuild-run.stdout.log",
+    "stderr": "logs/c2-clean-rebuild-run.stderr.log"
+  }
+]

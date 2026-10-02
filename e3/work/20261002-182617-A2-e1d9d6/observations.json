@@ -1,0 +1,52 @@
+{
+  "member": "A2",
+  "run_id": "20261002-182617-A2-e1d9d6",
+  "observation_type": "ACTUAL_RUN",
+  "task": "EChecker C0/C1/C2 increment baseline",
+  "status": "PASSED",
+  "fixture": "e3/fixtures/commits",
+  "commits": {
+    "C0": "ca57cfb89643e19f0c2ab73637ae2f962f8f7658",
+    "C1": "ef88dd77c8a452fb4f11b2978d0e1157f425e1db",
+    "C2": "900d64c1a60d81d106beb84e4c4593cb576e5a92"
+  },
+  "failures": [],
+  "c0_clean_output": "10",
+  "c1_incremental_output": "12",
+  "c1_stale_output_after_feature_edit": "12",
+  "c1_clean_rebuild_output": "13",
+  "c2_incremental_output": "12",
+  "c2_clean_output": "19",
+  "expected_findings": [
+    {
+      "version": "C0",
+      "finding": "none in this project scope",
+      "basis": "main.o declares main.c and config.h, the only project header main.c reads"
+    },
+    {
+      "version": "C1",
+      "finding": "MISSING main.o -> feature.h",
+      "basis": "main.c line 4 includes feature.h but the rule stays 'main.o: main.c config.h'; editing feature.h does not recompile (12) while a clean build prints 13"
+    },
+    {
+      "version": "C2",
+      "finding": "MISSING main.o -> feature.h still present",
+      "basis": "C2 only changes CFLAGS; incremental build reuses the C1 object and prints 12, clean build prints 19"
+    }
+  ],
+  "command_change": {
+    "c0_equals_c1": true,
+    "c2_differs": true,
+    "c1_command": "C:/Users/hydl/mingw64/bin/gcc.exe -O0 -c main.c -o main.o",
+    "c2_command": "C:/Users/hydl/mingw64/bin/gcc.exe -O0 -DMODE=7 -c main.c -o main.o",
+    "conclusion": "the compile command change is invisible to plain make; only `make -n -B main.o` and the clean build expose it"
+  },
+  "snapshots": [
+    "01-C0-clean",
+    "02-C1-incremental-from-C0",
+    "03-C1-stale-after-feature-edit",
+    "04-C1-clean-rebuild-feature3",
+    "05-C2-incremental-reusing-C1",
+    "06-C2-clean"
+  ]
+}

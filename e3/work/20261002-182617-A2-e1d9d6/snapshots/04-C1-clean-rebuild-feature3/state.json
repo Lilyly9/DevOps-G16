@@ -1,0 +1,32 @@
+{
+  "app.exe": {
+    "sha256": "8beafefd58c08921a09ecc2f2071ff55aee980bf301f4d34006a50a15f9dc2cc",
+    "bytes": 58235,
+    "mtime_ns": 1790936781817695100
+  },
+  "config.h": {
+    "sha256": "a293f911868738858f6db3e1b57be7fa59024b14f037b1f024fac4871972b8be",
+    "bytes": 229,
+    "mtime_ns": 1790936778145505900
+  },
+  "feature.h": {
+    "sha256": "e3ca36279579abfc9b7b61dfb512dd623d9edfdaf170817454c6d736e6968874",
+    "bytes": 183,
+    "mtime_ns": 1790936781441409800
+  },
+  "main.c": {
+    "sha256": "ea852f97fba2e48c9e0008bb6aa8d0e260b1664f0f9ab359df8ea8a8a330683e",
+    "bytes": 138,
+    "mtime_ns": 1790936779948451500
+  },
+  "main.o": {
+    "sha256": "26b67e266aacfa3467fbdd29344ab7897b3c8f1680168167002bb532ff175207",
+    "bytes": 914,
+    "mtime_ns": 1790936781727321100
+  },
+  "Makefile": {
+    "sha256": "92901c3e46346f10c482630b2e1fc306809eeb6f5383486730f449837c6bb164",
+    "bytes": 593,
+    "mtime_ns": 1790936778144506400
+  }
+}
