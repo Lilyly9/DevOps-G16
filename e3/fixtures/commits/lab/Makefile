@@ -1,7 +1,7 @@
 # EChecker 实验小项目（E3 的 A2 基线）。
 # C0/C1/C2 三个版本以 Git tag 保存；三个版本共用本 Makefile 的路径。
 CC ?= cc
-CFLAGS = -O0
+CFLAGS = -O0 -DMODE=7
 PYTHON ?= python3
 
 ifeq ($(OS),Windows_NT)
