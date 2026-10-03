@@ -1,0 +1,11 @@
+{
+  "reviewer": "A3",
+  "date": "2026-10-03",
+  "temporary_clone": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+  "source_sha": "0391e7820241e8e7ee9790cdb8d9db80b3eccb75",
+  "new_runs": [
+    "20261003-140053-A1-0c14d9",
+    "20261003-140056-A2-a4e438"
+  ],
+  "note": "Local Linux reproduction; strace is absent, so no new Linux tracing proof. Original A1 Linux evidence remains the trace source."
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "initial-tag-check",
+    "argv": [
+      "python3",
+      "e3/scripts/a2_export_commits.py",
+      "--check"
+    ],
+    "cwd": "/home/perilla/Projects/devops",
+    "source_sha": "0391e7820241e8e7ee9790cdb8d9db80b3eccb75",
+    "exit_code": 1,
+    "stdout": "initial-tag-check.stdout.log",
+    "stderr": "initial-tag-check.stderr.log",
+    "explanation": "Local clone lacks C0 tag; reproduced failure before safe tag preparation in temporary clone."
+  },
+  {
+    "id": "clone",
+    "argv": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "/home/perilla/Projects/devops",
+      "/tmp/e3-a3-recheck-xfzc7a8m/repo"
+    ],
+    "cwd": "/home/perilla/Projects/devops",
+    "exit_code": 0,
+    "stdout": "clone.stdout.log",
+    "stderr": "clone.stderr.log"
+  },
+  {
+    "id": "source-checkout",
+    "argv": [
+      "git",
+      "checkout",
+      "--detach",
+      "0391e7820241e8e7ee9790cdb8d9db80b3eccb75"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "source-checkout.stdout.log",
+    "stderr": "source-checkout.stderr.log"
+  },
+  {
+    "id": "tag-C0",
+    "argv": [
+      "git",
+      "tag",
+      "C0",
+      "ca57cfb89643e19f0c2ab73637ae2f962f8f7658"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "tag-C0.stdout.log",
+    "stderr": "tag-C0.stderr.log"
+  },
+  {
+    "id": "tag-C1",
+    "argv": [
+      "git",
+      "tag",
+      "C1",
+      "ef88dd77c8a452fb4f11b2978d0e1157f425e1db"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "tag-C1.stdout.log",
+    "stderr": "tag-C1.stderr.log"
+  },
+  {
+    "id": "tag-C2",
+    "argv": [
+      "git",
+      "tag",
+      "C2",
+      "900d64c1a60d81d106beb84e4c4593cb576e5a92"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "tag-C2.stdout.log",
+    "stderr": "tag-C2.stderr.log"
+  },
+  {
+    "id": "a2-export-check",
+    "argv": [
+      "/usr/bin/python",
+      "e3/scripts/a2_export_commits.py",
+      "--check"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "a2-export-check.stdout.log",
+    "stderr": "a2-export-check.stderr.log"
+  },
+  {
+    "id": "a1-behavior",
+    "argv": [
+      "/usr/bin/python",
+      "e3/scripts/a1_run_baseline.py"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "a1-behavior.stdout.log",
+    "stderr": "a1-behavior.stderr.log"
+  },
+  {
+    "id": "a2-behavior",
+    "argv": [
+      "/usr/bin/python",
+      "e3/scripts/a2_run_echecker_baseline.py"
+    ],
+    "cwd": "/tmp/e3-a3-recheck-xfzc7a8m/repo",
+    "exit_code": 0,
+    "stdout": "a2-behavior.stdout.log",
+    "stderr": "a2-behavior.stderr.log"
+  }
+]

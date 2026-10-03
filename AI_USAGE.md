@@ -205,3 +205,7 @@ OpenAI Codex
 - 已执行公共字段/枚举与跨文件值比较：四个完成态响应公共字段齐全，job type/status 枚举一致，DRAFT 镜像/配置/生产任务衔接一致，FULL_CHECK 产物 URI 可被 EChecker/MDFixer 引用，REPAIR 只消费 MISSING，MD/RD 未被当成 FAILED；检查结果均通过。
 - 已尝试运行 `contracts/draft/validate.py`、`contracts/buildchecker/validate.py`、`contracts/echecker/validate.py`、`contracts/mdfixer/validate.py`，但当前 Python 环境缺少 `jsonschema`，均在导入阶段退出；因此未将服务专有 Schema 校验记录为通过，也未安装额外依赖。
 - 已检查 Markdown 本地链接、代码围栏和尾随空白；结果以本次最终检查输出为准。
+
+## A3：E3 补充
+
+本阶段的提示、AI 建议、修正与真实验证见 [A3 E3 AI 使用记录](e3/docs/A3_AI_USAGE.md)。该记录未声明全组已确认或虚构人工签字。

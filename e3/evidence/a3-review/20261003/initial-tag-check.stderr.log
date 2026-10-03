@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/perilla/Projects/devops/e3/scripts/a2_export_commits.py", line 119, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/perilla/Projects/devops/e3/scripts/a2_export_commits.py", line 77, in main
+    commit = resolve(tag)
+  File "/home/perilla/Projects/devops/e3/scripts/a2_export_commits.py", line 34, in resolve
+    sha = git("rev-parse", tag + "^{commit}").decode().strip()
+          ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/perilla/Projects/devops/e3/scripts/a2_export_commits.py", line 28, in git
+    return subprocess.run(["git", "-C", str(REPO), *args], check=True,
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/home/perilla/Projects/devops', 'rev-parse', 'C0^{commit}']' returned non-zero exit status 128.

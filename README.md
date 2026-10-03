@@ -215,3 +215,7 @@ B1 已通过公共及专有 Schema 校验、Dockerfile 与逐轮日志产物读�
 ## 最终离线复核结论
 
 2026-09-20，A3 在最新 `main` 上完成独立复核：公共 Schema 元校验通过，八个请求/响应样例全部通过公共 Schema，仓库内 19 个 JSON 文件均可解析，四个服务的 `validate.py` 均完整通过。当前剩余工作只包括 README 中未确认的 A/B 组号、B2/B3 姓名，以及 [`docs/INTEGRATION_CHECK.md`](docs/INTEGRATION_CHECK.md) 中需要两组共同决定的开放问题。
+
+## E3 A 组基线与 A3 核查
+
+E3 的阶段材料见 [E3 总览](e3/README.md)。A3-1～A3-6 的逐项证据与共同验收边界见 [A3 核查报告](e3/docs/A3_REPORT.md)；运行 `python3 e3/validate_e3.py` 可离线检查 A 组证据。B 组材料与全员相互检查仍待完成。

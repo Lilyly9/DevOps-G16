@@ -1,0 +1,65 @@
+[
+  {
+    "case": "missing snapshot source",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: C0/main.c: missing/unsafe file main.c\n",
+    "stderr": ""
+  },
+  {
+    "case": "missing raw output",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: 20261002-182617-A2-e1d9d6/c0-run/stdout: missing/unsafe file logs/c0-run.stdout.log\nFAIL: 20261002-182617-A2-e1d9d6/c0-run: missing/unsafe file logs/c0-run.stdout.log\nFAIL: 20261002-182617-A2-e1d9d6/c0-run: output inconsistent\n",
+    "stderr": ""
+  },
+  {
+    "case": "wrong commands container",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: e3/work/20261002-182617-A2-e1d9d6/commands.json: expected list\nFAIL: 20261002-182617-A2-e1d9d6/c0-run: missing file reference\nFAIL: 20261002-182617-A2-e1d9d6/c0-run: output inconsistent\nFAIL: 20261002-182617-A2-e1d9d6/c1-incremental-run: missing file reference\nFAIL: 20261002-182617-A2-e1d9d6/c1-incremental-run: output inconsistent\nFAIL: 20261002-182617-A2-e1d9d6/c1-touch-feature-run: missing file reference\nFAIL: 20261002-182617-A2-e1d9d6/c1-touch-feature-run: output inconsistent\nFAIL: 20261002-182617-A2-e1d9d6/c1-clean-rebuild-run: missing file reference\nFAIL: 20261002-182617-A2-e1d9d6/c1-clean-rebuild-run: output inconsistent\nFAIL: 20261002-182617-A2-e1d9d6/c2-incremental-run: missing file reference\nFAIL: 20261002-182617-A2-e1d9d6/c2-incremental-run: output inconsistent\nFAIL: 20261002-182617-A2-e1d9d6/c2-clean-rebuild-run: missing file reference\nFAIL: 20261002-182617-A2-e1d9d6/c2-clean-rebuild-run: output inconsistent\n",
+    "stderr": ""
+  },
+  {
+    "case": "broken expected JSON",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: e3/expected/buildchecker-md-rd.json: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\nFAIL: A1: MD/RD expected answers missing\nFAIL: A1 deep evidence check failed: Traceback (most recent call last):\n  File \"/tmp/e3-a3-recheck-3fdvvvo2/repo/e3/scripts/a1_verify_evidence.py\", line 94, in <module>\n    oracle = read(E3 / \"expected\" / \"buildchecker-md-rd.json\")\n  File \"/tmp/e3-a3-recheck-3fdvvvo2/repo/e3/scripts/a1_verify_evidence.py\", line 13, in read\n    return json.loads(path.read_text(encoding=\"utf-8\"))\n           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/usr/lib/python3.14/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n\n",
+    "stderr": ""
+  },
+  {
+    "case": "unavailable commit SHA",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: C0: missing/invalid commit 0000000000000000000000000000000000000000\nFAIL: 20261002-182617-A2-e1d9d6: observation commits differ from expected\n",
+    "stderr": ""
+  },
+  {
+    "case": "missing environment",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: e3/env/toolchain-A3.txt: [Errno 2] No such file or directory: '/tmp/e3-a3-recheck-3fdvvvo2/repo/e3/env/toolchain-A3.txt'\n",
+    "stderr": ""
+  },
+  {
+    "case": "wrong expected provenance",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: buildchecker-md-rd.json: invalid provenance\nFAIL: A1 deep evidence check failed: Traceback (most recent call last):\n  File \"/tmp/e3-a3-recheck-3fdvvvo2/repo/e3/scripts/a1_verify_evidence.py\", line 95, in <module>\n    require(oracle[\"provenance\"] == \"MANUAL_EXPECTED\", \"Artificial oracle must identify its source\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/e3-a3-recheck-3fdvvvo2/repo/e3/scripts/a1_verify_evidence.py\", line 17, in require\n    raise ValueError(message)\nValueError: Artificial oracle must identify its source\n\n",
+    "stderr": ""
+  },
+  {
+    "case": "forged A2 observed output",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: 20261002-182617-A2-e1d9d6/c2-clean-rebuild-run: output inconsistent\n",
+    "stderr": ""
+  },
+  {
+    "case": "missing A3 contribution doc",
+    "exit_code": 1,
+    "rejected": true,
+    "stdout": "FAIL: missing documentation: e3/docs/A3_CONTRIBUTIONS.md\n",
+    "stderr": ""
+  }
+]

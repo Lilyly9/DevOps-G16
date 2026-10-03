@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python3",
+    "e3/validate_e3.py"
+  ],
+  "cwd": "/home/perilla/Projects/devops",
+  "exit_code": 0,
+  "stdout": "validation.stdout.log",
+  "stderr": "validation.stderr.log",
+  "validator_sha256": "08f411b08488c3f06d51692a9a2a216b4635e81714089c78879cd43475dea15e",
+  "negative_cases": 9,
+  "negative_cases_rejected": 9
+}
