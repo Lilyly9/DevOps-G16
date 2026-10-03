@@ -14,7 +14,7 @@ A2 记录 `toolchain.lock` 完全一致、两次单测均为 `3 passed`、`smoke
 | 检查 | 当前结论 |
 | --- | --- |
 | `.env` 未跟踪 | 本地 `git ls-files` 无 `.env`；A2 记录其服务器克隆亦未跟踪，权限 600 |
-| Git 历史无 Key | A2 的 `secret-scan.txt` 记录为“未发现问题”；A3 未读取该原始文件，不能独立证明整个历史 |
+| Git 历史无 Key | A3 于 2026-10-03 执行 `python e4/A-buildchecker/scripts/secret_scan.py e4/A-buildchecker --history`，退出码 0；扫描本地 368 个已跟踪文件及本地全部 refs 的 Git 历史，未发现符合扫描器规则的疑似密钥；服务器原件尚待核对 |
 | 镜像 history 无 Key | A2 的扫描记录称覆盖镜像；A3 未访问服务器镜像，待核原始扫描日志 |
 
 ## 相邻组只看 README 重跑
@@ -26,3 +26,15 @@ A 组现有 README 已提供独立克隆、切换固定 SHA、`make doctor`/`mak
 ## A 组复现入口与已知坑
 
 在自己的克隆根目录先以 `git rev-parse HEAD` 记录 SHA；若做 A1/A2 的严格对照，检出共同模板 SHA `9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd`，再 `cd e4/A-buildchecker`、`make doctor`、`make all`。从 `make all` 输出取得成功证据目录，核对同目录的七份文件以及 `env.json.template_sha`。基础镜像是 Dockerfile 中固定 digest 的 `m.daocloud.io` Python 镜像；Debian 包源为阿里云 HTTPS 镜像。首次构建下载可能很慢；若失败重试，按成功目录和日志判断，不按目录时间排序猜测。具体命令与风险见 [A 组模板 README](A-buildchecker/README.md)。
+
+## A3 逐项状态
+
+| 要求 | 状态 | 剩余工作 |
+| --- | --- | --- |
+| A3-1 相邻 B 组只看 README 重跑 | 未完成 | 需要实际相邻组地址与可运行环境 |
+| A3-2 证据对应模板 SHA | 部分完成 | 汇总了成员记录，尚需读取服务器 env.json 与原始文件 |
+| A3-3 无泄露三项 | 部分完成 | 本地未跟踪 .env、仓库与历史扫描通过；尚需核查服务器镜像 history |
+| A3-4 README 增补 | 已完成 | 实际顺序、镜像站、已知坑及核查入口已写入 |
+| A3-5 分工文档 §10 汇总 | 未完成 | 上表为成员交接汇总；课程 E4_TASKS.md §10 仍为空，A3 学号及交叉重跑结论未取得 |
+
+以上状态不表示 E4 已验收通过；E4 全部完成必须补齐服务器核验、相邻组重跑与 §10 记录。

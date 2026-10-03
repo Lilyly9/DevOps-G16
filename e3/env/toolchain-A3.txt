@@ -1,0 +1,28 @@
+{
+  "member": "A3",
+  "recorded_date": "2026-10-03",
+  "purpose": "local evidence review; not A1/A2 baseline or ECS make all run",
+  "os": "Linux-7.2.8-2-cachyos-x86_64-with-glibc2.44",
+  "architecture": "x86_64",
+  "versions": {
+    "git": {
+      "exit_code": 0,
+      "version": "git version 2.56.0"
+    },
+    "make": {
+      "exit_code": 0,
+      "version": "GNU Make 4.4.1"
+    },
+    "cc": {
+      "exit_code": 0,
+      "version": "cc (GCC) 16.2.1 20260810"
+    },
+    "python": {
+      "exit_code": 0,
+      "version": "Python 3.14.7"
+    },
+    "strace": {
+      "status": "NOT_INSTALLED"
+    }
+  }
+}
