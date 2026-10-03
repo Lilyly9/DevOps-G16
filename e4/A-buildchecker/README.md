@@ -45,3 +45,7 @@ make all
 - 网络配置修订后，以新模板提交的完整 `git rev-parse HEAD` 为准。A1 记录其成功运行的 SHA；A2 在自己的独立克隆中执行 `git checkout --detach <A1记录的完整SHA>`，核对 HEAD 后再进入 `e4/A-buildchecker/` 运行 `make all`，以同一模板版本对照结果。
 - `make scan` 检查共享仓库全部已跟踪文件和 Git 历史，以及本人的服务镜像；同时检查 A 子目录本地 `.env` 的权限。
 - A 组验收：单测 `3 passed`；冒烟的 `make_exit_code=0`、`app_output="1"`、`config_h_opened` 非空、`passed=true` 四项均满足；密钥扫描未发现问题。
+
+## A3 核查入口
+
+[A3 的证据链与交叉检查记录](../A3_REVIEW.md)汇总 A1/A2 已提交的交接说明、模板 SHA、复现顺序及尚待核验的服务器原件和 B 组重跑。按成功运行输出选择 `work/<时间>/`；额外的 `make scan` 会产生更晚的目录，不能据此判断 `make all` 的结果。
