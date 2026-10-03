@@ -1,40 +1,48 @@
-# E4 A3 文档与证据核查（2026-10-03）
+# E4 A3 原件核查与相互检查（2026-10-03）
 
-本核查以仓库中的 A1/A2 交接记录为输入。A1/A2 的服务器 `work/` 原件、镜像和相邻 B 组仓库不在本地；以下“记录所述”与“A3 独立验证”严格区分。
+成员：林涵；学号：241880464。本文结论来自 A3 对服务器原件、实际镜像和新克隆 README 的独立检查。结构化结果见 [证据索引](docs/A3_EVIDENCE_INDEX.json)，服务器完整核查记录保存在 `/root/241880464/e4-a3-review-20261003/`；原始个人 work 和 .env 不提交。
 
-| 成员 | 成功证据目录（成员记录） | 模板 SHA（成员记录） | A3 可核实范围 |
+## 成功证据与源码版本
+
+| 成员 | 成功目录（位于本人克隆 e4/A-buildchecker/work/） | 模板完整 SHA | 独立核验 |
 | --- | --- | --- | --- |
-| A1 | `/root/241880485/DevOps-G16/e4/A-buildchecker/work/20261001-040329` | `9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd` | A2 交接中引用；尚未读取服务器原件 |
-| A2 | `/root/241880496/DevOps-G16/e4/A-buildchecker/work/20261002-184355` | 同上 | [A2 交接](A2_README.md) 记录 `env.json` / `template-sha.txt` / `head.txt` 一致；尚未读取服务器原件 |
+| A1 | `/root/241880485/DevOps-G16/e4/A-buildchecker/work/20261001-040329` | `9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd` | 七份文件齐全；doctor、单测、冒烟、当前镜像与扫描通过 |
+| A2 | `/root/241880496/DevOps-G16/e4/A-buildchecker/work/20261002-184355` | `9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd` | 同上；与 A1 的同 SHA 对照通过 |
+| A3 | `/root/241880464/DevOps-G16/e4/A-buildchecker/work/20261003-174027` | `fa5ae8fa45ea0fed943c94f9a1523a602aa96ce6` | 七份文件齐全；本人身份、doctor、单测、冒烟、当前镜像与扫描通过 |
 
-A2 记录 `toolchain.lock` 完全一致、两次单测均为 `3 passed`、`smoke.json` 四项通过且相同；镜像 ID、运行目录、主机磁盘余量不同。A3 在本地确认模板 SHA 可由 Git 解析，A 组模板 README、Makefile、Dockerfile、compose、锁文件和密钥扫描脚本均存在。
+A3 的 `work/20261003-174018/` 只有 doctor；`work/20261003-174130/` 只有扫描报告，均不能替代成功目录 `20261003-174027/`。
 
-## 无泄露三项
+## 对照与版本差异
 
-| 检查 | 当前结论 |
-| --- | --- |
-| `.env` 未跟踪 | 本地 `git ls-files` 无 `.env`；A2 记录其服务器克隆亦未跟踪，权限 600 |
-| Git 历史无 Key | A3 于 2026-10-03 执行 `python e4/A-buildchecker/scripts/secret_scan.py e4/A-buildchecker --history`，退出码 0；扫描本地 368 个已跟踪文件及本地全部 refs 的 Git 历史，未发现符合扫描器规则的疑似密钥；服务器原件尚待核对 |
-| 镜像 history 无 Key | A2 的扫描记录称覆盖镜像；A3 未访问服务器镜像，待核原始扫描日志 |
+A1/A2 符合课程同一完整 SHA 的重跑对照：工具锁文件一致，单测均为 `3 passed`，冒烟四项均通过。A3 的整仓 SHA 较新，不能把三人的整仓版本写成相同；两个版本的 `e4/A-buildchecker` Git tree 均为 `dac9cd95c62685b3b7bc2d95f37512b3bc87527b`，表明服务模板没有变化。三人的 toolchain.lock SHA-256 均为 `bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358`。正式同 SHA 验收由 A1/A2 这对运行满足，A3 的较新版本作为本人运行和额外对照保存。
 
-## 相邻组只看 README 重跑
+## 三处密钥检查
 
-截至本次核查，未收到相邻 B 组仓库地址与可访问环境；共享仓库中也没有 `e4/B-draft/`。因此 A3-1 尚未实际重跑。取得地址后应只按其 README 完成克隆、`make doctor`、`make all`，记录 SHA、成功目录、疑点、缺失步骤和修正建议，不填写虚构结论。
+- 三人的 .env 都存在、权限为 600、未被 Git 跟踪；三个克隆工作区均干净。
+- 在每个成员的实际克隆重新调用课程扫描器检查仓库、Git 历史和本人记录的镜像，三个退出码均为 0，未发现符合扫描规则的疑似密钥。
+- 独立读取镜像当前 ID，确认与各自原 image.json 相同；没有以被替换的新镜像代替原运行镜像。
+- 这里报告扫描器覆盖范围内的结果，不宣称能识别所有可能的凭据格式。
 
-A 组现有 README 已提供独立克隆、切换固定 SHA、`make doctor`/`make all`、证据目录、固定 digest、阿里云 Debian 源及已知问题。复核时应注意 A1 直连 GitHub 曾超时，A2 直连成功；这不等于任意机器均可访问。A2 的两次假 Key 扫描目录晚于成功 `make all` 目录，不能将“最新目录”误认作成功证据。
+## 本人扫描器正反验证
 
-## A 组复现入口与已知坑
+在 A3 独立临时克隆中暂存假 Key，以唯一 RUN 目录执行 make scan：报出假 Key 并退出 2；清理后再次扫描退出 0。测试克隆已删除，未修改本人原始成功记录，也未把扫描目录当作 make all 的成功证据。日志与 secret-probe.json 留在服务器核查目录。
 
-在自己的克隆根目录先以 `git rev-parse HEAD` 记录 SHA；若做 A1/A2 的严格对照，检出共同模板 SHA `9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd`，再 `cd e4/A-buildchecker`、`make doctor`、`make all`。从 `make all` 输出取得成功证据目录，核对同目录的七份文件以及 `env.json.template_sha`。基础镜像是 Dockerfile 中固定 digest 的 `m.daocloud.io` Python 镜像；Debian 包源为阿里云 HTTPS 镜像。首次构建下载可能很慢；若失败重试，按成功目录和日志判断，不按目录时间排序猜测。具体命令与风险见 [A 组模板 README](A-buildchecker/README.md)。
+## B 组只看 README 的实际尝试
 
-## A3 逐项状态
+使用本人独立新目录从用户给定的共享远程 `https://github.com/Lilyly9/DevOps-G16.git` 直接克隆，退出码 0；取得 SHA `fa5ae8fa45ea0fed943c94f9a1523a602aa96ce6`。原始 README 的 SHA-256 为 `731faf427eb84f4280ed4c6d584ad1918be6af303ae8bd0a5877a20f289a7328`。
 
-| 要求 | 状态 | 剩余工作 |
+检查结果：该版本 README 没有 B 组 E4 的运行步骤，仓库也没有 e4/B-draft，因此无法开始 B 组服务重跑，更不能核验 B1/B2 的成功运行。用户随后明确确认“B 组尚未准备”。本次是实际失败前置检查，未使用教师 B 模板冒充邻组产物。
+
+修正建议：B1 接入本组实际 E4 模板；B3 补齐 B 组 README（克隆、版本、Docker socket 权限、make all 与证据入口）；就绪后 A3 再按 README 完成实际构建和四个相互检查问题。服务器中 b-readme-review.json 与 b-clone 日志保留本次观察。
+
+## A3 任务状态
+
+| 要求 | 状态 | 依据或剩余条件 |
 | --- | --- | --- |
-| A3-1 相邻 B 组只看 README 重跑 | 未完成 | 需要实际相邻组地址与可运行环境 |
-| A3-2 证据对应模板 SHA | 部分完成 | 汇总了成员记录，尚需读取服务器 env.json 与原始文件 |
-| A3-3 无泄露三项 | 部分完成 | 本地未跟踪 .env、仓库与历史扫描通过；尚需核查服务器镜像 history |
-| A3-4 README 增补 | 已完成 | 实际顺序、镜像站、已知坑及核查入口已写入 |
-| A3-5 分工文档 §10 汇总 | 未完成 | 上表为成员交接汇总；课程 E4_TASKS.md §10 仍为空，A3 学号及交叉重跑结论未取得 |
+| A3-1 相邻 B 组只看 README 尝试重跑 | 已实际尝试，未通过 | B 组模板与说明未准备；已留缺项与建议，成功重跑待 B 组就绪 |
+| A3-2 成功证据对应模板 SHA | 已完成 | 已读取 A1/A2/A3 原件、验证 SHA 对象并保存文件 hash |
+| A3-3 .env、历史、镜像核查 | A 组已完成 | 三个实际克隆和对应镜像扫描退出 0 |
+| A3-4 README 增补 | 已完成 | [A 组 README](A-buildchecker/README.md)及[本人入口](A3_README.md)包含实际目录、版本、已知坑和核查入口 |
+| A3-5 A 组 §10 记录汇总 | 已完成 | 根据成员本人记录和已核验原件转录 A 组行；B 组行保持待本人填写 |
 
-以上状态不表示 E4 已验收通过；E4 全部完成必须补齐服务器核验、相邻组重跑与 §10 记录。
+E4 的 A 组原件核查和文档收尾已完成；整个 E4 的跨组验收仍未通过，唯一已确认的外部前置缺项是 B 组未准备，不能把它写成全组完成。

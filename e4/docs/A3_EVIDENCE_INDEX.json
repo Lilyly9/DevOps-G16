@@ -1,0 +1,380 @@
+{
+  "a1-evidence-check.json": {
+    "scope": "E4 A-group run evidence; B-group README rerun is a separate required task",
+    "records": [
+      {
+        "directory": "/root/241880485/DevOps-G16/e4/A-buildchecker/work/20261001-040329",
+        "files": {
+          "env.json": {
+            "bytes": 1001,
+            "sha256": "d14c870f2ccdfad3732c9b745f204b0c675ba153472b80008984159eb1b2c442"
+          },
+          "build.log": {
+            "bytes": 3037,
+            "sha256": "959a65790124caffe6023778d310b9472e6d451942930ecf62dccd1711575ea6"
+          },
+          "image.json": {
+            "bytes": 180,
+            "sha256": "3abf40e6b65b3997a605511ae77a90c287fda2be72fed2a2e707ed0d68650d6f"
+          },
+          "toolchain.lock": {
+            "bytes": 219,
+            "sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+          },
+          "test.log": {
+            "bytes": 98,
+            "sha256": "e0a6ea218ea5d725ce7272da8d68d45a029e489423e03af6960c7bff0f7fe414"
+          },
+          "smoke.json": {
+            "bytes": 544,
+            "sha256": "3f33c782ff95e31fa488b120729f9f9a1dc68278c1ec9e61d0fa15a58d46609a"
+          },
+          "secret-scan.txt": {
+            "bytes": 106,
+            "sha256": "712f90daca78c9826cb9232fb39c6205ce1b300603d3dd63ffa4ea697bd9826b"
+          }
+        },
+        "template_sha": "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd",
+        "student_id": "241880485",
+        "test_passed": true,
+        "smoke": {
+          "make_exit_code": 0,
+          "app_output": "1",
+          "config_h_opened": true,
+          "passed": true
+        },
+        "recorded_scan_passed": true,
+        "image_id": "sha256:72d3cbeaa7c7b0991737f4c41d359e1b8849a1b15100d78580bb4995090c2868",
+        "image_architecture": "amd64",
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358",
+        "independent_scan": {
+          "exit_code": 0,
+          "masked_output": "密钥检查：未发现问题（文件 240 个，含 Git 历史，含镜像 e4-buildchecker:241880485）\n",
+          "completed": true
+        }
+      }
+    ],
+    "tracked_env": [],
+    "independent_scan_requested": true,
+    "passed": true,
+    "errors": []
+  },
+  "a2-evidence-check.json": {
+    "scope": "E4 A-group run evidence; B-group README rerun is a separate required task",
+    "records": [
+      {
+        "directory": "/root/241880496/DevOps-G16/e4/A-buildchecker/work/20261002-184355",
+        "files": {
+          "env.json": {
+            "bytes": 1001,
+            "sha256": "3c9d72d95af893f2967d04a8777c478cad551ad63dc7c09e09d36f16d5038dee"
+          },
+          "build.log": {
+            "bytes": 2932,
+            "sha256": "61a733926ce08a30dcd8b70fc65c7b3b611d8ff83bf409112ee48c5eb2e86472"
+          },
+          "image.json": {
+            "bytes": 180,
+            "sha256": "789ddb0abccd1b3744338fcc8d0baeb770175fc0dec1f4f483793a370d540d94"
+          },
+          "toolchain.lock": {
+            "bytes": 219,
+            "sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+          },
+          "test.log": {
+            "bytes": 98,
+            "sha256": "e0a6ea218ea5d725ce7272da8d68d45a029e489423e03af6960c7bff0f7fe414"
+          },
+          "smoke.json": {
+            "bytes": 544,
+            "sha256": "3f33c782ff95e31fa488b120729f9f9a1dc68278c1ec9e61d0fa15a58d46609a"
+          },
+          "secret-scan.txt": {
+            "bytes": 106,
+            "sha256": "110f62f70a5902d3fadf96db9a6234d057e2762c833a3a3dc2ac114bb44a850c"
+          }
+        },
+        "template_sha": "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd",
+        "student_id": "241880496",
+        "test_passed": true,
+        "smoke": {
+          "make_exit_code": 0,
+          "app_output": "1",
+          "config_h_opened": true,
+          "passed": true
+        },
+        "recorded_scan_passed": true,
+        "image_id": "sha256:5929bb973f6e9bcf0435c3333ab78d7d2cf1940aad888ff1a48dc161a5b3fb5a",
+        "image_architecture": "amd64",
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358",
+        "independent_scan": {
+          "exit_code": 0,
+          "masked_output": "密钥检查：未发现问题（文件 240 个，含 Git 历史，含镜像 e4-buildchecker:241880496）\n",
+          "completed": true
+        }
+      }
+    ],
+    "tracked_env": [],
+    "independent_scan_requested": true,
+    "passed": true,
+    "errors": []
+  },
+  "a3-evidence-check-v2.json": {
+    "scope": "E4 A-group run evidence; B-group README rerun is a separate required task",
+    "records": [
+      {
+        "directory": "/root/241880464/DevOps-G16/e4/A-buildchecker/work/20261003-174027",
+        "files": {
+          "env.json": {
+            "bytes": 1001,
+            "sha256": "c2e2f8262a338e1bf8d6eb70ed431efd6a6272676e4890d394888234997e1137"
+          },
+          "build.log": {
+            "bytes": 2932,
+            "sha256": "e89a035a284a5b6625713a3ab2afcd516ab9aa0c2b333b5b0a275bdce56c322b"
+          },
+          "image.json": {
+            "bytes": 180,
+            "sha256": "ee0920fe6c2a523551e75c053ac55a8be2474b9894a46b5a75a84bf64dadf210"
+          },
+          "toolchain.lock": {
+            "bytes": 219,
+            "sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+          },
+          "test.log": {
+            "bytes": 98,
+            "sha256": "e0a6ea218ea5d725ce7272da8d68d45a029e489423e03af6960c7bff0f7fe414"
+          },
+          "smoke.json": {
+            "bytes": 544,
+            "sha256": "3f33c782ff95e31fa488b120729f9f9a1dc68278c1ec9e61d0fa15a58d46609a"
+          },
+          "secret-scan.txt": {
+            "bytes": 106,
+            "sha256": "b8cbbccf799fa67d12b418f01af9378427164d6efa37d6ee9924eaa65f19d4c9"
+          }
+        },
+        "template_sha": "fa5ae8fa45ea0fed943c94f9a1523a602aa96ce6",
+        "student_id": "241880464",
+        "test_passed": true,
+        "smoke": {
+          "make_exit_code": 0,
+          "app_output": "1",
+          "config_h_opened": true,
+          "passed": true
+        },
+        "recorded_scan_passed": true,
+        "image_id": "sha256:c20e53ced80913d42be6055629836c668613131a7008a76c6d5c2e4210313719",
+        "image_architecture": "amd64",
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358",
+        "independent_scan": {
+          "exit_code": 0,
+          "masked_output": "密钥检查：未发现问题（文件 364 个，含 Git 历史，含镜像 e4-buildchecker:241880464）\n",
+          "completed": true
+        }
+      }
+    ],
+    "tracked_env": [],
+    "independent_scan_requested": true,
+    "passed": true,
+    "errors": []
+  },
+  "a1-a2-comparison.json": {
+    "scope": "E4 A-group run evidence; B-group README rerun is a separate required task",
+    "records": [
+      {
+        "directory": "/root/241880485/DevOps-G16/e4/A-buildchecker/work/20261001-040329",
+        "files": {
+          "env.json": {
+            "bytes": 1001,
+            "sha256": "d14c870f2ccdfad3732c9b745f204b0c675ba153472b80008984159eb1b2c442"
+          },
+          "build.log": {
+            "bytes": 3037,
+            "sha256": "959a65790124caffe6023778d310b9472e6d451942930ecf62dccd1711575ea6"
+          },
+          "image.json": {
+            "bytes": 180,
+            "sha256": "3abf40e6b65b3997a605511ae77a90c287fda2be72fed2a2e707ed0d68650d6f"
+          },
+          "toolchain.lock": {
+            "bytes": 219,
+            "sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+          },
+          "test.log": {
+            "bytes": 98,
+            "sha256": "e0a6ea218ea5d725ce7272da8d68d45a029e489423e03af6960c7bff0f7fe414"
+          },
+          "smoke.json": {
+            "bytes": 544,
+            "sha256": "3f33c782ff95e31fa488b120729f9f9a1dc68278c1ec9e61d0fa15a58d46609a"
+          },
+          "secret-scan.txt": {
+            "bytes": 106,
+            "sha256": "712f90daca78c9826cb9232fb39c6205ce1b300603d3dd63ffa4ea697bd9826b"
+          }
+        },
+        "template_sha": "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd",
+        "student_id": "241880485",
+        "test_passed": true,
+        "smoke": {
+          "make_exit_code": 0,
+          "app_output": "1",
+          "config_h_opened": true,
+          "passed": true
+        },
+        "recorded_scan_passed": true,
+        "image_id": "sha256:72d3cbeaa7c7b0991737f4c41d359e1b8849a1b15100d78580bb4995090c2868",
+        "image_architecture": "amd64",
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+      },
+      {
+        "directory": "/root/241880496/DevOps-G16/e4/A-buildchecker/work/20261002-184355",
+        "files": {
+          "env.json": {
+            "bytes": 1001,
+            "sha256": "3c9d72d95af893f2967d04a8777c478cad551ad63dc7c09e09d36f16d5038dee"
+          },
+          "build.log": {
+            "bytes": 2932,
+            "sha256": "61a733926ce08a30dcd8b70fc65c7b3b611d8ff83bf409112ee48c5eb2e86472"
+          },
+          "image.json": {
+            "bytes": 180,
+            "sha256": "789ddb0abccd1b3744338fcc8d0baeb770175fc0dec1f4f483793a370d540d94"
+          },
+          "toolchain.lock": {
+            "bytes": 219,
+            "sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+          },
+          "test.log": {
+            "bytes": 98,
+            "sha256": "e0a6ea218ea5d725ce7272da8d68d45a029e489423e03af6960c7bff0f7fe414"
+          },
+          "smoke.json": {
+            "bytes": 544,
+            "sha256": "3f33c782ff95e31fa488b120729f9f9a1dc68278c1ec9e61d0fa15a58d46609a"
+          },
+          "secret-scan.txt": {
+            "bytes": 106,
+            "sha256": "110f62f70a5902d3fadf96db9a6234d057e2762c833a3a3dc2ac114bb44a850c"
+          }
+        },
+        "template_sha": "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd",
+        "student_id": "241880496",
+        "test_passed": true,
+        "smoke": {
+          "make_exit_code": 0,
+          "app_output": "1",
+          "config_h_opened": true,
+          "passed": true
+        },
+        "recorded_scan_passed": true,
+        "image_id": "sha256:5929bb973f6e9bcf0435c3333ab78d7d2cf1940aad888ff1a48dc161a5b3fb5a",
+        "image_architecture": "amd64",
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+      }
+    ],
+    "tracked_env": [],
+    "independent_scan_requested": false,
+    "passed": true,
+    "errors": []
+  },
+  "b-readme-review.json": {
+    "scope": "A3 review of the user-provided B-group repository using its README",
+    "repository": "https://github.com/Lilyly9/DevOps-G16.git",
+    "clone_exit_code": 0,
+    "clone_directory": "/root/241880464/e4-a3-review-20261003/b-readme-l0rq4mr5/repo",
+    "commands": [
+      {
+        "argv": [
+          "git",
+          "-c",
+          "http.lowSpeedLimit=1",
+          "-c",
+          "http.lowSpeedTime=20",
+          "clone",
+          "https://github.com/Lilyly9/DevOps-G16.git",
+          "/root/241880464/e4-a3-review-20261003/b-readme-l0rq4mr5/repo"
+        ],
+        "exit_code": 0,
+        "stdout": "b-clone.stdout.log",
+        "stderr": "b-clone.stderr.log"
+      }
+    ],
+    "source_sha": "fa5ae8fa45ea0fed943c94f9a1523a602aa96ce6",
+    "readme_sha256": "731faf427eb84f4280ed4c6d584ad1918be6af303ae8bd0a5877a20f289a7328",
+    "readme_b_e4_instructions": false,
+    "b_template_present": false,
+    "can_rerun_from_readme": false,
+    "status": "BLOCKED_BY_MISSING_B_TEMPLATE_AND_README",
+    "findings": [
+      "README does not provide B-group E4 setup/rerun commands.",
+      "Shared repository has no e4/B-draft template.",
+      "Cannot validate B1/B2 success records or B image without the actual B environment."
+    ],
+    "suggestions": [
+      "B1 publish the actual B E4 template in the shared repository or give its actual path/branch.",
+      "B3 add B-group clone, source SHA, Docker permission, make all and evidence instructions to README.",
+      "A3 repeat the README-only check after those changes are available."
+    ]
+  },
+  "context-checks.json": {
+    "scope": "live server read-only checks",
+    "records": [
+      {
+        "member": "A1",
+        "env_exists": true,
+        "env_mode": "0o600",
+        "env_tracked": false,
+        "worktree_clean": true,
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+      },
+      {
+        "member": "A2",
+        "env_exists": true,
+        "env_mode": "0o600",
+        "env_tracked": false,
+        "worktree_clean": true,
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+      },
+      {
+        "member": "A3",
+        "env_exists": true,
+        "env_mode": "0o600",
+        "env_tracked": false,
+        "worktree_clean": true,
+        "toolchain_sha256": "bc70f4e9e436d2567c88588171d7fd4575a614c442874baa089407106bbf9358"
+      }
+    ],
+    "template_subtree_ids": {
+      "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd": "dac9cd95c62685b3b7bc2d95f37512b3bc87527b",
+      "fa5ae8fa45ea0fed943c94f9a1523a602aa96ce6": "dac9cd95c62685b3b7bc2d95f37512b3bc87527b"
+    },
+    "a3_template_matches_a1_a2": true,
+    "all_toolchain_files_identical": true
+  },
+  "secret-probe.json": {
+    "scope": "A3 synthetic scanner validation in a separate temporary clone, not a make all evidence directory",
+    "student": "241880464",
+    "records": [
+      {
+        "case": "synthetic key staged in temporary clone",
+        "exit_code": 2,
+        "expected_failure": true,
+        "detected": true,
+        "stdout": "secret-positive.stdout.log",
+        "stderr": "secret-positive.stderr.log"
+      },
+      {
+        "case": "synthetic key removed",
+        "exit_code": 0,
+        "clean": true,
+        "stdout": "secret-clean.stdout.log",
+        "stderr": "secret-clean.stderr.log"
+      }
+    ],
+    "passed": true,
+    "temporary_clone_removed": true
+  }
+}

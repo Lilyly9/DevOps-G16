@@ -70,3 +70,7 @@
 ## A3：E3 补充
 
 本人 E3 文件、真实提交与验证范围见 [A3 E3 贡献记录](e3/docs/A3_CONTRIBUTIONS.md)，逐项验收见 [A3 核查报告](e3/docs/A3_REPORT.md)。
+
+## A3：E4 补充
+
+本人 E4 文件、服务器原件核验与真实提交记录见 [A3 E4 贡献记录](e4/docs/A3_CONTRIBUTIONS.md)。

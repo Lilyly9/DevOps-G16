@@ -219,3 +219,7 @@ B1 已通过公共及专有 Schema 校验、Dockerfile 与逐轮日志产物读�
 ## E3 A 组基线与 A3 核查
 
 E3 的阶段材料见 [E3 总览](e3/README.md)。A3-1～A3-6 的逐项证据与共同验收边界见 [A3 核查报告](e3/docs/A3_REPORT.md)；运行 `python3 e3/validate_e3.py` 可离线检查 A 组证据。B 组材料与全员相互检查仍待完成。
+
+## E4 A3 核查入口
+
+A3 已核验 A1/A2/A3 服务器原件和各自镜像，A1/A2 同 SHA 对照通过；个人目录、源码版本与证据链见 [A3 入口](e4/A3_README.md)及[逐项核查](e4/A3_REVIEW.md)。相邻 B 组尚未准备，已记录真实 README 检查的缺项与建议，跨组重跑尚未通过。
