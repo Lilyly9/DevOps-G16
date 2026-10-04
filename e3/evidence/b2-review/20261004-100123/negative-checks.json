@@ -1,0 +1,22 @@
+[
+  {
+    "case": "tampered-raw-output",
+    "expected": "rejected",
+    "result": "rejected"
+  },
+  {
+    "case": "missing-generated-depfile",
+    "expected": "rejected",
+    "result": "rejected"
+  },
+  {
+    "case": "failed-candidate-accepted",
+    "expected": "rejected",
+    "result": "rejected"
+  },
+  {
+    "case": "incorrect-recovery",
+    "expected": "rejected",
+    "result": "rejected"
+  }
+]

@@ -1,0 +1,14 @@
+diff --git a/Makefile b/Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -17,7 +17,9 @@
+ 
+ main.o: unused.h
+ %.o: %.c
+-	$(CC) $(CFLAGS) -c $< -o $@
++	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+ 
+ clean:
+ 	$(PYTHON) -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('main.o', 'main.d', 'app', 'app.exe')]"
++
++-include main.d

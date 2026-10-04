@@ -1,0 +1,2 @@
+FAIL: rejection-restored: snapshot/hash mismatch: Makefile
+FAIL: Rejection restored: Makefile differs

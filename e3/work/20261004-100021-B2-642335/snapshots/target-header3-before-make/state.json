@@ -1,0 +1,37 @@
+{
+  "main.c": {
+    "sha256": "f3834cb89a3d12451e993ea2d6e762a2a56184f5c215868129259b9da7931aeb",
+    "bytes": 100,
+    "mtime_ns": 1791078782000000000
+  },
+  "config.h": {
+    "sha256": "437d224592574e26a0961917224823289d7d9929f3a66a194916576af769ac4e",
+    "bytes": 57,
+    "mtime_ns": 1791079231515506400
+  },
+  "unused.h": {
+    "sha256": "cadbb4cdd0d41a0812367f4d7b487a796fed93e40948090b757e2ddc5f1de5a4",
+    "bytes": 56,
+    "mtime_ns": 1791078782000000000
+  },
+  "Makefile": {
+    "sha256": "183c39768576b9b8ee6a8943e89631d744a323acb694e08b15115be118b3e9d5",
+    "bytes": 409,
+    "mtime_ns": 1791079228931087400
+  },
+  "reference.patch": {
+    "sha256": "b72f48942219ffad08fe9cb4459dc87bde19f0f7455703fa139c78b911fa3308",
+    "bytes": 225,
+    "mtime_ns": 1791078782000000000
+  },
+  "main.o": {
+    "sha256": "e46f36da1a7e6a3901ed9aff8c9cba6ea43082017a5ade0784fe6a2d082d5c14",
+    "bytes": 1504,
+    "mtime_ns": 1791079229234237100
+  },
+  "app": {
+    "sha256": "ca89754c08fc77c6cf3d6ccc6b7fd0b8cef82810f0ec771c230144acbdf146e1",
+    "bytes": 15960,
+    "mtime_ns": 1791079229614924500
+  }
+}

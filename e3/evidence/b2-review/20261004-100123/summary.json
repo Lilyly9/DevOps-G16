@@ -1,0 +1,10 @@
+{
+  "observation_type": "ACTUAL_RUN",
+  "member": "B2",
+  "base_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+  "status": "PASSED",
+  "scope": "E2 dependency recovery, existing contract check, A-group regression, three B2 runs, native CPU architecture capture, and four rejected corruptions in an isolated clone",
+  "commands": 15,
+  "negative_checks": 4,
+  "saved_runs": 3
+}

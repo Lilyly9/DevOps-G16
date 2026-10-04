@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -15,7 +15,8 @@
+ app$(EXEEXT): main.o
+ 	$(CC) main.o -o $@
+ 
+-main.o: main.c unused.h
++main.o: main.c unused.h config.h
++	$(PYTHON) -c "import sys; print('B2_INVALID_CANDIDATE', file=sys.stderr); sys.exit(23)"
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ clean:
