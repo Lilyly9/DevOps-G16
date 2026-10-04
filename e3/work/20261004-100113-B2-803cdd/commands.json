@@ -1,0 +1,1360 @@
+[
+  {
+    "id": "env-git",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.122527+00:00",
+    "duration_seconds": 0.047,
+    "exit_code": 0,
+    "stdout": "logs/env-git.stdout.log",
+    "stderr": "logs/env-git.stderr.log",
+    "stdout_sha256": "c8a49585225c896ed4a83aea2d1e4cbc3ea6c2ff2f86ab944662cd6cba25fc52",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "env-make",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "--version"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.164626+00:00",
+    "duration_seconds": 0.015,
+    "exit_code": 0,
+    "stdout": "logs/env-make.stdout.log",
+    "stderr": "logs/env-make.stderr.log",
+    "stdout_sha256": "f258c6a50bc37ca48d5acc707bd8346e11d62fea9adc17c84577fa4c78108d66",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "env-cc",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "--version"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.186499+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/env-cc.stdout.log",
+    "stderr": "logs/env-cc.stderr.log",
+    "stdout_sha256": "6fd7cc88596832db1cc0e4cd1593c5ca63a027a9528cfd0d717c982484fb5b05",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "env-python",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "--version"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.199123+00:00",
+    "duration_seconds": 0.015,
+    "exit_code": 0,
+    "stdout": "logs/env-python.stdout.log",
+    "stderr": "logs/env-python.stderr.log",
+    "stdout_sha256": "824711d95340fdb657fb52cead7bd67e68644d64f91fd292a4d8d9fc6a08e585",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.223788+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/target-git-init.stdout.log",
+    "stderr": "logs/target-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-initial-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.317314+00:00",
+    "duration_seconds": 0.265,
+    "exit_code": 0,
+    "stdout": "logs/target-initial-build.stdout.log",
+    "stderr": "logs/target-initial-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-initial-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.587443+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/target-initial-run.stdout.log",
+    "stderr": "logs/target-initial-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-stale-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:14.733423+00:00",
+    "duration_seconds": 0.188,
+    "exit_code": 0,
+    "stdout": "logs/target-stale-build.stdout.log",
+    "stderr": "logs/target-stale-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-stale-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:14.922716+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/target-stale-run.stdout.log",
+    "stderr": "logs/target-stale-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-before-patch-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:14.955440+00:00",
+    "duration_seconds": 0.141,
+    "exit_code": 0,
+    "stdout": "logs/target-before-patch-clean.stdout.log",
+    "stderr": "logs/target-before-patch-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.100013+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/target-patch-check.stdout.log",
+    "stderr": "logs/target-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.176961+00:00",
+    "duration_seconds": 0.11,
+    "exit_code": 0,
+    "stdout": "logs/target-patch-apply.stdout.log",
+    "stderr": "logs/target-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patched-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.290986+00:00",
+    "duration_seconds": 0.14,
+    "exit_code": 0,
+    "stdout": "logs/target-patched-clean.stdout.log",
+    "stderr": "logs/target-patched-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patched-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.431501+00:00",
+    "duration_seconds": 0.36,
+    "exit_code": 0,
+    "stdout": "logs/target-patched-build.stdout.log",
+    "stderr": "logs/target-patched-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patched-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.799980+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/target-patched-run.stdout.log",
+    "stderr": "logs/target-patched-run.stderr.log",
+    "stdout_sha256": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental3-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:17.032708+00:00",
+    "duration_seconds": 0.25,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental3-build.stdout.log",
+    "stderr": "logs/target-incremental3-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental3-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:17.299839+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental3-run.stdout.log",
+    "stderr": "logs/target-incremental3-run.stderr.log",
+    "stdout_sha256": "24ba1e99dc06b19351323aae0d7370243d586475a634b7f6ff7927fbc72cfaed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental4-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:18.493796+00:00",
+    "duration_seconds": 0.281,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental4-build.stdout.log",
+    "stderr": "logs/target-incremental4-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental4-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:18.773324+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental4-run.stdout.log",
+    "stderr": "logs/target-incremental4-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-noop-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:18.803221+00:00",
+    "duration_seconds": 0.188,
+    "exit_code": 0,
+    "stdout": "logs/target-noop-build.stdout.log",
+    "stderr": "logs/target-noop-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-noop-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:18.990950+00:00",
+    "duration_seconds": 0.015,
+    "exit_code": 0,
+    "stdout": "logs/target-noop-run.stdout.log",
+    "stderr": "logs/target-noop-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:19.060037+00:00",
+    "duration_seconds": 0.094,
+    "exit_code": 0,
+    "stdout": "logs/macro-git-init.stdout.log",
+    "stderr": "logs/macro-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-initial-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:19.155553+00:00",
+    "duration_seconds": 0.156,
+    "exit_code": 0,
+    "stdout": "logs/macro-initial-build.stdout.log",
+    "stderr": "logs/macro-initial-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-initial-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:19.312072+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/macro-initial-run.stdout.log",
+    "stderr": "logs/macro-initial-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-stale-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:20.497597+00:00",
+    "duration_seconds": 0.203,
+    "exit_code": 0,
+    "stdout": "logs/macro-stale-build.stdout.log",
+    "stderr": "logs/macro-stale-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-stale-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:20.699359+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/macro-stale-run.stdout.log",
+    "stderr": "logs/macro-stale-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-before-patch-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:20.746183+00:00",
+    "duration_seconds": 0.109,
+    "exit_code": 0,
+    "stdout": "logs/macro-before-patch-clean.stdout.log",
+    "stderr": "logs/macro-before-patch-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:20.858546+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/macro-patch-check.stdout.log",
+    "stderr": "logs/macro-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:20.928793+00:00",
+    "duration_seconds": 0.063,
+    "exit_code": 0,
+    "stdout": "logs/macro-patch-apply.stdout.log",
+    "stderr": "logs/macro-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patched-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:21.000087+00:00",
+    "duration_seconds": 0.125,
+    "exit_code": 0,
+    "stdout": "logs/macro-patched-clean.stdout.log",
+    "stderr": "logs/macro-patched-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patched-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:21.128851+00:00",
+    "duration_seconds": 0.297,
+    "exit_code": 0,
+    "stdout": "logs/macro-patched-build.stdout.log",
+    "stderr": "logs/macro-patched-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patched-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:21.433028+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/macro-patched-run.stdout.log",
+    "stderr": "logs/macro-patched-run.stderr.log",
+    "stdout_sha256": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental3-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:22.613380+00:00",
+    "duration_seconds": 0.343,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental3-build.stdout.log",
+    "stderr": "logs/macro-incremental3-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental3-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:22.967091+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental3-run.stdout.log",
+    "stderr": "logs/macro-incremental3-run.stderr.log",
+    "stdout_sha256": "24ba1e99dc06b19351323aae0d7370243d586475a634b7f6ff7927fbc72cfaed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental4-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.146196+00:00",
+    "duration_seconds": 0.172,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental4-build.stdout.log",
+    "stderr": "logs/macro-incremental4-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental4-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.331356+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental4-run.stdout.log",
+    "stderr": "logs/macro-incremental4-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-noop-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.372425+00:00",
+    "duration_seconds": 0.14,
+    "exit_code": 0,
+    "stdout": "logs/macro-noop-build.stdout.log",
+    "stderr": "logs/macro-noop-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-noop-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.513423+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/macro-noop-run.stdout.log",
+    "stderr": "logs/macro-noop-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.569208+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-git-init.stdout.log",
+    "stderr": "logs/hybrid-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-initial-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.635326+00:00",
+    "duration_seconds": 0.172,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-initial-build.stdout.log",
+    "stderr": "logs/hybrid-initial-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-initial-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:24.811420+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-initial-run.stdout.log",
+    "stderr": "logs/hybrid-initial-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-stale-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:25.993635+00:00",
+    "duration_seconds": 0.234,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-stale-build.stdout.log",
+    "stderr": "logs/hybrid-stale-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-stale-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.224736+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-stale-run.stdout.log",
+    "stderr": "logs/hybrid-stale-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-before-patch-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.274339+00:00",
+    "duration_seconds": 0.109,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-before-patch-clean.stdout.log",
+    "stderr": "logs/hybrid-before-patch-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.380673+00:00",
+    "duration_seconds": 0.047,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patch-check.stdout.log",
+    "stderr": "logs/hybrid-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.428701+00:00",
+    "duration_seconds": 0.047,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patch-apply.stdout.log",
+    "stderr": "logs/hybrid-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patched-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.479354+00:00",
+    "duration_seconds": 0.063,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patched-clean.stdout.log",
+    "stderr": "logs/hybrid-patched-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patched-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.545253+00:00",
+    "duration_seconds": 0.171,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patched-build.stdout.log",
+    "stderr": "logs/hybrid-patched-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patched-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:26.713484+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patched-run.stdout.log",
+    "stderr": "logs/hybrid-patched-run.stderr.log",
+    "stdout_sha256": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental3-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:27.880208+00:00",
+    "duration_seconds": 0.25,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental3-build.stdout.log",
+    "stderr": "logs/hybrid-incremental3-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental3-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:28.132225+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental3-run.stdout.log",
+    "stderr": "logs/hybrid-incremental3-run.stderr.log",
+    "stdout_sha256": "24ba1e99dc06b19351323aae0d7370243d586475a634b7f6ff7927fbc72cfaed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental4-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:29.312200+00:00",
+    "duration_seconds": 0.328,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental4-build.stdout.log",
+    "stderr": "logs/hybrid-incremental4-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental4-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:29.642699+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental4-run.stdout.log",
+    "stderr": "logs/hybrid-incremental4-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-noop-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:29.700327+00:00",
+    "duration_seconds": 0.187,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-noop-build.stdout.log",
+    "stderr": "logs/hybrid-noop-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-noop-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:29.890127+00:00",
+    "duration_seconds": 0.032,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-noop-run.stdout.log",
+    "stderr": "logs/hybrid-noop-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:29.958538+00:00",
+    "duration_seconds": 0.079,
+    "exit_code": 0,
+    "stdout": "logs/implicit-git-init.stdout.log",
+    "stderr": "logs/implicit-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-initial-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:30.050809+00:00",
+    "duration_seconds": 0.203,
+    "exit_code": 0,
+    "stdout": "logs/implicit-initial-build.stdout.log",
+    "stderr": "logs/implicit-initial-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-initial-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:30.264840+00:00",
+    "duration_seconds": 0.047,
+    "exit_code": 0,
+    "stdout": "logs/implicit-initial-run.stdout.log",
+    "stderr": "logs/implicit-initial-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-stale-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:31.495873+00:00",
+    "duration_seconds": 0.156,
+    "exit_code": 0,
+    "stdout": "logs/implicit-stale-build.stdout.log",
+    "stderr": "logs/implicit-stale-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-stale-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:31.657700+00:00",
+    "duration_seconds": 0.015,
+    "exit_code": 0,
+    "stdout": "logs/implicit-stale-run.stdout.log",
+    "stderr": "logs/implicit-stale-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-before-patch-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:31.706791+00:00",
+    "duration_seconds": 0.094,
+    "exit_code": 0,
+    "stdout": "logs/implicit-before-patch-clean.stdout.log",
+    "stderr": "logs/implicit-before-patch-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:31.817127+00:00",
+    "duration_seconds": 0.062,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patch-check.stdout.log",
+    "stderr": "logs/implicit-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:31.880088+00:00",
+    "duration_seconds": 0.047,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patch-apply.stdout.log",
+    "stderr": "logs/implicit-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patched-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:31.927276+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patched-clean.stdout.log",
+    "stderr": "logs/implicit-patched-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patched-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:32.010017+00:00",
+    "duration_seconds": 0.235,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patched-build.stdout.log",
+    "stderr": "logs/implicit-patched-build.stderr.log",
+    "stdout_sha256": "657d8449125357937fd25665c0459dee44009e19414e59aa3a3b3867d00d6819",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patched-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:32.253536+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patched-run.stdout.log",
+    "stderr": "logs/implicit-patched-run.stderr.log",
+    "stdout_sha256": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental3-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:33.447491+00:00",
+    "duration_seconds": 0.234,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental3-build.stdout.log",
+    "stderr": "logs/implicit-incremental3-build.stderr.log",
+    "stdout_sha256": "657d8449125357937fd25665c0459dee44009e19414e59aa3a3b3867d00d6819",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental3-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:33.689514+00:00",
+    "duration_seconds": 0.0,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental3-run.stdout.log",
+    "stderr": "logs/implicit-incremental3-run.stderr.log",
+    "stdout_sha256": "24ba1e99dc06b19351323aae0d7370243d586475a634b7f6ff7927fbc72cfaed",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental4-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:34.848785+00:00",
+    "duration_seconds": 0.281,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental4-build.stdout.log",
+    "stderr": "logs/implicit-incremental4-build.stderr.log",
+    "stdout_sha256": "657d8449125357937fd25665c0459dee44009e19414e59aa3a3b3867d00d6819",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental4-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.137711+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental4-run.stdout.log",
+    "stderr": "logs/implicit-incremental4-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-noop-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.179831+00:00",
+    "duration_seconds": 0.156,
+    "exit_code": 0,
+    "stdout": "logs/implicit-noop-build.stdout.log",
+    "stderr": "logs/implicit-noop-build.stderr.log",
+    "stdout_sha256": "7e9825973ee5820b066570a8c4795399e3b8604a8fc87d468dda9f68148880d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-noop-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.350781+00:00",
+    "duration_seconds": 0.016,
+    "exit_code": 0,
+    "stdout": "logs/implicit-noop-run.stdout.log",
+    "stderr": "logs/implicit-noop-run.stderr.log",
+    "stdout_sha256": "7c468f5e59f2871b946e051445493bbcace531d597edbbcc9935e7d02d025114",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.420760+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/rejection-git-init.stdout.log",
+    "stderr": "logs/rejection-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-original-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.497749+00:00",
+    "duration_seconds": 0.297,
+    "exit_code": 0,
+    "stdout": "logs/rejection-original-build.stdout.log",
+    "stderr": "logs/rejection-original-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-original-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.789661+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/rejection-original-run.stdout.log",
+    "stderr": "logs/rejection-original-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "invalid-candidate.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.831682+00:00",
+    "duration_seconds": 0.063,
+    "exit_code": 0,
+    "stdout": "logs/rejection-patch-check.stdout.log",
+    "stderr": "logs/rejection-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "invalid-candidate.patch"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.897755+00:00",
+    "duration_seconds": 0.078,
+    "exit_code": 0,
+    "stdout": "logs/rejection-patch-apply.stdout.log",
+    "stderr": "logs/rejection-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-candidate-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:35.988424+00:00",
+    "duration_seconds": 0.125,
+    "exit_code": 0,
+    "stdout": "logs/rejection-candidate-clean.stdout.log",
+    "stderr": "logs/rejection-candidate-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-candidate-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:36.128284+00:00",
+    "duration_seconds": 0.094,
+    "exit_code": 2,
+    "stdout": "logs/rejection-candidate-build.stdout.log",
+    "stderr": "logs/rejection-candidate-build.stderr.log",
+    "stdout_sha256": "6448057c2617308b1a148b0e8becdcf4c6343dc1acde02977796adcbe581accf",
+    "stderr_sha256": "5baadb5687afe23628c33e706ff9ce36565ac8309062522ab49d13ae53f2c3b5"
+  },
+  {
+    "id": "rejection-restored-clean",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe",
+      "clean"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:36.263750+00:00",
+    "duration_seconds": 0.11,
+    "exit_code": 0,
+    "stdout": "logs/rejection-restored-clean.stdout.log",
+    "stderr": "logs/rejection-restored-clean.stderr.log",
+    "stdout_sha256": "dfedecbe7c3d4900c8dc33721c2e7ded34b684a41a04ca12b0d1fb55cb7a2e85",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-restored-build",
+    "argv": [
+      "D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe",
+      "CC=D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+      "PYTHON=D:/Tools/Software/python/python.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:36.375327+00:00",
+    "duration_seconds": 0.312,
+    "exit_code": 0,
+    "stdout": "logs/rejection-restored-build.stdout.log",
+    "stderr": "logs/rejection-restored-build.stderr.log",
+    "stdout_sha256": "6a722926b7ea65be5eb9c618351b13ec0811ce5d14aa2bf841e7cf56b26c71f3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-restored-run",
+    "argv": [
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection\\app.exe"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\work\\20261004-100113-B2-803cdd\\runtime\\rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:36.687922+00:00",
+    "duration_seconds": 0.015,
+    "exit_code": 0,
+    "stdout": "logs/rejection-restored-run.stdout.log",
+    "stderr": "logs/rejection-restored-run.stderr.log",
+    "stdout_sha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

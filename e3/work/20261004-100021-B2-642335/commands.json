@@ -1,0 +1,1360 @@
+[
+  {
+    "id": "env-git",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:24.125958+00:00",
+    "duration_seconds": 0.0486,
+    "exit_code": 0,
+    "stdout": "logs/env-git.stdout.log",
+    "stderr": "logs/env-git.stderr.log",
+    "stdout_sha256": "30279da57eb04a496cb207bc2f7c7e04d9c94788be5bc68824e6727e283b264b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "env-make",
+    "argv": [
+      "/usr/bin/make",
+      "--version"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:24.238879+00:00",
+    "duration_seconds": 0.0204,
+    "exit_code": 0,
+    "stdout": "logs/env-make.stdout.log",
+    "stderr": "logs/env-make.stderr.log",
+    "stdout_sha256": "8ee498ee2fc27e8dcdf99191b454077df95e3840d841ec94321748b6d7f36819",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "env-cc",
+    "argv": [
+      "/usr/bin/cc",
+      "--version"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:24.293336+00:00",
+    "duration_seconds": 0.0295,
+    "exit_code": 0,
+    "stdout": "logs/env-cc.stdout.log",
+    "stderr": "logs/env-cc.stderr.log",
+    "stdout_sha256": "5fa6bf5b83f57f14020be375ac663df894027e2d672d6b7d82d7e8d8f7b49c8b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "env-python",
+    "argv": [
+      "/usr/bin/python3",
+      "--version"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:24.366023+00:00",
+    "duration_seconds": 0.0252,
+    "exit_code": 0,
+    "stdout": "logs/env-python.stdout.log",
+    "stderr": "logs/env-python.stderr.log",
+    "stdout_sha256": "f6b75e07f1488db28a89724a522725e3e01af3dc78f6fd365f17eb4059e41056",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:24.893400+00:00",
+    "duration_seconds": 0.4367,
+    "exit_code": 0,
+    "stdout": "logs/target-git-init.stdout.log",
+    "stderr": "logs/target-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-initial-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:25.431988+00:00",
+    "duration_seconds": 0.615,
+    "exit_code": 0,
+    "stdout": "logs/target-initial-build.stdout.log",
+    "stderr": "logs/target-initial-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-initial-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:26.087250+00:00",
+    "duration_seconds": 0.0213,
+    "exit_code": 0,
+    "stdout": "logs/target-initial-run.stdout.log",
+    "stderr": "logs/target-initial-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-stale-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:28.394457+00:00",
+    "duration_seconds": 0.031,
+    "exit_code": 0,
+    "stdout": "logs/target-stale-build.stdout.log",
+    "stderr": "logs/target-stale-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-stale-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:28.472709+00:00",
+    "duration_seconds": 0.0237,
+    "exit_code": 0,
+    "stdout": "logs/target-stale-run.stdout.log",
+    "stderr": "logs/target-stale-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-before-patch-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:29.105979+00:00",
+    "duration_seconds": 0.0738,
+    "exit_code": 0,
+    "stdout": "logs/target-before-patch-clean.stdout.log",
+    "stderr": "logs/target-before-patch-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:29.218674+00:00",
+    "duration_seconds": 0.0699,
+    "exit_code": 0,
+    "stdout": "logs/target-patch-check.stdout.log",
+    "stderr": "logs/target-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:29.324513+00:00",
+    "duration_seconds": 0.0984,
+    "exit_code": 0,
+    "stdout": "logs/target-patch-apply.stdout.log",
+    "stderr": "logs/target-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patched-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:29.490273+00:00",
+    "duration_seconds": 0.0723,
+    "exit_code": 0,
+    "stdout": "logs/target-patched-clean.stdout.log",
+    "stderr": "logs/target-patched-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patched-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:29.619972+00:00",
+    "duration_seconds": 0.5095,
+    "exit_code": 0,
+    "stdout": "logs/target-patched-build.stdout.log",
+    "stderr": "logs/target-patched-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-patched-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:30.201167+00:00",
+    "duration_seconds": 0.0364,
+    "exit_code": 0,
+    "stdout": "logs/target-patched-run.stdout.log",
+    "stderr": "logs/target-patched-run.stderr.log",
+    "stdout_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental3-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:32.565867+00:00",
+    "duration_seconds": 0.7069,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental3-build.stdout.log",
+    "stderr": "logs/target-incremental3-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental3-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:33.312683+00:00",
+    "duration_seconds": 0.0292,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental3-run.stdout.log",
+    "stderr": "logs/target-incremental3-run.stderr.log",
+    "stdout_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental4-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:35.786001+00:00",
+    "duration_seconds": 0.5749,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental4-build.stdout.log",
+    "stderr": "logs/target-incremental4-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-incremental4-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:36.390295+00:00",
+    "duration_seconds": 0.0234,
+    "exit_code": 0,
+    "stdout": "logs/target-incremental4-run.stdout.log",
+    "stderr": "logs/target-incremental4-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-noop-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:37.092490+00:00",
+    "duration_seconds": 0.0348,
+    "exit_code": 0,
+    "stdout": "logs/target-noop-build.stdout.log",
+    "stderr": "logs/target-noop-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "target-noop-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/target",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:37.167814+00:00",
+    "duration_seconds": 0.0215,
+    "exit_code": 0,
+    "stdout": "logs/target-noop-run.stdout.log",
+    "stderr": "logs/target-noop-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:38.186146+00:00",
+    "duration_seconds": 0.3701,
+    "exit_code": 0,
+    "stdout": "logs/macro-git-init.stdout.log",
+    "stderr": "logs/macro-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-initial-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:38.689872+00:00",
+    "duration_seconds": 0.6152,
+    "exit_code": 0,
+    "stdout": "logs/macro-initial-build.stdout.log",
+    "stderr": "logs/macro-initial-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-initial-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:39.340579+00:00",
+    "duration_seconds": 0.0306,
+    "exit_code": 0,
+    "stdout": "logs/macro-initial-run.stdout.log",
+    "stderr": "logs/macro-initial-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-stale-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:41.749428+00:00",
+    "duration_seconds": 0.0267,
+    "exit_code": 0,
+    "stdout": "logs/macro-stale-build.stdout.log",
+    "stderr": "logs/macro-stale-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-stale-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:41.809245+00:00",
+    "duration_seconds": 0.0312,
+    "exit_code": 0,
+    "stdout": "logs/macro-stale-run.stdout.log",
+    "stderr": "logs/macro-stale-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-before-patch-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:42.262310+00:00",
+    "duration_seconds": 0.0637,
+    "exit_code": 0,
+    "stdout": "logs/macro-before-patch-clean.stdout.log",
+    "stderr": "logs/macro-before-patch-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:42.357275+00:00",
+    "duration_seconds": 0.0579,
+    "exit_code": 0,
+    "stdout": "logs/macro-patch-check.stdout.log",
+    "stderr": "logs/macro-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:42.456953+00:00",
+    "duration_seconds": 0.068,
+    "exit_code": 0,
+    "stdout": "logs/macro-patch-apply.stdout.log",
+    "stderr": "logs/macro-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patched-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:42.572386+00:00",
+    "duration_seconds": 0.0768,
+    "exit_code": 0,
+    "stdout": "logs/macro-patched-clean.stdout.log",
+    "stderr": "logs/macro-patched-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patched-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:42.690574+00:00",
+    "duration_seconds": 0.3679,
+    "exit_code": 0,
+    "stdout": "logs/macro-patched-build.stdout.log",
+    "stderr": "logs/macro-patched-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-patched-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:43.082722+00:00",
+    "duration_seconds": 0.0174,
+    "exit_code": 0,
+    "stdout": "logs/macro-patched-run.stdout.log",
+    "stderr": "logs/macro-patched-run.stderr.log",
+    "stdout_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental3-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:45.182244+00:00",
+    "duration_seconds": 0.3538,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental3-build.stdout.log",
+    "stderr": "logs/macro-incremental3-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental3-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:45.573236+00:00",
+    "duration_seconds": 0.0285,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental3-run.stdout.log",
+    "stderr": "logs/macro-incremental3-run.stderr.log",
+    "stdout_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental4-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:47.546972+00:00",
+    "duration_seconds": 0.4139,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental4-build.stdout.log",
+    "stderr": "logs/macro-incremental4-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-incremental4-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:47.992208+00:00",
+    "duration_seconds": 0.0251,
+    "exit_code": 0,
+    "stdout": "logs/macro-incremental4-run.stdout.log",
+    "stderr": "logs/macro-incremental4-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-noop-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:48.494511+00:00",
+    "duration_seconds": 0.0323,
+    "exit_code": 0,
+    "stdout": "logs/macro-noop-build.stdout.log",
+    "stderr": "logs/macro-noop-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "macro-noop-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/macro",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:48.560133+00:00",
+    "duration_seconds": 0.0269,
+    "exit_code": 0,
+    "stdout": "logs/macro-noop-run.stdout.log",
+    "stderr": "logs/macro-noop-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:49.206932+00:00",
+    "duration_seconds": 0.3349,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-git-init.stdout.log",
+    "stderr": "logs/hybrid-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-initial-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:49.629506+00:00",
+    "duration_seconds": 0.3697,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-initial-build.stdout.log",
+    "stderr": "logs/hybrid-initial-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-initial-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:50.028161+00:00",
+    "duration_seconds": 0.0222,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-initial-run.stdout.log",
+    "stderr": "logs/hybrid-initial-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-stale-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:52.066521+00:00",
+    "duration_seconds": 0.0452,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-stale-build.stdout.log",
+    "stderr": "logs/hybrid-stale-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-stale-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:52.148816+00:00",
+    "duration_seconds": 0.0264,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-stale-run.stdout.log",
+    "stderr": "logs/hybrid-stale-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-before-patch-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:52.696125+00:00",
+    "duration_seconds": 0.0721,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-before-patch-clean.stdout.log",
+    "stderr": "logs/hybrid-before-patch-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:52.822192+00:00",
+    "duration_seconds": 0.0851,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patch-check.stdout.log",
+    "stderr": "logs/hybrid-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:52.938111+00:00",
+    "duration_seconds": 0.0497,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patch-apply.stdout.log",
+    "stderr": "logs/hybrid-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patched-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:53.027023+00:00",
+    "duration_seconds": 0.088,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patched-clean.stdout.log",
+    "stderr": "logs/hybrid-patched-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patched-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:53.146015+00:00",
+    "duration_seconds": 0.4062,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patched-build.stdout.log",
+    "stderr": "logs/hybrid-patched-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-patched-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:53.582077+00:00",
+    "duration_seconds": 0.0296,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-patched-run.stdout.log",
+    "stderr": "logs/hybrid-patched-run.stderr.log",
+    "stdout_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental3-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:55.853121+00:00",
+    "duration_seconds": 0.5858,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental3-build.stdout.log",
+    "stderr": "logs/hybrid-incremental3-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental3-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:56.494258+00:00",
+    "duration_seconds": 0.0642,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental3-run.stdout.log",
+    "stderr": "logs/hybrid-incremental3-run.stderr.log",
+    "stdout_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental4-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:59.028010+00:00",
+    "duration_seconds": 0.5266,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental4-build.stdout.log",
+    "stderr": "logs/hybrid-incremental4-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-incremental4-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:00:59.631709+00:00",
+    "duration_seconds": 0.0324,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-incremental4-run.stdout.log",
+    "stderr": "logs/hybrid-incremental4-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-noop-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:00.364490+00:00",
+    "duration_seconds": 0.0512,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-noop-build.stdout.log",
+    "stderr": "logs/hybrid-noop-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "hybrid-noop-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/hybrid",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:00.476001+00:00",
+    "duration_seconds": 0.0333,
+    "exit_code": 0,
+    "stdout": "logs/hybrid-noop-run.stdout.log",
+    "stderr": "logs/hybrid-noop-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:01.484622+00:00",
+    "duration_seconds": 0.2175,
+    "exit_code": 0,
+    "stdout": "logs/implicit-git-init.stdout.log",
+    "stderr": "logs/implicit-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-initial-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:01.795681+00:00",
+    "duration_seconds": 0.5528,
+    "exit_code": 0,
+    "stdout": "logs/implicit-initial-build.stdout.log",
+    "stderr": "logs/implicit-initial-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-initial-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:02.394416+00:00",
+    "duration_seconds": 0.0295,
+    "exit_code": 0,
+    "stdout": "logs/implicit-initial-run.stdout.log",
+    "stderr": "logs/implicit-initial-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-stale-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:04.572621+00:00",
+    "duration_seconds": 0.0303,
+    "exit_code": 0,
+    "stdout": "logs/implicit-stale-build.stdout.log",
+    "stderr": "logs/implicit-stale-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-stale-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:04.637008+00:00",
+    "duration_seconds": 0.0197,
+    "exit_code": 0,
+    "stdout": "logs/implicit-stale-run.stdout.log",
+    "stderr": "logs/implicit-stale-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-before-patch-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:05.124463+00:00",
+    "duration_seconds": 0.0754,
+    "exit_code": 0,
+    "stdout": "logs/implicit-before-patch-clean.stdout.log",
+    "stderr": "logs/implicit-before-patch-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:05.251108+00:00",
+    "duration_seconds": 0.0752,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patch-check.stdout.log",
+    "stderr": "logs/implicit-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "reference.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:05.357785+00:00",
+    "duration_seconds": 0.0774,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patch-apply.stdout.log",
+    "stderr": "logs/implicit-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patched-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:05.486801+00:00",
+    "duration_seconds": 0.0931,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patched-clean.stdout.log",
+    "stderr": "logs/implicit-patched-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patched-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:05.608606+00:00",
+    "duration_seconds": 0.5898,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patched-build.stdout.log",
+    "stderr": "logs/implicit-patched-build.stderr.log",
+    "stdout_sha256": "e9b0c324ffd49e88ce92934a16920383ca896065560d96cc5f18b5c3d9a5185b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-patched-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:06.231905+00:00",
+    "duration_seconds": 0.0193,
+    "exit_code": 0,
+    "stdout": "logs/implicit-patched-run.stdout.log",
+    "stderr": "logs/implicit-patched-run.stderr.log",
+    "stdout_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental3-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:08.681057+00:00",
+    "duration_seconds": 0.4804,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental3-build.stdout.log",
+    "stderr": "logs/implicit-incremental3-build.stderr.log",
+    "stdout_sha256": "e9b0c324ffd49e88ce92934a16920383ca896065560d96cc5f18b5c3d9a5185b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental3-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:09.203308+00:00",
+    "duration_seconds": 0.0291,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental3-run.stdout.log",
+    "stderr": "logs/implicit-incremental3-run.stderr.log",
+    "stdout_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental4-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:11.662762+00:00",
+    "duration_seconds": 0.442,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental4-build.stdout.log",
+    "stderr": "logs/implicit-incremental4-build.stderr.log",
+    "stdout_sha256": "e9b0c324ffd49e88ce92934a16920383ca896065560d96cc5f18b5c3d9a5185b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-incremental4-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:12.152243+00:00",
+    "duration_seconds": 0.026,
+    "exit_code": 0,
+    "stdout": "logs/implicit-incremental4-run.stdout.log",
+    "stderr": "logs/implicit-incremental4-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-noop-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:12.901055+00:00",
+    "duration_seconds": 0.0349,
+    "exit_code": 0,
+    "stdout": "logs/implicit-noop-build.stdout.log",
+    "stderr": "logs/implicit-noop-build.stderr.log",
+    "stdout_sha256": "68c5f548009ee20966e380682cc0b78f39bea9c8895af0403577a7204fef2e99",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "implicit-noop-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/implicit",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:12.959148+00:00",
+    "duration_seconds": 0.0138,
+    "exit_code": 0,
+    "stdout": "logs/implicit-noop-run.stdout.log",
+    "stderr": "logs/implicit-noop-run.stderr.log",
+    "stdout_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-git-init",
+    "argv": [
+      "git",
+      "init",
+      "--quiet",
+      "."
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:13.807113+00:00",
+    "duration_seconds": 0.2779,
+    "exit_code": 0,
+    "stdout": "logs/rejection-git-init.stdout.log",
+    "stderr": "logs/rejection-git-init.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-original-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:14.123940+00:00",
+    "duration_seconds": 0.4719,
+    "exit_code": 0,
+    "stdout": "logs/rejection-original-build.stdout.log",
+    "stderr": "logs/rejection-original-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-original-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:14.622193+00:00",
+    "duration_seconds": 0.0487,
+    "exit_code": 0,
+    "stdout": "logs/rejection-original-run.stdout.log",
+    "stderr": "logs/rejection-original-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-patch-check",
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "invalid-candidate.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.433392+00:00",
+    "duration_seconds": 0.074,
+    "exit_code": 0,
+    "stdout": "logs/rejection-patch-check.stdout.log",
+    "stderr": "logs/rejection-patch-check.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-patch-apply",
+    "argv": [
+      "git",
+      "apply",
+      "invalid-candidate.patch"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.549248+00:00",
+    "duration_seconds": 0.0894,
+    "exit_code": 0,
+    "stdout": "logs/rejection-patch-apply.stdout.log",
+    "stderr": "logs/rejection-patch-apply.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-candidate-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.674773+00:00",
+    "duration_seconds": 0.1011,
+    "exit_code": 0,
+    "stdout": "logs/rejection-candidate-clean.stdout.log",
+    "stderr": "logs/rejection-candidate-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-candidate-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:15.866939+00:00",
+    "duration_seconds": 0.0747,
+    "exit_code": 2,
+    "stdout": "logs/rejection-candidate-build.stdout.log",
+    "stderr": "logs/rejection-candidate-build.stderr.log",
+    "stdout_sha256": "66ff16c47b6d89ca7f2301c06e537ae76c78d110c37aa7b30d2812eba3a4d0bd",
+    "stderr_sha256": "ac11dca4c2aee3e8452312bdc7efadef4e295d6a3416c2c341df2e06b1f2e542"
+  },
+  {
+    "id": "rejection-restored-clean",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3",
+      "clean"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:16.579649+00:00",
+    "duration_seconds": 0.0815,
+    "exit_code": 0,
+    "stdout": "logs/rejection-restored-clean.stdout.log",
+    "stderr": "logs/rejection-restored-clean.stderr.log",
+    "stdout_sha256": "3b3fd46e7cb688114d678b48ea7f37a195520f07df350f8c850fc99780b1278a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-restored-build",
+    "argv": [
+      "/usr/bin/make",
+      "CC=/usr/bin/cc",
+      "PYTHON=/usr/bin/python3"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:16.711910+00:00",
+    "duration_seconds": 0.5312,
+    "exit_code": 0,
+    "stdout": "logs/rejection-restored-build.stdout.log",
+    "stderr": "logs/rejection-restored-build.stderr.log",
+    "stdout_sha256": "d2c84a482b46e2b5e68723917f235d604ae583579295dcfeb348d80f9ce93f1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "id": "rejection-restored-run",
+    "argv": [
+      "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection/app"
+    ],
+    "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/e3/work/20261004-100021-B2-642335/runtime/rejection",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T02:01:17.269580+00:00",
+    "duration_seconds": 0.0202,
+    "exit_code": 0,
+    "stdout": "logs/rejection-restored-run.stdout.log",
+    "stderr": "logs/rejection-restored-run.stderr.log",
+    "stdout_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

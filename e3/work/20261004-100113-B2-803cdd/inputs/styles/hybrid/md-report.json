@@ -1,0 +1,47 @@
+{
+  "provenance": "MANUAL_EXPECTED",
+  "source": "User-provided E3 task allocation, B2-1 through B2-6; manual equivalent fixtures, not detector output.",
+  "configuration_id": "b2-gcc-O0-project-headers",
+  "style": "hybrid",
+  "input_sha256": {
+    "main.c": "f3834cb89a3d12451e993ea2d6e762a2a56184f5c215868129259b9da7931aeb",
+    "config.h": "df2e4e33fa16872bc70c043223591b0cb66ca5d5ebd48b9ace7b703f79b933b7",
+    "unused.h": "cadbb4cdd0d41a0812367f4d7b487a796fed93e40948090b757e2ddc5f1de5a4",
+    "Makefile.before": "047002731ad6886769406bb169bf947dd8eee0397d07e449a4432155dc6472b8"
+  },
+  "imported_source": {
+    "commit": "9c36984236b97115f44daa24c5274a90dd905b37",
+    "path": "e3/fixtures/md-rd",
+    "files": [
+      "main.c",
+      "config.h",
+      "unused.h"
+    ]
+  },
+  "findings": [
+    {
+      "finding_id": "b2-md-config-h",
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h",
+      "evidence": "main.c includes config.h; the original Makefile does not declare it and does not generate/include a dependency file."
+    }
+  ],
+  "repair_scope": {
+    "consume_types": [
+      "MISSING"
+    ],
+    "preserve_declarations": [
+      "unused.h"
+    ],
+    "reason": "RD is outside MDFixer scope."
+  },
+  "build_command": "make all",
+  "verify_command": "./app",
+  "expected_outputs": {
+    "initial": "1",
+    "before_patch_header2": "1",
+    "patched_clean_header2": "2",
+    "patched_incremental_header3": "3"
+  }
+}

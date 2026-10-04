@@ -213,3 +213,7 @@ OpenAI Codex
 ## A3：E4 补充
 
 本阶段的请求、执行与真实验证范围见 [A3 E4 AI 使用记录](e4/docs/A3_AI_USAGE.md)。
+
+## B1：E3 补充
+
+本阶段的提示、AI 建议、修正与真实验证见 [B1 E3 AI 使用记录](e3/docs/B1_AI_USAGE.md)。该记录未声明全组已确认或虚构人工签字。

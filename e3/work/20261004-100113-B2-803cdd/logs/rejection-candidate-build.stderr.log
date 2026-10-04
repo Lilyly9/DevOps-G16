@@ -1,0 +1,2 @@
+B2_INVALID_CANDIDATE
+mingw32-make.exe: *** [Makefile:19: main.o] Error 23

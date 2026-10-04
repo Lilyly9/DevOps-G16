@@ -1,0 +1,271 @@
+[
+  {
+    "id": "e2-original-windows-missing-dependency",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "contracts/mdfixer/validate.py"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "matched_expected": true,
+    "stdout": "e2-original-windows-missing-dependency.stdout.log",
+    "stderr": "e2-original-windows-missing-dependency.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "40327a0a74856dc8f680cb717cb658162b944b249ad61a146a1cfaea791dc569",
+    "recorded_at": "2026-10-04T02:01:23.325647+00:00"
+  },
+  {
+    "id": "e2-original-wsl-old-dependency",
+    "argv": [
+      "wsl",
+      "-d",
+      "Ubuntu-22.04",
+      "--cd",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+      "--",
+      "python3",
+      "contracts/mdfixer/validate.py"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "matched_expected": true,
+    "stdout": "e2-original-wsl-old-dependency.stdout.log",
+    "stderr": "e2-original-wsl-old-dependency.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "f3cd1d60fce111376d61ca8faeaad4424b97e5e593f41ebfcf23a7ace18eaf2a",
+    "recorded_at": "2026-10-04T02:01:23.992293+00:00"
+  },
+  {
+    "id": "e2-create-isolated-venv",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "-m",
+      "venv",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-contract-8pgpu14z"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "e2-create-isolated-venv.stdout.log",
+    "stderr": "e2-create-isolated-venv.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:01:49.666545+00:00"
+  },
+  {
+    "id": "e2-install-dependency",
+    "argv": [
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-contract-8pgpu14z\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "jsonschema>=4.18,<5"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "e2-install-dependency.stdout.log",
+    "stderr": "e2-install-dependency.stderr.log",
+    "stdout_sha256": "1118eed7bd4fb30dd5b06dba350c61caae1d89838dd5dd0a4d8db9afee9634a9",
+    "stderr_sha256": "ca6807f9ca2f18a42927d5e93bdf38289dbe50dd7ff43b69871677527e103bd6",
+    "recorded_at": "2026-10-04T02:01:59.314024+00:00"
+  },
+  {
+    "id": "e2-contract-check",
+    "argv": [
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-contract-8pgpu14z\\Scripts\\python.exe",
+      "contracts/mdfixer/validate.py"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "e2-contract-check.stdout.log",
+    "stderr": "e2-contract-check.stderr.log",
+    "stdout_sha256": "d2600bffe133bc24f5c22cce4ca0875d4de377c976e5ab11a82dbc36d73f85ea",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:02:00.294410+00:00"
+  },
+  {
+    "id": "a-group-regression",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "e3/validate_e3.py"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "a-group-regression.stdout.log",
+    "stderr": "a-group-regression.stderr.log",
+    "stdout_sha256": "3d4c20729ea5a9b334c596e5aab9242c3fc05cd20981ca0711cee7faf5a4495c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:02:02.638817+00:00"
+  },
+  {
+    "id": "windows-native-architecture",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "-c",
+      "import ctypes, json, platform; info=ctypes.create_string_buffer(64); ctypes.windll.kernel32.GetNativeSystemInfo(ctypes.byref(info)); print(json.dumps({\"platform_machine\": platform.machine(), \"native_architecture\": {0:\"x86\",9:\"AMD64\",12:\"ARM64\"}.get(ctypes.c_ushort.from_buffer(info).value,\"UNKNOWN\")}))"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "windows-native-architecture.stdout.log",
+    "stderr": "windows-native-architecture.stderr.log",
+    "stdout_sha256": "469df88aae85ee3d1f5af11db3033a392a831815d86ec0064c285d7f9a867dab",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:03:58.471425+00:00"
+  },
+  {
+    "id": "b2-all-saved-runs",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "e3/scripts/b2_verify_evidence.py"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "b2-all-saved-runs.stdout.log",
+    "stderr": "b2-all-saved-runs.stderr.log",
+    "stdout_sha256": "aa7733d07dbd3220ae5a60a6b0ab8e5f0f2a69bb876e0e068c70ed177e6faa97",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:20.478408+00:00"
+  },
+  {
+    "id": "negative-isolated-clone",
+    "argv": [
+      "git",
+      "clone",
+      "--shared",
+      "--no-checkout",
+      "--quiet",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "negative-isolated-clone.stdout.log",
+    "stderr": "negative-isolated-clone.stderr.log",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:20.854807+00:00"
+  },
+  {
+    "id": "negative-control-valid-evidence",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\scripts\\b2_verify_evidence.py",
+      "--root",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "negative-control-valid-evidence.stdout.log",
+    "stderr": "negative-control-valid-evidence.stderr.log",
+    "stdout_sha256": "40d2f1f6bb68c560bf0616d253170eb99d846c5159abfa22abaa240c93e16f77",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:26.071661+00:00"
+  },
+  {
+    "id": "negative-tampered-raw-output",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\scripts\\b2_verify_evidence.py",
+      "--root",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "matched_expected": true,
+    "stdout": "negative-tampered-raw-output.stdout.log",
+    "stderr": "negative-tampered-raw-output.stderr.log",
+    "stdout_sha256": "bdb63e8ceba9211b2c40fbb9b34373407e0051081cdb1dc4dc3ff92ff2942ce8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:28.734550+00:00"
+  },
+  {
+    "id": "negative-missing-generated-depfile",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\scripts\\b2_verify_evidence.py",
+      "--root",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "matched_expected": true,
+    "stdout": "negative-missing-generated-depfile.stdout.log",
+    "stderr": "negative-missing-generated-depfile.stderr.log",
+    "stdout_sha256": "5af0c34a5c107c4316d89205d1129398fbcd62489f3f7efcc9dfd69cc1d5812c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:30.785243+00:00"
+  },
+  {
+    "id": "negative-failed-candidate-accepted",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\scripts\\b2_verify_evidence.py",
+      "--root",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "matched_expected": true,
+    "stdout": "negative-failed-candidate-accepted.stdout.log",
+    "stderr": "negative-failed-candidate-accepted.stderr.log",
+    "stdout_sha256": "4846afbd6ffaafa2efdd18caddcff1d65ef2d077a26480d9cf54dd13dac39608",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:33.284460+00:00"
+  },
+  {
+    "id": "negative-incorrect-recovery",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\scripts\\b2_verify_evidence.py",
+      "--root",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 1,
+    "expected": "nonzero",
+    "matched_expected": true,
+    "stdout": "negative-incorrect-recovery.stdout.log",
+    "stderr": "negative-incorrect-recovery.stderr.log",
+    "stdout_sha256": "211fc290474c77fc5ad6a47131e088bfb2ad0df11ecd971bf9b2c49804a37661",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:35.501493+00:00"
+  },
+  {
+    "id": "negative-control-restored-evidence",
+    "argv": [
+      "D:\\Tools\\Software\\python\\python.exe",
+      "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16\\e3\\scripts\\b2_verify_evidence.py",
+      "--root",
+      "C:\\Users\\Staris\\AppData\\Local\\Temp\\devops-g16-b2-negative-9o9pbjof"
+    ],
+    "cwd": "D:\\LearningResources\\大三上\\DevOps\\Project\\DevOps-G16",
+    "exit_code": 0,
+    "expected": "zero",
+    "matched_expected": true,
+    "stdout": "negative-control-restored-evidence.stdout.log",
+    "stderr": "negative-control-restored-evidence.stderr.log",
+    "stdout_sha256": "40d2f1f6bb68c560bf0616d253170eb99d846c5159abfa22abaa240c93e16f77",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recorded_at": "2026-10-04T02:05:37.566648+00:00"
+  }
+]

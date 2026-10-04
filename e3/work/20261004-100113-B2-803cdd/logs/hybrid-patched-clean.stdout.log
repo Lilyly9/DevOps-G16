@@ -1,0 +1,1 @@
+D:/Tools/Software/python/python.exe -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('main.o', 'main.d', 'app', 'app.exe')]"

@@ -1,0 +1,68 @@
+{
+  "member": "B2",
+  "run_id": "20261004-100113-B2-803cdd",
+  "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+  "observation_type": "ACTUAL_RUN",
+  "status": "PASSED",
+  "styles": {
+    "target": {
+      "status": "PASSED",
+      "initial_output": "1",
+      "stale_output": "1",
+      "patched_clean_output": "2",
+      "incremental3_output": "3",
+      "incremental4_output": "4",
+      "stale_object_unchanged": true,
+      "incremental_recompiled": true,
+      "noop_object_unchanged": true,
+      "redundant_declaration_preserved": "unused.h"
+    },
+    "macro": {
+      "status": "PASSED",
+      "initial_output": "1",
+      "stale_output": "1",
+      "patched_clean_output": "2",
+      "incremental3_output": "3",
+      "incremental4_output": "4",
+      "stale_object_unchanged": true,
+      "incremental_recompiled": true,
+      "noop_object_unchanged": true,
+      "redundant_declaration_preserved": "unused.h"
+    },
+    "hybrid": {
+      "status": "PASSED",
+      "initial_output": "1",
+      "stale_output": "1",
+      "patched_clean_output": "2",
+      "incremental3_output": "3",
+      "incremental4_output": "4",
+      "stale_object_unchanged": true,
+      "incremental_recompiled": true,
+      "noop_object_unchanged": true,
+      "redundant_declaration_preserved": "unused.h"
+    },
+    "implicit": {
+      "status": "PASSED",
+      "initial_output": "1",
+      "stale_output": "1",
+      "patched_clean_output": "2",
+      "incremental3_output": "3",
+      "incremental4_output": "4",
+      "stale_object_unchanged": true,
+      "incremental_recompiled": true,
+      "noop_object_unchanged": true,
+      "redundant_declaration_preserved": "unused.h"
+    }
+  },
+  "failures": [],
+  "scope": "Manual reference-patch behavior only; no MDFixer service or detector executed.",
+  "rejection": {
+    "candidate_accepted": false,
+    "candidate_exit_code": 2,
+    "reason": "B2_INVALID_CANDIDATE",
+    "restored_exact_bytes": true,
+    "restored_output": "1",
+    "restored_makefile_sha256": "11883c01276fcb096df793c900b8bd470b8075009bbf01bb56c0424a69ef7099",
+    "note": "Restored baseline is buildable; its original MD is intentionally retained."
+  }
+}

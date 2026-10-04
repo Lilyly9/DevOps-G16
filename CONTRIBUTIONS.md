@@ -74,3 +74,7 @@
 ## A3：E4 补充
 
 本人 E4 文件、服务器原件核验与真实提交记录见 [A3 E4 贡献记录](e4/docs/A3_CONTRIBUTIONS.md)。
+
+## B1：E3 补充
+
+本人 E3 文件、双层判据实测与真实提交记录见 [B1 E3 贡献记录](e3/docs/B1_CONTRIBUTIONS.md)，任务对照与卡点记录见 [B1 实验报告](e3/docs/B1_REPORT.md)。

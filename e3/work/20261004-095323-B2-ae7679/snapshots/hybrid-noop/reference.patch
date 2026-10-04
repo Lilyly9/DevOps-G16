@@ -1,0 +1,12 @@
+diff --git a/Makefile b/Makefile
+--- a/Makefile
++++ b/Makefile
+@@ -15,7 +15,7 @@
+ app$(EXEEXT): main.o
+ 	$(CC) main.o -o $@
+ 
+-HEADERS = unused.h
++HEADERS = unused.h config.h
+ main.o: main.c $(HEADERS)
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 

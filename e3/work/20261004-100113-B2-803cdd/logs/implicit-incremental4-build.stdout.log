@@ -1,0 +1,2 @@
+D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe -O0 -Wall -Wextra -MMD -MP -c main.c -o main.o
+D:/Tools/Installers/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe main.o -o app

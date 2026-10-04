@@ -1,0 +1,25 @@
+PASS: submission (common + service schemas)
+PASS: completed record with patch (common + service schemas)
+PASS: accepted (common + service schemas)
+PASS: FAILED (common + service schemas)
+PASS: TIMED_OUT (common + service schemas)
+PASS: rejected candidate (common + service schemas)
+PASS: report read, MISSING-only consumption, patch artifact read
+PASS: reject unknown job type
+PASS: reject wrong service
+PASS: reject short commit
+PASS: reject unpinned image
+PASS: reject nonpositive timeout
+PASS: reject client-generated job ID
+PASS: reject non-repo report URI
+PASS: reject missing environment
+PASS: reject missing error report URI
+PASS: reject success without output
+PASS: reject FAILED without error
+PASS: reject TIMED_OUT without error
+PASS: reject consume redundant finding
+PASS: reject patch references missing artifact
+PASS: reject patch producer mismatch
+PASS: reject artifact path traversal
+PASS: reject report commit mismatch
+PASS: B2 offline contract validation complete; no service executed
