@@ -1,0 +1,201 @@
+[
+  {
+    "id": "env-git",
+    "argv": [
+      "git",
+      "--version"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.649503+00:00",
+    "duration_seconds": 0.0011,
+    "exit_code": 0,
+    "stdout": "logs/env-git.stdout.log",
+    "stderr": "logs/env-git.stderr.log"
+  },
+  {
+    "id": "env-make",
+    "argv": [
+      "make",
+      "--version"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.656099+00:00",
+    "duration_seconds": 0.0037,
+    "exit_code": 0,
+    "stdout": "logs/env-make.stdout.log",
+    "stderr": "logs/env-make.stderr.log"
+  },
+  {
+    "id": "env-cc",
+    "argv": [
+      "cc",
+      "--version"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.664948+00:00",
+    "duration_seconds": 0.0033,
+    "exit_code": 0,
+    "stdout": "logs/env-cc.stdout.log",
+    "stderr": "logs/env-cc.stderr.log"
+  },
+  {
+    "id": "env-python3",
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.673512+00:00",
+    "duration_seconds": 0.0008,
+    "exit_code": 0,
+    "stdout": "logs/env-python3.stdout.log",
+    "stderr": "logs/env-python3.stderr.log"
+  },
+  {
+    "id": "env-docker",
+    "argv": [
+      "docker",
+      "--version"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.679321+00:00",
+    "duration_seconds": 0.1481,
+    "exit_code": 0,
+    "stdout": "logs/env-docker.stdout.log",
+    "stderr": "logs/env-docker.stderr.log"
+  },
+  {
+    "id": "draft-build",
+    "argv": [
+      "make"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16/e3/work/20261004-115744-B1-8f5ca8/runtime",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.833186+00:00",
+    "duration_seconds": 0.007,
+    "exit_code": 0,
+    "stdout": "logs/draft-build.stdout.log",
+    "stderr": "logs/draft-build.stderr.log"
+  },
+  {
+    "id": "draft-build-check",
+    "argv": [
+      "ls",
+      "-l",
+      "hello"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16/e3/work/20261004-115744-B1-8f5ca8/runtime",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.845331+00:00",
+    "duration_seconds": 0.005,
+    "exit_code": 0,
+    "stdout": "logs/draft-build-check.stdout.log",
+    "stderr": "logs/draft-build-check.stderr.log"
+  },
+  {
+    "id": "draft-run",
+    "argv": [
+      "./hello"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16/e3/work/20261004-115744-B1-8f5ca8/runtime",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:00:20.855526+00:00",
+    "duration_seconds": 0.0033,
+    "exit_code": 0,
+    "stdout": "logs/draft-run.stdout.log",
+    "stderr": "logs/draft-run.stderr.log"
+  },
+  {
+    "id": "docker-broken-build",
+    "argv": [
+      "docker",
+      "build",
+      "-f",
+      "Dockerfile.broken",
+      "-t",
+      "nju-e3-draft-broken:20261004",
+      "."
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16/e3/fixtures/draft",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:57:00.613914+00:00",
+    "duration_seconds": 0.4655,
+    "exit_code": 127,
+    "stdout": "logs/docker-broken-build.stdout.log",
+    "stderr": "logs/docker-broken-build.stderr.log"
+  },
+  {
+    "id": "docker-reference-build",
+    "argv": [
+      "docker",
+      "build",
+      "-f",
+      "Dockerfile.reference",
+      "-t",
+      "nju-e3-draft-reference:20261004",
+      "."
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16/e3/fixtures/draft",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:57:01.085623+00:00",
+    "duration_seconds": 0.2208,
+    "exit_code": 0,
+    "stdout": "logs/docker-reference-build.stdout.log",
+    "stderr": "logs/docker-reference-build.stderr.log"
+  },
+  {
+    "id": "docker-reference-run",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "nju-e3-draft-reference:20261004"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:57:01.312389+00:00",
+    "duration_seconds": 0.3937,
+    "exit_code": 0,
+    "stdout": "logs/docker-reference-run.stdout.log",
+    "stderr": "logs/docker-reference-run.stderr.log"
+  },
+  {
+    "id": "docker-reference-image-id",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "--format",
+      "{{.Id}}  {{.RepoTags}}",
+      "nju-e3-draft-reference:20261004"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:57:01.711534+00:00",
+    "duration_seconds": 0.1381,
+    "exit_code": 0,
+    "stdout": "logs/docker-reference-image-id.stdout.log",
+    "stderr": "logs/docker-reference-image-id.stderr.log"
+  },
+  {
+    "id": "dockerfile-diff",
+    "argv": [
+      "diff",
+      "-u",
+      "Dockerfile.broken",
+      "Dockerfile.reference"
+    ],
+    "cwd": "/mnt/d/Users/nmh/Desktop/DevOps-G16/e3/fixtures/draft",
+    "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+    "started_at": "2026-10-04T04:57:45.781438+00:00",
+    "duration_seconds": 0.0039,
+    "exit_code": 1,
+    "stdout": "logs/dockerfile-diff.stdout.log",
+    "stderr": "logs/dockerfile-diff.stderr.log"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "member": "B1",
+  "run_id": "20261004-115744-B1-8f5ca8",
+  "source_commit": "8f5ca88c26bcdf23e76221639d752650f5cbad50",
+  "observation_type": "ACTUAL_RUN",
+  "configuration_id": "b1-wsl-gcc-default",
+  "draft_build_exit_code": 0,
+  "draft_build_artifact_listed": true,
+  "draft_run_output": "hello E3",
+  "draft_run_exit_code": 0,
+  "failures": [],
+  "behavior_status": "PASSED",
+  "docker_broken_exit_code": 127,
+  "docker_broken_make_not_found": true,
+  "docker_reference_build_exit_code": 0,
+  "docker_reference_run_output": "hello E3",
+  "docker_reference_run_exit_code": 0,
+  "docker_reference_image_id": "sha256:7d1ee809dfd00f4c9572000810e1d114c15e1673d490b9c884abec676788985a  [nju-e3-draft-reference:20261004]",
+  "docker_status": "PASSED"
+}

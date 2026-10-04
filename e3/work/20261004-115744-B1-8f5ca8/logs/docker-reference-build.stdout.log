@@ -1,0 +1,21 @@
+Sending build context to Docker daemon  8.704kB
+
+Step 1/6 : FROM python:3.13-slim
+ ---> bb2988715db2
+Step 2/6 : WORKDIR /work
+ ---> Using cache
+ ---> 69df5254eb52
+Step 3/6 : COPY main.c Makefile ./
+ ---> Using cache
+ ---> 89536b44afc5
+Step 4/6 : RUN apt-get update &&     apt-get install -y --no-install-recommends     gcc make libc6-dev &&     rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> b15e6d806ce3
+Step 5/6 : RUN make
+ ---> Using cache
+ ---> 732ac12c89e2
+Step 6/6 : CMD ["./hello"]
+ ---> Using cache
+ ---> 7d1ee809dfd0
+Successfully built 7d1ee809dfd0
+Successfully tagged nju-e3-draft-reference:20261004

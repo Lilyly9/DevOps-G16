@@ -1,0 +1,14 @@
+Sending build context to Docker daemon  8.704kB
+
+Step 1/5 : FROM python:3.13-slim
+ ---> bb2988715db2
+Step 2/5 : WORKDIR /work
+ ---> Using cache
+ ---> 69df5254eb52
+Step 3/5 : COPY main.c Makefile ./
+ ---> Using cache
+ ---> 89536b44afc5
+Step 4/5 : RUN make
+ ---> Running in ddc5af04e6f2
+[91m/bin/sh: 1: make: not found
+[0m
