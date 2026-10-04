@@ -1,18 +1,18 @@
 # E4 B1 运行与交接入口
 
-成员：郭德林；学号：待本人补填；小组：B16。
+成员：郭德林；学号：241880555；小组：B16。
 
 本组继续使用 [DevOps-G16](https://github.com/Lilyly9/DevOps-G16)，B 模板在 [B-draft](B-draft/README.md)。该模板来自课程 E4 实验包，由 B1 接入共享仓库（模板提交可用 `git log --oneline -- e4/B-draft` 查询），仅适配共享仓库的子目录运行、全仓库密钥检查与环境证据的模板 SHA，适配方式与 A 组模板一致。冒烟样例 `fixtures/draft/` 与 B1 在 E3 完成的 `e3/fixtures/draft/` 同源：同一 Tiny Greeting 项目、同一 `Dockerfile.broken`（缺 `make`）与 `Dockerfile.reference` 判据，仅 `FROM` 改为镜像站固定 digest。
 
 ## 在 B 组服务器运行
 
 ```sh
-mkdir -p ~/<B1学号>
-cd ~/<B1学号>
+mkdir -p ~/241880555
+cd ~/241880555
 git clone https://github.com/Lilyly9/DevOps-G16.git
 cd DevOps-G16
-git config --local user.name <B1学号>
-git config --local user.email <B1学号>@localhost
+git config --local user.name 241880555
+git config --local user.email 241880555@localhost
 git rev-parse HEAD
 cd e4/B-draft
 make doctor
