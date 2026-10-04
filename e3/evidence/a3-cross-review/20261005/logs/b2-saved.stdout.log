@@ -1,0 +1,2 @@
+PASS: B2 fixed MD inputs, four reference patches, 3 runs, incremental rebuilds, .d and candidate recovery
+Scope: manual baseline behavior; no detector accuracy or service recheck claim.

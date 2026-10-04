@@ -1,0 +1,56 @@
+[
+  {
+    "id": "a-group",
+    "argv": [
+      "python3",
+      "e3/validate_e3.py"
+    ],
+    "exit_code": 0,
+    "stdout": "a-group.stdout.log",
+    "stderr": "a-group.stderr.log"
+  },
+  {
+    "id": "b2-saved",
+    "argv": [
+      "python3",
+      "e3/scripts/b2_verify_evidence.py"
+    ],
+    "exit_code": 0,
+    "stdout": "b2-saved.stdout.log",
+    "stderr": "b2-saved.stderr.log"
+  },
+  {
+    "id": "b1-native",
+    "argv": [
+      "python3",
+      "e3/scripts/b1_run_draft_baseline.py",
+      "--stage",
+      "build",
+      "--run-id",
+      "20261005-A3-B1-cross"
+    ],
+    "exit_code": 0,
+    "stdout": "b1-native.stdout.log",
+    "stderr": "b1-native.stderr.log"
+  },
+  {
+    "id": "b2-rerun",
+    "argv": [
+      "python3",
+      "e3/scripts/b2_run_mdfixer_baseline.py"
+    ],
+    "exit_code": 0,
+    "stdout": "b2-rerun.stdout.log",
+    "stderr": "b2-rerun.stderr.log"
+  },
+  {
+    "id": "b2-after",
+    "argv": [
+      "python3",
+      "e3/scripts/b2_verify_evidence.py"
+    ],
+    "exit_code": 0,
+    "stdout": "b2-after.stdout.log",
+    "stderr": "b2-after.stderr.log"
+  }
+]

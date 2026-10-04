@@ -1,0 +1,58 @@
+[
+  {
+    "id": "docker-broken",
+    "argv": [
+      "docker",
+      "build",
+      "-f",
+      "Dockerfile.broken",
+      "-t",
+      "nju-e3-a3-broken:20261005",
+      "."
+    ],
+    "exit_code": 127,
+    "stdout": "docker-broken.stdout.log",
+    "stderr": "docker-broken.stderr.log"
+  },
+  {
+    "id": "docker-reference",
+    "argv": [
+      "docker",
+      "build",
+      "-f",
+      "Dockerfile.reference",
+      "-t",
+      "nju-e3-a3-reference:20261005",
+      "."
+    ],
+    "exit_code": 0,
+    "stdout": "docker-reference.stdout.log",
+    "stderr": "docker-reference.stderr.log"
+  },
+  {
+    "id": "docker-run",
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "nju-e3-a3-reference:20261005"
+    ],
+    "exit_code": 0,
+    "stdout": "docker-run.stdout.log",
+    "stderr": "docker-run.stderr.log"
+  },
+  {
+    "id": "docker-id",
+    "argv": [
+      "docker",
+      "image",
+      "inspect",
+      "--format",
+      "{{.Id}}",
+      "nju-e3-a3-reference:20261005"
+    ],
+    "exit_code": 0,
+    "stdout": "docker-id.stdout.log",
+    "stderr": "docker-id.stderr.log"
+  }
+]

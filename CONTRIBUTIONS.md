@@ -82,3 +82,7 @@
 ## B3：E3 补充
 
 本人 E3 文件、B 组汇总与 §10 四问相互检查见 [B3 E3 贡献记录](e3/docs/B3_CONTRIBUTIONS.md)与 [B3 汇总报告](e3/docs/B3_REPORT.md)。本阶段负责把 B1/B2 样本并入四服务七列总表（`e3/README.md`）、沉淀 `docs/Backlog.md` 与 `docs/ADR.md`（新增 ADR-004）并核对 B 组命名对齐；B3 姓名：吴佳静，最终提交 SHA 待提交后填写。
+
+### E3 A3 跨组收尾（2026-10-05）
+
+A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_REVIEW.md)，统一校验命令为 `python3 e3/validate_e3_all.py`。总表全员确认由用户明确提供，技术核验通过。

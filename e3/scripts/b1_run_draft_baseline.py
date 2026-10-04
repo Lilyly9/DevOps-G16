@@ -18,6 +18,7 @@ Usage (run inside Linux/WSL; the docker stage needs a working daemon):
 """
 import argparse
 import json
+import platform
 import shutil
 import subprocess
 import time
@@ -106,12 +107,12 @@ def main():
             'member': 'B1',
             'run_id': args.run_id,
             'source_commit': head,
-            'system': 'Linux',
-            'os': 'Ubuntu 26.04 LTS (WSL2)',
-            'architecture': 'x86_64',
+            'system': platform.system(),
+            'os': platform.platform(),
+            'architecture': platform.machine(),
             'versions': versions,
             'configuration_id': CONFIGURATION_ID,
-            'callsite': 'executed as root inside WSL2; invoked from the Windows host via wsl.exe',
+            'callsite': 'executed on the current host; see system/os/architecture',
         }
         (run_dir / 'environment.json').write_text(json.dumps(env_doc, indent=2) + '\n')
     else:

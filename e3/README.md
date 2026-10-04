@@ -1,6 +1,6 @@
 # E3 并行测试基线
 
-本目录按课程 `E3_TASKS.md` 中 A1/A2/A3/B1/B2 的职责组织四服务测试基线。人工预期放在 `expected/`（`MANUAL_EXPECTED`），实际运行放在 `work/<run-id>/`（`ACTUAL_RUN`），Linux 跟踪放在 `evidence/`；人工答案不得计入检测器准确率。A 组与 B 组的七列基线已并入本页；四服务总表待全员确认。
+本目录按课程 `E3_TASKS.md` 中 A1/A2/A3/B1/B2 的职责组织四服务测试基线。人工预期放在 `expected/`（`MANUAL_EXPECTED`），实际运行放在 `work/<run-id>/`（`ACTUAL_RUN`），Linux 跟踪放在 `evidence/`；人工答案不得计入检测器准确率。A 组与 B 组的七列基线已并入本页；用户于本次收尾确认总表已获全员确认；A3 跨组实核通过，见 [收尾报告](docs/A3_CROSS_REVIEW.md)。
 
 ## A 组七列基线（BuildChecker / EChecker）
 
@@ -24,7 +24,7 @@
 
 ## 目录、复现与校验
 
-- `env/toolchain-A1.txt`、`toolchain-A2.txt`、`toolchain-B1.txt` 记录 OS、架构、工具版本；详见 [环境说明](env/README.md)。B2 的环境摘要 `env/toolchain-B2.txt` 被文档引用但尚未入库，见 Backlog。
+- `env/toolchain-A1.txt`、`toolchain-A2.txt`、`toolchain-B1.txt` 记录 OS、架构、工具版本；详见 [环境说明](env/README.md)。B2 环境摘要 `env/toolchain-B2.txt` 已从其保存原件转录；来源在文件内注明。
 - `fixtures/md-rd/`、`fixtures/commits/C0|C1|C2/`、`fixtures/draft/`、`fixtures/mdfixer/` 保存四服务样本；C0/C1/C2 的真实 SHA 在 [A2 说明](A2_README.md)。
 - 每次运行新建 `work/<日期-时间-成员-编号>/`，不覆盖旧记录；`commands.json` 保存命令、退出码和日志路径，日志名注明版本，`observations.json` 标注 `ACTUAL_RUN`。
 - 人工答案在 `expected/` 标注 `MANUAL_EXPECTED` 或 `INSTRUCTOR_ORACLE`。本仓库各份答案均为 `MANUAL_EXPECTED`，不是工具输出。
@@ -35,7 +35,7 @@
 
 E3 文件是离线基线材料，不直接冒充 `jobRecord.artifacts`。如把文件登记为 E2 artifact，需补 `artifact_id`、`type`、`uri`、`media_type`、`producer_job_id`；`configuration_id` 应进入服务请求或报告的配置上下文，不能把 E3 本地 JSON 直接作为公共任务消息提交。`provenance`、运行命令、退出码等 E3 字段保留在材料或服务专有 payload 中；目前无需改 `contracts/task.schema.json`。
 
-已知限制：A1 Linux 与 A2 Windows 工具链不同；A2/B1/B2 均未取得课程实验包，分别按 PPT 口径手工等价构造样本；B2 环境摘要 `env/toolchain-B2.txt` 缺失待补；E3 当前只验证人工样本和构建行为，尚无四服务检测器准确率或真实联调结果。
+已知限制：A1 Linux 与 A2 Windows 工具链不同；A2/B1/B2 均未取得课程实验包，分别按 PPT 口径手工等价构造样本；B2 环境摘要已按其保存原件转录；E3 当前只验证人工样本和构建行为，尚无四服务检测器准确率或真实联调结果。
 
 ## 从仓库根目录复现（Linux，Python 3.9+）
 
@@ -74,10 +74,18 @@ A1 样本 SHA：`9c36984236b97115f44daa24c5274a90dd905b37`；A2 C0/C1/C2 的 SHA
 
 - [逐项核查报告](docs/A3_REPORT.md)、[AI 使用记录](docs/A3_AI_USAGE.md)、[个人贡献记录](docs/A3_CONTRIBUTIONS.md)。
 - [本次命令及重跑证据](evidence/a3-review/20261003/README.md)：实际执行者 A3，在临时克隆验证 A1/A2 行为与缺 tag 时的复现步骤。
-- A3-1～A3-6 的 A 组独立交付已核查；四服务总表已由 B3 并入本页，待全员确认，见根目录 Backlog。
+- A3-1～A3-6 的 A 组独立交付已核查；四服务总表已由 B3 并入本页，用户确认已获全员确认，A3 实核通过，见收尾报告。
 
 ## B3 本人交付与共同验收
 
 - [相互检查与 B 组汇总报告](docs/B3_REPORT.md)、[AI 使用记录](docs/B3_AI_USAGE.md)、[个人贡献记录](docs/B3_CONTRIBUTIONS.md)。
 - B3-1～B3-5 已核对 B 组目录/命名对齐、并入四服务七列总表、沉淀 Backlog/ADR、按 §10 四问检查 A 组产物并汇总 B 组贡献。
-- 未决项：B2 环境摘要 `env/toolchain-B2.txt` 缺失、E3 B2 姓名/Git 作者待其本人补齐、四服务总表与 §10 相互检查待全员确认。
+- 收尾：B2 环境摘要已补齐，双方 §10 检查已汇总，全员确认由用户提供；E3 B2 姓名/Git 作者仍待本人登记。
+
+## 四服务统一验收入口
+
+```bash
+python3 e3/validate_e3_all.py
+```
+
+[2026-10-05 A3 跨组报告](docs/A3_CROSS_REVIEW.md)与[实际复跑证据](evidence/a3-cross-review/20261005/README.md)涵盖 A 组查 B 组的 §10 四问。该校验检查保存证据；Docker 现场重跑按 B1 README 执行。

@@ -1,0 +1,14 @@
+[
+  {
+    "case": "positive",
+    "exit_code": 0,
+    "expected": 0,
+    "stdout": "PASS: A-group E3 documentation, environment, expected answers, 9 runs, source commits and snapshot hashes; A1 deep check passed\nScope: saved A-group evidence only; B-group evidence and whole-team confirmation are not checked.\nPASS: B2 fixed MD inputs, four reference patches, 4 runs, incremental rebuilds, .d and candidate recovery\nScope: manual baseline behavior; no detector accuracy or service recheck claim.\nPASS: four-service saved E3 baseline evidence and five member environments\nScope: manual baselines and archived logs; not detector accuracy, live image identity, or personal signatures.\n"
+  },
+  {
+    "case": "reject-broken-as-success",
+    "exit_code": 1,
+    "expected": 1,
+    "stdout": "PASS: A-group E3 documentation, environment, expected answers, 9 runs, source commits and snapshot hashes; A1 deep check passed\nScope: saved A-group evidence only; B-group evidence and whole-team confirmation are not checked.\nPASS: B2 fixed MD inputs, four reference patches, 4 runs, incremental rebuilds, .d and candidate recovery\nScope: manual baseline behavior; no detector accuracy or service recheck claim.\nFAIL: B1: observation/exit mismatch\n"
+  }
+]

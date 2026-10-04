@@ -221,3 +221,7 @@ OpenAI Codex
 ## B3：E3 补充
 
 本阶段的提示、AI 建议、修正与真实验证见 [B3 E3 AI 使用记录](e3/docs/B3_AI_USAGE.md)。该记录未声明全组已确认或虚构人工签字。
+
+### E3 A3 跨组收尾（2026-10-05）
+
+A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_REVIEW.md)，统一校验命令为 `python3 e3/validate_e3_all.py`。总表全员确认由用户明确提供，技术核验通过。

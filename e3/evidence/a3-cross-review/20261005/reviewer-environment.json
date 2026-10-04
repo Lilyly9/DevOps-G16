@@ -1,0 +1,7 @@
+{
+  "executor": "A3",
+  "os": "Linux-7.2.9-1-cachyos-x86_64-with-glibc2.44",
+  "architecture": "x86_64",
+  "source_commit": "c3d12846e85b99ec05c09d4923f17d7b1cefa7a9",
+  "note": "B1 runner hardcodes WSL/B1 labels; this is A3 reproduction on current Linux, not a new B1 personal run."
+}
