@@ -71,3 +71,29 @@ Missing Dependency（MD）和 Redundant Dependency（RD）是检测服务的正�
 - 调用方先根据 Job 状态判断执行是否完成，再根据 findings 判断代码/构建依赖问题。
 - MDFixer 可以只筛选 `type == MISSING` 的发现，不会把 RD 或系统异常当作修复输入。
 - `ERROR_REPORT` 是现有产物类型名称，不等于公共字段 `job.error`；两者语义必须在实现和文档中保持分离。
+
+## ADR-004：E3 测试基线采用手工等价样本与人工/实际分离
+
+- 状态：Accepted（E3 基线层）
+
+### Context
+
+E3 需要为四个服务各准备一份"能判断对错、别人能重跑"的测试基线。但课程实验包（`E3实验包/` 的 `run_lab.py` 与 `fixtures/`）未取得，且检测器（BuildChecker/EChecker/MDFixer）在 E3 尚未实现，人工预期答案有被误当工具输出的风险。
+
+### Decision
+
+- 样本按 PPT 口径手工等价构造（A2 自建 C0/C1/C2 真实提交链；B1 自建 Tiny Greeting；B2 自建四种声明风格的 Makefile 与补丁），并在来源处标注 `MANUAL_EXPECTED` 或 `WORKING_TREE_SNAPSHOT`，不冒充课程原始产物或已提交文件。
+- 人工预期放在 `expected/`，实际运行放在 `work/<run-id>/`，两者严格分列；`observations.json` 标注 `ACTUAL_RUN`，人工答案不得计入工具准确率。
+- 每次运行新建 `work/<日期-时间-成员-编号>/`，不覆盖旧证据；构建产物由各 run 目录的 `.gitignore` 排除。
+- 环境记录各自保存版本号，不同工具链（Linux/Windows/WSL）不混作同一次配置的性能对照。
+
+### Alternatives
+
+- 等待课程实验包取得后再开工。
+- 把人工预期与实际日志混在同一文件。
+
+### Consequences
+
+- 基线不依赖课程实验包即可重跑，人工/实际分离使后续准确率评估不被污染。
+- 手工样本与课程样例可能不完全一致，需在 README 标注"手工等价"；换机器重跑时工具链版本差异需另建 run 目录。
+- 真实检测器实现后（E5/E8），以同构真实数据替换手工样本并保留人工/实际分离约定。

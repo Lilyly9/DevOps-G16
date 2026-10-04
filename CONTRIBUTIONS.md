@@ -48,7 +48,7 @@
 
 ## B2
 
-- Git 提交作者：`jenicifor`；姓名待本人补充。
+- 成员：吴佳静。
 - 负责内容：MDFixer（REPAIR）修复缺失依赖接口的请求、结果、Git Patch 产物与读取约定。
 - 已完成文件：`contracts/mdfixer/request.json`、`response.json`、接口 README、服务专有 `contract.schema.json`、`artifacts/fix-missing-config-h.patch` 及 `validate.py`。
 - 文档补充：README 中 B2 的目录说明、进度勾选与校验命令、AI_USAGE 的 B2 部分、本贡献记录。
@@ -78,3 +78,7 @@
 ## B1：E3 补充
 
 本人 E3 文件、双层判据实测与真实提交记录见 [B1 E3 贡献记录](e3/docs/B1_CONTRIBUTIONS.md)，任务对照与卡点记录见 [B1 实验报告](e3/docs/B1_REPORT.md)。
+
+## B3：E3 补充
+
+本人 E3 文件、B 组汇总与 §10 四问相互检查见 [B3 E3 贡献记录](e3/docs/B3_CONTRIBUTIONS.md)与 [B3 汇总报告](e3/docs/B3_REPORT.md)。本阶段负责把 B1/B2 样本并入四服务七列总表（`e3/README.md`）、沉淀 `docs/Backlog.md` 与 `docs/ADR.md`（新增 ADR-004）并核对 B 组命名对齐；B3 姓名：吴佳静，最终提交 SHA 待提交后填写。
