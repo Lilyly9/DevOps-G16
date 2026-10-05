@@ -46,3 +46,7 @@ make all
 - `make scan` 检查共享仓库全部已跟踪文件和 Git 历史，以及本人的服务镜像；同时检查 B 子目录本地 `.env` 的权限。
 - B 组验收：单测 `4 passed`；冒烟的 `docker_server` 有版本、`build_exit_code` 非零、`make_error_line` 含 `make: not found`、`passed=true` 同时成立——样例故意缺 `make`，服务成功识别并记录这次预期失败；密钥扫描未发现问题。
 - 服务容器通过挂载的 `/var/run/docker.sock` 使用宿主机 Docker。这等同于宿主机 root 权限；容器的资源限制管不到它发起的构建。只构建课程指定的项目，不开放 Docker API 2375/2376 端口，不清理其他组员的镜像与缓存。
+
+## Git 历史含旧编码日志
+
+2026-10-05 A3 跨组重跑发现历史扫描因 Windows 旧编码日志产生 UnicodeDecodeError。扫描器现以 UTF-8 替换解码读取 Git 输出，保留原有密钥规则；应同步此修正版后在新的 RUN 目录完整执行 make all。旧版本构建、单测和冒烟通过但扫描崩溃的记录应保留为失败尝试，临时副本补充扫描不能冒充原命令成功。

@@ -41,7 +41,8 @@ def scan_text(text, where):
 
 
 def git(root, *args):
-    return subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=True)
+    # Git 历史可能包含旧编码日志；替换不可解码字节，继续检查 ASCII 密钥模式。
+    return subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=True, encoding="utf-8", errors="replace")
 
 
 def files(root):
