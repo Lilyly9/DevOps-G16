@@ -1,0 +1,74 @@
+{
+  "provenance": "REPO_REVIEW_AND_EVIDENCE_CHAIN_CHECK_BY_B3",
+  "reviewed_date": "2026-10-12",
+  "executor": "B3",
+  "name": "吴佳静",
+  "git_author": "jenicifor",
+  "student_id": "241880597",
+  "repository": "https://github.com/Lilyly9/DevOps-G16.git",
+  "checked_group": "A",
+  "template_subdirectory": "e4/A-buildchecker",
+  "method": "在本地完整克隆上核对 A 组 README、模板 SHA 对象与 A3 的独立证据索引；未在 A16 ECS 上实际重跑 make all，也未独立 inspect 线上镜像——这两项引用 A3 已核验记录。",
+  "readme_review": {
+    "files": [
+      "e4/A1_README.md",
+      "e4/A2_README.md",
+      "e4/A3_README.md",
+      "e4/A-buildchecker/README.md"
+    ],
+    "can_rerun_from_readme": true,
+    "notes": [
+      "A1_README 给出 clone、--local 身份、cd e4/A-buildchecker、make doctor/make all 的完整步骤。",
+      "A2_README 额外给出 checkout --detach <A1记录的SHA> 后再核对 HEAD 的同 SHA 重跑步骤，并附本人实际结果表。",
+      "A-buildchecker/README 提供 make doctor/build/test/smoke/scan/all 的命令表与四项冒烟判据。",
+      "服务器登录凭据按约定私下传达、不进仓库；基础镜像 digest 核验步骤依赖 A 组手册，但 digest 已固化在模板内，不影响按 README 重跑。"
+    ]
+  },
+  "evidence_chain": {
+    "a1": {
+      "student_id": "241880485",
+      "success_dir": "/root/241880485/DevOps-G16/e4/A-buildchecker/work/20261001-040329",
+      "template_sha": "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd",
+      "source": "e4/docs/A3_EVIDENCE_INDEX.json"
+    },
+    "a2": {
+      "student_id": "241880496",
+      "success_dir": "/root/241880496/DevOps-G16/e4/A-buildchecker/work/20261002-184355",
+      "template_sha": "9feb7a5675083a8ad0ad9fa3645010ced7bf2ffd",
+      "source": "e4/docs/A3_EVIDENCE_INDEX.json"
+    },
+    "a3": {
+      "student_id": "241880464",
+      "success_dir": "/root/241880464/DevOps-G16/e4/A-buildchecker/work/20261003-174027",
+      "template_sha": "fa5ae8fa45ea0fed943c94f9a1523a602aa96ce6",
+      "source": "e4/docs/A3_EVIDENCE_INDEX.json"
+    },
+    "a1_a2_same_template_sha": true,
+    "local_verifications": {
+      "sha_9feb7a_commit_exists": true,
+      "sha_fa5ae8_commit_exists": true,
+      "a_buildchecker_subtree_at_9feb7a": "dac9cd95c62685b3b7bc2d95f37512b3bc87527b",
+      "a_buildchecker_subtree_at_fa5ae8": "dac9cd95c62685b3b7bc2d95f37512b3bc87527b",
+      "subtree_identical": true
+    }
+  },
+  "no_leak_checks": {
+    "env_tracked_count": 0,
+    "env_tracked": false,
+    "env_example_has_real_key": false,
+    "env_example_note": "e4/A-buildchecker/.env.example 仅含 GITHUB_TOKEN= 空占位，无真实值。",
+    "key_in_git_history": false,
+    "key_pattern_scan": "git grep 未发现 BEGIN ... KEY / AKIA / token 等模式；git log --all --diff-filter=A 未出现 .env/密钥文件。",
+    "image_history": "由 A3 独立扫描覆盖（A3_EVIDENCE_INDEX.json 各成员 independent_scan.exit_code=0，masked_output 均为「未发现问题…含镜像」）；B3 本次未独立 inspect 线上镜像。"
+  },
+  "four_questions": {
+    "q1_readme_rerun": "是。A 组四份 README 提供 clone、同 SHA checkout、local 身份、make doctor/make all 与冒烟判据，步骤完整；B3 本次基于 README 完整性审查，未在 A16 服务器实际重跑。",
+    "q2_two_members_success": "是。A1 与 A2 各有成功目录与同一模板 SHA 9feb7a…，A2_README 记录完整对照结论（toolchain.lock/test.log/smoke.json 一致、env.problems 均空），A3 已原件核验通过。",
+    "q3_key_leak": "仓库与 Git 历史无 Key（B3 本地自核）；镜像 history 由 A3 独立扫描覆盖（未发现问题，B3 引用其记录）。",
+    "q4_evidence_sha_correspondence": "是。A3_EVIDENCE_INDEX.json 为 A1/A2/A3 成功目录记录 template_sha 与逐文件 sha256；B3 本地确认两个模板 SHA 对象存在且 e4/A-buildchecker 子树一致（dac9cd95…）。"
+  },
+  "verification_limits": [
+    "B3 未在 A16 ECS 上实际执行 make doctor/make all，也未独立 inspect 线上镜像；相应结论引用 A3 的独立原件核验记录（e4/A3_REVIEW.md、e4/docs/A3_EVIDENCE_INDEX.json）。",
+    "服务器 work/ 目录与 .env 位于 A16 服务器、不进仓库，B3 从仓库无法直接读取原件，仅能核对 A3 已转录的逐文件 sha256 与结论。"
+  ]
+}
