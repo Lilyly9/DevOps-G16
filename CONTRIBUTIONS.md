@@ -97,7 +97,7 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 ## A2：E5–E7 补充
 
 - 成员：万宇；学号：241880496；Git 作者：`adscfe <asdfs1243@noreply.gitcode.com>`；分支：`e5-7/A2-241880496`。
-- 负责阶段：E6（BuildChecker 自动检测与修复复检），对应 [E5-7_TASKS.md](E5-7_TASKS.md) §5 A2 与 §7.1 的 A2 门槛值。
+- 负责阶段：E6（BuildChecker 自动检测与修复复检），对应组内私发的任务分工文档 §5 A2 与 §7.1 的 A2 门槛值。
 - 仓库结构：把 A 实验包入库到 `e5/A-buildchecker/`（唯一一份代码），并按共用仓库约定拆成 `e5/`、`e6/`、`e7/` 三个阶段目录（`e6-7` 合并目录已废弃）。
 - 代码改动：新增 `e5/A-buildchecker/services/buildchecker/tests/test_extra_241880496.py`（2 项边界测试）；未修改服务实现，未改动他人测试。
 - 交付证据：`e6/evidence/A2-241880496/`（`index.md`、before/after 的 findings 与两张图、`make-db.txt`、关键 trace `t.14`/`t.15` 与 `trace-index.md`、`verify-e6.json`、单测日志、自证 gate 结果）。

@@ -2,7 +2,7 @@
 
 本目录只放 E7 的证据、报告与 CI 记录；实验包代码在 [`../e5/A-buildchecker`](../e5/A-buildchecker)、[`../e5/B-draft`](../e5/B-draft)。
 
-> 任务分工与判据见仓库根 [E5-7_TASKS.md](../E5-7_TASKS.md)。
+> 任务分工与判据由组长私下分发，不随仓库提交。
 
 ## 状态
 

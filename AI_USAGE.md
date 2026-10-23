@@ -235,7 +235,7 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 
 - 成员：万宇；Git 作者：`adscfe <asdfs1243@noreply.gitcode.com>`；学号 241880496。
 - 工具：GitHub Copilot（VS Code）。
-- 任务：本阶段承担 E6（BuildChecker 自动检测与修复复检），按 [E5-7_TASKS.md](E5-7_TASKS.md) §1 的低耦合约定独立完成，不改动 A1/A3 的职责范围。
+- 任务：本阶段承担 E6（BuildChecker 自动检测与修复复检），按组内私发的任务分工文档 §1 的低耦合约定独立完成，不改动 A1/A3 的职责范围。
 
 ### 提示摘要与 AI 建议
 

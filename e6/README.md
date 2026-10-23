@@ -2,7 +2,7 @@
 
 本目录只放 E6 的证据与报告；实验包代码在 [`../e5/A-buildchecker`](../e5/A-buildchecker)、[`../e5/B-draft`](../e5/B-draft)。
 
-> 任务分工与判据见仓库根 [E5-7_TASKS.md](../E5-7_TASKS.md)；`work/` 不提交。
+> 任务分工与判据由组长私下分发，不随仓库提交；`work/` 不提交。
 
 ## 状态
 
@@ -35,4 +35,4 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-
 
 ## B2 · E6-B 两轮构建与同镜像运行
 
-待本人补充（命令与预期见 E5-7_TASKS.md §6 B2；默认 `--replay` 可直接开跑）。
+待本人补充（命令与预期见私发的任务分工文档 §6 B2；默认 `--replay` 可直接开跑）。
