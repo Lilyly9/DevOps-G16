@@ -11,5 +11,5 @@
 | `t.16`–`t.18` | 链接链（`collect2` / `ld` 等） | 否 | 生成 `app` 的读取与写出 |
 
 - 关键进程归属：`cc1`（读 `config.h`）与 `as`（写 `main.o`）同属 `cc` 派生的一个构建任务 → 该读取记在目标 `main.o` 上。
-- 未入库文件在原始运行目录 `e5-7/A-buildchecker/work/e6-before-A2/evidence/trace/`，重跑可完整重建。
+- 未入库文件在原始运行目录 `e5/A-buildchecker/work/e6-before-A2/evidence/trace/`，重跑可完整重建。
 - 完整原始目录约 112 KB/次，为控制仓库体积只保留两条直接证据；结论不依赖被裁掉的文件（声明侧由 `make-db.txt` 佐证）。

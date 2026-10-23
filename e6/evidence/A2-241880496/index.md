@@ -14,7 +14,7 @@
 ## 命令（可整段重跑）
 
 ```bash
-cd e5-7/A-buildchecker
+cd e5/A-buildchecker
 python3 scripts/doctor.py --out work/doctor-A2-01/env.json
 python3 scripts/lab_cloud.py build --out work/build-A2-01 --image course1020-buildchecker:241880496 --build-timeout 1200
 python3 scripts/lab_cloud.py e6 --out work/e6-before-A2 --image course1020-buildchecker:241880496
@@ -75,7 +75,7 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-
 ```bash
 git switch main && git pull --ff-only
 git switch -c e5-7/recheck-<学号> e5-7/A2-241880496
-cd e5-7/A-buildchecker
+cd e5/A-buildchecker
 python3 scripts/lab_cloud.py build --out work/build-recheck-01 --image course1020-buildchecker:<学号>
 python3 scripts/lab_cloud.py e6 --out work/e6-recheck-before --image course1020-buildchecker:<学号>
 python3 scripts/lab_cloud.py e6 --fixed --out work/e6-recheck-after --image course1020-buildchecker:<学号>
