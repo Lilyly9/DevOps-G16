@@ -94,3 +94,21 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 ## B3：E4 补充
 
 本人 E4 对相邻 A 组的相互检查见 [B3 相互检查入口](e4/B3_README.md)与 [结构化跨组记录](e4/docs/B3_A_CROSS_RECORD.json)。本次为仓库审查 + 证据链核对：A 组四份 README 完整、A1/A2 各有同 SHA `9feb7a…` 成功记录、仓库与 Git 历史无 Key、证据目录对应模板 SHA；未在 A16 ECS 实际重跑 `make all`、线上镜像引用 A3 独立核验。姓名：吴佳静；学号 241880597；Git 作者 `jenicifor`。
+## A2：E5–E7 补充
+
+- 成员：万宇；学号：241880496；Git 作者：`adscfe <asdfs1243@noreply.gitcode.com>`；分支：`e5-7/A2-241880496`。
+- 负责阶段：E6（BuildChecker 自动检测与修复复检），对应 [E5-7_TASKS.md](E5-7_TASKS.md) §5 A2 与 §7.1 的 A2 门槛值。
+- 仓库结构：把 A 实验包入库到 `e5/A-buildchecker/`（唯一一份代码），并按共用仓库约定拆成 `e5/`、`e6/`、`e7/` 三个阶段目录（`e6-7` 合并目录已废弃）。
+- 代码改动：新增 `e5/A-buildchecker/services/buildchecker/tests/test_extra_241880496.py`（2 项边界测试）；未修改服务实现，未改动他人测试。
+- 交付证据：`e6/evidence/A2-241880496/`（`index.md`、before/after 的 findings 与两张图、`make-db.txt`、关键 trace `t.14`/`t.15` 与 `trace-index.md`、`verify-e6.json`、单测日志、自证 gate 结果）。
+- 报告：`e6/reports/A2-241880496.md`；阶段汇总与状态：`e6/README.md`。
+- 关键结果：`MISSING main.o → config.h`、`REDUNDANT main.o → unused.h`；修复后 `findings=[]`、仅 Makefile 哈希变化；单测 15 → 17 passed；自证 gate 8/8。
+- 运行环境：Ubuntu 26.04 LTS on WSL2（非组内云主机），4 CPU / 7.8 GiB，Docker 29.5.2；已在 `doctor/env.json` 与报告"故障与限制"中注明。
+- 提交（分支 `e5-7/A2-241880496`）：
+  - `c343b5b` `feat(e5-7): import A-buildchecker teaching lab from course package`
+  - `cbbfb9e` `test(e5-7): add A2 boundary tests for Make database scope and order-only deps`
+  - `a40a727` `docs(e5-7): add A2 E6 evidence, report and README section`
+  - `49ceb98` `docs(e5-7): add E5-E7 task allocation and low-coupling handoff rules`
+  - `6ab0c1f` `refactor(e5-7): split into per-stage e5/e6/e7 folders with shared code in e5`
+  - `1705856` `docs(e5-7): fix remaining e5-7 paths after per-stage split`
+- 未完成 / 未代做：A1 的 E5、A3 的 E7 与 CI 仍为占位；正式 gate、CI 运行与合并记录不由本人填写。
