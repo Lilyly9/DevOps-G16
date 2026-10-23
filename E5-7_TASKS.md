@@ -65,7 +65,7 @@ E5 解释一次真实执行，E6 把它变成程序，E7 用测试与 CI 证明�
 
 | 看起来必须串行的点 | 常见错误做法 | 本方案做法 |
 | --- | --- | --- |
-| 实验包还没入库 | 自己再复制一份进去，与先到的人产生重复文件/冲突 | 开工先 `git pull`；`e5-7/<track>/services` 已存在就**直接用**，不存在才从课程包复制一次 |
+| 实验包还没入库 | 自己再复制一份进去，与先到的人产生重复文件/冲突 | 开工先 `git pull`；`e5/<track>/services` 已存在就**直接用**，不存在才从课程包复制一次 |
 | A1 采完 E5，A2 才能做 E6 | A2 去读 A1 的 `evidence/` | `fullcheck.py` 在 E6 里**自己**复制 fixture、`make clean`、重新 `strace`；A2 不读 A1 任何文件 |
 | B1 拿到模型候选，B2 才能构建 | B2 等 B1 的候选文件 | `e6 --replay` 用包内 DeepSeek 候选，B2 随时可跑；用自己候选时也只读自己目录 |
 | 上一个人构建过镜像 | 依赖 `course1020-<service>:local` 还活着 | 每人自助 `build`，自己的 tag；即使缓存被清理，重跑一次即可 |
@@ -73,7 +73,7 @@ E5 解释一次真实执行，E6 把它变成程序，E7 用测试与 CI 证明�
 | 大家都要往 `tests/` 加一项测试 | 改同一个 `test_*.py` | 每人新建独立文件 `tests/test_extra_<学号>.py` |
 | 共享文件撞车（README / 保护配置 / workflow） | 各自随手机改 | 只有 4 处会撞，明确所有权（§1.4） |
 | 要问上一个人"这个结论怎么来的" | 依赖口头解释 | 每人证据目录必须有 `index.md`：谁、何时、命令、预期 vs 实际、如何重跑 |
-| 等 E7 负责人跑完 CI 才能写报告 | 报告卡在 CI 段 | CI 段先写占位；记录由负责人提交为文件（`e5-7/ci/<track>/`），后来者自己读 |
+| 等 E7 负责人跑完 CI 才能写报告 | 报告卡在 CI 段 | CI 段先写占位；记录由负责人提交为文件（`e7/ci/<track>/`），后来者自己读 |
 | 两条轨道各自配置 main 保护 | 各自 `PUT`，后配的覆盖先配的 | `main` 只有一份保护配置；A3 起草并执行一次，B3 只读核对 |
 | CI 演示分支重名 | 两条轨道都叫 `e7-gate-reject-demo` | 固定 `e7-gate-reject-demo-a` / `-b` |
 | 等所有人新增测试齐了才能跑 gate | gate 里要求"必须含他人测试" | 各人 gate 只跑自己那份，结论各自成立 |
@@ -84,23 +84,23 @@ E5 解释一次真实执行，E6 把它变成程序，E7 用测试与 CI 证明�
 | --- | --- | --- |
 | `.github/workflows/e7-a-quality-gate.yml` | A3 独占 | B 侧不改 |
 | `.github/workflows/e7-b-quality-gate.yml` | B3 独占 | A 侧不改 |
-| `e5-7/ci/main-protection.json` | A3 起草并执行 `PUT` 一次；B3 只读核对 | 任何人不重复 `PUT`，避免互相覆盖 |
-| `e5-7/README.md` | 全组 | 固定小节顺序 A1→A2→A3→B1→B2→B3，**只在末尾追加自己那节**；冲突时保留双方 |
-| `e5-7/evidence/<角色>-<学号>/`、`e5-7/reports/<角色>-<学号>.md` | 本人独占 | 不代填、不改他人 |
-| `e5-7/<track>/services/**`、`scripts/**`、`fixtures/**` | 该轨道全员共用 | 只追加 `tests/test_extra_<学号>.py`；A3/B3 的 CI 演示测试也用固定名 `test_ci_reject_demo.py`；不删改他人文件 |
+| `e7/ci/main-protection.json` | A3 起草并执行 `PUT` 一次；B3 只读核对 | 任何人不重复 `PUT`，避免互相覆盖 |
+| `e5/README.md`、`e6/README.md`、`e7/README.md` | 全组 | 每个阶段一份；只追加自己那节；冲突时保留双方 |
+| `<阶段>/evidence/<角色>-<学号>/`、`<阶段>/reports/<角色>-<学号>.md`（E5→`e5/`、E6→`e6/`、E7→`e7/`） | 本人独占 | 不代填、不改他人 |
+| `e5/<track>/services/**`、`scripts/**`、`fixtures/**` | 该轨道全员共用 | 只追加 `tests/test_extra_<学号>.py`；A3/B3 的 CI 演示测试也用固定名 `test_ci_reject_demo.py`；不删改他人文件 |
 
 ### 1.5 开工三步 / 收工三件
 
 **开工（每次，必做）**
 
 1. `git switch main && git pull --ff-only`；长期分支先 `git rebase origin/main`（用 rebase，不用 merge，避免历史分叉）。
-2. 看 `e5-7/<track>/services` 是否已存在：**存在就用，不要再复制课程包**。
+2. 看 `e5/<track>/services` 是否已存在：**存在就用，不要再复制课程包**。
 3. `doctor` + `build` 自己的镜像。**环境状态可能已经变了**（Docker 服务重启、基础镜像被清理、`gh` token 被覆盖），不要假设上个班次的环境还在。
 
 **收工（每次，必做）**
 
-1. 证据归档到 `e5-7/evidence/<角色>-<学号>/`，并写 `index.md`（谁/何时/命令/预期 vs 实际/如何重跑）。
-2. 关键判据值写进 `e5-7/README.md` 自己那节。
+1. 证据归档到本阶段的 `evidence/<角色>-<学号>/`（E5→`e5/`、E6→`e6/`、E7→`e7/`），并写 `index.md`（谁/何时/命令/预期 vs 实际/如何重跑）。
+2. 关键判据值写进本阶段 `README.md` 自己那节。
 3. push 分支 + 开 PR，PR 描述写清"只改了哪些路径、关键判据是什么"，让下一个班次的人不用问你。
 
 ### 1.6 允许的"资源串行"
@@ -173,7 +173,7 @@ graph LR
 | 克隆目录 | 各自的 `~/<学号>/DevOps-G16`，不要共用同一个工作副本 | 服务器是共用的；共用副本会互相看到对方未提交的改动 |
 | 环境 | 进入本组云服务器（Linux），确认 `docker` 免 sudo、`python3`、`git`、`gh` 可用 | `lab_cloud.py` 在非 Linux 上直接报错退出，Windows 只用来写报告 |
 | 基础镜像 | 预拉取 Python 与 `build-essential` 相关基础镜像 | 网络失败先修网络，不要在失败日志上做判断 |
-| 实验包 | 看 `e5-7/<track>/services` 是否已存在：**存在就直接用**；不存在才从课程包复制一次到 `e5-7/A-buildchecker/`、`e5-7/B-draft/` | A 包由 A 侧首个动手的人入库，B 包由 B 侧首个动手的人入库，互不依赖；包内若带 `.git` 先删掉 |
+| 实验包 | 看 `e5/<track>/services` 是否已存在：**存在就直接用**；不存在才从课程包复制一次到 `e5/A-buildchecker/`、`e5/B-draft/` | A 包由 A 侧首个动手的人入库，B 包由 B 侧首个动手的人入库，互不依赖；包内若带 `.git` 先删掉 |
 | Git 身份 | `git config --local user.name "<学号>"`、`git config --local user.email "<邮箱>"` | **只用 `--local`**；服务器的 Git 账号是共用的 |
 | 镜像 tag | 统一规则 `course1020-<service>:<学号>`（A=`buildchecker`，B=`draft`） | 默认 tag 是 `:local`，六个人会互相覆盖，必须改 |
 | 目录 | 每人确认自己的 `--out` 命名：`work/<阶段>-<角色>-<序号>` | `--out` 必须位于 `work/` 之下且为空目录，否则脚本直接拒绝 |
@@ -187,10 +187,16 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 ├── .github/workflows/
 │   ├── e7-a-quality-gate.yml      # job name 必须叫 e7-a-quality-gate
 │   └── e7-b-quality-gate.yml      # job name 必须叫 e7-b-quality-gate
-├── e5-7/
-│   ├── A-buildchecker/            # A 实验包内容（services/ scripts/ fixtures/ tests/ ci/ Makefile）
-│   ├── B-draft/                   # B 实验包内容
-│   ├── evidence/ reports/ ci/     # 归档（§8）
+├── e5/                            # 阶段 1：实验包代码 + E5 证据
+│   ├── A-buildchecker/            # A 实验包（唯一一份代码）
+│   ├── B-draft/                   # B 实验包（唯一一份代码）
+│   ├── evidence/ reports/
+│   └── README.md
+├── e6/                            # 阶段 2：只放 E6 证据与报告
+│   ├── evidence/ reports/
+│   └── README.md
+├── e7/                            # 阶段 3：只放 E7 证据、报告与 CI 记录
+│   ├── evidence/ reports/ ci/
 │   └── README.md
 ├── e3/  e4/  contracts/  docs/    # 已有阶段
 ```
@@ -199,15 +205,15 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 
 | 改造 | A 轨道写法 | 说明 |
 | --- | --- | --- |
-| 工作目录 | `defaults.run.working-directory: e5-7/A-buildchecker` | 实验包不在仓库根，`scripts/`、`services/` 都相对它 |
+| 工作目录 | `defaults.run.working-directory: e5/A-buildchecker` | 实验包不在仓库根，`scripts/`、`services/` 都相对它 |
 | 构建上下文 | `docker build -f services/buildchecker/Dockerfile -t e7-buildchecker:ci .` | `.` 已由工作目录决定，不要写成仓库根 |
-| 产物路径 | `e5-7/A-buildchecker/work/ci/` | artifact 上传目录 |
+| 产物路径 | `e5/A-buildchecker/work/ci/` | artifact 上传目录 |
 
 **路径门控（建议做，不做也能异步协作）**
 
 - 为什么是"建议"而不是"必须"：既然 `main` 恒绿（§1.2），不做门控也只会让每个 PR 多跑另一条轨道的 CI（费分钟、日志更长），**不会卡住任何人**。
 - 做了的好处：只跑本轨道，PR 反馈更快、失败信息更干净。
-- 做法：两个 workflow 都监听 `push` / `pull_request`，checkout 后用 `git diff --name-only` 判断是否涉及 `e5-7/A-buildchecker/**`（B 同理），不涉及就让实质步骤全部跳过；被跳过的 job 必须以 **success** 结束（不是 `Expected`/`pending`）。验收方法：开一个只改 `e5-7/reports/**` 的 PR，确认**两个**必需检查都变绿。
+- 做法：两个 workflow 都监听 `push` / `pull_request`，checkout 后用 `git diff --name-only` 判断是否涉及 `e5/A-buildchecker/**`（B 同理），不涉及就让实质步骤全部跳过；被跳过的 job 必须以 **success** 结束（不是 `Expected`/`pending`）。验收方法：开一个只改 `e6/reports/**` 的 PR，确认**两个**必需检查都变绿。
 - 若门控实现不了，直接让两个 workflow 全量跑并在 README 写明即可，不影响分工。
 
 > 实验包内自带的 `labs/*/.github/workflows/e7-quality-gate.yml` 放到子目录后**不会被执行**（GitHub 只读仓库根的 `.github/workflows/`），保留仅作参考，不要误以为它在生效。
@@ -216,7 +222,7 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 
 ## 5. A 组任务明细
 
-> 执行目录：`e5-7/A-buildchecker`（A 实验包在本仓库中的位置）。下文 `<A1>` 等替换为**自己的角色代号**，`<学号>` 替换为本人学号。
+> 执行目录：`e5/A-buildchecker`（A 实验包在本仓库中的位置）。下文 `<A1>` 等替换为**自己的角色代号**，`<学号>` 替换为本人学号。
 
 ### A1｜E5-A：复现原始证据与结论
 
@@ -228,7 +234,7 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 | A1-4 | 读输出：`cat .../program-output.txt`；`grep -n '^main.o:' .../make-db.txt`；`grep -n 'config.h' .../trace/t.*` | 输出 `1`；声明 `main.o: main.c unused.h`；trace 有成功 `openat(... "config.h" ...)` |
 | A1-5 | 写结论：目标 `main.o`、实际依赖（`main.c`、`config.h`）、声明依赖（`main.c`、`unused.h`）、MD=`config.h`、RD=`unused.h`，并填**本次真实 trace 文件与行号**、进程归属（`cc1`←`cc`←`make`，同任务的 `as` 写出 `main.o`） | 复现说明（写入本人报告） |
 | A1-6 | 写"与论文步骤的对照"：论文用 ptrace 跟踪器 / 本实验用 `strace -ff -s 4096 -e trace=%file,%process`；论文读构建声明 / 本实验用 `make -p` 数据库；输入是已知答案的小样例 | 对照表（三行即可） |
-| A1-7 | 归档：把 `work/e5-A1-01/evidence/` 复制到 `e5-7/evidence/A1-<学号>/E5/`；trace 只留关键文件 + 一份 `trace-index.md` 说明 | 归档目录 |
+| A1-7 | 归档：把 `work/e5-A1-01/evidence/` 复制到 `e5/evidence/A1-<学号>/`；trace 只留关键文件 + 一份 `trace-index.md` 说明 | 归档目录 |
 
 **A1 必须说得出**：为什么"clean build 成功"不能证明声明正确（`config.h` 存在，编译器按 `#include` 自行找到）；RD 为什么会导致多余重编译。
 
@@ -243,7 +249,7 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 | A2-5 | 读码：在 `services/buildchecker/buildchecker/fullcheck.py` 找出"进程归属"和"路径过滤"两段实现，各写 3–5 行说明 | 说明写入本人报告 |
 | A2-6 | 补充一项测试：新建 `services/buildchecker/tests/test_extra_<学号>.py`（**独立文件，不要改别人的测试**），输入与预期都写清 | 测试文件 + 修改说明 |
 | A2-7 | 重建镜像 + 自跑 gate：`build --out work/build-A2-02 ...`（测试数应变为 16+）→ `python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-buildchecker:<学号>` | gate 退出码 0，证明新测试已进入门禁 |
-| A2-8 | 归档 `work/e6-before-A2/`、`work/e6-after-A2/`、校验输出、`work/e7-A2-selfcheck/gate/` | `e5-7/evidence/A2-<学号>/E6/` |
+| A2-8 | 归档 `work/e6-before-A2/`、`work/e6-after-A2/`、校验输出、`work/e7-A2-selfcheck/gate/` | `e6/evidence/A2-<学号>/` |
 
 **注意**：A2-7 的 gate 是**自己的**自证运行，与 A3 的正式 gate 各跑各的，结果不共享、不比对，也不要求任何一方等待另一方。
 
@@ -255,11 +261,11 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 | A3-2 | 独立判定测试：`python3 -m unittest discover -s tests/e7 -v` | **6 tests OK** |
 | A3-3 | 完整门禁：`python3 scripts/lab_cloud.py gate --out work/e7-A3-01 --image course1020-buildchecker:<学号>` | 退出码 **0**；`gate/gate-result.json` 八项 `passed=true`；`results.csv` 八行 |
 | A3-4 | 逐项核对八项：服务单测、原始三次（错误集合每次相同、各有 `trace_id`）、修复后（`findings=[]`、仅 Makefile 变化）、构建失败（`FAILED`/1）、多输出（`UNSUPPORTED`）、超时（`TIMED_OUT`） | 场景核对表（写入报告） |
-| A3-5 | 新建根级 `e7-a-quality-gate.yml`（按 §4.1 三处改造 + 路径门控），推送到 `DevOps-G16`；`gh run list` → `gh run watch` | `CI_EXIT_CODE=0`；A run 服务测试通过；artifact 含 `e5-7/A-buildchecker/work/ci/commit.txt` |
-| A3-6 | main 保护：先 `gh api .../check-runs` 核对 App ID，再由 **A3 起草并执行一次** `PUT`，提交 `e5-7/ci/main-protection.json`（同时含两个必需检查）。B3 只读核对，不重复 `PUT` | 两个必需检查、`strict=true`、`enforce_admins=true`、审批 0 |
-| A3-7 | 失败 PR：分支 `e7-gate-reject-demo-a`（**必须带 `-a`**），只复制 `e5-7/A-buildchecker/ci/rejection-demo/A/test_ci_reject_demo.py` | A run `1 failed / 15 passed`；B 检查为 **success（被门控跳过）**；PR `BLOCKED`；普通合并退出码 **1** |
+| A3-5 | 新建根级 `e7-a-quality-gate.yml`（按 §4.1 三处改造 + 路径门控），推送到 `DevOps-G16`；`gh run list` → `gh run watch` | `CI_EXIT_CODE=0`；A run 服务测试通过；artifact 含 `e5/A-buildchecker/work/ci/commit.txt` |
+| A3-6 | main 保护：先 `gh api .../check-runs` 核对 App ID，再由 **A3 起草并执行一次** `PUT`，提交 `e7/ci/main-protection.json`（同时含两个必需检查）。B3 只读核对，不重复 `PUT` | 两个必需检查、`strict=true`、`enforce_admins=true`、审批 0 |
+| A3-7 | 失败 PR：分支 `e7-gate-reject-demo-a`（**必须带 `-a`**），只复制 `e5/A-buildchecker/ci/rejection-demo/A/test_ci_reject_demo.py` | A run `1 failed / 15 passed`；B 检查为 **success（被门控跳过）**；PR `BLOCKED`；普通合并退出码 **1** |
 | A3-8 | 恢复：换成同目录 `fixed/` 的同名测试后 push | A run `16 passed`；PR `CLEAN` → `MERGED`，保存 `mergeCommit`、`mergedAt` |
-| A3-9 | 归档：run URL、artifact、`protection.json`、`PR.json`、`merge-rejection.log`、`PR-merged.json` | `e5-7/ci/A/` |
+| A3-9 | 归档：run URL、artifact、`protection.json`、`PR.json`、`merge-rejection.log`、`PR-merged.json` | `e7/ci/A/` |
 
 > A3-7/A3-8 只改 `tests/` 里的一个演示测试文件，**不要**用"改算法"冒充"改预期"；报告中必须写明"本次恢复修正的是测试预期，不是实现"。
 
@@ -267,7 +273,7 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 
 ## 6. B 组任务明细
 
-> 执行目录：`e5-7/B-draft`（B 实验包在本仓库中的位置）。
+> 执行目录：`e5/B-draft`（B 实验包在本仓库中的位置）。
 
 ### B1｜E5-B：真实失败、提示与模型候选
 
@@ -280,7 +286,7 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 | B1-5 | 候选：把两类提示**全文**发给对话模型，`work/candidate/model-response.txt` 存原始回复，`work/candidate/Dockerfile` 去掉代码围栏 | 候选 + 原始回复 |
 | B1-6 | 来源记录：填 `templates/候选来源记录.json` 副本（模型/版本/日期/提示类型/选择理由/候选哈希） | 来源记录 |
 | B1-7 | 手工复建与运行：按 E5/27 页命令 `docker build --progress=plain -f work/candidate/Dockerfile -t course1020-draft-e5:<学号> work/e5-B1-01/project`，再 `docker run --rm --network none <image_id>` | `BUILD_EXIT_CODE=0`、`VERIFY_EXIT_CODE=0`、输出 `hello E3` |
-| B1-8 | 归档到 `e5-7/evidence/B1-<学号>/E5/`（含候选与来源记录） | 归档目录 |
+| B1-8 | 归档到 `e5/evidence/B1-<学号>/`（含候选与来源记录） | 归档目录 |
 
 **降级路径（不阻塞任何人）**：如果暂时拿不到模型回复，可先用包内候选 `fixtures/ci-candidates/DeepSeek-E5.Dockerfile` 完成 B1-7，并在来源记录中注明 `REPLAY_SUPPLIED`；后续补自己的候选，不影响 B2/B3 开工。
 
@@ -295,7 +301,7 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 | B2-5 | 读码：在 `services/draft/draft/autobuild.py` 找出 `prepare_candidate()` 与镜像运行限制（`--network none`、资源限制）各写 3–5 行说明 | 说明写入报告 |
 | B2-6 | 补充一项测试：新建 `services/draft/tests/test_extra_<学号>.py`（独立文件），输入与预期写清 | 测试文件 + 修改说明 |
 | B2-7 | 重建镜像 + 自跑 gate：`build --out work/build-B2-02 ...`（24→25+）→ `gate --replay --out work/e7-B2-selfcheck --build-timeout 600` | gate 退出码 0 |
-| B2-8 | 归档 `e6-B2-replay/`、校验输出、`e7-B2-selfcheck/gate/` | `e5-7/evidence/B2-<学号>/E6/` |
+| B2-8 | 归档 `e6-B2-replay/`、校验输出、`e7-B2-selfcheck/gate/` | `e6/evidence/B2-<学号>/` |
 
 > 也可用自己 E5 的候选：`--candidate work/candidate/Dockerfile`。两条路线只影响"候选来源"，不影响判据；**不要因为等 B1 的候选而不开工**。
 
@@ -307,11 +313,11 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 | B3-2 | 完整门禁：`python3 scripts/lab_cloud.py gate --replay --out work/e7-B3-01 --image course1020-draft:<学号> --build-timeout 600` | 退出码 **0**；`gate-result.json` 六项 `passed=true`；`results.csv` 六行 |
 | B3-3 | 五场景逐项核对：正常候选、输出不符、无效候选（构建前拒绝、`attempts` 为空）、候选构建失败（第二轮 `build=1` 且停止运行验证）、运行超时（`delay=10` / 预算 1s / `TIMED_OUT`） | 场景核对表 |
 | B3-4 | 清理证据：`runtime-timeout/` 下的 `verify-container-id.txt` 对应容器**已不存在**；`fault-injection.json` 显示两个 Dockerfile 同步改 CMD，项目源文件未变 | 清理核对结论 |
-| B3-5 | 新建根级 `e7-b-quality-gate.yml`（按 §4.1 三处改造 + 路径门控），推送到 `DevOps-G16` | run `24 passed`、`CI_EXIT_CODE=0`；artifact 在 `e5-7/B-draft/work/ci/` |
-| B3-6 | main 保护：与 A3 共用**同一份** `e5-7/ci/main-protection.json`；不重复 `PUT`，只核对 `gh api .../protection` 与预期一致 | 两个必需检查齐全、`strict`、`enforce_admins`、审批 0 |
-| B3-7 | 失败 PR：分支 `e7-gate-reject-demo-b`（**必须带 `-b`**），只复制 `e5-7/B-draft/ci/rejection-demo/B/test_ci_reject_demo.py` | B run `1 failed / 24 passed`；A 检查为 **success（被门控跳过）**；PR `BLOCKED`；合并退出码 **1** |
+| B3-5 | 新建根级 `e7-b-quality-gate.yml`（按 §4.1 三处改造 + 路径门控），推送到 `DevOps-G16` | run `24 passed`、`CI_EXIT_CODE=0`；artifact 在 `e5/B-draft/work/ci/` |
+| B3-6 | main 保护：与 A3 共用**同一份** `e7/ci/main-protection.json`；不重复 `PUT`，只核对 `gh api .../protection` 与预期一致 | 两个必需检查齐全、`strict`、`enforce_admins`、审批 0 |
+| B3-7 | 失败 PR：分支 `e7-gate-reject-demo-b`（**必须带 `-b`**），只复制 `e5/B-draft/ci/rejection-demo/B/test_ci_reject_demo.py` | B run `1 failed / 24 passed`；A 检查为 **success（被门控跳过）**；PR `BLOCKED`；合并退出码 **1** |
 | B3-8 | 恢复：换同目录 `fixed/` 同名测试 | run `25 passed`；`MERGED`，保存 `mergeCommit`、`mergedAt` |
-| B3-9 | 归档 `e5-7/ci/B/` | CI 证据目录 |
+| B3-9 | 归档 `e7/ci/B/` | CI 证据目录 |
 
 ---
 
@@ -346,27 +352,36 @@ DevOps-G16/                        # 唯一仓库：A16 + B16
 
 ## 8. 证据目录与命名规范
 
-共用仓库（`DevOps-G16`）里 `e5-7/` 同时放**实验包代码**与**归档副本**；`work/` 不提交（实验包自带 `.gitignore` 已忽略 `work/`、`.env`、`*.pem`、`*.key`）：
+顶层按阶段分文件夹（与 `e3/`、`e4/` 一致）：**实验包代码只在 `e5/` 放一份**，`e6/`、`e7/` 只放本阶段证据与报告。`work/` 不提交（实验包自带 `.gitignore` 已忽略 `work/`、`.env`、`*.pem`、`*.key`）。
 
 ```text
-e5-7/
-  README.md                       # 总表 + 复现命令；固定小节 A1→A2→A3→B1→B2→B3，各人只追加自己那节
-  A-buildchecker/                 # A 实验包（services/ scripts/ fixtures/ tests/ ci/ Makefile）
-  B-draft/                        # B 实验包
-  evidence/
-    A1-<学号>/E5/                 # index.md + trace 关键文件 + make-db.txt + program-output.txt
-    A2-<学号>/E6/                 # before/after findings + graphs + verify 输出 + 新测试说明
-    A3-<学号>/E7/                 # gate-result.json + results.csv + 故障场景摘要
-    B1-<学号>/E5/                 # iter-01 关键日志 + 两类提示 + 候选 + 来源记录
-    B2-<学号>/E6/                 # result.json + 两轮构建摘要 + verify.log + image_id
-    B3-<学号>/E7/                 # gate-result.json + results.csv + 五场景摘要 + 清理结论
-  reports/
-    A1-<学号>.md … B3-<学号>.md    # 每人一份，按 templates/实验报告.md
+e5/                               # 阶段 1：代码 + E5 证据
+  README.md
+  A-buildchecker/                 # A 实验包（唯一一份）
+  B-draft/                        # B 实验包（唯一一份）
+  evidence/A1-<学号>/             # index.md + trace 关键文件 + make-db.txt + program-output.txt
+  evidence/B1-<学号>/             # iter-01 关键日志 + 两类提示 + 候选 + 来源记录
+  reports/A1-<学号>.md
+  reports/B1-<学号>.md
+e6/                               # 阶段 2：只放 E6 证据与报告
+  README.md
+  evidence/A2-<学号>/             # index.md + before/after + verify 输出 + 自证 gate + 单测日志
+  evidence/B2-<学号>/             # result.json + 两轮构建摘要 + verify.log + image_id
+  reports/A2-<学号>.md
+  reports/B2-<学号>.md
+e7/                               # 阶段 3：只放 E7 证据、报告与 CI 记录
+  README.md
+  evidence/A3-<学号>/             # gate-result.json + results.csv + 故障场景摘要
+  evidence/B3-<学号>/             # gate-result.json + results.csv + 五场景摘要 + 清理结论
+  reports/A3-<学号>.md
+  reports/B3-<学号>.md
   ci/
     main-protection.json          # 唯一一份：两个必需检查都在里面
-    A/                            # runs.json/链接、artifact 目录、protection 回读、merge-rejection.log、PR-merged.json
+    A/                            # runs、artifact、protection 回读、merge-rejection.log、PR-merged.json
     B/
 ```
+
+**为什么代码只在 `e5/`**：E5/E6/E7 用的是同一份实验包。若每个阶段各放副本，A2 在 E6 新增的测试就不会出现在 E7 的 gate 与 CI 里（三份副本必然分叉）。E6/E7 执行前先 `cd ../e5/<track>`。
 
 **每个证据目录必须有 `index.md`**（异步交接的核心：后来者不问人也能读懂）
 
@@ -395,7 +410,7 @@ e5-7/
 | --- | --- |
 | 开工同步 | 每次开工先 `git pull --ff-only`；长期分支 `rebase` 到 `origin/main`；不要基于几天前的 `main` 开工 |
 | 不重复入库 | 实验包已存在于 `main` 时**直接复用**，不要再次复制同一批文件（会产生重复文件或冲突） |
-| 交接介质 | 只用仓库交接：结论、路径、run ID 都写进 `index.md` / README / `e5-7/ci/`；**不要**依赖聊天发文件或口头解释 |
+| 交接介质 | 只用仓库交接：结论、路径、run ID 都写进 `index.md` / README / `e7/ci/`；**不要**依赖聊天发文件或口头解释 |
 | 环境复核 | 不假设上个班次的状态：`docker info`、基础镜像、`gh auth status` 每次重查 |
 | Git 身份 | **只用 `--local`**；登录账号是共用的，`--global` 会把提交作者变成别人 |
 | 镜像 | 一律 `--image course1020-<service>:<学号>`；默认 `:local` 会互相覆盖 |
@@ -407,7 +422,7 @@ e5-7/
 | 分支保护 | main 保护只有**一份**配置；A3/B3 约定一人执行 `PUT`，另一人只读核对，避免互相覆盖 |
 | 分支重名 | CI 演示分支必须带 `-a`/`-b`；同仓两条轨道不允许共用分支名 |
 | 断线 | SSH 断开后重新登录看日志与进程，**不能只凭断线判断成功或失败** |
-| 报告口径 | CI 记录、测试数量以**文件**形式提交（`e5-7/ci/<track>/`、`results.csv`），后来者自读；不需要等人回复 |
+| 报告口径 | CI 记录、测试数量以**文件**形式提交（`e7/ci/<track>/`、`results.csv`），后来者自读；不需要等人回复 |
 
 ---
 
@@ -432,7 +447,7 @@ e5-7/
 | A/B 共用一个仓库（已确认） | `Lilyly9/DevOps-G16` 是唯一仓库（A16+B16），当前**没有** `.github/workflows/`，CI 需新建 | 按 §4.1 落地：两个根级 workflow、`working-directory` 指向各实验包、保护配置只应用一份 |
 | 不同时工作 → 状态过期 | 两次班次之间 Docker 被重启、镜像被清理、`gh` token 被覆盖、`main` 已前进 | 每次开工走 §4 的同步与环境复核；不要假设旧会话状态 |
 | 时间跨度长 → 构建漂移 | 基础镜像按 digest 固定，但 `apt-get` 包与 `pip` 版本不固定，隔几天构建结果可能不同 | 报告里记录实际版本与日期；对比结论时说明"版本不同"而不是"功能失败" |
-| 路径门控做不对 | 被跳过的 job 若停在 `Expected`，PR 无法合并 | 验收用例：只改 `e5-7/reports/**` 的 PR，两个必需检查都应变绿；做不到就退回"全量跑"（`main` 恒绿时不会卡人） |
+| 路径门控做不对 | 被跳过的 job 若停在 `Expected`，PR 无法合并 | 验收用例：只改 `e6/reports/**` 的 PR，两个必需检查都应变绿；做不到就退回"全量跑"（`main` 恒绿时不会卡人） |
 | 分支长期不更新 | `strict=true` 要求分支与 `main` 同步，过时分支合不了 | 开工先 `rebase origin/main`；不要攒很久再提 PR |
 | 两个 workflow 文件重名 | 实验包内都叫 `e7-quality-gate.yml`，根目录不能并存 | 根级改为 `e7-a-quality-gate.yml` / `e7-b-quality-gate.yml`，**job name** 保持 `e7-a-quality-gate` / `e7-b-quality-gate` 以匹配课程保护配置 |
 | 私有仓库分支保护 403 | 免费私有仓库无法配置保护 | 经本人同意后改为公开仓库（课程已注明） |
@@ -449,12 +464,12 @@ e5-7/
 
 | 角色 | 姓名 | 学号 | 分支 | 服务镜像 tag | 关键证据目录 | E7/CI 结论 | 本人补充说明 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| A1 | 待补 | | `e5-7/A1-<学号>` | `course1020-buildchecker:<学号>` | `e5-7/evidence/A1-<学号>/E5/` | — | |
-| A2 | 待补 | | `e5-7/A2-<学号>` | 同上 | `e5-7/evidence/A2-<学号>/E6/` | gate（自证）退出码： | 新增测试文件： |
-| A3 | 待补 | | `e5-7/A3-<学号>` | 同上 | `e5-7/evidence/A3-<学号>/E7/`、`e5-7/ci/A/` | 8 项全 passed；失败 PR：；恢复 run： | |
-| B1 | 待补 | | `e5-7/B1-<学号>` | `course1020-draft:<学号>` | `e5-7/evidence/B1-<学号>/E5/` | — | 候选来源：自己 / `REPLAY_SUPPLIED` |
-| B2 | 待补 | | `e5-7/B2-<学号>` | 同上 | `e5-7/evidence/B2-<学号>/E6/` | gate（自证）退出码： | 新增测试文件： |
-| B3 | 待补 | | `e5-7/B3-<学号>` | 同上 | `e5-7/evidence/B3-<学号>/E7/`、`e5-7/ci/B/` | 6 项全 passed；失败 PR：；恢复 run： | |
+| A1 | 待补 | | `e5-7/A1-<学号>` | `course1020-buildchecker:<学号>` | `e5/evidence/A1-<学号>/` | — | |
+| A2 | 待补 | | `e5-7/A2-<学号>` | 同上 | `e6/evidence/A2-<学号>/` | gate（自证）退出码： | 新增测试文件： |
+| A3 | 待补 | | `e5-7/A3-<学号>` | 同上 | `e7/evidence/A3-<学号>/`、`e7/ci/A/` | 8 项全 passed；失败 PR：；恢复 run： | |
+| B1 | 待补 | | `e5-7/B1-<学号>` | `course1020-draft:<学号>` | `e5/evidence/B1-<学号>/` | — | 候选来源：自己 / `REPLAY_SUPPLIED` |
+| B2 | 待补 | | `e5-7/B2-<学号>` | 同上 | `e6/evidence/B2-<学号>/` | gate（自证）退出码： | 新增测试文件： |
+| B3 | 待补 | | `e5-7/B3-<学号>` | 同上 | `e7/evidence/B3-<学号>/`、`e7/ci/B/` | 6 项全 passed；失败 PR：；恢复 run： | |
 
 **E5–E7 结束时每人应能一句话说清**：我负责的阶段、我的证据目录、我的关键判据值、以及"我没有等任何人"的依据（我用的是课程包 + 自己的学号）。
 
