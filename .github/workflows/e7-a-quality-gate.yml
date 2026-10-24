@@ -1,0 +1,84 @@
+name: E7 A quality gate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e7-a-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e7-a-quality-gate:
+    name: e7-a-quality-gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: e5/A-buildchecker
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Detect A changes without skipping the required job
+        id: changes
+        working-directory: .
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          relevant=true
+          if [[ "$EVENT" == pull_request ]]; then
+            git diff --name-only "$BASE...$HEAD" > /tmp/e7-a-paths
+          elif [[ "$EVENT" == push && -n "$BEFORE" && ! "$BEFORE" =~ ^0+$ ]] && git cat-file -e "$BEFORE^{commit}"; then
+            git diff --name-only "$BEFORE" "$GITHUB_SHA" > /tmp/e7-a-paths
+          else
+            echo 'relevant=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! grep -Eq '^(e5/A-buildchecker/|\.github/workflows/e7-a-quality-gate\.yml$)' /tmp/e7-a-paths; then
+            relevant=false
+          fi
+          echo "relevant=$relevant" >> "$GITHUB_OUTPUT"
+      - name: Record source and event
+        if: steps.changes.outputs.relevant == 'true'
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          mkdir -p work/ci
+          git rev-parse HEAD > work/ci/commit.txt
+          printf '%s\n' "$EVENT" > work/ci/event.txt
+          printf '%s\n' "$PR_HEAD" > work/ci/pr-head.txt
+      - name: Independent E7 oracle tests
+        if: steps.changes.outputs.relevant == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests/e7 -v 2>&1 | tee work/ci/oracle-tests.log
+      - name: Build image and run service tests
+        if: steps.changes.outputs.relevant == 'true'
+        run: python3 scripts/lab_cloud.py build --out work/ci/build --image e7-buildchecker:ci --build-timeout 1200
+      - name: Eight-case gate
+        if: steps.changes.outputs.relevant == 'true'
+        run: python3 scripts/lab_cloud.py gate --out work/ci/run --image e7-buildchecker:ci
+      - name: Unrelated paths succeed
+        if: steps.changes.outputs.relevant != 'true'
+        run: echo 'No A implementation or workflow changes; required job succeeds.'
+      - name: Upload logs even on failure
+        if: always() && steps.changes.outputs.relevant == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: e7-a-${{ github.run_id }}-${{ github.run_attempt }}
+          path: e5/A-buildchecker/work/ci/
+          if-no-files-found: error
+          retention-days: 30
