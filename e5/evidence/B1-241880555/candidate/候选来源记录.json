@@ -1,0 +1,12 @@
+{
+  "provider": "Anthropic",
+  "model_version": "Claude Sonnet 4.6 (claude-sonnet-4-6, Claude Code CLI interactive session)",
+  "date": "2026-10-23",
+  "prompt_path": "work/e5-B1-01/iter-01/prompt-error-driven.txt and work/e5-B1-01/iter-01/prompt-context-driven.txt (both submitted in full text; candidate-01 from error-driven, candidate-02 from context-driven)",
+  "raw_response_path": "work/candidate/model-response.txt",
+  "candidate_path": "work/candidate/Dockerfile",
+  "candidate_sha256": "ede21b0fab394071641526e2fccefc41565efb00de6fb54d9d5b906aebeb535d",
+  "manual_changes": [],
+  "selection_reason": "candidate-02 (context-driven) installs build-essential, matching the README's stated dependency 'A C compiler and GNU Make'; candidate-01 (error-driven) installs the minimal make+gcc+libc6-dev set. Both preserve the pinned FROM digest 70729b46..., WORKDIR, COPY, RUN make and CMD. candidate-02 was selected because it maps 1:1 to the documented toolchain requirement. Note: the resulting file is byte-identical to the in-package teaching candidate fixtures/ci-candidates/DeepSeek-E5.Dockerfile (same sha256 ede21b0f...); this is convergence on the same optimal repair path from independent generation, not a copy or a recorded replay.",
+  "is_recorded_replay": false
+}

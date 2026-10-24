@@ -1,0 +1,10 @@
+[
+  "docker",
+  "build",
+  "--progress=plain",
+  "-f",
+  "/root/241880555/DevOps-G16/e5/B-draft/work/e5-B1-01/iter-01/Dockerfile",
+  "-t",
+  "course1020-b-broken:85a0b702",
+  "/root/241880555/DevOps-G16/e5/B-draft/work/e5-B1-01/project"
+]
