@@ -1,12 +1,15 @@
 {
-  "source_commit": "a977ac905e7767ec4ec438fe3b4d84963b3dd824",
+  "local_validation_source_commit": "a977ac905e7767ec4ec438fe3b4d84963b3dd824",
+  "cloud_source_commit": "176d624ec4e215aedeadb1a8057f87bb8d32eb4d",
   "local_checks": "PASS",
   "official_local_demo": "PASS",
-  "cloud_execution": "PENDING",
-  "updated_github_workflow_run": "PENDING",
+  "cloud_execution": "PASS_FUNCTIONAL",
+  "cloud_environment_requirements": "PENDING_MEMORY_3.5_LT_4",
+  "updated_github_workflow_run": "PASS",
+  "github_run_id": 40092663505,
   "branch_protection": "PENDING",
   "policy_rejected_merge": "PENDING",
   "final_merge": "PENDING",
-  "publication": "LOCAL_ONLY_BY_USER_REQUEST",
-  "historical_github_runs": "Old workflow and A3-authored demonstration; retain original scope"
+  "publication": "AUTHORIZED_PERSONAL_BRANCH",
+  "historical_github_runs": "Old failure/recovery used A3-authored demonstration; preserve scope"
 }
