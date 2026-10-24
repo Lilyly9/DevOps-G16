@@ -1,0 +1,7 @@
+{
+  "step": "a2-reference-verify",
+  "expected_exit_code": 0,
+  "actual_exit_code": 0,
+  "passed": true,
+  "scope": "Read-only review of A2 evidence; not an A3 rerun"
+}

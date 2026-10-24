@@ -1,0 +1,37 @@
+[
+  {
+    "case": "A-code-change",
+    "exit_code": 0,
+    "expected_relevant": "true",
+    "actual_output": "relevant=true",
+    "passed": true
+  },
+  {
+    "case": "documentation-only",
+    "exit_code": 0,
+    "expected_relevant": "false",
+    "actual_output": "relevant=false",
+    "passed": true
+  },
+  {
+    "case": "A-pull-request",
+    "exit_code": 0,
+    "expected_relevant": "true",
+    "actual_output": "relevant=true",
+    "passed": true
+  },
+  {
+    "case": "manual-run",
+    "exit_code": 0,
+    "expected_relevant": "true",
+    "actual_output": "relevant=true",
+    "passed": true
+  },
+  {
+    "case": "new-branch",
+    "exit_code": 0,
+    "expected_relevant": "true",
+    "actual_output": "relevant=true",
+    "passed": true
+  }
+]

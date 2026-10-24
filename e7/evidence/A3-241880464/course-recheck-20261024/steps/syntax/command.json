@@ -1,0 +1,10 @@
+[
+  "python3",
+  "-m",
+  "compileall",
+  "-q",
+  "services/buildchecker/buildchecker",
+  "services/buildchecker/tests",
+  "scripts",
+  "tests"
+]

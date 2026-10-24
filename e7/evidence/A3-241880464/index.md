@@ -1,5 +1,7 @@
 # A3 E7-A 证据索引
 
+本目录保留首轮记录。**最新材料补齐后的结果见 [本轮索引](course-recheck-20261024/index.md) 与 [验收记录](验收记录.csv)**；两轮记录对应不同源码提交，不能互相替代。
+
 角色 A3；林涵；241880464。运行日期：2026-10-24（北京时间）。来源：**ACTUAL_RUN**，由本地 CachyOS Linux + Docker 实际执行，不是课程云主机运行，也不是人工答案。源码提交 `6c12a45c6a0ad111f077cb5234c3bd7f5a8d3a73`；所有服务、脚本与测试 Python 源码哈希见 `verification.json`。
 
 ## 命令与重跑
@@ -39,3 +41,7 @@ python3 scripts/lab_cloud.py gate --out work/e7-A3-NN --image course1020-buildch
 本目录是实际运行证据的公开脱敏副本。宿主机名、本人邮箱、宿主机绝对仓库路径和临时 Docker 配置路径已替换为明确占位符；被替换的 command.json 仅供说明，重跑请使用上文命令并代入实际路径。没有改变判据、退出码、findings、trace_id、输入哈希和测试数量。
 
 未脱敏原件保存在本机忽略目录 `e5/A-buildchecker/work/A3-private-delivery-originals/`，不推送。`redaction.json` 记录脱敏范围及原始文件哈希；`SHA256SUMS.json` 对应当前公开副本。CI 原始 artifact 可按 run ID 从 GitHub 下载，原始 artifact 文件哈希清单仍对应下载原件。
+
+## 新增课程材料补齐后的验证
+
+最新本地结果请先阅读 [本轮索引](course-recheck-20261024/index.md) 与 [验收记录](验收记录.csv)。前面的日志和旧 CI 仍对应原始提交，不能用来声称新工作流已经在 GitHub 运行。所有本轮结果仍只保留本地。

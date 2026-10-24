@@ -21,11 +21,18 @@
 管理员可在仓库根运行以下命令（不是本次已执行命令）：
 
 ```sh
-gh api repos/Lilyly9/DevOps-G16/commits/HEAD/check-runs
+sha=$(git rev-parse HEAD)
+gh api "repos/Lilyly9/DevOps-G16/commits/$sha/check-runs"
 gh api --method PUT repos/Lilyly9/DevOps-G16/branches/main/protection --input e7/ci/main-protection.json
 gh api repos/Lilyly9/DevOps-G16/branches/main/protection
 ```
 
-其中 HEAD 应替换为 GitHub 上已产生两个检查的真实提交 SHA。保护应用后，重新安排失败演示：失败时确认非草稿 PR 因必需检查而 BLOCKED、普通合并被拒绝并退出 1；只修正测试预期后两轨道检查成功，再记录最终 MERGED、mergeCommit、mergedAt。不能用本次草稿状态替代这轮验收。
+其中 sha 必须对应 GitHub 上已经产生两个检查的真实提交；本地未推送的提交不能用于核对。保护应用后，重新安排失败演示：失败时确认非草稿 PR 因必需检查而 BLOCKED、普通合并被拒绝并退出 1；只修正测试预期后两轨道检查成功，再记录最终 MERGED、mergeCommit、mergedAt。不能用本次草稿状态替代这轮验收。
 
 路径门控放在工作流内部，不使用 workflow 级 paths 过滤，避免必需检查停在 Pending；依据：[GitHub 官方说明](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks)。
+
+## 新材料补齐后的本地状态（2026-10-24）
+
+当前源码 `a977ac905e7767ec4ec438fe3b4d84963b3dd824` 已补语法、源码/历史和镜像扫描；旧编码解码修复已验证。新版工作流 actionlint 与本地等价执行通过，但按本人要求未推送，故旧三态 run 不代表新版本已在 GitHub 验证。官方演示测试本地错误/恢复结果见 `../../evidence/A3-241880464/course-recheck-20261024/`。原有远程记录及自写样例来源保留。
+
+main-protection.json 现按官方 A 模板补齐 review/force-push/deletion/conversation 设置，并添加同仓 B 必需检查；仍为未应用草案。B App ID 必须实际核对，不能因模板写 15368 就称已验证。接手时先让 A/B 工作流就绪，再由仓库所有者配置保护并做正式拒绝/恢复/合并验收。不得直接对当前草稿 PR 的状态作保护结论。

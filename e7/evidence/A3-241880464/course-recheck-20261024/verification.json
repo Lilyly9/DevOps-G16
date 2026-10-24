@@ -1,0 +1,136 @@
+{
+  "provenance": "ACTUAL_LOCAL_RUN",
+  "time_utc": "2026-10-24T11:48:33.798354+00:00",
+  "source_commit": "a977ac905e7767ec4ec438fe3b4d84963b3dd824",
+  "host_kind": "Local CachyOS Linux; not course cloud host or GitHub runner",
+  "image": "course1020-buildchecker:241880464",
+  "steps": [
+    {
+      "step": "doctor",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "syntax",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "oracle-tests",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "scanner-tests",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "source-history-scan",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "normal-build",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "image-scan",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "normal-gate",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "official-demo-bad",
+      "expected_exit_code": 1,
+      "actual_exit_code": 1,
+      "passed": true
+    },
+    {
+      "step": "official-demo-fixed",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "official-demo-fixed-gate",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true
+    },
+    {
+      "step": "workflow-lint",
+      "actual_exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "tool_version": "1.7.12",
+      "archive_sha256": "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
+    },
+    {
+      "step": "a2-reference-verify",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true,
+      "scope": "Read-only review of A2 evidence; not an A3 rerun"
+    },
+    {
+      "step": "path-gating",
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "passed": true,
+      "cases": 5
+    },
+    {
+      "step": "container-cleanup",
+      "passed": true,
+      "checked_container_ids": 16,
+      "actual_exit_code": 0,
+      "expected_exit_code": 0
+    }
+  ],
+  "passed": true,
+  "normal_service_tests": 18,
+  "independent_oracle_tests": 6,
+  "scanner_regression_tests": 2,
+  "gate_passed_cases": 8,
+  "changed_inputs": [
+    "Makefile"
+  ],
+  "official_demo_bad": "Docker build 0; service tests 1 failed / 18 passed; wrapper exit 1",
+  "official_demo_fixed": "19 passed; wrapper exit 0; gate 8/8",
+  "github_workflow_updated_but_not_pushed": true,
+  "protection_tested": false,
+  "merged": false,
+  "source_files_sha256": {
+    "e5/A-buildchecker/scripts/doctor.py": "f2f545e66581cf4b860122941940a60d14daa9eccc628bdf58ad471ff406af47",
+    "e5/A-buildchecker/scripts/lab_cloud.py": "7b18458810390a9ec267c071e99c117b806eb9d80d2c7f519f310ecc127fd4d1",
+    "e5/A-buildchecker/scripts/run_e7_a_gate.py": "f18b2e60a8bf8f1eba0a957db9ec3a288e73bfbd956a782fe75223b0e340d455",
+    "e5/A-buildchecker/scripts/secret_scan.py": "617438edf965ef189014597b9c661d7a8f7118b1c685184c334b808f14a1e1cc",
+    "e5/A-buildchecker/scripts/verify_e6_evidence.py": "8583f3e077e5b1bfad399bee6d44d82c0ed03c97368a1413d2d34dca9dcaf948",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/__init__.py": "3e7097b3bd96f87c4c6962afa8a4cb3a8c3be1b4df775b57828ebd48a9a9d05c",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/cli.py": "6c3663b1f39bf7ecfccebdc82a6235b317e71a6d1c1ce2aa9a9c8ac3e56114d9",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/fullcheck.py": "21a66422856be2d46a28db3569a9645864a83622d552841873e3c6a82fdea0e9",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/smoke.py": "782d355fbf9013825778dff771d18eac5e84b558b6eee73966608755da288d08",
+    "e5/A-buildchecker/services/buildchecker/tests/test_cli.py": "c9c1912e463f6b5e7496f802cb40f9b0e67ddec1fac4ba5651950088ffa0bffb",
+    "e5/A-buildchecker/services/buildchecker/tests/test_extra_241880464.py": "523019571da4b948eec002cdb8e469f21e77d8a2ad6f1641a69ff56ce70ca360",
+    "e5/A-buildchecker/services/buildchecker/tests/test_extra_241880496.py": "7881418179b8f4a2a622c69855cff6a123167667bd93fe0391ab97c234112396",
+    "e5/A-buildchecker/services/buildchecker/tests/test_fullcheck.py": "c143d2f7ab2608284a3f5a575f593a0f66531f668c8271590d37a799ead46bac",
+    "e5/A-buildchecker/tests/e7/test_e7_a_gate.py": "8a86c9467cebcc178de75c2ba8d76da6059fda54cab8264830141cf64e5bc76d",
+    "e5/A-buildchecker/tests/tooling/test_secret_scan_241880464.py": "89538e342f9aaff048c99156e8d9202affc8988911f3efb699b6f2f9ddcd4d96"
+  },
+  "workflow_sha256": "f8b647f31598dfc78cc13a325fadac2e2a23dcb03a1aa99ea72ac9d211ba8424"
+}
