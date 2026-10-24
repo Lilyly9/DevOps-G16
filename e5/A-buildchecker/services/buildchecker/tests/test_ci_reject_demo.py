@@ -13,4 +13,4 @@ def test_ci_reject_demo():
             encoding="utf-8",
         )
         declared = declaration_graph(database, "/course/project")
-        assert set(declared["main.o"]["dependencies"]) == {"main.c", "unused.h"}
+        assert set(declared["main.o"]["dependencies"]) == {"main.c", "config.h"}
