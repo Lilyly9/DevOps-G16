@@ -1,0 +1,10 @@
+[
+  "docker",
+  "build",
+  "--progress=plain",
+  "-f",
+  "/root/241880485/DevOps-G16-e5-A1-20261024/e5/A-buildchecker/work/network-A1-20261024-01/Dockerfile.A16",
+  "-t",
+  "course1020-buildchecker:241880485",
+  "."
+]

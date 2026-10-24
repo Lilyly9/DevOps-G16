@@ -1,0 +1,55 @@
+{
+  "scope": "A1 manual E5 evidence; selected trace is not a complete E6 analysis input",
+  "complete_trace_directory": "/root/241880485/DevOps-G16-e5-A1-20261024/e5/A-buildchecker/work/e5-A1-20261024-01/evidence/trace",
+  "files": [
+    {
+      "file": "t.14",
+      "role": "make，父进程",
+      "bytes": 6331,
+      "sha256": "7b49b4320ba119036d87816d1c575b86bf9eb59c75b826ed753c60f2b1c2b4e2",
+      "archived": true
+    },
+    {
+      "file": "t.15",
+      "role": "cc 编译驱动，生成 main.o 的 recipe",
+      "bytes": 11290,
+      "sha256": "7772ef769635d48344c7870e4853be2af99167cee7c9b53397a44ad89e2d87c6",
+      "archived": true
+    },
+    {
+      "file": "t.16",
+      "role": "cc1，打开 main.c / config.h",
+      "bytes": 54162,
+      "sha256": "4ea47675f0fcab43a80fc127c454a37579d3dd7bbb7e1d4f2f6c4d44c01404f7",
+      "archived": true
+    },
+    {
+      "file": "t.17",
+      "role": "as，创建 main.o",
+      "bytes": 2374,
+      "sha256": "0bb140317c8a185c9bbdc509224c8903fd2e04465e5f315a145cefa911bdc65d",
+      "archived": true
+    },
+    {
+      "file": "t.18",
+      "role": "cc 链接驱动，生成 app 的另一条 recipe",
+      "bytes": 13229,
+      "sha256": "3b5216cd769dfef6d5931ebd139e3bff0f3948ebecaf846f46e40bffe8e5ec8d",
+      "archived": false
+    },
+    {
+      "file": "t.19",
+      "role": "collect2，链接驱动子进程",
+      "bytes": 11947,
+      "sha256": "50236f27878abea418fecb4c6650d80016e88e64203573232045b26bf4e8d191",
+      "archived": false
+    },
+    {
+      "file": "t.20",
+      "role": "ld，读取 main.o 并生成 app",
+      "bytes": 15595,
+      "sha256": "b9011d22b5da88acf977529b1b64c803eaffef2faa6b5e590c250c5049099e6c",
+      "archived": false
+    }
+  ]
+}
