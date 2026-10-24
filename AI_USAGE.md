@@ -229,3 +229,32 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 ### E4 A3 本人交付收尾（2026-10-05）
 
 本人按 B 组 README 在独立克隆成功重跑修正版，记录完整 SHA、成功路径和终端输出来源；交付及共同待办见 [A3 报告](e4/A3_REVIEW.md)。B1/B2 双人对照尚未提供，不代填或声明全组通过。
+## A2：E5–E7 补充
+
+### 工具与任务
+
+- 成员：万宇；Git 作者：`adscfe <asdfs1243@noreply.gitcode.com>`；学号 241880496。
+- 工具：GitHub Copilot（VS Code）。
+- 任务：本阶段承担 E6（BuildChecker 自动检测与修复复检），按组内私发的任务分工文档 §1 的低耦合约定独立完成，不改动 A1/A3 的职责范围。
+
+### 提示摘要与 AI 建议
+
+- 用户要求 E5–E7 分工尽量避免"一个人做完另一个才能开始"，并确认 A/B 共用一个仓库。
+- AI 核对实验包入口后指出：`lab_cloud.py` 的 `e5`/`e6`/`gate` 各自复制 fixture 并自采证据，E6 不读 A1 的 `work/`；B 轨道可用 `--replay`，B2 也不必等 B1。
+- AI 指出默认镜像名 `course1020-<service>:local` 会被多人互相覆盖，建议统一 `--image course1020-<service>:<学号>`。
+- AI 建议补充测试落成独立文件 `tests/test_extra_<学号>.py`，避免多人改同一测试文件。
+- AI 建议仓库按阶段分目录（`e5/`、`e6/`、`e7/`），代码只保留一份，避免三份副本分叉导致 A2 的新增测试进不了 E7 的 gate 与 CI。
+
+### 人工指示与本次处理
+
+- 人工决定：接受"一人一阶段、代码单副本"的结构（代码放 `e5/`，`e6/`、`e7/` 只放证据与报告）；接受本阶段在本地 WSL2 执行（组内云主机本次无可用凭据）。
+- AI 建议把 WSL 内存从 2GB 提到 8GB 以满足课程最低 4 GiB；改动在用户目录 `.wslconfig`，已备份原文件，不入仓库。
+- AI 新增的两项测试聚焦"声明解析 × 集合差"的衔接（`# Not a target:` 段跳过、order-only 前置被真实读取仍报 MISSING），不重复已覆盖的 trace 边界。
+- AI 未代做 A1 的 E5 与 A3 的 E7/CI，两处保持占位，等待本人完成。
+
+### 验证
+
+- `doctor` 0 problems；`build` 15 passed；`e6` 退出码 1、2 条错误；`e6 --fixed` 退出码 0、`findings=[]`；`verify_e6_evidence.py` `passed=true`、`changed_inputs=["Makefile"]`。
+- 新增 2 项测试后重建镜像 17 passed；自证 `gate` 8/8 `passed=true`、退出码 0。
+- 目录重构后重跑 `verify_e6_evidence.py` 仍为 `passed=true`，确认路径变更未影响证据链。
+- 证据：`e6/evidence/A2-241880496/`；报告：`e6/reports/A2-241880496.md`。
