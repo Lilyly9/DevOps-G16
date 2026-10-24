@@ -1,0 +1,7 @@
+[
+  "python3",
+  "scripts/secret_scan.py",
+  "../..",
+  "--image",
+  "course1020-buildchecker:241880464"
+]

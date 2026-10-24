@@ -1,0 +1,90 @@
+EVIDENCE_DIR=<REPO>/e5/A-buildchecker/work/course-recheck-A3-20261024T114803Z/official-demo/bad/context/work/build
+
+#7 transferring context: 39.00kB done
+#7 DONE 0.1s
+
+#8 [2/8] RUN apt-get update  && apt-get install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#8 CACHED
+
+#9 [3/8] COPY requirements-dev.lock /tmp/requirements-dev.lock
+#9 CACHED
+
+#10 [4/8] RUN pip install --no-cache-dir --require-hashes -r /tmp/requirements-dev.lock  && pip freeze | sed 's/^/pip:/' >> /opt/toolchain.lock
+#10 CACHED
+
+#11 [5/8] RUN useradd --create-home --uid 10001 app && install -d -o app -g app /app
+#11 CACHED
+
+#12 [6/8] WORKDIR /app
+#12 CACHED
+
+#13 [7/8] COPY --chown=app:app services/buildchecker/ /app/
+#13 DONE 0.1s
+
+#14 [8/8] COPY --chown=app:app fixtures/ /app/fixtures/
+#14 DONE 0.2s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.2s done
+#15 exporting manifest sha256:e2a33a805224240d27ba245acd3d3c9846fd0813d6d8f61e7783515a3b436a6e 0.0s done
+#15 exporting config sha256:da483694fd453502fcfbf3e584f02dfdb4b0919f3bcf33a6f4680f725e9514c0 0.0s done
+#15 exporting attestation manifest sha256:137deaa009333abeb6470d21aeeece01529eb2e4e25e2ea8be3b241511db7c64 0.0s done
+#15 exporting manifest list sha256:711d69aab0408c557ca77bf2f681c6e9a63aadb2f577c46c2f474360830df348
+#15 exporting manifest list sha256:711d69aab0408c557ca77bf2f681c6e9a63aadb2f577c46c2f474360830df348 0.0s done
+#15 naming to docker.io/library/course1020-buildchecker:241880464-demo-bad done
+#15 unpacking to docker.io/library/course1020-buildchecker:241880464-demo-bad 0.1s done
+#15 DONE 0.5s
+        "Size": 653800317,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:f4f8b983b714f130e2cff99176baa26352db6a55d3622e10ada40f2b4720a4eb",
+                "sha256:7ef9ddba6965cfcb2dcd5bf24e61737a0031c2d9be2b3377339111ab1ad3f0f2",
+                "sha256:ef9f8c7c1d6b6b918d5e93cba9a7de4c837e3047ca733296bd396d9a413ae64f",
+                "sha256:fde42b5dd2510411f5cd411982dd5fa72f546553ccba3e5260f33a3da21bbf8f",
+                "sha256:eaaea979a464af6bdad8ca722f534dbc67b776ab0dadd87c487d70568d28a87b",
+                "sha256:462c2ac5b743379d2d863d0d44f1b3117df8cfe4debcc6422a29e0933535f702",
+                "sha256:97d85cdecad4b540fc1410ca13937b16a4624bfa797345bdc0de55ca84bea2d9",
+                "sha256:f4e29a31539a137d263f72b487028bab6ee81e56ed48a593c267c667a848cea2",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:50ae5cbf04ac976c46472edb04d80ece5998ac0037c338526d4c42f70da04388",
+                "sha256:589cc8c716d93ac1c525621613820ffa7da782b22d9a8732615cdf48827393d0"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-24T11:48:21.517125768Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:711d69aab0408c557ca77bf2f681c6e9a63aadb2f577c46c2f474360830df348",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "5toqmt9y3vb1naxhvge3bkxg8",
+                    "CreatedAt": "2026-10-24T19:48:21.626970742+08:00"
+                }
+            ]
+        }
+    }
+]
+
+F..................                                                      [100%]
+=================================== FAILURES ===================================
+__________________ test_intentionally_wrong_version_exit_code __________________
+
+    def test_intentionally_wrong_version_exit_code():
+>       assert main(["version"]) == 1, "Intentional teaching fault: version actually returns zero"
+E       AssertionError: Intentional teaching fault: version actually returns zero
+E       assert 0 == 1
+E        +  where 0 = main(['version'])
+
+tests/test_ci_reject_demo.py:9: AssertionError
+----------------------------- Captured stdout call -----------------------------
+buildchecker 0.2.0-teaching
+=========================== short test summary info ============================
+FAILED tests/test_ci_reject_demo.py::test_intentionally_wrong_version_exit_code
+1 failed, 18 passed in 0.05s
+

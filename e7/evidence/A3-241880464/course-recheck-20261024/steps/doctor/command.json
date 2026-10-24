@@ -1,0 +1,6 @@
+[
+  "python3",
+  "scripts/doctor.py",
+  "--out",
+  "<REPO>/e5/A-buildchecker/work/course-recheck-A3-20261024T114803Z/environment.json"
+]

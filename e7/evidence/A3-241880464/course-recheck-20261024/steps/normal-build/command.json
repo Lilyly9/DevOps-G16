@@ -1,0 +1,11 @@
+[
+  "python3",
+  "scripts/lab_cloud.py",
+  "build",
+  "--out",
+  "work/course-recheck-A3-20261024T114803Z/normal-build",
+  "--image",
+  "course1020-buildchecker:241880464",
+  "--build-timeout",
+  "1200"
+]

@@ -1,0 +1,60 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.69kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 1.8s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#3 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 0.0s done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#4 DONE 1.7s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 106B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 55.99kB done
+#6 DONE 0.0s
+
+#7 [1/8] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 resolve docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.1s done
+#7 DONE 0.1s
+
+#8 [4/8] RUN pip install --no-cache-dir --require-hashes -r /tmp/requirements-dev.lock  && pip freeze | sed 's/^/pip:/' >> /opt/toolchain.lock
+#8 CACHED
+
+#9 [5/8] RUN useradd --create-home --uid 10001 app && install -d -o app -g app /app
+#9 CACHED
+
+#10 [2/8] RUN apt-get update  && apt-get install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#10 CACHED
+
+#11 [3/8] COPY requirements-dev.lock /tmp/requirements-dev.lock
+#11 CACHED
+
+#12 [6/8] WORKDIR /app
+#12 CACHED
+
+#13 [7/8] COPY --chown=app:app services/buildchecker/ /app/
+#13 DONE 0.1s
+
+#14 [8/8] COPY --chown=app:app fixtures/ /app/fixtures/
+#14 DONE 0.2s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.3s done
+#15 exporting manifest sha256:99abd47b6deec6c753ad9fb4b61224b3ea33ceb612f95baad6dca6dea36ee8a6 0.0s done
+#15 exporting config sha256:a1b89dd46fffae73ae93019c70cf0ecce1fa4198cda7661b54b44d5a1ff91f04 0.0s done
+#15 exporting attestation manifest sha256:75853eac2207d296ee4e13eb2cbbb47a7940614e3b62cd08367f7648d103267f 0.0s done
+#15 exporting manifest list sha256:091b9cf61656e12518d91a91741128d27ed6d9c696378f7da0c0ee07b3f57ab4
+#15 exporting manifest list sha256:091b9cf61656e12518d91a91741128d27ed6d9c696378f7da0c0ee07b3f57ab4 0.0s done
+#15 naming to docker.io/library/course1020-buildchecker:241880464 done
+#15 unpacking to docker.io/library/course1020-buildchecker:241880464 0.1s done
+#15 DONE 0.6s

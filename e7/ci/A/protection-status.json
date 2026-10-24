@@ -1,0 +1,13 @@
+{
+  "protected": false,
+  "configuration_applied": false,
+  "repository": "Lilyly9/DevOps-G16",
+  "account": "WhiteNights18",
+  "admin_permission": false,
+  "a_check_app_id_verified": 15368,
+  "b_workflow_present_when_checked": false,
+  "merge_attempted": false,
+  "merge_rejection_exit_code": null,
+  "merged": false,
+  "reason": "No admin permission; B3 workflow absent. Protection deferred after user asked whether it can be omitted. Draft status is not branch-protection evidence."
+}
