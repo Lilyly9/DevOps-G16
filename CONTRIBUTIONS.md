@@ -112,3 +112,7 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
   - `6ab0c1f` `refactor(e5-7): split into per-stage e5/e6/e7 folders with shared code in e5`
   - `1705856` `docs(e5-7): fix remaining e5-7 paths after per-stage split`
 - 未完成 / 未代做：A1 的 E5、A3 的 E7 与 CI 仍为占位；正式 gate、CI 运行与合并记录不由本人填写。
+
+## E5–E7 · A3（241880464）
+
+负责 A 轨道 E7 正式 gate、补充循环 phony 测试、根级 A CI 工作流、失败/恢复演示模板及证据报告。代码提交 `6c12a45c6a0ad111f077cb5234c3bd7f5a8d3a73`，作者 241880464（沿用本人邮箱）。演示分支不改算法。保护配置只起草，未应用；最终合并未完成。证据入口：`e7/reports/A3-241880464.md`。
