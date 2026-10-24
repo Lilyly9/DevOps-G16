@@ -1,0 +1,10 @@
+[
+  "docker",
+  "run",
+  "--rm",
+  "--network",
+  "none",
+  "course1020-buildchecker:241880485",
+  "cat",
+  "/opt/toolchain.lock"
+]
