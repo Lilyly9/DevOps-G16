@@ -1,13 +1,16 @@
 {
-  "protected": false,
-  "configuration_applied": false,
-  "repository": "Lilyly9/DevOps-G16",
-  "account": "WhiteNights18",
-  "admin_permission": false,
-  "a_check_app_id_verified": 15368,
+  "checked_date_beijing": "2026-10-25",
+  "protected": true,
+  "configuration_applied_by_current_agent": false,
+  "exact_configuration_readable": false,
+  "http_status_on_read": 404,
+  "account_admin": false,
+  "a_failure_policy_rejection_verified": true,
+  "merge_rejection_exit_code": 1,
+  "non_draft_demo_pr": 4,
+  "demo_pr_merged": true,
+  "admin_bypass_used": false,
   "b_workflow_present_when_checked": false,
-  "merge_attempted": false,
-  "merge_rejection_exit_code": null,
-  "merged": false,
-  "reason": "No admin permission; B3 workflow absent. Protection deferred after user asked whether it can be omitted. Draft status is not branch-protection evidence."
+  "full_shared_policy_acceptance": "PENDING",
+  "evidence": "official-protected-20261025/"
 }

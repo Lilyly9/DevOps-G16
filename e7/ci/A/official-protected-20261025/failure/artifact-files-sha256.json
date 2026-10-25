@@ -1,0 +1,22 @@
+{
+  "build/build/command.json": "5b19b47ee3f5551c1b329109e5b294232b726927a12e333b8bd5157d3405a856",
+  "build/build/exit-code.json": "124fd50cb6d223cdd18fedc166d00af7254199b6e6dedf9be82f71db87af6d01",
+  "build/build/stderr.log": "e993aa9876e0d25791eb971e9485396c8ec177ff2ab6cef488b6a37d28aebfad",
+  "build/build/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build/image/command.json": "4f63522ccd33b5e081c85bf87e37330ae5ebd06a764ab7147e992c75b3b3948e",
+  "build/image/exit-code.json": "124fd50cb6d223cdd18fedc166d00af7254199b6e6dedf9be82f71db87af6d01",
+  "build/image/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build/image/stdout.log": "b52c7d42895d26d64b4e31e2ab6d88a5df6d8d51c9f4e9953080ec35b01ec261",
+  "build/invocation.json": "8e713dea16fb41771ec1402032092b96268d7be76c0a7c36abe2d035f35cccc3",
+  "build/unit-tests/command.json": "d5ae37d27e9a16d132b8323a6be9019da19a1140b4afa2f8e34e41baaf0eb6ca",
+  "build/unit-tests/exit-code.json": "2618b95f1f6be6bfde8537756f85b83845d039001563135b9d59d817446733eb",
+  "build/unit-tests/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build/unit-tests/stdout.log": "2b038dee31628e57f17780afbe620aa49df94899d6d62368de1e89d9e4a1f12a",
+  "commit.txt": "753eca3371426856426df4c2abd70c58d68c6e9f5a6d1e71ee37ffdb3b94b6a6",
+  "docker-version.txt": "7ba4296d98811b3f6017879e4adb5452f8fe84ab8242b9bfd4fe14e394459098",
+  "event.txt": "3adc60ec66441bfef69c8ad87bb83111b51553958e4a49cb2a3caeebd781a2cd",
+  "oracle-tests.log": "dc4a55440683279a6826a015a3aed959f8459efdc1a9b5258a623a4a3b6faef0",
+  "pr-head.txt": "e56d7599b8e7eee3f03567ade20cb73927931871d03daebca82c71506d924c1f",
+  "scanner-tests.log": "03408c8ef7478bca36016777a84bf330811f006b8a13a66fa62e439655c38e5e",
+  "source-scan.log": "b7906746fc5281c3216650a86c7d68867294dea5691ec945679106dd719b9349"
+}
