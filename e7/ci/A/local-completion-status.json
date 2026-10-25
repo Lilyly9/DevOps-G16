@@ -7,9 +7,12 @@
   "cloud_environment_requirements": "PENDING_MEMORY_3.5_LT_4",
   "updated_github_workflow_run": "PASS",
   "github_run_id": 40092663505,
-  "branch_protection": "PENDING",
-  "policy_rejected_merge": "PENDING",
-  "final_merge": "PENDING",
+  "branch_protection": "A_BEHAVIOR_VERIFIED_FULL_CONFIG_UNREADABLE",
+  "policy_rejected_merge": "PASS_NON_DRAFT_ORDINARY_MERGE_EXIT_1",
+  "final_merge": "PASS_PR_5_AND_PR_4",
   "publication": "AUTHORIZED_PERSONAL_BRANCH",
-  "historical_github_runs": "Old failure/recovery used A3-authored demonstration; preserve scope"
+  "historical_github_runs": "Old failure/recovery used A3-authored demonstration; preserve scope",
+  "official_remote_failure_recovery": "PASS",
+  "b_shared_policy": "PENDING_B_WORKFLOW_AND_EXACT_CONFIGURATION",
+  "latest_evidence": "official-protected-20261025/"
 }

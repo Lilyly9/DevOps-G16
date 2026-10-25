@@ -45,3 +45,8 @@ python3 scripts/lab_cloud.py gate --out work/e7-A3-NN --image course1020-buildch
 ## 新增课程材料补齐后的验证
 
 最新本地结果请先阅读 [本轮索引](course-recheck-20261024/index.md) 与 [验收记录](验收记录.csv)。前面的日志和旧 CI 仍对应原始提交，不能用来声称新工作流已经在 GitHub 运行。所有本轮结果仍只保留本地。
+
+
+## 2026-10-25 最新 CI 验收
+
+[官方失败拒绝、恢复和普通合并证据](../../ci/A/official-protected-20261025/index.md)：A 项已通过，完整共享配置与资源门槛仍待确认。

@@ -1,0 +1,47 @@
+{
+  "date_beijing": "2026-10-25",
+  "source": "ACTUAL_GITHUB_RUN_AND_NORMAL_MERGE_ATTEMPTS",
+  "normal_pr": 5,
+  "normal_merge": {
+    "headRefOid": "13780bbf7f79ec695d7ed85d53c3c58cbb9055ac",
+    "isDraft": false,
+    "mergeCommit": {
+      "oid": "f64bdf3fbbde87fe74196c51cc5abc7189c6ba1c"
+    },
+    "mergeStateStatus": "UNKNOWN",
+    "mergedAt": "2026-10-25T15:30:28Z",
+    "number": 5,
+    "state": "MERGED",
+    "url": "https://github.com/Lilyly9/DevOps-G16/pull/5"
+  },
+  "demo_pr": 4,
+  "failure_run": 40207305472,
+  "failure_commit": "2077f4154931ff7c8f063d24df71f161886fcb6e",
+  "failure_tests": "1 failed, 18 passed",
+  "non_draft_failure_blocked": true,
+  "ordinary_merge_rejection_exit_code": 1,
+  "recovery_run": 40207413777,
+  "recovery_commit": "ed2c043a4cc03e672ec43d3d2346274053b5f94f",
+  "recovery_tests": "19 passed",
+  "recovery_gate": "8/8",
+  "merged": {
+    "headRefOid": "ed2c043a4cc03e672ec43d3d2346274053b5f94f",
+    "isDraft": false,
+    "mergeCommit": {
+      "oid": "0277daa580c4360ca3ae02667f2195dbd7f7bab4"
+    },
+    "mergedAt": "2026-10-25T15:33:20Z",
+    "number": 4,
+    "state": "MERGED",
+    "url": "https://github.com/Lilyly9/DevOps-G16/pull/4"
+  },
+  "admin_bypass_used": false,
+  "branch_protected": true,
+  "exact_protection_configuration_readable": false,
+  "protection_read_http_status": 404,
+  "strict_and_admin_enforcement_verified": false,
+  "b_workflow_present": false,
+  "a_only_functional_acceptance": "PASS",
+  "full_shared_a_b_policy_acceptance": "PENDING",
+  "cloud_resource_requirement": "PENDING_MEMORY_3.5_LT_4"
+}

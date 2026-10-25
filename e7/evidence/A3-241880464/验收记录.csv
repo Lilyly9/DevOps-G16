@@ -3,8 +3,8 @@ C01,共同,环境,云主机与Docker,PENDING,cloud-20261024/raw/doctor.json,已�
 C02,共同,E5,真实复现与差异,PENDING,A1 的 E5 报告/PR #3,由 A1 负责；本轮不代跑、不代验收整个 E5
 C03,共同,E6,输入哈希报告日志,PASS,../../../e6/evidence/A2-241880496/；course-recheck-20261024/steps/a2-reference-verify/,只读复核 A2 已交 before/after 通过；本人 gate 也独立验证，不替代其云环境要求
 C04,共同,E7,自主扩展测试,PASS,cloud-20261024/raw/build-03/unit-tests.log；../../../e5/A-buildchecker/services/buildchecker/tests/test_extra_241880464.py,本人扩展测试已随云端镜像重建，18 passed；构建使用记录在案的临时镜像源配方
-C05,共同,CI,正常失败恢复及artifact,PENDING,../../ci/A/course-update-normal/；../../ci/A/failure/；../../ci/A/recovery/,新版正常 CI 已实际通过；旧三态记录保留，官方模板在正式保护下的失败/恢复仍待执行
-C06,共同,CI,必需检查与实际拒绝合并,PENDING,../../ci/main-protection.json,配置草案未应用；拒绝合并与最终 MERGED 未完成
+C05,共同,CI,正常失败恢复及artifact,PASS,../../ci/A/official-protected-20261025/,官方失败 run 40207305472、恢复 run 40207413777 及 artifact 均已实际核验；恢复 19 passed、gate 8/8
+C06,共同,CI,必需检查与实际拒绝合并,PENDING,../../ci/A/official-protected-20261025/,A 项非草稿实际拒绝退出 1、恢复后 PR #4 MERGED 已通过；B 工作流缺失且完整保护配置无法读取，共享 A/B 配置未完整验收
 A01,A,E6,MD/RD精确证据与修复,PASS,cloud-20261024/raw/gate-01/gate/；cloud-20261024/summary.json,本机核验下载的云端原始文件：精确 MD/RD，修复后仅 Makefile 变化
 A02,A,E7,三次一致及故障场景,PASS,cloud-20261024/raw/gate-01/gate/gate-result.json；cloud-20261024/raw/gate-01/gate/results.csv,云端 8/8；三次结果与输入哈希已复核
 B01,B,E5,缺失make及候选来源,PENDING,B 轨道负责人交付,不属于 A3，本轮未验收，不据此判断 B 组失败
@@ -20,3 +20,4 @@ L07,A,本地补齐,本轮容器清理,PASS,course-recheck-20261024/steps/contain
 G01,A,新版正常CI,全部新增步骤与artifact,PASS,../../ci/A/course-update-normal/,run 40092663505：语法、回归、完整历史、镜像扫描、18 单测、8/8 gate 全部成功
 G02,A,云端,功能及原始证据归档,PASS,cloud-20261024/,验证实际下载的原包；不等于硬件门槛通过
 G03,A,云端,临时镜像源配方差异,PASS,cloud-20261024/raw/build-03/Dockerfile.mirror；cloud-20261024/summary.json,已对照原源码，只改变下载端点及 apt 超时/重试；固定基础摘要不变
+G04,A,正式CI,官方失败拒绝恢复及普通合并,PASS,../../ci/A/official-protected-20261025/,同一非草稿 PR #4：失败 BLOCKED / 合并退出 1；修复后 19 passed、8/8 gate、MERGED，无管理员绕过
