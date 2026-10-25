@@ -50,32 +50,53 @@ jobs:
           fi
           echo "relevant=$relevant" >> "$GITHUB_OUTPUT"
       - name: Record source and event
-        if: steps.changes.outputs.relevant == 'true'
         env:
           EVENT: ${{ github.event_name }}
           PR_HEAD: ${{ github.event.pull_request.head.sha }}
         run: |
           mkdir -p work/ci
           git rev-parse HEAD > work/ci/commit.txt
+          docker version > work/ci/docker-version.txt
           printf '%s\n' "$EVENT" > work/ci/event.txt
           printf '%s\n' "$PR_HEAD" > work/ci/pr-head.txt
+      - name: Python syntax
+        if: steps.changes.outputs.relevant == 'true'
+        run: python3 -m compileall -q services/buildchecker/buildchecker services/buildchecker/tests scripts tests
+      - name: Scanner regression tests
+        if: steps.changes.outputs.relevant == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests/tooling -v 2>&1 | tee work/ci/scanner-tests.log
       - name: Independent E7 oracle tests
         if: steps.changes.outputs.relevant == 'true'
         shell: bash
         run: |
           set -euo pipefail
           python3 -m unittest discover -s tests/e7 -v 2>&1 | tee work/ci/oracle-tests.log
+      - name: Scan tracked sources and full Git history
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/ci
+          python3 scripts/secret_scan.py ../.. --history 2>&1 | tee work/ci/source-scan.log
       - name: Build image and run service tests
         if: steps.changes.outputs.relevant == 'true'
         run: python3 scripts/lab_cloud.py build --out work/ci/build --image e7-buildchecker:ci --build-timeout 1200
+      - name: Scan built image
+        if: steps.changes.outputs.relevant == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/secret_scan.py ../.. --image e7-buildchecker:ci 2>&1 | tee work/ci/image-scan.log
       - name: Eight-case gate
         if: steps.changes.outputs.relevant == 'true'
         run: python3 scripts/lab_cloud.py gate --out work/ci/run --image e7-buildchecker:ci
       - name: Unrelated paths succeed
         if: steps.changes.outputs.relevant != 'true'
-        run: echo 'No A implementation or workflow changes; required job succeeds.'
+        run: echo 'No A implementation or workflow changes; Docker stages skipped after repository scan.'
       - name: Upload logs even on failure
-        if: always() && steps.changes.outputs.relevant == 'true'
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: e7-a-${{ github.run_id }}-${{ github.run_attempt }}

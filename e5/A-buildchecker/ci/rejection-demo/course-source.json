@@ -1,0 +1,10 @@
+{
+  "e5/A-buildchecker/ci/rejection-demo/A/test_ci_reject_demo.py": {
+    "source": "DevOps_1020_Student_Cloud/ci/rejection-demo/A/test_ci_reject_demo.py",
+    "sha256": "adbd3c0321e6e645635ccd46acef4cf42f29cfd5f15ca866d3e72fadbc79399b"
+  },
+  "e5/A-buildchecker/ci/rejection-demo/fixed/test_ci_reject_demo.py": {
+    "source": "DevOps_1020_Student_Cloud/ci/rejection-demo/A/fixed/test_ci_reject_demo.py",
+    "sha256": "1078111ad0a26cc527030096b841bb2de6493e12407d0bcac100133ae64f091d"
+  }
+}

@@ -1,8 +1,10 @@
-# A3 CI 演示测试来源
+# A3 CI 演示测试
 
-当前入库实验包没有课程材料所述的 rejection-demo 测试。这里由 A3 编写等价教学样例，不能称为助教原件。
+当前两个模板已从新增官方学生包原样复制，来源与 SHA256 见 course-source.json。
 
-将 `A/test_ci_reject_demo.py` 复制到 `services/buildchecker/tests/`，它故意把已声明的 `config.h` 预期写为 `unused.h`，服务测试应失败。
-恢复时用 `fixed/test_ci_reject_demo.py` 覆盖同名文件。两个版本只差期望头文件名；本次恢复修正的是测试预期，不是实现。
+- `A/test_ci_reject_demo.py`：故意把 `main(["version"])` 的退出码预期写成 1。
+- `fixed/test_ci_reject_demo.py`：恢复正确预期 0；不改算法。
 
-这两个模板不在服务 tests 目录，正常镜像不会运行它们。只有独立演示分支将其中一个复制到 tests。
+将对应版本复制到 `services/buildchecker/tests/test_ci_reject_demo.py` 后重建镜像。模板目录不会进入正常服务测试。
+
+此前 GitHub PR #4 使用的是 A3 自写的依赖声明等价样例（错误预期 unused.h，正确预期 config.h）。其已归档 run 记录继续保留，不能改称官方模板运行证据。后续启用保护后的正式验收使用这里的官方模板。

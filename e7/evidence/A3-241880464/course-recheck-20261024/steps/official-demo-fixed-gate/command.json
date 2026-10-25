@@ -1,0 +1,9 @@
+[
+  "python3",
+  "scripts/lab_cloud.py",
+  "gate",
+  "--out",
+  "work/gate",
+  "--image",
+  "course1020-buildchecker:241880464-demo-fixed"
+]

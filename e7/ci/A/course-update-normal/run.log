@@ -1,0 +1,365 @@
+e7-a-quality-gate	Set up job	﻿2026-10-24T12:07:57.9360277Z Current runner version: '2.338.0'
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9386392Z ##[group]Runner Image Provisioner
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9387248Z Hosted Compute Agent
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9387849Z Version: 20261021.618
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9388431Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9389100Z Build Date: 2026-10-21T00:45:21Z
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9389755Z Worker ID: {41bdb3f1-b4b7-4796-b0d9-892d97348dd1}
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9390439Z Region: westus3
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9390952Z Cloud: Azure
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9391455Z ##[endgroup]
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9393102Z ##[group]Operating System
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9393749Z Ubuntu
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9394383Z 24.04.5
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9394846Z LTS
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9395360Z ##[endgroup]
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9395865Z ##[group]Runner Image
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9396424Z Image: ubuntu-24.04
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9397004Z Version: 20261012.334.1
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9397956Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9399547Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9400482Z ##[endgroup]
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9401538Z ##[group]GITHUB_TOKEN Permissions
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9403650Z Contents: read
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9404528Z Metadata: read
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9405038Z ##[endgroup]
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9407274Z Secret source: Actions
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9408144Z Cache mode: write
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9408872Z Prepare workflow directory
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9864346Z Prepare all required actions
+e7-a-quality-gate	Set up job	2026-10-24T12:07:57.9913047Z Getting action download info
+e7-a-quality-gate	Set up job	2026-10-24T12:07:58.2969433Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+e7-a-quality-gate	Set up job	2026-10-24T12:07:58.4060567Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+e7-a-quality-gate	Set up job	2026-10-24T12:07:58.5819361Z Complete job name: e7-a-quality-gate
+e7-a-quality-gate	Run actions/checkout@v4	﻿2026-10-24T12:07:58.6845511Z ##[group]Run actions/checkout@v4
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6846372Z with:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6846775Z   fetch-depth: 0
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6847197Z   persist-credentials: false
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6847662Z   repository: Lilyly9/DevOps-G16
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6851076Z   token: ***
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6851456Z   ssh-strict: true
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6851837Z   ssh-user: git
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6852210Z   clean: true
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6852618Z   sparse-checkout-cone-mode: true
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6853094Z   fetch-tags: false
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6853500Z   show-progress: true
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6853899Z   lfs: false
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6854831Z   submodules: false
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6855256Z   set-safe-directory: true
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6855725Z   allow-unsafe-pr-checkout: false
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.6856616Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.7905919Z Syncing repository: Lilyly9/DevOps-G16
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.7907787Z ##[group]Getting Git version info
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.7908448Z Working directory is '/home/runner/work/DevOps-G16/DevOps-G16'
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.7909514Z [command]/usr/bin/git version
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.7979154Z git version 2.55.0
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.7999839Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8036084Z Temporarily overriding HOME='/home/runner/work/_temp/0eba2518-9f8d-48be-b017-e18cb2887782' before making global git config changes
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8039047Z Adding repository directory to the temporary git global config as a safe directory
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8042856Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/DevOps-G16/DevOps-G16
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8095580Z Deleting the contents of '/home/runner/work/DevOps-G16/DevOps-G16'
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8101724Z ##[group]Initializing the repository
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8107710Z [command]/usr/bin/git init /home/runner/work/DevOps-G16/DevOps-G16
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8220573Z hint: Using 'master' as the name for the initial branch. This default branch name
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8221909Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8223148Z hint: to use in all of your new repositories, which will suppress this warning,
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8223950Z hint: call:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8224776Z hint:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8225386Z hint: 	git config --global init.defaultBranch <name>
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8274835Z hint:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8275754Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8277178Z hint: 'development'. The just-created branch can be renamed via this command:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8278155Z hint:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8278759Z hint: 	git branch -m <name>
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8279243Z hint:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8279829Z hint: Disable this message with "git config set advice.defaultBranchName false"
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8280822Z Initialized empty Git repository in /home/runner/work/DevOps-G16/DevOps-G16/.git/
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8283193Z [command]/usr/bin/git remote add origin https://github.com/Lilyly9/DevOps-G16
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8296573Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8298110Z ##[group]Disabling automatic garbage collection
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8316998Z [command]/usr/bin/git config --local gc.auto 0
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8349077Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8349963Z ##[group]Setting up auth
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8364541Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8402193Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8807088Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.8838658Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.9027858Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.9062266Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.9249889Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.9284188Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.9285560Z ##[group]Fetching the repository
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:58.9295346Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7747087Z From https://github.com/Lilyly9/DevOps-G16
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7748810Z  * [new branch]      e5-7/A1-241880485     -> origin/e5-7/A1-241880485
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7750332Z  * [new branch]      e5-7/A2-241880496     -> origin/e5-7/A2-241880496
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7751720Z  * [new branch]      e5-7/A3-241880464     -> origin/e5-7/A3-241880464
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7753676Z  * [new branch]      e5-7/B1-241880555     -> origin/e5-7/B1-241880555
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7755388Z  * [new branch]      e7-gate-reject-demo-a -> origin/e7-gate-reject-demo-a
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7756732Z  * [new branch]      main                  -> origin/main
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7757847Z  * [new tag]         C0                    -> C0
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7758832Z  * [new tag]         C1                    -> C1
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7759967Z  * [new tag]         C2                    -> C2
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7762556Z [command]/usr/bin/git branch --list --remote origin/e5-7/A3-241880464
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7784355Z   origin/e5-7/A3-241880464
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7793858Z [command]/usr/bin/git rev-parse refs/remotes/origin/e5-7/A3-241880464
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7816412Z 176d624ec4e215aedeadb1a8057f87bb8d32eb4d
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7827464Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7829131Z ##[group]Determining the checkout info
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7836478Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7839846Z [command]/usr/bin/git sparse-checkout disable
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7892546Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7920677Z ##[group]Checking out the ref
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.7925565Z [command]/usr/bin/git checkout --progress --force -B e5-7/A3-241880464 refs/remotes/origin/e5-7/A3-241880464
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8504435Z Switched to a new branch 'e5-7/A3-241880464'
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8506591Z branch 'e5-7/A3-241880464' set up to track 'origin/e5-7/A3-241880464'.
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8513101Z ##[endgroup]
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8552624Z [command]/usr/bin/git log -1 --format=%H
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8575904Z 176d624ec4e215aedeadb1a8057f87bb8d32eb4d
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8585132Z ##[group]Removing auth
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8588714Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8616166Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8797829Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8821396Z http.https://github.com/.extraheader
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8827134Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.8857230Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.9050620Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.9082697Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+e7-a-quality-gate	Run actions/checkout@v4	2026-10-24T12:07:59.9264803Z ##[endgroup]
+e7-a-quality-gate	Detect A changes without skipping the required job	﻿2026-10-24T12:07:59.9510599Z ##[group]Run set -euo pipefail
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9512030Z ^[[36;1mset -euo pipefail^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9513210Z ^[[36;1mrelevant=true^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9514712Z ^[[36;1mif [[ "$EVENT" == pull_request ]]; then^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9516287Z ^[[36;1m  git diff --name-only "$BASE...$HEAD" > /tmp/e7-a-paths^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9518343Z ^[[36;1melif [[ "$EVENT" == push && -n "$BEFORE" && ! "$BEFORE" =~ ^0+$ ]] && git cat-file -e "$BEFORE^{commit}"; then^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9520488Z ^[[36;1m  git diff --name-only "$BEFORE" "$GITHUB_SHA" > /tmp/e7-a-paths^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9522013Z ^[[36;1melse^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9523108Z ^[[36;1m  echo 'relevant=true' >> "$GITHUB_OUTPUT"^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9524487Z ^[[36;1m  exit 0^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9525479Z ^[[36;1mfi^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9527161Z ^[[36;1mif ! grep -Eq '^(e5/A-buildchecker/|\.github/workflows/e7-a-quality-gate\.yml$)' /tmp/e7-a-paths; then^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9529088Z ^[[36;1m  relevant=false^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9530221Z ^[[36;1mfi^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9531325Z ^[[36;1mecho "relevant=$relevant" >> "$GITHUB_OUTPUT"^[[0m
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9741914Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9743444Z env:
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9744619Z   EVENT: push
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9745746Z   BEFORE: 6c12a45c6a0ad111f077cb5234c3bd7f5a8d3a73
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9747044Z   BASE: 
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9747962Z   HEAD: 
+e7-a-quality-gate	Detect A changes without skipping the required job	2026-10-24T12:07:59.9748870Z ##[endgroup]
+e7-a-quality-gate	Record source and event	﻿2026-10-24T12:07:59.9989138Z ##[group]Run mkdir -p work/ci
+e7-a-quality-gate	Record source and event	2026-10-24T12:07:59.9990313Z ^[[36;1mmkdir -p work/ci^[[0m
+e7-a-quality-gate	Record source and event	2026-10-24T12:07:59.9991454Z ^[[36;1mgit rev-parse HEAD > work/ci/commit.txt^[[0m
+e7-a-quality-gate	Record source and event	2026-10-24T12:07:59.9992823Z ^[[36;1mdocker version > work/ci/docker-version.txt^[[0m
+e7-a-quality-gate	Record source and event	2026-10-24T12:07:59.9994376Z ^[[36;1mprintf '%s\n' "$EVENT" > work/ci/event.txt^[[0m
+e7-a-quality-gate	Record source and event	2026-10-24T12:07:59.9995753Z ^[[36;1mprintf '%s\n' "$PR_HEAD" > work/ci/pr-head.txt^[[0m
+e7-a-quality-gate	Record source and event	2026-10-24T12:08:00.0035543Z shell: /usr/bin/bash -e {0}
+e7-a-quality-gate	Record source and event	2026-10-24T12:08:00.0036615Z env:
+e7-a-quality-gate	Record source and event	2026-10-24T12:08:00.0037461Z   EVENT: push
+e7-a-quality-gate	Record source and event	2026-10-24T12:08:00.0038320Z   PR_HEAD: 
+e7-a-quality-gate	Record source and event	2026-10-24T12:08:00.0039162Z ##[endgroup]
+e7-a-quality-gate	Python syntax	﻿2026-10-24T12:08:00.1486669Z ##[group]Run python3 -m compileall -q services/buildchecker/buildchecker services/buildchecker/tests scripts tests
+e7-a-quality-gate	Python syntax	2026-10-24T12:08:00.1489394Z ^[[36;1mpython3 -m compileall -q services/buildchecker/buildchecker services/buildchecker/tests scripts tests^[[0m
+e7-a-quality-gate	Python syntax	2026-10-24T12:08:00.1528308Z shell: /usr/bin/bash -e {0}
+e7-a-quality-gate	Python syntax	2026-10-24T12:08:00.1529403Z ##[endgroup]
+e7-a-quality-gate	Scanner regression tests	﻿2026-10-24T12:08:00.2232506Z ##[group]Run set -euo pipefail
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.2233636Z ^[[36;1mset -euo pipefail^[[0m
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.2235362Z ^[[36;1mpython3 -m unittest discover -s tests/tooling -v 2>&1 | tee work/ci/scanner-tests.log^[[0m
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.2274875Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.2276164Z ##[endgroup]
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.3860463Z test_legacy_history_without_secret_finishes (test_secret_scan_241880464.LegacyHistoryTests.test_legacy_history_without_secret_finishes) ... ok
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.4333115Z test_secret_after_legacy_bytes_is_still_rejected_and_masked (test_secret_scan_241880464.LegacyHistoryTests.test_secret_after_legacy_bytes_is_still_rejected_and_masked) ... ok
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.4333901Z 
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.4334210Z ----------------------------------------------------------------------
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.4334619Z Ran 2 tests in 0.101s
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.4334769Z 
+e7-a-quality-gate	Scanner regression tests	2026-10-24T12:08:00.4334876Z OK
+e7-a-quality-gate	Independent E7 oracle tests	﻿2026-10-24T12:08:00.4451617Z ##[group]Run set -euo pipefail
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.4451956Z ^[[36;1mset -euo pipefail^[[0m
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.4452358Z ^[[36;1mpython3 -m unittest discover -s tests/e7 -v 2>&1 | tee work/ci/oracle-tests.log^[[0m
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.4491963Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.4492374Z ##[endgroup]
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.4996970Z test_empty_broken_report_does_not_pass (test_e7_a_gate.OracleTests.test_empty_broken_report_does_not_pass) ... ok
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5005701Z test_exact_errors_rejected_by_cli (test_e7_a_gate.OracleTests.test_exact_errors_rejected_by_cli) ... ok
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5006640Z test_explicit_unsupported (test_e7_a_gate.OracleTests.test_explicit_unsupported) ... ok
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5007444Z test_failed_build_not_counted_as_fixed (test_e7_a_gate.OracleTests.test_failed_build_not_counted_as_fixed) ... ok
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5008166Z test_fixed_passes (test_e7_a_gate.OracleTests.test_fixed_passes) ... ok
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5008857Z test_timeout_requires_failure_exit (test_e7_a_gate.OracleTests.test_timeout_requires_failure_exit) ... ok
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5009422Z 
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5009615Z ----------------------------------------------------------------------
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5010046Z Ran 6 tests in 0.000s
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5010221Z 
+e7-a-quality-gate	Independent E7 oracle tests	2026-10-24T12:08:00.5010307Z OK
+e7-a-quality-gate	Scan tracked sources and full Git history	﻿2026-10-24T12:08:00.5108072Z ##[group]Run set -euo pipefail
+e7-a-quality-gate	Scan tracked sources and full Git history	2026-10-24T12:08:00.5108408Z ^[[36;1mset -euo pipefail^[[0m
+e7-a-quality-gate	Scan tracked sources and full Git history	2026-10-24T12:08:00.5108662Z ^[[36;1mmkdir -p work/ci^[[0m
+e7-a-quality-gate	Scan tracked sources and full Git history	2026-10-24T12:08:00.5109090Z ^[[36;1mpython3 scripts/secret_scan.py ../.. --history 2>&1 | tee work/ci/source-scan.log^[[0m
+e7-a-quality-gate	Scan tracked sources and full Git history	2026-10-24T12:08:00.5148940Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+e7-a-quality-gate	Scan tracked sources and full Git history	2026-10-24T12:08:00.5149389Z ##[endgroup]
+e7-a-quality-gate	Scan tracked sources and full Git history	2026-10-24T12:08:01.6023008Z 密钥检查：未发现问题（文件 2372 个，含 Git 历史）
+e7-a-quality-gate	Build image and run service tests	﻿2026-10-24T12:08:01.6119841Z ##[group]Run python3 scripts/lab_cloud.py build --out work/ci/build --image e7-buildchecker:ci --build-timeout 1200
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:01.6120624Z ^[[36;1mpython3 scripts/lab_cloud.py build --out work/ci/build --image e7-buildchecker:ci --build-timeout 1200^[[0m
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:01.6160195Z shell: /usr/bin/bash -e {0}
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:01.6160502Z ##[endgroup]
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:01.6603113Z EVIDENCE_DIR=/home/runner/work/DevOps-G16/DevOps-G16/e5/A-buildchecker/work/ci/build
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1569519Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1571171Z #12 1.401   Downloading packaging-26.3-py3-none-any.whl (129 kB)
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1572537Z #12 1.426 Collecting pluggy==1.6.0 (from -r /tmp/requirements-dev.lock (line 11))
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1573542Z #12 1.436   Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1575160Z #12 1.448 Collecting pygments==2.21.0 (from -r /tmp/requirements-dev.lock (line 15))
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1576070Z #12 1.458   Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1577257Z #12 1.496      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 38.5 MB/s  0:00:00
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1578136Z #12 1.517 Collecting pytest==8.4.2 (from -r /tmp/requirements-dev.lock (line 19))
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1578989Z #12 1.527   Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1579922Z #12 1.553 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1580867Z #12 2.479 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1581705Z #12 2.481 Successfully installed iniconfig-2.3.0 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-8.4.2
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1584786Z #12 2.481 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1588186Z #12 2.482 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1589078Z #12 2.482 [notice] A new release of pip is available: 26.1.2 -> 26.2.2
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1590037Z #12 2.482 [notice] To update, run: pip install --upgrade pip
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1591005Z #12 DONE 3.5s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1591418Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1591954Z #13 [5/8] RUN useradd --create-home --uid 10001 app && install -d -o app -g app /app
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1592820Z #13 DONE 0.1s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1593245Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1593583Z #14 [6/8] WORKDIR /app
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1594251Z #14 DONE 0.0s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1594648Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1595077Z #15 [7/8] COPY --chown=app:app services/buildchecker/ /app/
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1595791Z #15 DONE 0.0s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1596109Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1596452Z #16 [8/8] COPY --chown=app:app fixtures/ /app/fixtures/
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1597120Z #16 DONE 0.0s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1597548Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1597821Z #17 exporting to image
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1598448Z #17 exporting layers
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1599122Z #17 exporting layers 1.7s done
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1600174Z #17 writing image sha256:ce95c904a2b874ec001c89cd494b32617d221d2d1c86cd2d6aefb8be1f420f52 done
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1601345Z #17 naming to docker.io/library/e7-buildchecker:ci done
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1602044Z #17 DONE 1.7s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1602541Z             "Labels": null
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1603063Z         },
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1603585Z         "Architecture": "amd64",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1604409Z         "Os": "linux",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1604992Z         "Size": 450850994,
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1605513Z         "GraphDriver": {
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1606031Z             "Data": {
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1610838Z                 "LowerDir": "/var/lib/docker/overlay2/n5k5ni2qxtq5ze0ivm41w0noi/diff:/var/lib/docker/overlay2/9j0rkascrwil215krdpfkjcon/diff:/var/lib/docker/overlay2/f0gi6wumzsxe2gv34ub2n2qwk/diff:/var/lib/docker/overlay2/kqb2zplo879lyvgnvwk0u8gyd/diff:/var/lib/docker/overlay2/yx28j278pe3f6crpo2uijcrrz/diff:/var/lib/docker/overlay2/8x4xjeev0cpusqiuq4vppka9y/diff:/var/lib/docker/overlay2/346ddc954a349e38eab8c4650b9322db390f19b11bd6668843138c6a52286d0f/diff:/var/lib/docker/overlay2/aa94a148d6e0e6071c2d137079c236e7c9dcdac8aeeff2f53c2d69bff0bde362/diff:/var/lib/docker/overlay2/17f45de7073c8e79637268434a1bf200c0a457f0837de648d1e5b85db9ef5724/diff:/var/lib/docker/overlay2/f1bdbe046aaf0c25f2caead0b2abe04405d761fda18317a96e332366a6347e19/diff",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1617014Z                 "MergedDir": "/var/lib/docker/overlay2/g4f00g9k16ij0n2c6x83xgi2q/merged",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1618211Z                 "UpperDir": "/var/lib/docker/overlay2/g4f00g9k16ij0n2c6x83xgi2q/diff",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1619228Z                 "WorkDir": "/var/lib/docker/overlay2/g4f00g9k16ij0n2c6x83xgi2q/work"
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1620051Z             },
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1620843Z             "Name": "overlay2"
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1621458Z         },
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1622049Z         "RootFS": {
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1622573Z             "Type": "layers",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1623201Z             "Layers": [
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1624121Z                 "sha256:f4f8b983b714f130e2cff99176baa26352db6a55d3622e10ada40f2b4720a4eb",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1625167Z                 "sha256:7ef9ddba6965cfcb2dcd5bf24e61737a0031c2d9be2b3377339111ab1ad3f0f2",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1626384Z                 "sha256:ef9f8c7c1d6b6b918d5e93cba9a7de4c837e3047ca733296bd396d9a413ae64f",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1627605Z                 "sha256:fde42b5dd2510411f5cd411982dd5fa72f546553ccba3e5260f33a3da21bbf8f",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1628826Z                 "sha256:6a5491e79f7a7aedd7e6b7d3f2bdcbc0842e0bb3806306a5587b096cf32fd033",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1629896Z                 "sha256:a7368f34378648a70b93a1a560602ee6d225e1dc5ea31eb9cb21a7e0658b481e",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1630958Z                 "sha256:7c438b0744bdbba59f699948479e6920dc5e32b017d4f71e888553f45052fced",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1632034Z                 "sha256:1bd0e1b002a86915e09e4f009923be3274a0ef1046e50bf737bb69eba79e5fbe",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1633110Z                 "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1634515Z                 "sha256:de23d9c3c4516ab4dd0d022b7356a8edc7df1188cd2cb491b77005e642bf5e7d",
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1635570Z                 "sha256:e6107a1e6336d7cdaf987e22171dc4d110c68c8e2e7d17c61123ce38710cbf00"
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1636412Z             ]
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1636892Z         },
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1637363Z         "Metadata": {
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1637894Z             "LastTagTime": "2026-10-24T12:08:21.320277195Z"
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1638575Z         }
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1639021Z     }
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1639395Z ]
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1639646Z 
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1639970Z ..................                                                       [100%]
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1640622Z 18 passed in 0.05s
+e7-a-quality-gate	Build image and run service tests	2026-10-24T12:08:22.1640961Z 
+e7-a-quality-gate	Scan built image	﻿2026-10-24T12:08:22.1772862Z ##[group]Run set -euo pipefail
+e7-a-quality-gate	Scan built image	2026-10-24T12:08:22.1773180Z ^[[36;1mset -euo pipefail^[[0m
+e7-a-quality-gate	Scan built image	2026-10-24T12:08:22.1773635Z ^[[36;1mpython3 scripts/secret_scan.py ../.. --image e7-buildchecker:ci 2>&1 | tee work/ci/image-scan.log^[[0m
+e7-a-quality-gate	Scan built image	2026-10-24T12:08:22.1811584Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+e7-a-quality-gate	Scan built image	2026-10-24T12:08:22.1811942Z ##[endgroup]
+e7-a-quality-gate	Scan built image	2026-10-24T12:08:22.7673771Z 密钥检查：未发现问题（文件 2372 个，含镜像 e7-buildchecker:ci）
+e7-a-quality-gate	Eight-case gate	﻿2026-10-24T12:08:22.7768295Z ##[group]Run python3 scripts/lab_cloud.py gate --out work/ci/run --image e7-buildchecker:ci
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:22.7768934Z ^[[36;1mpython3 scripts/lab_cloud.py gate --out work/ci/run --image e7-buildchecker:ci^[[0m
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:22.7804978Z shell: /usr/bin/bash -e {0}
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:22.7805291Z ##[endgroup]
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:22.8206618Z EVIDENCE_DIR=/home/runner/work/DevOps-G16/DevOps-G16/e5/A-buildchecker/work/ci/run
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5993363Z       "trace_id": "e6-8ca5c319c1704ae6b5172b9019280732"
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5994334Z     },
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5994676Z     {
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5995130Z       "case": "fixed",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5995506Z       "passed": true,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5995898Z       "exit_code": 0,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5996310Z       "detector_status": "SUCCEEDED",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5996854Z       "trace_id": "e6-8ceb1a09e3274955a2034bebc3eb0582"
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5997367Z     },
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5997679Z     {
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5997986Z       "case": "build-failed",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5998449Z       "passed": true,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5998789Z       "exit_code": 1,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5999210Z       "detector_status": "FAILED",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.5999770Z       "trace_id": "e6-c7ac3686ab334601a1d5748b536a2154"
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6000305Z     },
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6000524Z     {
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6000748Z       "case": "unsupported",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6001022Z       "passed": true,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6001273Z       "exit_code": 1,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6001816Z       "detector_status": "FAILED",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6002146Z       "trace_id": "e6-12bd04d48b07487cba41631e73c5b341"
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6002501Z     },
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6002698Z     {
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6002911Z       "case": "timeout",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6003169Z       "passed": true,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6003410Z       "exit_code": 1,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6003666Z       "detector_status": "TIMED_OUT",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6004209Z       "trace_id": "e6-dfb8075b94bd4d94b14d1bfb6e81837b"
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6004553Z     }
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6004766Z   ],
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6005149Z   "oracle_scope": "Small explicit teaching fixtures; not full paper benchmark",
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6005622Z   "repeated_original_cases": 3,
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6005924Z   "intentional_failure": false
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6006201Z }
+e7-a-quality-gate	Eight-case gate	2026-10-24T12:08:28.6006327Z 
+e7-a-quality-gate	Upload logs even on failure	﻿2026-10-24T12:08:28.6145859Z ##[group]Run actions/upload-artifact@v4
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6146166Z with:
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6146378Z   name: e7-a-40092663505-1
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6146616Z   path: e5/A-buildchecker/work/ci/
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6146881Z   if-no-files-found: error
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6147108Z   retention-days: 30
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6147323Z   compression-level: 6
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6147540Z   overwrite: false
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6147755Z   include-hidden-files: false
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.6147988Z ##[endgroup]
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.7775735Z (node:4418) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.7776995Z (Use `node --trace-deprecation ...` to show where the warning was created)
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.8260746Z With the provided path, there will be 211 files uploaded
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.8261914Z Artifact name is valid!
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:28.8262453Z Root directory input is valid!
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:29.1737749Z Beginning upload of artifact content to blob storage
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:29.3568812Z (node:4418) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:29.7231937Z Uploaded bytes 147148
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:29.7854224Z Finished uploading artifact content to blob storage!
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:29.7855210Z SHA256 digest of uploaded artifact zip is 107e062218e2409d8eab0326493b302e83d57a27bc2fdd5376412c5c7ac64032
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:29.7856683Z Finalizing artifact upload
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:30.2825766Z Artifact e7-a-40092663505-1.zip successfully finalized. Artifact ID 12559387224
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:30.2826976Z Artifact e7-a-40092663505-1 has been successfully uploaded! Final size is 147148 bytes. Artifact ID is 12559387224
+e7-a-quality-gate	Upload logs even on failure	2026-10-24T12:08:30.2833362Z Artifact download URL: https://github.com/Lilyly9/DevOps-G16/actions/runs/40092663505/artifacts/12559387224
+e7-a-quality-gate	Post Run actions/checkout@v4	﻿2026-10-24T12:08:30.3046070Z Post job cleanup.
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.3869786Z [command]/usr/bin/git version
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.3910594Z git version 2.55.0
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.3950355Z Temporarily overriding HOME='/home/runner/work/_temp/df08c3d5-fb01-443c-8429-4ad9332540d4' before making global git config changes
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.3951963Z Adding repository directory to the temporary git global config as a safe directory
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.3957836Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/DevOps-G16/DevOps-G16
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.3996997Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.4035421Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.4254877Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.4285514Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.4508850Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+e7-a-quality-gate	Post Run actions/checkout@v4	2026-10-24T12:08:30.4539114Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+e7-a-quality-gate	Complete job	﻿2026-10-24T12:08:30.4874858Z Cleaning up orphan processes
+e7-a-quality-gate	Complete job	2026-10-24T12:08:30.5245048Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

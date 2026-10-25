@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "image": "course1020-buildchecker:241880464",
+  "cases": [
+    {
+      "case": "unit-tests",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "case": "original-1",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "SUCCEEDED",
+      "trace_id": "e6-7163cd6de2a14a83a25f44fd1af35f12"
+    },
+    {
+      "case": "original-2",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "SUCCEEDED",
+      "trace_id": "e6-d732d00fcc4141cd9149555d6b2ecbf0"
+    },
+    {
+      "case": "original-3",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "SUCCEEDED",
+      "trace_id": "e6-fada9e45662247979a355a645f2dddf0"
+    },
+    {
+      "case": "fixed",
+      "passed": true,
+      "exit_code": 0,
+      "detector_status": "SUCCEEDED",
+      "trace_id": "e6-29fb15e4bddc471fa155b6ce255a0226"
+    },
+    {
+      "case": "build-failed",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "FAILED",
+      "trace_id": "e6-dc123772949845afa04328b24ffe5902"
+    },
+    {
+      "case": "unsupported",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "FAILED",
+      "trace_id": "e6-5207713bf70e49938f4dd50202e02152"
+    },
+    {
+      "case": "timeout",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "TIMED_OUT",
+      "trace_id": "e6-2226e78e0722413e9e10c54458e33280"
+    }
+  ],
+  "oracle_scope": "Small explicit teaching fixtures; not full paper benchmark",
+  "repeated_original_cases": 3,
+  "intentional_failure": false
+}

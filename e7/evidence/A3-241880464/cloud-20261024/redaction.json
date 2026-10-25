@@ -1,0 +1,158 @@
+{
+  "fields": [
+    "cloud hostname",
+    "personal email",
+    "absolute private checkout paths"
+  ],
+  "modified_files": [
+    "doctor.json",
+    "gate-01/driver/command.json",
+    "gate-01/gate/build-failed/command.json",
+    "gate-01/gate/fixed/command.json",
+    "gate-01/gate/original-1/command.json",
+    "gate-01/gate/original-2/command.json",
+    "gate-01/gate/original-3/command.json",
+    "gate-01/gate/timeout/command.json",
+    "gate-01/gate/unit-tests/command.json",
+    "gate-01/gate/unsupported/command.json"
+  ],
+  "excluded_files": [
+    {
+      "path": "gate-01/gate/build-failed/evidence/trace/t.12",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/build-failed/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/build-failed/evidence/trace/t.14",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/project/app",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/project/main.o",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/trace/t.14",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/trace/t.16",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/trace/t.17",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/fixed/evidence/trace/t.18",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-1/evidence/project/app",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/original-1/evidence/project/main.o",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/original-1/evidence/trace/t.12",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-1/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-1/evidence/trace/t.16",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-1/evidence/trace/t.17",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-2/evidence/project/app",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/original-2/evidence/project/main.o",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/original-2/evidence/trace/t.12",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-2/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-2/evidence/trace/t.16",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-2/evidence/trace/t.17",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-3/evidence/project/app",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/original-3/evidence/project/main.o",
+      "reason": "binary/build output"
+    },
+    {
+      "path": "gate-01/gate/original-3/evidence/trace/t.12",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-3/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-3/evidence/trace/t.16",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/original-3/evidence/trace/t.17",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/timeout/evidence/trace/t.12",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/timeout/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/unsupported/evidence/trace/t.12",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/unsupported/evidence/trace/t.13",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/unsupported/evidence/trace/t.14",
+      "reason": "raw trace retained in private original archive"
+    },
+    {
+      "path": "gate-01/gate/unsupported/evidence/trace/t.15",
+      "reason": "raw trace retained in private original archive"
+    }
+  ],
+  "acceptance_fields_unchanged": true
+}
