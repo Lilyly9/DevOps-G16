@@ -9,7 +9,7 @@
 | 角色 | 状态 | 关键判据 | 证据 |
 | --- | --- | --- | --- |
 | A3（E7-A + CI-A） | A 功能、官方失败拒绝、恢复及合并通过；资源/共享配置待确认 | 云端 6 判定+2 回归、18 服务测试、8/8 gate；新版 CI 全步骤成功 | [报告](reports/A3-241880464.md)、[云端证据](evidence/A3-241880464/cloud-20261024/index.md)、[验收表](evidence/A3-241880464/验收记录.csv) |
-| B3（E7-B + CI-B） | 待填 | gate 6 项全通过（五场景 + 单测）；超时容器已清理；CI 正常/失败/恢复 | `evidence/B3-<学号>/`、`ci/B/` |
+| B3（E7-B + CI-B） | E7-B gate + CI-B 闭环通过；内存门槛待确认 | gate 6/6（五场景 + 单测）；超时容器已清理；CI 正常/失败/恢复并合并 | [报告](reports/B3-241880597.md)、[证据](evidence/B3-241880597/)、[CI 记录](ci/B/README.md) |
 
 ## 目录
 
@@ -41,4 +41,4 @@ e7/
 
 ## B3 · E7-B + CI-B
 
-待本人补充。
+吴佳静，241880597，个人分支 `e7-gate-reject-demo-b`。云端手动跑通 build 与 gate（单测 24 passed、gate 6/6、无残留容器）；CI 三态闭环完成：正常 run 40212467838 全步骤成功，官方错误 oracle 使 `e7-b-quality-gate` 失败（run 40212926689，1 failed / 24 passed）阻断 PR #8 合并，官方 fixed 模板恢复后 run 40213089034 的 25 passed、gate 6/6 全通过，同一 PR 普通合并（merge `595f7a5`）。修正的是测试预期，未改服务算法；未用管理员绕过。云端 doctor 仍因内存 3.5 GiB < 4 GiB 未通过，与 A3 同源。详见本人报告、[验收表](evidence/B3-241880597/验收记录.csv) 和 [CI 记录](ci/B/README.md)。
