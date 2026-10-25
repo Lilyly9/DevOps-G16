@@ -112,3 +112,11 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
   - `6ab0c1f` `refactor(e5-7): split into per-stage e5/e6/e7 folders with shared code in e5`
   - `1705856` `docs(e5-7): fix remaining e5-7 paths after per-stage split`
 - 未完成 / 未代做：A1 的 E5、A3 的 E7 与 CI 仍为占位；正式 gate、CI 运行与合并记录不由本人填写。
+
+## B2：E6-B 补充（241880543，2026-10-25）
+
+- 分支：`e5-7/B2-241880543`；同步基线：`656dcd94b7bef84f9d477f34209a1c9494171810`；个人服务镜像：`course1020-draft:241880543`。
+- 已完成：环境和 Git 身份检查、课程源码与测试审阅、Windows 本地单测 24 passed、14 个 Python 文件语法检查、课程入口平台拒绝与证据校验失败的真实输出归档、五项待验收核对表、`prepare_candidate()` 与安全限制说明、Linux 续跑命令与只读独立复核示例。
+- 交付：[报告](e6/reports/B2-241880543.md)、[续跑步骤](e6/reports/B2-241880543-linux.md)、[证据索引](e6/evidence/B2-241880543/index.md)、`e6/README.md` 中仅 B2 的状态及入口、本条贡献和 AI 使用记录。
+- 未完成：当前 Windows 无 Docker，真实服务镜像构建、E6 两轮构建、同 image ID 运行及 `input_sha256` 复核均需 Linux 云服务器。B2 当前不标记验收通过。
+- 边界：没有修改课程源码、Dockerfile、他人测试/证据、CI 配置或远程设置；未执行 push、创建 PR 或合并。本地提交已由用户后续授权，准确提交 SHA 以本分支 `git log` 为准，不预填尚未生成的哈希。

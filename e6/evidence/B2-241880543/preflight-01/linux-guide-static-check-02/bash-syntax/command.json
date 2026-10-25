@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "D:/Tools/Software/Git/bin/bash.exe",
+    "-n",
+    "D:\\LearningResources\\\u5927\u4e09\u4e0a\\DevOps\\Project\\DevOps-G16\\e5\\B-draft\\work\\B2-241880543-preflight-01\\linux-guide-static-check-02\\workflow.sh"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "scope": "Static validation only; NO Docker execution"
+}

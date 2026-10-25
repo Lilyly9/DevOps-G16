@@ -9,7 +9,7 @@
 | 角色 | 状态 | 关键判据 | 证据 |
 | --- | --- | --- | --- |
 | A2（E6-A） | **完成（本地 WSL2）** | before 2 条 → after 0 条；仅 Makefile 变化；17 passed；自证 gate 8/8 | [`evidence/A2-241880496/`](evidence/A2-241880496/index.md) |
-| B2（E6-B） | 待填 | 第一轮 `MISSING_MAKE`、第二轮 `build=0`；同 `image_id` 运行 `exit=0`、`hello E3` | — |
+| B2（E6-B） | **环境阻塞（2026-10-25，Windows 无 Docker）** | 本地 24 passed；两轮真实构建、同镜像运行及输入哈希待 Linux 云服务器验证 | [`evidence/B2-241880543/`](evidence/B2-241880543/index.md) |
 
 ## A2 · E6-A 自动检测与修复复检
 
@@ -35,4 +35,8 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-
 
 ## B2 · E6-B 两轮构建与同镜像运行
 
-待本人补充（命令与预期见私发的任务分工文档 §6 B2；默认 `--replay` 可直接开跑）。
+- 分支：`e5-7/B2-241880543`；个人服务镜像：`course1020-draft:241880543`。
+- 当前环境为 Windows，`python3` 商店别名不可用，且未找到 Docker；使用可用 Python 执行课程 doctor/build/e6 均被 Linux 平台检查拒绝（退出码 2）。
+- 本地现有 B 包单测 **24 passed**；课程证据校验因缺少 `result.json` 返回 **1 / passed=false**。未将单测中的 Docker 桩当作真实构建证据。
+- 报告：[源码解释与五项核对表](reports/B2-241880543.md)；证据：[索引](evidence/B2-241880543/index.md)；待执行：[Linux 续跑步骤](reports/B2-241880543-linux.md)。
+- 本次不标记 E6-B 完成，不涉及 B3 门禁、CI 或合并演示。

@@ -1,0 +1,6 @@
+# Preserve captured evidence bytes across Windows/Linux checkouts.
+*.log -text
+*.json -text
+*.txt -text
+*.sha256 -text
+preflight-01/** -text

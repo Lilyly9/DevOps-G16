@@ -1,0 +1,18 @@
+{
+  "scope": "Read-only independent inventory; no Docker execution or generated experiment result",
+  "paths_exist": {
+    "work\\e6-B2-replay\\evidence\\result.json": false,
+    "work\\e6-B2-replay\\evidence\\iter-01\\build-stdout.log": false,
+    "work\\e6-B2-replay\\evidence\\iter-01\\build-stderr.log": false,
+    "work\\e6-B2-replay\\evidence\\iter-02\\build-stdout.log": false,
+    "work\\e6-B2-replay\\evidence\\iter-02\\build-stderr.log": false,
+    "work\\e6-B2-replay\\evidence\\iter-02\\image-inspect.json": false,
+    "work\\e6-B2-replay\\evidence\\verify.log": false,
+    "work\\e6-B2-replay\\evidence\\verify-stderr.log": false,
+    "work\\e6-B2-replay\\evidence\\project": false
+  },
+  "report_available": false,
+  "project_sha256": null,
+  "comparison_possible": false,
+  "verdict": "FAIL: required experiment artifacts absent"
+}

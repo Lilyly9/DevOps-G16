@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "D:\\Tools\\Software\\python\\python.exe",
+    "scripts/lab_cloud.py",
+    "doctor"
+  ],
+  "cwd": "e5\\B-draft",
+  "time_utc": "2026-10-25T14:29:21.949539+00:00",
+  "exit_code": 2,
+  "elapsed_ms": 140
+}
