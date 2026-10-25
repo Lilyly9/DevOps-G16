@@ -1,16 +1,9 @@
-"""A3 authored equivalent: only the expected dependency differs between versions."""
-import tempfile
-from pathlib import Path
+"""Deliberately wrong oracle for the protected-branch teaching demonstration.
 
-from buildchecker.fullcheck import declaration_graph
+Capture failed CI and merge rejection before correcting the expected code.
+"""
+from buildchecker.cli import main
 
 
-def test_ci_reject_demo():
-    with tempfile.TemporaryDirectory() as folder:
-        database = Path(folder) / "make-db.txt"
-        database.write_text(
-            "# Files\nmain.o: main.c config.h\n# files hash-table stats:\n",
-            encoding="utf-8",
-        )
-        declared = declaration_graph(database, "/course/project")
-        assert set(declared["main.o"]["dependencies"]) == {"main.c", "config.h"}
+def test_intentionally_wrong_version_exit_code():
+    assert main(["version"]) == 1, "Intentional teaching fault: version actually returns zero"
