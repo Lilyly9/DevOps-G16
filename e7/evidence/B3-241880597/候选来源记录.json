@@ -1,0 +1,12 @@
+{
+  "provider": "DeepSeek（包内记录回放）",
+  "model_version": "未记录（包内候选，非实时生成）",
+  "date": "2026-10-25",
+  "prompt_path": "",
+  "raw_response_path": "",
+  "candidate_path": "e5/B-draft/fixtures/ci-candidates/DeepSeek-E5.Dockerfile",
+  "candidate_sha256": "ede21b0fab394071641526e2fccefc41565efb00de6fb54d9d5b906aebeb535d",
+  "manual_changes": [],
+  "selection_reason": "E7-B gate 与 CI 均用 --replay 回放包内 DeepSeek 候选；来源与采集方式见 e5/B-draft/fixtures/ci-candidates/provenance.json（手工迁移 E5 error-driven prompt，非 API 调用）",
+  "is_recorded_replay": true
+}
