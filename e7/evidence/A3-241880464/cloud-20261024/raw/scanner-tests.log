@@ -1,0 +1,7 @@
+test_legacy_history_without_secret_finishes (test_secret_scan_241880464.LegacyHistoryTests) ... ok
+test_secret_after_legacy_bytes_is_still_rejected_and_masked (test_secret_scan_241880464.LegacyHistoryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.064s
+
+OK

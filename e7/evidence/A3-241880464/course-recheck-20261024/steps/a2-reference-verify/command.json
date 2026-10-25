@@ -1,0 +1,8 @@
+[
+  "python3",
+  "scripts/verify_e6_evidence.py",
+  "--before",
+  "<REPO>/e6/evidence/A2-241880496/before/findings.json",
+  "--after",
+  "<REPO>/e6/evidence/A2-241880496/after/findings.json"
+]

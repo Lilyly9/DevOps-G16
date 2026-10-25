@@ -1,0 +1,33 @@
+#0 building with "default" instance using docker driver
+
+#1 resolve image config for docker-image://m.daocloud.io/docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#1 DONE 0.1s
+
+#2 docker-image://m.daocloud.io/docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#2 resolve m.daocloud.io/docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load build definition from Dockerfile
+#3 transferring dockerfile: 1.69kB done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#4 DONE 0.9s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 106B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 38.58kB done
+#6 DONE 0.0s
+
+#7 [1/8] FROM m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#7 resolve m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.0s done
+#7 CACHED
+
+#8 [2/8] RUN apt-get update  && apt-get install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#8 0.676 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#8 2.420 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#8 3.464 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#8 5.172 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9678 kB]

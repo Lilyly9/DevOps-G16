@@ -1,0 +1,33 @@
+{
+  "time": "2026-10-24T11:08:21.047002+00:00",
+  "hostname": "<LOCAL_HOST>",
+  "os": "CachyOS",
+  "kernel": "7.3.0-3-cachyos",
+  "arch": "x86_64",
+  "spec": {
+    "cpus": 28,
+    "mem_gib": 15.3,
+    "disk_gib": 625.5
+  },
+  "tools": {
+    "docker": "29.9.2",
+    "compose": "5.6.1",
+    "buildx": "github.com/docker/buildx v0.38.1 0dbe87f36ed472fe36b6796c3f70b4210a731fc5",
+    "git": "git version 2.56.0",
+    "make": "GNU Make 4.4.1",
+    "python3": "Python 3.14.8"
+  },
+  "problems": [],
+  "warnings": [
+    "Docker 未配置镜像加速，拉取基础镜像可能很慢（见 setup/bootstrap_ubuntu.sh）",
+    "服务器上设置了全局身份 user.name=WhiteNights；组员共用一个登录账号，建议删除：git config --global --unset user.name"
+  ],
+  "docker_sock_gid": 946,
+  "registry_mirrors": [],
+  "git": {
+    "user.name": "241880464",
+    "user.email": "<REDACTED_EMAIL>"
+  }
+}
+
+环境自检：通过

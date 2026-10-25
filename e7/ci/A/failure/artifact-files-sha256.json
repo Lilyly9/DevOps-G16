@@ -1,0 +1,19 @@
+{
+  "build/build/command.json": "5b19b47ee3f5551c1b329109e5b294232b726927a12e333b8bd5157d3405a856",
+  "build/build/exit-code.json": "124fd50cb6d223cdd18fedc166d00af7254199b6e6dedf9be82f71db87af6d01",
+  "build/build/stderr.log": "278b4529dee38e622a297c1965fd4fe5826cc9156e80e8f8c3aef23e15db1997",
+  "build/build/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build/image/command.json": "4f63522ccd33b5e081c85bf87e37330ae5ebd06a764ab7147e992c75b3b3948e",
+  "build/image/exit-code.json": "124fd50cb6d223cdd18fedc166d00af7254199b6e6dedf9be82f71db87af6d01",
+  "build/image/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build/image/stdout.log": "f22900de58554155327d47120044ef209984f241d6792eabeb22a5d637be0339",
+  "build/invocation.json": "ad660f4b4cc62799b019492941012776d0293128d140f49b7244fb0bb4d2a58a",
+  "build/unit-tests/command.json": "d5ae37d27e9a16d132b8323a6be9019da19a1140b4afa2f8e34e41baaf0eb6ca",
+  "build/unit-tests/exit-code.json": "2618b95f1f6be6bfde8537756f85b83845d039001563135b9d59d817446733eb",
+  "build/unit-tests/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "build/unit-tests/stdout.log": "128fa9362c8d229ac16c6f2d785daeb9535b91e57c78e8cd18a8d4e0e58b2232",
+  "commit.txt": "5b01384d0280973b1ecea05ec1e3182e4a0a48a9a9501341958be5da038185be",
+  "event.txt": "3adc60ec66441bfef69c8ad87bb83111b51553958e4a49cb2a3caeebd781a2cd",
+  "oracle-tests.log": "dc4a55440683279a6826a015a3aed959f8459efdc1a9b5258a623a4a3b6faef0",
+  "pr-head.txt": "7222c6b62265b0e17dd5c01060548693922b84fad0f733e8ea329564ad8b739d"
+}

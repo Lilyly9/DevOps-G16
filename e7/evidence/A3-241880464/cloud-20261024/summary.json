@@ -1,0 +1,46 @@
+{
+  "provenance": "DOWNLOADED_CLOUD_ARCHIVE_VERIFIED_LOCALLY",
+  "archive_sha256": "f12433c271baab05b9e172542aaf8659795c2e010deaf30e57a738827af65055",
+  "independent_ssh_reread": false,
+  "server_side_archive_hash_supplied": false,
+  "source_commit": "176d624ec4e215aedeadb1a8057f87bb8d32eb4d",
+  "image_id": "sha256:1aae40280c5a233f66cd72c771699f4c0a9453526a7ee2ce61b773f5109dc0ab",
+  "build_and_gate_image_id_equal": true,
+  "functional_status": "PASS",
+  "doctor_status": "PENDING_RESOURCE_REQUIREMENT",
+  "memory_gib": 3.5,
+  "doctor_problems": [
+    "mem_gib=3.5 低于最低要求 4"
+  ],
+  "recorded_exit_codes": {
+    "build": 0,
+    "service-tests": 0,
+    "gate": 0,
+    "oracle": 0,
+    "scanner-tests": 0,
+    "source-history-scan": 0,
+    "image-scan": 0,
+    "syntax": 0,
+    "toolchain": 0
+  },
+  "service_tests": 18,
+  "independent_oracle_tests": 6,
+  "scanner_regression_tests": 2,
+  "gate_passed_cases": 8,
+  "changed_inputs": [
+    "Makefile"
+  ],
+  "distinct_original_trace_ids": true,
+  "build_method": "Manual Docker build using a work-only mirror recipe; original default lab_cloud build failed",
+  "mirror_recipe_only_expected_network_changes": true,
+  "original_dockerfile_sha256": "9d1f75a1cb05c022685f7cbebd058f0e250d3bff0818a2d4fbc54bdbda946c1d",
+  "mirror_dockerfile_sha256": "6fe6a85ce93fa99943aa7817effcf5842203448456d2911a30d6b8a8cab17f4c",
+  "base_image_digest": "sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74",
+  "attempt_1_exit_code": 1,
+  "attempt_2_exit_code": null,
+  "attempt_2_note": "Saved log stopped at Debian Packages download; no final exit-code file",
+  "syntax_and_scans": "PASS",
+  "raw_files": 218,
+  "archived_text_files": 184,
+  "scope": "Cloud functional verification; not hardware acceptance, policy rejection, or final merge"
+}
