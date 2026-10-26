@@ -11,6 +11,8 @@
 
 > 说明：本班次在本地 WSL2（非组内云主机）执行，原因与影响见文末“限制”。
 
+> **最终 main 复核（2026-10-26）**：在 `36047e3` 上重跑全部步骤，结论一致（单测 19 passed、gate 8/8）。详见 [`recheck-20261026/index.md`](recheck-20261026/index.md)。
+
 ## 命令（可整段重跑）
 
 ```bash
@@ -51,8 +53,7 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-
 
 | 路径 | 内容 |
 | --- | --- |
-| `doctor/env.json` | 环境自检（工具版本、资源、Git 本地身份、镜像加速） |
-| `before/findings.json` | 原始样例检测报告（2 条错误、`trace_id=e6-d4fd7a0a183c4c218c5d346f1bdab355`） |
+| `doctor/env.json` | 环境自检（工具版本、资源、Git 本地身份、镜像加速） || `before/findings.json` | 原始样例检测报告（2 条错误、`trace_id=e6-d4fd7a0a183c4c218c5d346f1bdab355`） |
 | `before/actual-graph.json`、`declared-graph.json`、`processes.json` | 实际图 / 声明图 / 进程归属 |
 | `before/make-db.txt` | `make -p app` 的 Make 数据库原文（声明证据） |
 | `before/trace/t.14`、`t.15` | 触发 MD 的两条读取记录（原始共 7 个 trace，见 `before/trace-index.md`） |
