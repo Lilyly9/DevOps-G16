@@ -1,7 +1,7 @@
 编号,轨道,阶段,项目,状态,证据路径或URL,说明
 C01,共同,环境,云主机与Docker,PASS,e6/evidence/A2-241880496/doctor/env.json,Ubuntu 26.04 LTS on WSL2；4 CPU / 7.8 GiB；Docker 29.5.2（非组内云主机，见报告“故障与限制”）
 C02,共同,E5,真实复现与差异,PENDING,e5/evidence/A1-241880485/index.md,由 A1 负责；证据已在其分支，随 PR 合入
-C03,共同,E6,输入哈希报告日志,PASS,e6/evidence/A2-241880496/before/findings.json;e6/evidence/A2-241880496/after/findings.json,findings 2→0；仅 Makefile 哈希变化；原始日志见同目录 make-db.txt 与 trace/
+C03,共同,E6,输入哈希报告日志,PASS,e6/evidence/A2-241880496/before/input/;e6/evidence/A2-241880496/before/findings.json,输入副本与其 SHA-256 逐项一致；findings 2→0；仅 Makefile 哈希变化；原始日志见 runner/、make-db.txt 与 trace/
 C04,共同,E7,自主扩展测试,PASS,e5/A-buildchecker/services/buildchecker/tests/test_extra_241880496.py,2 项边界测试；首次 17 passed，最终 main 复核 19 passed
 C05,共同,CI,正常失败恢复及artifact,PASS,e7/ci/A/official-protected-20261025/,A3 执行：正常 run 40092663505；失败 run 40207305472（1 failed/18 passed）；恢复 run 40207413777（19 passed + gate 8/8）
 C06,共同,CI,必需检查与实际拒绝合并,PASS,e7/ci/A/official-protected-20261025/,A3 执行：PR #4 普通合并退出码 1 被策略拒绝，恢复后合并 commit 0277daa；strict/enforce_admins 完整读取返回 404，未独立验证（A3 已说明）

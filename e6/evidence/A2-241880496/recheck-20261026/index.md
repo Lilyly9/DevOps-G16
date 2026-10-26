@@ -35,6 +35,8 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-recheck --image course1020-bu
 | 路径 | 内容 |
 | --- | --- |
 | `before/findings.json`、`before/make-db.txt` | 原始检测报告与 Make 声明（`trace_id=e6-1114ff2d004f4fe1b0120fe798d8237d`） |
+| `before/input/`、`after/input/` | 输入副本；哈希与各自 `findings.json` 的 `input_sha256` 逐项一致，仅 `Makefile` 在 after 中不同 |
+| `before/runner/`、`after/runner/` | 入口命令、原始 stdout/stderr 与退出码 |
 | `before/trace/t.14`、`t.15` | MD 的读取与目标写出锚点 |
 | `after/findings.json` | 修复复检（`trace_id=e6-6dbd29621dd743d0bb2d50eb7fc51dbc`，`findings=[]`） |
 | `verify-e6.json` | 前后一致性校验输出（`passed=true`） |
