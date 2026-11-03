@@ -1,0 +1,22 @@
+[
+  {
+    "argv": [
+      "git",
+      "config",
+      "--show-origin",
+      "--get",
+      "core.autocrlf"
+    ],
+    "exit_code": 0
+  },
+  {
+    "argv": [
+      "git",
+      "ls-files",
+      "--eol",
+      "e5/B-draft/fixtures/ci-candidates/DeepSeek-E5.Dockerfile",
+      "e5/B-draft/services/draft/draft/autobuild.py"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python3",
+    "--version"
+  ],
+  "cwd": "e5\\B-draft",
+  "time_utc": "2026-10-25T14:29:21.503887+00:00",
+  "exit_code": 9009,
+  "elapsed_ms": 219
+}

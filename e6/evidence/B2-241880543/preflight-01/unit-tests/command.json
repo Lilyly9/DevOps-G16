@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "D:\\Tools\\Software\\python\\python.exe",
+    "-m",
+    "pytest",
+    "-v",
+    "-o",
+    "addopts=-p no:cacheprovider"
+  ],
+  "cwd": "e5\\B-draft\\services\\draft",
+  "time_utc": "2026-10-25T14:29:22.452744+00:00",
+  "exit_code": 0,
+  "elapsed_ms": 2000
+}

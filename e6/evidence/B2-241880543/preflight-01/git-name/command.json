@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "git",
+    "config",
+    "--local",
+    "user.name"
+  ],
+  "cwd": "e5\\B-draft",
+  "time_utc": "2026-10-25T14:29:21.370987+00:00",
+  "exit_code": 0,
+  "elapsed_ms": 62
+}

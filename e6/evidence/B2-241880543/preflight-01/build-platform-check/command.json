@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "D:\\Tools\\Software\\python\\python.exe",
+    "scripts/lab_cloud.py",
+    "build",
+    "--out",
+    "work/build-B2-01",
+    "--image",
+    "course1020-draft:241880543",
+    "--build-timeout",
+    "1200"
+  ],
+  "cwd": "e5\\B-draft",
+  "time_utc": "2026-10-25T14:29:22.104647+00:00",
+  "exit_code": 2,
+  "elapsed_ms": 156
+}

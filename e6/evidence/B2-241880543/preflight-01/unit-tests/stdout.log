@@ -1,0 +1,34 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.10, pytest-8.4.2, pluggy-1.6.0 -- D:\Tools\Software\python\python.exe
+rootdir: D:\LearningResources\大三上\DevOps\Project\DevOps-G16\e5\B-draft\services\draft
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.2, cov-6.3.0
+collecting ... collected 24 items
+
+tests/test_autobuild.py::CandidateTests::test_bypassed_build_rejected PASSED [  4%]
+tests/test_autobuild.py::CandidateTests::test_changed_base_rejected PASSED [  8%]
+tests/test_autobuild.py::CandidateTests::test_missing_make_is_expected PASSED [ 12%]
+tests/test_autobuild.py::CandidateTests::test_multiline_install PASSED   [ 16%]
+tests/test_autobuild.py::CandidateTests::test_network_failure_is_not_reproduction PASSED [ 20%]
+tests/test_autobuild.py::CandidateTests::test_other_failure_is_not_missing_make PASSED [ 25%]
+tests/test_autobuild.py::CandidateTests::test_preserves_baseline_and_pin PASSED [ 29%]
+tests/test_autobuild.py::CandidateTests::test_replaced_command_rejected PASSED [ 33%]
+tests/test_autobuild.py::CandidateTests::test_unfinished_continuation_rejected PASSED [ 37%]
+tests/test_autobuild.py::CandidateTests::test_unpinned_candidate_rejected PASSED [ 41%]
+tests/test_cli.py::test_version PASSED                                   [ 45%]
+tests/test_cli.py::test_smoke_defaults PASSED                            [ 50%]
+tests/test_cli.py::test_smoke_reports_missing_docker PASSED              [ 54%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_build_timeout_is_terminal PASSED [ 58%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_cli_failure_exit PASSED [ 62%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_correct_output_with_nonzero_exit_fails PASSED [ 66%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_empty_log_is_not_reproduction PASSED [ 70%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_initial_success_is_not_missing_make PASSED [ 75%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_network_error_aborts_before_repair PASSED [ 79%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_repair_failure_has_no_verification PASSED [ 83%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_runtime_timeout_attempts_cleanup PASSED [ 87%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_success_uses_built_image PASSED [ 91%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_unknown_error_is_not_reproduction PASSED [ 95%]
+tests/test_workflow_failures.py::WorkflowFailureTests::test_zero_exit_with_wrong_output_fails PASSED [100%]
+
+============================= 24 passed in 1.10s ==============================

@@ -1,0 +1,236 @@
+{
+  "student_id": "241880543",
+  "branch": "e5-7/B2-241880543",
+  "image": "course1020-draft:241880543",
+  "time_utc": "2026-10-25T14:29:24.477620+00:00",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "sys_platform": "win32",
+  "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+  "python_executable": "D:\\Tools\\Software\\python\\python.exe",
+  "python3_executable": "C:\\Users\\Staris\\AppData\\Local\\Microsoft\\WindowsApps\\python3.EXE",
+  "docker_executable": null,
+  "scope": "Windows static and local unit checks only; NO Docker build or runtime verification completed",
+  "required_materials": {
+    "docs/03_B轨道操作指南.md": false,
+    "docs/04_GitHub_CI与合并门禁.md": false,
+    "docs/05_验收清单.md": false,
+    "E5-7_TASKS(1).md": false,
+    "E5-7_TASKS.md": false,
+    "e5/B-draft/docs/00_开始与目录.md": false
+  },
+  "unit_tests_exit_code": 0,
+  "syntax_check": {
+    "files": 14,
+    "passed": true
+  },
+  "candidate_static_check": {
+    "prepare_candidate_accepted": true,
+    "candidate_raw_sha256": "3473d3d2d26c3c20b3a899c7c061992fabe96bb7227e6666ad67390a77dd8f98",
+    "candidate_text_utf8_sha256": "ede21b0fab394071641526e2fccefc41565efb00de6fb54d9d5b906aebeb535d",
+    "provenance_sha256": "ede21b0fab394071641526e2fccefc41565efb00de6fb54d9d5b906aebeb535d",
+    "normalized_instructions": [
+      "FROM python:3.13-slim@sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f",
+      "WORKDIR /work",
+      "COPY main.c Makefile ./",
+      "RUN apt-get update && apt-get install -y --no-install-recommends build-essential && rm -rf /var/lib/apt/lists/*",
+      "RUN make",
+      "CMD [\"./hello\"]"
+    ],
+    "prepared_baseline": "FROM python:3.13-slim@sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f\nWORKDIR /work\nCOPY main.c Makefile ./\nRUN make\nCMD [\"./hello\"]\n"
+  },
+  "experiment_outputs_created": {
+    "work/build-B2-01": false,
+    "work/e6-B2-replay": false,
+    "work/e6-B2-replay/evidence/result.json": false
+  },
+  "commands": [
+    {
+      "label": "git-status",
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.190518+00:00",
+      "exit_code": 0,
+      "elapsed_ms": 109
+    },
+    {
+      "label": "git-head",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD",
+        "main",
+        "origin/main"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.300631+00:00",
+      "exit_code": 0,
+      "elapsed_ms": 63
+    },
+    {
+      "label": "git-name",
+      "argv": [
+        "git",
+        "config",
+        "--local",
+        "user.name"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.370987+00:00",
+      "exit_code": 0,
+      "elapsed_ms": 62
+    },
+    {
+      "label": "git-email",
+      "argv": [
+        "git",
+        "config",
+        "--local",
+        "user.email"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.430018+00:00",
+      "exit_code": 0,
+      "elapsed_ms": 47
+    },
+    {
+      "label": "python-version",
+      "argv": [
+        "D:\\Tools\\Software\\python\\python.exe",
+        "--version"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.480208+00:00",
+      "exit_code": 0,
+      "elapsed_ms": 16
+    },
+    {
+      "label": "python3-version",
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.503887+00:00",
+      "exit_code": 9009,
+      "elapsed_ms": 219
+    },
+    {
+      "label": "docker-version",
+      "argv": [
+        "docker",
+        "version"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.723700+00:00",
+      "exit_code": null,
+      "launch_error": "[WinError 2] 系统找不到指定的文件。",
+      "elapsed_ms": 0
+    },
+    {
+      "label": "docker-info",
+      "argv": [
+        "docker",
+        "info"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.725696+00:00",
+      "exit_code": null,
+      "launch_error": "[WinError 2] 系统找不到指定的文件。",
+      "elapsed_ms": 0
+    },
+    {
+      "label": "requested-doctor-python3",
+      "argv": [
+        "python3",
+        "scripts/lab_cloud.py",
+        "doctor"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.728733+00:00",
+      "exit_code": 9009,
+      "elapsed_ms": 219
+    },
+    {
+      "label": "doctor-platform-check",
+      "argv": [
+        "D:\\Tools\\Software\\python\\python.exe",
+        "scripts/lab_cloud.py",
+        "doctor"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:21.949539+00:00",
+      "exit_code": 2,
+      "elapsed_ms": 140
+    },
+    {
+      "label": "build-platform-check",
+      "argv": [
+        "D:\\Tools\\Software\\python\\python.exe",
+        "scripts/lab_cloud.py",
+        "build",
+        "--out",
+        "work/build-B2-01",
+        "--image",
+        "course1020-draft:241880543",
+        "--build-timeout",
+        "1200"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:22.104647+00:00",
+      "exit_code": 2,
+      "elapsed_ms": 156
+    },
+    {
+      "label": "e6-platform-check",
+      "argv": [
+        "D:\\Tools\\Software\\python\\python.exe",
+        "scripts/lab_cloud.py",
+        "e6",
+        "--replay",
+        "--out",
+        "work/e6-B2-replay",
+        "--image",
+        "course1020-draft:241880543",
+        "--build-timeout",
+        "600"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:22.255653+00:00",
+      "exit_code": 2,
+      "elapsed_ms": 141
+    },
+    {
+      "label": "verify-e6",
+      "argv": [
+        "D:\\Tools\\Software\\python\\python.exe",
+        "scripts/verify_e6_b_evidence.py",
+        "--run-dir",
+        "work/e6-B2-replay/evidence"
+      ],
+      "cwd": "e5\\B-draft",
+      "time_utc": "2026-10-25T14:29:22.390278+00:00",
+      "exit_code": 1,
+      "elapsed_ms": 62
+    },
+    {
+      "label": "unit-tests",
+      "argv": [
+        "D:\\Tools\\Software\\python\\python.exe",
+        "-m",
+        "pytest",
+        "-v",
+        "-o",
+        "addopts=-p no:cacheprovider"
+      ],
+      "cwd": "e5\\B-draft\\services\\draft",
+      "time_utc": "2026-10-25T14:29:22.452744+00:00",
+      "exit_code": 0,
+      "elapsed_ms": 2000
+    }
+  ]
+}

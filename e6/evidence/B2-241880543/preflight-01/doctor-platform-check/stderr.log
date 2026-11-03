@@ -1,0 +1,5 @@
+usage: lab_cloud.py [-h] [--out OUT] [--image IMAGE] [--fixed]
+                    [--candidate CANDIDATE | --replay]
+                    [--build-timeout BUILD_TIMEOUT]
+                    {doctor,build,e5,e6,gate}
+lab_cloud.py: error: Run after SSH login on the Linux cloud host; Windows is not the experiment host

@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "scripts/lab_cloud.py",
+    "doctor"
+  ],
+  "cwd": "e5\\B-draft",
+  "time_utc": "2026-10-25T14:29:21.728733+00:00",
+  "exit_code": 9009,
+  "elapsed_ms": 219
+}
