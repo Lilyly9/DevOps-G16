@@ -1,0 +1,107 @@
+{
+  "schema_version": "e8e10-1",
+  "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+  "commit": "a58c19b42a0b236ddcbefde77445d84d87a51aaa",
+  "key": {
+    "directives": {
+      "branch.h": [
+        "#include \"leaf.h\""
+      ],
+      "config.h": [
+        "#include \"branch.h\"",
+        "#define VALUE 1"
+      ],
+      "extra.h": [
+        "#define EXTRA 0"
+      ],
+      "helper.c": [],
+      "leaf.h": [
+        "#define LEAF_ZERO 0"
+      ],
+      "main.c": [
+        "#include <stdio.h>",
+        "#include \"config.h\""
+      ],
+      "unused.h": []
+    },
+    "recipes": [
+      "\tgcc main.o helper.o -o app",
+      "\tgcc $(CFLAGS) -c main.c -o main.o",
+      "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+      "\trm -f main.o helper.o app"
+    ],
+    "flags": "-O0",
+    "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+  },
+  "actual": {
+    "main.o": [
+      "branch.h",
+      "config.h",
+      "leaf.h",
+      "main.c"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "declared": {
+    "main.o": [
+      "main.c",
+      "unused.h"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "branch.h"
+    },
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h"
+    },
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "leaf.h"
+    },
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h"
+    }
+  ],
+  "added": [
+    [
+      "MISSING",
+      "main.o",
+      "branch.h"
+    ],
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "MISSING",
+      "main.o",
+      "leaf.h"
+    ],
+    [
+      "REDUNDANT",
+      "main.o",
+      "unused.h"
+    ]
+  ],
+  "resolved": [],
+  "refreshed": [
+    "main.o",
+    "helper.o"
+  ],
+  "reused": [],
+  "elapsed_s": 0.011354492977261543
+}

@@ -1,0 +1,68 @@
+仓库=/root/241880464/DevOps-G16-e10-A3-20261103
+学号=241880464
+镜像=course-e8e10:241880464
+本次证据目录=work/e9-A-manual.VFX1Xj
+CREATED work/e9-A-manual.VFX1Xj/project
+STEP_EXIT_CODE=0
+/root/241880464/DevOps-G16-e10-A3-20261103
+00f4fe22ba53d5b3da45363ea8d1285845684daa
+CFLAGS = -O0
+app: main.o helper.o
+	gcc main.o helper.o -o app
+main.o: main.c unused.h
+	gcc $(CFLAGS) -c main.c -o main.o
+helper.o: helper.c
+	gcc $(CFLAGS) -c helper.c -o helper.o
+.PHONY: clean
+clean:
+	rm -f main.o helper.o app
+#include <stdio.h>
+#include "config.h"
+int helper(void);
+int main(void){printf("%d\n",VALUE+helper());return 0;}
+#define VALUE 1
+int helper(void){return 0;}
+441d0e2 C0 baseline
+C0_BUILD_AND_BASELINE_PASS
+STEP_EXIT_CODE=0
+C1 a318ebb33b709ce0ccdd702641ab0e0ad29823c9
+gcc -O0 -c main.c -o main.o
+gcc main.o helper.o -o app
+
+STEP_EXIT_CODE=0
+C1_REUSE_PASS ['main.o', 'helper.o']
+STEP_EXIT_CODE=0
+C2 767b6748b23014d3e59c17ad4e9d20172cea2e88
+gcc -O0 -c main.c -o main.o
+gcc main.o helper.o -o app
+
+STEP_EXIT_CODE=0
+C2_REFRESH_PASS [['MISSING', 'main.o', 'extra.h']]
+STEP_EXIT_CODE=0
+C3 960311bcddf814b6ed06a89e43b410bc48f1ade6
+CFLAGS = -O0
+app: main.o helper.o
+	gcc main.o helper.o -o app
+main.o: main.c unused.h config.h extra.h
+	gcc $(CFLAGS) -c main.c -o main.o
+helper.o: helper.c
+	gcc $(CFLAGS) -c helper.c -o helper.o
+.PHONY: clean
+clean:
+	rm -f main.o helper.o app
+
+STEP_EXIT_CODE=0
+C3_RESOLVED_PASS [['MISSING', 'main.o', 'config.h'], ['MISSING', 'main.o', 'extra.h']]
+STEP_EXIT_CODE=0
+441d0e2 C0 baseline
+a318ebb C1 body change
+767b674 C2 include change
+960311b C3 repair declarations
+baseline 441d0e23fba47a32edbb823c35d2f41081b17765 [] ['main.o', 'helper.o'] [['MISSING', 'main.o', 'config.h'], ['REDUNDANT', 'main.o', 'unused.h']] []
+C1 a318ebb33b709ce0ccdd702641ab0e0ad29823c9 ['main.o', 'helper.o'] [] [] []
+C2 767b6748b23014d3e59c17ad4e9d20172cea2e88 [] ['main.o', 'helper.o'] [['MISSING', 'main.o', 'extra.h']] []
+C3 960311bcddf814b6ed06a89e43b410bc48f1ade6 ['main.o', 'helper.o'] [] [] [['MISSING', 'main.o', 'config.h'], ['MISSING', 'main.o', 'extra.h']]
+/root/241880464/DevOps-G16-e10-A3-20261103/work/e9-A-manual.VFX1Xj/project-history.bundle is okay
+The bundle contains this ref:
+960311bcddf814b6ed06a89e43b410bc48f1ade6 HEAD
+The bundle records a complete history.

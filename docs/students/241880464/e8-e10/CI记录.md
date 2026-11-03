@@ -1,4 +1,14 @@
-# A3 GitHub / CI 记录
+# A3 GitHub / CI 记录：本人三阶段
+
+## 按助教要求补齐三阶段的当前记录
+
+每位成员必须完整完成自己的轨道三阶段，旧阶段主责安排不再替代个人实验。本人E8/E9标准与扩展的实际源码为00f4fe22ba53d5b3da45363ea8d1285845684daa；E10旧原件实际源码4cf51fa继续保留。
+
+[三阶段代码PR事件run 41631873650](https://github.com/Lilyly9/DevOps-G16/actions/runs/41631873650)绑定00f4fe22ba53d5b3da45363ea8d1285845684daa，conclusion=success；原7项加本人3项共10测、A/B六路线、本人E10五次宏场景及E8/E9真实动态扩展均成功。artifact与run元数据保存work/ci-e8e10/41631873650，并随完整包双端交付。
+
+后续仅补报告/原件/范围更正文档，最终PR head的真实CI与artifact在仓库外“A3-E8-E10-全阶段-20261103”包旁交付状态.json登记；绝不使用旧head的绿色替代最终提交。个人PR仍为#16，助教要求组长审核验证后的贡献再合入main，实际合并结果另按GitHub记录登记。
+
+以下为前一次E10阶段的历史记录，保留失败/恢复和旧artifact身份区别，不能当成本次补齐后的最新提交：
 
 [个人 PR #16](https://github.com/Lilyly9/DevOps-G16/pull/16)，分支student/241880464/e8-e10。正式实验源码与本次成功PR事件head为 `4cf51fa78bc856c9b0c3c559c8e10ebf6a4c64a2`。
 

@@ -1,0 +1,4 @@
+**/make-db.txt -text -whitespace
+**/trace/* -text -whitespace
+**/*.csv -text -whitespace
+**/*.log -text -whitespace
