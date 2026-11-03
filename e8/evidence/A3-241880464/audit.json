@@ -1,0 +1,47 @@
+{
+  "source_sha": "00f4fe22ba53d5b3da45363ea8d1285845684daa",
+  "outs": {
+    "e8-A-standard": "work/e8-A-manual.EY0rdk",
+    "e9-A-standard": "work/e9-A-manual.VFX1Xj",
+    "e8-A-extension": "work/e8-A-manual.XkTQNp",
+    "e9-A-extension": "work/e9-A-manual.sKdTc4"
+  },
+  "e8_real_baseline_and_reuse": true,
+  "e9_exact_graphs_findings_history_and_build_logs": true,
+  "history_restore": {
+    "e8-A-standard": {
+      "commits": 1,
+      "head": "337db57f27564cbd7f1701d4d8c6b8ea30880bb9"
+    },
+    "e9-A-standard": {
+      "commits": 4,
+      "head": "960311bcddf814b6ed06a89e43b410bc48f1ade6"
+    },
+    "e8-A-extension": {
+      "commits": 2,
+      "head": "f03a81eccd47797ad15b11aabe1e72dbbd3d75bb"
+    },
+    "e9-A-extension": {
+      "commits": 4,
+      "head": "aca1947a87e5e9b1524fdbd8edf9a4dee7278d7e"
+    }
+  },
+  "dynamic_reparse": {
+    "e8-A-standard/buildchecker": {
+      "status": "SUCCEEDED",
+      "trace_id": "e6-1c5bb205f71543b3a86839cd6b7d3227"
+    },
+    "e8-A-extension/after-buildchecker": {
+      "status": "SUCCEEDED",
+      "trace_id": "e6-7b8e19c388854bc781025078862a4be2"
+    },
+    "e8-A-extension/baseline-buildchecker": {
+      "status": "SUCCEEDED",
+      "trace_id": "e6-d15c72bdd5ef4285ae35c3fd6e49cf5d"
+    },
+    "e9-A-extension/final-buildchecker": {
+      "status": "SUCCEEDED",
+      "trace_id": "e6-d6e74da15a8f44fb96b93183986322eb"
+    }
+  }
+}
