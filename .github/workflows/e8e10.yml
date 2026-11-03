@@ -34,6 +34,14 @@ jobs:
           set -euo pipefail
           mkdir -p work/A3-extension
           docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 labs/e8e10/student_241880464.py /course/work/A3-extension 2>&1 | tee work/A3-extension.log
+      - name: Validate personal E8 and E9 extensions
+        shell: bash
+        run: |
+          set -euo pipefail
+          for stage in e8 e9; do
+            mkdir -p "work/A3-$stage-extension"
+            docker run --rm --network none --cap-add SYS_PTRACE --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 labs/e8e10/student_241880464_followup.py "$stage" "/course/work/A3-$stage-extension" 2>&1 | tee "work/A3-$stage-extension.log"
+          done
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
