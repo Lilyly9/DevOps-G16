@@ -37,3 +37,5 @@ unchanged/body/declaration 复用两个目标；include/flags/header 保守刷�
 原 E8 证据和本机旧 E8 包保留。完整新个人备份按用户选择仅保存在本机，另附 SHA256；它不是 A16 全组包。A1 本人 [E8](../../../e8/evidence/A1-241880485/index.md)、[E9](../../../e9/evidence/A1-241880485/index.md) 与本目录共同覆盖三个阶段；E11—E12 跨组联调未开展。
 
 下载后独立审查：[完整结果](verification/remaining-independent-audit.json)、[审查脚本](verification/audit_remaining.py)。199 项核验通过，errors 为空；内部历史恢复、输入推导集合、逐次计时/统计和三套动态原件重解析均核对，原下载文件哈希未变化。审查的限制在结果内单独列明，不以离线审查重新生成计时。
+
+本人三阶段交付提交 `e835d187fa964d75ffecfd5779dda928526e0560` 已通过 E7-A、E7-B、E8–E10 三门禁；[PR事件run 41610392056](https://github.com/Lilyly9/DevOps-G16/actions/runs/41610392056) 与该SHA精确对应，artifact ID 13217844477 已下载。后续仅归档的最终文档SHA另在本机备份绑定实际CI；个人PR仍待组内审查。

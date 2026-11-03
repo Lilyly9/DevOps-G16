@@ -29,4 +29,10 @@
 
 本轮运行源码为 `18a79582672a71d486abc656bc9007d4aebdceab`；E9 OUT `work/e9-A-manual.eqLOHp`，E10 标准 OUT `work/e10-A-manual.eVOOik`，自主删除 OUT `work/e10-A-manual.n9BhPY`。手册实验、35行完整集合对照、动态重检与8项测试均已在服务器真实完成；下载后199项独立审查通过。[E9索引](../../../../e9/evidence/A1-241880485/index.md)、[E10索引](../../../../e10/evidence/A1-241880485/index.md) 保存手册交付，它们不依赖公共CI代替。
 
-本轮新增交付提交的 PR 事件 CI 将在推送后按真实 head_sha、三项检查、run URL 与 artifact 下载校验登记。历史成功记录不填写为尚未运行的新提交结果。个人 PR 继续更新 #15，不自动合并，也不修改分支保护。最终文档提交与真实 run 的精确绑定另存完整本机个人备份 `CI/final-source-and-run.json`。
+本轮已验证交付提交：`e835d187fa964d75ffecfd5779dda928526e0560`。E7-A、E7-B、E8–E10 三项检查全部 `completed / success`。
+
+- [PR事件 run 41610392056](https://github.com/Lilyly9/DevOps-G16/actions/runs/41610392056)：head_sha 精确等于交付提交，`completed / success`；同SHA push事件 run 41610384303 也成功。
+- 真实日志包含本人方法 `test_header_include_invalidates_previous_dependency_graph`，`Ran 8 tests in 0.282s`、`OK`，六条参考路线全部完成。
+- artifact `e8e10-evidence-41610392056`，ID **13217844477**，119684字节；原ZIP与控制台ZIP均已下载，ZIP CRC与两个公共gate通过。原件与SHA256见 [下载校验](../../../../e10/evidence/A1-241880485/ci/delivery/download-verification.json)、[测试/参考路线日志](../../../../e10/evidence/A1-241880485/ci/delivery/validate-both-tracks.log)、[三检查状态](../../../../e10/evidence/A1-241880485/ci/delivery/pr-15-live.json)。
+
+此处是已经验证的交付提交，随后仅归档CI记录会产生新文档SHA；不把本次run改写成后续SHA。最终文档提交仍等待平台运行，精确head/run/artifact绑定另存完整本机个人备份 `CI/final-source-and-run.json`，避免自引用提交循环。个人 PR #15 仍open待组内审查；未自动合并、未修改分支保护。
