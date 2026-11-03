@@ -70,7 +70,7 @@
     "conclusion": "success",
     "unit_tests": 8,
     "artifact_id": 13200328435,
-    "three_required_checks": "success",
+    "three_ci_checks": "success",
     "pr_state": "open, awaiting group review/merge"
   },
   "resource_note": "Actual 3.5 GiB; do not assert satisfying the 4 GiB recommendation."

@@ -854,8 +854,8 @@
     },
     {
       "path": "summary.json",
-      "bytes": 1800,
-      "sha256": "01d4360347015feea9901a1e4c71c357fe27e78da09bc0faed7be5f40927bc8d"
+      "bytes": 1794,
+      "sha256": "3f39f775bcf879b65f0e9493c52d0fdd9f0612bec0177ae18cd380eccb352323"
     },
     {
       "path": "unit-tests/exit-code.txt",
