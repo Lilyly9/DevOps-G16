@@ -61,5 +61,5 @@ OUT=$(cat work/last-e8-B.path)
 
 - 服务器：`~/devops-submissions/241880555/E8-E10-<时间戳>.tar.gz`（提交手册 §9，排除 .git/.env/密钥）
 - 本机：`D:\Users\nmh\Desktop\DevOps-G16\work-backup-e8b\`（scp 下载副本）
-- GitHub：PR（`student/241880555/e8-e10` → `main`）与 CI 见 `docs/students/241880555/e8-e10/CI记录.md`
+- GitHub：PR #17（`student/241880555/e8-e10` → `main`，https://github.com/Lilyly9/DevOps-G16/pull/17）；CI 见 `docs/students/241880555/e8-e10/CI记录.md`（e8e10-quality-gate run 41582298352 success，headSha=8a3986d 对应报告提交）
 - 完整 work 原件不在 Git 中：从上述归档或本人克隆 `work/e8-B-manual.qsW6Xo/` 获取
