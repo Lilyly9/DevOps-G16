@@ -131,3 +131,10 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 ### A3 正式 CI 失败与恢复验收（2026-10-25）
 
 A3 完成官方测试的 GitHub 失败/恢复演示、非草稿普通合并拒绝与最终 MERGED 验收，新增真实日志与产物哈希。PR #5 和 #4 已合并；本人只更新 A3 报告与状态，B3 交付、完整共享保护开关及云主机资源要求继续待验收。
+### E5–E7 最终收口（2026-10-26）
+
+- 基线：`main` `36047e31deaaddd767957b6fd151003d1debd545`。
+- 复核：`e6/evidence/A2-241880496/recheck-20261026/`（index、verify-e6.json、before/after findings、trace 锚点、19 passed 日志、自证 gate 结果）。
+- 文档更新：`e6/reports/A2-241880496.md`（新增“最终 main 复核”与 CI 段）、`e6/README.md`（A2 行）、`e6/evidence/A2-241880496/验收记录.csv`（C05/C06/B01/B03 依据他人已入库证据标 PASS 并注明执行人）。
+- 结果：单测 19 passed、findings 2→0、仅 Makefile 变化、自证 gate 8/8；与首次运行结论一致。
+- 未代做：A1 的 E5、B2 的 Linux 真实运行、A3 的 CI 与保护配置验证。
