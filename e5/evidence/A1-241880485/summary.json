@@ -1,0 +1,84 @@
+{
+  "provenance": "ACTUAL_RUN_WITH_MANUAL_E5_INTERPRETATION",
+  "member": "A1",
+  "student_id": "241880485",
+  "source_commit": "ac7a040ec615c13bca7d2ec2b79347108631237a",
+  "image_tag": "course1020-buildchecker:241880485",
+  "image_id": "sha256:a8c15fd4391437a3f5497e9feee0d4e3053d4a488e2d1576cb8c12d65c9edc23",
+  "e5_experiment_passed": true,
+  "e5_exit_code": 0,
+  "container_tests_passed": 18,
+  "doctor_passed": false,
+  "doctor_exit_code": 1,
+  "overall_A1_DoD_passed": false,
+  "status": "E5_REPRODUCED_ENVIRONMENT_BLOCKED",
+  "environment_blocker": "Assigned A16 host exposes 3.5 GiB; unchanged course doctor requires 4 GiB.",
+  "manual_expected": {
+    "provenance": "MANUAL_EXPECTED_FROM_COURSE_FIXTURE",
+    "target": "main.o",
+    "actual_project_dependencies": [
+      "main.c",
+      "config.h"
+    ],
+    "declared_dependencies": [
+      "main.c",
+      "unused.h"
+    ],
+    "MISSING": [
+      "config.h"
+    ],
+    "REDUNDANT": [
+      "unused.h"
+    ]
+  },
+  "observed_evidence": {
+    "program_output": {
+      "file": "program-output.txt",
+      "line": 1,
+      "value": "1"
+    },
+    "declaration": {
+      "file": "make-db.txt",
+      "line": 1061,
+      "text": "main.o: main.c unused.h"
+    },
+    "compiler_source_open": {
+      "file": "trace/t.16",
+      "line": 67
+    },
+    "compiler_header_open": {
+      "file": "trace/t.16",
+      "line": 580
+    },
+    "assembler_output_open": {
+      "file": "trace/t.17",
+      "line": 23
+    },
+    "parent_child_links": [
+      {
+        "file": "trace/t.14",
+        "line": 55,
+        "parent": 14,
+        "child": 15
+      },
+      {
+        "file": "trace/t.15",
+        "line": 64,
+        "parent": 15,
+        "child": 16
+      },
+      {
+        "file": "trace/t.15",
+        "line": 84,
+        "parent": 15,
+        "child": 17
+      }
+    ]
+  },
+  "source_scope": "Only successful recipe reads within /evidence; ignore system headers and /tmp intermediates.",
+  "limits": [
+    "Manual E5 reasoning, not detector accuracy or an E6 before/after run.",
+    "Original doctor remains failed; build/test/E5 success does not override the resource gate.",
+    "A3 owns formal E7/CI and branch protection; none configured here."
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "track": "A",
+  "stage": "e5",
+  "time_utc": "2026-10-24T08:32:46.143103+00:00",
+  "image": "sha256:a8c15fd4391437a3f5497e9feee0d4e3053d4a488e2d1576cb8c12d65c9edc23",
+  "packaging_entrypoint": "cloud-v1",
+  "replay": false
+}

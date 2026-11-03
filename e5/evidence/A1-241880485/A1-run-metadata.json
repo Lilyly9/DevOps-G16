@@ -1,0 +1,56 @@
+{
+  "provenance": "ACTUAL_RUN",
+  "member": "A1",
+  "name": "焦龙",
+  "student_id": "241880485",
+  "group": "A16",
+  "time_started_utc": "2026-10-24T08:32:46.117390+00:00",
+  "time_finished_utc": "2026-10-24T08:32:46.435577+00:00",
+  "source_commit": "ac7a040ec615c13bca7d2ec2b79347108631237a",
+  "worktree_status": "",
+  "image_tag": "course1020-buildchecker:241880485",
+  "image_id": "sha256:a8c15fd4391437a3f5497e9feee0d4e3053d4a488e2d1576cb8c12d65c9edc23",
+  "image_id_after": "sha256:a8c15fd4391437a3f5497e9feee0d4e3053d4a488e2d1576cb8c12d65c9edc23",
+  "argv": [
+    "python3",
+    "scripts/lab_cloud.py",
+    "e5",
+    "--out",
+    "work/e5-A1-20261024-01",
+    "--image",
+    "sha256:a8c15fd4391437a3f5497e9feee0d4e3053d4a488e2d1576cb8c12d65c9edc23"
+  ],
+  "exit_code": 0,
+  "source_sha256": {
+    "fixtures/md-rd/Makefile": "fd1dcd76a0bd9678351a1503941a5a875351455d4a6879e76af0af0b6c64772f",
+    "fixtures/md-rd/config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+    "fixtures/md-rd/main.c": "bfa1c2d1abeb70ba92e60c414923265296dafa0cc98bee068251b0301e6da197",
+    "fixtures/md-rd/unused.h": "1e4315549ec63325a22265e33a27e3cff8940d3ceec9756d7d193e9e51b966c9",
+    "scripts/doctor.py": "f2f545e66581cf4b860122941940a60d14daa9eccc628bdf58ad471ff406af47",
+    "scripts/lab_cloud.py": "7b18458810390a9ec267c071e99c117b806eb9d80d2c7f519f310ecc127fd4d1",
+    "scripts/run_e7_a_gate.py": "f18b2e60a8bf8f1eba0a957db9ec3a288e73bfbd956a782fe75223b0e340d455",
+    "scripts/secret_scan.py": "e3aefad5e87201d684841b931b8586a3d81d2930968bfa02867eff41cfcfbc65",
+    "scripts/verify_e6_evidence.py": "8583f3e077e5b1bfad399bee6d44d82c0ed03c97368a1413d2d34dca9dcaf948",
+    "services/buildchecker/Dockerfile": "9d1f75a1cb05c022685f7cbebd058f0e250d3bff0818a2d4fbc54bdbda946c1d",
+    "services/buildchecker/buildchecker/__init__.py": "3e7097b3bd96f87c4c6962afa8a4cb3a8c3be1b4df775b57828ebd48a9a9d05c",
+    "services/buildchecker/buildchecker/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "services/buildchecker/buildchecker/cli.py": "6c3663b1f39bf7ecfccebdc82a6235b317e71a6d1c1ce2aa9a9c8ac3e56114d9",
+    "services/buildchecker/buildchecker/fullcheck.py": "21a66422856be2d46a28db3569a9645864a83622d552841873e3c6a82fdea0e9",
+    "services/buildchecker/buildchecker/smoke.py": "782d355fbf9013825778dff771d18eac5e84b558b6eee73966608755da288d08",
+    "services/buildchecker/pytest.ini": "f211820b112f706314629c1055868340301685733ea465af1151e0a92de620cc",
+    "services/buildchecker/tests/test_cli.py": "c9c1912e463f6b5e7496f802cb40f9b0e67ddec1fac4ba5651950088ffa0bffb",
+    "services/buildchecker/tests/test_extra_241880485.py": "0ec77ac6cfccb7f72d206d6c4a8949479c722df804895417fcb0674d4bc24991",
+    "services/buildchecker/tests/test_extra_241880496.py": "7881418179b8f4a2a622c69855cff6a123167667bd93fe0391ab97c234112396",
+    "services/buildchecker/tests/test_fullcheck.py": "c143d2f7ab2608284a3f5a575f593a0f66531f668c8271590d37a799ead46bac"
+  },
+  "runtime_input_sha256": {
+    "Makefile": "fd1dcd76a0bd9678351a1503941a5a875351455d4a6879e76af0af0b6c64772f",
+    "main.c": "bfa1c2d1abeb70ba92e60c414923265296dafa0cc98bee068251b0301e6da197",
+    "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+    "unused.h": "1e4315549ec63325a22265e33a27e3cff8940d3ceec9756d7d193e9e51b966c9"
+  },
+  "runtime_output_sha256": {
+    "app": "c230efce860ef81dff1bc71b7a0deb61f6393ea61cecb8102fe9c8d7fb3d6d40",
+    "main.o": "81a6afdf2ebf5ca89b30aaa2f0cd862a69cd68f49fb4628612ce78804679c78c"
+  }
+}

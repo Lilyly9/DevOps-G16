@@ -1,0 +1,45 @@
+{
+  "lock": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "course1020-buildchecker:241880485",
+      "cat",
+      "/tmp/requirements-dev.lock"
+    ],
+    "exit_code": 0,
+    "sha256": "24f54d917487599d98e13c5733a75ca4a86652fa11cdccaf863c08e1cc66f5df"
+  },
+  "image-file-hashes": {
+    "argv": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "course1020-buildchecker:241880485",
+      "sha256sum",
+      "/app/fixtures/md-rd/Makefile",
+      "/app/fixtures/md-rd/main.c",
+      "/app/fixtures/md-rd/config.h",
+      "/app/fixtures/md-rd/unused.h",
+      "/app/buildchecker/fullcheck.py",
+      "/app/tests/test_extra_241880485.py"
+    ],
+    "exit_code": 0
+  },
+  "security": {
+    "argv": [
+      "python3",
+      "e4/B-draft/scripts/secret_scan.py",
+      "e5/A-buildchecker",
+      "--history",
+      "--image",
+      "course1020-buildchecker:241880485"
+    ],
+    "exit_code": 0
+  }
+}

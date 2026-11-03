@@ -1,0 +1,17 @@
+{
+  "evidence_consistency_passed": true,
+  "overall_A1_DoD_passed": false,
+  "status": "E5_REPRODUCED_ENVIRONMENT_BLOCKED",
+  "source_commit": "ac7a040ec615c13bca7d2ec2b79347108631237a",
+  "scope": "Offline evidence consistency plus separately saved live source/history/image scan; not E6/E7 implementation acceptance",
+  "checks": [
+    "E5 output and line references",
+    "successful parent/child and open/create observations",
+    "20 source hashes match Git object bytes",
+    "image fixture and requirements lock match source",
+    "18 real container tests passed",
+    "doctor failure and frontend failure preserved",
+    "original archived bytes and no exact teacher credential"
+  ],
+  "errors": []
+}

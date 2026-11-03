@@ -1,0 +1,54 @@
+[
+  {
+    "name": "doctor",
+    "argv": [
+      "python3",
+      "scripts/lab_cloud.py",
+      "doctor"
+    ],
+    "exit_code": 1
+  },
+  {
+    "name": "git-head",
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "git-status",
+    "argv": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "docker-version",
+    "argv": [
+      "docker",
+      "version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "compose-version",
+    "argv": [
+      "docker",
+      "compose",
+      "version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "python-version",
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "exit_code": 0
+  }
+]
