@@ -1,0 +1,35 @@
+{
+  "scope": "A1 personal E10 actual manual outputs, all text/traces/inputs and internal Git bundles; original binary products preserved in local originals archive.",
+  "original_archive_sha256": "75be513b8ef64d3970ca44bbb68d1006b40c70eda1426788534b85a2606220d4",
+  "original_archive_bytes": 101491,
+  "source_commit": "18a79582672a71d486abc656bc9007d4aebdceab",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "original_paths": {
+    "standard": "work/e10-A-manual.eVOOik",
+    "extension": "work/e10-A-manual.n9BhPY",
+    "provenance": "work/A1-E9E10-provenance.8s_ev_pt",
+    "unit-tests": "work/A1-E9E10-tests.7gI6Xf"
+  },
+  "excluded_from_git": {
+    "standard": [
+      "matrix/final-buildchecker/project/app",
+      "matrix/final-buildchecker/project/helper.o",
+      "matrix/final-buildchecker/project/main.o"
+    ],
+    "extension": [
+      "buildchecker-after/project/app",
+      "buildchecker-after/project/helper.o",
+      "buildchecker-after/project/main.o",
+      "buildchecker-before/project/app",
+      "buildchecker-before/project/helper.o",
+      "buildchecker-before/project/main.o",
+      "project/app",
+      "project/helper.o",
+      "project/main.o"
+    ],
+    "provenance": [],
+    "unit-tests": []
+  },
+  "backup_preference": "Final complete A1 E8-E10 package local only; existing E8 package preserved.",
+  "existing_e8_results_unchanged": true
+}

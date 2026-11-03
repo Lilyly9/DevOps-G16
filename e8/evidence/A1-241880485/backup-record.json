@@ -1,0 +1,9 @@
+{
+  "original_server_archive": "/root/241880485/A1-E8-20261103-originals.tar.gz",
+  "local_original_copy": "DevOps/tmp/e8-a1-20261103/originals.tar.gz",
+  "bytes": 83143,
+  "sha256": "84cd2a7252c391a8c340d9c7e2453f234ad12c4bb3867a2a0be73fc4068d42a7",
+  "scope": "A1 actual standard/extension work, preparation, logs and unit tests; compiled outputs retained, internal .git/credentials excluded; sample Git bundles retained.",
+  "sharing": "Server directory belongs to A1 on the A16 course host; peer reviewers can request this archive without exchanging credentials.",
+  "final_personal_backup": "A separately named A1-E8 personal backup will add source/docs and real CI artifacts after personal PR passes; it is not the A16 final group submission."
+}

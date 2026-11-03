@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "commits": {
+    "baseline": "a817cc09960456b4eac8762d10d69037bf4aa767",
+    "C1": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+    "C2": "02e714436272025bcce1ec9983a2be57a0a93e93",
+    "C3": "35785ee1fa73e80c22a6c4f1067ec303c0a5fb05"
+  },
+  "expected_from_input": true
+}

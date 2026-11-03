@@ -1,0 +1,43 @@
+SOURCE_HEAD
+9ee3242f8d7ea1b6bb4091e2947d85d33a37aa8a
+SOURCE_BRANCH
+student/241880485/e8-e10
+SOURCE_STATUS
+IMAGE_ID
+sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691
+ENVIRONMENT_TRACKED_HASHES
+100644 blob 58a16797ff2166eddce4ccd95de642053d8d4ce2	labs/e8e10/environment/.dockerignore
+100644 blob 4b97b95a52381eaac3e75f2136584f317e049886	labs/e8e10/environment/.env.example
+100644 blob da55761c4d5a5102e22044193af92ba727fcfb2e	labs/e8e10/environment/.github/workflows/e7-quality-gate.yml
+100644 blob 6aa383c7ab57d2f713eb530c8f3f193110ae0156	labs/e8e10/environment/.gitignore
+100644 blob 14a2e6247a1f01dbd1198f0eec1e71ada47cb2ef	labs/e8e10/environment/Makefile
+100644 blob f6c0599c767db062419d79234bcc07a6b5451269	labs/e8e10/environment/README.md
+100644 blob b05cc3ef3c93477399be81faa3398fb845cdc7e4	labs/e8e10/environment/compose.yaml
+100644 blob 5a4a5f867462205ebdd33fc556283d09a764c476	labs/e8e10/environment/fixtures/md-rd/Makefile
+100644 blob cb3589391d6d391165f4147b7eeef85aa7dc01d9	labs/e8e10/environment/fixtures/md-rd/config.h
+100644 blob 111125e415c2dddc33843849574518fd19b4b810	labs/e8e10/environment/fixtures/md-rd/main.c
+100644 blob 8442de3bf66ed794b2f55d5e359834f1f1b40a23	labs/e8e10/environment/fixtures/md-rd/unused.h
+100644 blob f9d65af728cbbc68b1f97cd205e1712736d00378	labs/e8e10/environment/requirements-dev.in
+100644 blob a10770dadd83926e547b57879b8d38cf0bf1fb0e	labs/e8e10/environment/requirements-dev.lock
+100644 blob 4e8e400806ea5886b323786efa9afe549abe4f8c	labs/e8e10/environment/scripts/doctor.py
+100644 blob c75d6fbde6704abe420044766aba16d02b5899c7	labs/e8e10/environment/scripts/lab_cloud.py
+100644 blob 33861ab72dad244e615ae07245e6e8377145b906	labs/e8e10/environment/scripts/run_e7_a_gate.py
+100644 blob 952111586f2131a7f0e7180fad2280f166ff29f5	labs/e8e10/environment/scripts/secret_scan.py
+100644 blob 19033b442ad3540c358d6be3816722aaf42dc8a2	labs/e8e10/environment/scripts/verify_e6_evidence.py
+100644 blob bcf3a7be7bce729ecdc4eb7057420cc6bda15dcf	labs/e8e10/environment/services/buildchecker/Dockerfile
+100644 blob 99737a4e29fb24ecc6ac1a59c154f1abca04bdde	labs/e8e10/environment/services/buildchecker/buildchecker/__init__.py
+100644 blob eb53e2f31b2f703ad32ef64b8a41faa3e7d18e08	labs/e8e10/environment/services/buildchecker/buildchecker/__main__.py
+100644 blob 9adbd7c09245706eb6a3474bf5f87b784adabe58	labs/e8e10/environment/services/buildchecker/buildchecker/cli.py
+100644 blob 2df341b290dc40399493d1c483a117833ff1d07a	labs/e8e10/environment/services/buildchecker/buildchecker/fullcheck.py
+100644 blob 3653e4da0e29824a79caea22705b01a6d5e7c4f0	labs/e8e10/environment/services/buildchecker/buildchecker/smoke.py
+100644 blob 388f2164fd903c56e083f12bcd1914d26ffc911f	labs/e8e10/environment/services/buildchecker/pytest.ini
+100644 blob 7d6cb054d3afa31ca4f69e775b283e1c87471e80	labs/e8e10/environment/services/buildchecker/tests/test_cli.py
+100644 blob 17e29ae51fb74e48ecf9879ccc0b7ecb777748cf	labs/e8e10/environment/services/buildchecker/tests/test_fullcheck.py
+100644 blob 541724066588ea9cee92e65052d35acec00a89b7	labs/e8e10/environment/tests/e7/test_e7_a_gate.py
+OWN_EXISTING_OUTPUTS
+work/e8-A-manual.jA7ZjJ
+work/e8-A-manual.vwDixM
+HELPER_HASH
+f1ce2f6290dfd2df199fa19a51775dd1382a2747bd51fea93485fceb28b0ade7  /root/241880485/e8-classroom_helpers-20261103.sh
+BUSY_BUILD_COUNT
+[]

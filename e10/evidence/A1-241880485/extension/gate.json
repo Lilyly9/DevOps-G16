@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "rows": 5,
+  "independent_expected": true,
+  "dynamic_actual_equal": true,
+  "baseline_commit": "02e503dcb52afb128d64aa11cfa6bc63d2571521",
+  "changed_commit": "f5d78845a613f4a2d3f1d7aa7fad7ef976e8919b"
+}

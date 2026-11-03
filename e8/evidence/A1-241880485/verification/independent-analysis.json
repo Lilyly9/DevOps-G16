@@ -1,0 +1,550 @@
+{
+  "schema_version": "a1-e8-independent-analysis-1",
+  "checked_utc": "2026-11-03T02:50:39.809275+00:00",
+  "scope": "Offline read-only reanalysis of A1 E8 standard and indirect-include extension originals; no new build or network execution.",
+  "passed": true,
+  "checks": {
+    "outer_source_identity": {
+      "passed": true,
+      "detail": {
+        "commit": "9ee3242f8d7ea1b6bb4091e2947d85d33a37aa8a",
+        "branch": "student/241880485/e8-e10"
+      }
+    },
+    "recorded_command_exits": {
+      "passed": true,
+      "detail": null
+    },
+    "source_sha256_matches_recorded_commit": {
+      "passed": true,
+      "detail": {
+        "checked_files": 32,
+        "mismatches": []
+      }
+    },
+    "fullcheck_parser_hash": {
+      "passed": true,
+      "detail": null
+    },
+    "standard_offline_trace_reanalysis": {
+      "passed": true,
+      "detail": {
+        "equal": {
+          "findings": true,
+          "actual_graph": true,
+          "declared_graph": true,
+          "processes": true,
+          "observed_targets": true
+        },
+        "trace_files": 10,
+        "processes": 10,
+        "root": "/course/work/e8-A-manual.vwDixM/buildchecker/project"
+      }
+    },
+    "standard_build_status": {
+      "passed": true,
+      "detail": {
+        "status": "SUCCEEDED",
+        "clean_exit_code": 0,
+        "build_exit_code": 0
+      }
+    },
+    "standard_input_sha256": {
+      "passed": true,
+      "detail": {
+        "checked_files": 7,
+        "mismatches": []
+      }
+    },
+    "standard_original_evidence_pointers": {
+      "passed": true,
+      "detail": {
+        "pointers": 3
+      }
+    },
+    "extension_before_offline_trace_reanalysis": {
+      "passed": true,
+      "detail": {
+        "equal": {
+          "findings": true,
+          "actual_graph": true,
+          "declared_graph": true,
+          "processes": true,
+          "observed_targets": true
+        },
+        "trace_files": 10,
+        "processes": 10,
+        "root": "/course/work/e8-A-manual.jA7ZjJ/buildchecker-before/project"
+      }
+    },
+    "extension_before_build_status": {
+      "passed": true,
+      "detail": {
+        "status": "SUCCEEDED",
+        "clean_exit_code": 0,
+        "build_exit_code": 0
+      }
+    },
+    "extension_before_input_sha256": {
+      "passed": true,
+      "detail": {
+        "checked_files": 7,
+        "mismatches": []
+      }
+    },
+    "extension_before_original_evidence_pointers": {
+      "passed": true,
+      "detail": {
+        "pointers": 3
+      }
+    },
+    "extension_after_offline_trace_reanalysis": {
+      "passed": true,
+      "detail": {
+        "equal": {
+          "findings": true,
+          "actual_graph": true,
+          "declared_graph": true,
+          "processes": true,
+          "observed_targets": true
+        },
+        "trace_files": 10,
+        "processes": 10,
+        "root": "/course/work/e8-A-manual.jA7ZjJ/buildchecker-after/project"
+      }
+    },
+    "extension_after_build_status": {
+      "passed": true,
+      "detail": {
+        "status": "SUCCEEDED",
+        "clean_exit_code": 0,
+        "build_exit_code": 0
+      }
+    },
+    "extension_after_input_sha256": {
+      "passed": true,
+      "detail": {
+        "checked_files": 7,
+        "mismatches": []
+      }
+    },
+    "extension_after_original_evidence_pointers": {
+      "passed": true,
+      "detail": {
+        "pointers": 5
+      }
+    },
+    "standard_history_graph_projection": {
+      "passed": true,
+      "detail": {
+        "baseline_source": "BuildChecker actual-graph.json projected to object targets",
+        "commit": "288876b0f535833a83e76c7526f5df0a4d8ec303"
+      }
+    },
+    "standard_unchanged_reuse": {
+      "passed": true,
+      "detail": null
+    },
+    "extension_input_change_is_indirect": {
+      "passed": true,
+      "detail": null
+    },
+    "extension_old_history_projection": {
+      "passed": true,
+      "detail": null
+    },
+    "extension_incremental_and_full": {
+      "passed": true,
+      "detail": {
+        "before_commit": "683b6b05d97233fe2c81f6697662e346a5cefd0b",
+        "after_commit": "20094b5a4d105c72ecbead91d3302b3834d47254",
+        "added": [
+          [
+            "MISSING",
+            "main.o",
+            "extra.h"
+          ]
+        ],
+        "resolved": [],
+        "refreshed": [
+          "main.o",
+          "helper.o"
+        ],
+        "reused": []
+      }
+    },
+    "extension_config_directive_only_change": {
+      "passed": true,
+      "detail": null
+    },
+    "standard_image_identity": {
+      "passed": true,
+      "detail": null
+    },
+    "standard_step_exits": {
+      "passed": true,
+      "detail": {
+        "step_logs": 4
+      }
+    },
+    "standard_inner_git_bundle": {
+      "passed": true,
+      "detail": {
+        "entries": 1,
+        "HEAD": "288876b0f535833a83e76c7526f5df0a4d8ec303"
+      }
+    },
+    "extension_image_identity": {
+      "passed": true,
+      "detail": null
+    },
+    "extension_step_exits": {
+      "passed": true,
+      "detail": {
+        "step_logs": 1
+      }
+    },
+    "extension_inner_git_bundle": {
+      "passed": true,
+      "detail": {
+        "entries": 2,
+        "HEAD": "20094b5a4d105c72ecbead91d3302b3834d47254"
+      }
+    },
+    "a1_eight_unit_tests": {
+      "passed": true,
+      "detail": null
+    },
+    "preparation_resources_honestly_recorded": {
+      "passed": true,
+      "detail": null
+    }
+  },
+  "errors": [],
+  "reanalysis": {
+    "standard": {
+      "trace_id": "e6-1ded07e764ea46708fcb8b04c34b8216",
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ],
+      "object_actual": {
+        "main.o": [
+          "config.h",
+          "main.c"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "object_declared": {
+        "main.o": [
+          "main.c",
+          "unused.h"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "observed_targets": [
+        "app",
+        "helper.o",
+        "main.o"
+      ],
+      "trace_files": 10,
+      "processes": 10
+    },
+    "extension_before": {
+      "trace_id": "e6-22a6ecbdea8e458788ee83d903cde796",
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ],
+      "object_actual": {
+        "main.o": [
+          "config.h",
+          "main.c"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "object_declared": {
+        "main.o": [
+          "main.c",
+          "unused.h"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "observed_targets": [
+        "app",
+        "helper.o",
+        "main.o"
+      ],
+      "trace_files": 10,
+      "processes": 10
+    },
+    "extension_after": {
+      "trace_id": "e6-2b6b2e035b09455f8ccabd9daf48fb20",
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "MISSING",
+          "main.o",
+          "extra.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ],
+      "object_actual": {
+        "main.o": [
+          "config.h",
+          "extra.h",
+          "main.c"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "object_declared": {
+        "main.o": [
+          "main.c",
+          "unused.h"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "observed_targets": [
+        "app",
+        "helper.o",
+        "main.o"
+      ],
+      "trace_files": 10,
+      "processes": 10
+    }
+  },
+  "trace_evidence": {
+    "standard": [
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        "file": "e8-A-manual.vwDixM/buildchecker/trace/t.15",
+        "line": 579,
+        "raw": "openat(AT_FDCWD, \"config.h\", O_RDONLY|O_NOCTTY) = 4",
+        "pid": 15,
+        "process_chain_to_make": [
+          15,
+          14,
+          13
+        ],
+        "job_pid": 14,
+        "valid": true
+      },
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        "file": "e8-A-manual.vwDixM/buildchecker/trace/t.16",
+        "line": 23,
+        "raw": "openat(AT_FDCWD, \"main.o\", O_RDWR|O_CREAT|O_TRUNC, 0666) = 3",
+        "pid": 16,
+        "process_chain_to_make": [
+          16,
+          14,
+          13
+        ],
+        "job_pid": 14,
+        "valid": true
+      },
+      {
+        "finding": [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ],
+        "file": "e8-A-manual.vwDixM/buildchecker/make-db.txt",
+        "line": 1044,
+        "raw": "main.o: main.c unused.h",
+        "pid": null,
+        "process_chain_to_make": null,
+        "job_pid": null,
+        "valid": true
+      }
+    ],
+    "extension_before": [
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-before/trace/t.28",
+        "line": 579,
+        "raw": "openat(AT_FDCWD, \"config.h\", O_RDONLY|O_NOCTTY) = 4",
+        "pid": 28,
+        "process_chain_to_make": [
+          28,
+          27,
+          26
+        ],
+        "job_pid": 27,
+        "valid": true
+      },
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-before/trace/t.29",
+        "line": 23,
+        "raw": "openat(AT_FDCWD, \"main.o\", O_RDWR|O_CREAT|O_TRUNC, 0666) = 3",
+        "pid": 29,
+        "process_chain_to_make": [
+          29,
+          27,
+          26
+        ],
+        "job_pid": 27,
+        "valid": true
+      },
+      {
+        "finding": [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-before/make-db.txt",
+        "line": 1044,
+        "raw": "main.o: main.c unused.h",
+        "pid": null,
+        "process_chain_to_make": null,
+        "job_pid": null,
+        "valid": true
+      }
+    ],
+    "extension_after": [
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-after/trace/t.66",
+        "line": 579,
+        "raw": "openat(AT_FDCWD, \"config.h\", O_RDONLY|O_NOCTTY) = 4",
+        "pid": 66,
+        "process_chain_to_make": [
+          66,
+          65,
+          64
+        ],
+        "job_pid": 65,
+        "valid": true
+      },
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-after/trace/t.67",
+        "line": 23,
+        "raw": "openat(AT_FDCWD, \"main.o\", O_RDWR|O_CREAT|O_TRUNC, 0666) = 3",
+        "pid": 67,
+        "process_chain_to_make": [
+          67,
+          65,
+          64
+        ],
+        "job_pid": 65,
+        "valid": true
+      },
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "extra.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-after/trace/t.66",
+        "line": 580,
+        "raw": "openat(AT_FDCWD, \"extra.h\", O_RDONLY|O_NOCTTY) = 4",
+        "pid": 66,
+        "process_chain_to_make": [
+          66,
+          65,
+          64
+        ],
+        "job_pid": 65,
+        "valid": true
+      },
+      {
+        "finding": [
+          "MISSING",
+          "main.o",
+          "extra.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-after/trace/t.67",
+        "line": 23,
+        "raw": "openat(AT_FDCWD, \"main.o\", O_RDWR|O_CREAT|O_TRUNC, 0666) = 3",
+        "pid": 67,
+        "process_chain_to_make": [
+          67,
+          65,
+          64
+        ],
+        "job_pid": 65,
+        "valid": true
+      },
+      {
+        "finding": [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ],
+        "file": "e8-A-manual.jA7ZjJ/buildchecker-after/make-db.txt",
+        "line": 1044,
+        "raw": "main.o: main.c unused.h",
+        "pid": null,
+        "process_chain_to_make": null,
+        "job_pid": null,
+        "valid": true
+      }
+    ]
+  },
+  "limitations": [
+    "This audit verifies archived trace and metadata consistency; it does not rerun the cloud experiment.",
+    "Visible RAM was 3.5 GiB, below the material recommendation of 4 GiB, and is recorded as such."
+  ]
+}

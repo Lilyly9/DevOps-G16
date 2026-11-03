@@ -1,0 +1,2505 @@
+{
+  "passed": true,
+  "scope": "Offline independent audit of actual A1 E9-A, E10-A matrix and deletion extension; no experiment or network rerun",
+  "checks": [
+    {
+      "name": "recorded_source_hashes_match_exact_source_commit",
+      "passed": true,
+      "details": {
+        "labs/e8e10/.gitattributes": true,
+        "labs/e8e10/environment/.dockerignore": true,
+        "labs/e8e10/environment/.env.example": true,
+        "labs/e8e10/environment/.github/workflows/e7-quality-gate.yml": true,
+        "labs/e8e10/environment/.gitignore": true,
+        "labs/e8e10/environment/Makefile": true,
+        "labs/e8e10/environment/README.md": true,
+        "labs/e8e10/environment/compose.yaml": true,
+        "labs/e8e10/environment/fixtures/md-rd/Makefile": true,
+        "labs/e8e10/environment/fixtures/md-rd/config.h": true,
+        "labs/e8e10/environment/fixtures/md-rd/main.c": true,
+        "labs/e8e10/environment/fixtures/md-rd/unused.h": true,
+        "labs/e8e10/environment/requirements-dev.in": true,
+        "labs/e8e10/environment/requirements-dev.lock": true,
+        "labs/e8e10/environment/scripts/doctor.py": true,
+        "labs/e8e10/environment/scripts/lab_cloud.py": true,
+        "labs/e8e10/environment/scripts/run_e7_a_gate.py": true,
+        "labs/e8e10/environment/scripts/secret_scan.py": true,
+        "labs/e8e10/environment/scripts/verify_e6_evidence.py": true,
+        "labs/e8e10/environment/services/buildchecker/Dockerfile": true,
+        "labs/e8e10/environment/services/buildchecker/buildchecker/__init__.py": true,
+        "labs/e8e10/environment/services/buildchecker/buildchecker/__main__.py": true,
+        "labs/e8e10/environment/services/buildchecker/buildchecker/cli.py": true,
+        "labs/e8e10/environment/services/buildchecker/buildchecker/fullcheck.py": true,
+        "labs/e8e10/environment/services/buildchecker/buildchecker/smoke.py": true,
+        "labs/e8e10/environment/services/buildchecker/pytest.ini": true,
+        "labs/e8e10/environment/services/buildchecker/tests/test_cli.py": true,
+        "labs/e8e10/environment/services/buildchecker/tests/test_fullcheck.py": true,
+        "labs/e8e10/environment/tests/e7/test_e7_a_gate.py": true,
+        "labs/e8e10/lab.py": true,
+        "labs/e8e10/test_profile.py": true,
+        "labs/e8e10/test_student_241880485.py": true
+      }
+    },
+    {
+      "name": "source_student_identity_and_clean_status",
+      "passed": true
+    },
+    {
+      "name": "image_reused_with_unchanged_environment",
+      "passed": true
+    },
+    {
+      "name": "runtime_dependency_lock_matches_Git",
+      "passed": true
+    },
+    {
+      "name": "provenance_commands_exited_zero",
+      "passed": true
+    },
+    {
+      "name": "e9-A-manual.eqLOHp:identity_and_image",
+      "passed": true
+    },
+    {
+      "name": "e9-A-manual.eqLOHp:all_steps_zero",
+      "passed": true,
+      "details": [
+        {
+          "file": "20261103-171129-1.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171129-2.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171129-3.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171131-4.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171131-5.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171132-6.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171133-7.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171133-8.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171133-9.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        }
+      ]
+    },
+    {
+      "name": "e9-A-manual.eqLOHp:executed_route_and_UTC_bounds_exist",
+      "passed": true
+    },
+    {
+      "name": "e9-A-manual.eqLOHp:final_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "Makefile": "0f81bca34c5eba59329155cda11ac564ea0d05abc646badbb8ce831814805db0",
+        "app": "046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "helper.o": "961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560",
+        "main.c": "e65bdde56ede642cd358ae474be4c043a049f928a6256ebe4af6111e164169ae",
+        "main.o": "cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      }
+    },
+    {
+      "name": "e10-A-manual.eVOOik:identity_and_image",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.eVOOik:all_steps_zero",
+      "passed": true,
+      "details": [
+        {
+          "file": "20261103-171134-1.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171134-2.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171134-3.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171135-4.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171135-5.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171135-6.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171136-7.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171136-8.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        },
+        {
+          "file": "20261103-171137-9.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        }
+      ]
+    },
+    {
+      "name": "e10-A-manual.eVOOik:executed_route_and_UTC_bounds_exist",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.eVOOik:final_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "Makefile": "966ca36a90df555a2e878c4f95f2560cc5179b51baca46f03750c2d524c224e6",
+        "config.h": "6024b92a8cb6cfd1881a66916f4b368c0cb49acfdd8def2fedb7a430892e28fa",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "5db584e6ea1db9fe026954a575b744c2a456ec3163606a16da1f0b909e4dbe6d",
+        "main.c": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY:identity_and_image",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY:all_steps_zero",
+      "passed": true,
+      "details": [
+        {
+          "file": "20261103-171137-1.log",
+          "codes": [
+            "0"
+          ],
+          "traceback": false
+        }
+      ]
+    },
+    {
+      "name": "e10-A-manual.n9BhPY:executed_route_and_UTC_bounds_exist",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY:final_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "app": "046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "helper.o": "961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "main.o": "cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      }
+    },
+    {
+      "name": "e9:bundle_full_history_recovers_and_fsck_passes",
+      "passed": true,
+      "details": {
+        "commits": [
+          "a817cc09960456b4eac8762d10d69037bf4aa767",
+          "8e337b25d26c32f231f711f447c2d6399b435d4d",
+          "02e714436272025bcce1ec9983a2be57a0a93e93",
+          "35785ee1fa73e80c22a6c4f1067ec303c0a5fb05"
+        ],
+        "subjects": [
+          "C0 baseline",
+          "C1 body change",
+          "C2 include change",
+          "C3 repair declarations"
+        ],
+        "bundle_sha256": "2079a7a8721b085dcda41a0b5910fec4b417e7118bbf537109f890134b398d09",
+        "fsck_stdout": ""
+      }
+    },
+    {
+      "name": "e9:final_project_input_equals_recovered_HEAD",
+      "passed": true
+    },
+    {
+      "name": "E9-baseline:report_commit_and_saved_input_correspond",
+      "passed": true
+    },
+    {
+      "name": "E9-baseline:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "E9-C1:report_commit_and_saved_input_correspond",
+      "passed": true
+    },
+    {
+      "name": "E9-C1:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "E9-C2:report_commit_and_saved_input_correspond",
+      "passed": true
+    },
+    {
+      "name": "E9-C2:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "E9-C3:report_commit_and_saved_input_correspond",
+      "passed": true
+    },
+    {
+      "name": "E9-C3:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "E9-exact_C1_C2_C3_edits",
+      "passed": true,
+      "details": [
+        [
+          "main.c"
+        ],
+        [
+          "main.c"
+        ],
+        [
+          "Makefile"
+        ]
+      ]
+    },
+    {
+      "name": "E9-C0:actual_make_log_matches_expected_recipes",
+      "passed": true
+    },
+    {
+      "name": "E9-C1:actual_make_log_matches_expected_recipes",
+      "passed": true
+    },
+    {
+      "name": "E9-C2:actual_make_log_matches_expected_recipes",
+      "passed": true
+    },
+    {
+      "name": "E9-C3:actual_make_log_matches_expected_recipes",
+      "passed": true
+    },
+    {
+      "name": "E9-program_output_one",
+      "passed": true
+    },
+    {
+      "name": "e10-matrix:bundle_full_history_recovers_and_fsck_passes",
+      "passed": true,
+      "details": {
+        "commits": [
+          "faeda7ad14581c9d63f3786666298b16b881be6c",
+          "40ea6f52fb48fc999822c61286ad838b7ee72ccc",
+          "22d89f10d17555006175c063c37d2a91aca15dfc",
+          "05103eb6db9ce6f8070f9874b923a8613240ed8e",
+          "ff4e0a999a1ac0f38a08c90e26858d7a6f5193e4",
+          "f8c55209707dc711457b21c725a46c0a8f2ff9cc"
+        ],
+        "subjects": [
+          "C0 baseline",
+          "body",
+          "include",
+          "declaration",
+          "flags",
+          "header"
+        ],
+        "bundle_sha256": "8b561b7c3951d9a1e6e7185f214db6127b032d327fc7f054965f2a3736743b90",
+        "fsck_stdout": ""
+      }
+    },
+    {
+      "name": "e10-matrix:final_project_input_equals_recovered_HEAD",
+      "passed": true
+    },
+    {
+      "name": "E10-matrix_exact_30_rows_six_cases_each_five",
+      "passed": true
+    },
+    {
+      "name": "E10-60_distinct_original_repeat_reports",
+      "passed": true
+    },
+    {
+      "name": "E10-baseline:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "E10-baseline_commit_matches_C0",
+      "passed": true
+    },
+    {
+      "name": "unchanged:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "unchanged-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "unchanged-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "unchanged-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "unchanged-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "unchanged-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "unchanged-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "unchanged:terminal_report_is_fifth_incremental",
+      "passed": true
+    },
+    {
+      "name": "body:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "body-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "body-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "body-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "body-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "body-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "body-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "body:terminal_report_is_fifth_incremental",
+      "passed": true
+    },
+    {
+      "name": "include:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "include-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "include-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "include-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "include-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "include-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "include-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "include:terminal_report_is_fifth_incremental",
+      "passed": true
+    },
+    {
+      "name": "declaration:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "declaration-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "declaration-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "declaration-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "declaration-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "declaration-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "declaration-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "declaration:terminal_report_is_fifth_incremental",
+      "passed": true
+    },
+    {
+      "name": "flags:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "flags-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "flags-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "flags-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "flags-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "flags-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "flags-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "flags:terminal_report_is_fifth_incremental",
+      "passed": true
+    },
+    {
+      "name": "header:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "header-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "header-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "header-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "header-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "header-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "header-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "header:terminal_report_is_fifth_incremental",
+      "passed": true
+    },
+    {
+      "name": "E10-matrix_exact_cumulative_source_changes",
+      "passed": true,
+      "details": [
+        [
+          "helper.c"
+        ],
+        [
+          "main.c"
+        ],
+        [
+          "Makefile"
+        ],
+        [
+          "Makefile"
+        ],
+        [
+          "config.h"
+        ]
+      ]
+    },
+    {
+      "name": "E10-matrix_gate_passed_with_30_rows",
+      "passed": true
+    },
+    {
+      "name": "matrix:performance_summary_recomputed_unchanged",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.0017513846978545189,
+          "full_median_s": 0.01008349796757102,
+          "inc_min_s": 0.0017332457937300205,
+          "inc_max_s": 0.0023714560084044933,
+          "full_min_s": 0.00994823593646288,
+          "full_max_s": 0.010856995824724436,
+          "full_over_inc": 5.757443227592148
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "matrix:performance_summary_recomputed_body",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.001752061303704977,
+          "full_median_s": 0.010217139963060617,
+          "inc_min_s": 0.0017152088694274426,
+          "inc_max_s": 0.002161571290344,
+          "full_min_s": 0.00996572570875287,
+          "full_max_s": 0.011016904842108488,
+          "full_over_inc": 5.831496844006003
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "matrix:performance_summary_recomputed_include",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.010148966684937477,
+          "full_median_s": 0.00994440307840705,
+          "inc_min_s": 0.010008659213781357,
+          "inc_max_s": 0.011463852133601904,
+          "full_min_s": 0.009904440026730299,
+          "full_max_s": 0.01016276702284813,
+          "full_over_inc": 0.9798438981148663
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "matrix:performance_summary_recomputed_declaration",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.0017636828124523163,
+          "full_median_s": 0.010198696050792933,
+          "inc_min_s": 0.0017527397722005844,
+          "inc_max_s": 0.0021602516062557697,
+          "full_min_s": 0.009972278028726578,
+          "full_max_s": 0.011074423789978027,
+          "full_over_inc": 5.782613505549865
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "matrix:performance_summary_recomputed_flags",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.010235705878585577,
+          "full_median_s": 0.010032027959823608,
+          "inc_min_s": 0.010131462942808867,
+          "inc_max_s": 0.0113936229608953,
+          "full_min_s": 0.009944078978151083,
+          "full_max_s": 0.01027254993095994,
+          "full_over_inc": 0.9801012337421604
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "matrix:performance_summary_recomputed_header",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.010127682704478502,
+          "full_median_s": 0.010062317363917828,
+          "inc_min_s": 0.010051824152469635,
+          "inc_max_s": 0.011355276219546795,
+          "full_min_s": 0.01001817686483264,
+          "full_max_s": 0.01009358186274767,
+          "full_over_inc": 0.9935458739705807
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "matrix:performance_cases_cover_all_raw_rows",
+      "passed": true
+    },
+    {
+      "name": "e10-deletion:bundle_full_history_recovers_and_fsck_passes",
+      "passed": true,
+      "details": {
+        "commits": [
+          "750f2ca1c982cee81ef220c52ba31ca32cac037d",
+          "02e503dcb52afb128d64aa11cfa6bc63d2571521",
+          "f5d78845a613f4a2d3f1d7aa7fad7ef976e8919b"
+        ],
+        "subjects": [
+          "C0 baseline",
+          "A1 setup indirect header before deletion",
+          "A1 remove indirect include and delete extra.h"
+        ],
+        "bundle_sha256": "fad2895cafa74e657ecfe10fbfcc5adef8d6786ef5901c6a78c73e8a4ee34086",
+        "fsck_stdout": ""
+      }
+    },
+    {
+      "name": "e10-deletion:final_project_input_equals_recovered_HEAD",
+      "passed": true
+    },
+    {
+      "name": "deletion-full_independent_expectation_is_explicit",
+      "passed": true
+    },
+    {
+      "name": "deletion-baseline:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-baseline_is_second_internal_commit",
+      "passed": true
+    },
+    {
+      "name": "deletion-exact_three_version_input_changes",
+      "passed": true
+    },
+    {
+      "name": "deletion-five_rows_and_ten_raw_reports",
+      "passed": true
+    },
+    {
+      "name": "deletion:exactly_five_rows_and_repeat_numbers",
+      "passed": true
+    },
+    {
+      "name": "deletion-r1:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "deletion-r1-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r1-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r2:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "deletion-r2-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r2-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r3:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "deletion-r3-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r3-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r4:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "deletion-r4-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r4-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r5:commit_complete_collection_equality_and_CSV_exact_values",
+      "passed": true
+    },
+    {
+      "name": "deletion-r5-incremental:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r5-full:input_independent_graph_findings_key_delta_and_reuse",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "findings": true,
+        "key": true,
+        "elapsed_positive": true,
+        "added": true,
+        "resolved": true,
+        "reused": true,
+        "refreshed": true
+      }
+    },
+    {
+      "name": "deletion-r1:matches_all_independent_expected_fields",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "added": true,
+        "resolved": true,
+        "refreshed": true,
+        "reused": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "deletion-r2:matches_all_independent_expected_fields",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "added": true,
+        "resolved": true,
+        "refreshed": true,
+        "reused": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "deletion-r3:matches_all_independent_expected_fields",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "added": true,
+        "resolved": true,
+        "refreshed": true,
+        "reused": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "deletion-r4:matches_all_independent_expected_fields",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "added": true,
+        "resolved": true,
+        "refreshed": true,
+        "reused": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "deletion-r5:matches_all_independent_expected_fields",
+      "passed": true,
+      "details": {
+        "actual": true,
+        "declared": true,
+        "added": true,
+        "resolved": true,
+        "refreshed": true,
+        "reused": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY:performance_summary_recomputed_remove-indirect-header",
+      "passed": true,
+      "details": {
+        "recomputed": {
+          "n": 5,
+          "inc_median_s": 0.010122504085302353,
+          "full_median_s": 0.009964491240680218,
+          "inc_min_s": 0.01005715923383832,
+          "inc_max_s": 0.010393000673502684,
+          "full_min_s": 0.0099005913361907,
+          "full_max_s": 0.010030034929513931,
+          "full_over_inc": 0.9843899450876423
+        },
+        "fields_equal": {
+          "n": true,
+          "inc_median_s": true,
+          "full_median_s": true,
+          "inc_min_s": true,
+          "inc_max_s": true,
+          "full_min_s": true,
+          "full_max_s": true,
+          "full_over_inc": true
+        }
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY:performance_cases_cover_all_raw_rows",
+      "passed": true
+    },
+    {
+      "name": "deletion-gate_matches_real_versions_and_rows",
+      "passed": true
+    },
+    {
+      "name": "deletion-program_output_one",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.eVOOik/matrix/final-buildchecker:successful_clean_and_build",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.eVOOik/matrix/final-buildchecker:dynamic_input_snapshot_matches_hashes",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.eVOOik/matrix/final-buildchecker:complete_process_tree_and_zero_exits",
+      "passed": true,
+      "details": {
+        "trace_files": 10,
+        "pids": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      }
+    },
+    {
+      "name": "e10-A-manual.eVOOik/matrix/final-buildchecker:raw_trace_and_make_database_reparse_exactly_matches_all_reports",
+      "passed": true,
+      "details": {
+        "actual_graph": true,
+        "declared_graph": true,
+        "processes": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "e10-A-manual.eVOOik/matrix/final-buildchecker:dynamic_object_projection_matches_scan_and_independent_input",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-before:successful_clean_and_build",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-before:dynamic_input_snapshot_matches_hashes",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-before:complete_process_tree_and_zero_exits",
+      "passed": true,
+      "details": {
+        "trace_files": 10,
+        "pids": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ]
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-before:raw_trace_and_make_database_reparse_exactly_matches_all_reports",
+      "passed": true,
+      "details": {
+        "actual_graph": true,
+        "declared_graph": true,
+        "processes": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-before:dynamic_object_projection_matches_scan_and_independent_input",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-after:successful_clean_and_build",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-after:dynamic_input_snapshot_matches_hashes",
+      "passed": true
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-after:complete_process_tree_and_zero_exits",
+      "passed": true,
+      "details": {
+        "trace_files": 10,
+        "pids": [
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126
+        ]
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-after:raw_trace_and_make_database_reparse_exactly_matches_all_reports",
+      "passed": true,
+      "details": {
+        "actual_graph": true,
+        "declared_graph": true,
+        "processes": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "e10-A-manual.n9BhPY/buildchecker-after:dynamic_object_projection_matches_scan_and_independent_input",
+      "passed": true
+    },
+    {
+      "name": "new_cloud_unit_test_log_has_original_seven_and_own_one",
+      "passed": true,
+      "details": [
+        "test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache)",
+        "test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges)",
+        "test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected)",
+        "test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency)",
+        "test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets)",
+        "test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected)",
+        "test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected)",
+        "test_header_include_invalidates_previous_dependency_graph (test_student_241880485.A1IndirectIncludeTests.test_header_include_invalidates_previous_dependency_graph)"
+      ]
+    },
+    {
+      "name": "audit_did_not_change_any_downloaded_original",
+      "passed": true,
+      "details": {
+        "file_count": 291,
+        "manifest_sha256": "46bdbe88874369b62f5734c5ce763ef68a1fac45cf4f54be2c8d8601136e30f7"
+      }
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Offline audit verifies preserved inputs, Git object histories, syscall/make evidence and arithmetic; it does not rerun Linux GCC, Make or strace on Windows.",
+    "Stored measurement intervals cannot be independently timed again without a new experiment; all 35 CSV values are checked exactly against the 70 original report timers and summaries are recomputed.",
+    "3.5 GiB visible memory is below the 4 GiB material recommendation.",
+    "Raw trace reparse uses the exact recorded source version of the course parser; independent literal-include/source traversal and expected sets provide a separate object-graph check."
+  ],
+  "student_id": "241880485",
+  "source_commit": "18a79582672a71d486abc656bc9007d4aebdceab",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "private_recovered_bundles": "D:\\Desktop_Users\\31840\\desktop\\DevOps\\tmp\\e8-a1-20261103\\remaining-audit-recovery-eqapo_o8",
+  "e9_commits": {
+    "C0": "a817cc09960456b4eac8762d10d69037bf4aa767",
+    "C1": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+    "C2": "02e714436272025bcce1ec9983a2be57a0a93e93",
+    "C3": "35785ee1fa73e80c22a6c4f1067ec303c0a5fb05"
+  },
+  "e10_performance": [
+    {
+      "case": "unchanged",
+      "n": 5,
+      "inc_median_s": 0.0017513846978545189,
+      "full_median_s": 0.01008349796757102,
+      "inc_min_s": 0.0017332457937300205,
+      "inc_max_s": 0.0023714560084044933,
+      "full_min_s": 0.00994823593646288,
+      "full_max_s": 0.010856995824724436,
+      "full_over_inc": 5.757443227592148
+    },
+    {
+      "case": "body",
+      "n": 5,
+      "inc_median_s": 0.001752061303704977,
+      "full_median_s": 0.010217139963060617,
+      "inc_min_s": 0.0017152088694274426,
+      "inc_max_s": 0.002161571290344,
+      "full_min_s": 0.00996572570875287,
+      "full_max_s": 0.011016904842108488,
+      "full_over_inc": 5.831496844006003
+    },
+    {
+      "case": "include",
+      "n": 5,
+      "inc_median_s": 0.010148966684937477,
+      "full_median_s": 0.00994440307840705,
+      "inc_min_s": 0.010008659213781357,
+      "inc_max_s": 0.011463852133601904,
+      "full_min_s": 0.009904440026730299,
+      "full_max_s": 0.01016276702284813,
+      "full_over_inc": 0.9798438981148663
+    },
+    {
+      "case": "declaration",
+      "n": 5,
+      "inc_median_s": 0.0017636828124523163,
+      "full_median_s": 0.010198696050792933,
+      "inc_min_s": 0.0017527397722005844,
+      "inc_max_s": 0.0021602516062557697,
+      "full_min_s": 0.009972278028726578,
+      "full_max_s": 0.011074423789978027,
+      "full_over_inc": 5.782613505549865
+    },
+    {
+      "case": "flags",
+      "n": 5,
+      "inc_median_s": 0.010235705878585577,
+      "full_median_s": 0.010032027959823608,
+      "inc_min_s": 0.010131462942808867,
+      "inc_max_s": 0.0113936229608953,
+      "full_min_s": 0.009944078978151083,
+      "full_max_s": 0.01027254993095994,
+      "full_over_inc": 0.9801012337421604
+    },
+    {
+      "case": "header",
+      "n": 5,
+      "inc_median_s": 0.010127682704478502,
+      "full_median_s": 0.010062317363917828,
+      "inc_min_s": 0.010051824152469635,
+      "inc_max_s": 0.011355276219546795,
+      "full_min_s": 0.01001817686483264,
+      "full_max_s": 0.01009358186274767,
+      "full_over_inc": 0.9935458739705807
+    }
+  ],
+  "e10_commits": {
+    "unchanged": "faeda7ad14581c9d63f3786666298b16b881be6c",
+    "body": "40ea6f52fb48fc999822c61286ad838b7ee72ccc",
+    "include": "22d89f10d17555006175c063c37d2a91aca15dfc",
+    "declaration": "05103eb6db9ce6f8070f9874b923a8613240ed8e",
+    "flags": "ff4e0a999a1ac0f38a08c90e26858d7a6f5193e4",
+    "header": "f8c55209707dc711457b21c725a46c0a8f2ff9cc"
+  },
+  "deletion_performance": [
+    {
+      "case": "remove-indirect-header",
+      "n": 5,
+      "inc_median_s": 0.010122504085302353,
+      "full_median_s": 0.009964491240680218,
+      "inc_min_s": 0.01005715923383832,
+      "inc_max_s": 0.010393000673502684,
+      "full_min_s": 0.0099005913361907,
+      "full_max_s": 0.010030034929513931,
+      "full_over_inc": 0.9843899450876423
+    }
+  ],
+  "deletion_commits": {
+    "C0": "750f2ca1c982cee81ef220c52ba31ca32cac037d",
+    "indirect_before": "02e503dcb52afb128d64aa11cfa6bc63d2571521",
+    "deleted_after": "f5d78845a613f4a2d3f1d7aa7fad7ef976e8919b"
+  },
+  "dynamic_offline_reparse": [
+    {
+      "path": "e10-A-manual.eVOOik/matrix/final-buildchecker",
+      "linux_project_root": "/course/work/e10-A-manual.eVOOik/matrix/final-buildchecker/project",
+      "trace_count": 10,
+      "actual": {
+        "main.o": [
+          "config.h",
+          "extra.h",
+          "main.c"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "findings": [
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ],
+      "trace_manifest": {
+        "t.13": {
+          "bytes": 8090,
+          "sha256": "7056a1b9c8452f306b531e48186d0d980d8c6ed9d64f923af628b4dbc69f6ddb"
+        },
+        "t.14": {
+          "bytes": 10665,
+          "sha256": "b31bc8eb1426f564a409ad5a40ecabdb2c3d801f71612e58e988c39c8eb7d080"
+        },
+        "t.15": {
+          "bytes": 55664,
+          "sha256": "b8593bf4561d6a27777cb35d227cdc12f44b42ff060acfbc0cd3dbb1ad31a8a7"
+        },
+        "t.16": {
+          "bytes": 2374,
+          "sha256": "fe6a6afda29d9af448ca2376ce3dfb431359c89373767ba5dae0f44963eb3fa2"
+        },
+        "t.17": {
+          "bytes": 10660,
+          "sha256": "1d68fe78be8b9a7ed93efb30390f1b8a305c73243fa8712e45062ab0b4f410f1"
+        },
+        "t.18": {
+          "bytes": 9348,
+          "sha256": "9c37cd49ddb778ffc75b6c6a4f8b511e0b1c0504cedab76e197eb2c631fa8773"
+        },
+        "t.19": {
+          "bytes": 2385,
+          "sha256": "f28e49100aba656cdfb1812d807d07e6063b92d0d3cd3f08d20ed1134e096170"
+        },
+        "t.20": {
+          "bytes": 13071,
+          "sha256": "4df906b6d21dfa2019e94656e902a2da85f653c4611590a51563449f31024b49"
+        },
+        "t.21": {
+          "bytes": 11956,
+          "sha256": "65680eca2cca7119cd30f7df875d8471b970723ab264a671d8509d6349a46328"
+        },
+        "t.22": {
+          "bytes": 16710,
+          "sha256": "38babe0e0cc44aeb8af65ae6a1653bdc951f9625ba893b46055fec7a802400d8"
+        }
+      }
+    },
+    {
+      "path": "e10-A-manual.n9BhPY/buildchecker-before",
+      "linux_project_root": "/course/work/e10-A-manual.n9BhPY/buildchecker-before/project",
+      "trace_count": 10,
+      "actual": {
+        "main.o": [
+          "config.h",
+          "extra.h",
+          "main.c"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "MISSING",
+          "main.o",
+          "extra.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ],
+      "trace_manifest": {
+        "t.31": {
+          "bytes": 7917,
+          "sha256": "733c2b7b6c308254b6e21d5808820c52f91ca4f5e7c4ccb5e7267e1034fb37fd"
+        },
+        "t.32": {
+          "bytes": 10628,
+          "sha256": "09344317c1eae355029d2992f4237581c2b0ed743049521042275b759849c7db"
+        },
+        "t.33": {
+          "bytes": 54230,
+          "sha256": "41fca802d5e3b6e2d0d2920153b264a819faf95b733f4a42d896626c2f1430a6"
+        },
+        "t.34": {
+          "bytes": 2374,
+          "sha256": "3460f501b2b26875b07aace990b705bd1cfa7b86fce96813e925e670a22fa667"
+        },
+        "t.35": {
+          "bytes": 10636,
+          "sha256": "ec658d5bd4dfcba03eab51ba978b06ffe76d80ca0706b38c42ff4c6a52193568"
+        },
+        "t.36": {
+          "bytes": 9331,
+          "sha256": "7b2b70ab50980294cd1b6c9190df926a646dda1f46934237705be0544253104b"
+        },
+        "t.37": {
+          "bytes": 2390,
+          "sha256": "577e467d520c1f1cebb649570e125547cb093ab1b0d47c2bfd6baaffdce40e9a"
+        },
+        "t.38": {
+          "bytes": 13023,
+          "sha256": "015660f0bbe17629c5695b238f787df76509d86842ddaea4c2401ffedee2bfc2"
+        },
+        "t.39": {
+          "bytes": 11969,
+          "sha256": "661b7ba96004f6aa758131933f185fcd192d31b32e8f94bb7c1ad3827f8947aa"
+        },
+        "t.40": {
+          "bytes": 16614,
+          "sha256": "9db8ece2f1e72059ef86d883aab466ae629b5af916a2ff689f9aeca171bdb711"
+        }
+      }
+    },
+    {
+      "path": "e10-A-manual.n9BhPY/buildchecker-after",
+      "linux_project_root": "/course/work/e10-A-manual.n9BhPY/buildchecker-after/project",
+      "trace_count": 10,
+      "actual": {
+        "main.o": [
+          "config.h",
+          "main.c"
+        ],
+        "helper.o": [
+          "helper.c"
+        ]
+      },
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ],
+      "trace_manifest": {
+        "t.117": {
+          "bytes": 7921,
+          "sha256": "a6274496221204d8115b7e217568762b23bd5fc6a3923b106ae119345dc24fa3"
+        },
+        "t.118": {
+          "bytes": 10632,
+          "sha256": "9157c9773fb1b566abfc4ae7efbdd7e349b6f3691a555d42acb4e92c07bb631a"
+        },
+        "t.119": {
+          "bytes": 54175,
+          "sha256": "2204ac3e5522499e82a05264ebff4ad283c350918339f2f332918021293187b6"
+        },
+        "t.120": {
+          "bytes": 2369,
+          "sha256": "dbd471aaa4f1eb96f227e4e379b2454bbc5c3368384f10d8e235d80147b6239f"
+        },
+        "t.121": {
+          "bytes": 10640,
+          "sha256": "da9fea46d321aa543a381406237446c21795ebab86112d3784ea3dccaaf62949"
+        },
+        "t.122": {
+          "bytes": 9328,
+          "sha256": "d05694bfe4d97e093738a4c672dadf1ddfaf7d3bd931d92c7a4c17776b27165e"
+        },
+        "t.123": {
+          "bytes": 2390,
+          "sha256": "1333e7f8e64046d1a09fa43aa26c970316ea46d69774fe1370fe05e542d794aa"
+        },
+        "t.124": {
+          "bytes": 13019,
+          "sha256": "a8371b271e097b4ed9626d74e3ead3fc17d5ce3ea8fdc3651af97037122a4893"
+        },
+        "t.125": {
+          "bytes": 11960,
+          "sha256": "b5d08a823ef400e543c505dcf8ca3be648d8c9e6e3d3a2397fffbb0f99c6e0cd"
+        },
+        "t.126": {
+          "bytes": 16598,
+          "sha256": "cc230c26d1216befcb694602db0af0c22048ab2d3dfbb7ce37442d74009fe1c9"
+        }
+      }
+    }
+  ],
+  "check_count": 199
+}
