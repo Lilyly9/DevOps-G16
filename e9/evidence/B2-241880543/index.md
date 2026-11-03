@@ -5,6 +5,7 @@
 ## 环境与原件
 
 - 学生源码 SHA：`3befe15c3912056474c359b7990b84048f53773f`；公共导入依赖 `7f6a448`。
+- 交付PR=[#14](https://github.com/Lilyly9/DevOps-G16/pull/14)；其源码SHA=`883c7792c22752f4d9d35f57132e559beb91ae64` 的 [课程CI](https://github.com/Lilyly9/DevOps-G16/actions/runs/41568698562) 成功，原E7 A/B检查也成功。`ci/41568698562/` 保存原始API记录、artifact.zip、验证日志及verification.json，9项单测/六路线/30行矩阵/三项验证均已独立核验；属于公共回归，非本人代做他人阶段。
 - WSL Ubuntu22.04 / x86_64 / Python3.10.12 / GCC11.4.0 / Make4.3 / Git2.34.1；本机无 Docker/image ID，环境原始记录见 `run-01/environment.json`。
 - OUT（Windows）：`D:\LearningResources\大三上\DevOps\Project\DevOps-G16\work\e9-B-241880543-20261103-01`。
 - OUT（Linux）：`/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/work/e9-B-241880543-20261103-01`。
