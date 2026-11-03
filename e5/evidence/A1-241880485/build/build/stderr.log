@@ -1,0 +1,52 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.A16
+#1 transferring dockerfile: 2.41kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#2 DONE 1.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 106B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 40.17kB done
+#4 DONE 0.0s
+
+#5 [1/8] FROM m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#5 resolve m.daocloud.io/docker.io/library/python@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.0s done
+#5 DONE 0.0s
+
+#6 [2/8] RUN sed -i       -e 's#http://deb.debian.org/debian-security#https://mirrors.aliyun.com/debian-security#g'       -e 's#http://deb.debian.org/debian#https://mirrors.aliyun.com/debian#g'       /etc/apt/sources.list.d/debian.sources  && grep -q '^URIs: https://mirrors.aliyun.com/debian-security$' /etc/apt/sources.list.d/debian.sources  && grep -q '^URIs: https://mirrors.aliyun.com/debian$' /etc/apt/sources.list.d/debian.sources  && apt-get update  && apt-get install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#6 CACHED
+
+#7 [5/8] RUN useradd --create-home --uid 10001 app && install -d -o app -g app /app
+#7 CACHED
+
+#8 [3/8] COPY requirements-dev.lock /tmp/requirements-dev.lock
+#8 CACHED
+
+#9 [4/8] RUN pip install --no-cache-dir --require-hashes -r /tmp/requirements-dev.lock  && pip freeze | sed 's/^/pip:/' >> /opt/toolchain.lock
+#9 CACHED
+
+#10 [6/8] WORKDIR /app
+#10 CACHED
+
+#11 [7/8] COPY --chown=app:app services/buildchecker/ /app/
+#11 DONE 0.0s
+
+#12 [8/8] COPY --chown=app:app fixtures/ /app/fixtures/
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.1s done
+#13 exporting manifest sha256:bc853b52e1226bc565b187723e7ea19ae41603fd35e1956cc7dd40d310afc3b2
+#13 exporting manifest sha256:bc853b52e1226bc565b187723e7ea19ae41603fd35e1956cc7dd40d310afc3b2 done
+#13 exporting config sha256:cfdd227f4aba6b9d96cad8c5e415b5996ffa24000e782114b01640cccbcc1870 done
+#13 exporting attestation manifest sha256:6afb1ef29b644215be6f04c28d87650218a037131ce8535158496fca5f1920f4 0.0s done
+#13 exporting manifest list sha256:a8c15fd4391437a3f5497e9feee0d4e3053d4a488e2d1576cb8c12d65c9edc23 done
+#13 naming to docker.io/library/course1020-buildchecker:241880485 done
+#13 unpacking to docker.io/library/course1020-buildchecker:241880485 0.0s done
+#13 DONE 0.1s
