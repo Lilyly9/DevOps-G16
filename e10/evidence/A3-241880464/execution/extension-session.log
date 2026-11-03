@@ -1,0 +1,11 @@
+仓库=/root/241880464/DevOps-G16-e10-A3-20261103
+学号=241880464
+镜像=course-e8e10:241880464
+本次证据目录=work/e10-A-manual.1v1wdC
+{'case': 'macro-enabled', 'repeat': 1, 'equal': True, 'incremental_s': 0.010281004011631012, 'full_s': 0.009988620411604643, 'reused': 0, 'refreshed': 2}
+{'case': 'macro-enabled', 'repeat': 2, 'equal': True, 'incremental_s': 0.010130299255251884, 'full_s': 0.009940262883901596, 'reused': 0, 'refreshed': 2}
+{'case': 'macro-enabled', 'repeat': 3, 'equal': True, 'incremental_s': 0.011161360424011946, 'full_s': 0.010066816583275795, 'reused': 0, 'refreshed': 2}
+{'case': 'macro-enabled', 'repeat': 4, 'equal': True, 'incremental_s': 0.010084310080856085, 'full_s': 0.009947196114808321, 'reused': 0, 'refreshed': 2}
+{'case': 'macro-enabled', 'repeat': 5, 'equal': True, 'incremental_s': 0.01010032556951046, 'full_s': 0.01010175608098507, 'reused': 0, 'refreshed': 2}
+A3_MACRO_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0

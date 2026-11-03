@@ -1,0 +1,25 @@
+e8e10-quality-gate	Build teaching environment	﻿2026-11-03T03:10:56.5820449Z ##[group]Run docker build -f labs/e8e10/environment/services/buildchecker/Dockerfile -t course-e8e10:ci labs/e8e10/environment
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:10:56.5824917Z ^[[36;1mdocker build -f labs/e8e10/environment/services/buildchecker/Dockerfile -t course-e8e10:ci labs/e8e10/environment^[[0m
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:10:56.5854852Z shell: /usr/bin/bash -e {0}
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:10:56.5856148Z ##[endgroup]
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0045586Z #0 building with "default" instance using docker driver
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0046173Z 
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0046333Z #1 [internal] load build definition from Dockerfile
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0046721Z #1 transferring dockerfile: 1.98kB 0.0s done
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0047033Z #1 DONE 0.0s
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0047234Z 
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:00.0047798Z #2 [internal] load metadata for m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9282097Z #2 ERROR: unexpected media type application/octet-stream for sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: not found
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9517717Z ------
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9518869Z  > [internal] load metadata for m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74:
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9519727Z ------
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9526689Z Dockerfile:4
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9527094Z --------------------
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9528077Z    2 |     # 使用 Docker 内置解析器，避免额外下载 docker/dockerfile 语法镜像。
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9528844Z    3 |     ARG BASE_IMAGE=m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9529554Z    4 | >>> FROM ${BASE_IMAGE}
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9529801Z    5 |     
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9530309Z    6 |     ENV LC_ALL=C.UTF-8 \
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9530552Z --------------------
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9532197Z ERROR: failed to build: failed to solve: m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: failed to resolve source metadata for m.daocloud.io/docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: unexpected media type application/octet-stream for sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74: not found
+e8e10-quality-gate	Build teaching environment	2026-11-03T03:11:25.9604875Z ##[error]Process completed with exit code 1.

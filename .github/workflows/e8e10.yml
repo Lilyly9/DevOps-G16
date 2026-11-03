@@ -13,10 +13,13 @@ jobs:
         run: docker build -f labs/e8e10/environment/services/buildchecker/Dockerfile -t course-e8e10:ci labs/e8e10/environment
       - name: Validate both tracks
         shell: bash
+        env:
+          STUDENT_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           set -euo pipefail
           mkdir -p work
-          git rev-parse HEAD > work/student-source-commit.txt
+          printf '%s\n' "$STUDENT_SOURCE_SHA" > work/student-source-commit.txt
+          git rev-parse HEAD > work/checkout-commit.txt
           docker image inspect course-e8e10:ci --format '{{.Id}}' > work/environment-image-id.txt
           docker run --rm --network none course-e8e10:ci cat /opt/toolchain.lock > work/toolchain.lock
           docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v 2>&1 | tee work/unit-tests.log

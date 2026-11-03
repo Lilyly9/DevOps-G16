@@ -1,0 +1,51 @@
+{
+  "actual": {
+    "main.o": [
+      "config.h",
+      "main.c",
+      "mode.h"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "declared": {
+    "main.o": [
+      "main.c",
+      "unused.h"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h"
+    },
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "mode.h"
+    },
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h"
+    }
+  ],
+  "reused": [],
+  "refreshed": [
+    "main.o",
+    "helper.o"
+  ],
+  "added": [
+    [
+      "MISSING",
+      "main.o",
+      "mode.h"
+    ]
+  ],
+  "resolved": []
+}

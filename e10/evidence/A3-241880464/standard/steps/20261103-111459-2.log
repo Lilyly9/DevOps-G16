@@ -1,0 +1,8 @@
+NO_SOURCE_CHANGE
+{'case': 'unchanged', 'repeat': 1, 'equal': True, 'incremental_s': 0.0025909598916769028, 'full_s': 0.011231565847992897, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 2, 'equal': True, 'incremental_s': 0.0017608366906642914, 'full_s': 0.010300514753907919, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 3, 'equal': True, 'incremental_s': 0.0017970660701394081, 'full_s': 0.010237416718155146, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 4, 'equal': True, 'incremental_s': 0.0017767101526260376, 'full_s': 0.010450771078467369, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 5, 'equal': True, 'incremental_s': 0.0018309508450329304, 'full_s': 0.010140264872461557, 'reused': 2, 'refreshed': 0}
+UNCHANGED_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0

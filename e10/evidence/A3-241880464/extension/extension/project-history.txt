@@ -1,0 +1,3 @@
+9537bdbba05a62401f9858421a24a66b7a144995 C0 baseline
+2892851857387cf279341865b3c4c2bde6e8f052 A3: conditional header disabled
+e4975164422e44cdfecf46bb0bcdfbf68e49145c A3: enable MODE dependency
