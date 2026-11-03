@@ -1,0 +1,8 @@
+{
+  "track": "A",
+  "stage": "gate",
+  "time_utc": "2026-10-24T11:08:17.793786+00:00",
+  "image": "course1020-buildchecker:241880464",
+  "packaging_entrypoint": "cloud-v1",
+  "replay": false
+}

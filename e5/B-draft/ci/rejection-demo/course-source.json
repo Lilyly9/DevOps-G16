@@ -1,0 +1,10 @@
+{
+  "e5/B-draft/ci/rejection-demo/B/test_ci_reject_demo.py": {
+    "source": "DevOps_1020_Student_Cloud/ci/rejection-demo/B/test_ci_reject_demo.py",
+    "sha256": "3ecaf3d15415895befbde3d31a07213a1b7314fad7b5b1e3c6514834b858591c"
+  },
+  "e5/B-draft/ci/rejection-demo/fixed/test_ci_reject_demo.py": {
+    "source": "DevOps_1020_Student_Cloud/ci/rejection-demo/B/fixed/test_ci_reject_demo.py",
+    "sha256": "41b1d752ba91004fd1231e25dadae130ac3c9ce243a6b34b175a7dc5c7b00fcf"
+  }
+}

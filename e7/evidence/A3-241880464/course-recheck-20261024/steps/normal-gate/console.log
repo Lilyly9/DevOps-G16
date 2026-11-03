@@ -1,0 +1,37 @@
+EVIDENCE_DIR=<REPO>/e5/A-buildchecker/work/course-recheck-A3-20261024T114803Z/normal-run
+      "trace_id": "e6-0857c8461add4f4e9d0da779180c3a95"
+    },
+    {
+      "case": "fixed",
+      "passed": true,
+      "exit_code": 0,
+      "detector_status": "SUCCEEDED",
+      "trace_id": "e6-57fc4c67d4a742c9914c36e0e5967d87"
+    },
+    {
+      "case": "build-failed",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "FAILED",
+      "trace_id": "e6-5dd55a9afd004add9df7d2bbeb164446"
+    },
+    {
+      "case": "unsupported",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "FAILED",
+      "trace_id": "e6-96c7d6fe613648a596ee63912605abaa"
+    },
+    {
+      "case": "timeout",
+      "passed": true,
+      "exit_code": 1,
+      "detector_status": "TIMED_OUT",
+      "trace_id": "e6-5ff70769d5994c31bc96f4dbc6f427cf"
+    }
+  ],
+  "oracle_scope": "Small explicit teaching fixtures; not full paper benchmark",
+  "repeated_original_cases": 3,
+  "intentional_failure": false
+}
+

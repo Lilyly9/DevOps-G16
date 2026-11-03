@@ -1,0 +1,11 @@
+[
+  "python3",
+  "scripts/lab_cloud.py",
+  "build",
+  "--out",
+  "work/build",
+  "--image",
+  "course1020-buildchecker:241880464-demo-fixed",
+  "--build-timeout",
+  "1200"
+]

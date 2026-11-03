@@ -1,0 +1,18 @@
+{
+  "checked_date_beijing": "2026-10-26",
+  "role": "B3",
+  "protected": true,
+  "configuration_applied_by_current_agent": false,
+  "exact_configuration_readable": false,
+  "http_status_on_read": 404,
+  "account_admin": false,
+  "required_checks_committed_draft": ["e7-a-quality-gate", "e7-b-quality-gate"],
+  "strict": true,
+  "enforce_admins": true,
+  "b_required_check_verified": true,
+  "b_rejection_via_required_check": true,
+  "demo_pr": 8,
+  "demo_pr_merged": true,
+  "admin_bypass_used": false,
+  "evidence": "e7/ci/B/"
+}

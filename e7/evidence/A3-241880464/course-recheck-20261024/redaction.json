@@ -1,0 +1,30 @@
+{
+  "provenance": "ACTUAL_LOCAL_RUN_REDACTED_COPY",
+  "redacted_fields": [
+    "local hostname",
+    "personal email",
+    "local home and repository absolute paths",
+    "temporary Docker config location"
+  ],
+  "modified_files": [
+    "steps/doctor/command.json",
+    "steps/doctor/console.log",
+    "steps/normal-build/console.log",
+    "steps/normal-gate/console.log",
+    "steps/official-demo-bad/console.log",
+    "steps/official-demo-fixed/console.log",
+    "steps/official-demo-fixed-gate/console.log",
+    "steps/a2-reference-verify/command.json",
+    "environment.json",
+    "cases/unit-tests/command.json",
+    "cases/original-1/command.json",
+    "cases/original-2/command.json",
+    "cases/original-3/command.json",
+    "cases/fixed/command.json",
+    "cases/build-failed/command.json",
+    "cases/unsupported/command.json",
+    "cases/timeout/command.json"
+  ],
+  "raw_location": "e5/A-buildchecker/work/course-recheck-A3-20261024T114803Z",
+  "acceptance_fields_unchanged": true
+}

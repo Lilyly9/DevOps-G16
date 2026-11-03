@@ -1,0 +1,6 @@
+{
+  "step": "official-demo-bad",
+  "expected_exit_code": 1,
+  "actual_exit_code": 1,
+  "passed": true
+}

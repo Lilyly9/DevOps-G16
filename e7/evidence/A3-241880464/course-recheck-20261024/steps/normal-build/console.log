@@ -1,0 +1,76 @@
+EVIDENCE_DIR=<REPO>/e5/A-buildchecker/work/course-recheck-A3-20261024T114803Z/normal-build
+
+#7 resolve docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.1s done
+#7 DONE 0.1s
+
+#8 [4/8] RUN pip install --no-cache-dir --require-hashes -r /tmp/requirements-dev.lock  && pip freeze | sed 's/^/pip:/' >> /opt/toolchain.lock
+#8 CACHED
+
+#9 [5/8] RUN useradd --create-home --uid 10001 app && install -d -o app -g app /app
+#9 CACHED
+
+#10 [2/8] RUN apt-get update  && apt-get install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#10 CACHED
+
+#11 [3/8] COPY requirements-dev.lock /tmp/requirements-dev.lock
+#11 CACHED
+
+#12 [6/8] WORKDIR /app
+#12 CACHED
+
+#13 [7/8] COPY --chown=app:app services/buildchecker/ /app/
+#13 DONE 0.1s
+
+#14 [8/8] COPY --chown=app:app fixtures/ /app/fixtures/
+#14 DONE 0.2s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.3s done
+#15 exporting manifest sha256:99abd47b6deec6c753ad9fb4b61224b3ea33ceb612f95baad6dca6dea36ee8a6 0.0s done
+#15 exporting config sha256:a1b89dd46fffae73ae93019c70cf0ecce1fa4198cda7661b54b44d5a1ff91f04 0.0s done
+#15 exporting attestation manifest sha256:75853eac2207d296ee4e13eb2cbbb47a7940614e3b62cd08367f7648d103267f 0.0s done
+#15 exporting manifest list sha256:091b9cf61656e12518d91a91741128d27ed6d9c696378f7da0c0ee07b3f57ab4
+#15 exporting manifest list sha256:091b9cf61656e12518d91a91741128d27ed6d9c696378f7da0c0ee07b3f57ab4 0.0s done
+#15 naming to docker.io/library/course1020-buildchecker:241880464 done
+#15 unpacking to docker.io/library/course1020-buildchecker:241880464 0.1s done
+#15 DONE 0.6s
+        "Size": 653893174,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:f4f8b983b714f130e2cff99176baa26352db6a55d3622e10ada40f2b4720a4eb",
+                "sha256:7ef9ddba6965cfcb2dcd5bf24e61737a0031c2d9be2b3377339111ab1ad3f0f2",
+                "sha256:ef9f8c7c1d6b6b918d5e93cba9a7de4c837e3047ca733296bd396d9a413ae64f",
+                "sha256:fde42b5dd2510411f5cd411982dd5fa72f546553ccba3e5260f33a3da21bbf8f",
+                "sha256:eaaea979a464af6bdad8ca722f534dbc67b776ab0dadd87c487d70568d28a87b",
+                "sha256:462c2ac5b743379d2d863d0d44f1b3117df8cfe4debcc6422a29e0933535f702",
+                "sha256:97d85cdecad4b540fc1410ca13937b16a4624bfa797345bdc0de55ca84bea2d9",
+                "sha256:f4e29a31539a137d263f72b487028bab6ee81e56ed48a593c267c667a848cea2",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:a9d04c3cd2a07761a0e6b5f8a236b65e40d45884c29ecd6405fc8bd6b14894ee",
+                "sha256:f234c63c1a29eaee4840f92526fc7649674a428b041c1e87035ece5f454a8fc7"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-24T11:48:09.614314331Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:091b9cf61656e12518d91a91741128d27ed6d9c696378f7da0c0ee07b3f57ab4",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "me55bg3i9i8fac3c1j5437tcq",
+                    "CreatedAt": "2026-10-24T19:48:09.734661679+08:00"
+                }
+            ]
+        }
+    }
+]
+
+..................                                                       [100%]
+18 passed in 0.05s
+
