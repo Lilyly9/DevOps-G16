@@ -1,0 +1,102 @@
+name: E7 B quality gate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: e7-b-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e7-b-quality-gate:
+    name: e7-b-quality-gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: e5/B-draft
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Detect B changes without skipping the required job
+        id: changes
+        working-directory: .
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          relevant=true
+          if [[ "$EVENT" == pull_request ]]; then
+            git diff --name-only "$BASE...$HEAD" > /tmp/e7-b-paths
+          elif [[ "$EVENT" == push && -n "$BEFORE" && ! "$BEFORE" =~ ^0+$ ]] && git cat-file -e "$BEFORE^{commit}"; then
+            git diff --name-only "$BEFORE" "$GITHUB_SHA" > /tmp/e7-b-paths
+          else
+            echo 'relevant=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if ! grep -Eq '^(e5/B-draft/|\.github/workflows/e7-b-quality-gate\.yml$)' /tmp/e7-b-paths; then
+            relevant=false
+          fi
+          echo "relevant=$relevant" >> "$GITHUB_OUTPUT"
+
+      - name: Record source and event
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          mkdir -p work/ci
+          git rev-parse HEAD > work/ci/commit.txt
+          docker version > work/ci/docker-version.txt
+          printf '%s\n' "$EVENT" > work/ci/event.txt
+          printf '%s\n' "$PR_HEAD" > work/ci/pr-head.txt
+
+      - name: Python syntax
+        if: steps.changes.outputs.relevant == 'true'
+        run: python3 -m compileall -q services/draft/draft services/draft/tests scripts
+
+      - name: Scan tracked sources and full Git history
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p work/ci
+          python3 scripts/secret_scan.py ../.. --history 2>&1 | tee work/ci/source-scan.log
+
+      - name: Build image and run service tests
+        if: steps.changes.outputs.relevant == 'true'
+        run: python3 scripts/lab_cloud.py build --out work/ci/build --image e7-draft:ci --build-timeout 1200
+
+      - name: Scan built image
+        if: steps.changes.outputs.relevant == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/secret_scan.py ../.. --image e7-draft:ci 2>&1 | tee work/ci/image-scan.log
+
+      - name: Six-case gate
+        if: steps.changes.outputs.relevant == 'true'
+        run: python3 scripts/lab_cloud.py gate --replay --out work/ci/run --image e7-draft:ci
+
+      - name: Unrelated paths succeed
+        if: steps.changes.outputs.relevant != 'true'
+        run: echo 'No B implementation or workflow changes; Docker stages skipped after repository scan.'
+
+      - name: Upload logs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e7-b-${{ github.run_id }}-${{ github.run_attempt }}
+          path: e5/B-draft/work/ci/
+          if-no-files-found: error
+          retention-days: 30

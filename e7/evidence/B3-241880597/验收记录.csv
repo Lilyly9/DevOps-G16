@@ -1,0 +1,12 @@
+编号,轨道,阶段,项目,状态,证据路径或URL,说明
+C01,共同,环境,云主机与Docker,PENDING,e7/evidence/B3-241880597/；云服务器 47.97.103.111,已上云跑通 build 与 gate 6/6；doctor 因内存 3.5 GiB < 4 GiB 未通过，待资源调整或老师认可
+C02,共同,E5,真实复现与差异,PENDING,B1 的 E5-B 交付,由 B1 负责；B3 不代做 E5-B
+C03,共同,E6,输入哈希报告日志,PENDING,B2 的 E6-B 交付,由 B2 负责；B3 不代做 E6-B
+C04,共同,E7,自主扩展测试,PASS,e7/ci/B/；e5/B-draft/ci/rejection-demo/course-source.json,B3 交付 e7-b-quality-gate.yml 并安装官方拒绝演示测试（错误/固定两模板）驱动门禁；未改服务算法
+C05,共同,CI,正常失败恢复及artifact,PASS,e7/ci/B/,正常 run 40212467838；失败 run 40212926689（1 failed / 24 passed）；恢复 run 40213089034（25 passed、gate 6/6）及 artifact 已核验
+C06,共同,CI,必需检查与实际拒绝合并,PASS,e7/ci/B/PR-merged.json；e7/ci/B/protection-readcheck.json,必需检查 e7-b-quality-gate 失败阻断 PR #8；修复后普通合并（merge 595f7a5）；完整配置读取 404，以仓库内 main-protection.json 核对
+A01,A,E6,MD/RD精确证据与修复,PENDING,A3 交付,不属于 B3，本轮未验收
+A02,A,E7,三次一致及故障场景,PENDING,A3 交付,不属于 B3，本轮未验收
+B01,B,E5,缺失make及候选来源,PENDING,B1 交付,不属于 B3，本轮未验收
+B02,B,E6,构建和同镜像运行验证,PENDING,B2 交付,不属于 B3，本轮未验收
+B03,B,E7,五场景与超时清理,PASS,e7/evidence/B3-241880597/gate-result.json；results.csv；清理结论.md,五场景+单测 6/6 全通过；runtime-timeout 容器已清理无残留

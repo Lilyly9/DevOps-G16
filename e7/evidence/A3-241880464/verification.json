@@ -1,0 +1,46 @@
+{
+  "provenance": "ACTUAL_RUN",
+  "source_commit": "6c12a45c6a0ad111f077cb5234c3bd7f5a8d3a73",
+  "host_kind": "local Linux CachyOS, not course cloud host",
+  "gate_exit_code": 0,
+  "passed_cases": 8,
+  "csv_rows": 8,
+  "repeated_original_findings_equal": true,
+  "original_trace_ids": [
+    "e6-7163cd6de2a14a83a25f44fd1af35f12",
+    "e6-d732d00fcc4141cd9149555d6b2ecbf0",
+    "e6-fada9e45662247979a355a645f2dddf0"
+  ],
+  "changed_inputs": [
+    "Makefile"
+  ],
+  "service_tests": 18,
+  "independent_oracle_tests": 6,
+  "buildx": {
+    "version": "v0.38.1",
+    "temporary_docker_config": "<TASK_DOCKER_CONFIG>",
+    "sha256": "e25d5cd675092bb5d1d03632fdc46cdf3fede7b514dc5f023a105e00d3ce5ad4"
+  },
+  "failed_attempts": [
+    "work/build-A3-01",
+    "work/build-A3-02"
+  ],
+  "failed_attempt_reason": "Docker legacy builder rejected --progress; task-local buildx plugin fixed build environment",
+  "source_files_sha256": {
+    "e5/A-buildchecker/services/buildchecker/buildchecker/__init__.py": "3e7097b3bd96f87c4c6962afa8a4cb3a8c3be1b4df775b57828ebd48a9a9d05c",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/cli.py": "6c3663b1f39bf7ecfccebdc82a6235b317e71a6d1c1ce2aa9a9c8ac3e56114d9",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/fullcheck.py": "21a66422856be2d46a28db3569a9645864a83622d552841873e3c6a82fdea0e9",
+    "e5/A-buildchecker/services/buildchecker/buildchecker/smoke.py": "782d355fbf9013825778dff771d18eac5e84b558b6eee73966608755da288d08",
+    "e5/A-buildchecker/services/buildchecker/tests/test_cli.py": "c9c1912e463f6b5e7496f802cb40f9b0e67ddec1fac4ba5651950088ffa0bffb",
+    "e5/A-buildchecker/services/buildchecker/tests/test_extra_241880464.py": "523019571da4b948eec002cdb8e469f21e77d8a2ad6f1641a69ff56ce70ca360",
+    "e5/A-buildchecker/services/buildchecker/tests/test_extra_241880496.py": "7881418179b8f4a2a622c69855cff6a123167667bd93fe0391ab97c234112396",
+    "e5/A-buildchecker/services/buildchecker/tests/test_fullcheck.py": "c143d2f7ab2608284a3f5a575f593a0f66531f668c8271590d37a799ead46bac",
+    "e5/A-buildchecker/scripts/doctor.py": "f2f545e66581cf4b860122941940a60d14daa9eccc628bdf58ad471ff406af47",
+    "e5/A-buildchecker/scripts/lab_cloud.py": "7b18458810390a9ec267c071e99c117b806eb9d80d2c7f519f310ecc127fd4d1",
+    "e5/A-buildchecker/scripts/run_e7_a_gate.py": "f18b2e60a8bf8f1eba0a957db9ec3a288e73bfbd956a782fe75223b0e340d455",
+    "e5/A-buildchecker/scripts/secret_scan.py": "e3aefad5e87201d684841b931b8586a3d81d2930968bfa02867eff41cfcfbc65",
+    "e5/A-buildchecker/scripts/verify_e6_evidence.py": "8583f3e077e5b1bfad399bee6d44d82c0ed03c97368a1413d2d34dca9dcaf948",
+    "e5/A-buildchecker/tests/e7/test_e7_a_gate.py": "8a86c9467cebcc178de75c2ba8d76da6059fda54cab8264830141cf64e5bc76d"
+  }
+}

@@ -11,6 +11,8 @@
 
 > 说明：本班次在本地 WSL2（非组内云主机）执行，原因与影响见文末“限制”。
 
+> **最终 main 复核（2026-10-26）**：在 `36047e3` 上重跑全部步骤，结论一致（单测 19 passed、gate 8/8）。详见 [`recheck-20261026/index.md`](recheck-20261026/index.md)。
+
 ## 命令（可整段重跑）
 
 ```bash
@@ -52,6 +54,9 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-
 | 路径 | 内容 |
 | --- | --- |
 | `doctor/env.json` | 环境自检（工具版本、资源、Git 本地身份、镜像加速） |
+| `before/input/` | **输入副本**（`Makefile`、`main.c`、`config.h`、`unused.h`），SHA-256 与 `before/findings.json` 的 `input_sha256` 逐项一致 |
+| `after/input/` | 修复后的输入副本，仅 `Makefile` 的哈希与 before 不同 |
+| `before/runner/`、`after/runner/` | 入口命令、原始 `stdout.log`/`stderr.log` 与退出码 |
 | `before/findings.json` | 原始样例检测报告（2 条错误、`trace_id=e6-d4fd7a0a183c4c218c5d346f1bdab355`） |
 | `before/actual-graph.json`、`declared-graph.json`、`processes.json` | 实际图 / 声明图 / 进程归属 |
 | `before/make-db.txt` | `make -p app` 的 Make 数据库原文（声明证据） |
@@ -60,6 +65,7 @@ python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-
 | `verify-e6.json` | 前后报告一致性校验输出 |
 | `build/tests-17-passed.log` | 重建镜像后的单测输出（17 passed） |
 | `gate/gate-result.json`、`gate/results.csv` | 自证门禁 8 项结果与 trace_id |
+| `files.sha256` | 本目录全部文件的 SHA-256 清单，供逐字节核对 |
 
 ## 本人新增的测试
 

@@ -8,7 +8,7 @@
 
 | 角色 | 状态 | 关键判据 | 证据 |
 | --- | --- | --- | --- |
-| A2（E6-A） | **完成（本地 WSL2）** | before 2 条 → after 0 条；仅 Makefile 变化；17 passed；自证 gate 8/8 | [`evidence/A2-241880496/`](evidence/A2-241880496/index.md) |
+| A2（E6-A） | **完成（本地 WSL2；已在最终 main 复核）** | before 2 条 → after 0 条；仅 Makefile 变化；单测 19 passed；自证 gate 8/8 | [`evidence/A2-241880496/`](evidence/A2-241880496/index.md) |
 | B2（E6-B） | 待填 | 第一轮 `MISSING_MAKE`、第二轮 `build=0`；同 `image_id` 运行 `exit=0`、`hello E3` | — |
 
 ## A2 · E6-A 自动检测与修复复检
@@ -24,13 +24,14 @@ python3 scripts/lab_cloud.py build --out work/build-A2-01 --image course1020-bui
 python3 scripts/lab_cloud.py e6 --out work/e6-before-A2 --image course1020-buildchecker:241880496          # 退出码 1
 python3 scripts/lab_cloud.py e6 --fixed --out work/e6-after-A2 --image course1020-buildchecker:241880496    # 退出码 0
 python3 scripts/verify_e6_evidence.py --before work/e6-before-A2/evidence/findings.json --after work/e6-after-A2/evidence/findings.json
-python3 scripts/lab_cloud.py build --out work/build-A2-02 --image course1020-buildchecker:241880496        # 17 passed
+python3 scripts/lab_cloud.py build --out work/build-A2-02 --image course1020-buildchecker:241880496        # 首次 17 passed
 python3 scripts/lab_cloud.py gate --out work/e7-A2-selfcheck --image course1020-buildchecker:241880496     # 8/8
 ```
 
 - 结论：`MISSING main.o → config.h`（`t.14`:579、`t.15`:23）、`REDUNDANT main.o → unused.h`（`make-db.txt`:1053）；修复后 `findings=[]`，`changed_inputs=["Makefile"]`。
 - 新增测试：`e5/A-buildchecker/services/buildchecker/tests/test_extra_241880496.py`（2 项）。
 - 自证门禁：`gate-result.json` 8/8 `passed=true`，`E7_GATE_EXIT_CODE=0`（正式门禁与 CI 归 A3）。
+- **最终 main 复核（2026-10-26，`36047e3`）**：单测 **19 passed**、gate 8/8、findings 2→0 不变，见 [`evidence/A2-241880496/recheck-20261026/index.md`](evidence/A2-241880496/recheck-20261026/index.md)。
 - 报告：[`reports/A2-241880496.md`](reports/A2-241880496.md)｜索引：[`evidence/A2-241880496/index.md`](evidence/A2-241880496/index.md)
 
 ## B2 · E6-B 两轮构建与同镜像运行
