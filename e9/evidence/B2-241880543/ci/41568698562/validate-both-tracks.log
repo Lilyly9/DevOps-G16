@@ -1,0 +1,30 @@
+﻿2026-11-03T02:53:03.8149929Z ##[group]Run set -euo pipefail
+2026-11-03T02:53:03.8150148Z [36;1mset -euo pipefail[0m
+2026-11-03T02:53:03.8150529Z [36;1mdocker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v[0m
+2026-11-03T02:53:03.8150919Z [36;1mfor track in A B; do[0m
+2026-11-03T02:53:03.8151066Z [36;1m  for stage in e8 e9 e10; do[0m
+2026-11-03T02:53:03.8151523Z [36;1m    docker run --rm --network none --cap-add SYS_PTRACE --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 labs/e8e10/lab.py "$stage" --track "$track" --out "/course/work/$track-$stage"[0m
+2026-11-03T02:53:03.8151968Z [36;1m  done[0m
+2026-11-03T02:53:03.8152081Z [36;1mdone[0m
+2026-11-03T02:53:03.8172574Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-03T02:53:03.8172783Z ##[endgroup]
+2026-11-03T02:53:04.5930915Z test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache) ... ok
+2026-11-03T02:53:04.6219760Z test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges) ... ok
+2026-11-03T02:53:04.6508282Z test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected) ... ok
+2026-11-03T02:53:04.6799917Z test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency) ... ok
+2026-11-03T02:53:04.7102729Z test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets) ... ok
+2026-11-03T02:53:04.7397094Z test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected) ... ok
+2026-11-03T02:53:04.7546149Z test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected) ... ok
+2026-11-03T02:53:04.8613474Z test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests.test_duplicate_missing_records_preserve_all_three_styles) ... ok
+2026-11-03T02:53:04.8992543Z test_same_header_on_two_targets_is_not_globally_deduplicated (test_student_241880543.Student241880543PatchTests.test_same_header_on_two_targets_is_not_globally_deduplicated) ... ok
+2026-11-03T02:53:04.8993195Z 
+2026-11-03T02:53:04.8993335Z ----------------------------------------------------------------------
+2026-11-03T02:53:04.8993666Z Ran 9 tests in 0.357s
+2026-11-03T02:53:04.8993786Z 
+2026-11-03T02:53:04.8993850Z OK
+2026-11-03T02:53:05.5062105Z COMPLETED e8 A /course/work/A-e8
+2026-11-03T02:53:05.8913423Z COMPLETED e9 A /course/work/A-e9
+2026-11-03T02:53:07.1059224Z COMPLETED e10 A /course/work/A-e10
+2026-11-03T02:53:07.3933776Z COMPLETED e8 B /course/work/B-e8
+2026-11-03T02:53:07.7232269Z COMPLETED e9 B /course/work/B-e9
+2026-11-03T02:53:10.6860672Z COMPLETED e10 B /course/work/B-e10

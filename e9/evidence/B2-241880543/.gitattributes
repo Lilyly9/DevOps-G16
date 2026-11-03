@@ -1,0 +1,3 @@
+* -text -whitespace
+.gitattributes text eol=lf whitespace
+index.md text eol=lf whitespace
