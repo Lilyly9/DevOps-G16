@@ -1,0 +1,6 @@
+direct original Makefile bytes unchanged: PASS
+direct original header unchanged: PASS
+macro original Makefile bytes unchanged: PASS
+macro original header unchanged: PASS
+mixed original Makefile bytes unchanged: PASS
+mixed original header unchanged: PASS
