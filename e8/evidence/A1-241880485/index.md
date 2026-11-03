@@ -62,3 +62,5 @@ docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp \
 GitHub操作使用本机已有授权，云机接收同SHA的Git bundle并设置原origin，不存GitHub token。推送/个人PR的记录与原始运行源码SHA用途不同，不能把随后写报告的新提交伪称当时运行版本。
 
 实际资源为2 CPU / 3.5 GiB，可见内存低于材料4 GiB建议，未宣称达标；本轮无旧doctor输出或强制改阈值。没有完成/认领A2的E9或A3的E10个人任务；CI双轨六条参考路线属于公共回归。
+
+个人 [PR #15](https://github.com/Lilyly9/DevOps-G16/pull/15) 的代码/证据提交 `57fda0aaf77ece6087f4cc5fc644377840865862` 已通过三门禁；[CI记录](../../../docs/students/241880485/e8-e10/CI记录.md) 与 `ci/personal/` 保存8测、headSha、artifact及原始日志。个人PR等待组内审查合并。

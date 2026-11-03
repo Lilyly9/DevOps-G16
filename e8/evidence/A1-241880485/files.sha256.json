@@ -293,6 +293,31 @@
       "sha256": "b3c5c94b65af25ba50901126ff9539fa06e1e7625bdcc64d2b02ffe22030d4d8"
     },
     {
+      "path": "ci/personal/artifacts-41569763447.json",
+      "bytes": 169,
+      "sha256": "519a7d6d96fdd4ba0121a027f674d4812843478abf526751b789f0a3fa4145b0"
+    },
+    {
+      "path": "ci/personal/download-verification.json",
+      "bytes": 661,
+      "sha256": "14794413d77aaeb4079a0fdd361411dc3996e93981e837d7ad7fc9de593b8b2d"
+    },
+    {
+      "path": "ci/personal/pr-15-inspection.json",
+      "bytes": 30034,
+      "sha256": "8eef18715de5a797622fc9cff12c138da31a21a892be46f6b8e837135aca0bcc"
+    },
+    {
+      "path": "ci/personal/runs-student_241880485_e8-e10.json",
+      "bytes": 639,
+      "sha256": "3416061c75ab55cffb4e4909755bc962e78fe6cfe1fce2e147f6e0c8915dfc89"
+    },
+    {
+      "path": "ci/personal/validate-both-tracks.log",
+      "bytes": 2705,
+      "sha256": "a2bc03cff1994a6ed0ac75e36afb46b73dc28cbca96640101f92d957d8e04ca1"
+    },
+    {
       "path": "execution/A1-E8-route-20261103.log",
       "bytes": 7151,
       "sha256": "2ca74e1a335cf0436b17e425a703cd497f7ba57f590646602ed7acf83a37cfdb"
@@ -684,8 +709,8 @@
     },
     {
       "path": "index.md",
-      "bytes": 5004,
-      "sha256": "01b87e6832e540d2289bd55f107ca5d9078158572f264b3898feef4184303f55"
+      "bytes": 5323,
+      "sha256": "32186c45e03b3e8d9bce85e791a73d23a67848af9318862822da59388288f4b7"
     },
     {
       "path": "preparation/build-command.json",
@@ -829,8 +854,8 @@
     },
     {
       "path": "summary.json",
-      "bytes": 1455,
-      "sha256": "147b5dbd65894ec25696f079e40a4a18673af020ae9b2191342fbc4f8b4954ba"
+      "bytes": 1800,
+      "sha256": "01d4360347015feea9901a1e4c71c357fe27e78da09bc0faed7be5f40927bc8d"
     },
     {
       "path": "unit-tests/exit-code.txt",

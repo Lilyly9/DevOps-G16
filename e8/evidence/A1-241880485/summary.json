@@ -62,6 +62,16 @@
   "extension_dynamic_full_equal": true,
   "local_container_unit_tests": 8,
   "local_experiment_checks_passed": true,
-  "personal_remote_ci": "Recorded after personal PR executes; import CI is separate.",
+  "personal_remote_ci": {
+    "pr": "https://github.com/Lilyly9/DevOps-G16/pull/15",
+    "head_sha": "57fda0aaf77ece6087f4cc5fc644377840865862",
+    "run_id": 41569763447,
+    "run_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41569763447",
+    "conclusion": "success",
+    "unit_tests": 8,
+    "artifact_id": 13200328435,
+    "three_required_checks": "success",
+    "pr_state": "open, awaiting group review/merge"
+  },
   "resource_note": "Actual 3.5 GiB; do not assert satisfying the 4 GiB recommendation."
 }

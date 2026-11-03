@@ -4,7 +4,7 @@
 
 | 主责 | 轨道 | 交付重点 | 状态/证据 |
 | --- | --- | --- | --- |
-| A1 | A | 真实基线/复用 | 标准/扩展实测通过，8项容器测试OK；[证据](evidence/A1-241880485/index.md)、[报告](../docs/students/241880485/e8-e10/个人报告.md)；个人远程CI待PR |
+| A1 | A | 真实基线/复用 | 标准/扩展实测通过，8项容器测试OK；[证据](evidence/A1-241880485/index.md)、[报告](../docs/students/241880485/e8-e10/个人报告.md)；[PR #15](https://github.com/Lilyly9/DevOps-G16/pull/15)三门禁成功，待组内审查 |
 | B1 | B | 固定MD/候选/旧报告拒绝 | 待本人填 |
 
 个人分支 `student/<学号>/e8-e10`；个人报告/ADR/AI_USAGE 位于 `docs/students/<学号>/e8-e10/`。完整原件在本人 `work/`，阶段精选证据/索引放本目录 `evidence/<角色>-<学号>/`。
@@ -17,4 +17,4 @@
 
 A1 自主测试修改 config.h 间接包含 extra.h；新 OUT 中两个对象刷新、新增 MD extra.h，增量/全量/动态图一致。原7项+A1新增1项，本人云机容器实际8项OK。资源3.5GiB低于建议，未抄旧doctor结论或假称达到4GiB。
 
-公共导入 [PR #13](https://github.com/Lilyly9/DevOps-G16/pull/13) 已正常合并；个人PR/CI按 [CI记录](../docs/students/241880485/e8-e10/CI记录.md) 补真实结果。E9/E10仍由相应成员按分工完成。
+公共导入 [PR #13](https://github.com/Lilyly9/DevOps-G16/pull/13) 已正常合并；个人 [PR #15](https://github.com/Lilyly9/DevOps-G16/pull/15) 三门禁成功，8项测试被真实发现；详见 [CI记录](../docs/students/241880485/e8-e10/CI记录.md)，待组内审查合并。E9/E10仍由相应成员按分工完成。
