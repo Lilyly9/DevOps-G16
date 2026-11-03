@@ -16,3 +16,13 @@
 实际验证命令/输入/结果：全部步骤输出以 `work/e8-B-manual.qsW6Xo/steps/` 6 份日志与 `work/unit-tests-241880555-20261103-125346.log`（Ran 9 tests OK）为准；报告中的 SHA、镜像 ID、OUT 均取自真实输出文件（student-source-commit.txt、environment-image-id.txt、scan 输出）。
 
 未调用模型 API 于实验本身：教学包不要求调用外部模型；scan/patch 结果全部来自容器内参考实现，AI 未参与或替代任何检测/补丁计算，只做命令编排、记录与文档。
+
+## 追加（E9-B/E10-B，2026-11-03）
+
+任务：本人要求在 E8-B 之外继续完整执行 E9-B/E10-B 参考路线，保留运行结果并各增加一个有独立预期的测试。AI 协助：按手册生成步骤命令与 `lab_python` 代码、逐步核对 STEP_EXIT_CODE；基于 `lab.py` 中 `patch()`/`validate()` 的实际行为设计两个新用例并先给出独立预期；撰写 e9/e10 证据索引并更新个人报告/ADR。
+
+采纳/修正：E9-B 用例初版独立预期只写一条 edit，容器实测出现第二条 MISSING(helper.o,helper.c)（helper.o 声明改为 `$(DEPS)` 后原字面依赖 helper.c 从展开结果消失）；AI 解释成因后经本人确认修正预期，预期修正前的失败日志（193600）与修正后的通过日志（193709）均保留。E10-B 用例选择"错位修复"（config.h 加到 helper.o 行）而非编写示例的"编译失败"路径，以覆盖 header_change+no_missing 双检查兜底的拒绝原因。全部步骤输出与手册断言核对后采纳。
+
+人工修改：测试类名、独立预期表述、e9/e10 README 与证据索引中"非 B2/B3 主责交付"的定位均经本人确认；仓库/分支/学号由本人提供。
+
+实际验证命令/输入/结果：E9-B 步骤日志 `work/e9-B-manual.KUAgZz/steps/`（4 份）、E10-B 步骤日志 `work/e10-B-manual.i9gc5v/steps/`（7 份）、单测日志 193600/193709；报告中的 SHA、OUT、validation 结果均取自真实输出文件。未调用模型 API 于实验本身：scan/patch/validate 结果全部来自容器内参考实现，AI 未参与或替代任何检测/补丁/验证计算。
