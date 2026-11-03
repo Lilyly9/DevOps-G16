@@ -1,0 +1,74 @@
+{
+  "provenance": "ACTUAL_RUN",
+  "time_utc": "2026-11-03T02:32:29.298874+00:00",
+  "student_id": "241880485",
+  "group": "A16",
+  "host_system": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "cpus": 2,
+  "mem_gib": 3.5,
+  "disk_free_gib": 64.3,
+  "commands": [
+    {
+      "name": "source",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "status",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "git-identity",
+      "argv": [
+        "git",
+        "config",
+        "--local",
+        "user.name"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "git-version",
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "docker-version",
+      "argv": [
+        "docker",
+        "version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "compose-version",
+      "argv": [
+        "docker",
+        "compose",
+        "version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "python-version",
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "resource_note": "Visible 3.5 GiB is below the material recommendation of 4 GiB; recorded, not represented as satisfying it."
+}

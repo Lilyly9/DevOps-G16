@@ -1,0 +1,695 @@
+{
+  "passed": true,
+  "scope": "Offline independent audit of actual A1 E8 baseline and own extension; no experiments or network were run",
+  "checks": [
+    {
+      "name": "recorded_source_hashes_match_exact_Git_objects",
+      "passed": true,
+      "details": {
+        "count": 32,
+        "files": {
+          "labs/e8e10/.gitattributes": true,
+          "labs/e8e10/environment/.dockerignore": true,
+          "labs/e8e10/environment/.env.example": true,
+          "labs/e8e10/environment/.github/workflows/e7-quality-gate.yml": true,
+          "labs/e8e10/environment/.gitignore": true,
+          "labs/e8e10/environment/Makefile": true,
+          "labs/e8e10/environment/README.md": true,
+          "labs/e8e10/environment/compose.yaml": true,
+          "labs/e8e10/environment/fixtures/md-rd/Makefile": true,
+          "labs/e8e10/environment/fixtures/md-rd/config.h": true,
+          "labs/e8e10/environment/fixtures/md-rd/main.c": true,
+          "labs/e8e10/environment/fixtures/md-rd/unused.h": true,
+          "labs/e8e10/environment/requirements-dev.in": true,
+          "labs/e8e10/environment/requirements-dev.lock": true,
+          "labs/e8e10/environment/scripts/doctor.py": true,
+          "labs/e8e10/environment/scripts/lab_cloud.py": true,
+          "labs/e8e10/environment/scripts/run_e7_a_gate.py": true,
+          "labs/e8e10/environment/scripts/secret_scan.py": true,
+          "labs/e8e10/environment/scripts/verify_e6_evidence.py": true,
+          "labs/e8e10/environment/services/buildchecker/Dockerfile": true,
+          "labs/e8e10/environment/services/buildchecker/buildchecker/__init__.py": true,
+          "labs/e8e10/environment/services/buildchecker/buildchecker/__main__.py": true,
+          "labs/e8e10/environment/services/buildchecker/buildchecker/cli.py": true,
+          "labs/e8e10/environment/services/buildchecker/buildchecker/fullcheck.py": true,
+          "labs/e8e10/environment/services/buildchecker/buildchecker/smoke.py": true,
+          "labs/e8e10/environment/services/buildchecker/pytest.ini": true,
+          "labs/e8e10/environment/services/buildchecker/tests/test_cli.py": true,
+          "labs/e8e10/environment/services/buildchecker/tests/test_fullcheck.py": true,
+          "labs/e8e10/environment/tests/e7/test_e7_a_gate.py": true,
+          "labs/e8e10/lab.py": true,
+          "labs/e8e10/test_profile.py": true,
+          "labs/e8e10/test_student_241880485.py": true
+        }
+      }
+    },
+    {
+      "name": "source_identity_and_clean_status",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.vwDixM:source_SHA_and_status",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.vwDixM:executed_route_saved",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ:source_SHA_and_status",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ:executed_route_saved",
+      "passed": true
+    },
+    {
+      "name": "all_saved_lab_steps_exit_zero",
+      "passed": true,
+      "details": [
+        {
+          "path": "e8-A-manual.vwDixM/steps/20261103-103912-1.log",
+          "exit_codes": [
+            0
+          ],
+          "unexpected_traceback": false
+        },
+        {
+          "path": "e8-A-manual.vwDixM/steps/20261103-103913-2.log",
+          "exit_codes": [
+            0
+          ],
+          "unexpected_traceback": false
+        },
+        {
+          "path": "e8-A-manual.vwDixM/steps/20261103-103913-3.log",
+          "exit_codes": [
+            0
+          ],
+          "unexpected_traceback": false
+        },
+        {
+          "path": "e8-A-manual.vwDixM/steps/20261103-103914-4.log",
+          "exit_codes": [
+            0
+          ],
+          "unexpected_traceback": false
+        },
+        {
+          "path": "e8-A-manual.jA7ZjJ/steps/20261103-103914-1.log",
+          "exit_codes": [
+            0
+          ],
+          "unexpected_traceback": false
+        }
+      ]
+    },
+    {
+      "name": "same_recorded_image_for_both_runs_and_after_tests",
+      "passed": true,
+      "details": {
+        "standard": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+        "extension": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+        "provenance": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+        "after_unit_tests": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+        "standard_id_file": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+        "extension_id_file": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691"
+      }
+    },
+    {
+      "name": "image_platform_is_amd64",
+      "passed": true
+    },
+    {
+      "name": "runtime_dependency_lock_matches_source",
+      "passed": true
+    },
+    {
+      "name": "toolchain_records_match",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.vwDixM:final_source_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": true,
+        "Makefile": true,
+        "config.h": true,
+        "extra.h": true,
+        "helper.c": true,
+        "main.c": true,
+        "unused.h": true
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ:final_source_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": true,
+        "Makefile": true,
+        "config.h": true,
+        "extra.h": true,
+        "helper.c": true,
+        "main.c": true,
+        "unused.h": true
+      }
+    },
+    {
+      "name": "e8-A-manual.vwDixM/buildchecker:successful_clean_and_traced_build",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.vwDixM/buildchecker:snapshot_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": true,
+        "Makefile": true,
+        "config.h": true,
+        "extra.h": true,
+        "helper.c": true,
+        "main.c": true,
+        "unused.h": true
+      }
+    },
+    {
+      "name": "e8-A-manual.vwDixM/buildchecker:complete_trace_and_process_sets",
+      "passed": true,
+      "details": {
+        "directory": "e8-A-manual.vwDixM/buildchecker",
+        "status": "SUCCEEDED",
+        "clean_exit_code": 0,
+        "build_exit_code": 0,
+        "trace_count": 10,
+        "process_count": 10,
+        "parent_links_complete": true,
+        "all_trace_processes_exited_zero": true,
+        "original_container_project_root": "/course/work/e8-A-manual.vwDixM/buildchecker/project",
+        "trace_manifest": {
+          "t.13": {
+            "bytes": 7901,
+            "sha256": "31942e48b39f48efa53ba97ff14f47f436c6e40e9e2500e82ce308a3fb16a601"
+          },
+          "t.14": {
+            "bytes": 10596,
+            "sha256": "2cea3dc2d06454c52b854a2092854796ddf4a6943e244619a4ebb011cf8c212b"
+          },
+          "t.15": {
+            "bytes": 54155,
+            "sha256": "e5dd8e145d5c03cc9852677206e6d40b548fd1a936d3df745f46bfb39154a27a"
+          },
+          "t.16": {
+            "bytes": 2374,
+            "sha256": "f63d073d0979a34b52710f62a84d643eec5c7bceb8897aa29ed017744cbeb2d9"
+          },
+          "t.17": {
+            "bytes": 10604,
+            "sha256": "c3e04ffe2a189b8337f0cd99ea52f69ae72db06620ca81ef0fa70c3684078444"
+          },
+          "t.18": {
+            "bytes": 9306,
+            "sha256": "ab2b5794afd6b021e0f425a981a9f41a48c3d12066df6f2ba6f841d410a22105"
+          },
+          "t.19": {
+            "bytes": 2385,
+            "sha256": "6a16206b7018fb7d57f8435d68483bfb813e9dd669937012146c722a50b2f523"
+          },
+          "t.20": {
+            "bytes": 12959,
+            "sha256": "8ee29e2733717600991d917249be8b7f24efcb5b50e7fa90366434a12e90fde3"
+          },
+          "t.21": {
+            "bytes": 11955,
+            "sha256": "889d8bcc93ae53df8bf06277cc7a6b18929eff3846afa21a6a354de6ca804134"
+          },
+          "t.22": {
+            "bytes": 16486,
+            "sha256": "6d9c3b2671f10b79acd55ef35d7ef216858dcb8dc48b72f5d0f23a1435473921"
+          }
+        }
+      }
+    },
+    {
+      "name": "e8-A-manual.vwDixM/buildchecker:offline_raw_reparse_matches_all_saved_reports",
+      "passed": true,
+      "details": {
+        "actual_graph": true,
+        "declared_graph": true,
+        "processes": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-before:successful_clean_and_traced_build",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-before:snapshot_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": true,
+        "Makefile": true,
+        "config.h": true,
+        "extra.h": true,
+        "helper.c": true,
+        "main.c": true,
+        "unused.h": true
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-before:complete_trace_and_process_sets",
+      "passed": true,
+      "details": {
+        "directory": "e8-A-manual.jA7ZjJ/buildchecker-before",
+        "status": "SUCCEEDED",
+        "clean_exit_code": 0,
+        "build_exit_code": 0,
+        "trace_count": 10,
+        "process_count": 10,
+        "parent_links_complete": true,
+        "all_trace_processes_exited_zero": true,
+        "original_container_project_root": "/course/work/e8-A-manual.jA7ZjJ/buildchecker-before/project",
+        "trace_manifest": {
+          "t.26": {
+            "bytes": 7915,
+            "sha256": "0f475ed55f7df5fdca7c7d8d4cdd778c77f7b8266a7cda2a23dd81f7672a6dd5"
+          },
+          "t.27": {
+            "bytes": 10624,
+            "sha256": "468a8f3728446b334483957a7d1edebc11c34313d900644c3a4273e23a71b8d2"
+          },
+          "t.28": {
+            "bytes": 54176,
+            "sha256": "072ed899fb14596cfe9102623ee02455c34b83dd949ec3919d4e09a45991a25f"
+          },
+          "t.29": {
+            "bytes": 2374,
+            "sha256": "84b5d437917bd9056b23edeb70a9c50be6b4e530d34f369ed6ed91679027b891"
+          },
+          "t.30": {
+            "bytes": 10632,
+            "sha256": "45e464cd2dc8fb9b60efe60012a7bd54473b7c8072b46a7bf943f6c8de53df42"
+          },
+          "t.31": {
+            "bytes": 9328,
+            "sha256": "233d9c70dbecb093ea265f1330f27563d5d07bd14f04eacf1aa73f8200b1d598"
+          },
+          "t.32": {
+            "bytes": 2390,
+            "sha256": "323485742cfe9ec6128b87b7bc929a907441f5db89f8fd1cc14e5d3da9720779"
+          },
+          "t.33": {
+            "bytes": 13015,
+            "sha256": "000a57fb0f1b4d04e40886b8307607b0c4f0ab0b57031a0555b64ceff96360c6"
+          },
+          "t.34": {
+            "bytes": 11956,
+            "sha256": "14eb351824356c940cb4695ff039746dc02b153aa51c9ad4931360a85ea9186f"
+          },
+          "t.35": {
+            "bytes": 16598,
+            "sha256": "1df33e5b7c5115c01dc3652a7d2fe0f67aa5eb069f805df5494cf5564ea95189"
+          }
+        }
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-before:offline_raw_reparse_matches_all_saved_reports",
+      "passed": true,
+      "details": {
+        "actual_graph": true,
+        "declared_graph": true,
+        "processes": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-after:successful_clean_and_traced_build",
+      "passed": true
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-after:snapshot_input_hashes_match",
+      "passed": true,
+      "details": {
+        ".gitignore": true,
+        "Makefile": true,
+        "config.h": true,
+        "extra.h": true,
+        "helper.c": true,
+        "main.c": true,
+        "unused.h": true
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-after:complete_trace_and_process_sets",
+      "passed": true,
+      "details": {
+        "directory": "e8-A-manual.jA7ZjJ/buildchecker-after",
+        "status": "SUCCEEDED",
+        "clean_exit_code": 0,
+        "build_exit_code": 0,
+        "trace_count": 10,
+        "process_count": 10,
+        "parent_links_complete": true,
+        "all_trace_processes_exited_zero": true,
+        "original_container_project_root": "/course/work/e8-A-manual.jA7ZjJ/buildchecker-after/project",
+        "trace_manifest": {
+          "t.64": {
+            "bytes": 7913,
+            "sha256": "37069ead97ee4abb55f8cd92842b2962097f63f627187e8a21d7798c6b814fce"
+          },
+          "t.65": {
+            "bytes": 10620,
+            "sha256": "817de69b50abec72fb59358cbed2ad9c81d0e692f1af496b0c8ddc7c37f7a7bf"
+          },
+          "t.66": {
+            "bytes": 54224,
+            "sha256": "9b548554ebec5802f3db5b9f4bfd6c649213d7ce7cb0aa6625fd5998f8e0ccfa"
+          },
+          "t.67": {
+            "bytes": 2374,
+            "sha256": "8e43c97df85aa43721611cb7f55484aa5974bcc6474f594c41d693b0cfb8a473"
+          },
+          "t.68": {
+            "bytes": 10628,
+            "sha256": "a714c8cb1016647c4b5954518020c6e192d6e639fc65e6783bf0ab719df3dfe0"
+          },
+          "t.69": {
+            "bytes": 9325,
+            "sha256": "719017151d347610dd35c542310afc9f6972ada21f97281f12889f90783ee770"
+          },
+          "t.70": {
+            "bytes": 2390,
+            "sha256": "afd1717a6d8acd7f5cceb55a1a0155fae802a10e17c51e73c6c214ad3f4b29b1"
+          },
+          "t.71": {
+            "bytes": 13007,
+            "sha256": "37ac4e88916e09a3ebf80d24587e43b5d8b69253e025b1b26a79aed0d0a893ef"
+          },
+          "t.72": {
+            "bytes": 11955,
+            "sha256": "34714d8a9d7f2269aded1867dd7a581e57642f59df0f00c02cecd52cb7506f12"
+          },
+          "t.73": {
+            "bytes": 16582,
+            "sha256": "de0c5716c7fa908f617208e1dd2ae25caa84aea552b8ba01264614a959f31a6c"
+          }
+        }
+      }
+    },
+    {
+      "name": "e8-A-manual.jA7ZjJ/buildchecker-after:offline_raw_reparse_matches_all_saved_reports",
+      "passed": true,
+      "details": {
+        "actual_graph": true,
+        "declared_graph": true,
+        "processes": true,
+        "findings": true
+      }
+    },
+    {
+      "name": "standard_baseline_is_actual_BuildChecker_projection",
+      "passed": true
+    },
+    {
+      "name": "preserved_GCC_projection_agrees",
+      "passed": true
+    },
+    {
+      "name": "unchanged_incremental_reuses_both_targets",
+      "passed": true
+    },
+    {
+      "name": "standard_program_output_one",
+      "passed": true
+    },
+    {
+      "name": "standard_source_matches_dynamic_snapshot",
+      "passed": true
+    },
+    {
+      "name": "extension_independent_expectation_is_explicit",
+      "passed": true
+    },
+    {
+      "name": "extension_old_baseline_from_dynamic_before",
+      "passed": true
+    },
+    {
+      "name": "extension_invalidates_and_adds_exact_extra_MD",
+      "passed": true
+    },
+    {
+      "name": "extension_incremental_equals_full_and_dynamic_after",
+      "passed": true
+    },
+    {
+      "name": "extension_only_changes_config_header_input",
+      "passed": true,
+      "details": {
+        "changed_files": [
+          "config.h"
+        ]
+      }
+    },
+    {
+      "name": "extension_literal_indirect_include",
+      "passed": true
+    },
+    {
+      "name": "original_seven_plus_A1_one_tests_actually_passed",
+      "passed": true,
+      "details": {
+        "test_count": 8,
+        "original_count": 7,
+        "personal_count": 1,
+        "test_names": [
+          "test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache)",
+          "test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges)",
+          "test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected)",
+          "test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency)",
+          "test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets)",
+          "test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected)",
+          "test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected)",
+          "test_header_include_invalidates_previous_dependency_graph (test_student_241880485.A1IndirectIncludeTests.test_header_include_invalidates_previous_dependency_graph)"
+        ]
+      }
+    },
+    {
+      "name": "recorded_provenance_commands_exit_zero",
+      "passed": true,
+      "details": [
+        {
+          "name": "toolchain",
+          "exit_code": 0
+        },
+        {
+          "name": "image-lock",
+          "exit_code": 0
+        },
+        {
+          "name": "security",
+          "exit_code": 0
+        },
+        {
+          "name": "source-status",
+          "exit_code": 0
+        },
+        {
+          "name": "source-head",
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "name": "recorded_source_history_image_scan_passed",
+      "passed": true
+    },
+    {
+      "name": "resource_shortfall_reported_honestly",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Offline re-analysis of saved traces only; no new Docker experiments, live image inspection, or network checks.",
+    "The host exposes 3.5 GiB memory below the 4 GiB material recommendation; this E8 route does not impose the old E5 doctor gate.",
+    "Helper logs merge stdout/stderr; individual steps lack exact start/end timestamps. Saved route scripts and route timestamp files remain available.",
+    "The runtime classroom helper source path is recorded in executed-route.sh, but the helper file itself is not in these downloaded original directories.",
+    "This audit validates A1 E8 evidence and own extension, not the later PR/CI/merge or other members' stages."
+  ],
+  "student_id": "241880485",
+  "source_commit": "9ee3242f8d7ea1b6bb4091e2947d85d33a37aa8a",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "directories": {
+    "standard": "e8-A-manual.vwDixM",
+    "extension": "e8-A-manual.jA7ZjJ"
+  },
+  "dynamic_raw_evidence": [
+    {
+      "directory": "e8-A-manual.vwDixM/buildchecker",
+      "status": "SUCCEEDED",
+      "clean_exit_code": 0,
+      "build_exit_code": 0,
+      "trace_count": 10,
+      "process_count": 10,
+      "parent_links_complete": true,
+      "all_trace_processes_exited_zero": true,
+      "original_container_project_root": "/course/work/e8-A-manual.vwDixM/buildchecker/project",
+      "trace_manifest": {
+        "t.13": {
+          "bytes": 7901,
+          "sha256": "31942e48b39f48efa53ba97ff14f47f436c6e40e9e2500e82ce308a3fb16a601"
+        },
+        "t.14": {
+          "bytes": 10596,
+          "sha256": "2cea3dc2d06454c52b854a2092854796ddf4a6943e244619a4ebb011cf8c212b"
+        },
+        "t.15": {
+          "bytes": 54155,
+          "sha256": "e5dd8e145d5c03cc9852677206e6d40b548fd1a936d3df745f46bfb39154a27a"
+        },
+        "t.16": {
+          "bytes": 2374,
+          "sha256": "f63d073d0979a34b52710f62a84d643eec5c7bceb8897aa29ed017744cbeb2d9"
+        },
+        "t.17": {
+          "bytes": 10604,
+          "sha256": "c3e04ffe2a189b8337f0cd99ea52f69ae72db06620ca81ef0fa70c3684078444"
+        },
+        "t.18": {
+          "bytes": 9306,
+          "sha256": "ab2b5794afd6b021e0f425a981a9f41a48c3d12066df6f2ba6f841d410a22105"
+        },
+        "t.19": {
+          "bytes": 2385,
+          "sha256": "6a16206b7018fb7d57f8435d68483bfb813e9dd669937012146c722a50b2f523"
+        },
+        "t.20": {
+          "bytes": 12959,
+          "sha256": "8ee29e2733717600991d917249be8b7f24efcb5b50e7fa90366434a12e90fde3"
+        },
+        "t.21": {
+          "bytes": 11955,
+          "sha256": "889d8bcc93ae53df8bf06277cc7a6b18929eff3846afa21a6a354de6ca804134"
+        },
+        "t.22": {
+          "bytes": 16486,
+          "sha256": "6d9c3b2671f10b79acd55ef35d7ef216858dcb8dc48b72f5d0f23a1435473921"
+        }
+      }
+    },
+    {
+      "directory": "e8-A-manual.jA7ZjJ/buildchecker-before",
+      "status": "SUCCEEDED",
+      "clean_exit_code": 0,
+      "build_exit_code": 0,
+      "trace_count": 10,
+      "process_count": 10,
+      "parent_links_complete": true,
+      "all_trace_processes_exited_zero": true,
+      "original_container_project_root": "/course/work/e8-A-manual.jA7ZjJ/buildchecker-before/project",
+      "trace_manifest": {
+        "t.26": {
+          "bytes": 7915,
+          "sha256": "0f475ed55f7df5fdca7c7d8d4cdd778c77f7b8266a7cda2a23dd81f7672a6dd5"
+        },
+        "t.27": {
+          "bytes": 10624,
+          "sha256": "468a8f3728446b334483957a7d1edebc11c34313d900644c3a4273e23a71b8d2"
+        },
+        "t.28": {
+          "bytes": 54176,
+          "sha256": "072ed899fb14596cfe9102623ee02455c34b83dd949ec3919d4e09a45991a25f"
+        },
+        "t.29": {
+          "bytes": 2374,
+          "sha256": "84b5d437917bd9056b23edeb70a9c50be6b4e530d34f369ed6ed91679027b891"
+        },
+        "t.30": {
+          "bytes": 10632,
+          "sha256": "45e464cd2dc8fb9b60efe60012a7bd54473b7c8072b46a7bf943f6c8de53df42"
+        },
+        "t.31": {
+          "bytes": 9328,
+          "sha256": "233d9c70dbecb093ea265f1330f27563d5d07bd14f04eacf1aa73f8200b1d598"
+        },
+        "t.32": {
+          "bytes": 2390,
+          "sha256": "323485742cfe9ec6128b87b7bc929a907441f5db89f8fd1cc14e5d3da9720779"
+        },
+        "t.33": {
+          "bytes": 13015,
+          "sha256": "000a57fb0f1b4d04e40886b8307607b0c4f0ab0b57031a0555b64ceff96360c6"
+        },
+        "t.34": {
+          "bytes": 11956,
+          "sha256": "14eb351824356c940cb4695ff039746dc02b153aa51c9ad4931360a85ea9186f"
+        },
+        "t.35": {
+          "bytes": 16598,
+          "sha256": "1df33e5b7c5115c01dc3652a7d2fe0f67aa5eb069f805df5494cf5564ea95189"
+        }
+      }
+    },
+    {
+      "directory": "e8-A-manual.jA7ZjJ/buildchecker-after",
+      "status": "SUCCEEDED",
+      "clean_exit_code": 0,
+      "build_exit_code": 0,
+      "trace_count": 10,
+      "process_count": 10,
+      "parent_links_complete": true,
+      "all_trace_processes_exited_zero": true,
+      "original_container_project_root": "/course/work/e8-A-manual.jA7ZjJ/buildchecker-after/project",
+      "trace_manifest": {
+        "t.64": {
+          "bytes": 7913,
+          "sha256": "37069ead97ee4abb55f8cd92842b2962097f63f627187e8a21d7798c6b814fce"
+        },
+        "t.65": {
+          "bytes": 10620,
+          "sha256": "817de69b50abec72fb59358cbed2ad9c81d0e692f1af496b0c8ddc7c37f7a7bf"
+        },
+        "t.66": {
+          "bytes": 54224,
+          "sha256": "9b548554ebec5802f3db5b9f4bfd6c649213d7ce7cb0aa6625fd5998f8e0ccfa"
+        },
+        "t.67": {
+          "bytes": 2374,
+          "sha256": "8e43c97df85aa43721611cb7f55484aa5974bcc6474f594c41d693b0cfb8a473"
+        },
+        "t.68": {
+          "bytes": 10628,
+          "sha256": "a714c8cb1016647c4b5954518020c6e192d6e639fc65e6783bf0ab719df3dfe0"
+        },
+        "t.69": {
+          "bytes": 9325,
+          "sha256": "719017151d347610dd35c542310afc9f6972ada21f97281f12889f90783ee770"
+        },
+        "t.70": {
+          "bytes": 2390,
+          "sha256": "afd1717a6d8acd7f5cceb55a1a0155fae802a10e17c51e73c6c214ad3f4b29b1"
+        },
+        "t.71": {
+          "bytes": 13007,
+          "sha256": "37ac4e88916e09a3ebf80d24587e43b5d8b69253e025b1b26a79aed0d0a893ef"
+        },
+        "t.72": {
+          "bytes": 11955,
+          "sha256": "34714d8a9d7f2269aded1867dd7a581e57642f59df0f00c02cecd52cb7506f12"
+        },
+        "t.73": {
+          "bytes": 16582,
+          "sha256": "de0c5716c7fa908f617208e1dd2ae25caa84aea552b8ba01264614a959f31a6c"
+        }
+      }
+    }
+  ],
+  "resource_observation": {
+    "cpus": 2,
+    "mem_gib": 3.5,
+    "disk_free_gib": 64.3,
+    "classification": "BELOW_MATERIAL_RECOMMENDATION_RECORDED",
+    "not_old_E5_doctor_status": true
+  }
+}

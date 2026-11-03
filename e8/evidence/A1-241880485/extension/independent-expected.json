@@ -1,0 +1,43 @@
+{
+  "provenance": "MANUAL_EXPECTED_FROM_EDITED_INPUT",
+  "actual": {
+    "main.o": [
+      "config.h",
+      "extra.h",
+      "main.c"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "findings": [
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "MISSING",
+      "main.o",
+      "extra.h"
+    ],
+    [
+      "REDUNDANT",
+      "main.o",
+      "unused.h"
+    ]
+  ],
+  "refreshed": [
+    "main.o",
+    "helper.o"
+  ],
+  "reused": [],
+  "added": [
+    [
+      "MISSING",
+      "main.o",
+      "extra.h"
+    ]
+  ],
+  "resolved": []
+}

@@ -1,0 +1,67 @@
+{
+  "provenance": "ACTUAL_RUN",
+  "student_id": "241880485",
+  "role": "A1",
+  "group": "A16",
+  "stage": "E8-A",
+  "source_commit": "9ee3242f8d7ea1b6bb4091e2947d85d33a37aa8a",
+  "source_branch": "student/241880485/e8-e10",
+  "image_tag": "course-e8e10:241880485",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "baseline_out": "work/e8-A-manual.vwDixM",
+  "extension_out": "work/e8-A-manual.jA7ZjJ",
+  "baseline_actual": {
+    "main.o": [
+      "config.h",
+      "main.c"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "baseline_findings": [
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "REDUNDANT",
+      "main.o",
+      "unused.h"
+    ]
+  ],
+  "unchanged_reused": [
+    "main.o",
+    "helper.o"
+  ],
+  "unchanged_refreshed": [],
+  "extension_actual": {
+    "main.o": [
+      "config.h",
+      "extra.h",
+      "main.c"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "extension_added": [
+    [
+      "MISSING",
+      "main.o",
+      "extra.h"
+    ]
+  ],
+  "extension_resolved": [],
+  "extension_refreshed": [
+    "main.o",
+    "helper.o"
+  ],
+  "extension_reused": [],
+  "extension_dynamic_full_equal": true,
+  "local_container_unit_tests": 8,
+  "local_experiment_checks_passed": true,
+  "personal_remote_ci": "Recorded after personal PR executes; import CI is separate.",
+  "resource_note": "Actual 3.5 GiB; do not assert satisfying the 4 GiB recommendation."
+}

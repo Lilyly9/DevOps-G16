@@ -1,0 +1,32 @@
+{
+  "scope": "All original text, trace, graph, command and input files from A1 standard/extension; generated binaries excluded from Git only.",
+  "original_archive_sha256": "84cd2a7252c391a8c340d9c7e2453f234ad12c4bb3867a2a0be73fc4068d42a7",
+  "original_archive_bytes": 83143,
+  "server_archive": "/root/241880485/A1-E8-20261103-originals.tar.gz",
+  "excluded_from_git": {
+    "baseline": [
+      "buildchecker/project/app",
+      "buildchecker/project/helper.o",
+      "buildchecker/project/main.o"
+    ],
+    "extension": [
+      "buildchecker-after/project/app",
+      "buildchecker-after/project/helper.o",
+      "buildchecker-after/project/main.o",
+      "buildchecker-before/project/app",
+      "buildchecker-before/project/helper.o",
+      "buildchecker-before/project/main.o"
+    ],
+    "unit-tests": [],
+    "preparation": [],
+    "provenance": []
+  },
+  "history_bundles_included": true,
+  "helper_sha256": "f1ce2f6290dfd2df199fa19a51775dd1382a2747bd51fea93485fceb28b0ade7",
+  "route_sha256": "6fc6e9c80b012c728661a02329e2ae836d922c36147fd3a94ed03a34cbf2cbe9",
+  "limits": [
+    "No E9/E10 personal experiments by A1.",
+    "3.5 GiB visible memory is below the stated resource recommendation.",
+    "No precise per-step wall timestamps; helper logs preserve order and exit, route bounds retained."
+  ]
+}
