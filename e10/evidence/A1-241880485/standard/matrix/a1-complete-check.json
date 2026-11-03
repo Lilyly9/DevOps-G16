@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "rows": 30,
+  "raw_pairs": 30,
+  "full_expected_collections_checked": true,
+  "dynamic_actual_equal": true
+}

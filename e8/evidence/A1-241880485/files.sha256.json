@@ -709,8 +709,8 @@
     },
     {
       "path": "index.md",
-      "bytes": 5323,
-      "sha256": "32186c45e03b3e8d9bce85e791a73d23a67848af9318862822da59388288f4b7"
+      "bytes": 5547,
+      "sha256": "d2eb999418d8647d2ddda9395a1d17251013ee7eec2b030cf577fed620af75ff"
     },
     {
       "path": "preparation/build-command.json",

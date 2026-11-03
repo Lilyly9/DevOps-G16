@@ -1,0 +1,126 @@
+{
+  "provenance": "ACTUAL_RUN",
+  "student_id": "241880485",
+  "name": "焦龙",
+  "group": "A16",
+  "paired_group": "B16",
+  "collected_utc": "2026-11-03T09:12:43.582458+00:00",
+  "source_commit": "18a79582672a71d486abc656bc9007d4aebdceab",
+  "source_branch": "student/241880485/e8-e10",
+  "source_status": "",
+  "paths": {
+    "E9-manual": "work/e9-A-manual.eqLOHp",
+    "E10-manual": "work/e10-A-manual.eVOOik",
+    "E10-deletion": "work/e10-A-manual.n9BhPY",
+    "E9E10-tests": "work/A1-E9E10-tests.7gI6Xf",
+    "provenance": "work/A1-E9E10-provenance.8s_ev_pt"
+  },
+  "host": "Linux-5.15.0-191-generic-x86_64-with-glibc2.35",
+  "cpus": 2,
+  "mem_gib": 3.5,
+  "disk_free_gib": 63.5,
+  "image_tag": "course-e8e10:241880485",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "architecture": "amd64",
+  "environment_rebuilt": false,
+  "reason": "Tracked environment unchanged from prior successful E8 image; same image ID and lock verified.",
+  "commands": [
+    {
+      "name": "toolchain",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "course-e8e10:241880485",
+        "cat",
+        "/opt/toolchain.lock"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "image-lock",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "course-e8e10:241880485",
+        "cat",
+        "/tmp/requirements-dev.lock"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "security",
+      "argv": [
+        "python3",
+        "e5/A-buildchecker/scripts/secret_scan.py",
+        ".",
+        "--history",
+        "--image",
+        "course-e8e10:241880485"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "source-status",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "source-head",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "labs/e8e10/.gitattributes": "e9347f2fca6cdcca26017f685fb8e061f0d237ae629e064d1c68c3b89e303996",
+    "labs/e8e10/environment/.dockerignore": "fe49249345cb96bbbd2c982a935cc707d673d33e59d8bacb24917d59ccf37fd2",
+    "labs/e8e10/environment/.env.example": "ce1d8c75e75bf50f1e5794d73ed87a8824e78d9f73ebe4f1f28afbf4108db3ee",
+    "labs/e8e10/environment/.github/workflows/e7-quality-gate.yml": "fb454545dbf885b56d2840a9854ca6cc0c62cdd2dab982b4aa8bc34dfeed1d33",
+    "labs/e8e10/environment/.gitignore": "7f4b21a7294d8319fc04ef5904f9735408d5577a6cd9e74446ca1adda15e39a2",
+    "labs/e8e10/environment/Makefile": "bf86bc7e1f62a7ace57c35261249ec263aea7c186879e9691c5267f463ad8d4a",
+    "labs/e8e10/environment/README.md": "7b8bbcd1fd690bff18fe9413e80c470f3b62d54ca31b1cf66c711de869a942bb",
+    "labs/e8e10/environment/compose.yaml": "cc9a1abf6135756e07d657232cbdb7255ae534003afccec62a5a84cafe671f80",
+    "labs/e8e10/environment/fixtures/md-rd/Makefile": "fd1dcd76a0bd9678351a1503941a5a875351455d4a6879e76af0af0b6c64772f",
+    "labs/e8e10/environment/fixtures/md-rd/config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+    "labs/e8e10/environment/fixtures/md-rd/main.c": "bfa1c2d1abeb70ba92e60c414923265296dafa0cc98bee068251b0301e6da197",
+    "labs/e8e10/environment/fixtures/md-rd/unused.h": "1e4315549ec63325a22265e33a27e3cff8940d3ceec9756d7d193e9e51b966c9",
+    "labs/e8e10/environment/requirements-dev.in": "40457296154aab4b3db2e2b9c25d2c6440ae9d9a0752b24f838450f64b1826ae",
+    "labs/e8e10/environment/requirements-dev.lock": "24f54d917487599d98e13c5733a75ca4a86652fa11cdccaf863c08e1cc66f5df",
+    "labs/e8e10/environment/scripts/doctor.py": "f2f545e66581cf4b860122941940a60d14daa9eccc628bdf58ad471ff406af47",
+    "labs/e8e10/environment/scripts/lab_cloud.py": "7b18458810390a9ec267c071e99c117b806eb9d80d2c7f519f310ecc127fd4d1",
+    "labs/e8e10/environment/scripts/run_e7_a_gate.py": "f18b2e60a8bf8f1eba0a957db9ec3a288e73bfbd956a782fe75223b0e340d455",
+    "labs/e8e10/environment/scripts/secret_scan.py": "e3aefad5e87201d684841b931b8586a3d81d2930968bfa02867eff41cfcfbc65",
+    "labs/e8e10/environment/scripts/verify_e6_evidence.py": "8583f3e077e5b1bfad399bee6d44d82c0ed03c97368a1413d2d34dca9dcaf948",
+    "labs/e8e10/environment/services/buildchecker/Dockerfile": "5901ef9a36ce8f8f64cc61971d11e048a91b9321a6ce0a4ff52184f4b32d5b3f",
+    "labs/e8e10/environment/services/buildchecker/buildchecker/__init__.py": "3e7097b3bd96f87c4c6962afa8a4cb3a8c3be1b4df775b57828ebd48a9a9d05c",
+    "labs/e8e10/environment/services/buildchecker/buildchecker/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "labs/e8e10/environment/services/buildchecker/buildchecker/cli.py": "6c3663b1f39bf7ecfccebdc82a6235b317e71a6d1c1ce2aa9a9c8ac3e56114d9",
+    "labs/e8e10/environment/services/buildchecker/buildchecker/fullcheck.py": "21a66422856be2d46a28db3569a9645864a83622d552841873e3c6a82fdea0e9",
+    "labs/e8e10/environment/services/buildchecker/buildchecker/smoke.py": "782d355fbf9013825778dff771d18eac5e84b558b6eee73966608755da288d08",
+    "labs/e8e10/environment/services/buildchecker/pytest.ini": "f211820b112f706314629c1055868340301685733ea465af1151e0a92de620cc",
+    "labs/e8e10/environment/services/buildchecker/tests/test_cli.py": "c9c1912e463f6b5e7496f802cb40f9b0e67ddec1fac4ba5651950088ffa0bffb",
+    "labs/e8e10/environment/services/buildchecker/tests/test_fullcheck.py": "c143d2f7ab2608284a3f5a575f593a0f66531f668c8271590d37a799ead46bac",
+    "labs/e8e10/environment/tests/e7/test_e7_a_gate.py": "8a86c9467cebcc178de75c2ba8d76da6059fda54cab8264830141cf64e5bc76d",
+    "labs/e8e10/lab.py": "753e50483e40a6aa066d939d32bad3c5bec8acd1d09731f12abe9868fa962ecf",
+    "labs/e8e10/test_profile.py": "47a389acb9e7c09c40b2d63cb7a6369e6667922da9e7979cc81f8f922bc152df",
+    "labs/e8e10/test_student_241880485.py": "c7f3d8264053c67f51dbfb486796b87063197fd9af052a53c5df82e29c8506bd"
+  },
+  "limits": [
+    "3.5 GiB visible memory is below 4 GiB recommendation.",
+    "Performance measures scan including Git/GCC metadata and -MM, not full clean-build time.",
+    "Per-step logs record sequence and exit, route UTC bounds retained."
+  ]
+}
