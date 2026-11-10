@@ -1,0 +1,10 @@
+内部受测项目提交历史（work/e8-A-manual.myt4ld/project）
+5d82db6 C0 baseline
+ .gitignore |  2 ++
+ Makefile   | 10 ++++++++++
+ config.h   |  1 +
+ extra.h    |  1 +
+ helper.c   |  1 +
+ main.c     |  4 ++++
+ unused.h   |  1 +
+ 7 files changed, 20 insertions(+)

@@ -120,3 +120,14 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 - 交付：[报告](e6/reports/B2-241880543.md)、[续跑步骤](e6/reports/B2-241880543-linux.md)、[证据索引](e6/evidence/B2-241880543/index.md)、`e6/README.md` 中仅 B2 的状态及入口、本条贡献和 AI 使用记录。
 - 未完成：当前 Windows 无 Docker，真实服务镜像构建、E6 两轮构建、同 image ID 运行及 `input_sha256` 复核均需 Linux 云服务器。B2 当前不标记验收通过。
 - 边界：没有修改课程源码、Dockerfile、他人测试/证据、CI 配置或远程设置；未执行 push、创建 PR 或合并。本地提交已由用户后续授权，准确提交 SHA 以本分支 `git log` 为准，不预填尚未生成的哈希。
+
+## A2：E8—E10 补充（241880496，2026-11-10）
+
+- 成员：万宇；学号 241880496；Git 作者 `adscfe <asdfs1243@noreply.gitcode.com>`；分支 `student/241880496/e8-e10`；本人主责阶段 E9-A（A 轨道三阶段全部完整跟做）。
+- 环境：Windows 11 + Docker Desktop 29.5.2（WSL2，4 vCPU / 8 GiB）；实验镜像 `course-e8e10:241880496`=`sha256:0a3e46d7…`，容器内 Debian 13、gcc 14.2.0、make 4.4.1、strace 6.13、Python 3.13.14。未使用组内云主机。
+- 代码改动：`labs/e8e10/lab.py:48` 新增 `invalidation(key, old)`，`lab.py:81` 在 `scan()` 返回 `invalidation` 失效原因（不改刷新语义）；新增 `labs/e8e10/test_student_241880496.py`（3 项，间接 include 边集 / 仅源码失效原因 / 纯函数体不失效），`test_profile.py` 原 7 项未改。
+- 交付证据：`e8/evidence/A2-241880496/`（真实 BuildChecker trace、make-db、两图、findings、7 步日志）、`e9/evidence/A2-241880496/`（baseline+C1/C2/C3、三份构建日志、10 步日志、内部历史）、`e10/evidence/A2-241880496/`（30 对 JSON、results.csv、performance-summary.csv、gate.json、最终 BuildChecker、13 步日志、`unit-tests.log`）。
+- 报告：`docs/students/241880496/e8-e10/`（个人报告、ADR、AI_USAGE）；本文件与根 `AI_USAGE.md` 的 A2 段落。
+- 关键结果：E8 `MISSING main.o→config.h`、`REDUNDANT main.o→unused.h`，未变化时两目标复用；E9 C1 复用、C2 刷新并新增 MD `extra.h`、C3 消除两项 MD 保留 RD；E10 六场景 30 行 `equal=True`、`gate.json rows=30 passed=true`、动态重检只剩 RD；单测 `Ran 10 tests ... OK`。
+- 未完成 / 未代做：未在组内云主机重跑（本机 Docker 已完整复现）；未实施"按目标失效"（会改变既有测试与手册断言，需组内统一口径）；A1/B1/A3/B3 各阶段结论不由本人填写；与 B 组联调属 E11—E12。
+- 提交：`adf0421` `feat(e8-e10): report invalidation reasons and add A2 student tests`；证据与文档提交 SHA 以本分支 `git log` 为准（未在提交内填写自身 SHA）。

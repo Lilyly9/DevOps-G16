@@ -268,3 +268,16 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 - 实际运行本地既有 B 包单测 **24 passed**；语法检查 14 个 Python 文件通过；候选准备的静态调用通过。明确区分带 Docker 桩的单测和真实 Docker 实验。
 - AI 整理 [报告与五项核对表](e6/reports/B2-241880543.md)、[原始证据索引](e6/evidence/B2-241880543/index.md)和[待执行 Linux 续跑步骤](e6/reports/B2-241880543-linux.md)。续跑文档中的独立复核代码尚未用于真实成功实验。
 - 未宣称用户已人工确认；未代做 B1/B3/A 组、CI 或合并演示；未修改 JSON 迎合预期；没有 push 或 PR。本地提交由用户后续明确授权。
+
+## A2：E8—E10 补充（241880496，2026-11-10）
+
+- 工具：GitHub Copilot（VS Code 会话）；任务为按 A 轨道三份手册逐条执行、把 Linux 会话命令等价映射到 Windows + Docker Desktop、整理阶段证据与草拟文档。
+- AI 建议 1：新增 `work/_run/run_stage.ps1`，把手册每一步映射为一次 `docker run`（同一镜像、`--network none`、`--cap-add SYS_PTRACE`、仓库挂载到 `/course`），并逐条追加 `STEP_EXIT_CODE`。采纳，因其与 `classroom_helpers.sh:lab_python` 等价且可手工复现。
+- AI 建议 2：在 `labs/e8e10/lab.py` 新增 `invalidation()`（`lab.py:48`）并在 `scan()` 返回 `invalidation` 键（`lab.py:81`），附 3 项自有用例。采纳，理由与替代方案见 [本人 ADR](docs/students/241880496/e8-e10/ADR.md)。
+- AI 建议 3：按目标失效（只刷新受影响目标）。**拒绝**：会改变 `refreshed` 既有期望，破坏 `test_profile.py:test_include_added_invalidates_cache` 与 E9-A 手册第 7 步断言，属跨阶段口径变更，列入扩展计划。
+- AI 建议 4：把 E10 的 `full/inc` 比值写成加速倍数。**拒绝**：实测 0.74–1.18 且抖动同量级，只在报告保留原始中位数与解释。
+- 人工纠正：首版步骤脚本以默认 ANSI 读入，导致容器内 `结论.txt` 文件名与内容乱码；改为显式 UTF-8 读取 + UTF-8 控制台输出后，用新 OUT 重跑三条路线，坏样本删除。
+- 人工核对：全部断言先写独立预期再运行；报告中的耗时、内部 commit 前缀、`trace/t.14:579`、`make-db.txt:1044` 均取自本次实际输出，未照抄教师示例；证据取舍（剔除 `*.o`/`app`/内部 `.git`，保留 `project-git-log.txt`）由本人确认。
+- 验证：`python run_lab.py build` 退出 0；E8/E9/E10 A 轨道逐步 `STEP_EXIT_CODE=0`；`python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v` 为 `Ran 10 tests ... OK`（原 7 + 本人 3）。
+- 边界：课程参考实现（`run_lab.py`、`labs/e8e10/lab.py` 原逻辑、`test_profile.py`、工作流）不是本人自主开发；未改动 `test_profile.py` 与工作流，未代填他人结论，Actions 结果以 GitHub 实际记录为准。
+- 证据：`e8|e9|e10/evidence/A2-241880496/`；报告：`docs/students/241880496/e8-e10/`。
