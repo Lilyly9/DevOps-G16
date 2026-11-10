@@ -1,0 +1,19 @@
+CI job 129817686511 (run 42812644358) 关键输出摘录
+2026-11-10T12:05:35.4234278Z test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache) ... ok
+2026-11-10T12:05:35.4528861Z test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges) ... ok
+2026-11-10T12:05:35.4830655Z test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected) ... ok
+2026-11-10T12:05:35.5136533Z test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency) ... ok
+2026-11-10T12:05:35.5459071Z test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets) ... ok
+2026-11-10T12:05:35.5984392Z test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected) ... ok
+2026-11-10T12:05:35.6135932Z test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected) ... ok
+2026-11-10T12:05:35.6519074Z test_body_change_records_no_invalidation_reason (test_student_241880496.StudentE8E10A2.test_body_change_records_no_invalidation_reason) ... ok
+2026-11-10T12:05:35.7157317Z test_helper_source_invalidation_keeps_conservative_refresh (test_student_241880496.StudentE8E10A2.test_helper_source_invalidation_keeps_conservative_refresh) ... ok
+2026-11-10T12:05:35.7827062Z test_transitive_header_include_extends_actual_set (test_student_241880496.StudentE8E10A2.test_transitive_header_include_extends_actual_set) ... ok
+2026-11-10T12:05:35.7829678Z Ran 10 tests in 0.418s
+2026-11-10T12:05:35.7830425Z OK
+2026-11-10T12:05:36.5724464Z COMPLETED e8 A /course/work/A-e8
+2026-11-10T12:05:37.0743697Z COMPLETED e9 A /course/work/A-e9
+2026-11-10T12:05:38.6042557Z COMPLETED e10 A /course/work/A-e10
+2026-11-10T12:05:38.9759932Z COMPLETED e8 B /course/work/B-e8
+2026-11-10T12:05:39.4153708Z COMPLETED e9 B /course/work/B-e9
+2026-11-10T12:05:42.5410037Z COMPLETED e10 B /course/work/B-e10
