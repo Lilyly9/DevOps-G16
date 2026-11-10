@@ -1,0 +1,25 @@
+内部受测项目提交历史（work/e10-A-manual.pyylyj/matrix/project）
+8899255 C0 baseline
+ .gitignore |  2 ++
+ Makefile   | 10 ++++++++++
+ config.h   |  1 +
+ extra.h    |  1 +
+ helper.c   |  1 +
+ main.c     |  4 ++++
+ unused.h   |  1 +
+ 7 files changed, 20 insertions(+)
+b60a02c body
+ helper.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+d1d23d3 include
+ main.c | 1 +
+ 1 file changed, 1 insertion(+)
+b89be93 declaration
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+0d57d61 flags
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+cd0c79d header
+ config.h | 1 +
+ 1 file changed, 1 insertion(+)

@@ -1,0 +1,9 @@
+2be1465 C0 baseline
+b445453 C1 body change
+181b6b2 C2 include change
+e19c36d C3 repair declarations
+baseline 2be14654814b4cafa154344d3e6c12daf51e1342 [] ['main.o', 'helper.o'] [['MISSING', 'main.o', 'config.h'], ['REDUNDANT', 'main.o', 'unused.h']] []
+C1 b445453cc9d7af9158b7a46ee316f654aec0b11d ['main.o', 'helper.o'] [] [] []
+C2 181b6b2ded4c9cf5425bf1731c2e992a2eb0297b [] ['main.o', 'helper.o'] [['MISSING', 'main.o', 'extra.h']] []
+C3 e19c36da0e5faee13f84044b897c5149db38250d ['main.o', 'helper.o'] [] [] [['MISSING', 'main.o', 'config.h'], ['MISSING', 'main.o', 'extra.h']]
+STEP_EXIT_CODE=0
