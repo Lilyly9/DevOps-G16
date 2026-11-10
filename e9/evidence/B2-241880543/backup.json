@@ -1,0 +1,19 @@
+{
+  "archive": "B2-241880543-e9-originals-20261103.tar.gz",
+  "outside_repo_path": "C:\\Users\\Staris\\.codex\\visualizations\\2026\\11\\03\\01a19f31-73d7-7033-a9c4-1a38c5185dd4\\B2-241880543-e9-originals-20261103.tar.gz",
+  "size_bytes": 39584,
+  "sha256": "471ef745462c6f85e27f7711cc0e057400cf4a0237b01313c18d2ad113ba9cbb",
+  "verified_files": 257,
+  "repository_copy": "e9/evidence/B2-241880543/B2-241880543-e9-originals-20261103.tar.gz",
+  "contains": [
+    "work/e9-B-241880543-20261103-01",
+    "work/B2-241880543-regression-before",
+    "work/B2-241880543-regression-after"
+  ],
+  "excluded": [
+    ".git",
+    ".env*",
+    "__pycache__"
+  ],
+  "note": "Original run snapshot including three Git history bundles; report/CI metadata are maintained in the repository."
+}

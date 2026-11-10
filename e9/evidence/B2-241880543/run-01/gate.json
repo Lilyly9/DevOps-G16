@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "rows": 3,
+  "scope": "E9-B candidate/check/demo; not E10 source acceptance"
+}

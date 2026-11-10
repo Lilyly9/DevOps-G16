@@ -1,0 +1,16 @@
+{
+  "findings": [
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "REDUNDANT",
+      "main.o",
+      "unused.h"
+    ]
+  ],
+  "edited_line": "DEPS = main.c unused.h config.h",
+  "original_unchanged": true
+}

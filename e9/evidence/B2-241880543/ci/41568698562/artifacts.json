@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 13200855273,
+      "node_id": "MDg6QXJ0aWZhY3QxMzIwMDg1NTI3Mw==",
+      "name": "e8e10-evidence-41568698562",
+      "size_in_bytes": 119703,
+      "url": "https://api.github.com/repos/Lilyly9/DevOps-G16/actions/artifacts/13200855273",
+      "archive_download_url": "https://api.github.com/repos/Lilyly9/DevOps-G16/actions/artifacts/13200855273/zip",
+      "expired": false,
+      "digest": "sha256:17a10af0867ff98658ad6accf6d970be3d0624a9878c1e5dceb080b239da56c7",
+      "created_at": "2026-11-03T02:53:11Z",
+      "updated_at": "2026-11-03T02:53:11Z",
+      "expires_at": "2026-11-17T02:53:10Z",
+      "workflow_run": {
+        "id": 41568698562,
+        "repository_id": 1377829477,
+        "head_repository_id": 1377829477,
+        "head_branch": "student/241880543/e8-e10",
+        "head_sha": "883c7792c22752f4d9d35f57132e559beb91ae64"
+      }
+    }
+  ]
+}
