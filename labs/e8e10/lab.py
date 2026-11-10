@@ -45,6 +45,13 @@ def declarations(p):
         graph[target]=sorted(set(dep.split()))
     return graph,variables.get('CFLAGS','')
 
+def invalidation(key, old):
+    if not old: return ['NO_HISTORY']
+    reasons=[n for n in sorted(set(old['key']['directives'])|set(key['directives']))
+             if old['key']['directives'].get(n)!=key['directives'].get(n)]
+    reasons+=[f for f in ['recipes','flags','compiler'] if old['key'][f]!=key[f]]
+    return reasons
+
 def scan(p, old=None):
     start=time.perf_counter(); declared,flags=declarations(p)
     if flags not in ['-O0','-O1','-O0 -DMODE=1']: raise ValueError('UNSUPPORTED_FLAGS')
@@ -71,7 +78,7 @@ def scan(p, old=None):
             'commit':run(['git','rev-parse','HEAD'],p).strip(),'key':key,'actual':actual,'declared':declared,
             'findings':findings,'added':[list(x) for x in sorted(current-previous)],
             'resolved':[list(x) for x in sorted(previous-current)],'refreshed':refreshed,'reused':reused,
-            'elapsed_s':time.perf_counter()-start}
+            'invalidation':invalidation(key,old),'elapsed_s':time.perf_counter()-start}
 
 def patch(p,report):
     if report['commit']!=run(['git','rev-parse','HEAD'],p).strip(): raise ValueError('STALE_REPORT')
