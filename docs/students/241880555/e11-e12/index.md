@@ -22,6 +22,7 @@
 | 5 | `run --request data/integration-sample/e11-b-mismatch.json --out work/e11-b-241880555-mismatch-20261113` | 1 | e11-b-241880555-mismatch-20261113 | FAILED(DRAFT_FAILED) 预期内，输出不符结论 |
 | 6 | `python3 run_e11e12.py test`（加 B1 测试后） | 0 | - | 15 tests OK（10 原 + 5 B1） |
 | 7 | DRAFT 同镜像执行对照（宿主 docker，见 #8） | 0/0/0 | e12-241880555-20261113a/draft-execution/ | inspect 一致 + 默认运行输出 1 + 镜像内重构建输出 1 |
+| 8 | CI（push + pull_request） | - | GitHub Actions artifact e11e12-evidence-43387621859 | run 43387527404 / 43387621859 均 SUCCESS，契约测试+E11-A/E11-B/E12 全链绿，旧 e7/e8e10 gate 保持绿 |
 
 ## 关键字段（E11-B 成功运行 #3）
 

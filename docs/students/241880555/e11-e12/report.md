@@ -57,5 +57,5 @@
 |E12 CLI 五阶段|work/e12-241880555-20261113a/result.json、recheck.json、draft-execution/execution-log.txt|SUCCEEDED，五阶段同 job/trace，同镜像执行对照通过|
 |自主 mismatch 实验|work/e11-b-241880555-mismatch-20261113 + test_student_241880555.py|FAILED(DRAFT_FAILED) 符合预期，三结论区分留证|
 |故障记录|work/e11-b-241880555-20261113a/draft-build/iter-02/、ADR-001|超时→换源候选→成功|
-|PR / CI|见 PR 正文（分支 student/241880555/e11-e12）|CI run 待 push 后回填|
+|PR / CI|PR #20（student/241880555/e11-e12）|CI run 43387527404（push）/ 43387621859（pull_request）均 SUCCESS，e11e12-integration 绿，artifact e11e12-evidence-43387621859（232KB）|
 |归档|/root/devops-submissions/241880555/E11-E12-*.tar.gz|SHA256 见 index.md|
