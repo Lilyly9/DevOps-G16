@@ -3,7 +3,7 @@ CFLAGS = -O0
 transfer-eta: eta_cli.o estimate.o
 	gcc $(CFLAGS) eta_cli.o estimate.o -o transfer-eta
 
-eta_cli.o: eta_cli.c estimate.h
+eta_cli.o: eta_cli.c estimate.h defaults.h
 	gcc $(CFLAGS) -c eta_cli.c -o eta_cli.o
 
 estimate.o: estimate.c estimate.h

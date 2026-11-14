@@ -22,7 +22,9 @@ reject() {
 }
 
 expect_eta eta_seconds=13 100 8
-expect_eta eta_seconds=13 100
+configured_rate=$(awk '$1 == "#define" && $2 == "DEFAULT_RATE_MIB_S" {print $3}' defaults.h)
+[ -n "$configured_rate" ]
+expect_eta "$(./transfer-eta 100 "$configured_rate")" 100
 expect_eta eta_seconds=20 100 5
 expect_eta eta_seconds=12 96 8
 expect_eta eta_seconds=1 1 8
@@ -34,5 +36,5 @@ reject '100 ' 8
 reject 999999999999999999999999999999 8
 reject
 reject 100 8 5
-./transfer-eta --help | grep -q 'Default transfer rate: 8 MiB/s'
+./transfer-eta --help | grep -Fx "Default transfer rate: $configured_rate MiB/s"
 printf 'transfer-eta smoke tests passed\n'
