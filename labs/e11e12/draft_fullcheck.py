@@ -1,4 +1,4 @@
-"""Execute BuildChecker's Make and trace commands in the exact DRAFT image."""
+"""Execute project commands in the exact DRAFT image."""
 import json
 import os
 import re
@@ -26,7 +26,25 @@ class DraftExecutor:
             raise ValueError("Docker bind path cannot contain commas or newlines")
         return ['--mount', f'type=bind,source={host},target={path.as_posix()}']
 
-    def __call__(self, argv, cwd, stdout_path, stderr_path, timeout):
+    def capture(self, evidence):
+        """Return a lab runner with a separate record for every command."""
+        evidence.mkdir(parents=True, exist_ok=True)
+        count = 0
+
+        def run(argv, cwd):
+            nonlocal count
+            count += 1
+            base = evidence / f'{count:02d}-{Path(argv[0]).name}'
+            stdout = base.with_suffix('.stdout.log')
+            stderr = base.with_suffix('.stderr.log')
+            code = self(argv, cwd, stdout, stderr, 120, record_path=base.with_suffix('.json'))
+            if code:
+                raise ValueError(f'DRAFT command exited {code}; see {stderr.name}: {stderr.read_text(encoding="utf-8", errors="replace")}')
+            return stdout.read_text(encoding='utf-8')
+
+        return run
+
+    def __call__(self, argv, cwd, stdout_path, stderr_path, timeout, *, record_path=None):
         cwd, stdout_path, stderr_path = map(Path, (cwd, stdout_path, stderr_path))
         mounts = self._bind(cwd)
         tracing = argv[0] == 'strace'
@@ -46,7 +64,8 @@ class DraftExecutor:
             '-e', 'LC_ALL=C.UTF-8', *mounts, '--workdir', cwd.as_posix(),
             '--entrypoint', argv[0], self.image_id, *argv[1:],
         ]
-        record_path = cwd.parent / ('build-execution.json' if tracing else 'clean-execution.json')
+        if record_path is None:
+            record_path = cwd.parent / ('build-execution.json' if tracing else 'clean-execution.json')
         record = {'requested_image_id': self.image_id, 'create_argv': create,
                   'stdout': stdout_path.name, 'stderr': stderr_path.name}
         cid = None
