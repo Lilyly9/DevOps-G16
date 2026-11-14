@@ -15,7 +15,7 @@
 | --- | --- |
 | 目标版默认速率 8 MiB/s，运行 `./transfer-eta 100` | `eta_seconds=13` |
 | 改头文件至 5 MiB/s，执行普通 `make` | 仍为 `eta_seconds=13`，`make` 判定程序已是最新 |
-| 同一个未修复版本随后清理并重建 | `eta_seconds=20` |
+| 同一个未修复版本随后执行 `make -B transfer-eta` 强制重建 | `eta_seconds=20` |
 | 应用 E12 补丁后，重新从 8 改到 5 并执行普通 `make` | 重新编译 `eta_cli.o` 并链接，输出 `eta_seconds=20` |
 
 BuildChecker 基线发现为空。目标全量和增量都恰好报告 `MD(eta_cli.o, defaults.h)`。实际图将该边定位到 `target-full/trace/t.11` 第 923 行对 `defaults.h` 的成功读取。修复消费了本轮增量封装并校验哈希，只补上一条 Make 声明。项目测试和头文件变化断言均通过，最终动态复验 **0 MD / 0 RD**。详见[修复前实测](evidence/transfer-eta/native-proof.log)、[原始边](evidence/transfer-eta/cli/target-full/actual-graph.json)、[补丁](evidence/transfer-eta/cli/candidate.patch)、[修复验证](evidence/transfer-eta/cli/validation/validation.json)和[最终图结论](evidence/transfer-eta/cli/final-full/findings.json)。
