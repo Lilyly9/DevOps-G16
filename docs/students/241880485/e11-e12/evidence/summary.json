@@ -1,0 +1,76 @@
+{
+  "standard": {
+    "status": "SUCCEEDED",
+    "job_id": "job-aaa02d3f504f45629eaf726b2100f48e",
+    "trace_id": "trace-967e87d09ac8435ea4262a14172b3d06",
+    "base_commit": "46fc6c1b74681d6f3746c7d9dff9fca722ca936e",
+    "target_commit": "2bcd78df5e0733e1743fdb2fd7bf8be824df830f",
+    "findings": [
+      [
+        "MISSING",
+        "main.o",
+        "config.h"
+      ],
+      [
+        "MISSING",
+        "main.o",
+        "extra.h"
+      ],
+      [
+        "REDUNDANT",
+        "main.o",
+        "unused.h"
+      ]
+    ],
+    "refreshed": [
+      "main.o",
+      "helper.o"
+    ],
+    "reused": [],
+    "added": [
+      [
+        "MISSING",
+        "main.o",
+        "extra.h"
+      ]
+    ],
+    "resolved": [],
+    "object_graphs_match": true,
+    "findings_match": true,
+    "cache_edges_traced": true
+  },
+  "autonomous": {
+    "status": "SUCCEEDED",
+    "job_id": "job-eec50010f9044119892ad3e040df5ae8",
+    "trace_id": "trace-36f44ebfa1004a689605ef8cbd32fa06",
+    "base_commit": "a817cc09960456b4eac8762d10d69037bf4aa767",
+    "target_commit": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+    "findings": [
+      [
+        "MISSING",
+        "main.o",
+        "config.h"
+      ],
+      [
+        "REDUNDANT",
+        "main.o",
+        "unused.h"
+      ]
+    ],
+    "refreshed": [],
+    "reused": [
+      "main.o",
+      "helper.o"
+    ],
+    "added": [],
+    "resolved": [],
+    "object_graphs_match": true,
+    "findings_match": true,
+    "cache_edges_traced": true
+  },
+  "stale_report": {
+    "status": "REJECTED",
+    "error_code": "STALE_REPORT",
+    "scope": "contract check on a copy of the actual E11-A baseline envelope"
+  }
+}

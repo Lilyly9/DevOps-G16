@@ -1,0 +1,8 @@
+{
+  "source": "A1 cloud mirror variant of course-generated sample",
+  "base_commit": "46fc6c1b74681d6f3746c7d9dff9fca722ca936e",
+  "original_course_target_commit": "2bcd78df5e0733e1743fdb2fd7bf8be824df830f",
+  "target_commit": "d5204f53b641173fd3f23c71ae37dda8ac6628e9",
+  "target_delta": "Dockerfile.broken registry only",
+  "candidate_source": "course candidate plus strace and A16 registry/apt mirrors"
+}

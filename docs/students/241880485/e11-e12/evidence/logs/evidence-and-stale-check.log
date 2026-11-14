@@ -1,0 +1,3 @@
+standard SUCCEEDED reused=[] refreshed=['main.o', 'helper.o'] findings=[('MISSING', 'main.o', 'config.h'), ('MISSING', 'main.o', 'extra.h'), ('REDUNDANT', 'main.o', 'unused.h')]
+autonomous SUCCEEDED reused=['main.o', 'helper.o'] refreshed=[] findings=[('MISSING', 'main.o', 'config.h'), ('REDUNDANT', 'main.o', 'unused.h')]
+stale_report REJECTED STALE_REPORT

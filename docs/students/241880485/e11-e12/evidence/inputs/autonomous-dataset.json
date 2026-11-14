@@ -1,0 +1,25 @@
+{
+  "source": "A1 prior E9-A controlled C/Make project with actual internal Git history",
+  "source_class": "independent revision comparison on course-derived fixture",
+  "original_run": "work/e9-A-manual.eqLOHp",
+  "base_commit": "a817cc09960456b4eac8762d10d69037bf4aa767",
+  "target_commit": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+  "change": "C1 body change: arithmetic expression changes without dependency or recipe changes",
+  "expected_reused": [
+    "main.o",
+    "helper.o"
+  ],
+  "expected_refreshed": [],
+  "expected_findings": [
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "REDUNDANT",
+      "main.o",
+      "unused.h"
+    ]
+  ]
+}
