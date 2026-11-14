@@ -2,4 +2,4 @@ FROM m.daocloud.io/docker.io/library/python:3.13-slim
 WORKDIR /work
 COPY . .
 RUN make transfer-eta
-CMD ["./transfer-eta","100","8"]
+CMD ["./transfer-eta","100"]
