@@ -1,0 +1,20 @@
+{
+  "accepted": true,
+  "checks": {
+    "patch_applies": true,
+    "build": true,
+    "project_make_test": true,
+    "test": true,
+    "header_change": true,
+    "no_missing": true
+  },
+  "error": null,
+  "source_unchanged": false,
+  "rollback": false,
+  "outputs": {
+    "expected": "eta_seconds=13",
+    "actual": "eta_seconds=13",
+    "expected_after_header_change": "eta_seconds=20",
+    "actual_after_header_change": "eta_seconds=20"
+  }
+}

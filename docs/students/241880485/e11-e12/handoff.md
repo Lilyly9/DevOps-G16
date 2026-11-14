@@ -1,6 +1,8 @@
 # A1 → A2/B1：E12 项目与镜像交接
 
-截至 2026-11-14，已检查 G16 的 C/Make 目录和相关 Git 历史，以及可用的 E8–E10 A1 证据包。E3–E7 的 C 文件位于 fixtures、实验副本或证据目录，E8–E10 有样例提交及独立扩展的历史。它们能重验 BuildChecker，不能证明有满足手册的本组实际维护项目。真实项目验收登记为待补；以两组能确认来源、提交和实际修改的项目为准。
+A1 本轮已在 G16 创建独立工具 `projects/transfer-eta`，实际基线、目标、候选、配置和验收入口见[子项目验收](transfer-eta.md)。A2 可用本机 API 实测产出的[目标报告](evidence/transfer-eta/api/output/incremental-check.json)和[下载校验](evidence/transfer-eta/api/verification.json)，B1/B2 可复查[项目候选](evidence/transfer-eta/candidate.Dockerfile)与[修复验证](evidence/transfer-eta/cli/validation/validation.json)。是否采用本轮新建项目作课程验收数据由课程方确认。
+
+下面保留此前固定样例的交接记录。
 
 | 交给谁 | 已交接的原件 | 接真实项目时需对齐 |
 | --- | --- | --- |
@@ -8,4 +10,4 @@
 | B1 | [A16 候选副本](evidence/e12/candidate.Dockerfile)、[DRAFT 构建结果](evidence/e12/draft-build/result.json)、[六次镜像执行校验](evidence/e12/verification.json) | 候选需含 `strace`、GNU Make、项目编译工具链；以 DRAFT 通过验证的完整 `sha256:…` 为同一 Docker daemon 的执行输入 |
 | B2 | [补丁](evidence/e12/candidate.patch)、[验证报告](evidence/e12/validation/validation.json)、[最终全量重检](evidence/e12/final-full/findings.json) | 本轮最后一次动态全量运行已使用 DRAFT 镜像；`validate` 内部的构建与运行仍在外层容器 |
 
-真实项目选材时共同确认：仓库来源、base/target 的完整 SHA、提交差异及预期 MD、目标提交中的 `Dockerfile.broken`、候选及其摘要、构建测试命令、输出和头文件变化断言。若只有课程样例，就按样例验收继续联调，并等待合适项目或课程对替代数据的明确口径。
+双方实际联调时从历史 target 取候选和对应报告，核对仓库来源、完整提交 SHA、报告哈希和预期修复结果。保留 B 端独立接收、消费及复验记录。

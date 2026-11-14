@@ -1,5 +1,7 @@
 # E11–E12 个人报告 · A1
 
+续做记录见 [G16 子项目验收](transfer-eta.md)，包含 `transfer-eta` 两份实际提交、CLI 和本机 API 实测。本文保留此前 E11-A 和 E12 固定样例记录。
+
 焦龙，241880485，A16，BuildChecker。配对为 B16。实验日期为 2026-11-14，个人分支为 `student/241880485/e11-e12`。E11-A 标准路线、自主版本对照和旧报告拒绝均已在 A16 Linux 完成。E12 固定样例的 CLI 五阶段亦已通过，其中三次 BuildChecker 全量在 DRAFT 构建出的同一镜像中执行。仓库沿用 [Lilyly9/DevOps-G16](https://github.com/Lilyly9/DevOps-G16)。
 
 | 项目 | 来源 |
@@ -43,11 +45,11 @@
 
 `draft → full-check → incremental-check → repair → recheck` 全部完成，复核脚本验证 162 个产物引用。BuildChecker 的基线、目标和最终全量检查各含一次 clean、一次 trace 构建，共六个实际容器均使用上述 DRAFT 镜像 ID，每次全量保存 10 份原始 trace。基线报告绑定 base，后续目标报告及修复引用绑定 target，最终仅保留 `RD(main.o, unused.h)`。[链路复核](evidence/e12/verification.json) · [修复封装](evidence/e12/repair.json) · [最终复验](evidence/e12/recheck.json)
 
-EChecker 的 GCC 依赖扫描和 MDFixer 的补丁验证在本次仍由编排容器执行，A2/B2 对应的同镜像运行待接入。A3/B3 的共享 API 联调以及 A 报告由 B 独立下载、核对并消费也待组内完成。此项通过的范围是 A1 云端固定样例 CLI 五阶段和三次 BuildChecker 同镜像执行。
+这次固定样例运行中，EChecker 的 GCC 扫描和 MDFixer 补丁验证由编排容器执行。后续 `transfer-eta` 的配置路线把两者迁入对应 DRAFT 镜像，并在 A16 本机调用 API 实测。A16↔B16 的独立消费由双方另行联调。详见[子项目验收](transfer-eta.md)。
 
 ## 真实项目
 
-已检查现有 G16 仓库可见的 Git 历史与本地课程材料。发现的 C/Make 项目为课程夹具、成员实验快照和重复归档，尚未找到满足“本组实际维护且具有真实修改历史”的应用。E11 自主对照的两份提交确实存在于本人 E9 样例的 Git 历史，来源仍是课程衍生夹具。真实项目验收待组内提供项目来源、完整 `base`/`target` SHA、对应构建输入和候选，随后按真实目标及验证命令适配。[自主项目来源](evidence/inputs/autonomous-dataset.json)
+E11 自主对照沿用本人 E9 课程衍生夹具的实际 Git 历史。续做时在原 G16 仓库内新建传输时间估算工具 `transfer-eta`，用两个实际功能提交作为 E12 输入。其技术验收已完成，是否符合课程对本组实际维护项目的要求待课程方确认。详见[自主项目来源](evidence/inputs/autonomous-dataset.json)和[子项目验收](transfer-eta.md)。
 
 ## 环境故障与恢复
 

@@ -2,6 +2,8 @@
 
 焦龙（241880485），A16，BuildChecker，配对 B16。E11-A 实验于 2026-11-14 在 A16 Linux 完成。执行源码 `456a375221ee963140b68be4afd2b26a96cc0f19`，编排镜像 ID `sha256:40b15f7e375e5bbbb5929f2f22f52f4a194a340b1970d340512af444f69320a5`。云端原件根目录为 `/root/241880485/DevOps-G16-e11-A1-20261114/work/e11-a1-241880485-20261114.HTL9X4`。[个人报告](report.md) · [ADR](ADR.md)
 
+同日续做新增 G16 子项目 `transfer-eta`。其实际 Git 提交、A16 CLI/API 与同镜像证据见[子项目验收](transfer-eta.md)。下表记录先前的固定样例实测。
+
 | 验收项 | 实际判据与入口 |
 | --- | --- |
 | 编排镜像 | 首次拉取 Docker CLI 镜像 metadata 超时，退出 1；通过课程镜像站解析同一 digest 后构建退出 0。两次云端目录尾号 `8WOHXG`、`VR6DkD`。[环境构建记录](evidence/environment/) |
@@ -14,7 +16,7 @@
 | E12 固定样例 CLI | 五阶段通过，共 162 个产物引用通过验证。修复消费本轮增量报告的实际 SHA256，检验 `accepted=true`，最终 0 MD、1 RD `unused.h`。[链路复核](evidence/e12/verification.json) · [修复封装](evidence/e12/repair.json) · [最终复验](evidence/e12/recheck.json) |
 | E12 BuildChecker 镜像交接 | 基线、目标和最终全量的六个 clean/trace 容器均使用 DRAFT 构建的完整镜像 ID，每次全量含 10 份 trace。EChecker 扫描与 MDFixer 验证仍在编排容器，A2/B2 的同镜像执行待接入。[基线执行原件](evidence/e12/baseline-full/) · [目标执行原件](evidence/e12/target-full/) · [最终执行原件](evidence/e12/final-full/) |
 | E12 组内联调 | 共享 API 与 B 侧独立下载、消费和复验仍待组内联调。 |
-| 真实项目 | 等待组内提供符合要求的真实 C/Make 项目、两份完整 SHA 和对应构建输入。 |
+| 子项目接入 | G16 内新建 C/Make 工具已按其实际 Git 提交通过技术验收，课程方对本轮新建项目的验收口径仍待确认。[子项目验收](transfer-eta.md) |
 | PR 与 CI | 个人草稿 PR #21 基于 B1 分支，等待 PR #20 合入。云端实验源提交 `456a375221ee963140b68be4afd2b26a96cc0f19` 的四项检查成功。E11–E12 的 PR run `43548159901` 产物 `14095027314`，push run `43548058094` 产物 `14094534869` 已下载。[PR #21](https://github.com/Lilyly9/DevOps-G16/pull/21) · [PR #20](https://github.com/Lilyly9/DevOps-G16/pull/20) · [PR CI](https://github.com/Lilyly9/DevOps-G16/actions/runs/43548159901) · [push CI](https://github.com/Lilyly9/DevOps-G16/actions/runs/43548058094) |
 | 原件与备份 | 完整云端原件包为 178309 字节，SHA256 `4c6e0364ac295b65e8a6eb505740a439fd55397cc87dc32d709ba556c6ba0de3`。本机个人交付包路径为 `E11-12/A1-E11-E12-个人交付备份-20261114.tar.gz`，校验独立记录。 |
 

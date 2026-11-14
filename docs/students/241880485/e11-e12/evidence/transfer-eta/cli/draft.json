@@ -1,0 +1,95 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-8da9e7061d5140a184a621f54f200464",
+  "trace_id": "trace-b58a3d878e5d45419d276e94fb96f88d",
+  "kind": "draft",
+  "commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "DRAFT_TEACHING_REPLAY",
+    "trace_id": "e6-b-b021a4f9e9b145af83aceba163b04351",
+    "candidate_source": "Repository project candidate replay; no model/API call during DRAFT",
+    "candidate_sha256": "10d31438d296566851fda8fa45be9a6baf1ad0e5099bea3bd616316fe73b79db",
+    "attempts": [
+      {
+        "iteration": 1,
+        "tag": "e6-draft-replay:b021a4f9e9b145af83aceba163b04351-1",
+        "command": [
+          "docker",
+          "build",
+          "--progress=plain",
+          "-f",
+          "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/draft-build/iter-01/Dockerfile",
+          "-t",
+          "e6-draft-replay:b021a4f9e9b145af83aceba163b04351-1",
+          "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/draft-build/project"
+        ],
+        "build_exit_code": 1,
+        "failure_class": "MISSING_MAKE"
+      },
+      {
+        "iteration": 2,
+        "tag": "e6-draft-replay:b021a4f9e9b145af83aceba163b04351-2",
+        "command": [
+          "docker",
+          "build",
+          "--progress=plain",
+          "-f",
+          "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/draft-build/iter-02/Dockerfile",
+          "-t",
+          "e6-draft-replay:b021a4f9e9b145af83aceba163b04351-2",
+          "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/draft-build/project"
+        ],
+        "build_exit_code": 0,
+        "image_id": "sha256:5818e9e3624e1cdff6feffda49fdd7826e98d79b838b97c8a9c38e864cf3c7e3"
+      }
+    ],
+    "input_sha256": {
+      ".dockerignore": "b62cb46a052729bfd832eecf492950a74b992029a2ad8637cd4868cda250388e",
+      ".gitignore": "58d1112c71ba229bbc8f48379e03a9182fa2cdb6ace7bb0de2cb9467c87cfa9d",
+      "Dockerfile.broken": "5ab0d192b26a35b1b726e2fc4869f69fbd574b33400a0a370b7dc7b80540f0e0",
+      "Makefile": "84338a60d7e24c69a997faa64b12c86567318e4a38a4d32b8077a076e082cf29",
+      "README.md": "8dc4534f0840c54d3fee8e80919cc4fc0fac775dd1c1a04acecf67873c97e907",
+      "candidate.Dockerfile": "10d31438d296566851fda8fa45be9a6baf1ad0e5099bea3bd616316fe73b79db",
+      "defaults.h": "e4ebc76d73526e7aa9d10b7d64031e2d1a72b847f0b63565fd23fd67f5db6a93",
+      "e12-profile.json": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07",
+      "estimate.c": "d4d7d905d36f981088920867e11cf56977993df6d409b9e91f6575d288c39bcb",
+      "estimate.h": "4da25ca715130882e710c767bb742b863ed97f0de93db64a89fe41fd6403f03f",
+      "eta_cli.c": "0be419319c82e26e991a48ec12f71593b3c66b43c6c32b6072170e9f0521d375",
+      "tests/smoke.sh": "709720012fc699c9fc981e3a12c36075f161427f45941c997840816611b5d28a"
+    },
+    "verification": {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "1",
+        "--memory",
+        "128m",
+        "--pids-limit",
+        "64",
+        "--cidfile",
+        "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/draft-build/verify-container-id.txt",
+        "sha256:5818e9e3624e1cdff6feffda49fdd7826e98d79b838b97c8a9c38e864cf3c7e3"
+      ],
+      "exit_code": 0,
+      "expected_output": "eta_seconds=13",
+      "actual_output": "eta_seconds=13\n",
+      "output_matches": true
+    },
+    "elapsed_ms": 839
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-8da9e7061d5140a184a621f54f200464/draft-build/result.json",
+      "sha256": "86df8beabbf40ea16ab61a6d3a48f5540257d7783bc5845917567b2401aa987d",
+      "bytes": 3120
+    }
+  ],
+  "project_path": "projects/transfer-eta",
+  "profile_sha256": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07"
+}
