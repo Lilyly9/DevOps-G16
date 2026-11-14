@@ -1,0 +1,86 @@
+[
+  {
+    "target": "estimate.o",
+    "dependency": "estimate.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.14",
+      "line": 67,
+      "pid": 14,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "estimate.o",
+    "dependency": "estimate.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.14",
+      "line": 101,
+      "pid": 14,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "eta_cli.o",
+    "dependency": "defaults.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.11",
+      "line": 923,
+      "pid": 11,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "eta_cli.o",
+    "dependency": "estimate.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.11",
+      "line": 924,
+      "pid": 11,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "eta_cli.o",
+    "dependency": "eta_cli.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.11",
+      "line": 67,
+      "pid": 11,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "transfer-eta",
+    "dependency": "estimate.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.18",
+      "line": 87,
+      "pid": 18,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "transfer-eta",
+    "dependency": "eta_cli.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.18",
+      "line": 84,
+      "pid": 18,
+      "operation": "openat"
+    }
+  }
+]

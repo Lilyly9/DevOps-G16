@@ -1,0 +1,11 @@
+{
+  "mode": "e12",
+  "repo": "/course/data/e12-transfer-eta-a1-20261114T042319Z.xhearY/repo",
+  "project_path": "projects/transfer-eta",
+  "profile": true,
+  "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "candidate": "/course/data/e12-transfer-eta-a1-20261114T042319Z.xhearY/candidate.Dockerfile",
+  "expected_output": "eta_seconds=13",
+  "build_timeout": 600
+}

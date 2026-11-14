@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/Lilyly9/DevOps-G16",
+  "project_path": "projects/transfer-eta",
+  "provenance": "C/Make utility created in G16 during E12; baseline and feature are actual Git commits",
+  "source_commit": "be439f44e73704c4dece24962746a13125a94d40",
+  "base_commit": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "target_commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "candidate_source": "e7414083c4f1760cb234f96a9d75f2d0255e3f57:projects/transfer-eta/candidate.Dockerfile",
+  "candidate_sha256": "10d31438d296566851fda8fa45be9a6baf1ad0e5099bea3bd616316fe73b79db",
+  "profile_sha256": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07",
+  "fault": "target introduces a compiled-in default rate without declaring defaults.h for eta_cli.o"
+}

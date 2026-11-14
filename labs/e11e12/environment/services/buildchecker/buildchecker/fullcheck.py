@@ -340,7 +340,7 @@ def execute(argv, cwd, stdout_path, stderr_path, timeout):
             raise TimeoutError(f"Command exceeded {timeout}s; process group was killed")
 
 
-def full_check(fixture, output, clean_command="make clean", build_command="make app", timeout=120):
+def full_check(fixture, output, clean_command="make clean", build_command="make app", timeout=120, *, executor=execute):
     if os.name != "posix":
         raise ValueError("Full collection requires Linux; offline analyze is portable")
     fixture, output = Path(fixture).resolve(), Path(output).resolve()
@@ -368,14 +368,14 @@ def full_check(fixture, output, clean_command="make clean", build_command="make 
         traces.mkdir()
         report["input_sha256"] = {path.relative_to(project).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
                                   for path in sorted(project.rglob("*")) if path.is_file()}
-        report["clean_exit_code"] = execute(clean, project, output / "clean.log", output / "clean-stderr.log", timeout)
+        report["clean_exit_code"] = executor(clean, project, output / "clean.log", output / "clean-stderr.log", timeout)
         if report["clean_exit_code"] != 0:
             raise ValueError("Clean command failed; cannot claim a clean-build analysis")
         database = output / "make-db.txt"
         traced = ["strace", "-ff", "-s", "4096", "-o", str(traces / "t"),
                   "-e", "trace=%file,%process", build[0], "-p", *build[1:]]
         report["trace_command"] = traced
-        report["build_exit_code"] = execute(traced, project, database, output / "build-stderr.log", timeout)
+        report["build_exit_code"] = executor(traced, project, database, output / "build-stderr.log", timeout)
         if report["build_exit_code"] != 0:
             raise ValueError("Traced build failed; partial traces are not a successful dependency check")
         result = analyze(traces, database, project.as_posix())

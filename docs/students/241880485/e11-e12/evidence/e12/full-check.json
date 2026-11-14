@@ -1,0 +1,129 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-8a1ef46c976448698d0f004cbc89d5d2",
+  "trace_id": "trace-3cd6971ebf334b2788f6f31cd3660d36",
+  "kind": "full-check",
+  "commit": "46fc6c1b74681d6f3746c7d9dff9fca722ca936e",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-22c53fd48f9e413393fbe416ac84d9b3",
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.11",
+            "line": 579,
+            "pid": 11,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.12",
+            "line": 23,
+            "pid": 12,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "main.c",
+          "unused.h"
+        ]
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 1036,
+            "declaration": "main.o: main.c unused.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make",
+      "app"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "Dockerfile.broken": "493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745",
+      "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+      "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/e12-a1-draft-image-241880485-20261114T024540Z/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "app"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "app",
+      "helper.o",
+      "main.o"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 478
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-8a1ef46c976448698d0f004cbc89d5d2/baseline-full/actual-graph.json",
+      "sha256": "8317c06fcf955534b1c19bb1cb36fe06b3465ba48d6dddbf5347f3faa4ebca49",
+      "bytes": 1201
+    },
+    {
+      "uri": "artifact://job-8a1ef46c976448698d0f004cbc89d5d2/baseline-full/findings.json",
+      "sha256": "52b0e533c9b2784732e632f32d99c397a729f895a8586c61a1ec0be9469257cf",
+      "bytes": 2578
+    },
+    {
+      "uri": "artifact://job-8a1ef46c976448698d0f004cbc89d5d2/baseline-cache.json",
+      "sha256": "21b5b518dc1be19f7b7a95d23a1b36b136104353059372be54bfc3abc112d7c0",
+      "bytes": 1437
+    },
+    {
+      "uri": "artifact://job-8a1ef46c976448698d0f004cbc89d5d2/baseline-full/clean-execution.json",
+      "sha256": "1a3eeeda49d78d65b9772ea2d542fdeb2adb24c58f6ba8a39864da28f2ae0647",
+      "bytes": 1434
+    },
+    {
+      "uri": "artifact://job-8a1ef46c976448698d0f004cbc89d5d2/baseline-full/build-execution.json",
+      "sha256": "616df414afd90e513b38bb8fef902e98c31b07b3de22d704fdff1e3c11ecd164",
+      "bytes": 1901
+    }
+  ]
+}

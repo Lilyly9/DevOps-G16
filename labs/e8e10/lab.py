@@ -31,11 +31,13 @@ def commit(p, msg):
     run(['git','add','.'],p); run(['git','commit','-m',msg],p)
     return run(['git','rev-parse','HEAD'],p).strip()
 
-def declarations(p):
+DEFAULT_TARGETS = {'main.o': 'main.c', 'helper.o': 'helper.c'}
+
+def declarations(p, targets=None):
     text=(p/'Makefile').read_text()
     variables=dict(re.findall(r'^(\w+)\s*=\s*(.*)$',text,re.M))
     graph={}
-    for target in ['main.o','helper.o']:
+    for target in DEFAULT_TARGETS if targets is None else targets:
         m=re.search(r'^'+re.escape(target)+r': ([^\n]*)$',text,re.M)
         if not m: raise ValueError('UNSUPPORTED_RULE '+target)
         dep=m[1]
@@ -50,22 +52,27 @@ def invalidation(key, old):
     reasons=[n for n in sorted(set(old['key']['directives'])|set(key['directives']))
              if old['key']['directives'].get(n)!=key['directives'].get(n)]
     reasons+=[f for f in ['recipes','flags','compiler'] if old['key'][f]!=key[f]]
+    if old['key'].get('targets') != key.get('targets'):
+        reasons.append('targets')
     return reasons
 
-def scan(p, old=None):
-    start=time.perf_counter(); declared,flags=declarations(p)
+def scan(p, old=None, *, targets=None, execute=run):
+    mapping = DEFAULT_TARGETS if targets is None else targets
+    start=time.perf_counter(); declared,flags=declarations(p, mapping)
     if flags not in ['-O0','-O1','-O0 -DMODE=1']: raise ValueError('UNSUPPORTED_FLAGS')
     # Conservative invalidation: all local preprocessor lines, source set and recipes.
     files={x.name:x.read_text() for x in sorted(p.glob('*')) if x.suffix in ['.c','.h']}
     key={'directives':{n:[l for l in t.splitlines() if l.lstrip().startswith('#')] for n,t in files.items()},
          'recipes':[l for l in (p/'Makefile').read_text().splitlines() if l.startswith('\t')],
-         'flags':flags,'compiler':run(['gcc','--version'],p).splitlines()[0]}
+         'flags':flags,'compiler':execute(['gcc','--version'],p).splitlines()[0]}
+    if targets is not None:
+        key['targets'] = dict(mapping)
     actual={}; refreshed=[]; reused=[]
-    for target,source in [('main.o','main.c'),('helper.o','helper.c')]:
+    for target,source in mapping.items():
         if old and old['key']==key and target in old['actual']:
             actual[target]=old['actual'][target]; reused.append(target)
         else:
-            output=run(['gcc',*flags.split(),'-MM','-MT',target,source],p)
+            output=execute(['gcc',*flags.split(),'-MM','-MT',target,source],p)
             actual[target]=sorted(set(output.replace('\\\n',' ').split(':',1)[1].split()))
             refreshed.append(target)
     findings=[]
@@ -101,24 +108,40 @@ def patch(p,report):
     diff=''.join(difflib.unified_diff(original.splitlines(True),changed.splitlines(True),fromfile='a/Makefile',tofile='b/Makefile'))
     return diff,edits
 
-def validate(p, patchfile, evidence, fail_test=False):
+def validate(p, patchfile, evidence, fail_test=False, *, profile=None, runner=None):
     evidence.mkdir(parents=True); before=(p/'Makefile').read_bytes()
-    sandbox=evidence/'sandbox'; shutil.copytree(p,sandbox,ignore=shutil.ignore_patterns('.git','*.o','app'))
+    program = ['./app'] if profile is None else list(profile.program)
+    clean = 'clean' if profile is None else profile.clean_target
+    build = 'app' if profile is None else profile.build_target
+    expected = ('99' if fail_test else '1') if profile is None else profile.expected_output
+    expected_changed = '2' if profile is None else profile.header_change.expected_output
+    sandbox=evidence/'sandbox'; shutil.copytree(p,sandbox,ignore=shutil.ignore_patterns('.git','*.o',Path(program[0]).name))
+    execute = run if runner is None else runner(evidence/'execution')
     run(['git','init','-b','main'],sandbox)
     run(['git','config','user.name','ValidationSandbox'],sandbox)
     run(['git','config','user.email','fixture@localhost'],sandbox)
     commit(sandbox,'sandbox input')
     checks={}; error=None
+    output = changed_output = None
     try:
         run(['git','apply','--check',str(patchfile.resolve())],sandbox); checks['patch_applies']=True
         run(['git','apply',str(patchfile.resolve())],sandbox)
-        log=run(['make','clean'],sandbox)+run(['make','app'],sandbox);(evidence/'build.log').write_text(log);checks['build']=True
-        output=run(['./app'],sandbox).strip(); checks['test']=output==('99' if fail_test else '1')
+        log=execute(['make',clean],sandbox)+execute(['make',build],sandbox);(evidence/'build.log').write_text(log);checks['build']=True
+        if profile is not None:
+            (evidence/'project-test.log').write_text(execute(['make',profile.test_target],sandbox))
+            checks['project_make_test']=True
+        output=execute(program,sandbox).strip(); checks['test']=output==expected
         # Real header-change build checks the originally broken incremental behavior.
-        time.sleep(1.05); (sandbox/'config.h').write_text('#define VALUE 2\n')
-        (evidence/'incremental.log').write_text(run(['make','app'],sandbox))
-        checks['header_change']=run(['./app'],sandbox).strip()=='2'
-        recheck=scan(sandbox); save(evidence/'recheck.json',recheck)
+        time.sleep(1.05)
+        if profile is None:
+            (sandbox/'config.h').write_text('#define VALUE 2\n')
+        else:
+            profile.header_change.apply(sandbox)
+        (evidence/'incremental.log').write_text(execute(['make',build],sandbox))
+        changed_output=execute(program,sandbox).strip()
+        checks['header_change']=changed_output==expected_changed
+        recheck=scan(sandbox, targets=None if profile is None else profile.targets, execute=execute)
+        save(evidence/'recheck.json',recheck)
         checks['no_missing']=not any(f['type']=='MISSING' for f in recheck['findings'])
     except (ValueError,subprocess.TimeoutExpired) as ex: error=str(ex)
     accepted=bool(checks) and all(checks.values()) and error is None
@@ -126,6 +149,10 @@ def validate(p, patchfile, evidence, fail_test=False):
     if accepted: (p/'Makefile').write_bytes((sandbox/'Makefile').read_bytes())
     unchanged=(p/'Makefile').read_bytes()==before
     result={'accepted':accepted,'checks':checks,'error':error,'source_unchanged':unchanged,'rollback':not accepted and unchanged}
+    if profile is not None:
+        result['outputs'] = {'expected':expected, 'actual':output,
+                             'expected_after_header_change':expected_changed,
+                             'actual_after_header_change':changed_output}
     save(evidence/'validation.json',result);return result
 
 def buildchecker(p,out):

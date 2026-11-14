@@ -1,0 +1,42 @@
+{
+  "cache": "baseline-cache.json",
+  "cache_sha256": "5e965b8099e4d64e8c84ed0c3995aa3c2e21954bd7b200b191112efe76a89968",
+  "source_graph": "baseline-full/actual-graph.json",
+  "source_graph_sha256": "63e1a0a2261c319523cfbaabf92902b1b9a59d383b66630a86ce4f166cfc0625",
+  "source_commit": "a817cc09960456b4eac8762d10d69037bf4aa767",
+  "edges": [
+    {
+      "target": "helper.o",
+      "dependency": "helper.c",
+      "trace_file": "baseline-full/trace/t.27",
+      "trace_sha256": "59335823fdcad0c2698d792a04667c179873d658a249716f8e064d42dd3d6711",
+      "line": 67,
+      "pid": 27,
+      "operation": "openat",
+      "return": 3,
+      "trace_line": "openat(AT_FDCWD, \"helper.c\", O_RDONLY|O_NOCTTY) = 3"
+    },
+    {
+      "target": "main.o",
+      "dependency": "config.h",
+      "trace_file": "baseline-full/trace/t.24",
+      "trace_sha256": "d01c1d4c7ae2316e9b3671aa0fcc5539bc14405f4a20ad8e03ded390218033e3",
+      "line": 579,
+      "pid": 24,
+      "operation": "openat",
+      "return": 4,
+      "trace_line": "openat(AT_FDCWD, \"config.h\", O_RDONLY|O_NOCTTY) = 4"
+    },
+    {
+      "target": "main.o",
+      "dependency": "main.c",
+      "trace_file": "baseline-full/trace/t.24",
+      "trace_sha256": "d01c1d4c7ae2316e9b3671aa0fcc5539bc14405f4a20ad8e03ded390218033e3",
+      "line": 67,
+      "pid": 24,
+      "operation": "openat",
+      "return": 3,
+      "trace_line": "openat(AT_FDCWD, \"main.c\", O_RDONLY|O_NOCTTY) = 3"
+    }
+  ]
+}

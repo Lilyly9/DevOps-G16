@@ -1,0 +1,18 @@
+{
+  "schema_version": "e12-project-1",
+  "targets": {
+    "eta_cli.o": "eta_cli.c",
+    "estimate.o": "estimate.c"
+  },
+  "clean_target": "clean",
+  "build_target": "transfer-eta",
+  "test_target": "test",
+  "program": ["./transfer-eta", "100"],
+  "expected_output": "eta_seconds=13",
+  "header_change": {
+    "file": "defaults.h",
+    "before": "#define DEFAULT_RATE_MIB_S 8",
+    "after": "#define DEFAULT_RATE_MIB_S 5",
+    "expected_output": "eta_seconds=20"
+  }
+}

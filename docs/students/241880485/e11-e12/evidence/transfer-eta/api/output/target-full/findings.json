@@ -1,0 +1,84 @@
+{
+  "status": "SUCCEEDED",
+  "detector": "BUILDCHECKER_TEACHING",
+  "detector_version": "0.2.0-teaching",
+  "trace_id": "e6-db07d62c62414efcb5e4da42f20309b7",
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "eta_cli.o",
+      "dependency": "defaults.h",
+      "evidence": [
+        {
+          "source": "system_call",
+          "trace_file": "t.11",
+          "line": 923,
+          "pid": 11,
+          "operation": "openat"
+        },
+        {
+          "source": "system_call",
+          "trace_file": "t.12",
+          "line": 23,
+          "pid": 12,
+          "operation": "openat"
+        }
+      ],
+      "declared_dependencies": [
+        "estimate.h",
+        "eta_cli.c"
+      ]
+    }
+  ],
+  "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+  "build_command": [
+    "make",
+    "transfer-eta"
+  ],
+  "clean_command": [
+    "make",
+    "clean"
+  ],
+  "input_sha256": {
+    ".dockerignore": "b62cb46a052729bfd832eecf492950a74b992029a2ad8637cd4868cda250388e",
+    ".gitignore": "58d1112c71ba229bbc8f48379e03a9182fa2cdb6ace7bb0de2cb9467c87cfa9d",
+    "Dockerfile.broken": "5ab0d192b26a35b1b726e2fc4869f69fbd574b33400a0a370b7dc7b80540f0e0",
+    "Makefile": "84338a60d7e24c69a997faa64b12c86567318e4a38a4d32b8077a076e082cf29",
+    "README.md": "8dc4534f0840c54d3fee8e80919cc4fc0fac775dd1c1a04acecf67873c97e907",
+    "candidate.Dockerfile": "10d31438d296566851fda8fa45be9a6baf1ad0e5099bea3bd616316fe73b79db",
+    "defaults.h": "e4ebc76d73526e7aa9d10b7d64031e2d1a72b847f0b63565fd23fd67f5db6a93",
+    "e12-profile.json": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07",
+    "estimate.c": "d4d7d905d36f981088920867e11cf56977993df6d409b9e91f6575d288c39bcb",
+    "estimate.h": "4da25ca715130882e710c767bb742b863ed97f0de93db64a89fe41fd6403f03f",
+    "eta_cli.c": "0be419319c82e26e991a48ec12f71593b3c66b43c6c32b6072170e9f0521d375",
+    "tests/smoke.sh": "709720012fc699c9fc981e3a12c36075f161427f45941c997840816611b5d28a"
+  },
+  "clean_exit_code": 0,
+  "trace_command": [
+    "strace",
+    "-ff",
+    "-s",
+    "4096",
+    "-o",
+    "/course/work/api-jobs/job-efd02a52b7604d6c9bfd416f3741979b/evidence/target-full/trace/t",
+    "-e",
+    "trace=%file,%process",
+    "make",
+    "-p",
+    "transfer-eta"
+  ],
+  "build_exit_code": 0,
+  "observed_targets": [
+    "estimate.o",
+    "eta_cli.o",
+    "transfer-eta"
+  ],
+  "artifacts": {
+    "actual_graph": "actual-graph.json",
+    "declared_graph": "declared-graph.json",
+    "processes": "processes.json",
+    "make_database": "make-db.txt",
+    "trace_directory": "trace"
+  },
+  "elapsed_ms": 475
+}

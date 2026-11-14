@@ -1,0 +1,10 @@
+diff --git a/main.c b/main.c
+index fe8f0f6..70341e4 100644
+--- a/main.c
++++ b/main.c
+@@ -1,4 +1,4 @@
+ #include <stdio.h>
+ #include "config.h"
+ int helper(void);
+-int main(void){printf("%d\n",VALUE+helper());return 0;}
++int main(void){printf("%d\n",VALUE+helper()+0);return 0;}
