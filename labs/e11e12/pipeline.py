@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -9,7 +10,8 @@ import uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path[:0] = [str(ROOT / 'labs/e8e10'), str(ROOT / 'labs/e11e12/vendor'), '/app']
+sys.path[:0] = [str(ROOT / 'labs/e8e10'), str(ROOT / 'labs/e11e12/vendor'),
+                str(ROOT / 'labs/e11e12/environment/services/buildchecker')]
 from lab import scan, patch, validate
 
 class Failure(ValueError):
@@ -59,9 +61,10 @@ def snapshot(repo, revision, dest, logs):
         raise Failure('UNSUPPORTED_PROJECT', 'Expected main.c/helper.c/config.h and explicit Make rules')
     return sha
 
-def full(project, folder):
+def full(project, folder, executor=None):
     from buildchecker.fullcheck import full_check
-    report = full_check(project, folder)
+    options = {'executor':executor} if executor is not None else {}
+    report = full_check(project, folder, **options)
     if report.get('status') != 'SUCCEEDED':
         raise Failure('FULL_CHECK_FAILED', str(report.get('error', report.get('error_code'))))
     return report
@@ -95,6 +98,7 @@ def execute(request, out, job_id=None):
         base_sha=snapshot(repo,request['base'],base,out/'logs')
         target_sha=snapshot(repo,request['target'],target,out/'logs')
         result.update(base_commit=base_sha,target_commit=target_sha)
+        draft_executor=None
         if mode in ('e11-b','e12'):
             from draft.autobuild import auto_build
             candidate=Path(request['candidate']).resolve()
@@ -102,8 +106,15 @@ def execute(request, out, job_id=None):
             if draft['status']!='SUCCEEDED':
                 raise Failure('DRAFT_FAILED',draft.get('error','Inspect draft-build logs'))
             stage('draft',target_sha,draft,[out/'draft-build/result.json'])
+            if mode=='e12':
+                from draft_fullcheck import DraftExecutor
+                try:
+                    draft_executor=DraftExecutor(draft['attempts'][-1]['image_id'],
+                                                 os.environ.get('E11E12_DOCKER_HOST_ROOT'), ROOT)
+                except (ValueError, KeyError, IndexError) as exc:
+                    raise Failure('DRAFT_EXECUTION_UNAVAILABLE', str(exc)) from exc
         if mode in ('e11-a','e12'):
-            base_full=full(base,out/'baseline-full')
+            base_full=full(base,out/'baseline-full',draft_executor)
             old=scan(base)
             edges=json.loads((out/'baseline-full/actual-graph.json').read_text())
             projected={t:sorted({e['dependency'] for e in edges if e['target']==t}) for t in ('main.o','helper.o')}
@@ -111,14 +122,20 @@ def execute(request, out, job_id=None):
                 raise Failure('GRAPH_MISMATCH','BuildChecker baseline differs from GCC observations')
             old['actual']=projected
             save(out/'baseline-cache.json',old)
-            baseline=stage('full-check',base_sha,base_full,[out/'baseline-full/actual-graph.json',out/'baseline-full/findings.json',out/'baseline-cache.json'])
+            baseline_files=[out/'baseline-full/actual-graph.json',out/'baseline-full/findings.json',out/'baseline-cache.json']
+            if draft_executor:
+                baseline_files += [out/'baseline-full'/f for f in ('clean-execution.json','build-execution.json')]
+            baseline=stage('full-check',base_sha,base_full,baseline_files)
             check_envelope(baseline,base_sha,'full-check')
             current=scan(target,old)
             save(out/'incremental-report.json',current)
-            reference=full(target,out/'target-full')
+            reference=full(target,out/'target-full',draft_executor)
             if normalized(reference['findings']) != normalized(current['findings']):
                 raise Failure('FINDINGS_MISMATCH','Incremental/full object-target findings differ')
-            md_envelope=stage('incremental-check',target_sha,current,[out/'incremental-report.json',out/'target-full/findings.json'])
+            increment_files=[out/'incremental-report.json',out/'target-full/findings.json']
+            if draft_executor:
+                increment_files += [out/'target-full'/f for f in ('clean-execution.json','build-execution.json')]
+            md_envelope=stage('incremental-check',target_sha,current,increment_files)
         else:
             # E11-B still consumes a fixed MD input, separately from A's live output.
             fixed=Path(request['fixed_report'])
@@ -144,11 +161,14 @@ def execute(request, out, job_id=None):
             verdict=validate(target,patchfile,out/'validation')
             if not verdict['accepted']:
                 raise Failure('REPAIR_REJECTED',str(verdict))
-            final=full(target,out/'final-full')
+            final=full(target,out/'final-full',draft_executor)
             if any(f['type']=='MISSING' for f in final['findings']):
                 (target/'Makefile').write_bytes(before)
                 raise Failure('RECHECK_FAILED','MD remains; working-copy declaration restored')
-            stage('recheck',target_sha,{'validation':verdict,'findings':final['findings'],'patched_makefile_sha256':hashlib.sha256((target/'Makefile').read_bytes()).hexdigest()},[out/'validation/validation.json',out/'final-full/findings.json'])
+            recheck_files=[out/'validation/validation.json',out/'final-full/findings.json']
+            if draft_executor:
+                recheck_files += [out/'final-full'/f for f in ('clean-execution.json','build-execution.json')]
+            stage('recheck',target_sha,{'validation':verdict,'findings':final['findings'],'patched_makefile_sha256':hashlib.sha256((target/'Makefile').read_bytes()).hexdigest()},recheck_files)
         result['status']='SUCCEEDED'
     except (Failure,ValueError,OSError,KeyError,subprocess.TimeoutExpired) as exc:
         result.update(status='TIMED_OUT' if isinstance(exc,subprocess.TimeoutExpired) else 'FAILED',error={'code':getattr(exc,'code','EXECUTION_FAILED'),'message':str(exc)})
