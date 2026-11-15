@@ -232,8 +232,11 @@ def execute(request, out, job_id=None):
                 recheck_files.extend(sorted((out/'validation/execution').glob('*.json')))
             stage('recheck',target_sha,{'validation':verdict,'findings':final['findings'],'patched_makefile_sha256':hashlib.sha256((target/'Makefile').read_bytes()).hexdigest()},recheck_files)
         result['status']='SUCCEEDED'
-    except (Failure,ValueError,OSError,KeyError,subprocess.TimeoutExpired) as exc:
-        result.update(status='TIMED_OUT' if isinstance(exc,subprocess.TimeoutExpired) else 'FAILED',error={'code':getattr(exc,'code','EXECUTION_FAILED'),'message':str(exc)})
+    except (Failure,ValueError,OSError,KeyError,subprocess.TimeoutExpired,TimeoutError) as exc:
+        timed_out = isinstance(exc, (subprocess.TimeoutExpired, TimeoutError))
+        result.update(status='TIMED_OUT' if timed_out else 'FAILED',
+                      error={'code':getattr(exc,'code','TIMEOUT' if timed_out else 'EXECUTION_FAILED'),
+                             'message':str(exc)})
     result['artifacts']=[artifact(p,out,job_id) for p in sorted(out.rglob('*')) if p.is_file() and '.git' not in p.parts and not p.is_symlink()]
     save(out/'result.json',result)
     return result

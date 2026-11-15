@@ -128,6 +128,14 @@ class Student241880464(unittest.TestCase):
             self.assertEqual((self.store.root/first['job_id']/'state.json').read_bytes(),state_before)
             self.assertEqual(submit.call_count,1)
 
+    def test_stage_timeout_is_saved_as_timed_out_result(self):
+        request={'mode':'e11-a','repo':str(self.root),'base':'a'*40,'target':'b'*40}
+        with patch.object(pipeline,'snapshot',side_effect=TimeoutError('isolated stage deadline')):
+            result=pipeline.execute(request,self.root/'timeout-evidence')
+        self.assertEqual(result['status'],'TIMED_OUT')
+        self.assertEqual(result['error']['code'],'TIMEOUT')
+        self.assertEqual(json.loads((self.root/'timeout-evidence/result.json').read_text()),result)
+
     def test_restart_marks_unfinished_but_preserves_completed_result(self):
         for suffix,status in [('running','RUNNING'),('done','SUCCEEDED')]:
             pipeline.save(self.store.root/f'job-{suffix}'/'state.json',
