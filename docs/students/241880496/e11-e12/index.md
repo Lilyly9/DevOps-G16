@@ -15,6 +15,7 @@
 | [standard-history.txt](evidence/inputs/standard-history.txt) | 固定样例内部 Git 历史 |
 | [tokenstat-base-target.diff](evidence/inputs/tokenstat-base-target.diff) | 真实项目 base→target 完整差异 |
 | [tokenstat-base-target-stat.txt](evidence/inputs/tokenstat-base-target-stat.txt) | 真实项目差异统计 |
+| [real-project-manifest.json](evidence/inputs/real-project-manifest.json) | 真实项目来源、完整 SHA、候选 SHA256、适配与预期输出 |
 
 ## 2. E11-A
 
@@ -25,6 +26,8 @@
 | [e11a-standard/incremental-check.json](evidence/e11a-standard/incremental-check.json) | 带 commit / 产物 URI / SHA256 的阶段信封 |
 | [e11a-standard/baseline-cache.json](evidence/e11a-standard/baseline-cache.json) | 真实图投影后的基线缓存 |
 | [e11a-standard/cache-edge-provenance.json](evidence/e11a-standard/cache-edge-provenance.json) | `main.o → config.h` 回查 `t.9028:594` |
+| [e11a-standard/make-db.txt](evidence/e11a-standard/make-db.txt) / [trace/t.9028](evidence/e11a-standard/trace/t.9028) | 原始 Make 数据库与关键 strace 片段 |
+| [e11a-standard/stale-report-result.json](evidence/e11a-standard/stale-report-result.json) | 旧 commit 报告返回 `STALE_REPORT` 且 Makefile 不变 |
 | [e11a-standard/target-full-findings.json](evidence/e11a-standard/target-full-findings.json) | 目标全量发现，用于完整集合对照 |
 | [e11a-standard/baseline-actual-graph.json](evidence/e11a-standard/baseline-actual-graph.json) / [target](evidence/e11a-standard/target-actual-graph.json) | 真实 BuildChecker 图 |
 | [e11a-tokenstat/incremental-report.json](evidence/e11a-tokenstat/incremental-report.json) | 自主项目：`stats.o` 刷新、`main.o` 复用、新增 `MD(stats.o, extra.h)` |
@@ -67,6 +70,8 @@
 | [api/validation/validation.json](evidence/api/validation/validation.json) | 下载得到的验证结果 |
 | [api/download-checks.json](evidence/api/download-checks.json) | 清单 / 文件 SHA256 / `X-Content-SHA256` 三处一致 |
 | [api/idempotency.json](evidence/api/idempotency.json) | 同键同输入同任务；同键改 target → 409 |
+| [api/restart.json](evidence/api/restart.json) | 重启后未完成任务 `SERVER_RESTARTED`，已完成任务仍可查询 |
+| [failures/apt-503-iter02-stderr.log](evidence/failures/apt-503-iter02-stderr.log) | 候选构建 503 失败原件与处理记录 |
 
 ## 5. 日志与复现
 
@@ -77,6 +82,7 @@
 | [source-sha.txt](evidence/logs/source-sha.txt) | 源码提交与最近提交 |
 | [ci-run.json](evidence/logs/ci-run.json) | 公共 CI run 43683416564（success）与 artifact 元数据 |
 | [run-commands.md](evidence/logs/run-commands.md) | 实际命令、OUT 与退出码 |
+| [数据与联调记录.csv](数据与联调记录.csv) | 按官方模板填写的 E11-A / E12 固定样例 / E12 真实项目 / API 记录 |
 
 ### 复现命令（在 Linux/WSL 主机，仓库根目录）
 
