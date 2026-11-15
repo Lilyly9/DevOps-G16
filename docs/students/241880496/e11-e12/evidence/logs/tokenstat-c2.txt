@@ -1,0 +1,3 @@
+7fabf45 fix(e11-e12): pin tokenstat candidate to mirror and strace
+ projects/tokenstat/candidate.Dockerfile | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)

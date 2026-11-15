@@ -1,0 +1,11 @@
+{
+  "http_status": 202,
+  "body": {
+    "schema_version": "e11e12-1",
+    "job_id": "job-62b1a557077a46bd98135c9715bdbc45",
+    "status": "SUCCEEDED",
+    "idempotency_key": "a3-real-20261115",
+    "request_hash": "2bfeac29b2a1fb82482f58cec3b861a1926dec3a4d8c6b38cee92706a005a481",
+    "trace_id": "trace-1f050b2486114396b79a9a8ed10ee33b"
+  }
+}

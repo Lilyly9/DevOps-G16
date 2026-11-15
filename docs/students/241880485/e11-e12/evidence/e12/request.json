@@ -1,0 +1,9 @@
+{
+  "mode": "e12",
+  "repo": "/course/data/a1-e12-proof-20261114T024540Z.TjTU9C/repo",
+  "base": "46fc6c1b74681d6f3746c7d9dff9fca722ca936e",
+  "target": "d5204f53b641173fd3f23c71ae37dda8ac6628e9",
+  "candidate": "/course/data/a1-e12-proof-20261114T024540Z.TjTU9C/candidate.Dockerfile",
+  "expected_output": "1",
+  "build_timeout": 600
+}

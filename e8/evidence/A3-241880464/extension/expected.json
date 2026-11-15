@@ -1,0 +1,26 @@
+{
+  "description": "共享头通过config.h间接被main.o读取，同时被helper.o直接读取；新增两条shared.h MD，保留config.h MD与unused.h RD。",
+  "actual": {
+    "main.o": [
+      "config.h",
+      "main.c",
+      "shared.h"
+    ],
+    "helper.o": [
+      "helper.c",
+      "shared.h"
+    ]
+  },
+  "added": [
+    [
+      "MISSING",
+      "helper.o",
+      "shared.h"
+    ],
+    [
+      "MISSING",
+      "main.o",
+      "shared.h"
+    ]
+  ]
+}

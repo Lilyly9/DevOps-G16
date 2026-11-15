@@ -1,0 +1,58 @@
+{
+  "status": "SUCCEEDED",
+  "detector": "BUILDCHECKER_TEACHING",
+  "detector_version": "0.2.0-teaching",
+  "trace_id": "e6-ee17f9ba8cf1411a81f1bcb88780e58a",
+  "findings": [],
+  "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+  "build_command": [
+    "make",
+    "app"
+  ],
+  "clean_command": [
+    "make",
+    "clean"
+  ],
+  "input_sha256": {
+    ".gitignore": "6f59fba603543c27c3b698c36da1ba19a514f5aa12d4811ee528232c2b4e6b5b",
+    "Dockerfile.broken": "ec53160f9679f65c1bd9a99e2ef90921f8847316da1cbd322a56a829b8a9b330",
+    "Makefile": "eaa1bab3a531f502cd35b38ce59db5dba6afcb56fe92411a8f5e5dba03f1ea93",
+    "README.md": "bebd6879f0bc7f59961fca9abb84ecf4e17b619a98483ba1f92bfe8ae91edf72",
+    "candidate.Dockerfile": "1a45905e1f9e3f25b20b3ff79a31b6c43ac55faff88b5dd7acfab6c6b9d156d5",
+    "config.h": "b6d251f2fbf691e080ee9cc0859b22f4b9d85cb4e9f215d33f65eca028c3f41a",
+    "e11e12-project.json": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+    "extra.h": "53681e3129990b9fd821e144059b996a19a02f0f486ec9e90adf9e7fc120bc3b",
+    "main.c": "b386063079f849878b4c0fac5e76170db359d3681ac8be39c341b2291cf61990",
+    "stats.c": "d4c7e9ffdaa278d236c951c1cf51bddfa44c81ae82e828bfc70335892c5ea38b",
+    "stats.h": "5a124df26161176a4c87cd2dcf1c98cb56c529240f2f068d986da25340c8e3f4",
+    "tests/sample.txt": "cf058a3aaecc484da98067195cfbb1d51f9435e1aaf7f83a7ac16d606006ffb3"
+  },
+  "clean_exit_code": 0,
+  "trace_command": [
+    "strace",
+    "-ff",
+    "-s",
+    "4096",
+    "-o",
+    "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/work/e12-tokenstat-final-20261115/final-full/trace/t",
+    "-e",
+    "trace=%file,%process",
+    "make",
+    "-p",
+    "app"
+  ],
+  "build_exit_code": 0,
+  "observed_targets": [
+    "app",
+    "main.o",
+    "stats.o"
+  ],
+  "artifacts": {
+    "actual_graph": "actual-graph.json",
+    "declared_graph": "declared-graph.json",
+    "processes": "processes.json",
+    "make_database": "make-db.txt",
+    "trace_directory": "trace"
+  },
+  "elapsed_ms": 2382
+}

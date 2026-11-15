@@ -1,0 +1,14 @@
+{"method": "GET", "path": "/health", "status": 200}
+{"method": "POST", "path": "/v1/jobs", "status": 202}
+{"method": "POST", "path": "/v1/jobs", "status": 202}
+{"method": "POST", "path": "/v1/jobs", "status": 409}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b", "status": 200}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b", "status": 200}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b", "status": 200}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/artifacts", "status": 200}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/files/draft.json", "status": 200, "headers": {"Server": "BaseHTTP/0.6 Python/3.13.14", "Date": "Sat, 14 Nov 2026 04:23:37 GMT", "Content-Type": "application/octet-stream", "X-Content-SHA256": "ff4676e20413727c65be3b2418ce0fa6bfb5ca3ed01d3e0ed6284927ac9a2ec9"}}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/files/full-check.json", "status": 200, "headers": {"Server": "BaseHTTP/0.6 Python/3.13.14", "Date": "Sat, 14 Nov 2026 04:23:37 GMT", "Content-Type": "application/octet-stream", "X-Content-SHA256": "4a2e5049adb7c146e9b8aeb47c1fd24dafbcf756314336c5525628990c4d033a"}}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/files/incremental-check.json", "status": 200, "headers": {"Server": "BaseHTTP/0.6 Python/3.13.14", "Date": "Sat, 14 Nov 2026 04:23:37 GMT", "Content-Type": "application/octet-stream", "X-Content-SHA256": "bc4bad5b5d23af9a408903f31a43c9f8d499cef37936a23def48feeda981e78a"}}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/files/repair.json", "status": 200, "headers": {"Server": "BaseHTTP/0.6 Python/3.13.14", "Date": "Sat, 14 Nov 2026 04:23:37 GMT", "Content-Type": "application/octet-stream", "X-Content-SHA256": "d6ec1f2b4a5153878c756d480867bbf27be585438bc603cfa506cd4651d3f619"}}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/files/recheck.json", "status": 200, "headers": {"Server": "BaseHTTP/0.6 Python/3.13.14", "Date": "Sat, 14 Nov 2026 04:23:37 GMT", "Content-Type": "application/octet-stream", "X-Content-SHA256": "7e3726156137ab043026927db9f4e2bcfb7544e50b00980981b1206d17aa9da3"}}
+{"method": "GET", "path": "/v1/jobs/job-efd02a52b7604d6c9bfd416f3741979b/files/candidate.patch", "status": 200, "headers": {"Server": "BaseHTTP/0.6 Python/3.13.14", "Date": "Sat, 14 Nov 2026 04:23:37 GMT", "Content-Type": "application/octet-stream", "X-Content-SHA256": "02c5087bea9a505a77f83a2fd7955419db8c0a9aa193337a9f26aaa79a8795f0"}}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "e11e12-project-1",
+  "targets": {
+    "main.o": "main.c",
+    "stats.o": "stats.c"
+  },
+  "clean_target": "clean",
+  "build_target": "app",
+  "test_target": "test",
+  "program": ["./app", "tests/sample.txt"],
+  "expected_output": "config=1 words=7 lines=3",
+  "header_change": {
+    "file": "config.h",
+    "before": "#define DEFAULT_FIELD 1",
+    "after": "#define DEFAULT_FIELD 2",
+    "expected_output": "config=2 words=7 lines=3"
+  },
+  "include_dirs": []
+}

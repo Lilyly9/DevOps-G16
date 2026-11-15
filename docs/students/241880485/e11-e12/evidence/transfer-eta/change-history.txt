@@ -1,0 +1,3 @@
+e7414083c4f1760cb234f96a9d75f2d0255e3f57
+2026-11-14T12:18:37+08:00
+Let transfer-eta use a configurable default transfer rate

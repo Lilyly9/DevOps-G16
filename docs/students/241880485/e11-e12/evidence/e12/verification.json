@@ -1,0 +1,83 @@
+{
+  "status": "PASSED",
+  "job_id": "job-8a1ef46c976448698d0f004cbc89d5d2",
+  "trace_id": "trace-3cd6971ebf334b2788f6f31cd3660d36",
+  "base_commit": "46fc6c1b74681d6f3746c7d9dff9fca722ca936e",
+  "target_commit": "d5204f53b641173fd3f23c71ae37dda8ac6628e9",
+  "stages": [
+    "draft",
+    "full-check",
+    "incremental-check",
+    "repair",
+    "recheck"
+  ],
+  "artifact_count": 162,
+  "draft_image_id": "sha256:c45a0b791b8cdc4cde2841d205fb123ef1e41f854dd7f405b6526758d1c55b1c",
+  "full_checks": {
+    "baseline-full": {
+      "image_id": "sha256:c45a0b791b8cdc4cde2841d205fb123ef1e41f854dd7f405b6526758d1c55b1c",
+      "clean_container_id": "4bd98fc4e231228da6a8229e2aacb1556ccf9c5a99548b6f943cec3d58d1c238",
+      "build_container_id": "99142ea9171d77eda9edc2d53d253980546e469ed559e621bd1ab84bf4b39ef7",
+      "trace_file_count": 10,
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ]
+    },
+    "target-full": {
+      "image_id": "sha256:c45a0b791b8cdc4cde2841d205fb123ef1e41f854dd7f405b6526758d1c55b1c",
+      "clean_container_id": "eaf771bade5cdac9b5d74eb92c16e5c784d69171784dc5055ab47f51b8411a1d",
+      "build_container_id": "f4ec460d4d86f855073ba32dea22fb106266548e904a2ca76905189bcc1d93d8",
+      "trace_file_count": 10,
+      "findings": [
+        [
+          "MISSING",
+          "main.o",
+          "config.h"
+        ],
+        [
+          "MISSING",
+          "main.o",
+          "extra.h"
+        ],
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ]
+    },
+    "final-full": {
+      "image_id": "sha256:c45a0b791b8cdc4cde2841d205fb123ef1e41f854dd7f405b6526758d1c55b1c",
+      "clean_container_id": "f46a0e986a69da007ae4d43eb3da84e6692212f288ae3417e4db1c8b056ec460",
+      "build_container_id": "b1aaa774b6f204dbeb5a5c794bad4460b55c341cdee157a18fdb64be19280690",
+      "trace_file_count": 10,
+      "findings": [
+        [
+          "REDUNDANT",
+          "main.o",
+          "unused.h"
+        ]
+      ]
+    }
+  },
+  "repair_input_sha256": "c6e5336f727b6c62e5addb8fe09dce0ec8a8dde5c18921b95e44af49c709bd62",
+  "patch_sha256": "88074f66c291dcad1344c48f6a2b9ddd42d235d9d0415c85fb33310c5b7cb2af",
+  "validation_accepted": true,
+  "final_md_count": 0,
+  "final_rd_count": 1,
+  "scan_refreshed": [
+    "main.o",
+    "helper.o"
+  ],
+  "scan_reused": [],
+  "scope": "Fixed-sample CLI. BuildChecker clean and trace ran in DRAFT; EChecker scan and MDFixer validation ran in the outer orchestration container."
+}

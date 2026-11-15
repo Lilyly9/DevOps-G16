@@ -1,0 +1,79 @@
+{
+  "schema_version": "e8e10-1",
+  "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+  "commit": "be5ff8468da8a14b6bcf6fc3f899638b216ad3a5",
+  "key": {
+    "directives": {
+      "defaults.h": [
+        "#ifndef TRANSFER_ETA_DEFAULTS_H",
+        "#define TRANSFER_ETA_DEFAULTS_H",
+        "#define DEFAULT_RATE_MIB_S 5",
+        "#endif"
+      ],
+      "estimate.c": [
+        "#include \"estimate.h\""
+      ],
+      "estimate.h": [
+        "#ifndef TRANSFER_ETA_ESTIMATE_H",
+        "#define TRANSFER_ETA_ESTIMATE_H",
+        "#include <stdint.h>",
+        "#endif"
+      ],
+      "eta_cli.c": [
+        "#include <errno.h>",
+        "#include <inttypes.h>",
+        "#include <stdio.h>",
+        "#include <string.h>",
+        "#include \"defaults.h\"",
+        "#include \"estimate.h\""
+      ]
+    },
+    "recipes": [
+      "\tgcc $(CFLAGS) eta_cli.o estimate.o -o transfer-eta",
+      "\tgcc $(CFLAGS) -c eta_cli.c -o eta_cli.o",
+      "\tgcc $(CFLAGS) -c estimate.c -o estimate.o",
+      "\trm -f transfer-eta transfer-eta.exe eta_cli.o estimate.o",
+      "\tsh tests/smoke.sh"
+    ],
+    "flags": "-O0",
+    "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+    "targets": {
+      "eta_cli.o": "eta_cli.c",
+      "estimate.o": "estimate.c"
+    }
+  },
+  "actual": {
+    "eta_cli.o": [
+      "defaults.h",
+      "estimate.h",
+      "eta_cli.c"
+    ],
+    "estimate.o": [
+      "estimate.c",
+      "estimate.h"
+    ]
+  },
+  "declared": {
+    "eta_cli.o": [
+      "defaults.h",
+      "estimate.h",
+      "eta_cli.c"
+    ],
+    "estimate.o": [
+      "estimate.c",
+      "estimate.h"
+    ]
+  },
+  "findings": [],
+  "added": [],
+  "resolved": [],
+  "refreshed": [
+    "eta_cli.o",
+    "estimate.o"
+  ],
+  "reused": [],
+  "invalidation": [
+    "NO_HISTORY"
+  ],
+  "elapsed_s": 0.562549542170018
+}

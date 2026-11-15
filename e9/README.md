@@ -6,7 +6,14 @@
 | --- | --- | --- | --- |
 | A2 | A | C0-C3图更新 | 待本人填 |
 | B2 | B | 三种风格候选 | [241880543 证据](evidence/B2-241880543/index.md)：三种check通过、原项目干净；副本输出1→2；9项单测与双轨CI通过；[PR#14](https://github.com/Lilyly9/DevOps-G16/pull/14)（依赖公共导入） |
+| A2 | A | C0-C3图更新 | 已完成（2026-11-10，本人主责阶段）：C1 复用、C2 刷新并新增 MD extra.h、C3 消除 config.h/extra.h 两项 MD 保留 RD unused.h；[证据](evidence/A2-241880496/index.md) |
+| B2 | B | 三种风格候选 | 待本人填 |
+| B1（额外执行） | B | 三种风格候选（B1 郭德林 241880555 额外完整执行参考路线；B2 主责交付另行提交） | [B1-241880555](evidence/B1-241880555/index.md) |
 
 个人分支 `student/<学号>/e8-e10`；个人报告/ADR/AI_USAGE 位于 `docs/students/<学号>/e8-e10/`。完整原件在本人 `work/`，阶段精选证据/索引放本目录 `evidence/<角色>-<学号>/`。
 
 个人测试新建 `labs/e8e10/test_student_<学号>.py`；本地和新 CI 统一 `python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v`，保留原7项。
+
+## 241880464 本人三阶段补齐记录
+
+按助教要求本人独立完成E9-A标准与扩展，[本人原件索引](evidence/A3-241880464/index.md)。此前按阶段主责的安排不免除个人其他阶段，其他成员的完成状态须由本人提供三阶段索引核对。

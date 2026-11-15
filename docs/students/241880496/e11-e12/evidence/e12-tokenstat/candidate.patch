@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -6,7 +6,7 @@
+ main.o: main.c stats.h
+ 	gcc $(CFLAGS) -c main.c -o main.o
+ 
+-stats.o: stats.c stats.h
++stats.o: stats.c stats.h config.h extra.h
+ 	gcc $(CFLAGS) -c stats.c -o stats.o
+ 
+ test: app
