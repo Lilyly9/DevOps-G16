@@ -1,0 +1,60 @@
+{
+    "schema_version":  "e11e12-1",
+    "job_id":  "job-33f3cd049a2c47ce8b7e5a8164793d6e",
+    "trace_id":  "trace-99aff9850e1d474c8fafdaebdd930492",
+    "status":  "SUCCEEDED",
+    "base_commit":  "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+    "target_commit":  "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+    "project_path":  "projects/tokenstat",
+    "profile_sha256":  "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+    "image_id":  "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8",
+    "draft_image_toolchain":  {
+                                  "gcc":  "gcc (Debian 14.2.0-19) 14.2.0",
+                                  "make":  "GNU Make 4.4.1"
+                              },
+    "error":  null,
+    "stages":  [
+                   {
+                       "name":  "draft",
+                       "artifact":  {
+                                        "uri":  "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/draft.json",
+                                        "sha256":  "b06fd433bfe3b128861c9e026e650ebb56a811f72fce2c57661e129a27d1691f",
+                                        "bytes":  3862
+                                    }
+                   },
+                   {
+                       "name":  "full-check",
+                       "artifact":  {
+                                        "uri":  "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/full-check.json",
+                                        "sha256":  "a21bd0c3e85a6aec5678edfc063b3f88cd4c5f57eccbcd53ccf52d0bef66f299",
+                                        "bytes":  4982
+                                    }
+                   },
+                   {
+                       "name":  "incremental-check",
+                       "artifact":  {
+                                        "uri":  "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/incremental-check.json",
+                                        "sha256":  "45d6313b350a75405bec925a2478246fed5292fba1acfb3d2d5de7af92ccff82",
+                                        "bytes":  3999
+                                    }
+                   },
+                   {
+                       "name":  "repair",
+                       "artifact":  {
+                                        "uri":  "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/repair.json",
+                                        "sha256":  "96befcc0abf58d78f12f8c0763a788c8fee043c661c548de35cf6f07426719c0",
+                                        "bytes":  1412
+                                    }
+                   },
+                   {
+                       "name":  "recheck",
+                       "artifact":  {
+                                        "uri":  "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/recheck.json",
+                                        "sha256":  "9bddee79fa3d44b59311013db40d5dbd8aed4d90e1766b494da99923db9dd707",
+                                        "bytes":  1680
+                                    }
+                   }
+               ],
+    "artifact_count":  6451,
+    "note":  "Full result.json including the artifact manifest is archived in work/ (ignored); this is the reviewer-sized summary."
+}

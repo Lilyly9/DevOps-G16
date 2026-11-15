@@ -1,0 +1,9 @@
+{
+  "http_status": 409,
+  "body": {
+    "error": "STALE_REPORT",
+    "message": "Requested target differs from the completed task"
+  },
+  "job_id": "job-62b1a557077a46bd98135c9715bdbc45",
+  "target": "5ef9d829e2f893af23f60399dcb67095800d121e"
+}

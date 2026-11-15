@@ -1,0 +1,30 @@
+{
+  "first": [
+    202,
+    {
+      "schema_version": "e11e12-1",
+      "job_id": "job-809b60a8815c415c812ff24b1cdc8096",
+      "status": "QUEUED",
+      "idempotency_key": "a2-241880496-e12-idem-20261115",
+      "request_hash": "2ed4290897469a7b73e7696082bfb56d57b4b6f2e0191480168214ad21b46957"
+    }
+  ],
+  "repeat": [
+    202,
+    {
+      "schema_version": "e11e12-1",
+      "job_id": "job-809b60a8815c415c812ff24b1cdc8096",
+      "status": "RUNNING",
+      "idempotency_key": "a2-241880496-e12-idem-20261115",
+      "request_hash": "2ed4290897469a7b73e7696082bfb56d57b4b6f2e0191480168214ad21b46957"
+    }
+  ],
+  "conflict": [
+    409,
+    {
+      "error": "IDEMPOTENCY_CONFLICT"
+    }
+  ],
+  "same_job": true,
+  "conflict_status": 409
+}

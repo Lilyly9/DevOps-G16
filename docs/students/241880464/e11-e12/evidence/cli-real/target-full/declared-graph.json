@@ -1,0 +1,68 @@
+[
+  {
+    "target": "estimate.o",
+    "dependency": "estimate.c",
+    "kind": "DECLARED",
+    "evidence": {
+      "source": "make_database",
+      "artifact": "make-db.txt",
+      "line": 623,
+      "declaration": "estimate.o: estimate.c estimate.h"
+    }
+  },
+  {
+    "target": "estimate.o",
+    "dependency": "estimate.h",
+    "kind": "DECLARED",
+    "evidence": {
+      "source": "make_database",
+      "artifact": "make-db.txt",
+      "line": 623,
+      "declaration": "estimate.o: estimate.c estimate.h"
+    }
+  },
+  {
+    "target": "eta_cli.o",
+    "dependency": "estimate.h",
+    "kind": "DECLARED",
+    "evidence": {
+      "source": "make_database",
+      "artifact": "make-db.txt",
+      "line": 1141,
+      "declaration": "eta_cli.o: eta_cli.c estimate.h"
+    }
+  },
+  {
+    "target": "eta_cli.o",
+    "dependency": "eta_cli.c",
+    "kind": "DECLARED",
+    "evidence": {
+      "source": "make_database",
+      "artifact": "make-db.txt",
+      "line": 1141,
+      "declaration": "eta_cli.o: eta_cli.c estimate.h"
+    }
+  },
+  {
+    "target": "transfer-eta",
+    "dependency": "estimate.o",
+    "kind": "DECLARED",
+    "evidence": {
+      "source": "make_database",
+      "artifact": "make-db.txt",
+      "line": 1068,
+      "declaration": "transfer-eta: eta_cli.o estimate.o"
+    }
+  },
+  {
+    "target": "transfer-eta",
+    "dependency": "eta_cli.o",
+    "kind": "DECLARED",
+    "evidence": {
+      "source": "make_database",
+      "artifact": "make-db.txt",
+      "line": 1068,
+      "declaration": "transfer-eta: eta_cli.o estimate.o"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "accepted": true,
+  "checks": {
+    "patch_applies": true,
+    "build": true,
+    "test": true,
+    "header_change": true,
+    "no_missing": true
+  },
+  "error": null,
+  "source_unchanged": false,
+  "rollback": false,
+  "outputs": {
+    "expected": "1",
+    "actual": "1",
+    "expected_after_header_change": "2",
+    "actual_after_header_change": "2"
+  }
+}

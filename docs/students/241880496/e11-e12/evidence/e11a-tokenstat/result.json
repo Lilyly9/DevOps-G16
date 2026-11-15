@@ -1,0 +1,33 @@
+{
+    "schema_version":  "e11e12-1",
+    "job_id":  "job-c6a2a563c0204f909cc7927925fc0803",
+    "trace_id":  "trace-444c44be1a7b45e6bc4236ed7cadc0ca",
+    "status":  "SUCCEEDED",
+    "base_commit":  "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+    "target_commit":  "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+    "project_path":  "projects/tokenstat",
+    "profile_sha256":  "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+    "image_id":  null,
+    "draft_image_toolchain":  null,
+    "error":  null,
+    "stages":  [
+                   {
+                       "name":  "full-check",
+                       "artifact":  {
+                                        "uri":  "artifact://job-c6a2a563c0204f909cc7927925fc0803/full-check.json",
+                                        "sha256":  "8ca1e652b4701cafc37f4e76b889665d2b0d4cd3ef667a8f0e126aae5bf96bc3",
+                                        "bytes":  4074
+                                    }
+                   },
+                   {
+                       "name":  "incremental-check",
+                       "artifact":  {
+                                        "uri":  "artifact://job-c6a2a563c0204f909cc7927925fc0803/incremental-check.json",
+                                        "sha256":  "66a5f1aa58ea4d9970567f03abc180a3fe8423e06bbb381727f3df4c3e9e5218",
+                                        "bytes":  3299
+                                    }
+                   }
+               ],
+    "artifact_count":  6348,
+    "note":  "Full result.json including the artifact manifest is archived in work/ (ignored); this is the reviewer-sized summary."
+}

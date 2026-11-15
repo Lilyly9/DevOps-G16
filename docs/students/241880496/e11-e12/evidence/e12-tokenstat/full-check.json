@@ -1,0 +1,141 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-33f3cd049a2c47ce8b7e5a8164793d6e",
+  "trace_id": "trace-99aff9850e1d474c8fafdaebdd930492",
+  "kind": "full-check",
+  "commit": "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-a7854c5665ce4ce3b6ca06eb302341bb",
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "stats.o",
+        "dependency": "config.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.17",
+            "line": 635,
+            "pid": 17,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.18",
+            "line": 20,
+            "pid": 18,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "stats.c",
+          "stats.h"
+        ]
+      }
+    ],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make",
+      "app"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".gitignore": "6f59fba603543c27c3b698c36da1ba19a514f5aa12d4811ee528232c2b4e6b5b",
+      "Dockerfile.broken": "ec53160f9679f65c1bd9a99e2ef90921f8847316da1cbd322a56a829b8a9b330",
+      "Makefile": "95d593c5455d6e290b0da023b6dcd9cfd5eb778fc64a1f97c7b2fea70c7d9e98",
+      "README.md": "bebd6879f0bc7f59961fca9abb84ecf4e17b619a98483ba1f92bfe8ae91edf72",
+      "candidate.Dockerfile": "db225895dea2e5cf53ef49238597a19f219e96bfcbb71fbd96174477577c2ea1",
+      "config.h": "b6d251f2fbf691e080ee9cc0859b22f4b9d85cb4e9f215d33f65eca028c3f41a",
+      "e11e12-project.json": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+      "extra.h": "53681e3129990b9fd821e144059b996a19a02f0f486ec9e90adf9e7fc120bc3b",
+      "main.c": "b386063079f849878b4c0fac5e76170db359d3681ac8be39c341b2291cf61990",
+      "stats.c": "b3f25d24fb37c4b3573b771de56987180bfb45d82e675580c2cfb32bd8fe42db",
+      "stats.h": "5a124df26161176a4c87cd2dcf1c98cb56c529240f2f068d986da25340c8e3f4",
+      "tests/sample.txt": "cf058a3aaecc484da98067195cfbb1d51f9435e1aaf7f83a7ac16d606006ffb3"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/work/e12-tokenstat-final-20261115/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "app"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "app",
+      "main.o",
+      "stats.o"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 2741
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-full/actual-graph.json",
+      "sha256": "704d7cda5bd1896697ae150b8f64e28085349a93a2234476d6f6ee787a39c837",
+      "bytes": 1682
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-full/findings.json",
+      "sha256": "77da2980299ab5a85df10a342b6f5817d777a666a7d1cd3ad3ab6d6da91b6440",
+      "bytes": 2598
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-cache.json",
+      "sha256": "5bb096005af365d30840fe79151f63f255888c880f86f9e46f4597421dd9a79e",
+      "bytes": 2039
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/project-profile.json",
+      "sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+      "bytes": 486
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-full/image-execution/01.json",
+      "sha256": "b5be9dbda800ed3952bbbabae5d6034fcae1f8ea13de5d219440eecee672ecc2",
+      "bytes": 4566
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-scan/01.json",
+      "sha256": "f76a22a042872b1dfaa67cc863ff1321cd85431bdfe35e61e067768c708ea268",
+      "bytes": 1334
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-scan/02.json",
+      "sha256": "66daa825b82afa5f729358445e4d72bddede333937d48269fd897149b31916fa",
+      "bytes": 1267
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/baseline-scan/03.json",
+      "sha256": "825a86bdf9d6bad4eff7e1fafc1a21b19ace329ee7da38d921de4362b84f01ee",
+      "bytes": 1282
+    }
+  ],
+  "project_path": "projects/tokenstat",
+  "profile_sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+  "targets": {
+    "main.o": "main.c",
+    "stats.o": "stats.c"
+  },
+  "image_id": "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8"
+}

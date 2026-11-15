@@ -1,0 +1,99 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-33f3cd049a2c47ce8b7e5a8164793d6e",
+  "trace_id": "trace-99aff9850e1d474c8fafdaebdd930492",
+  "kind": "draft",
+  "commit": "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "DRAFT_TEACHING_REPLAY",
+    "trace_id": "e6-b-f512712c3323423aabe4eb2f2530194d",
+    "candidate_source": "Manual model response replay; no model/API call in this command",
+    "candidate_sha256": "7c0a92421c45b19151901ecfde7c09a0bf5dfed3dcd3b13a34b0b3a88332af23",
+    "attempts": [
+      {
+        "iteration": 1,
+        "tag": "e6-draft-replay:f512712c3323423aabe4eb2f2530194d-1",
+        "command": [
+          "docker",
+          "build",
+          "--progress=plain",
+          "-f",
+          "/course/work/e12-tokenstat-final-20261115/draft-build/iter-01/Dockerfile",
+          "-t",
+          "e6-draft-replay:f512712c3323423aabe4eb2f2530194d-1",
+          "/course/work/e12-tokenstat-final-20261115/draft-build/project"
+        ],
+        "build_exit_code": 1,
+        "failure_class": "MISSING_MAKE"
+      },
+      {
+        "iteration": 2,
+        "tag": "e6-draft-replay:f512712c3323423aabe4eb2f2530194d-2",
+        "command": [
+          "docker",
+          "build",
+          "--progress=plain",
+          "-f",
+          "/course/work/e12-tokenstat-final-20261115/draft-build/iter-02/Dockerfile",
+          "-t",
+          "e6-draft-replay:f512712c3323423aabe4eb2f2530194d-2",
+          "/course/work/e12-tokenstat-final-20261115/draft-build/project"
+        ],
+        "build_exit_code": 0,
+        "image_id": "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8"
+      }
+    ],
+    "input_sha256": {
+      ".gitignore": "6f59fba603543c27c3b698c36da1ba19a514f5aa12d4811ee528232c2b4e6b5b",
+      "Dockerfile.broken": "ec53160f9679f65c1bd9a99e2ef90921f8847316da1cbd322a56a829b8a9b330",
+      "Makefile": "95d593c5455d6e290b0da023b6dcd9cfd5eb778fc64a1f97c7b2fea70c7d9e98",
+      "README.md": "bebd6879f0bc7f59961fca9abb84ecf4e17b619a98483ba1f92bfe8ae91edf72",
+      "candidate.Dockerfile": "1a45905e1f9e3f25b20b3ff79a31b6c43ac55faff88b5dd7acfab6c6b9d156d5",
+      "config.h": "b6d251f2fbf691e080ee9cc0859b22f4b9d85cb4e9f215d33f65eca028c3f41a",
+      "e11e12-project.json": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+      "extra.h": "53681e3129990b9fd821e144059b996a19a02f0f486ec9e90adf9e7fc120bc3b",
+      "main.c": "b386063079f849878b4c0fac5e76170db359d3681ac8be39c341b2291cf61990",
+      "stats.c": "d4c7e9ffdaa278d236c951c1cf51bddfa44c81ae82e828bfc70335892c5ea38b",
+      "stats.h": "5a124df26161176a4c87cd2dcf1c98cb56c529240f2f068d986da25340c8e3f4",
+      "tests/sample.txt": "cf058a3aaecc484da98067195cfbb1d51f9435e1aaf7f83a7ac16d606006ffb3"
+    },
+    "verification": {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "1",
+        "--memory",
+        "128m",
+        "--pids-limit",
+        "64",
+        "--cidfile",
+        "/course/work/e12-tokenstat-final-20261115/draft-build/verify-container-id.txt",
+        "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8"
+      ],
+      "exit_code": 0,
+      "expected_output": "config=1 words=7 lines=3",
+      "actual_output": "config=1 words=7 lines=3\n",
+      "output_matches": true
+    },
+    "elapsed_ms": 30232
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/draft-build/result.json",
+      "sha256": "d9a2fe2d32cdcb69ac2c92dcb95e956e7ec8b772d7f80563f12a9d1aa8b25059",
+      "bytes": 3031
+    }
+  ],
+  "project_path": "projects/tokenstat",
+  "profile_sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+  "targets": {
+    "main.o": "main.c",
+    "stats.o": "stats.c"
+  }
+}

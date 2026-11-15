@@ -1,0 +1,16 @@
+{
+    "project":  "projects/tokenstat",
+    "repository":  "https://github.com/Lilyly9/DevOps-G16",
+    "branch":  "student/241880496/e11-e12",
+    "source":  "group-maintained C/Make CLI (word/line counter)",
+    "base_commit":  "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+    "target_commit":  "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+    "change":  "C0 adds stats.c with config.h include; C1 adds extra.h include and EXTRA_FIELD; C2 hardens candidate image",
+    "broken_dockerfile":  "projects/tokenstat/Dockerfile.broken",
+    "candidate":  "projects/tokenstat/candidate.Dockerfile",
+    "candidate_sha256":  "1a45905e1f9e3f25b20b3ff79a31b6c43ac55faff88b5dd7acfab6c6b9d156d5",
+    "adaptation":  "e11e12-project.json maps main.o/stats.o, make test, ./app tests/sample.txt, config.h DEFAULT_FIELD 1 -\u003e 2",
+    "expected_output":  "config=1 words=7 lines=3",
+    "expected_after_header_change":  "config=2 words=7 lines=3",
+    "note":  "The project is maintained in this repository under projects/ instead of an ignored data/real-project checkout; both base and target commits are permanent Git commits."
+}

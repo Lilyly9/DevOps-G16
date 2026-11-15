@@ -1,0 +1,9 @@
+{
+  "http_status": 400,
+  "body": {
+    "error": "INVALID_TARGET",
+    "message": "target must be a complete lowercase Git SHA"
+  },
+  "job_id": "job-62b1a557077a46bd98135c9715bdbc45",
+  "target": "short"
+}
