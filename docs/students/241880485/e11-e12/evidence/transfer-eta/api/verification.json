@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "scope": "A1 self-test on A16 loopback; no remote B participant",
+  "job_id": "job-efd02a52b7604d6c9bfd416f3741979b",
+  "trace_id": "trace-ac983c4d568b48978ef12e587cec005f",
+  "same_key_same_job": true,
+  "changed_input_status": 409,
+  "downloads_sha256": {
+    "draft.json": "ff4676e20413727c65be3b2418ce0fa6bfb5ca3ed01d3e0ed6284927ac9a2ec9",
+    "full-check.json": "4a2e5049adb7c146e9b8aeb47c1fd24dafbcf756314336c5525628990c4d033a",
+    "incremental-check.json": "bc4bad5b5d23af9a408903f31a43c9f8d499cef37936a23def48feeda981e78a",
+    "repair.json": "d6ec1f2b4a5153878c756d480867bbf27be585438bc603cfa506cd4651d3f619",
+    "recheck.json": "7e3726156137ab043026927db9f4e2bcfb7544e50b00980981b1206d17aa9da3",
+    "candidate.patch": "02c5087bea9a505a77f83a2fd7955419db8c0a9aa193337a9f26aaa79a8795f0"
+  }
+}

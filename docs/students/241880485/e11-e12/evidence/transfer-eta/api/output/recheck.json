@@ -1,0 +1,101 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-efd02a52b7604d6c9bfd416f3741979b",
+  "trace_id": "trace-ac983c4d568b48978ef12e587cec005f",
+  "kind": "recheck",
+  "commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "status": "SUCCEEDED",
+  "data": {
+    "validation": {
+      "accepted": true,
+      "checks": {
+        "patch_applies": true,
+        "build": true,
+        "project_make_test": true,
+        "test": true,
+        "header_change": true,
+        "no_missing": true
+      },
+      "error": null,
+      "source_unchanged": false,
+      "rollback": false,
+      "outputs": {
+        "expected": "eta_seconds=13",
+        "actual": "eta_seconds=13",
+        "expected_after_header_change": "eta_seconds=20",
+        "actual_after_header_change": "eta_seconds=20"
+      }
+    },
+    "findings": [],
+    "patched_makefile_sha256": "1d59da25d908c93b3b1afd85bd8aeeeb8f3d00cdb65895f6807f7fabf64b3869"
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/validation.json",
+      "sha256": "b1ff1b7f49b7ee7ded8d6cf421ea18a0bf23b7345504c475aa918b3ec985c77a",
+      "bytes": 445
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/final-full/findings.json",
+      "sha256": "5258af65fddf3e5ff2b0e9b6cb7cc3fa82c119f418624224cf9b0b0c6e7b3118",
+      "bytes": 2087
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/final-full/clean-execution.json",
+      "sha256": "c67402b673c374725e8b928a2c46ff0a30c3644a3233eed71ccedc4e74af5c48",
+      "bytes": 1462
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/final-full/build-execution.json",
+      "sha256": "0521838e1cbceca3543b5d2313a9574697ce5c6709a2fea3d0eecd08965b6665",
+      "bytes": 1966
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/01-make.json",
+      "sha256": "a647e298200f56111be3a8c4a5406cdf31534273a07a299090fd8096b788e74e",
+      "bytes": 1473
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/02-make.json",
+      "sha256": "c8371457464b88908bbc9d52b638d5c217bf95a3e18dd6f3fc046dfd13fc6c30",
+      "bytes": 1480
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/03-make.json",
+      "sha256": "58c9049d546d2669cbf73420748628cbb54f1f44950c686c4cd0d3c5e03c09b7",
+      "bytes": 1472
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/04-transfer-eta.json",
+      "sha256": "4468fd91e7fedba734a2ca96ea5946c2673ee332ded70f825d9c1aaf79f2539b",
+      "bytes": 1497
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/05-make.json",
+      "sha256": "0a61cba8a5da36338cd0284b815967660c1c48aa99af7d52e43cb151666f98f5",
+      "bytes": 1480
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/06-transfer-eta.json",
+      "sha256": "fe1e7c48c865867a021595b6c7a11438505e2fc2ebc9e11ece8117d845b62565",
+      "bytes": 1497
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/07-gcc.json",
+      "sha256": "e0b54562640f853d5fa8717d28fcade1341309f6eaccc291c9cad1faa8e7f9d3",
+      "bytes": 1474
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/08-gcc.json",
+      "sha256": "17a3f09933dc3d1f03540d38cb1839d259f804e36c62587be4f47c6faac7e91f",
+      "bytes": 1524
+    },
+    {
+      "uri": "artifact://job-efd02a52b7604d6c9bfd416f3741979b/validation/execution/09-gcc.json",
+      "sha256": "a4a85ff253417d2a2d9c8b1ddb7c4159be15dd94bd6a2936502ca0081a20a7ad",
+      "bytes": 1526
+    }
+  ],
+  "project_path": "projects/transfer-eta",
+  "profile_sha256": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07"
+}
