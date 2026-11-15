@@ -1,0 +1,11 @@
+{
+  "excluded": [
+    "project/app",
+    "project/helper.o",
+    "project/main.o",
+    "final-buildchecker/project/app",
+    "final-buildchecker/project/helper.o",
+    "final-buildchecker/project/main.o"
+  ],
+  "scope": "原始文字文件按字节复制；完整trace与内层history.bundle保留；完整归档另外保留编译产物，排除.git与凭据。"
+}

@@ -1,0 +1,8 @@
+{
+  "excluded_compiled_files": [
+    "work/cloud-20261103/work/e10-A-manual.dAyEb0/matrix/final-buildchecker/project/app",
+    "work/cloud-20261103/work/e10-A-manual.dAyEb0/matrix/final-buildchecker/project/helper.o",
+    "work/cloud-20261103/work/e10-A-manual.dAyEb0/matrix/final-buildchecker/project/main.o"
+  ],
+  "scope": "按字节复制云端完整文字原件和内层历史bundle，编译二进制仅在完整归档保留；CI大artifact在work和双端归档。"
+}

@@ -1,0 +1,20 @@
+{
+  "description": "仅移除branch.h中的间接include，保留leaf.h文件；两个对象刷新，仅消除MD leaf.h，再只补声明复用两对象并保留RD unused.h。",
+  "actual": {
+    "main.o": [
+      "branch.h",
+      "config.h",
+      "main.c"
+    ],
+    "helper.o": [
+      "helper.c"
+    ]
+  },
+  "resolved": [
+    [
+      "MISSING",
+      "main.o",
+      "leaf.h"
+    ]
+  ]
+}
