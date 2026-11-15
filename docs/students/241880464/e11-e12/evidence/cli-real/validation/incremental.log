@@ -1,0 +1,2 @@
+gcc -O0 -c eta_cli.c -o eta_cli.o
+gcc -O0 eta_cli.o estimate.o -o transfer-eta

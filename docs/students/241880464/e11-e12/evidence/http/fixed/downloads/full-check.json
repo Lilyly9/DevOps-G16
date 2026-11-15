@@ -1,0 +1,144 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-513442c70ec644f881d8d89d615ee01c",
+  "trace_id": "trace-089b3fd1e54d4e049fc7a8fcc54886d7",
+  "kind": "full-check",
+  "commit": "c9b53217fff0ec04ea417b35d4b942c2922c7f64",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-4f581772fe75401f9365c7c058307941",
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.12",
+            "line": 579,
+            "pid": 12,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.13",
+            "line": 23,
+            "pid": 13,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "main.c",
+          "unused.h"
+        ]
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 1036,
+            "declaration": "main.o: main.c unused.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make",
+      "app"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "Dockerfile.broken": "493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745",
+      "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+      "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/api-jobs/job-513442c70ec644f881d8d89d615ee01c/evidence/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "app"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "app",
+      "helper.o",
+      "main.o"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 564
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-full/actual-graph.json",
+      "sha256": "af4afec38f46076713040c02b9754017645d1aae10a710fbdcd0d3392841cfd0",
+      "bytes": 1201
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-full/findings.json",
+      "sha256": "06aa9d03be76f19cab24a66737497c58a03c8ac4d2644fd85534ba0d4854c1a1",
+      "bytes": 2587
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-cache.json",
+      "sha256": "1d9ba12340557611ed2baa965a7e4b0113200bf2ac59c6da43bbca30895c4b32",
+      "bytes": 1435
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-full/clean-execution.json",
+      "sha256": "e5184df80b223029451f195285129645078092f4216deab44cea4806d7ca5963",
+      "bytes": 1465
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-full/build-execution.json",
+      "sha256": "0bc9bf3818e7dad7ab44dd69c9e5d4709f0cbb078f0994c21216fbedf0fabf5b",
+      "bytes": 1963
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-scan/01-gcc.json",
+      "sha256": "c24f3d9ace967432042447915806fe1062805d6b3f582e2e05159f3093ffcc98",
+      "bytes": 1450
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-scan/02-gcc.json",
+      "sha256": "9482327300070e552c5ce574474af2a5b95252eafe217c5e8a72f8bb24d1776f",
+      "bytes": 1494
+    },
+    {
+      "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/baseline-scan/03-gcc.json",
+      "sha256": "485d62254ea8ca1480dc8b68ef8be45702de776e62b00bc7ae71dd1e29e5be9a",
+      "bytes": 1498
+    }
+  ]
+}

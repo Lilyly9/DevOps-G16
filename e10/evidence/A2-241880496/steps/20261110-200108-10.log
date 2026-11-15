@@ -1,0 +1,7 @@
+unchanged reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+body reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+include reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'MISSING', 'target': 'main.o', 'dependency': 'extra.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+declaration reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+flags reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+header reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+STEP_EXIT_CODE=0

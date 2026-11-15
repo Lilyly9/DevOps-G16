@@ -1,0 +1,25 @@
+docker : test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache) ... ok
+所在位置 行:2 字符: 155
++ ... " ; $out = (docker run --rm --network none -e HOME=/tmp -e PYTHONPATH ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_include_ad...s_cache) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges) ... ok
+test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected) ... ok
+test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency) ... ok
+test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets) ... ok
+test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected) ... ok
+test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected) ... ok
+test_body_change_records_no_invalidation_reason (test_student_241880496.StudentE8E10A2.test_body_change_records_no_inva
+lidation_reason) ... ok
+test_helper_source_invalidation_keeps_conservative_refresh (test_student_241880496.StudentE8E10A2.test_helper_source_in
+validation_keeps_conservative_refresh) ... ok
+test_transitive_header_include_extends_actual_set (test_student_241880496.StudentE8E10A2.test_transitive_header_include
+_extends_actual_set) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.286s
+
+OK
+TEST_EXIT_CODE=0

@@ -1,0 +1,103 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-aaa02d3f504f45629eaf726b2100f48e",
+  "trace_id": "trace-967e87d09ac8435ea4262a14172b3d06",
+  "kind": "incremental-check",
+  "commit": "2bcd78df5e0733e1743fdb2fd7bf8be824df830f",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e8e10-1",
+    "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+    "commit": "2bcd78df5e0733e1743fdb2fd7bf8be824df830f",
+    "key": {
+      "directives": {
+        "config.h": [
+          "#define VALUE 1"
+        ],
+        "extra.h": [
+          "#define EXTRA 0"
+        ],
+        "helper.c": [],
+        "main.c": [
+          "#include \"extra.h\"",
+          "#include <stdio.h>",
+          "#include \"config.h\""
+        ],
+        "unused.h": []
+      },
+      "recipes": [
+        "\tgcc main.o helper.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+        "\trm -f main.o helper.o app"
+      ],
+      "flags": "-O0",
+      "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+    },
+    "actual": {
+      "main.o": [
+        "config.h",
+        "extra.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "main.c",
+        "unused.h"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h"
+      },
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "extra.h"
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h"
+      }
+    ],
+    "added": [
+      [
+        "MISSING",
+        "main.o",
+        "extra.h"
+      ]
+    ],
+    "resolved": [],
+    "refreshed": [
+      "main.o",
+      "helper.o"
+    ],
+    "reused": [],
+    "invalidation": [
+      "main.c"
+    ],
+    "elapsed_s": 0.009880783967673779
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-aaa02d3f504f45629eaf726b2100f48e/incremental-report.json",
+      "sha256": "abf9e8b224bab55ce81aa1629e5b38a7c2609415ddc9080721bc7aa3944ccb6e",
+      "bytes": 1510
+    },
+    {
+      "uri": "artifact://job-aaa02d3f504f45629eaf726b2100f48e/target-full/findings.json",
+      "sha256": "6ddea0a518c2bc5052f0386405914d9ef96536ecb82ca58a43db46d7370c1c4c",
+      "bytes": 3100
+    }
+  ]
+}

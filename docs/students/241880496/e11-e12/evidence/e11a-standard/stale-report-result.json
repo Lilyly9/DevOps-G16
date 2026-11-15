@@ -1,0 +1,12 @@
+{
+  "layer": "EChecker.patch (host checkout, before MDFixer receives any patch)",
+  "input_report": "stale-incremental-report.json",
+  "expected": "STALE_REPORT and no repair",
+  "result": {
+    "error": "STALE_REPORT",
+    "repaired": false
+  },
+  "makefile_sha256_before": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+  "makefile_sha256_after": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+  "source_unchanged": true
+}

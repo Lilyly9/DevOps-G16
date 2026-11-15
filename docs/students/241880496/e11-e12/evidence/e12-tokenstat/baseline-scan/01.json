@@ -1,0 +1,40 @@
+{
+  "image_id": "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cap-add",
+    "SYS_PTRACE",
+    "--user",
+    "1000:1000",
+    "-e",
+    "HOME=/tmp",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "GIT_CONFIG_COUNT=1",
+    "-e",
+    "GIT_CONFIG_KEY_0=safe.directory",
+    "-e",
+    "GIT_CONFIG_VALUE_0=*",
+    "-e",
+    "PYTHONPATH=/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/labs/e11e12/environment/services/buildchecker",
+    "-v",
+    "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16:/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16",
+    "-w",
+    "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/work/e12-tokenstat-final-20261115/base-project/projects/tokenstat",
+    "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8",
+    "gcc",
+    "--version"
+  ],
+  "argv": [
+    "gcc",
+    "--version"
+  ],
+  "cwd": "/course/work/e12-tokenstat-final-20261115/base-project/projects/tokenstat",
+  "exit_code": 0,
+  "stdout": "gcc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+}

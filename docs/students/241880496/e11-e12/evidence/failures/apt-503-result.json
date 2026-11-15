@@ -1,0 +1,10 @@
+﻿{
+    "job_id":  "job-8f04bbad576e42e090808c7abc3ecf6a",
+    "trace_id":  "trace-a64cb5e0ec30492a9d706320a3122c5b",
+    "status":  "FAILED",
+    "error":  {
+                  "code":  "DRAFT_FAILED",
+                  "message":  "Repair candidate build failed; inspect iter-02 logs"
+              },
+    "note":  "First E12 attempt: deb.debian.org returned 503 during candidate apt install; retried with aliyun mirror and Acquire::Retries."
+}

@@ -1,0 +1,6 @@
+#ifndef TRANSFER_ETA_DEFAULTS_H
+#define TRANSFER_ETA_DEFAULTS_H
+
+#define DEFAULT_RATE_MIB_S 8
+
+#endif

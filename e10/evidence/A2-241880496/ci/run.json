@@ -1,0 +1,17 @@
+{
+    "run_id":  42812644358,
+    "workflow":  "E8-E10 teaching validation (e8e10.yml)",
+    "job":  "e8e10-quality-gate",
+    "head_sha":  "cb1c3c3e799ba84e046b7d750432bcac0d70b4b1",
+    "event":  "push",
+    "status":  "completed",
+    "conclusion":  "success",
+    "url":  "https://github.com/Lilyly9/DevOps-G16/actions/runs/42812644358",
+    "artifact":  "e8e10-evidence-42812644358",
+    "artifact_id":  13763985954,
+    "artifact_files":  206,
+    "artifact_bytes":  120043,
+    "artifact_sha256":  "8455f7814c76791f9e9fd46011bb2ae468e0b6ce498246c605b0afa2b51d2b7b",
+    "started_at":  "2026-11-10T12:04:25Z",
+    "completed_at":  "2026-11-10T12:05:46Z"
+}
