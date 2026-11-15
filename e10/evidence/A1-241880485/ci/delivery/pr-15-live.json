@@ -1,0 +1,51 @@
+{
+  "number": 15,
+  "url": "https://github.com/Lilyly9/DevOps-G16/pull/15",
+  "title": "E8—E10 A1：本人三阶段实验、真实证据与独立验证",
+  "head": "student/241880485/e8-e10",
+  "head_sha": "e835d187fa964d75ffecfd5779dda928526e0560",
+  "base": "main",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "mergeable_state": "clean",
+  "checks": [
+    {
+      "name": "e7-a-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41610391948/job/125830529854"
+    },
+    {
+      "name": "e8e10-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41610392056/job/125830529703"
+    },
+    {
+      "name": "e7-b-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41610391899/job/125830529662"
+    },
+    {
+      "name": "e7-b-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41610384310/job/125830504353"
+    },
+    {
+      "name": "e7-a-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41610384329/job/125830504154"
+    },
+    {
+      "name": "e8e10-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41610384303/job/125830503655"
+    }
+  ],
+  "queried_at_utc": "2026-11-03T09:25:22.927335+00:00"
+}

@@ -1,0 +1,51 @@
+{
+  "number": 15,
+  "url": "https://github.com/Lilyly9/DevOps-G16/pull/15",
+  "title": "E8-A1：真实历史基线、复用与间接 include 验证",
+  "head": "student/241880485/e8-e10",
+  "head_sha": "18a79582672a71d486abc656bc9007d4aebdceab",
+  "base": "main",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "mergeable_state": "clean",
+  "checks": [
+    {
+      "name": "e7-a-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41571278669/job/125704487706"
+    },
+    {
+      "name": "e7-b-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41571278767/job/125704487666"
+    },
+    {
+      "name": "e8e10-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41571278770/job/125704487606"
+    },
+    {
+      "name": "e8e10-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41571271261/job/125704464100"
+    },
+    {
+      "name": "e7-b-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41571271012/job/125704463420"
+    },
+    {
+      "name": "e7-a-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41571270843/job/125704463093"
+    }
+  ],
+  "queried_at_utc": "2026-11-03T09:06:44.884659+00:00"
+}

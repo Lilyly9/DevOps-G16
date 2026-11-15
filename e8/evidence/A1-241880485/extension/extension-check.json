@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "source": "A1 independently stated expected edges/findings",
+  "incremental_full_equal": true,
+  "dynamic_buildchecker_equal": true,
+  "before_commit": "683b6b05d97233fe2c81f6697662e346a5cefd0b",
+  "after_commit": "20094b5a4d105c72ecbead91d3302b3834d47254"
+}

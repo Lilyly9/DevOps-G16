@@ -1,0 +1,176 @@
+仓库=/root/241880485/DevOps-G16-e8-A1-20261103
+学号=241880485
+镜像=course-e8e10:241880485
+本次证据目录=work/e10-A-manual.eVOOik
+MATRIX_BASELINE_READY work/e10-A-manual.eVOOik/matrix
+CFLAGS = -O0
+app: main.o helper.o
+	gcc main.o helper.o -o app
+main.o: main.c unused.h
+	gcc $(CFLAGS) -c main.c -o main.o
+helper.o: helper.c
+	gcc $(CFLAGS) -c helper.c -o helper.o
+.PHONY: clean
+clean:
+	rm -f main.o helper.o app
+
+STEP_EXIT_CODE=0
+NO_SOURCE_CHANGE
+{'case': 'unchanged', 'repeat': 1, 'equal': True, 'incremental_s': 0.0023714560084044933, 'full_s': 0.010856995824724436, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 2, 'equal': True, 'incremental_s': 0.001760448794811964, 'full_s': 0.010348367970436811, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 3, 'equal': True, 'incremental_s': 0.0017513846978545189, 'full_s': 0.00998782692477107, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 4, 'equal': True, 'incremental_s': 0.0017379065975546837, 'full_s': 0.01008349796757102, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 5, 'equal': True, 'incremental_s': 0.0017332457937300205, 'full_s': 0.00994823593646288, 'reused': 2, 'refreshed': 0}
+UNCHANGED_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 40ea6f52fb48fc999822c61286ad838b7ee72ccc
+{'case': 'body', 'repeat': 1, 'equal': True, 'incremental_s': 0.002161571290344, 'full_s': 0.011016904842108488, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 2, 'equal': True, 'incremental_s': 0.001752061303704977, 'full_s': 0.010421304032206535, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 3, 'equal': True, 'incremental_s': 0.0017622052691876888, 'full_s': 0.010217139963060617, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 4, 'equal': True, 'incremental_s': 0.0017152088694274426, 'full_s': 0.00996572570875287, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 5, 'equal': True, 'incremental_s': 0.0017194300889968872, 'full_s': 0.009980427101254463, 'reused': 2, 'refreshed': 0}
+BODY_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 22d89f10d17555006175c063c37d2a91aca15dfc
+{'case': 'include', 'repeat': 1, 'equal': True, 'incremental_s': 0.011463852133601904, 'full_s': 0.010043141897767782, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 2, 'equal': True, 'incremental_s': 0.010464298073202372, 'full_s': 0.01016276702284813, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 3, 'equal': True, 'incremental_s': 0.010148966684937477, 'full_s': 0.009917786344885826, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 4, 'equal': True, 'incremental_s': 0.010008659213781357, 'full_s': 0.00994440307840705, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 5, 'equal': True, 'incremental_s': 0.010103859007358551, 'full_s': 0.009904440026730299, 'reused': 0, 'refreshed': 2}
+INCLUDE_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 05103eb6db9ce6f8070f9874b923a8613240ed8e
+{'case': 'declaration', 'repeat': 1, 'equal': True, 'incremental_s': 0.0021602516062557697, 'full_s': 0.011074423789978027, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 2, 'equal': True, 'incremental_s': 0.0017527397722005844, 'full_s': 0.010198696050792933, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 3, 'equal': True, 'incremental_s': 0.0017636828124523163, 'full_s': 0.010345292743295431, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 4, 'equal': True, 'incremental_s': 0.0017675850540399551, 'full_s': 0.009972278028726578, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 5, 'equal': True, 'incremental_s': 0.0017571225762367249, 'full_s': 0.010118504986166954, 'reused': 2, 'refreshed': 0}
+DECLARATION_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT ff4e0a999a1ac0f38a08c90e26858d7a6f5193e4
+{'case': 'flags', 'repeat': 1, 'equal': True, 'incremental_s': 0.0113936229608953, 'full_s': 0.01027254993095994, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 2, 'equal': True, 'incremental_s': 0.010407727211713791, 'full_s': 0.010038964916020632, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 3, 'equal': True, 'incremental_s': 0.010235705878585577, 'full_s': 0.009944078978151083, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 4, 'equal': True, 'incremental_s': 0.010131462942808867, 'full_s': 0.010032027959823608, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 5, 'equal': True, 'incremental_s': 0.01013872865587473, 'full_s': 0.009953975211828947, 'reused': 0, 'refreshed': 2}
+FLAGS_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT f8c55209707dc711457b21c725a46c0a8f2ff9cc
+{'case': 'header', 'repeat': 1, 'equal': True, 'incremental_s': 0.011355276219546795, 'full_s': 0.01009358186274767, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 2, 'equal': True, 'incremental_s': 0.010413811076432467, 'full_s': 0.01001817686483264, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 3, 'equal': True, 'incremental_s': 0.010127682704478502, 'full_s': 0.01006345683708787, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 4, 'equal': True, 'incremental_s': 0.010103256907314062, 'full_s': 0.0100208162330091, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 5, 'equal': True, 'incremental_s': 0.010051824152469635, 'full_s': 0.010062317363917828, 'reused': 0, 'refreshed': 2}
+HEADER_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+DYNAMIC_CROSSCHECK_AND_MATRIX_PASS
+STEP_EXIT_CODE=0
+{
+  "track": "A",
+  "passed": true,
+  "rows": 30
+}
+MATRIX_PASS {'unchanged': 5, 'body': 5, 'include': 5, 'declaration': 5, 'flags': 5, 'header': 5}
+unchanged reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+body reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+include reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'MISSING', 'target': 'main.o', 'dependency': 'extra.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+declaration reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+flags reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+header reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+['unchanged', 5, 0.0017513846978545189, 0.01008349796757102, 0.0017332457937300205, 0.0023714560084044933, 5.757443227592148]
+['body', 5, 0.001752061303704977, 0.010217139963060617, 0.0017152088694274426, 0.002161571290344, 5.831496844006003]
+['include', 5, 0.010148966684937477, 0.00994440307840705, 0.010008659213781357, 0.011463852133601904, 0.9798438981148663]
+['declaration', 5, 0.0017636828124523163, 0.010198696050792933, 0.0017527397722005844, 0.0021602516062557697, 5.782613505549865]
+['flags', 5, 0.010235705878585577, 0.010032027959823608, 0.010131462942808867, 0.0113936229608953, 0.9801012337421604]
+['header', 5, 0.010127682704478502, 0.010062317363917828, 0.010051824152469635, 0.011355276219546795, 0.9935458739705807]
+SAVED work/e10-A-manual.eVOOik/matrix/performance-summary.csv
+{
+  "status": "SUCCEEDED",
+  "detector": "BUILDCHECKER_TEACHING",
+  "detector_version": "0.2.0-teaching",
+  "trace_id": "e6-465c6d664e4e449fb9e8cac3b33a1023",
+  "findings": [
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h",
+      "evidence": [
+        {
+          "source": "make_database",
+          "artifact": "make-db.txt",
+          "line": 1052,
+          "declaration": "main.o: main.c unused.h config.h extra.h"
+        }
+      ],
+      "scope": "Not observed in this recipe job under this build configuration"
+    }
+  ],
+  "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+  "build_command": [
+    "make",
+    "app"
+  ],
+  "clean_command": [
+    "make",
+    "clean"
+  ],
+  "input_sha256": {
+    ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+    "Makefile": "966ca36a90df555a2e878c4f95f2560cc5179b51baca46f03750c2d524c224e6",
+    "config.h": "6024b92a8cb6cfd1881a66916f4b368c0cb49acfdd8def2fedb7a430892e28fa",
+    "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+    "helper.c": "5db584e6ea1db9fe026954a575b744c2a456ec3163606a16da1f0b909e4dbe6d",
+    "main.c": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+    "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+  },
+  "clean_exit_code": 0,
+  "trace_command": [
+    "strace",
+    "-ff",
+    "-s",
+    "4096",
+    "-o",
+    "/course/work/e10-A-manual.eVOOik/matrix/final-buildchecker/trace/t",
+    "-e",
+    "trace=%file,%process",
+    "make",
+    "-p",
+    "app"
+  ],
+  "build_exit_code": 0,
+  "observed_targets": [
+    "app",
+    "helper.o",
+    "main.o"
+  ],
+  "artifacts": {
+    "actual_graph": "actual-graph.json",
+    "declared_graph": "declared-graph.json",
+    "processes": "processes.json",
+    "make_database": "make-db.txt",
+    "trace_directory": "trace"
+  },
+  "elapsed_ms": 127
+}
+1052:main.o: main.c unused.h config.h extra.h
+t.13
+t.14
+t.15
+t.16
+t.17
+t.18
+t.19
+t.20
+181:            for repeat in range(5):
+183:                passed=all(inc[k]==full[k] for k in ['actual','declared','findings'])
+185:                assert passed,case
+case,n,inc_median_s,full_median_s,inc_min_s,inc_max_s,full_over_inc
+unchanged,5,0.0017513846978545189,0.01008349796757102,0.0017332457937300205,0.0023714560084044933,5.757443227592148
+body,5,0.001752061303704977,0.010217139963060617,0.0017152088694274426,0.002161571290344,5.831496844006003
+include,5,0.010148966684937477,0.00994440307840705,0.010008659213781357,0.011463852133601904,0.9798438981148663
+declaration,5,0.0017636828124523163,0.010198696050792933,0.0017527397722005844,0.0021602516062557697,5.782613505549865
+flags,5,0.010235705878585577,0.010032027959823608,0.010131462942808867,0.0113936229608953,0.9801012337421604
+header,5,0.010127682704478502,0.010062317363917828,0.010051824152469635,0.011355276219546795,0.9935458739705807
+A1_E10_ALL_EXPECTED_COLLECTIONS_AND_DYNAMIC_GRAPH_PASS
+STEP_EXIT_CODE=0
+FINISHED_OUT=work/e10-A-manual.eVOOik

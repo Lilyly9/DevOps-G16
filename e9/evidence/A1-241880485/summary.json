@@ -1,0 +1,48 @@
+{
+  "provenance": "ACTUAL_RUN",
+  "student_id": "241880485",
+  "group": "A16",
+  "stage": "E9-A",
+  "source_commit": "18a79582672a71d486abc656bc9007d4aebdceab",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "out": "work/e9-A-manual.eqLOHp",
+  "commits": {
+    "baseline": "a817cc09960456b4eac8762d10d69037bf4aa767",
+    "C1": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+    "C2": "02e714436272025bcce1ec9983a2be57a0a93e93",
+    "C3": "35785ee1fa73e80c22a6c4f1067ec303c0a5fb05"
+  },
+  "steps_exit_code_zero": true,
+  "build_logs": [
+    "C0-build.log",
+    "C1-build.log",
+    "C2-build.log",
+    "C3-build.log"
+  ],
+  "C1_reused": [
+    "main.o",
+    "helper.o"
+  ],
+  "C2_added": [
+    [
+      "MISSING",
+      "main.o",
+      "extra.h"
+    ]
+  ],
+  "C3_resolved": [
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "MISSING",
+      "main.o",
+      "extra.h"
+    ]
+  ],
+  "independent_contribution": "Existing A1 indirect-include test and original E8 extension: header directives invalidate historical graph, full and dynamic comparison.",
+  "unit_tests": 8,
+  "unit_tests_exit_code": 0
+}
