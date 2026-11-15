@@ -162,7 +162,7 @@ def execute(request, out, job_id=None):
                     raise Failure('DRAFT_EXECUTION_UNAVAILABLE', str(exc)) from exc
         if mode in ('e11-a','e12'):
             base_full=full(base,out/'baseline-full',draft_executor,profile)
-            run_scans_in_draft = draft_executor is not None and profile is not None
+            run_scans_in_draft = draft_executor is not None
             base_scan_options = dict(scan_options)
             target_scan_options = dict(scan_options)
             if run_scans_in_draft:
@@ -217,7 +217,7 @@ def execute(request, out, job_id=None):
             patchfile=out/'candidate.patch';patchfile.write_text(diff,encoding='utf-8')
             save(out/'repair-plan.json',edits)
             stage('repair',target_sha,{'edits':edits,'input_report':artifact(out/(md_envelope['kind']+'.json'),out,job_id)},[patchfile,out/'repair-plan.json'])
-            validation_runner = draft_executor.capture if draft_executor is not None and profile is not None else None
+            validation_runner = draft_executor.capture if draft_executor is not None else None
             verdict=validate(target,patchfile,out/'validation',profile=profile,runner=validation_runner)
             if not verdict['accepted']:
                 raise Failure('REPAIR_REJECTED',str(verdict))
