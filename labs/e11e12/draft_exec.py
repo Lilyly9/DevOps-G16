@@ -29,8 +29,6 @@ class ImageExecutor:
         self.root = Path(root).resolve()
         self.docker = docker
         self.timeout = timeout
-        if not self.host_root.is_dir():
-            raise ValueError('host root for the DRAFT image mount does not exist')
 
     def mapped(self, path):
         relative = Path(path).resolve().relative_to(self.root)
@@ -42,6 +40,7 @@ class ImageExecutor:
                 '--user', user, '-e', 'HOME=/tmp', '-e', 'PYTHONDONTWRITEBYTECODE=1',
                 '-e', 'GIT_CONFIG_COUNT=1', '-e', 'GIT_CONFIG_KEY_0=safe.directory',
                 '-e', 'GIT_CONFIG_VALUE_0=*',
+                '-e', f'PYTHONPATH={self.host_root}/labs/e11e12/environment/services/buildchecker',
                 '-v', f'{self.host_root}:{self.host_root}', '-w', self.mapped(cwd),
                 self.image_id, *argv]
 
@@ -95,5 +94,5 @@ def full_check_in_image(executor, project, output, clean_target, build_target, e
 
 def image_toolchain(executor, project, evidence):
     execute = executor.capture(evidence)
-    lock = execute(['cat', '/opt/toolchain.lock'], project)
-    return lock.splitlines()
+    return {'gcc': execute(['gcc', '--version'], project).splitlines()[0],
+            'make': execute(['make', '--version'], project).splitlines()[0]}

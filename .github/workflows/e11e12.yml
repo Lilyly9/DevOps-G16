@@ -18,6 +18,7 @@ jobs:
         run: |
           python3 run_e11e12.py test
           python3 run_e11e12.py prepare
+          export E11E12_DOCKER_HOST_ROOT="$GITHUB_WORKSPACE"
           for mode in e11-a e11-b e12; do
             python3 run_e11e12.py run --request "data/integration-sample/$mode.json" --out "work/ci-$mode"
           done

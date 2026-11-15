@@ -1,0 +1,75 @@
+{
+  "status": "SUCCEEDED",
+  "detector": "DRAFT_TEACHING_REPLAY",
+  "trace_id": "e6-b-eb5edb071f4e497dbe86da0638d22827",
+  "candidate_source": "Manual model response replay; no model/API call in this command",
+  "candidate_sha256": "0b1a1be748e5e7efa5f7f6bfc7f3be50fa3adb7545c70444e770b3f381228353",
+  "attempts": [
+    {
+      "iteration": 1,
+      "tag": "e6-draft-replay:eb5edb071f4e497dbe86da0638d22827-1",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-f",
+        "/course/work/e12-standard-final3-20261115/draft-build/iter-01/Dockerfile",
+        "-t",
+        "e6-draft-replay:eb5edb071f4e497dbe86da0638d22827-1",
+        "/course/work/e12-standard-final3-20261115/draft-build/project"
+      ],
+      "build_exit_code": 1,
+      "failure_class": "MISSING_MAKE"
+    },
+    {
+      "iteration": 2,
+      "tag": "e6-draft-replay:eb5edb071f4e497dbe86da0638d22827-2",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-f",
+        "/course/work/e12-standard-final3-20261115/draft-build/iter-02/Dockerfile",
+        "-t",
+        "e6-draft-replay:eb5edb071f4e497dbe86da0638d22827-2",
+        "/course/work/e12-standard-final3-20261115/draft-build/project"
+      ],
+      "build_exit_code": 0,
+      "image_id": "sha256:3edd5fd39fd30a4a540c907339f82e20aec3767754372cfecef853c014b586a2"
+    }
+  ],
+  "input_sha256": {
+    ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+    "Dockerfile.broken": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+    "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+    "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+    "e11e12-project.json": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+    "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+    "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+    "main.c": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+    "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+  },
+  "verification": {
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--network",
+      "none",
+      "--cpus",
+      "1",
+      "--memory",
+      "128m",
+      "--pids-limit",
+      "64",
+      "--cidfile",
+      "/course/work/e12-standard-final3-20261115/draft-build/verify-container-id.txt",
+      "sha256:3edd5fd39fd30a4a540c907339f82e20aec3767754372cfecef853c014b586a2"
+    ],
+    "exit_code": 0,
+    "expected_output": "1",
+    "actual_output": "1\n",
+    "output_matches": true
+  },
+  "elapsed_ms": 2267
+}

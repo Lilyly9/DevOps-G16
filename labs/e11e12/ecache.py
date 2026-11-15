@@ -106,7 +106,7 @@ def invalidation(key, old):
     return reasons
 
 
-def scan(project, config, old=None, execute=run):
+def scan(project, config, old=None, execute=run, commit=None):
     project = Path(project)
     start = time.perf_counter()
     declared, flags = declarations(project, config, execute)
@@ -145,7 +145,7 @@ def scan(project, config, old=None, execute=run):
                 for item in old.get('findings', [])} if old else set()
     return {'schema_version': 'e11e12-ecache-1',
             'profile_sha256': config.sha256,
-            'commit': git_commit(project, execute),
+            'commit': commit or git_commit(project, execute),
             'key': key, 'actual': actual, 'declared': declared,
             'findings': findings,
             'added': [list(item) for item in sorted(current - previous)],
@@ -233,7 +233,8 @@ def validate(project, patchfile, evidence, config, fail_test=False, execute=run)
             execute(['make', config.build_target], sandbox), encoding='utf-8')
         changed_output = execute(list(config.program), sandbox).strip()
         checks['header_change'] = changed_output == config.header_change.expected_output
-        recheck = scan(sandbox, config, execute=execute)
+        recheck = scan(sandbox, config, execute=execute,
+                       commit=run(['git', 'rev-parse', 'HEAD'], sandbox).strip())
         save(evidence / 'recheck.json', recheck)
         checks['no_missing'] = not any(item['type'] == 'MISSING' for item in recheck['findings'])
     except (ValueError, subprocess.TimeoutExpired) as exc:

@@ -1,0 +1,150 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-33f3cd049a2c47ce8b7e5a8164793d6e",
+  "trace_id": "trace-99aff9850e1d474c8fafdaebdd930492",
+  "kind": "incremental-check",
+  "commit": "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e11e12-ecache-1",
+    "profile_sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+    "commit": "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+    "key": {
+      "directives": {
+        "config.h": [
+          "#ifndef CONFIG_H",
+          "#define CONFIG_H",
+          "#define DEFAULT_FIELD 1",
+          "#endif"
+        ],
+        "extra.h": [
+          "#ifndef EXTRA_H",
+          "#define EXTRA_H",
+          "#define EXTRA_FIELD 0",
+          "#endif"
+        ],
+        "main.c": [
+          "#include <stdio.h>",
+          "#include \"stats.h\""
+        ],
+        "stats.c": [
+          "#include <ctype.h>",
+          "#include <stdio.h>",
+          "#include \"config.h\"",
+          "#include \"extra.h\"",
+          "#include \"stats.h\""
+        ],
+        "stats.h": [
+          "#ifndef STATS_H",
+          "#define STATS_H",
+          "#include <stdio.h>",
+          "#endif"
+        ]
+      },
+      "recipes": [
+        "\tgcc main.o stats.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c stats.c -o stats.o",
+        "\t@./app tests/sample.txt | grep -qx 'config=1 words=7 lines=3'",
+        "\trm -f main.o stats.o app"
+      ],
+      "flags": [
+        "-O1",
+        "-std=c11",
+        "-Wall"
+      ],
+      "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+      "targets": {
+        "main.o": "main.c",
+        "stats.o": "stats.c"
+      },
+      "config": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f"
+    },
+    "actual": {
+      "main.o": [
+        "main.c",
+        "stats.h"
+      ],
+      "stats.o": [
+        "config.h",
+        "extra.h",
+        "stats.c",
+        "stats.h"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "main.c",
+        "stats.h"
+      ],
+      "stats.o": [
+        "stats.c",
+        "stats.h"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "stats.o",
+        "dependency": "config.h"
+      },
+      {
+        "type": "MISSING",
+        "target": "stats.o",
+        "dependency": "extra.h"
+      }
+    ],
+    "added": [
+      [
+        "MISSING",
+        "stats.o",
+        "extra.h"
+      ]
+    ],
+    "resolved": [],
+    "refreshed": [
+      "stats.o"
+    ],
+    "reused": [
+      "main.o"
+    ],
+    "invalidation": [
+      "stats.c"
+    ],
+    "elapsed_s": 0.5574548820000018
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/incremental-report.json",
+      "sha256": "de346adcecfa643efc45cf75662b7f80a09ea8f3e9b54c06e238a14d72c83731",
+      "bytes": 2181
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/target-full/findings.json",
+      "sha256": "e927274f8da32a8200c86c2a9e8e047a930114407cfeb421b33514d06117874c",
+      "bytes": 3125
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/target-full/image-execution/01.json",
+      "sha256": "20fbf4ae0671294b13d987eff0698df0b3e198fb4a93642390d1f6b12942150b",
+      "bytes": 4941
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/target-scan/01.json",
+      "sha256": "142f7b7a13afe194d299e254fa60cd428f0ce14858a56d961c8de1f0fa3c9f81",
+      "bytes": 1338
+    },
+    {
+      "uri": "artifact://job-33f3cd049a2c47ce8b7e5a8164793d6e/target-scan/02.json",
+      "sha256": "546ccf6a95104a83c33e249f747a7189f6cf5dcf8748b50858ca6ec9643298e5",
+      "bytes": 1294
+    }
+  ],
+  "project_path": "projects/tokenstat",
+  "profile_sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+  "targets": {
+    "main.o": "main.c",
+    "stats.o": "stats.c"
+  },
+  "image_id": "sha256:7bf6690b5f9c52160b855bfad1b490f3f11cf6bb97ff54af774aef61c927cfb8"
+}

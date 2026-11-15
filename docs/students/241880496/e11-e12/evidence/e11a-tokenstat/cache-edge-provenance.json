@@ -1,0 +1,27 @@
+{
+  "selected_edge": {
+    "target": "stats.o",
+    "dependency": "config.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9105",
+      "line": 692,
+      "pid": 9105,
+      "operation": "openat"
+    }
+  },
+  "cache_actual": [
+    "config.h",
+    "stats.c",
+    "stats.h"
+  ],
+  "in_baseline_cache": true,
+  "cache_commit": "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+  "profile_sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+  "reused_targets": [],
+  "refreshed_targets": [
+    "main.o",
+    "stats.o"
+  ]
+}

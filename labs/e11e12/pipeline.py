@@ -169,9 +169,9 @@ def execute(request, out, job_id=None):
             if config is None:
                 old=fixture_scan(base)
             elif scan_execute is not None:
-                old=ecache.scan(base,config,execute=scan_execute)
+                old=ecache.scan(base,config,execute=scan_execute,commit=base_sha)
             else:
-                old=ecache.scan(base,config)
+                old=ecache.scan(base,config,commit=base_sha)
             edges=json.loads((out/'baseline-full/actual-graph.json').read_text())
             projected={t:sorted({e['dependency'] for e in edges if e['target']==t}) for t in targets}
             if projected != old['actual']:
@@ -189,9 +189,9 @@ def execute(request, out, job_id=None):
             if config is None:
                 current=fixture_scan(target,old)
             elif target_execute is not None:
-                current=ecache.scan(target,config,old,execute=target_execute)
+                current=ecache.scan(target,config,old,execute=target_execute,commit=target_sha)
             else:
-                current=ecache.scan(target,config,old)
+                current=ecache.scan(target,config,old,commit=target_sha)
             save(out/'incremental-report.json',current)
             reference=full(target,out/'target-full',executor,config)
             if normalized(reference['findings'],targets) != normalized(current['findings'],targets):

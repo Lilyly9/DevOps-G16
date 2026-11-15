@@ -23,6 +23,7 @@ def main():
                'include_dirs': []}
     (project / 'e11e12-project.json').write_text(
         json.dumps(profile, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    (project / 'Dockerfile.broken').write_text(BROKEN, encoding='utf-8')
     commit(project, 'integration C0 profile')
     base = run(['git', 'rev-parse', 'HEAD'], project).strip()
     (project / 'main.c').write_text('#include "extra.h"\n' + (project / 'main.c').read_text(),
@@ -32,7 +33,10 @@ def main():
     pin = 'FROM python:3.13-slim@sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f'
     candidate = BROKEN.replace('FROM python:3.13-slim', pin).replace(
         'RUN make app',
-        'RUN apt-get update && apt-get install -y --no-install-recommends build-essential '
+        'RUN sed -i -e \'s|http://deb.debian.org/debian|https://mirrors.aliyun.com/debian|g\' '
+        '/etc/apt/sources.list.d/debian.sources '
+        '&& apt-get -o Acquire::Retries=5 update '
+        '&& apt-get -o Acquire::Retries=5 install -y --no-install-recommends build-essential strace '
         '&& rm -rf /var/lib/apt/lists/*\nRUN make app')
     (root / 'candidate.Dockerfile').write_text(candidate, encoding='utf-8')
     fixed = scan(project)
