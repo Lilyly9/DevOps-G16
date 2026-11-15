@@ -1,0 +1,52 @@
+name: E11-E12 integration
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  integration:
+    name: e11e12-integration
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Configure CI identity and environment
+        run: |
+          git config --local user.name 999999999
+          git config --local user.email ci@example.invalid
+          docker build --build-arg BASE_IMAGE=python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 -f labs/e11e12/environment/services/buildchecker/Dockerfile -t course-e11e12:999999999 labs/e11e12/environment
+      - name: Contracts and integration
+        env:
+          STUDENT_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          set -euo pipefail
+          mkdir -p work
+          printf '%s\n' "$STUDENT_SOURCE_SHA" > work/student-source-commit.txt
+          git rev-parse HEAD > work/checkout-commit.txt
+          docker image inspect course-e11e12:999999999 --format '{{.Id}}' > work/environment-image-id.txt
+          python3 run_e11e12.py test 2>&1 | tee work/contract-tests.log
+          python3 run_e11e12.py prepare
+          for mode in e11-a e11-b e12; do
+            python3 run_e11e12.py run --request "data/integration-sample/$mode.json" --out "work/ci-$mode"
+          done
+      - name: Verify live E12 API and report handoff
+        run: |
+          set -euo pipefail
+          python3 run_e11e12.py serve --port 8086 > work/api-server.log 2>&1 &
+          api_pid=$!
+          trap 'kill "$api_pid" 2>/dev/null || true; wait "$api_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:8086/health > work/api-health.json; then
+              ready=1
+              break
+            fi
+            sleep 2
+          done
+          test "$ready" = 1
+          PYTHONPATH=labs/e11e12:labs/e8e10:labs/e11e12/vendor python3 labs/e11e12/api_probe.py --base-url http://127.0.0.1:8086 --request data/integration-sample/e12.json --key ci-e12 --out work/ci-api-e12
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: e11e12-evidence-${{ github.run_id }}
+          path: work/
+          retention-days: 14

@@ -1,0 +1,169 @@
+{
+  "status": "PASSED",
+  "job_id": "job-8da9e7061d5140a184a621f54f200464",
+  "trace_id": "trace-b58a3d878e5d45419d276e94fb96f88d",
+  "base_commit": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "target_commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "stages": [
+    "draft",
+    "full-check",
+    "incremental-check",
+    "repair",
+    "recheck"
+  ],
+  "artifact_count": 235,
+  "draft_image_id": "sha256:5818e9e3624e1cdff6feffda49fdd7826e98d79b838b97c8a9c38e864cf3c7e3",
+  "container_count": 21,
+  "same_image_commands": {
+    "baseline-full/build-execution.json": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "transfer-eta"
+    ],
+    "baseline-full/clean-execution.json": [
+      "make",
+      "clean"
+    ],
+    "baseline-scan/01-gcc.json": [
+      "gcc",
+      "--version"
+    ],
+    "baseline-scan/02-gcc.json": [
+      "gcc",
+      "-O0",
+      "-MM",
+      "-MT",
+      "eta_cli.o",
+      "eta_cli.c"
+    ],
+    "baseline-scan/03-gcc.json": [
+      "gcc",
+      "-O0",
+      "-MM",
+      "-MT",
+      "estimate.o",
+      "estimate.c"
+    ],
+    "final-full/build-execution.json": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/final-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "transfer-eta"
+    ],
+    "final-full/clean-execution.json": [
+      "make",
+      "clean"
+    ],
+    "target-full/build-execution.json": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/e12-transfer-eta-a1-20261114T042319Z.xhearY/cli/target-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "transfer-eta"
+    ],
+    "target-full/clean-execution.json": [
+      "make",
+      "clean"
+    ],
+    "target-scan/01-gcc.json": [
+      "gcc",
+      "--version"
+    ],
+    "target-scan/02-gcc.json": [
+      "gcc",
+      "-O0",
+      "-MM",
+      "-MT",
+      "eta_cli.o",
+      "eta_cli.c"
+    ],
+    "target-scan/03-gcc.json": [
+      "gcc",
+      "-O0",
+      "-MM",
+      "-MT",
+      "estimate.o",
+      "estimate.c"
+    ],
+    "validation/execution/01-make.json": [
+      "make",
+      "clean"
+    ],
+    "validation/execution/02-make.json": [
+      "make",
+      "transfer-eta"
+    ],
+    "validation/execution/03-make.json": [
+      "make",
+      "test"
+    ],
+    "validation/execution/04-transfer-eta.json": [
+      "./transfer-eta",
+      "100"
+    ],
+    "validation/execution/05-make.json": [
+      "make",
+      "transfer-eta"
+    ],
+    "validation/execution/06-transfer-eta.json": [
+      "./transfer-eta",
+      "100"
+    ],
+    "validation/execution/07-gcc.json": [
+      "gcc",
+      "--version"
+    ],
+    "validation/execution/08-gcc.json": [
+      "gcc",
+      "-O0",
+      "-MM",
+      "-MT",
+      "eta_cli.o",
+      "eta_cli.c"
+    ],
+    "validation/execution/09-gcc.json": [
+      "gcc",
+      "-O0",
+      "-MM",
+      "-MT",
+      "estimate.o",
+      "estimate.c"
+    ]
+  },
+  "missing_before_patch": [
+    [
+      "MISSING",
+      "eta_cli.o",
+      "defaults.h"
+    ]
+  ],
+  "findings_after_patch": [],
+  "raw_edge": {
+    "file": "target-full/trace/t.11",
+    "line": 923,
+    "text": "openat(AT_FDCWD, \"defaults.h\", O_RDONLY|O_NOCTTY) = 4"
+  },
+  "repair_input_sha256": "fb8cc8603c7ba5a0892b1a689cba1cde6303359e7b8a95cb8e07bdd5b0ff35f6",
+  "patch_sha256": "02c5087bea9a505a77f83a2fd7955419db8c0a9aa193337a9f26aaa79a8795f0"
+}

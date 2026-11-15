@@ -1,0 +1,9 @@
+{
+    "candidate":  "/course/projects/tokenstat/candidate.Dockerfile",
+    "base":  "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+    "target":  "7fabf45ec98fb1b7ffe101b3621272b93f0be4d5",
+    "repo":  "/course",
+    "build_timeout":  900,
+    "project_path":  "projects/tokenstat",
+    "mode":  "e12"
+}

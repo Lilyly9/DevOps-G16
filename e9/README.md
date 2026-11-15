@@ -4,7 +4,7 @@
 
 | 主责 | 轨道 | 交付重点 | 状态/证据 |
 | --- | --- | --- | --- |
-| A2 | A | C0-C3图更新 | 待本人填 |
+| A2 | A | C0-C3图更新 | 已完成（2026-11-10，本人主责阶段）：C1 复用、C2 刷新并新增 MD extra.h、C3 消除 config.h/extra.h 两项 MD 保留 RD unused.h；[证据](evidence/A2-241880496/index.md) |
 | B2 | B | 三种风格候选 | 待本人填 |
 
 个人分支 `student/<学号>/e8-e10`；个人报告/ADR/AI_USAGE 位于 `docs/students/<学号>/e8-e10/`。完整原件在本人 `work/`，阶段精选证据/索引放本目录 `evidence/<角色>-<学号>/`。

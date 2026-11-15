@@ -1,0 +1,25 @@
+$ python3 -m unittest discover -s labs/e11e12 -p 'test_*.py' -v
+test_accept_current_report (test_contract.Contracts.test_accept_current_report) ... ok
+test_api_rejects_repo_outside_data (test_contract.Contracts.test_api_rejects_repo_outside_data) ... ok
+test_artifact_uses_relative_uri_and_content_hash (test_contract.Contracts.test_artifact_uses_relative_uri_and_content_hash) ... ok
+test_changed_artifact_is_rejected (test_contract.Contracts.test_changed_artifact_is_rejected) ... ok
+test_existing_evidence_not_overwritten (test_contract.Contracts.test_existing_evidence_not_overwritten) ... ok
+test_reject_failed_upstream (test_contract.Contracts.test_reject_failed_upstream) ... ok
+test_reject_old_commit (test_contract.Contracts.test_reject_old_commit) ... ok
+test_reject_schema (test_contract.Contracts.test_reject_schema) ... ok
+test_reject_wrong_artifact_kind (test_contract.Contracts.test_reject_wrong_artifact_kind) ... ok
+test_same_key_same_request_same_job (test_contract.Contracts.test_same_key_same_request_same_job) ... ok
+test_baseline_edge_can_be_traced_to_graph (test_student_241880496_e11e12.ProfileMapping.test_baseline_edge_can_be_traced_to_graph) ... ok
+test_change_refreshes_only_affected_target (test_student_241880496_e11e12.ProfileMapping.test_change_refreshes_only_affected_target) ... ok
+test_declared_targets_replace_fixture_names (test_student_241880496_e11e12.ProfileMapping.test_declared_targets_replace_fixture_names) ... ok
+test_executor_requires_digest_image (test_student_241880496_e11e12.ProfileMapping.test_executor_requires_digest_image) ... ok
+test_incremental_findings_equal_full_set (test_student_241880496_e11e12.ProfileMapping.test_incremental_findings_equal_full_set) ... ok
+test_profile_rejects_duplicate_fields_and_unknown_targets (test_student_241880496_e11e12.ProfileMapping.test_profile_rejects_duplicate_fields_and_unknown_targets) ... ok
+test_stale_commit_is_rejected_before_repair (test_student_241880496_e11e12.ProfileMapping.test_stale_commit_is_rejected_before_repair) ... ok
+test_unsupported_flag_is_rejected_explicitly (test_student_241880496_e11e12.ProfileMapping.test_unsupported_flag_is_rejected_explicitly) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.181s
+
+OK
+EXIT_CODE=0
