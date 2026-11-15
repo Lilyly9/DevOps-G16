@@ -1,0 +1,151 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-5fa8af3b38224eacb844da8200a7a000",
+  "trace_id": "trace-ab48eacfbf0740489f40e7d1cb49ae3e",
+  "kind": "full-check",
+  "commit": "199580a4b6d1bb449f62bf50784dc6c6d169e10e",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-3a62aef2ec674710959c60bef9dfd58a",
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h",
+        "evidence": [
+          {
+            "source": "system_call",
+            "trace_file": "t.14",
+            "line": 576,
+            "pid": 14,
+            "operation": "openat"
+          },
+          {
+            "source": "system_call",
+            "trace_file": "t.15",
+            "line": 20,
+            "pid": 15,
+            "operation": "openat"
+          }
+        ],
+        "declared_dependencies": [
+          "main.c",
+          "unused.h"
+        ]
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 1046,
+            "declaration": "main.o: main.c unused.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make",
+      "app"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "Dockerfile.broken": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "e11e12-project.json": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+      "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/work/e12-standard-final3-20261115/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "app"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "app",
+      "helper.o",
+      "main.o"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 2190
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-full/actual-graph.json",
+      "sha256": "1726bd27bdc0afc9cd093f11040e5127865f6ec34933c759f0480da05b5c5ea7",
+      "bytes": 1201
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-full/findings.json",
+      "sha256": "ca30ecaafb55a0d142e9fa24023c467a2131dcb5833f08c9bf2b39f332774ae6",
+      "bytes": 2703
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-cache.json",
+      "sha256": "44d01a3df46fb8525d89c2c12e6c4f1c32bd84d6358d247ae4e9ca8aab793f5e",
+      "bytes": 1658
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/project-profile.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-full/image-execution/01.json",
+      "sha256": "719f79639d64e6e34d84b29f31352d68ab6a51a29cc7e8f7e8e15c4cc6e861e6",
+      "bytes": 4521
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-scan/01.json",
+      "sha256": "0dda8656ec2337c2b1231e853adf561cce7edc697a9495af0e2d1f1667149897",
+      "bytes": 1296
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-scan/02.json",
+      "sha256": "0ee752e4b77b28cbaeaed72dca22ea27e66e8ac5e383983af00ead96b480cccd",
+      "bytes": 1172
+    },
+    {
+      "uri": "artifact://job-5fa8af3b38224eacb844da8200a7a000/baseline-scan/03.json",
+      "sha256": "874fc23d7187369e01fa7dc23ac1e65672298e32e571c40bb1ef7365247c969c",
+      "bytes": 1175
+    }
+  ],
+  "profile_sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+  "targets": {
+    "main.o": "main.c",
+    "helper.o": "helper.c"
+  },
+  "image_id": "sha256:3edd5fd39fd30a4a540c907339f82e20aec3767754372cfecef853c014b586a2"
+}

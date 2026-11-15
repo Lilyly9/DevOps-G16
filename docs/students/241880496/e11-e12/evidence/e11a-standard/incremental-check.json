@@ -1,0 +1,116 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-1b3f2e023cd8412ebcd8a3cbc72f9757",
+  "trace_id": "trace-c796e0bdda9c4b69a05f5681a3bca63c",
+  "kind": "incremental-check",
+  "commit": "473af31eb4a483d50d11d447bfa33184dd9d3ac1",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e11e12-ecache-1",
+    "profile_sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+    "commit": "473af31eb4a483d50d11d447bfa33184dd9d3ac1",
+    "key": {
+      "directives": {
+        "config.h": [
+          "#define VALUE 1"
+        ],
+        "extra.h": [
+          "#define EXTRA 0"
+        ],
+        "helper.c": [],
+        "main.c": [
+          "#include \"extra.h\"",
+          "#include <stdio.h>",
+          "#include \"config.h\""
+        ],
+        "unused.h": []
+      },
+      "recipes": [
+        "\tgcc main.o helper.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+        "\trm -f main.o helper.o app"
+      ],
+      "flags": [
+        "-O0"
+      ],
+      "compiler": "gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+      "targets": {
+        "main.o": "main.c",
+        "helper.o": "helper.c"
+      },
+      "config": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439"
+    },
+    "actual": {
+      "main.o": [
+        "config.h",
+        "extra.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "main.c",
+        "unused.h"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h"
+      },
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "extra.h"
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h"
+      }
+    ],
+    "added": [
+      [
+        "MISSING",
+        "main.o",
+        "extra.h"
+      ]
+    ],
+    "resolved": [],
+    "refreshed": [
+      "main.o"
+    ],
+    "reused": [
+      "helper.o"
+    ],
+    "invalidation": [
+      "main.c"
+    ],
+    "elapsed_s": 0.6308493929998349
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-1b3f2e023cd8412ebcd8a3cbc72f9757/incremental-report.json",
+      "sha256": "d6fe1711c3554072ef6e9927f06bbab22e244c5d741a11bee6272ffe166a0e31",
+      "bytes": 1740
+    },
+    {
+      "uri": "artifact://job-1b3f2e023cd8412ebcd8a3cbc72f9757/target-full/findings.json",
+      "sha256": "a561d8af72bddae1fdec886c4c33eaaadf7524bf75ef0c33a42c99201da2fb35",
+      "bytes": 3245
+    }
+  ],
+  "profile_sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+  "targets": {
+    "main.o": "main.c",
+    "helper.o": "helper.c"
+  }
+}

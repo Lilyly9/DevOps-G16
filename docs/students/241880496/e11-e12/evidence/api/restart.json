@@ -1,0 +1,29 @@
+{
+  "submitted": {
+    "schema_version": "e11e12-1",
+    "job_id": "job-040f71f3671e4c2b91a3431dfa8e059e",
+    "status": "QUEUED",
+    "idempotency_key": "a2-restart-20261115",
+    "request_hash": "2ed4290897469a7b73e7696082bfb56d57b4b6f2e0191480168214ad21b46957"
+  },
+  "observed_before_stop": [
+    "RUNNING"
+  ],
+  "job_after_restart": {
+    "schema_version": "e11e12-1",
+    "job_id": "job-040f71f3671e4c2b91a3431dfa8e059e",
+    "status": "FAILED",
+    "idempotency_key": "a2-restart-20261115",
+    "request_hash": "2ed4290897469a7b73e7696082bfb56d57b4b6f2e0191480168214ad21b46957",
+    "error": {
+      "code": "SERVER_RESTARTED",
+      "message": "Resubmit with a new key"
+    }
+  },
+  "completed_job_after_restart": {
+    "job_id": "job-d69c427ebd144cb59f3bc73d2edef2a7",
+    "status": "SUCCEEDED",
+    "trace_id": "trace-cb14c0fbbf134c4184d9a18c69b52efc"
+  },
+  "restart_expected": "unfinished job -> FAILED/SERVER_RESTARTED; completed job queryable"
+}
