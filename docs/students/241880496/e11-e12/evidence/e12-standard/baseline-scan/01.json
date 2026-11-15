@@ -1,0 +1,40 @@
+{
+  "image_id": "sha256:3edd5fd39fd30a4a540c907339f82e20aec3767754372cfecef853c014b586a2",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cap-add",
+    "SYS_PTRACE",
+    "--user",
+    "1000:1000",
+    "-e",
+    "HOME=/tmp",
+    "-e",
+    "PYTHONDONTWRITEBYTECODE=1",
+    "-e",
+    "GIT_CONFIG_COUNT=1",
+    "-e",
+    "GIT_CONFIG_KEY_0=safe.directory",
+    "-e",
+    "GIT_CONFIG_VALUE_0=*",
+    "-e",
+    "PYTHONPATH=/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/labs/e11e12/environment/services/buildchecker",
+    "-v",
+    "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16:/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16",
+    "-w",
+    "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/work/e12-standard-final3-20261115/base-project",
+    "sha256:3edd5fd39fd30a4a540c907339f82e20aec3767754372cfecef853c014b586a2",
+    "gcc",
+    "--version"
+  ],
+  "argv": [
+    "gcc",
+    "--version"
+  ],
+  "cwd": "/course/work/e12-standard-final3-20261115/base-project",
+  "exit_code": 0,
+  "stdout": "gcc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "e11e12-ecache-1",
+  "profile_sha256": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f",
+  "commit": "74fd1f2a86ea4e345245e41011f300aa94ae56c1",
+  "key": {
+    "directives": {
+      "config.h": [
+        "#ifndef CONFIG_H",
+        "#define CONFIG_H",
+        "#define DEFAULT_FIELD 1",
+        "#endif"
+      ],
+      "extra.h": [
+        "#ifndef EXTRA_H",
+        "#define EXTRA_H",
+        "#define EXTRA_FIELD 0",
+        "#endif"
+      ],
+      "main.c": [
+        "#include <stdio.h>",
+        "#include \"stats.h\""
+      ],
+      "stats.c": [
+        "#include <ctype.h>",
+        "#include <stdio.h>",
+        "#include \"config.h\"",
+        "#include \"stats.h\""
+      ],
+      "stats.h": [
+        "#ifndef STATS_H",
+        "#define STATS_H",
+        "#include <stdio.h>",
+        "#endif"
+      ]
+    },
+    "recipes": [
+      "\tgcc main.o stats.o -o app",
+      "\tgcc $(CFLAGS) -c main.c -o main.o",
+      "\tgcc $(CFLAGS) -c stats.c -o stats.o",
+      "\t@./app tests/sample.txt | grep -qx 'config=1 words=7 lines=3'",
+      "\trm -f main.o stats.o app"
+    ],
+    "flags": [
+      "-O1",
+      "-std=c11",
+      "-Wall"
+    ],
+    "compiler": "gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+    "targets": {
+      "main.o": "main.c",
+      "stats.o": "stats.c"
+    },
+    "config": "c3fb185f05ec347276630a0dde285e9ac09117d61d283a6aa6988666ccc4082f"
+  },
+  "actual": {
+    "stats.o": [
+      "config.h",
+      "stats.c",
+      "stats.h"
+    ],
+    "main.o": [
+      "main.c",
+      "stats.h"
+    ]
+  },
+  "declared": {
+    "main.o": [
+      "main.c",
+      "stats.h"
+    ],
+    "stats.o": [
+      "stats.c",
+      "stats.h"
+    ]
+  },
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "stats.o",
+      "dependency": "config.h"
+    }
+  ],
+  "added": [
+    [
+      "MISSING",
+      "stats.o",
+      "config.h"
+    ]
+  ],
+  "resolved": [],
+  "refreshed": [
+    "main.o",
+    "stats.o"
+  ],
+  "reused": [],
+  "invalidation": [
+    "NO_HISTORY"
+  ],
+  "elapsed_s": 0.1007672379998894
+}

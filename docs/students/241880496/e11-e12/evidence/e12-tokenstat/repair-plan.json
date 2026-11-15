@@ -1,0 +1,12 @@
+[
+  {
+    "target": "stats.o",
+    "dependency": "config.h",
+    "style": "direct"
+  },
+  {
+    "target": "stats.o",
+    "dependency": "extra.h",
+    "style": "direct"
+  }
+]

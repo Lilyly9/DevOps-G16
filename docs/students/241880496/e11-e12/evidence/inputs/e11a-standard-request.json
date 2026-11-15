@@ -1,0 +1,10 @@
+{
+  "mode": "e11-a",
+  "repo": "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/data/integration-sample/repo",
+  "base": "199580a4b6d1bb449f62bf50784dc6c6d169e10e",
+  "target": "473af31eb4a483d50d11d447bfa33184dd9d3ac1",
+  "candidate": "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/data/integration-sample/candidate.Dockerfile",
+  "fixed_report": "/mnt/c/Users/hydl/OneDrive/Desktop/codeing/DevOps-G16/data/integration-sample/fixed-md.json",
+  "expected_output": "1",
+  "build_timeout": 600
+}

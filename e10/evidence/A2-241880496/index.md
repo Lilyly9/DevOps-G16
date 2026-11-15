@@ -49,4 +49,4 @@
 - `结论.txt`、内部项目最终源码副本与 `project-git-log.txt`。
 - `steps/`：13 份逐步容器日志，末行 `STEP_EXIT_CODE=0`。
 - `unit-tests.log`：`python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v`，原 7 项 + 本人 3 项共 `Ran 10 tests ... OK`，退出 0。
-- `ci/`：GitHub Actions `e8e10-quality-gate` 运行元数据与关键日志摘录（见个人报告“Actions”段）。
+- `ci/`：GitHub Actions `e8e10-quality-gate` 运行元数据、关键日志摘录与最终 artifact 的下载校验清单（见个人报告“Actions”段）。

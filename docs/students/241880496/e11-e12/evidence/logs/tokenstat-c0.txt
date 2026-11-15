@@ -1,0 +1,14 @@
+74fd1f2 feat(e11-e12): import shared lab and A2 configurable EChecker
+ projects/tokenstat/.gitignore           |  2 ++
+ projects/tokenstat/Dockerfile.broken    |  5 +++++
+ projects/tokenstat/Makefile             | 18 ++++++++++++++++++
+ projects/tokenstat/README.md            | 12 ++++++++++++
+ projects/tokenstat/candidate.Dockerfile |  8 ++++++++
+ projects/tokenstat/config.h             |  6 ++++++
+ projects/tokenstat/e11e12-project.json  | 19 +++++++++++++++++++
+ projects/tokenstat/extra.h              |  6 ++++++
+ projects/tokenstat/main.c               | 20 ++++++++++++++++++++
+ projects/tokenstat/stats.c              | 29 +++++++++++++++++++++++++++++
+ projects/tokenstat/stats.h              | 14 ++++++++++++++
+ projects/tokenstat/tests/sample.txt     |  3 +++
+ 12 files changed, 142 insertions(+)

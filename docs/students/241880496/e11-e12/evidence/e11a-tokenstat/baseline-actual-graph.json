@@ -1,0 +1,86 @@
+[
+  {
+    "target": "app",
+    "dependency": "main.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9109",
+      "line": 97,
+      "pid": 9109,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "app",
+    "dependency": "stats.o",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9109",
+      "line": 100,
+      "pid": 9109,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "main.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9102",
+      "line": 80,
+      "pid": 9102,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "main.o",
+    "dependency": "stats.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9102",
+      "line": 632,
+      "pid": 9102,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "stats.o",
+    "dependency": "config.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9105",
+      "line": 692,
+      "pid": 9105,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "stats.o",
+    "dependency": "stats.c",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9105",
+      "line": 80,
+      "pid": 9105,
+      "operation": "openat"
+    }
+  },
+  {
+    "target": "stats.o",
+    "dependency": "stats.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9105",
+      "line": 693,
+      "pid": 9105,
+      "operation": "openat"
+    }
+  }
+]
