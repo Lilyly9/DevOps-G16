@@ -81,6 +81,7 @@
 | [environment.txt](evidence/logs/environment.txt) | 系统、工具链、runner 镜像 ID |
 | [source-sha.txt](evidence/logs/source-sha.txt) | 源码提交与最近提交 |
 | [ci-run.json](evidence/logs/ci-run.json) | 公共 CI run 43683416564（success）与 artifact 元数据 |
+| [runner-e11a.log](evidence/logs/runner-e11a.log) / [runner-e12.log](evidence/logs/runner-e12.log) | 官方 `run_e11e12.py run` 入口的实际输出与退出码 |
 | [run-commands.md](evidence/logs/run-commands.md) | 实际命令、OUT 与退出码 |
 | [数据与联调记录.csv](数据与联调记录.csv) | 按官方模板填写的 E11-A / E12 固定样例 / E12 真实项目 / API 记录 |
 

@@ -1,11 +1,14 @@
 # ADR-001：E12 项目配置、逐目标复用与同镜像执行
 
-- 状态：已采纳
+- 编号：ADR-001
 - 日期：2026-11-15
-- 决策人：A2 / 万宇 / 241880496
+- 作者：A2 / 万宇 / 241880496
+- 状态：已采纳
 - 相关：E11-A EChecker、E12 A 侧检测与报告交接
+- 输入输出字段：`e11e12-project.json`（targets/commands/program/header_change）→ `incremental-report.json`（commit/actual/declared/findings/refreshed/reused）→ `incremental-check.json`（schema_version/job_id/trace_id/kind/commit/data/artifacts）
+- 兼容性与测试：无配置时保留 `main.c/helper.c/config.h` 固定契约；`Ran 18 tests ... OK`；CI run 43683416564 success
 
-## 背景
+## 问题
 
 课程参考实现把对象目标 `main.o/helper.o`、程序 `./app`、输出 `1→2`、头文件 `config.h` 和 Make 变量都写死在 `labs/e8e10/lab.py`。真实项目接入需要：
 
@@ -13,7 +16,13 @@
 2. 能说明哪些目标刷新、哪些复用，而不是任一预处理行变化就全部刷新；
 3. 检测与复验必须实际运行在 DRAFT 构建出的镜像里，而不是只在 JSON 里传 `image_id`。
 
-## 决策
+## 候选方案
+
+1. 直接扩展 `labs/e8e10/lab.py`，把项目差异写进共享代码：改动最小，但污染旧 E8—E10 路线，且多人并行时冲突大。
+2. 在请求 JSON 中传全部目标/命令：不改代码，但配置不随 commit 版本化，报告无法自证。
+3. 项目根部 `e11e12-project.json`，按提交读取（采用）：配置与源码同版本，兼容旧固定契约。
+
+## 采用方案与原因
 
 ### 1. 项目配置放在目标提交根部：`e11e12-project.json`
 

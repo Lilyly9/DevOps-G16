@@ -1,0 +1,975 @@
+$ python3 run_e11e12.py run --request data/integration-sample/e12-container.json --out work/e12-runner-20261115
+IMAGE=course-e11e12:241880496
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-9b7c59787287442c8329758faf4ebccb",
+  "trace_id": "trace-6588801b786b457f8b15f9f55127b41d",
+  "status": "SUCCEEDED",
+  "stages": [
+    {
+      "name": "draft",
+      "artifact": {
+        "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft.json",
+        "sha256": "113bf3ff70d1371a2a303b8e305795cce215368f7515b7561c1d9767538accc1",
+        "bytes": 3455
+      }
+    },
+    {
+      "name": "full-check",
+      "artifact": {
+        "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/full-check.json",
+        "sha256": "0d7166662508bce49afebb2afc85819d9ddbba8cc4defde3612c81b57a1c8c9d",
+        "bytes": 5062
+      }
+    },
+    {
+      "name": "incremental-check",
+      "artifact": {
+        "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/incremental-check.json",
+        "sha256": "3bf999c65be64adbc4a229dc028a7d92ecd96f193152cdf1d5b151571a6e10dc",
+        "bytes": 3479
+      }
+    },
+    {
+      "name": "repair",
+      "artifact": {
+        "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/repair.json",
+        "sha256": "06ebb33f63bd373723838032b5bb1761996b2bab0902ac29c45ce4509fa8ac76",
+        "bytes": 1372
+      }
+    },
+    {
+      "name": "recheck",
+      "artifact": {
+        "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/recheck.json",
+        "sha256": "ca9f9bc0bf3ae2523384c2cabf8a4304c7dbe307ba289f35ac7373d1f3cff14f",
+        "bytes": 1940
+      }
+    }
+  ],
+  "base_commit": "199580a4b6d1bb449f62bf50784dc6c6d169e10e",
+  "target_commit": "473af31eb4a483d50d11d447bfa33184dd9d3ac1",
+  "profile_sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+  "targets": {
+    "main.o": "main.c",
+    "helper.o": "helper.c"
+  },
+  "image_id": "sha256:a7d2be5913a9247ac64c43e8cf4572e5cb2735a918732e0f5e9cc8f2dee67cf8",
+  "draft_image_toolchain": {
+    "gcc": "gcc (Debian 14.2.0-19) 14.2.0",
+    "make": "GNU Make 4.4.1"
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/Makefile",
+      "sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "bytes": 227
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/config.h",
+      "sha256": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/main.c",
+      "sha256": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+      "bytes": 113
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/base-project/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-cache.json",
+      "sha256": "bd2cf8ba381668896a708b5076726c0b38c2e79b8c8f9c595da3c912a342960a",
+      "bytes": 1657
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/actual-graph.json",
+      "sha256": "1726bd27bdc0afc9cd093f11040e5127865f6ec34933c759f0480da05b5c5ea7",
+      "bytes": 1201
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/build-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/clean-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/clean.log",
+      "sha256": "a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061",
+      "bytes": 26
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/declared-graph.json",
+      "sha256": "41981cb39b2e187b7c13d5ca0e9af2b760ab4f22d93315b963a240f7ca5bd6d9",
+      "bytes": 1202
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/findings.json",
+      "sha256": "077722a72c3329892be2bdc7c40f63030187ee351e0f0d244beca5abfaf5cee8",
+      "bytes": 2694
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/image-execution/01.json",
+      "sha256": "b06c94e2eae045de8ed4de6bb7062a1f1ba7b1ea35c300ab447dd3d0210f873c",
+      "bytes": 4458
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/make-db.txt",
+      "sha256": "a6ee2aa602f182938615bd1ac8c8cf42e7cd3b3248e3b66d576ae07defd6f4cc",
+      "bytes": 28167
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/processes.json",
+      "sha256": "d296ded42b13b78bb7db9c2f77471788952e7fe9d2345db787870a3fa2622bac",
+      "bytes": 1184
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/Makefile",
+      "sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "bytes": 227
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/app",
+      "sha256": "046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c",
+      "bytes": 16016
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/config.h",
+      "sha256": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/helper.o",
+      "sha256": "961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560",
+      "bytes": 1104
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/main.c",
+      "sha256": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+      "bytes": 113
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/main.o",
+      "sha256": "cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3",
+      "bytes": 1432
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/project/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.12",
+      "sha256": "170dd5fe081af6118847d63e58b1c16eade81e9329aaf3604cb2b4f220136a8a",
+      "bytes": 6461
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.13",
+      "sha256": "06af8adc33ab4a37bb123fba2aa04d76ed487efd7fcc9c2718f7c18a94fcfadc",
+      "bytes": 10516
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.14",
+      "sha256": "016f1df84d1c67f17308dd782dd61fc00464354760ae529f65ba83e9662736ed",
+      "bytes": 54011
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.15",
+      "sha256": "cd6bc997ae2cf626b1f8fc1abd5eb285c002cef57b9894f995837da16f156f9d",
+      "bytes": 2084
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.16",
+      "sha256": "5eabbe795690dd38f5d772f07b496601c70cecaa262db432096eb7dfe3febe14",
+      "bytes": 10511
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.17",
+      "sha256": "66c42f4049b5dddcd3a71ee33e725cdb993b1dbab710716b6eae909eb07cafa7",
+      "bytes": 9163
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.18",
+      "sha256": "9939621e72346a33a9d1e164909ef04a815f5b1f65c2871df062b2313cddfc6e",
+      "bytes": 2100
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.19",
+      "sha256": "9bfce69495866d38c5bbd91f07a1d41c56e279d7e611fd3b13aa56866d4f4642",
+      "bytes": 13054
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.20",
+      "sha256": "cdada58498901925e4484398eb56278b09d97be530d29ff0120d69a6cbb5b6b4",
+      "bytes": 11682
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-full/trace/t.21",
+      "sha256": "a232474e95cdfdc5aa7bfdf71806327257dcdffe584ae87d973b8aa6946a5900",
+      "bytes": 16972
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-scan/01.json",
+      "sha256": "0fb940133e40fb2b0bd0c05f9357b08699c361eaaa84e6b8f74bb07637cb69ec",
+      "bytes": 1278
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-scan/02.json",
+      "sha256": "518b666b6dbfe35a39bc44361271e1cd78ce24797675f8e6431a9049c9f88647",
+      "bytes": 1154
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/baseline-scan/03.json",
+      "sha256": "6ecab6b6f9f654938775aec3ae015629a42b6941796368e77a0cb6f33c189b0b",
+      "bytes": 1157
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/candidate.patch",
+      "sha256": "88074f66c291dcad1344c48f6a2b9ddd42d235d9d0415c85fb33310c5b7cb2af",
+      "bytes": 274
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/cleanup-stderr.log",
+      "sha256": "2885519e46ab2fc57052fa3670e548305a484254feed9294bc1c18c694b00bc1",
+      "bytes": 112
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/cleanup.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-01/Dockerfile",
+      "sha256": "98f8a78461d40fdf9976e59c5e4a9a7f1d7beb81402264cdecf11d81fd693e62",
+      "bytes": 214
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-01/build-stderr.log",
+      "sha256": "9504dee8aa103ff4f75b74d672519833ab355abbdaa5bf7643b95506d0e3d1f3",
+      "bytes": 1448
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-01/build-stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-02/Dockerfile",
+      "sha256": "0b1a1be748e5e7efa5f7f6bfc7f3be50fa3adb7545c70444e770b3f381228353",
+      "bytes": 498
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-02/build-stderr.log",
+      "sha256": "5f695fdecd2e0378953bb5641433d03c5fbee46c15c90a2bccc5eafe3d076338",
+      "bytes": 1988
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-02/build-stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-02/image-inspect.json",
+      "sha256": "b41c3712cb3994766ac460ac5c124ef7c00d2a41c8483f4bced6dfc897686755",
+      "bytes": 2474
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/iter-02/inspect-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/Makefile",
+      "sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "bytes": 227
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/config.h",
+      "sha256": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/main.c",
+      "sha256": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+      "bytes": 132
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/project/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/result.json",
+      "sha256": "0fe5cde8c0c6c18cbdb4b2bd4b046d03158f6100267c90d184d9e6ee7de322a1",
+      "bytes": 2668
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/verify-container-id.txt",
+      "sha256": "bfcc18247f9f23bf3bf740cd77590eb28266cca5b26fbc863b2d7cf7c5d0a22b",
+      "bytes": 64
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/verify-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-build/verify.log",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "bytes": 2
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-image/01.json",
+      "sha256": "12471c0ce28a9776643ba62a72d4f36fedf81de54564a027dcf9bb7091b6ea50",
+      "bytes": 1282
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft-image/02.json",
+      "sha256": "c11db0ee10a562f427569f33bd4f98c31bb989a723980aa64ad9536bb557def6",
+      "bytes": 1353
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/draft.json",
+      "sha256": "113bf3ff70d1371a2a303b8e305795cce215368f7515b7561c1d9767538accc1",
+      "bytes": 3455
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/actual-graph.json",
+      "sha256": "e49249396583214e0bdee8a27dabedbea3275468676ea7ce6bed3eb9b5269fbd",
+      "bytes": 1441
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/build-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/clean-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/clean.log",
+      "sha256": "a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061",
+      "bytes": 26
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/declared-graph.json",
+      "sha256": "77207fb4cabb923fb9c8b5f2c841bcae5b9d75593246063bf50f77bbcb0dd941",
+      "bytes": 1757
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/findings.json",
+      "sha256": "05f0241fef6ef73913d258f75d99a9c8d447b46e2231a3905621ffa244308e0f",
+      "bytes": 2179
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/image-execution/01.json",
+      "sha256": "aa523e7157c421d9255d74794a0be7679824640643386f224fda722530ec335c",
+      "bytes": 4101
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/make-db.txt",
+      "sha256": "3bfe8342b476c82f81cba5332747df5cbdff95111f602cc66d34935c9ca10715",
+      "bytes": 28640
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/processes.json",
+      "sha256": "d296ded42b13b78bb7db9c2f77471788952e7fe9d2345db787870a3fa2622bac",
+      "bytes": 1184
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/Makefile",
+      "sha256": "0f81bca34c5eba59329155cda11ac564ea0d05abc646badbb8ce831814805db0",
+      "bytes": 244
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/app",
+      "sha256": "046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c",
+      "bytes": 16016
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/config.h",
+      "sha256": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/helper.o",
+      "sha256": "961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560",
+      "bytes": 1104
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/main.c",
+      "sha256": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+      "bytes": 132
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/main.o",
+      "sha256": "cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3",
+      "bytes": 1432
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/project/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.12",
+      "sha256": "bc2116234faeaa44a80ecadf02c00be2dc87f4f9009e632ba66bc1b91511f712",
+      "bytes": 6791
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.13",
+      "sha256": "b4208d645287238bd4ef47d092b3d2aa9cf8bc6ef189a584ee7ba48dce0af979",
+      "bytes": 10515
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.14",
+      "sha256": "cfb8d11f0bd64fe4357ebf9e65803065c2edf6b3a160d39af3163693d4c4480e",
+      "bytes": 53663
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.15",
+      "sha256": "423d1c92bd6fc2869cc329006d7aec26eb7af93e8a4e25e2b19eb3f048a3fac0",
+      "bytes": 2084
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.16",
+      "sha256": "dc7545edd7a90f3a24f7b14a6de01275921f22189a235ec30d4cc346a84dc2b4",
+      "bytes": 10497
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.17",
+      "sha256": "3bbedafc018167667c24a86cf50abba56e92ac6a7a8ea00d60fc02f126ec4e4c",
+      "bytes": 9152
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.18",
+      "sha256": "57459c24792134f8599f2abbd14ba391690b6e7e7a5b2aacbc8923d32bfa615b",
+      "bytes": 2100
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.19",
+      "sha256": "9047029ec04cbe405aaedbec8666acd6b4e46eafba3b22235bf8a1bef7d49663",
+      "bytes": 13026
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.20",
+      "sha256": "c076442ff5bdc4a602dcb6b144275e202a3f4c5c7816e70d4377ec6d0a2eefe1",
+      "bytes": 11682
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/final-full/trace/t.21",
+      "sha256": "d95e257f27b204549893ab22e23d18387083ac748dccbe82f4bbe2aa0eca1521",
+      "bytes": 16916
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/full-check.json",
+      "sha256": "0d7166662508bce49afebb2afc85819d9ddbba8cc4defde3612c81b57a1c8c9d",
+      "bytes": 5062
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/incremental-check.json",
+      "sha256": "3bf999c65be64adbc4a229dc028a7d92ecd96f193152cdf1d5b151571a6e10dc",
+      "bytes": 3479
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/incremental-report.json",
+      "sha256": "211c0ce7d35ac788543b4a97788afbbaeff87dc6222a2cfbc5f7769409224a4f",
+      "bytes": 1733
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/logs/base-project-checkout.log",
+      "sha256": "aff10aa96635d9b7178b9c3d924f86dbe2a4242b82e36106d2426647c895df93",
+      "bytes": 46
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/logs/base-project-clone.log",
+      "sha256": "c03089bdfe6a84ad53673c51677c432457fa85f29a5b4830136b807b5b5d824e",
+      "bytes": 70
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/logs/base-project-resolve.log",
+      "sha256": "d5eb494619a64196580c8224a42ab0a93c7d6c5bc7da53e49d461b6cb0911cc0",
+      "bytes": 41
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/logs/target-project-checkout.log",
+      "sha256": "eccd7af50c8c835036f6fed558cebe8b7042dc57f3e4c172bacf8fef0c4ed0cc",
+      "bytes": 58
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/logs/target-project-clone.log",
+      "sha256": "8267c88b93bd2f9c417c169717dc8212e47d6c6d8bfd3921f96a81fd10ff8de4",
+      "bytes": 72
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/logs/target-project-resolve.log",
+      "sha256": "5e4ce45594b597e40a23382523dfadbd2a784b99524fc2cc687abac322d150a6",
+      "bytes": 41
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/project-profile.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/recheck.json",
+      "sha256": "ca9f9bc0bf3ae2523384c2cabf8a4304c7dbe307ba289f35ac7373d1f3cff14f",
+      "bytes": 1940
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/repair-plan.json",
+      "sha256": "76dc27c26c1c0935713f95fa702465478fcb116b054ad3ab77f873140f85a199",
+      "bytes": 172
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/repair.json",
+      "sha256": "06ebb33f63bd373723838032b5bb1761996b2bab0902ac29c45ce4509fa8ac76",
+      "bytes": 1372
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/request.json",
+      "sha256": "7aac59d6975c590748518b8ce02b80d495085762e18947c607e5f4da48433a92",
+      "bytes": 368
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/actual-graph.json",
+      "sha256": "e49249396583214e0bdee8a27dabedbea3275468676ea7ce6bed3eb9b5269fbd",
+      "bytes": 1441
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/build-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/clean-stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/clean.log",
+      "sha256": "a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061",
+      "bytes": 26
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/declared-graph.json",
+      "sha256": "41981cb39b2e187b7c13d5ca0e9af2b760ab4f22d93315b963a240f7ca5bd6d9",
+      "bytes": 1202
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/findings.json",
+      "sha256": "d4e728d661631e123c43835a1da5f04f1a15fc8b32cfc9926cbc2fdce10abbb5",
+      "bytes": 3219
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/image-execution/01.json",
+      "sha256": "6af743627ed716941211b2d097524ffc839b4192c9b3c982a0dbbc771c8f6726",
+      "bytes": 4831
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/make-db.txt",
+      "sha256": "3b8f84964825b6f9d459cec923ef06923b09c15e76f18474c3e614743c439d0a",
+      "bytes": 28165
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/processes.json",
+      "sha256": "d296ded42b13b78bb7db9c2f77471788952e7fe9d2345db787870a3fa2622bac",
+      "bytes": 1184
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/Makefile",
+      "sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+      "bytes": 227
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/app",
+      "sha256": "046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c",
+      "bytes": 16016
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/config.h",
+      "sha256": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/helper.o",
+      "sha256": "961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560",
+      "bytes": 1104
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/main.c",
+      "sha256": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+      "bytes": 132
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/main.o",
+      "sha256": "cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3",
+      "bytes": 1432
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/project/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.12",
+      "sha256": "ca8ac22a1687581035407c595c580481f3d5950f5d1dbbbb879f433456120a57",
+      "bytes": 6456
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.13",
+      "sha256": "0d9832b30f9451ae621a6b9434798a30cd913d426894969f29b118e535644681",
+      "bytes": 10506
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.14",
+      "sha256": "1f0610aa9cc29836099f04c4ec16bcd448b65b241efa3ccdaaa21b7c590820c9",
+      "bytes": 53666
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.15",
+      "sha256": "385eb1e8608c8c5359f29d87bfab080c5705053e044b136be181236824307c26",
+      "bytes": 2084
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.16",
+      "sha256": "39f56658d9143a1fc24dac6ceb9c364de8f52cbd88712f18360aad160c586ce1",
+      "bytes": 10501
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.17",
+      "sha256": "911b3655cbc3a8bb76a3aec580965f417b8f838da24394d80db180ebf1a68b03",
+      "bytes": 9154
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.18",
+      "sha256": "9a85762b5339b5341d9c8c235c3df5ff770febffcce8f55fabbb4ea144d93436",
+      "bytes": 2095
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.19",
+      "sha256": "3a127462f8981bcd2104b715f2e0da0dfbc4bbf31a2ebe0f38d5585f7852170f",
+      "bytes": 13034
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.20",
+      "sha256": "0b66c0d2967e094a0f1965df9bd862cb4406bae324088b7d5bb8b85b83d12fca",
+      "bytes": 11682
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-full/trace/t.21",
+      "sha256": "8659b2ff4c82a95cb0a78e05cef9c51ca4dc3f042c73a6baf41463d46767618f",
+      "bytes": 16932
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/Makefile",
+      "sha256": "0f81bca34c5eba59329155cda11ac564ea0d05abc646badbb8ce831814805db0",
+      "bytes": 244
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/config.h",
+      "sha256": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/main.c",
+      "sha256": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+      "bytes": 132
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-project/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-scan/01.json",
+      "sha256": "12471c0ce28a9776643ba62a72d4f36fedf81de54564a027dcf9bb7091b6ea50",
+      "bytes": 1282
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/target-scan/02.json",
+      "sha256": "3cec280338fed86d76b0db7bf06bf12cd7ac9dae1cdd38c3559db9ad914b56f1",
+      "bytes": 1166
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/build.log",
+      "sha256": "df6c3464c6f68c3bc524d4f7cbbda0eeff5247fa931347baac34a884ed79cedc",
+      "bytes": 113
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/incremental.log",
+      "sha256": "1ee4d4ecdbb3f223a8e24b1395bb0dd948280a884f7d91aa23c962404c068e7f",
+      "bytes": 55
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/recheck.json",
+      "sha256": "f6586d744c8797ce3c2ba97c5841214ba349e686a1ad075acf528a0af747d8f5",
+      "bytes": 1584
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/.gitignore",
+      "sha256": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+      "bytes": 8
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/Dockerfile.broken",
+      "sha256": "93c5c85d2386f963bbad6bd937c806d5690778e85105e9a97699418fa7645f5d",
+      "bytes": 142
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/Makefile",
+      "sha256": "0f81bca34c5eba59329155cda11ac564ea0d05abc646badbb8ce831814805db0",
+      "bytes": 244
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/app",
+      "sha256": "6a4a3450fc86affb969e7bc669337c4509452999cb2e49321a8fe40863e261e1",
+      "bytes": 16016
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/config.h",
+      "sha256": "69973c572daaea0005b15535dffa2f73cfac069a6f179fbca2ed88737355cd9b",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/e11e12-project.json",
+      "sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+      "bytes": 411
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/extra.h",
+      "sha256": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+      "bytes": 16
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/helper.c",
+      "sha256": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+      "bytes": 28
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/helper.o",
+      "sha256": "961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560",
+      "bytes": 1104
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/main.c",
+      "sha256": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+      "bytes": 132
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/main.o",
+      "sha256": "a2d01a76cec633ec5a868a1eb3e07a6b5ace3565147aa057f76c551f902241c0",
+      "bytes": 1432
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/sandbox/unused.h",
+      "sha256": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37",
+      "bytes": 13
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation/validation.json",
+      "sha256": "ed3694eb4906be563d4540c22cbaea60b704ed930c47f6e6a5bbee6cef8d8a7c",
+      "bytes": 362
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/01.json",
+      "sha256": "8ea158514bfa15adf095969e5a0c88ce6ffda7415ec7d09e73ed05d1634a4f86",
+      "bytes": 1074
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/02.json",
+      "sha256": "de3e09b06a667668d884b4081dc6a54f04aedd9e8915776150e9d62ea82b6e73",
+      "bytes": 1133
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/03.json",
+      "sha256": "b4bed89d1e519ba441e8ba7fdb5489bb50df7abcc4363b5f10377982728d3b22",
+      "bytes": 1026
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/04.json",
+      "sha256": "df8ae356d763a1d396572cd0b674d57564e9e462b0b5b28373a283cd206338f5",
+      "bytes": 1100
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/05.json",
+      "sha256": "df7b3d8dc0f20131bd5409cb65fd36e1d6d1c6678c15417c006de8bde94876e3",
+      "bytes": 1026
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/06.json",
+      "sha256": "eb840f62a9e83e7286ed77434febcb2664cf0408c0120681148e6596209c818a",
+      "bytes": 1290
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/07.json",
+      "sha256": "873b26edb5db7235786ad154253cb23be70c623f23e3a17d38f03245c051b5f4",
+      "bytes": 1174
+    },
+    {
+      "uri": "artifact://job-9b7c59787287442c8329758faf4ebccb/validation-image/08.json",
+      "sha256": "19110000efba1bacd67e6cff6d8eb965fde06e9f731f36ff6a1bd9299736f2ec",
+      "bytes": 1169
+    }
+  ]
+}
+E12_EXIT_CODE=0

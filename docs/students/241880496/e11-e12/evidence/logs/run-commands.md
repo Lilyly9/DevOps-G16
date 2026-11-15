@@ -8,6 +8,8 @@
 | 单测 | `PYTHONPATH=labs/e11e12:labs/e8e10:labs/e11e12/vendor python3 -m unittest discover -s labs/e11e12 -p 'test_*.py' -v` | [unit-tests.log](unit-tests.log) | 0（18 tests OK） |
 | 样例生成 | `PYTHONPATH=labs/e11e12:labs/e8e10:labs/e11e12/vendor python3 labs/e11e12/prepare.py` | `data/integration-sample` | 0 |
 | E11-A 固定样例 | `PYTHONPATH=... python3 labs/e11e12/pipeline.py --request data/integration-sample/e11-a.json --out work/e11a-standard-final-20261115` | `work/e11a-standard-final-20261115` | 0 |
+| E11-A 官方入口 | `E11E12_DOCKER_HOST_ROOT=<repo> python3 run_e11e12.py run --request data/integration-sample/e11-a-container.json --out work/e11a-runner-20261115` | `work/e11a-runner-20261115` | 0（[日志](runner-e11a.log)） |
+| E12 官方入口 | `E11E12_DOCKER_HOST_ROOT=<repo> python3 run_e11e12.py run --request data/integration-sample/e12-container.json --out work/e12-runner-20261115` | `work/e12-runner-20261115` | 0（[日志](runner-e12.log)） |
 | E11-A 自主项目 | `PYTHONPATH=... python3 labs/e11e12/pipeline.py --request data/e11a-tokenstat.json --out work/e11a-tokenstat-final-20261115` | `work/e11a-tokenstat-final-20261115` | 0 |
 | 服务镜像 | `docker build --build-arg BASE_IMAGE=python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 -f labs/e11e12/environment/services/buildchecker/Dockerfile -t course-e11e12:241880496 labs/e11e12/environment` | `course-e11e12:241880496` | 0 |
 | E12 固定样例 | `docker run ... course-e11e12:241880496 python3 labs/e11e12/pipeline.py --request data/integration-sample/e12-container.json --out work/e12-standard-final3-20261115` | `work/e12-standard-final3-20261115` | 0 |
