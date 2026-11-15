@@ -1,0 +1,1 @@
+A1 E9：C1构建重编main.o但依赖图复用；C2刷新并新增extra.h MD；C3补声明消除两项MD、RD保留。

@@ -1,0 +1,1 @@
+A1间接include：新增extra.h实际依赖和MD；两个对象保守刷新；增量/全量/动态BuildChecker投影一致。

@@ -1,0 +1,2 @@
+A1_INDIRECT_INCLUDE_EXTENSION_PASS [['MISSING', 'main.o', 'extra.h']] ['main.o', 'helper.o']
+STEP_EXIT_CODE=0

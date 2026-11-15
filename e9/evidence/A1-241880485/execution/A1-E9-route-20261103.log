@@ -1,0 +1,67 @@
+仓库=/root/241880485/DevOps-G16-e8-A1-20261103
+学号=241880485
+镜像=course-e8e10:241880485
+本次证据目录=work/e9-A-manual.eqLOHp
+CREATED work/e9-A-manual.eqLOHp/project
+STEP_EXIT_CODE=0
+/root/241880485/DevOps-G16-e8-A1-20261103
+18a79582672a71d486abc656bc9007d4aebdceab
+CFLAGS = -O0
+app: main.o helper.o
+	gcc main.o helper.o -o app
+main.o: main.c unused.h
+	gcc $(CFLAGS) -c main.c -o main.o
+helper.o: helper.c
+	gcc $(CFLAGS) -c helper.c -o helper.o
+.PHONY: clean
+clean:
+	rm -f main.o helper.o app
+#include <stdio.h>
+#include "config.h"
+int helper(void);
+int main(void){printf("%d\n",VALUE+helper());return 0;}
+#define VALUE 1
+int helper(void){return 0;}
+a817cc0 C0 baseline
+C0_BUILD_AND_BASELINE_PASS
+STEP_EXIT_CODE=0
+C1 8e337b25d26c32f231f711f447c2d6399b435d4d
+gcc -O0 -c main.c -o main.o
+gcc main.o helper.o -o app
+
+STEP_EXIT_CODE=0
+C1_REUSE_PASS ['main.o', 'helper.o']
+STEP_EXIT_CODE=0
+C2 02e714436272025bcce1ec9983a2be57a0a93e93
+gcc -O0 -c main.c -o main.o
+gcc main.o helper.o -o app
+
+STEP_EXIT_CODE=0
+C2_REFRESH_PASS [['MISSING', 'main.o', 'extra.h']]
+STEP_EXIT_CODE=0
+C3 35785ee1fa73e80c22a6c4f1067ec303c0a5fb05
+CFLAGS = -O0
+app: main.o helper.o
+	gcc main.o helper.o -o app
+main.o: main.c unused.h config.h extra.h
+	gcc $(CFLAGS) -c main.c -o main.o
+helper.o: helper.c
+	gcc $(CFLAGS) -c helper.c -o helper.o
+.PHONY: clean
+clean:
+	rm -f main.o helper.o app
+
+STEP_EXIT_CODE=0
+C3_RESOLVED_PASS [['MISSING', 'main.o', 'config.h'], ['MISSING', 'main.o', 'extra.h']]
+STEP_EXIT_CODE=0
+a817cc0 C0 baseline
+8e337b2 C1 body change
+02e7144 C2 include change
+35785ee C3 repair declarations
+baseline a817cc09960456b4eac8762d10d69037bf4aa767 [] ['main.o', 'helper.o'] [['MISSING', 'main.o', 'config.h'], ['REDUNDANT', 'main.o', 'unused.h']] []
+C1 8e337b25d26c32f231f711f447c2d6399b435d4d ['main.o', 'helper.o'] [] [] []
+C2 02e714436272025bcce1ec9983a2be57a0a93e93 [] ['main.o', 'helper.o'] [['MISSING', 'main.o', 'extra.h']] []
+C3 35785ee1fa73e80c22a6c4f1067ec303c0a5fb05 ['main.o', 'helper.o'] [] [] [['MISSING', 'main.o', 'config.h'], ['MISSING', 'main.o', 'extra.h']]
+A1_E9_COMPLETE_INPUT_AND_HISTORY_CHECK_PASS
+STEP_EXIT_CODE=0
+FINISHED_OUT=work/e9-A-manual.eqLOHp

@@ -1,0 +1,280 @@
+{
+  "number": 13,
+  "url": "https://github.com/Lilyly9/DevOps-G16/pull/13",
+  "title": "E8–E10：接入课程代码与共享质量检查",
+  "head": "teaching/e8-e10",
+  "head_sha": "7f6a448e9a85b37f81c47c9a949d834b925dea34",
+  "base": "main",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "mergeable_state": "clean",
+  "checks": [
+    {
+      "name": "e7-a-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41566357733/job/125688762485"
+    },
+    {
+      "name": "e7-b-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41566357749/job/125688762266"
+    },
+    {
+      "name": "e8e10-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41566357606/job/125688761529"
+    },
+    {
+      "name": "e7-a-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41566336748/job/125688688196"
+    },
+    {
+      "name": "e7-b-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41566336734/job/125688688182"
+    },
+    {
+      "name": "e8e10-quality-gate",
+      "status": "completed",
+      "conclusion": "success",
+      "details_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41566336814/job/125688687791"
+    }
+  ],
+  "files": [
+    {
+      "path": ".github/workflows/e8e10.yml",
+      "status": "added",
+      "additions": 29,
+      "deletions": 0
+    },
+    {
+      "path": ".gitignore",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0
+    },
+    {
+      "path": "docs/course/E8-E10_IMPORT.md",
+      "status": "added",
+      "additions": 26,
+      "deletions": 0
+    },
+    {
+      "path": "e10/README.md",
+      "status": "added",
+      "additions": 12,
+      "deletions": 0
+    },
+    {
+      "path": "e8/README.md",
+      "status": "added",
+      "additions": 12,
+      "deletions": 0
+    },
+    {
+      "path": "e9/README.md",
+      "status": "added",
+      "additions": 12,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/.gitattributes",
+      "status": "added",
+      "additions": 3,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/.dockerignore",
+      "status": "added",
+      "additions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/.env.example",
+      "status": "added",
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/.github/workflows/e7-quality-gate.yml",
+      "status": "added",
+      "additions": 80,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/.gitignore",
+      "status": "added",
+      "additions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/Makefile",
+      "status": "added",
+      "additions": 66,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/README.md",
+      "status": "added",
+      "additions": 7,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/compose.yaml",
+      "status": "added",
+      "additions": 17,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/fixtures/md-rd/Makefile",
+      "status": "added",
+      "additions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/fixtures/md-rd/config.h",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/fixtures/md-rd/main.c",
+      "status": "added",
+      "additions": 3,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/fixtures/md-rd/unused.h",
+      "status": "added",
+      "additions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/requirements-dev.in",
+      "status": "added",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/requirements-dev.lock",
+      "status": "added",
+      "additions": 22,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/scripts/doctor.py",
+      "status": "added",
+      "additions": 116,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/scripts/lab_cloud.py",
+      "status": "added",
+      "additions": 135,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/scripts/run_e7_a_gate.py",
+      "status": "added",
+      "additions": 140,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/scripts/secret_scan.py",
+      "status": "added",
+      "additions": 105,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/scripts/verify_e6_evidence.py",
+      "status": "added",
+      "additions": 40,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/Dockerfile",
+      "status": "added",
+      "additions": 38,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/buildchecker/__init__.py",
+      "status": "added",
+      "additions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/buildchecker/__main__.py",
+      "status": "added",
+      "additions": 3,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/buildchecker/cli.py",
+      "status": "added",
+      "additions": 40,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/buildchecker/fullcheck.py",
+      "status": "added",
+      "additions": 394,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/buildchecker/smoke.py",
+      "status": "added",
+      "additions": 47,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/pytest.ini",
+      "status": "added",
+      "additions": 4,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/tests/test_cli.py",
+      "status": "added",
+      "additions": 24,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/services/buildchecker/tests/test_fullcheck.py",
+      "status": "added",
+      "additions": 114,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/environment/tests/e7/test_e7_a_gate.py",
+      "status": "added",
+      "additions": 42,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/lab.py",
+      "status": "added",
+      "additions": 206,
+      "deletions": 0
+    },
+    {
+      "path": "labs/e8e10/test_profile.py",
+      "status": "added",
+      "additions": 42,
+      "deletions": 0
+    },
+    {
+      "path": "run_lab.py",
+      "status": "added",
+      "additions": 17,
+      "deletions": 0
+    }
+  ]
+}
