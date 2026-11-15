@@ -1,0 +1,19 @@
+内部受测项目提交历史（work/e9-A-manual.8b1g7u/project）
+2be1465 C0 baseline
+ .gitignore |  2 ++
+ Makefile   | 10 ++++++++++
+ config.h   |  1 +
+ extra.h    |  1 +
+ helper.c   |  1 +
+ main.c     |  4 ++++
+ unused.h   |  1 +
+ 7 files changed, 20 insertions(+)
+b445453 C1 body change
+ main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+181b6b2 C2 include change
+ main.c | 1 +
+ 1 file changed, 1 insertion(+)
+e19c36d C3 repair declarations
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)

@@ -1,0 +1,10 @@
+A E8：main.o缺config.h，冗余unused.h；历史图来源为本次BuildChecker；未变化时两个目标复用。
+baseline.json
+buildchecker
+environment-image-id.txt
+incremental.json
+project
+steps
+student-source-commit.txt
+结论.txt
+STEP_EXIT_CODE=0

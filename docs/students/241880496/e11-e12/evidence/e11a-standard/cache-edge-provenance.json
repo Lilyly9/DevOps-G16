@@ -1,0 +1,26 @@
+{
+  "selected_edge": {
+    "target": "main.o",
+    "dependency": "config.h",
+    "kind": "ACTUAL_READ_OPEN",
+    "evidence": {
+      "source": "system_call",
+      "trace_file": "t.9028",
+      "line": 594,
+      "pid": 9028,
+      "operation": "openat"
+    }
+  },
+  "cache_actual": [
+    "config.h",
+    "main.c"
+  ],
+  "in_baseline_cache": true,
+  "cache_commit": "199580a4b6d1bb449f62bf50784dc6c6d169e10e",
+  "profile_sha256": "bdade2cdd758de78a4c92731c4f2c1ddc13ae143203414a9f0ff74aa23484439",
+  "reused_targets": [],
+  "refreshed_targets": [
+    "main.o",
+    "helper.o"
+  ]
+}

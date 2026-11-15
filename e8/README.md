@@ -6,6 +6,8 @@
 | --- | --- | --- | --- |
 | A1 | A | 真实基线/复用 | 标准/扩展实测通过，8项容器测试OK；[证据](evidence/A1-241880485/index.md)、[报告](../docs/students/241880485/e8-e10/个人报告.md)；[PR #15](https://github.com/Lilyly9/DevOps-G16/pull/15)三门禁成功，待组内审查 |
 | B1 | B | 固定MD/候选/旧报告拒绝 | 待本人填 |
+| A1 | A | 真实基线/复用 | 待本人填 |
+| B1 | B | 固定MD/候选/旧报告拒绝 | 已完成 2026-11-03，OUT=work/e8-B-manual.qsW6Xo，见 [evidence/B1-241880555](evidence/B1-241880555/index.md) |
 
 个人分支 `student/<学号>/e8-e10`；个人报告/ADR/AI_USAGE 位于 `docs/students/<学号>/e8-e10/`。完整原件在本人 `work/`，阶段精选证据/索引放本目录 `evidence/<角色>-<学号>/`。
 

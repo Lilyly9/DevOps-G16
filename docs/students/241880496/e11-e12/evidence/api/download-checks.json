@@ -1,0 +1,42 @@
+[
+  {
+    "file": "incremental-check.json",
+    "sha256": "48ca7c20db3c1557ee7ded74b1f083fe94aaa95e38e0451c34493aef2cc2f3e9",
+    "header": "48ca7c20db3c1557ee7ded74b1f083fe94aaa95e38e0451c34493aef2cc2f3e9",
+    "manifest": "48ca7c20db3c1557ee7ded74b1f083fe94aaa95e38e0451c34493aef2cc2f3e9",
+    "manifest_match": true,
+    "header_match": true
+  },
+  {
+    "file": "repair.json",
+    "sha256": "42d3aebff50ee74c60561e1af72eb5586aece540308f48001ab6a84a60b456d6",
+    "header": "42d3aebff50ee74c60561e1af72eb5586aece540308f48001ab6a84a60b456d6",
+    "manifest": "42d3aebff50ee74c60561e1af72eb5586aece540308f48001ab6a84a60b456d6",
+    "manifest_match": true,
+    "header_match": true
+  },
+  {
+    "file": "recheck.json",
+    "sha256": "d38b536391982da03564e8d1a107885a70a81c54996d6e3164a0442e32a4888f",
+    "header": "d38b536391982da03564e8d1a107885a70a81c54996d6e3164a0442e32a4888f",
+    "manifest": "d38b536391982da03564e8d1a107885a70a81c54996d6e3164a0442e32a4888f",
+    "manifest_match": true,
+    "header_match": true
+  },
+  {
+    "file": "candidate.patch",
+    "sha256": "88074f66c291dcad1344c48f6a2b9ddd42d235d9d0415c85fb33310c5b7cb2af",
+    "header": "88074f66c291dcad1344c48f6a2b9ddd42d235d9d0415c85fb33310c5b7cb2af",
+    "manifest": "88074f66c291dcad1344c48f6a2b9ddd42d235d9d0415c85fb33310c5b7cb2af",
+    "manifest_match": true,
+    "header_match": true
+  },
+  {
+    "file": "validation/validation.json",
+    "sha256": "ed3694eb4906be563d4540c22cbaea60b704ed930c47f6e6a5bbee6cef8d8a7c",
+    "header": "ed3694eb4906be563d4540c22cbaea60b704ed930c47f6e6a5bbee6cef8d8a7c",
+    "manifest": "ed3694eb4906be563d4540c22cbaea60b704ed930c47f6e6a5bbee6cef8d8a7c",
+    "manifest_match": true,
+    "header_match": true
+  }
+]

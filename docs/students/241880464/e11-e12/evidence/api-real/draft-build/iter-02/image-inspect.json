@@ -1,0 +1,64 @@
+[
+    {
+        "Architecture": "amd64",
+        "Author": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Config": {
+            "ArgsEscaped": true,
+            "Cmd": [
+                "./transfer-eta",
+                "100"
+            ],
+            "Entrypoint": null,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.16",
+                "PYTHON_SHA256=f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d"
+            ],
+            "Labels": null,
+            "OnBuild": null,
+            "User": "",
+            "Volumes": null,
+            "WorkingDir": "/work"
+        },
+        "Created": "2026-11-14T12:22:17.666534926+08:00",
+        "Descriptor": {
+            "digest": "sha256:6c4b957f684542337fc1bf85f8809bcc0ff5da227858f4c6f0b76f58ac2cdd1b",
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "size": 856
+        },
+        "DockerVersion": "",
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Id": "sha256:6c4b957f684542337fc1bf85f8809bcc0ff5da227858f4c6f0b76f58ac2cdd1b",
+        "Metadata": {
+            "LastTagTime": "2026-11-15T05:07:12.52274436Z"
+        },
+        "Os": "linux",
+        "Parent": "",
+        "RepoDigests": [
+            "e6-draft-replay@sha256:6c4b957f684542337fc1bf85f8809bcc0ff5da227858f4c6f0b76f58ac2cdd1b"
+        ],
+        "RepoTags": [
+            "e6-draft-replay:94bdafe70ee14553a47d9038b500713e-2"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:15f1c8eb1ab18eae260c7fb6296434cbe1ff0e1e30fd814ae92a80dd54005e62",
+                "sha256:285510654d1d6a26507ed6576cae8fa995ba16469050787032499e9a34cbe9f5",
+                "sha256:acbf34fa608c522642659b109edfd70959b7c26593ea51141f3d339cc1875cfd",
+                "sha256:d175833b7147479e4e08f4f5d9dd2055b5ee746dc2f73520462468538d168bf6",
+                "sha256:31684bdb7386cfb4dd8a4fddb8d50edc6c0d460e4071fcb28fdce33c9984dbd9",
+                "sha256:3a19b81f6b45929d623dbc13975940ab35dd2903480d4f728c4650372a79f441",
+                "sha256:049eacdd3a7e1b449609e51bc62350b54d41ca4e32a1f2b681a345915690af71",
+                "sha256:744124952fcea71e3a026906208111bb2af7f0810d4d652cbd11e7c399fa8424",
+                "sha256:f630048720571e48522660a1f37957d68bc0231753e018ce21064b8fd60f006b"
+            ],
+            "Type": "layers"
+        },
+        "Size": 150021257
+    }
+]

@@ -1,0 +1,91 @@
+{
+  "schema_version": "e8e10-1",
+  "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+  "commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "key": {
+    "directives": {
+      "defaults.h": [
+        "#ifndef TRANSFER_ETA_DEFAULTS_H",
+        "#define TRANSFER_ETA_DEFAULTS_H",
+        "#define DEFAULT_RATE_MIB_S 8",
+        "#endif"
+      ],
+      "estimate.c": [
+        "#include \"estimate.h\""
+      ],
+      "estimate.h": [
+        "#ifndef TRANSFER_ETA_ESTIMATE_H",
+        "#define TRANSFER_ETA_ESTIMATE_H",
+        "#include <stdint.h>",
+        "#endif"
+      ],
+      "eta_cli.c": [
+        "#include <errno.h>",
+        "#include <inttypes.h>",
+        "#include <stdio.h>",
+        "#include <string.h>",
+        "#include \"defaults.h\"",
+        "#include \"estimate.h\""
+      ]
+    },
+    "recipes": [
+      "\tgcc $(CFLAGS) eta_cli.o estimate.o -o transfer-eta",
+      "\tgcc $(CFLAGS) -c eta_cli.c -o eta_cli.o",
+      "\tgcc $(CFLAGS) -c estimate.c -o estimate.o",
+      "\trm -f transfer-eta transfer-eta.exe eta_cli.o estimate.o",
+      "\tsh tests/smoke.sh"
+    ],
+    "flags": "-O0",
+    "compiler": "gcc (Debian 14.2.0-19) 14.2.0",
+    "targets": {
+      "eta_cli.o": "eta_cli.c",
+      "estimate.o": "estimate.c"
+    }
+  },
+  "actual": {
+    "eta_cli.o": [
+      "defaults.h",
+      "estimate.h",
+      "eta_cli.c"
+    ],
+    "estimate.o": [
+      "estimate.c",
+      "estimate.h"
+    ]
+  },
+  "declared": {
+    "eta_cli.o": [
+      "estimate.h",
+      "eta_cli.c"
+    ],
+    "estimate.o": [
+      "estimate.c",
+      "estimate.h"
+    ]
+  },
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "eta_cli.o",
+      "dependency": "defaults.h"
+    }
+  ],
+  "added": [
+    [
+      "MISSING",
+      "eta_cli.o",
+      "defaults.h"
+    ]
+  ],
+  "resolved": [],
+  "refreshed": [
+    "eta_cli.o",
+    "estimate.o"
+  ],
+  "reused": [],
+  "invalidation": [
+    "defaults.h",
+    "eta_cli.c"
+  ],
+  "elapsed_s": 0.5445492002181709
+}

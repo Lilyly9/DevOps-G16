@@ -1,0 +1,88 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-eec50010f9044119892ad3e040df5ae8",
+  "trace_id": "trace-36f44ebfa1004a689605ef8cbd32fa06",
+  "kind": "incremental-check",
+  "commit": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e8e10-1",
+    "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+    "commit": "8e337b25d26c32f231f711f447c2d6399b435d4d",
+    "key": {
+      "directives": {
+        "config.h": [
+          "#define VALUE 1"
+        ],
+        "extra.h": [
+          "#define EXTRA 0"
+        ],
+        "helper.c": [],
+        "main.c": [
+          "#include <stdio.h>",
+          "#include \"config.h\""
+        ],
+        "unused.h": []
+      },
+      "recipes": [
+        "\tgcc main.o helper.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+        "\trm -f main.o helper.o app"
+      ],
+      "flags": "-O0",
+      "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+    },
+    "actual": {
+      "main.o": [
+        "config.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "main.c",
+        "unused.h"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h"
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h"
+      }
+    ],
+    "added": [],
+    "resolved": [],
+    "refreshed": [],
+    "reused": [
+      "main.o",
+      "helper.o"
+    ],
+    "invalidation": [],
+    "elapsed_s": 0.0016396441496908665
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-eec50010f9044119892ad3e040df5ae8/incremental-report.json",
+      "sha256": "e457b6807e1d45d0ce5ad6e0ab5c124626f1bbcdce5f3f6d05b7e14b85e2a245",
+      "bytes": 1288
+    },
+    {
+      "uri": "artifact://job-eec50010f9044119892ad3e040df5ae8/target-full/findings.json",
+      "sha256": "232e60ad5f20d9eb9657ddf68031a6bc1e3eff372e01da21229a8ab0306712dd",
+      "bytes": 2481
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+IMAGE=course-e11e12:241880485
+test_accept_current_report (test_contract.Contracts.test_accept_current_report) ... ok
+test_api_rejects_repo_outside_data (test_contract.Contracts.test_api_rejects_repo_outside_data) ... ok
+test_artifact_uses_relative_uri_and_content_hash (test_contract.Contracts.test_artifact_uses_relative_uri_and_content_hash) ... ok
+test_changed_artifact_is_rejected (test_contract.Contracts.test_changed_artifact_is_rejected) ... ok
+test_existing_evidence_not_overwritten (test_contract.Contracts.test_existing_evidence_not_overwritten) ... ok
+test_reject_failed_upstream (test_contract.Contracts.test_reject_failed_upstream) ... ok
+test_reject_old_commit (test_contract.Contracts.test_reject_old_commit) ... ok
+test_reject_schema (test_contract.Contracts.test_reject_schema) ... ok
+test_reject_wrong_artifact_kind (test_contract.Contracts.test_reject_wrong_artifact_kind) ... ok
+test_same_key_same_request_same_job (test_contract.Contracts.test_same_key_same_request_same_job) ... ok
+test_header_edit_replaces_only_one_exact_line_preserving_other_bytes (test_project_profile.ProjectProfileTests.test_header_edit_replaces_only_one_exact_line_preserving_other_bytes) ... ok
+test_profile_reads_configured_names_and_checks_both_git_snapshots (test_project_profile.ProjectProfileTests.test_profile_reads_configured_names_and_checks_both_git_snapshots) ... ok
+test_rejects_paths_and_non_declarative_program_arguments (test_project_profile.ProjectProfileTests.test_rejects_paths_and_non_declarative_program_arguments) ... ok
+test_nested_checkout_keeps_commit_and_excludes_sibling_content (test_project_snapshot.ProjectSnapshotTests.test_nested_checkout_keeps_commit_and_excludes_sibling_content) ... ok
+test_project_path_rejects_traversal_and_pattern_syntax (test_project_snapshot.ProjectSnapshotTests.test_project_path_rejects_traversal_and_pattern_syntax) ... ok
+test_refuses_inspected_container_with_different_image (test_student_241880485.DraftExecutorTests.test_refuses_inspected_container_with_different_image) ... ok
+test_rejects_mutable_or_incomplete_image_reference (test_student_241880485.DraftExecutorTests.test_rejects_mutable_or_incomplete_image_reference) ... ok
+test_rejects_project_outside_course_root_before_docker (test_student_241880485.DraftExecutorTests.test_rejects_project_outside_course_root_before_docker) ... ok
+test_traced_make_uses_image_id_and_host_paths_and_preserves_logs (test_student_241880485.DraftExecutorTests.test_traced_make_uses_image_id_and_host_paths_and_preserves_logs) ... ok
+test_build_ok_but_wrong_output_fails_verification (test_student_241880555.B1DraftConclusions.test_build_ok_but_wrong_output_fails_verification) ... ok
+test_build_ok_output_matches_records_image_id (test_student_241880555.B1DraftConclusions.test_build_ok_output_matches_records_image_id) ... ok
+test_classify_failure_separates_make_from_infrastructure (test_student_241880555.B1DraftConclusions.test_classify_failure_separates_make_from_infrastructure) ... ok
+test_first_iteration_must_reproduce_missing_make (test_student_241880555.B1DraftConclusions.test_first_iteration_must_reproduce_missing_make) ... ok
+test_repair_build_failure_is_a_different_conclusion (test_student_241880555.B1DraftConclusions.test_repair_build_failure_is_a_different_conclusion) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.045s
+
+OK

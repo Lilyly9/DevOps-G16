@@ -1,0 +1,19 @@
+gcc -O0 -c eta_cli.c -o eta_cli.o
+gcc -O0 -c estimate.c -o estimate.o
+gcc -O0 eta_cli.o estimate.o -o transfer-eta
+sh tests/smoke.sh
+transfer-eta smoke tests passed
+BASE_EXPLICIT_RATE=eta_seconds=13
+rm -f transfer-eta transfer-eta.exe eta_cli.o estimate.o
+gcc -O0 -c eta_cli.c -o eta_cli.o
+gcc -O0 -c estimate.c -o estimate.o
+gcc -O0 eta_cli.o estimate.o -o transfer-eta
+sh tests/smoke.sh
+transfer-eta smoke tests passed
+make: 'transfer-eta' is up to date.
+gcc -O0 -c eta_cli.c -o eta_cli.o
+gcc -O0 -c estimate.c -o estimate.o
+gcc -O0 eta_cli.o estimate.o -o transfer-eta
+TARGET_BEFORE=eta_seconds=13
+UNPATCHED_INCREMENTAL=eta_seconds=13
+UNPATCHED_FORCED=eta_seconds=20
