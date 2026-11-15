@@ -1,0 +1,27 @@
+{
+  "cloud": {
+    "standard_rows": 30,
+    "independent_graph_assertions": true,
+    "raw_timings_match_csv": true,
+    "medians_verified": true,
+    "dynamic_status": "SUCCEEDED",
+    "trace_id": "e6-a8c5ba128d874e079f911f661367b5eb",
+    "out": "e10-A-manual.dAyEb0/matrix"
+  },
+  "local": {
+    "standard_rows": 30,
+    "independent_graph_assertions": true,
+    "raw_timings_match_csv": true,
+    "medians_verified": true,
+    "dynamic_status": "SUCCEEDED",
+    "trace_id": "e6-edc8382d769b4bab8b9f7f15eb99f4f0",
+    "out": "e10-A-manual.aVwovS/matrix"
+  },
+  "extension": {
+    "rows": 5,
+    "independent_expected": true,
+    "raw_timings_match_csv": true
+  },
+  "cloud_source_sha": "4cf51fa78bc856c9b0c3c559c8e10ebf6a4c64a2",
+  "cloud_image_id": "sha256:a0bafc7c741bc8912adbc1b1797202c5bc0f220c67f8879b556627a521b3322c"
+}

@@ -20,3 +20,6 @@
 A1 自主测试修改 config.h 间接包含 extra.h；新 OUT 中两个对象刷新、新增 MD extra.h，增量/全量/动态图一致。原7项+A1新增1项，本人云机容器实际8项OK。资源3.5GiB低于建议，未抄旧doctor结论或假称达到4GiB。
 
 公共导入 [PR #13](https://github.com/Lilyly9/DevOps-G16/pull/13) 已正常合并；个人 [PR #15](https://github.com/Lilyly9/DevOps-G16/pull/15) 三门禁成功，8项测试被真实发现；详见 [CI记录](../docs/students/241880485/e8-e10/CI记录.md)，待组内审查合并。E9/E10仍由相应成员按分工完成。
+## 241880464 本人三阶段补齐记录
+
+按助教要求本人独立完成E8-A标准与扩展，[本人原件索引](evidence/A3-241880464/index.md)。此前按阶段主责的安排不免除个人其他阶段，其他成员的完成状态须由本人提供三阶段索引核对。

@@ -1,0 +1,9 @@
+{
+  "server_original_archive": "/root/devops-submissions/241880464/A3-cloud-originals-20261103.tar.gz",
+  "local_original_archive": "/home/perilla/Documents/DevOps/Practices/E8/A3-cloud-originals-20261103.tar.gz",
+  "bytes": 37846,
+  "sha256": "3bfc49e915d93af92740d72c122fc0a2c82acc6a9f6ba1c8f6f63d556d2e73e3",
+  "verified_server_local_equal": true,
+  "final_delivery_archive_plan": "仓库外 /root/devops-submissions/241880464/A3-E8-E10-20261103.tar.gz 与本机 E8/提交材料/A3-E8-E10-20261103.tar.gz；最终实际大小/哈希见该包旁的交付状态.json，避免档案自包含哈希循环。",
+  "scope": "本人源码、标准/扩展OUT、全部trace、内部历史bundle、步骤和CI artifact；排除.git、.env、凭据与缓存。"
+}
