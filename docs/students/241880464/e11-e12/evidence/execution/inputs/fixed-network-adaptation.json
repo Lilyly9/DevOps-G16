@@ -1,0 +1,25 @@
+{
+  "source": "course-generated fixed input, explicit network-only Dockerfile commit",
+  "original_request": {
+    "mode": "e12",
+    "repo": "/course/data/integration-sample/repo",
+    "base": "c9b53217fff0ec04ea417b35d4b942c2922c7f64",
+    "target": "7ede2c3c6ef612dc2aa2f6c1a58b6685d45588f4",
+    "candidate": "/course/data/integration-sample/candidate.Dockerfile",
+    "fixed_report": "/course/data/integration-sample/fixed-md.json",
+    "expected_output": "1",
+    "build_timeout": 600
+  },
+  "request": {
+    "mode": "e12",
+    "repo": "/course/data/a3-fixed/repo",
+    "base": "c9b53217fff0ec04ea417b35d4b942c2922c7f64",
+    "target": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+    "candidate": "/course/data/a3-fixed/candidate.Dockerfile",
+    "expected_output": "1",
+    "build_timeout": 600
+  },
+  "digest_preserved": "70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f",
+  "candidate_sha256": "70dd21e4df9690110845e853640f1de747ae15330c7f5d5861ebbafdd141a272",
+  "reason": "Original Docker Hub registry timed out before reproducing MISSING_MAKE; failure preserved at e12-cli-fixed"
+}

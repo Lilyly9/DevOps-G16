@@ -1,0 +1,6 @@
+{
+  "http_status": 409,
+  "body": {
+    "error": "IDEMPOTENCY_CONFLICT"
+  }
+}

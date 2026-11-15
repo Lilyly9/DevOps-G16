@@ -1,0 +1,128 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-2fd04f2e26b747d4ab0491db52a0f0e8",
+  "trace_id": "trace-563d34c9c85942b1b66b14f3e50e0342",
+  "kind": "incremental-check",
+  "commit": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e8e10-1",
+    "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+    "commit": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+    "key": {
+      "directives": {
+        "config.h": [
+          "#define VALUE 1"
+        ],
+        "extra.h": [
+          "#define EXTRA 0"
+        ],
+        "helper.c": [],
+        "main.c": [
+          "#include \"extra.h\"",
+          "#include <stdio.h>",
+          "#include \"config.h\""
+        ],
+        "unused.h": []
+      },
+      "recipes": [
+        "\tgcc main.o helper.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+        "\trm -f main.o helper.o app"
+      ],
+      "flags": "-O0",
+      "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+    },
+    "actual": {
+      "main.o": [
+        "config.h",
+        "extra.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "main.c",
+        "unused.h"
+      ],
+      "helper.o": [
+        "helper.c"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "config.h"
+      },
+      {
+        "type": "MISSING",
+        "target": "main.o",
+        "dependency": "extra.h"
+      },
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h"
+      }
+    ],
+    "added": [
+      [
+        "MISSING",
+        "main.o",
+        "extra.h"
+      ]
+    ],
+    "resolved": [],
+    "refreshed": [
+      "main.o",
+      "helper.o"
+    ],
+    "reused": [],
+    "invalidation": [
+      "main.c"
+    ],
+    "elapsed_s": 0.5751807200722396
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/incremental-report.json",
+      "sha256": "b365043db0161ab013f2fe88d849dfb0490e3ae3a6e40a465030b2321e81794b",
+      "bytes": 1508
+    },
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/target-full/findings.json",
+      "sha256": "633f946ed54dae31cea5a354942fb0200f479297c92cea88a53f2c4a5f62ca20",
+      "bytes": 3090
+    },
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/target-full/clean-execution.json",
+      "sha256": "29a66383625ddfe89d68d06d0a7ac98a712bf8265103b146fd29b42894e2a212",
+      "bytes": 1390
+    },
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/target-full/build-execution.json",
+      "sha256": "c41741e7dce22478a5e76a0615f87bb35bdb4d71cab016a82a052e2e35d3306e",
+      "bytes": 1813
+    },
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/target-scan/01-gcc.json",
+      "sha256": "c017fc8cdb1ba695dc543dfaf8e3e61eed63bb63141ec8cb6bef33e68ae3abdc",
+      "bytes": 1387
+    },
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/target-scan/02-gcc.json",
+      "sha256": "34138ef5453edeab782b63198280147adce571399cdc9bc0ae7ecbe15e05b914",
+      "bytes": 1431
+    },
+    {
+      "uri": "artifact://job-2fd04f2e26b747d4ab0491db52a0f0e8/target-scan/03-gcc.json",
+      "sha256": "a00d0d68327077a1201ea57aaa4cfde5d8201837ab3a8c84a816e2b271964652",
+      "bytes": 1435
+    }
+  ]
+}

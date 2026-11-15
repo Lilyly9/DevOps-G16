@@ -1,0 +1,9 @@
+{
+  "server_original_archive": "/root/devops-submissions/241880464/A3-E11-E12-cloud-originals-20261115.tar.gz",
+  "local_original_archive": "/home/perilla/Documents/DevOps/Practices/E11/A3-20261115/A3-E11-E12-cloud-originals-20261115.tar.gz",
+  "bytes": 1539557,
+  "sha256": "fb036a30c20c27fa59a09e7167ffd1a142fbdd8cc5e33e06ce0a5e38687098ff",
+  "server_local_hashes_equal": true,
+  "scope": "本人云端CLI、API原件和输入；本机SSH下载/重启/HTTP负例、最终CI及源码文档另纳入最终包。",
+  "selection": "Git精选保留报告、命令执行镜像记录、图、验证和HTTP原字节；完整trace/项目副本/编译产物在归档。"
+}
