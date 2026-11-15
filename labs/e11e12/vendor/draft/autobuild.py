@@ -65,7 +65,8 @@ def classify_failure(text):
         return "INFRASTRUCTURE"
     return "OTHER_BUILD_ERROR"
 
-def auto_build(fixture, candidate, output, expected_output, timeout=300, verify_timeout=30):
+def auto_build(fixture, candidate, output, expected_output, timeout=300, verify_timeout=30, *,
+               candidate_source="Manual model response replay; no model/API call in this command"):
     if os.name != "posix":
         raise ValueError("Run inside the Linux service container")
     fixture, candidate, output = Path(fixture).resolve(), Path(candidate).resolve(), Path(output).resolve()
@@ -84,7 +85,7 @@ def auto_build(fixture, candidate, output, expected_output, timeout=300, verify_
     output.mkdir(parents=True, exist_ok=True)
     run_id = uuid.uuid4().hex
     report = {"status": "RUNNING", "detector": "DRAFT_TEACHING_REPLAY", "trace_id": "e6-b-" + run_id,
-              "candidate_source": "Manual model response replay; no model/API call in this command",
+              "candidate_source": candidate_source,
               "candidate_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(), "attempts": []}
     started = time.monotonic()
     cid_path = output / "verify-container-id.txt"
