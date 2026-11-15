@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #include "config.h"
+#include "extra.h"
 #include "stats.h"
 
 Stats stats_count(FILE *stream)
@@ -25,5 +26,5 @@ Stats stats_count(FILE *stream)
 
 int stats_config(void)
 {
-    return DEFAULT_FIELD;
+    return DEFAULT_FIELD + EXTRA_FIELD;
 }
