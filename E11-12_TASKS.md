@@ -129,7 +129,7 @@
 | 角色 | 姓名 / 学号 | 分支 / 运行器 SHA | 本人 E11 OUT 与贡献 | E12 job/trace、本人动作与证据 | 真实项目记录 / PR / CI / 归档 |
 | --- | --- | --- | --- | --- | --- |
 | A1 | 焦龙 / 241880485 | 待本人填 | 待本人填 | 待本人填 | 待本人填 |
-| A2 | 万宇 / 241880496（沿用 E5–E7 登记） | `student/241880496/e11-e12` / `7fabf45ec98fb1b7ffe101b3621272b93f0be4d5` | `work/e11a-standard-final-20261115`、`work/e11a-tokenstat-final-20261115`；新增 `project_config.py`、`ecache.py`、`draft_exec.py`，固定样例新增 `MD(main.o, extra.h)`，自主项目新增 `MD(stats.o, extra.h)`，增量与全量集合一致 | 固定样例 `job-5fa8af3b…` / `trace-ab48eacf…`；真实项目 `job-33f3cd04…` / `trace-99aff985…`；API `job-d69c427e…` / `trace-cb14c0fb…`；五阶段同 job/trace，检测在 DRAFT 镜像 `sha256:3edd5fd3…` / `sha256:7bf6690b…` 内执行，独立下载 5 个产物三处 SHA256 一致 | `projects/tokenstat`（C0 `74fd1f2a…` → C2 `7fabf45e…`）；PR/CI 待推送后补 |
+| A2 | 万宇 / 241880496（沿用 E5–E7 登记） | `student/241880496/e11-e12` / `7fabf45ec98fb1b7ffe101b3621272b93f0be4d5` | `work/e11a-standard-final-20261115`、`work/e11a-tokenstat-final-20261115`；新增 `project_config.py`、`ecache.py`、`draft_exec.py`，固定样例新增 `MD(main.o, extra.h)`，自主项目新增 `MD(stats.o, extra.h)`，增量与全量集合一致 | 固定样例 `job-5fa8af3b…` / `trace-ab48eacf…`；真实项目 `job-33f3cd04…` / `trace-99aff985…`；API `job-d69c427e…` / `trace-cb14c0fb…`；五阶段同 job/trace，检测在 DRAFT 镜像 `sha256:3edd5fd3…` / `sha256:7bf6690b…` 内执行，独立下载 5 个产物三处 SHA256 一致 | `projects/tokenstat`（C0 `74fd1f2a…` → C2 `7fabf45e…`）；CI [run 43683416564](https://github.com/Lilyly9/DevOps-G16/actions/runs/43683416564) success；artifact `e11e12-evidence-43683416564`；PR 见分支页 |
 | A3 | 待本人填 | 待本人填 | 待本人填 | 待本人填 | 待本人填 |
 | B1 | 待本人填 | 待本人填 | 待本人填 | 待本人填 | 待本人填 |
 | B2 | 待本人填 | 待本人填 | 待本人填 | 待本人填 | 待本人填 |

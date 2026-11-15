@@ -75,6 +75,7 @@
 | [unit-tests.log](evidence/logs/unit-tests.log) | `Ran 18 tests ... OK` |
 | [environment.txt](evidence/logs/environment.txt) | 系统、工具链、runner 镜像 ID |
 | [source-sha.txt](evidence/logs/source-sha.txt) | 源码提交与最近提交 |
+| [ci-run.json](evidence/logs/ci-run.json) | 公共 CI run 43683416564（success）与 artifact 元数据 |
 | [run-commands.md](evidence/logs/run-commands.md) | 实际命令、OUT 与退出码 |
 
 ### 复现命令（在 Linux/WSL 主机，仓库根目录）

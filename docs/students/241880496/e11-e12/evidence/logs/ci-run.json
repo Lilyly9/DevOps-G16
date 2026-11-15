@@ -1,0 +1,18 @@
+{
+    "id":  43683416564,
+    "html_url":  "https://github.com/Lilyly9/DevOps-G16/actions/runs/43683416564",
+    "head_sha":  "4da3df8537d1902f27693804248a028f2f459363",
+    "event":  "push",
+    "status":  "completed",
+    "conclusion":  "success",
+    "created_at":  "2026-11-15T05:59:44Z",
+    "updated_at":  "2026-11-15T06:01:30Z",
+    "job":  "e11e12-integration",
+    "artifact":  {
+                     "size_in_bytes":  258356,
+                     "name":  "e11e12-evidence-43683416564",
+                     "id":  14149182105,
+                     "sha256":  "0b136bd301e150f289596a2e3c894489a474065a207d3404a7a1012d8eae35e3"
+                 },
+    "steps":  "test -\u003e prepare -\u003e e11-a -\u003e e11-b -\u003e e12"
+}
