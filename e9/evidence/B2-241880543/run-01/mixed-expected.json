@@ -1,0 +1,16 @@
+{
+  "findings": [
+    [
+      "MISSING",
+      "main.o",
+      "config.h"
+    ],
+    [
+      "REDUNDANT",
+      "main.o",
+      "unused.h"
+    ]
+  ],
+  "edited_line": "main.o: main.c $(HEADERS) config.h",
+  "original_unchanged": true
+}

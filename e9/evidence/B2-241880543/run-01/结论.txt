@@ -1,0 +1,3 @@
+E9-B: direct/macro/mixed candidates pass apply --check; original projects unchanged.
+Only apply-demo changed: DEPS definition repaired, header increment rebuilt app (1 -> 2).
+9 unit tests passed, including B2 duplicate-edge regression. No E10 acceptance claimed.

@@ -1,0 +1,14 @@
+test_include_added_invalidates_cache (test_profile.ProfileTests) ... ok
+test_independent_known_edges (test_profile.ProfileTests) ... ok
+test_old_report_rejected (test_profile.ProfileTests) ... ok
+test_patch_preserves_redundant_dependency (test_profile.ProfileTests) ... ok
+test_unchanged_reuses_both_targets (test_profile.ProfileTests) ... ok
+test_unsafe_dependency_rejected (test_profile.ProfileTests) ... ok
+test_unsupported_configuration_rejected (test_profile.ProfileTests) ... ok
+test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests) ... ok
+test_same_header_on_two_targets_is_not_globally_deduplicated (test_student_241880543.Student241880543PatchTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.795s
+
+OK

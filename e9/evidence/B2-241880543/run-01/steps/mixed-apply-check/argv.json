@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "git",
+    "apply",
+    "--check",
+    "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/work/e9-B-241880543-20261103-01/mixed.patch"
+  ],
+  "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/work/e9-B-241880543-20261103-01/mixed"
+}

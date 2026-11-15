@@ -6,6 +6,8 @@
 
 | 成员 | 轨道 | 交付重点 | 状态/证据 |
 | --- | --- | --- | --- |
+| A2 | A | C0-C3图更新 | 待本人填 |
+| B2 | B | 三种风格候选 | [241880543 证据](evidence/B2-241880543/index.md)：三种check通过、原项目干净；副本输出1→2；9项单测与双轨CI通过；[PR#14](https://github.com/Lilyly9/DevOps-G16/pull/14)（依赖公共导入） |
 | A1 / 241880485 | A | 本人 C0–C3、真实构建、变化驱动图更新、间接 include 独立测试 | [本人 E9 证据](evidence/A1-241880485/index.md) |
 | A2 | A | C0-C3图更新 | 待本人填 |
 | A2 | A | C0-C3图更新 | 已完成（2026-11-10，本人主责阶段）：C1 复用、C2 刷新并新增 MD extra.h、C3 消除 config.h/extra.h 两项 MD 保留 RD unused.h；[证据](evidence/A2-241880496/index.md) |
