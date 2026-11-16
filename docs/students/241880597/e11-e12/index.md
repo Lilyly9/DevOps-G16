@@ -15,8 +15,8 @@
 
 | # | 命令 | 退出码 | 结论 |
 | --- | --- | --- | --- |
-| 1 | `PYTHONPATH="labs/e11e12;labs/e8e10;labs/e11e12/vendor" python -m unittest labs.e11e12.test_student_241880597 -v` | 0 | 13 用例全绿 |
-| 2 | 同上，`test_contract` + `test_student_241880597` | 0 | 23 用例全绿 |
+| 1 | `PYTHONPATH="labs/e11e12;labs/e8e10;labs/e11e12/vendor" python -m unittest labs.e11e12.test_student_241880597_e11e12 -v` | 0 | 13 用例全绿 |
+| 2 | 同上，`test_contract` + `test_student_241880597_e11e12` | 0 | 23 用例全绿 |
 
 > 说明：B1 的 `test_student_241880555.py` 在本地报 `Run inside the Linux service container`，因 `draft.autobuild` 含平台检查，需 Linux 容器（CI）运行，非本次改动引入。
 

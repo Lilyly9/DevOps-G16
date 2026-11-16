@@ -61,10 +61,11 @@ B3 从 A3 维护的 API 宿主经 SSH 转发取得交接清单，再按 `downloa
 
 - 环境：`candidate.Dockerfile` 的 `apt-get update` 走 deb.debian.org 超时，改用清华源镜像 `candidate-mirror.Dockerfile`（在 apt-get 前插入 sed 换源 RUN 行）后构建通过。
 - 共享命名：tokenstat 项目仍用旧 profile 名 `e11e12-project.json`，而 `pipeline.py` 经 `project_profile.py` 读取 `e12-profile.json`，CLI 报 `INVALID_PROFILE`；改选 A1 的 transfer-eta（已用 `e12-profile.json`）后通过，未改共享代码。
+- CI 测试名冲突：`unittest discover -s labs/e11e12` 时 `labs/e8e10` 同在 `PYTHONPATH`，464/485/555/597 的 `test_student_<sid>.py` 在两目录同名触发 `ImportError`（模块名冲突）。本人将 `test_student_241880597.py` 改名 `test_student_241880597_e11e12.py`（与 496 一致）消除自己的冲突；464/485/555 三个同名文件仍需对应同学各自改名后 CI 才整体转绿，非本次改动引入。
 
 ## 独立贡献与测试
 
-`labs/e11e12/test_student_241880597.py`（B3 独立贡献：消费侧拒绝路径，对应任务表 §5 B3 方向「验证独立消费入口接受本轮报告，拒绝 commit 或内容哈希不匹配的产物」）：
+`labs/e11e12/test_student_241880597_e11e12.py`（B3 独立贡献：消费侧拒绝路径，对应任务表 §5 B3 方向「验证独立消费入口接受本轮报告，拒绝 commit 或内容哈希不匹配的产物」）：
 
 | 用例 | 预期 |
 | --- | --- |
@@ -82,13 +83,13 @@ B3 从 A3 维护的 API 宿主经 SSH 转发取得交接清单，再按 `downloa
 | test_reject_inner_commit_expired | STALE_REPORT（外层 commit 对、内层 data.commit 过期） |
 | test_reject_report_trace_mismatch | REPORT_IDENTITY_MISMATCH（报告 trace 与清单不符） |
 
-本地验证：`python -m unittest labs.e11e12.test_student_241880597` 13 用例全绿；与 test_contract.py 合并 23 用例通过。测试以 mock 回放两段 HTTP 响应，不依赖 docker socket，CI 可跑。未改共享 pipeline/server/report_exchange 源码。
+本地验证：`python -m unittest labs.e11e12.test_student_241880597_e11e12` 13 用例全绿；与 test_contract.py 合并 23 用例通过。测试以 mock 回放两段 HTTP 响应，不依赖 docker socket，CI 可跑。未改共享 pipeline/server/report_exchange 源码。
 
 ## 交付索引
 
 | 任务 | 文件/URL | 结果 |
 | --- | --- | --- |
-| 独立契约测试 | labs/e11e12/test_student_241880597.py | 13 用例本地全绿 |
+| 独立契约测试 | labs/e11e12/test_student_241880597_e11e12.py | 13 用例本地全绿 |
 | E12 独立消费（serve+下载+核哈希+交 B2） | work/b3-download-241880597/（verification.json passed=true） | 三处 SHA 一致，通过 |
 | E11-B 抽查 | work/e11-b-241880597-20261116c/（validation.json + final-full/findings.json） | accepted=true、无 MD、RD 保留，通过 |
 | 真实项目（transfer-eta 核对+消费） | work/e12-transfer-eta-241880597-20261116/ | SUCCEEDED，MISSING(eta_cli.o, defaults.h)，accepted=true，无 MD |
