@@ -11,7 +11,8 @@ import uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path[:0] = [str(ROOT / 'labs/e8e10'), str(ROOT / 'labs/e11e12/vendor'),
+# 保留本阶段的模块优先级，避免相邻阶段同名测试被误导入。
+sys.path[:0] = [str(ROOT / 'labs/e11e12'), str(ROOT / 'labs/e8e10'), str(ROOT / 'labs/e11e12/vendor'),
                 str(ROOT / 'labs/e11e12/environment/services/buildchecker')]
 from lab import scan, patch, validate
 
