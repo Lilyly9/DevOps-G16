@@ -1,0 +1,54 @@
+name: B2 personal E11-E12 evidence
+on:
+  push:
+    branches: [student/241880543/e11-e12]
+permissions:
+  contents: read
+jobs:
+  personal-docker:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Build personal course runner
+        run: |
+          git config --local user.name 241880543
+          git config --local user.email fixture@example.invalid
+          mkdir -p work
+          docker build --build-arg BASE_IMAGE=python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 -f labs/e11e12/environment/services/buildchecker/Dockerfile -t course-e11e12:241880543 labs/e11e12/environment
+      - name: Run B2 standard, shared macro, stale and E12 Docker cases
+        run: python3 docs/students/241880543/e11-e12/run_evidence.py --out work/b2-personal
+      - name: Exercise the B2 API with the same inputs
+        if: always()
+        run: |
+          set -euo pipefail
+          test -f work/b2-personal/e12/recheck.json
+          python3 run_e11e12.py serve --port 18086 > work/b2-personal/api-server.log 2>&1 &
+          api_pid=$!
+          trap 'kill "$api_pid" 2>/dev/null || true; wait "$api_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:18086/health > work/b2-personal/api-health.json; then break; fi
+            sleep 1
+          done
+          test -s work/b2-personal/api-health.json
+          for case in e12 transfer-eta; do
+            if test -f "work/b2-personal/$case/recheck.json"; then
+              PYTHONPATH=labs/e11e12:labs/e8e10:labs/e11e12/vendor python3 labs/e11e12/api_probe.py \
+                --base-url http://127.0.0.1:18086 --request "data/b2-personal/$case.json" \
+                --key "b2-${GITHUB_RUN_ID}-$case" --out "work/b2-personal/api-$case"
+            fi
+          done
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: b2-personal-evidence-${{ github.run_id }}
+          path: |
+            work/b2-personal/
+            data/b2-personal/*.json
+            data/b2-personal/*.Dockerfile
+            data/integration-sample/*.json
+            !work/b2-personal/**/.git/**
+          retention-days: 14
