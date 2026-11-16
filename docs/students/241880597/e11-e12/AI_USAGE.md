@@ -1,6 +1,6 @@
 # AI 使用记录
 
-日期 2026-11-16，B3 吴佳静 / 241880597。使用 Claude Code 协助阅读 E11-12_TASKS.md、contracts/e11e12.md、共享代码（pipeline.py / server.py / report_exchange.py）与 A3/B1 交付，梳理 B3 消费侧职责边界，编写本人独立契约测试 test_student_241880597.py 及文档。未选择或调用模型 API 生成 Dockerfile 候选。
+日期 2026-11-16，B3 吴佳静 / 241880597。使用 Claude Code 协助阅读 E11-12_TASKS.md、contracts/e11e12.md、共享代码（pipeline.py / server.py / report_exchange.py）与 A3/B1 交付，梳理 B3 消费侧职责边界，编写本人独立契约测试 test_student_241880597_e11e12.py 及文档。未选择或调用模型 API 生成 Dockerfile 候选。
 
 复用 A3 已合并的 report_exchange.download_report 实现与接口契约；B1 的 DRAFT/MDFixer 报告仅作角色边界参考，未改动其代码与测试。本人改动集中在消费侧拒绝测试与个人文档，不改共享 pipeline/server/report_exchange 源码。
 

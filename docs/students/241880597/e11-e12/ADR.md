@@ -26,5 +26,5 @@ E12 里 B3 作为 B 侧独立消费方，要从 A3 维护的 API 宿主经 SSH �
 ## 兼容性与测试
 
 - 未改 `report_exchange.py` / `server.py` / `pipeline.py` 共享代码，其他成员无感知。
-- `test_student_241880597.py` 13 用例本地全绿；与 `test_contract.py` 合并 23 用例通过。
+- `test_student_241880597_e11e12.py` 13 用例本地全绿；与 `test_contract.py` 合并 23 用例通过。
 - 云端仍以真实 SSH 转发下载 + `report_exchange.py --job/--target` 独立消费留证（见 index.md）；mock 测试只覆盖消费侧校验逻辑，不替代真实联调。
