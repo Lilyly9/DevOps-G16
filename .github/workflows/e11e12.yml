@@ -44,6 +44,18 @@ jobs:
           done
           test "$ready" = 1
           PYTHONPATH=labs/e11e12:labs/e8e10:labs/e11e12/vendor python3 labs/e11e12/api_probe.py --base-url http://127.0.0.1:8086 --request data/integration-sample/e12.json --key ci-e12 --out work/ci-api-e12
+      - name: Consume the downloaded A report in a separate repair job
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          request = json.loads(Path('data/integration-sample/e12.json').read_text())
+          draft = json.loads(Path('work/ci-api-e12/downloads/draft.json').read_text())
+          request['image_id'] = draft['data']['attempts'][-1]['image_id']
+          Path('data/ci-consume.json').write_text(json.dumps(request))
+          PY
+          python3 run_e11e12.py consume --request data/ci-consume.json --transfer work/ci-api-e12/report-transfer --out work/ci-independent-consumer
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
