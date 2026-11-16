@@ -87,7 +87,7 @@ def scan(p, old=None, *, targets=None, execute=run):
             'resolved':[list(x) for x in sorted(previous-current)],'refreshed':refreshed,'reused':reused,
             'invalidation':invalidation(key,old),'elapsed_s':time.perf_counter()-start}
 
-def patch(p,report):
+def patch(p,report, *, isolate_shared_macros=False):
     if report['commit']!=run(['git','rev-parse','HEAD'],p).strip(): raise ValueError('STALE_REPORT')
     original=(p/'Makefile').read_text(); changed=original; edits=[]; seen=set()
     for f in report['findings']:
@@ -101,8 +101,14 @@ def patch(p,report):
         m=re.search(r'^'+re.escape(t)+r': (.*)$',changed,re.M)
         if not m: raise ValueError('UNSUPPORTED_TARGET')
         raw=m[1]; macros=re.findall(r'\$\((\w+)\)',raw)
-        if raw.strip()==('$(%s)'%macros[0] if macros else ''):
-            name=macros[0]; vm=re.search(r'^'+name+r' = (.*)$',changed,re.M)
+        macro = macros[0] if macros and raw.strip() == f'$({macros[0]})' else None
+        if macro and isolate_shared_macros:
+            references = changed.count(f'$({macro})') + changed.count(f'${{{macro}}}')
+            if references > 1:
+                # A shared definition would also add this prerequisite to other rules.
+                macro = None
+        if macro:
+            vm=re.search(r'^'+macro+r' = (.*)$',changed,re.M)
             if not vm: raise ValueError('UNSUPPORTED_MACRO')
             changed=changed[:vm.end()]+ ' '+d+changed[vm.end():]; style='macro'
         else:
