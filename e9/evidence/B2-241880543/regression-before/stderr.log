@@ -1,0 +1,68 @@
+test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests) ... 
+======================================================================
+FAIL: test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests) (style='direct')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/labs/e8e10/test_student_241880543.py", line 22, in test_duplicate_missing_records_preserve_all_three_styles
+    self.assertEqual(plan, [{"target": "main.o", "dependency": "config.h", "style": style}])
+AssertionError: Lists differ: [{'ta[56 chars]ect'}, {'target': 'main.o', 'dependency': 'con[89 chars]ct'}] != [{'ta[56 chars]ect'}]
+
+First list contains 2 additional elements.
+First extra element 1:
+{'target': 'main.o', 'dependency': 'config.h', 'style': 'direct'}
+
+- [{'dependency': 'config.h', 'style': 'direct', 'target': 'main.o'},
+?                                                                   ^
+
++ [{'dependency': 'config.h', 'style': 'direct', 'target': 'main.o'}]
+?                                                                   ^
+
+-  {'dependency': 'config.h', 'style': 'direct', 'target': 'main.o'},
+-  {'dependency': 'config.h', 'style': 'direct', 'target': 'main.o'}]
+
+======================================================================
+FAIL: test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests) (style='macro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/labs/e8e10/test_student_241880543.py", line 22, in test_duplicate_missing_records_preserve_all_three_styles
+    self.assertEqual(plan, [{"target": "main.o", "dependency": "config.h", "style": style}])
+AssertionError: Lists differ: [{'ta[55 chars]cro'}, {'target': 'main.o', 'dependency': 'con[87 chars]ro'}] != [{'ta[55 chars]cro'}]
+
+First list contains 2 additional elements.
+First extra element 1:
+{'target': 'main.o', 'dependency': 'config.h', 'style': 'macro'}
+
+- [{'dependency': 'config.h', 'style': 'macro', 'target': 'main.o'},
+?                                                                  ^
+
++ [{'dependency': 'config.h', 'style': 'macro', 'target': 'main.o'}]
+?                                                                  ^
+
+-  {'dependency': 'config.h', 'style': 'macro', 'target': 'main.o'},
+-  {'dependency': 'config.h', 'style': 'macro', 'target': 'main.o'}]
+
+======================================================================
+FAIL: test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests) (style='mixed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/labs/e8e10/test_student_241880543.py", line 22, in test_duplicate_missing_records_preserve_all_three_styles
+    self.assertEqual(plan, [{"target": "main.o", "dependency": "config.h", "style": style}])
+AssertionError: Lists differ: [{'ta[55 chars]xed'}, {'target': 'main.o', 'dependency': 'con[87 chars]ed'}] != [{'ta[55 chars]xed'}]
+
+First list contains 2 additional elements.
+First extra element 1:
+{'target': 'main.o', 'dependency': 'config.h', 'style': 'mixed'}
+
+- [{'dependency': 'config.h', 'style': 'mixed', 'target': 'main.o'},
+?                                                                  ^
+
++ [{'dependency': 'config.h', 'style': 'mixed', 'target': 'main.o'}]
+?                                                                  ^
+
+-  {'dependency': 'config.h', 'style': 'mixed', 'target': 'main.o'},
+-  {'dependency': 'config.h', 'style': 'mixed', 'target': 'main.o'}]
+
+----------------------------------------------------------------------
+Ran 1 test in 0.263s
+
+FAILED (failures=3)

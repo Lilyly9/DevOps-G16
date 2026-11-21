@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "job_id": "job-513442c70ec644f881d8d89d615ee01c",
+  "trace_id": "trace-089b3fd1e54d4e049fc7a8fcc54886d7",
+  "target": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+  "sha256": "75a545d51661fc9e3d0fc4713d977ae35130e94e84db38f78827cf47861786de",
+  "uri": "artifact://job-513442c70ec644f881d8d89d615ee01c/incremental-check.json",
+  "source_url": "http://127.0.0.1:18047/v1/jobs/job-513442c70ec644f881d8d89d615ee01c/reports/incremental-check?target=7e534c43bd3f123dc22099fe0e979b16b5e1fc34"
+}

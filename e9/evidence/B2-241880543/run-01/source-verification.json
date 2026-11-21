@@ -1,0 +1,17 @@
+{
+  "source_sha": "3befe15c3912056474c359b7990b84048f53773f",
+  "checks": {
+    "labs/e8e10/lab.py": {
+      "sha256": "5b122ce341dbd37d2f198b40b07e209999a7ecf01aa9b741b927b259875e6728",
+      "matches_committed_bytes": true
+    },
+    "labs/e8e10/test_student_241880543.py": {
+      "sha256": "a033a30a90ad7c1fbe8b262d74dddfb6fc863ff38846cf7710403ff6fde92507",
+      "matches_committed_bytes": true
+    },
+    "labs/e8e10/student_241880543_e9.py": {
+      "sha256": "e1e48779229972a8d25d8e7558e8442476a8c17596ff5434a994aa90a5d4d730",
+      "matches_committed_bytes": true
+    }
+  }
+}

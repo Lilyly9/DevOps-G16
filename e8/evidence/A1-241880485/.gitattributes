@@ -1,0 +1,4 @@
+* -text
+*.log -whitespace
+make-db.txt -whitespace
+verification/*.json whitespace=cr-at-eol

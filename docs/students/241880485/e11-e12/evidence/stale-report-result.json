@@ -1,0 +1,16 @@
+{
+  "status": "REJECTED",
+  "error_code": "STALE_REPORT",
+  "message": "Report belongs to another commit",
+  "scope": "contract check on a copy of the actual E11-A baseline envelope",
+  "expected_commit": "46fc6c1b74681d6f3746c7d9dff9fca722ca936e",
+  "provided_commit": "2bcd78df5e0733e1743fdb2fd7bf8be824df830f",
+  "original": "standard/full-check.json",
+  "original_sha256": "581bec336317a40c1c665c9d5df6fa24f361de29c2e2c3d73701707771170629",
+  "altered": "stale-full-check.json",
+  "altered_sha256": "e4dce13c90a8c10b8caf65b60d1e54fbb122d298305c797834a27bf5de6064a0",
+  "changed_fields": [
+    "commit"
+  ],
+  "downstream_test_marker_reached": false
+}

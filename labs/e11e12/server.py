@@ -7,8 +7,9 @@ import json
 from pathlib import Path
 import threading
 import uuid
-from urllib.parse import unquote
-from pipeline import ROOT,execute,save
+from urllib.parse import unquote, urlsplit, parse_qs
+from pipeline import ROOT,execute,save,Failure
+from report_exchange import export_report
 
 class Store:
     def __init__(self, root):
@@ -50,8 +51,7 @@ class Store:
         with self.lock:
             state.update({k:r[k] for k in ('status','trace_id','error') if k in r});save(self.root/jid/'state.json',state)
 
-def serve(host='127.0.0.1',port=8080):
-    store=Store(ROOT/'work/api-jobs')
+def create_server(store, host='127.0.0.1', port=8080):
     class Handler(BaseHTTPRequestHandler):
         def reply(self,code,obj):
             data=json.dumps(obj,ensure_ascii=False).encode();self.send_response(code);self.send_header('Content-Type','application/json; charset=utf-8');self.end_headers();self.wfile.write(data)
@@ -68,6 +68,18 @@ def serve(host='127.0.0.1',port=8080):
             if len(parts)<3 or parts[:2]!=['v1','jobs'] or parts[2] not in store.jobs:return self.reply(404,{'error':'NOT_FOUND'})
             jid=parts[2];out=store.root/jid/'evidence'
             if len(parts)==3:return self.reply(200,dict(store.jobs[jid]))
+            if parts[3:]==['reports','incremental-check']:
+                query=parse_qs(urlsplit(self.path).query, keep_blank_values=True)
+                if set(query)!={'target'} or len(query['target'])!=1:
+                    return self.reply(400,{'error':'INVALID_TARGET'})
+                try:
+                    transfer=export_report(out,jid,query['target'][0])
+                    return self.reply(200,transfer)
+                except Failure as exc:
+                    return self.reply(400 if exc.code=='INVALID_TARGET' else 409,
+                                      {'error':exc.code,'message':str(exc)})
+                except (OSError,ValueError,KeyError,TypeError):
+                    return self.reply(409,{'error':'INVALID_ARTIFACT'})
             if parts[3:]==['artifacts']:
                 if not (out/'result.json').exists():return self.reply(409,{'error':'RESULT_NOT_READY'})
                 return self.reply(200,json.loads((out/'result.json').read_text()))
@@ -76,7 +88,16 @@ def serve(host='127.0.0.1',port=8080):
                 if not path.is_relative_to(out.resolve()) or '.git' in path.parts or not path.is_file():return self.reply(404,{'error':'NOT_FOUND'})
                 data=path.read_bytes();self.send_response(200);self.send_header('Content-Type','application/octet-stream');self.send_header('X-Content-SHA256',hashlib.sha256(data).hexdigest());self.end_headers();self.wfile.write(data);return
             self.reply(404,{'error':'NOT_FOUND'})
-    ThreadingHTTPServer((host,port),Handler).serve_forever()
+    return ThreadingHTTPServer((host,port),Handler)
+
+def serve(host='127.0.0.1',port=8080):
+    store=Store(ROOT/'work/api-jobs')
+    httpd=create_server(store,host,port)
+    try:
+        httpd.serve_forever()
+    finally:
+        httpd.server_close()
+        store.pool.shutdown(wait=True)
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--host',default='127.0.0.1');p.add_argument('--port',type=int,default=8080);a=p.parse_args();serve(a.host,a.port)

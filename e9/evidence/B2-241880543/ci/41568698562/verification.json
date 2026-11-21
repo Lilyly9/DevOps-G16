@@ -1,0 +1,16 @@
+{
+  "run_url": "https://github.com/Lilyly9/DevOps-G16/actions/runs/41568698562",
+  "event": "pull_request",
+  "head_sha": "883c7792c22752f4d9d35f57132e559beb91ae64",
+  "conclusion": "success",
+  "unit_tests": 9,
+  "all_six_routes_completed": true,
+  "A_matrix_equal_rows": 30,
+  "B_validation_passed_rows": 3,
+  "artifact_id": 13200855273,
+  "artifact_name": "e8e10-evidence-41568698562",
+  "artifact_sha256": "sha256:17a10af0867ff98658ad6accf6d970be3d0624a9878c1e5dceb080b239da56c7",
+  "artifact_expiry": "2026-11-17T02:53:10Z",
+  "zip_integrity_verified": true,
+  "note": "Shared CI regression, not personal A/B1/B3 experiment execution."
+}

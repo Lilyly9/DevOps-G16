@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "labs/e8e10",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16"
+}

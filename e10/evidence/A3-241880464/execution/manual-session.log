@@ -1,0 +1,173 @@
+仓库=/root/241880464/DevOps-G16-e10-A3-20261103
+学号=241880464
+镜像=course-e8e10:241880464
+本次证据目录=work/e10-A-manual.dAyEb0
+MATRIX_BASELINE_READY work/e10-A-manual.dAyEb0/matrix
+CFLAGS = -O0
+app: main.o helper.o
+	gcc main.o helper.o -o app
+main.o: main.c unused.h
+	gcc $(CFLAGS) -c main.c -o main.o
+helper.o: helper.c
+	gcc $(CFLAGS) -c helper.c -o helper.o
+.PHONY: clean
+clean:
+	rm -f main.o helper.o app
+
+STEP_EXIT_CODE=0
+NO_SOURCE_CHANGE
+{'case': 'unchanged', 'repeat': 1, 'equal': True, 'incremental_s': 0.0025909598916769028, 'full_s': 0.011231565847992897, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 2, 'equal': True, 'incremental_s': 0.0017608366906642914, 'full_s': 0.010300514753907919, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 3, 'equal': True, 'incremental_s': 0.0017970660701394081, 'full_s': 0.010237416718155146, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 4, 'equal': True, 'incremental_s': 0.0017767101526260376, 'full_s': 0.010450771078467369, 'reused': 2, 'refreshed': 0}
+{'case': 'unchanged', 'repeat': 5, 'equal': True, 'incremental_s': 0.0018309508450329304, 'full_s': 0.010140264872461557, 'reused': 2, 'refreshed': 0}
+UNCHANGED_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 90aca10ca84e4ff6f3069d0a24b1b80f75aa698d
+{'case': 'body', 'repeat': 1, 'equal': True, 'incremental_s': 0.0021292669698596, 'full_s': 0.01083315210416913, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 2, 'equal': True, 'incremental_s': 0.0017502512782812119, 'full_s': 0.010285991244018078, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 3, 'equal': True, 'incremental_s': 0.0017444798722863197, 'full_s': 0.010218290146440268, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 4, 'equal': True, 'incremental_s': 0.0017578708939254284, 'full_s': 0.00997325824573636, 'reused': 2, 'refreshed': 0}
+{'case': 'body', 'repeat': 5, 'equal': True, 'incremental_s': 0.001765608787536621, 'full_s': 0.009888953063637018, 'reused': 2, 'refreshed': 0}
+BODY_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 743b22843cdb6d18b54a5d168cbd553f6b40cc35
+{'case': 'include', 'repeat': 1, 'equal': True, 'incremental_s': 0.011316293850541115, 'full_s': 0.010046596173197031, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 2, 'equal': True, 'incremental_s': 0.010451031848788261, 'full_s': 0.009987574070692062, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 3, 'equal': True, 'incremental_s': 0.010045656934380531, 'full_s': 0.009909490123391151, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 4, 'equal': True, 'incremental_s': 0.010039106011390686, 'full_s': 0.009919201955199242, 'reused': 0, 'refreshed': 2}
+{'case': 'include', 'repeat': 5, 'equal': True, 'incremental_s': 0.010022311937063932, 'full_s': 0.00992386182770133, 'reused': 0, 'refreshed': 2}
+INCLUDE_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 42232c185421394fe2bb97825c20ebb13eb974a1
+{'case': 'declaration', 'repeat': 1, 'equal': True, 'incremental_s': 0.0021465569734573364, 'full_s': 0.0110102160833776, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 2, 'equal': True, 'incremental_s': 0.0017476310022175312, 'full_s': 0.010381427127867937, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 3, 'equal': True, 'incremental_s': 0.0016745086759328842, 'full_s': 0.009913322981446981, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 4, 'equal': True, 'incremental_s': 0.001709367148578167, 'full_s': 0.010008239187300205, 'reused': 2, 'refreshed': 0}
+{'case': 'declaration', 'repeat': 5, 'equal': True, 'incremental_s': 0.0017232578247785568, 'full_s': 0.010087603237479925, 'reused': 2, 'refreshed': 0}
+DECLARATION_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 66ce842bbcf6a926411e2760b96c316ca84d78d9
+{'case': 'flags', 'repeat': 1, 'equal': True, 'incremental_s': 0.011404733173549175, 'full_s': 0.010115284007042646, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 2, 'equal': True, 'incremental_s': 0.010405093897134066, 'full_s': 0.010005504824221134, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 3, 'equal': True, 'incremental_s': 0.010059250984340906, 'full_s': 0.01008284604176879, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 4, 'equal': True, 'incremental_s': 0.01009390689432621, 'full_s': 0.010015123058110476, 'reused': 0, 'refreshed': 2}
+{'case': 'flags', 'repeat': 5, 'equal': True, 'incremental_s': 0.012160394806414843, 'full_s': 0.010016486048698425, 'reused': 0, 'refreshed': 2}
+FLAGS_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+COMMIT 505681419cbce2039526279d5a1d19ea04aedbb5
+{'case': 'header', 'repeat': 1, 'equal': True, 'incremental_s': 0.011505194008350372, 'full_s': 0.010182403959333897, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 2, 'equal': True, 'incremental_s': 0.010518053080886602, 'full_s': 0.010243744123727083, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 3, 'equal': True, 'incremental_s': 0.010237895883619785, 'full_s': 0.010214900132268667, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 4, 'equal': True, 'incremental_s': 0.010182627942413092, 'full_s': 0.010097399819642305, 'reused': 0, 'refreshed': 2}
+{'case': 'header', 'repeat': 5, 'equal': True, 'incremental_s': 0.010404123924672604, 'full_s': 0.010016420856118202, 'reused': 0, 'refreshed': 2}
+HEADER_FIVE_REPEATS_PASS
+STEP_EXIT_CODE=0
+DYNAMIC_CROSSCHECK_AND_MATRIX_PASS
+STEP_EXIT_CODE=0
+{
+  "track": "A",
+  "passed": true,
+  "rows": 30
+}
+MATRIX_PASS {'unchanged': 5, 'body': 5, 'include': 5, 'declaration': 5, 'flags': 5, 'header': 5}
+unchanged reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+body reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+include reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'MISSING', 'target': 'main.o', 'dependency': 'config.h'}, {'type': 'MISSING', 'target': 'main.o', 'dependency': 'extra.h'}, {'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+declaration reuse= ['main.o', 'helper.o'] refresh= [] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+flags reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+header reuse= [] refresh= ['main.o', 'helper.o'] findings= [{'type': 'REDUNDANT', 'target': 'main.o', 'dependency': 'unused.h'}]
+['unchanged', 5, 0.0017970660701394081, 0.010300514753907919, 0.0017608366906642914, 0.0025909598916769028, 5.731850890217326]
+['body', 5, 0.0017578708939254284, 0.010218290146440268, 0.0017444798722863197, 0.0021292669698596, 5.812878625928112]
+['include', 5, 0.010045656934380531, 0.00992386182770133, 0.010022311937063932, 0.011316293850541115, 0.9878758445092459]
+['declaration', 5, 0.0017232578247785568, 0.010087603237479925, 0.0016745086759328842, 0.0021465569734573364, 5.8537980170066595]
+['flags', 5, 0.010405093897134066, 0.010016486048698425, 0.010059250984340906, 0.012160394806414843, 0.9626521536203843]
+['header', 5, 0.010404123924672604, 0.010182403959333897, 0.010182627942413092, 0.011505194008350372, 0.9786892229519764]
+SAVED work/e10-A-manual.dAyEb0/matrix/performance-summary.csv
+{
+  "status": "SUCCEEDED",
+  "detector": "BUILDCHECKER_TEACHING",
+  "detector_version": "0.2.0-teaching",
+  "trace_id": "e6-a8c5ba128d874e079f911f661367b5eb",
+  "findings": [
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h",
+      "evidence": [
+        {
+          "source": "make_database",
+          "artifact": "make-db.txt",
+          "line": 1052,
+          "declaration": "main.o: main.c unused.h config.h extra.h"
+        }
+      ],
+      "scope": "Not observed in this recipe job under this build configuration"
+    }
+  ],
+  "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+  "build_command": [
+    "make",
+    "app"
+  ],
+  "clean_command": [
+    "make",
+    "clean"
+  ],
+  "input_sha256": {
+    ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+    "Makefile": "966ca36a90df555a2e878c4f95f2560cc5179b51baca46f03750c2d524c224e6",
+    "config.h": "6024b92a8cb6cfd1881a66916f4b368c0cb49acfdd8def2fedb7a430892e28fa",
+    "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+    "helper.c": "5db584e6ea1db9fe026954a575b744c2a456ec3163606a16da1f0b909e4dbe6d",
+    "main.c": "1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312",
+    "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+  },
+  "clean_exit_code": 0,
+  "trace_command": [
+    "strace",
+    "-ff",
+    "-s",
+    "4096",
+    "-o",
+    "/course/work/e10-A-manual.dAyEb0/matrix/final-buildchecker/trace/t",
+    "-e",
+    "trace=%file,%process",
+    "make",
+    "-p",
+    "app"
+  ],
+  "build_exit_code": 0,
+  "observed_targets": [
+    "app",
+    "helper.o",
+    "main.o"
+  ],
+  "artifacts": {
+    "actual_graph": "actual-graph.json",
+    "declared_graph": "declared-graph.json",
+    "processes": "processes.json",
+    "make_database": "make-db.txt",
+    "trace_directory": "trace"
+  },
+  "elapsed_ms": 127
+}
+1052:main.o: main.c unused.h config.h extra.h
+t.12
+t.13
+t.14
+t.15
+t.16
+t.17
+t.18
+t.19
+181:            for repeat in range(5):
+183:                passed=all(inc[k]==full[k] for k in ['actual','declared','findings'])
+185:                assert passed,case
+case,n,inc_median_s,full_median_s,inc_min_s,inc_max_s,full_over_inc
+unchanged,5,0.0017970660701394081,0.010300514753907919,0.0017608366906642914,0.0025909598916769028,5.731850890217326
+body,5,0.0017578708939254284,0.010218290146440268,0.0017444798722863197,0.0021292669698596,5.812878625928112
+include,5,0.010045656934380531,0.00992386182770133,0.010022311937063932,0.011316293850541115,0.9878758445092459
+declaration,5,0.0017232578247785568,0.010087603237479925,0.0016745086759328842,0.0021465569734573364,5.8537980170066595
+flags,5,0.010405093897134066,0.010016486048698425,0.010059250984340906,0.012160394806414843,0.9626521536203843
+header,5,0.010404123924672604,0.010182403959333897,0.010182627942413092,0.011505194008350372,0.9786892229519764

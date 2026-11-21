@@ -1,0 +1,60 @@
+{
+  "source_commit": "0e21e8be6aee88edd814b58e98649690a12edc70",
+  "manual_steps_passed": {
+    "e8-B": 8,
+    "e9-B": 6,
+    "e10-B": 10
+  },
+  "e8": {
+    "fixture_commit": "a12eaaeecd5ee542a61f4198f99aa44772736cd7",
+    "apply_check": true,
+    "stale_error": "STALE_REPORT",
+    "makefile_sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2"
+  },
+  "e9": {
+    "direct": {
+      "fixture_commit": "41bb4430ab3a473ec431649bed273928a544cbdb",
+      "apply_check": true,
+      "modified_line": "main.o: main.c unused.h config.h"
+    },
+    "macro": {
+      "fixture_commit": "8f6e9c32b1b38f68160d91d810f9b69d4ba45478",
+      "apply_check": true,
+      "modified_line": "DEPS = main.c unused.h config.h",
+      "copy_applied_only": true
+    },
+    "mixed": {
+      "fixture_commit": "90bbbe883958a1356485f7a5f96af36dde6673ab",
+      "apply_check": true,
+      "modified_line": "main.o: main.c $(HEADERS) config.h"
+    }
+  },
+  "e10": {
+    "fixture_commit": "ed6cbe01382181400c06942f86e655c01ffd4de3",
+    "before_sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+    "after_sha256": "ab35bda3d5bf1ba02394a04bddcb8ec23a2e3ba67d7be938be3e49fed9b1d5d0",
+    "final_sha256": "ab35bda3d5bf1ba02394a04bddcb8ec23a2e3ba67d7be938be3e49fed9b1d5d0",
+    "dynamic_trace_files": 10,
+    "dynamic_findings": [
+      {
+        "type": "REDUNDANT",
+        "target": "main.o",
+        "dependency": "unused.h",
+        "evidence": [
+          {
+            "source": "make_database",
+            "artifact": "make-db.txt",
+            "line": 1069,
+            "declaration": "main.o: main.c unused.h config.h"
+          }
+        ],
+        "scope": "Not observed in this recipe job under this build configuration"
+      }
+    ],
+    "gate": {
+      "track": "B",
+      "passed": true,
+      "rows": 3
+    }
+  }
+}

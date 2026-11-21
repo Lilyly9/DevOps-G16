@@ -1,0 +1,29 @@
+﻿2026-11-03T09:23:06.1717002Z ##[group]Run set -euo pipefail
+2026-11-03T09:23:06.1717215Z [36;1mset -euo pipefail[0m
+2026-11-03T09:23:06.1717594Z [36;1mdocker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v[0m
+2026-11-03T09:23:06.1717994Z [36;1mfor track in A B; do[0m
+2026-11-03T09:23:06.1718139Z [36;1m  for stage in e8 e9 e10; do[0m
+2026-11-03T09:23:06.1718585Z [36;1m    docker run --rm --network none --cap-add SYS_PTRACE --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/course" -w /course course-e8e10:ci python3 labs/e8e10/lab.py "$stage" --track "$track" --out "/course/work/$track-$stage"[0m
+2026-11-03T09:23:06.1719028Z [36;1m  done[0m
+2026-11-03T09:23:06.1719141Z [36;1mdone[0m
+2026-11-03T09:23:06.1737622Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-03T09:23:06.1737820Z ##[endgroup]
+2026-11-03T09:23:06.5338207Z test_include_added_invalidates_cache (test_profile.ProfileTests.test_include_added_invalidates_cache) ... ok
+2026-11-03T09:23:06.5641295Z test_independent_known_edges (test_profile.ProfileTests.test_independent_known_edges) ... ok
+2026-11-03T09:23:06.5941644Z test_old_report_rejected (test_profile.ProfileTests.test_old_report_rejected) ... ok
+2026-11-03T09:23:06.6345720Z test_patch_preserves_redundant_dependency (test_profile.ProfileTests.test_patch_preserves_redundant_dependency) ... ok
+2026-11-03T09:23:06.6641901Z test_unchanged_reuses_both_targets (test_profile.ProfileTests.test_unchanged_reuses_both_targets) ... ok
+2026-11-03T09:23:06.6918595Z test_unsafe_dependency_rejected (test_profile.ProfileTests.test_unsafe_dependency_rejected) ... ok
+2026-11-03T09:23:06.7071932Z test_unsupported_configuration_rejected (test_profile.ProfileTests.test_unsupported_configuration_rejected) ... ok
+2026-11-03T09:23:06.7678232Z test_header_include_invalidates_previous_dependency_graph (test_student_241880485.A1IndirectIncludeTests.test_header_include_invalidates_previous_dependency_graph) ... ok
+2026-11-03T09:23:06.7678703Z 
+2026-11-03T09:23:06.7678804Z ----------------------------------------------------------------------
+2026-11-03T09:23:06.7679034Z Ran 8 tests in 0.282s
+2026-11-03T09:23:06.7679114Z 
+2026-11-03T09:23:06.7679159Z OK
+2026-11-03T09:23:07.3681587Z COMPLETED e8 A /course/work/A-e8
+2026-11-03T09:23:07.7494003Z COMPLETED e9 A /course/work/A-e9
+2026-11-03T09:23:08.9202488Z COMPLETED e10 A /course/work/A-e10
+2026-11-03T09:23:09.1797880Z COMPLETED e8 B /course/work/B-e8
+2026-11-03T09:23:09.5298302Z COMPLETED e9 B /course/work/B-e9
+2026-11-03T09:23:12.4262735Z COMPLETED e10 B /course/work/B-e10

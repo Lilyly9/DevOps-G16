@@ -1,0 +1,7 @@
+{'case': 'remove-indirect-header', 'repeat': 1, 'equal': True, 'incremental_s': 0.010080974083393812, 'full_s': 0.010028999298810959, 'reused': 0, 'refreshed': 2}
+{'case': 'remove-indirect-header', 'repeat': 2, 'equal': True, 'incremental_s': 0.010160685982555151, 'full_s': 0.009964491240680218, 'reused': 0, 'refreshed': 2}
+{'case': 'remove-indirect-header', 'repeat': 3, 'equal': True, 'incremental_s': 0.01005715923383832, 'full_s': 0.0099005913361907, 'reused': 0, 'refreshed': 2}
+{'case': 'remove-indirect-header', 'repeat': 4, 'equal': True, 'incremental_s': 0.010122504085302353, 'full_s': 0.010030034929513931, 'reused': 0, 'refreshed': 2}
+{'case': 'remove-indirect-header', 'repeat': 5, 'equal': True, 'incremental_s': 0.010393000673502684, 'full_s': 0.009957972913980484, 'reused': 0, 'refreshed': 2}
+A1_HEADER_DELETION_FIVE_REPEATS_AND_DYNAMIC_PASS
+STEP_EXIT_CODE=0

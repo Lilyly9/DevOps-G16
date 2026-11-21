@@ -1,0 +1,16 @@
+{
+  "archive": "/root/241880485/A1-E9E10-20261103-originals.tar.gz",
+  "bytes": 101491,
+  "sha256": "75be513b8ef64d3970ca44bbb68d1006b40c70eda1426788534b85a2606220d4",
+  "paths": {
+    "E9-manual": "work/e9-A-manual.eqLOHp",
+    "E10-manual": "work/e10-A-manual.eVOOik",
+    "E10-deletion": "work/e10-A-manual.n9BhPY",
+    "E9E10-tests": "work/A1-E9E10-tests.7gI6Xf",
+    "provenance": "work/A1-E9E10-provenance.8s_ev_pt"
+  },
+  "source_commit": "18a79582672a71d486abc656bc9007d4aebdceab",
+  "image_id": "sha256:7461c2bbd458c9a1955c9cfd502d435f8213a8e15b59f952eca833edcfe4e691",
+  "visible_memory_gib": 3.5,
+  "security_exit_code": 0
+}

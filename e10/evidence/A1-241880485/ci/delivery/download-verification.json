@@ -1,0 +1,13 @@
+{
+  "head_sha": "e835d187fa964d75ffecfd5779dda928526e0560",
+  "run_id": 41610392056,
+  "event": "pull_request",
+  "conclusion": "success",
+  "artifact_id": 13217844477,
+  "artifact_bytes": 119684,
+  "artifact_sha256": "01fd84443790848915485db87270b1678993307ff6f74a83f4f6727ef7be7dd0",
+  "logs_sha256": "e36c14e3e60f84993c962a2dcf7484943525dc692f4e0e550f0292fe91342929",
+  "observed_unit_result": "Ran 8 tests in 0.282s / OK",
+  "artifact_file_count": 206,
+  "scope": "Public regression only: original 7 + A1 independent 1 tests, A/B six reference routes; personal E9/E10 handbooks are separate actual server evidence."
+}

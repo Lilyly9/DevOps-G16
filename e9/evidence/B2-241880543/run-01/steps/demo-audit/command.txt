@@ -1,0 +1,1 @@
+compare full Makefile against independent expected replacement
