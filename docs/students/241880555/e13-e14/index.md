@@ -12,6 +12,7 @@
   2. 报告字节被篡改且沿用旧 SHA → `ARTIFACT_HASH_MISMATCH`（changed during transfer），且不产生 snapshot 目录。
   3. 非法 SHA 格式 → `ARTIFACT_HASH_MISMATCH`（must be a lowercase SHA-256）。
   4. 报告文件缺失 → `ARTIFACT_HASH_MISMATCH`（missing）。
+- 首轮 PR #29 CI：e11e12/e8e10/E7 gate 绿；e13e14 `contracts` 失败（模板写死 `scripts/secret_scan.py`，main 实际路径为 `labs/e11e12/environment/scripts/secret_scan.py`）、`four-services` 失败（GitHub runner 非-root checkout 使容器内 git 报 dubious ownership）。修复：workflow 扫描路径改为实际路径；`labs/e13e14/compose.yaml` 为四容器增加 `GIT_CONFIG_COUNT/KEY_0/VALUE_0`（safe.directory=*），compose config 复核通过。
 - 回归：`python3 run_e11e12.py test` OK（15 用例）；`labs/e13e14` discover 7 用例 OK；`test_contract.py`、`labs/e11e12/test_student_241880555.py` 均 OK。测试文件名带 `_e13e14` 后缀，避免与 `labs/e11e12/test_student_241880555.py` 模块同名冲突（首轮实测触发 ImportError 后改名）。
 
 ## 1. B 侧交换项目固定（E13 主责）

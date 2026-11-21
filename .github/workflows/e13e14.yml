@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           E14_ROOT="$PWD" E14_IMAGE=course-e11e12:999999999 docker compose -f labs/e13e14/compose.yaml config --quiet
-          python3 scripts/secret_scan.py . --history
+          python3 labs/e11e12/environment/scripts/secret_scan.py . --history
 
   four-services:
     runs-on: ubuntu-24.04
