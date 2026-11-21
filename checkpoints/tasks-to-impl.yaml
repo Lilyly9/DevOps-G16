@@ -1,0 +1,29 @@
+batch_id: e13-e14-a2-241880496
+status: partial
+role: A2
+tasks:
+  - id: A2-C2
+    description: Reject old fixed reports in fixed-md intake
+    status: implemented
+  - id: A2-C3
+    description: Validate fixed report SHA256 before transfer consumption
+    status: implemented
+  - id: A2-C8
+    description: Preserve same-key same-request and reject different request
+    status: implemented
+  - id: A2-HANDOFF
+    description: Export verified incremental-check as fixed-md with provenance
+    status: implemented
+    evidence: "Server tokenstat E11-A succeeded; exported fixed-md SHA256 1036c8955fe4bae6664a1bf88879113cc2be48b6d7cd358a0c20b70a505737af"
+  - id: A2-H1-E12
+    description: Run H1 jsmn through the complete E12 workflow
+    status: implemented
+    evidence: "Server job-070b682748c64331afa1d7815439098e; isolated candidate adds strace; all five stages succeeded"
+  - id: A2-E14-FIXED
+    description: Run the E14 fixed sample through all four services
+    status: implemented
+    evidence: "Local Docker job-207b9359db854f218e24d5043f4e0f9b; five stages and artifact hashes verified"
+  - id: A2-E14-H1
+    description: Run H1 jsmn through all four E14 services
+    status: implemented
+    evidence: "Local Docker job-9031e40cbcff42f1a5415e1b8eb4efa9; five stages and artifact hashes verified"

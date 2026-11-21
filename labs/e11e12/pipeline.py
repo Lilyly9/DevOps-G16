@@ -117,10 +117,35 @@ def execute(request, out, job_id=None):
         save(out/(name+'.json'),envelope)
         result['stages'].append({'name':name,'artifact':artifact(out/(name+'.json'),out,job_id)})
         return envelope
+    fixed_report_data=None
+    fixed_report_envelope=None
     try:
         mode=request['mode']
         if mode not in ('e11-a','e11-b','e12'):
             raise Failure('INVALID_REQUEST','Unknown mode')
+        if mode in ('e11-b','e12') and 'fixed_report' in request:
+            fixed=Path(request['fixed_report'])
+            try:
+                fixed_report_data=fixed.read_bytes()
+            except OSError as exc:
+                raise Failure('ARTIFACT_HASH_MISMATCH','Fixed report file is missing') from exc
+            expected_fixed_sha256=request.get('fixed_report_sha256')
+            if expected_fixed_sha256 is not None:
+                if not re.fullmatch(r'[0-9a-f]{64}',str(expected_fixed_sha256)):
+                    raise Failure('ARTIFACT_HASH_MISMATCH','fixed_report_sha256 must be a lowercase SHA-256')
+                actual_fixed_sha256=hashlib.sha256(fixed_report_data).hexdigest()
+                if actual_fixed_sha256 != expected_fixed_sha256:
+                    raise Failure('ARTIFACT_HASH_MISMATCH','Fixed report content changed during transfer')
+            try:
+                fixed_report_envelope=json.loads(fixed_report_data.decode('utf-8'))
+            except (UnicodeDecodeError,json.JSONDecodeError) as exc:
+                raise Failure('SCHEMA_MISMATCH','Fixed report must be UTF-8 JSON') from exc
+            if not isinstance(fixed_report_envelope,dict):
+                raise Failure('SCHEMA_MISMATCH','Fixed report must be a JSON object')
+            check_envelope(fixed_report_envelope,request['target'],'fixed-md')
+            fixed_report_data_envelope=fixed_report_envelope.get('data')
+            if not isinstance(fixed_report_data_envelope,dict):
+                raise Failure('SCHEMA_MISMATCH','Fixed report data must be a JSON object')
         repo=Path(request['repo']).resolve()
         if not repo.is_dir():
             raise Failure('INVALID_REQUEST','Repository missing')
@@ -205,6 +230,11 @@ def execute(request, out, job_id=None):
             stage('incremental-check',target_sha,current,increment_files)
         else:
             # E11-B still consumes a fixed MD input, separately from A's live output.
+            envelope=fixed_report_envelope
+            check_envelope(envelope,target_sha,'fixed-md')
+            current=envelope['data']
+            if current.get('commit') != target_sha:
+                raise Failure('STALE_REPORT','Fixed report data commit mismatch')
             fixed=Path(request['fixed_report'])
             envelope=json.loads(fixed.read_text(encoding='utf-8'))
             current=repair_input(envelope,target_sha,'fixed-md')
