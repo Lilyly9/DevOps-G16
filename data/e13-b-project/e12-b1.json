@@ -1,0 +1,10 @@
+{
+  "mode": "e12",
+  "repo": "/course/data/e13-b-project/repo",
+  "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+  "target": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+  "candidate": "/course/data/e13-b-project/candidate.Dockerfile",
+  "profile": true,
+  "expected_output": "2",
+  "build_timeout": 600
+}
