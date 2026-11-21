@@ -1,0 +1,266 @@
+{
+  "runner_sha": "012c7423f49459af3b0b90bdda57d0d02c35af13",
+  "backend": "course",
+  "out": "/home/runner/work/DevOps-G16/DevOps-G16/work/b2-personal",
+  "inputs": "/home/runner/work/DevOps-G16/DevOps-G16/data/b2-personal",
+  "cases": {
+    "fixed": {
+      "job_id": "job-379da593c6d74ef08f1380e8fe4b0526",
+      "trace_id": "trace-fc5ac2fdc00c4b24bb91dd261bdd8018",
+      "base_commit": "d09160317cfd9455d92f8e6e9841f9d944e7f7a2",
+      "target_commit": "4bc11523ba7bbc3fe11bbf5ee871ca0e1a4d7e61",
+      "status": "SUCCEEDED",
+      "exit_code": 0,
+      "image_id": "sha256:fe77135fadf1b8442e8f9651fed37e68feb59418c1f726337c650d8f27051790",
+      "initial_failure": "MISSING_MAKE",
+      "draft_output": "1",
+      "candidate_sha256": "c558c658c942e0a134ce3be8b12f757ab32df1040882d014052bd69565640414",
+      "fixed_report": {
+        "path": "data/integration-sample/fixed-md.json",
+        "sha256": "fae129f0796ae60a769174e322b37b4d51d3a6fea1ba19f0df8b64bd72aebc40",
+        "outer_commit": "4bc11523ba7bbc3fe11bbf5ee871ca0e1a4d7e61",
+        "data_commit": "4bc11523ba7bbc3fe11bbf5ee871ca0e1a4d7e61"
+      },
+      "edits": [
+        {
+          "target": "main.o",
+          "dependency": "config.h",
+          "style": "direct"
+        },
+        {
+          "target": "main.o",
+          "dependency": "extra.h",
+          "style": "direct"
+        }
+      ],
+      "findings": [
+        {
+          "type": "REDUNDANT",
+          "target": "main.o",
+          "dependency": "unused.h",
+          "evidence": [
+            {
+              "source": "make_database",
+              "artifact": "make-db.txt",
+              "line": 1054,
+              "declaration": "main.o: main.c unused.h config.h extra.h"
+            }
+          ],
+          "scope": "Not observed in this recipe job under this build configuration"
+        }
+      ],
+      "accepted": true,
+      "input_report": {
+        "uri": "artifact://job-379da593c6d74ef08f1380e8fe4b0526/fixed-md.json",
+        "sha256": "3ce82feb43180dd30107ea15e453102c58b53f8d58627b8a8a293b41bec3b8fa",
+        "bytes": 2305
+      }
+    },
+    "macro": {
+      "job_id": "job-2712fbecc37848748881ce9c9dee4713",
+      "trace_id": "trace-fe072442902446deb4ed1d9858727ff9",
+      "base_commit": "d486106a4e50ced273bfa5b9bd47279d1584c7da",
+      "target_commit": "e5cd8e594ea68c0f9f1d035207650528f52a6c59",
+      "status": "SUCCEEDED",
+      "exit_code": 0,
+      "image_id": "sha256:e6f6a7b3ba1da9a71108bc427bb6ca5ea2d57afac5c09f98eb679487003c35fa",
+      "initial_failure": "MISSING_MAKE",
+      "draft_output": "1",
+      "candidate_sha256": "c558c658c942e0a134ce3be8b12f757ab32df1040882d014052bd69565640414",
+      "fixed_report": {
+        "path": "data/b2-personal/macro-report.json",
+        "sha256": "3c9b476955d6e0c350d3c5557c0bf44be083dbf155632d23af8b2c414711e553",
+        "outer_commit": "e5cd8e594ea68c0f9f1d035207650528f52a6c59",
+        "data_commit": "e5cd8e594ea68c0f9f1d035207650528f52a6c59"
+      },
+      "edits": [
+        {
+          "target": "main.o",
+          "dependency": "config.h",
+          "style": "mixed"
+        },
+        {
+          "target": "main.o",
+          "dependency": "extra.h",
+          "style": "mixed"
+        }
+      ],
+      "findings": [
+        {
+          "type": "REDUNDANT",
+          "target": "helper.o",
+          "dependency": "main.c",
+          "evidence": [
+            {
+              "source": "make_database",
+              "artifact": "make-db.txt",
+              "line": 1207,
+              "declaration": "helper.o: helper.c main.c unused.h"
+            }
+          ],
+          "scope": "Not observed in this recipe job under this build configuration"
+        },
+        {
+          "type": "REDUNDANT",
+          "target": "helper.o",
+          "dependency": "unused.h",
+          "evidence": [
+            {
+              "source": "make_database",
+              "artifact": "make-db.txt",
+              "line": 1207,
+              "declaration": "helper.o: helper.c main.c unused.h"
+            }
+          ],
+          "scope": "Not observed in this recipe job under this build configuration"
+        },
+        {
+          "type": "REDUNDANT",
+          "target": "main.o",
+          "dependency": "unused.h",
+          "evidence": [
+            {
+              "source": "make_database",
+              "artifact": "make-db.txt",
+              "line": 1056,
+              "declaration": "main.o: main.c unused.h config.h extra.h"
+            }
+          ],
+          "scope": "Not observed in this recipe job under this build configuration"
+        }
+      ],
+      "accepted": true,
+      "input_report": {
+        "uri": "artifact://job-2712fbecc37848748881ce9c9dee4713/fixed-md.json",
+        "sha256": "a2c76d5743df5e10d5c666ae299a2ee08c7178fb0b2b214b288ddfa3558e66dc",
+        "bytes": 2710
+      }
+    },
+    "stale": {
+      "job_id": "job-170b992e85184f95a1325421f086a1a6",
+      "trace_id": "trace-a7a5b5801ae246d38f59a5b3ec52eff4",
+      "base_commit": "d486106a4e50ced273bfa5b9bd47279d1584c7da",
+      "target_commit": "e5cd8e594ea68c0f9f1d035207650528f52a6c59",
+      "status": "FAILED",
+      "exit_code": 1,
+      "image_id": "sha256:e6f6a7b3ba1da9a71108bc427bb6ca5ea2d57afac5c09f98eb679487003c35fa",
+      "initial_failure": "MISSING_MAKE",
+      "draft_output": "1",
+      "candidate_sha256": "c558c658c942e0a134ce3be8b12f757ab32df1040882d014052bd69565640414",
+      "fixed_report": {
+        "path": "data/b2-personal/stale-report.json",
+        "sha256": "10a336ced30a6e5467cff10d6bf0da5973cd091bd516897d56e7e477723d5e22",
+        "outer_commit": "e5cd8e594ea68c0f9f1d035207650528f52a6c59",
+        "data_commit": "d486106a4e50ced273bfa5b9bd47279d1584c7da"
+      },
+      "error": {
+        "code": "STALE_REPORT",
+        "message": "Report data belongs to another commit"
+      }
+    },
+    "e12": {
+      "job_id": "job-ebf3fd554fa649c193aef2bd3a1d5188",
+      "trace_id": "trace-cadf1aa3b88f492584c24a37fdacaae1",
+      "base_commit": "d09160317cfd9455d92f8e6e9841f9d944e7f7a2",
+      "target_commit": "4bc11523ba7bbc3fe11bbf5ee871ca0e1a4d7e61",
+      "status": "SUCCEEDED",
+      "exit_code": 0,
+      "image_id": "sha256:fe77135fadf1b8442e8f9651fed37e68feb59418c1f726337c650d8f27051790",
+      "initial_failure": "MISSING_MAKE",
+      "draft_output": "1",
+      "candidate_sha256": "c558c658c942e0a134ce3be8b12f757ab32df1040882d014052bd69565640414",
+      "edits": [
+        {
+          "target": "main.o",
+          "dependency": "config.h",
+          "style": "direct"
+        },
+        {
+          "target": "main.o",
+          "dependency": "extra.h",
+          "style": "direct"
+        }
+      ],
+      "findings": [
+        {
+          "type": "REDUNDANT",
+          "target": "main.o",
+          "dependency": "unused.h",
+          "evidence": [
+            {
+              "source": "make_database",
+              "artifact": "make-db.txt",
+              "line": 1044,
+              "declaration": "main.o: main.c unused.h config.h extra.h"
+            }
+          ],
+          "scope": "Not observed in this recipe job under this build configuration"
+        }
+      ],
+      "accepted": true,
+      "input_report": {
+        "uri": "artifact://job-ebf3fd554fa649c193aef2bd3a1d5188/incremental-check.json",
+        "sha256": "b4773ee25520c23967b5a4378534ebb9c43ef2b70eaee31634a782a88ea78b11",
+        "bytes": 3414
+      },
+      "same_image_validation_commands": 8
+    },
+    "transfer-eta": {
+      "job_id": "job-37fc6a2a89f04578b4fa17fe0295bf47",
+      "trace_id": "trace-7675e2efe97e4b37936c72fc2ac9ebd8",
+      "base_commit": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target_commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "status": "SUCCEEDED",
+      "exit_code": 0,
+      "image_id": "sha256:53f343a6e159cc5847e2b196c064213b095589a2a136abd2e2798a8b9a1edd1a",
+      "initial_failure": "MISSING_MAKE",
+      "draft_output": "eta_seconds=13",
+      "candidate_sha256": "10d31438d296566851fda8fa45be9a6baf1ad0e5099bea3bd616316fe73b79db",
+      "edits": [
+        {
+          "target": "eta_cli.o",
+          "dependency": "defaults.h",
+          "style": "direct"
+        }
+      ],
+      "findings": [],
+      "accepted": true,
+      "input_report": {
+        "uri": "artifact://job-37fc6a2a89f04578b4fa17fe0295bf47/incremental-check.json",
+        "sha256": "5b3b2d318eb548c343f5bfbdc55cb1ae3c2036b03990fee0fca492a092b3be2b",
+        "bytes": 4010
+      },
+      "same_image_validation_commands": 9,
+      "outputs": {
+        "expected": "eta_seconds=13",
+        "actual": "eta_seconds=13",
+        "expected_after_header_change": "eta_seconds=20",
+        "actual_after_header_change": "eta_seconds=20"
+      }
+    }
+  },
+  "api": {
+    "e12": {
+      "passed": true,
+      "job_id": "job-f297048b14104603bfcf0bcbd2eabba9",
+      "trace_id": "trace-b4277ee68af541fa9fa3e4d3aab3d5c8",
+      "target": "4bc11523ba7bbc3fe11bbf5ee871ca0e1a4d7e61",
+      "download_count": 6,
+      "replay_same_job": true,
+      "changed_target_http_status": 409,
+      "original_state_unchanged": true,
+      "repair_input_sha256": "f136424b61f8b660e50a346648bd4572c79e07495a2dd3604258b185a8f94465"
+    },
+    "transfer-eta": {
+      "passed": true,
+      "job_id": "job-a0c401338e314e408c0a51852dea0d51",
+      "trace_id": "trace-7404e32b70414a0aae9b54e071c4faf8",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "download_count": 6,
+      "replay_same_job": true,
+      "changed_target_http_status": 409,
+      "original_state_unchanged": true,
+      "repair_input_sha256": "112a5ad51a15974c073ff209d41f2e3ec8ced65e1af8a6025ba42e3012c25064"
+    }
+  }
+}

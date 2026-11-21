@@ -1,0 +1,9 @@
+{
+  "base_commit": "fa3f37f249f2708a5855a92549c0fd2b1d59141f",
+  "target_commit": "2bde2fe977570c979994ed8ae1f223e846a5d885",
+  "report_sha256": "f4d0437a9db34ba15ef4d619d63d919b2582027a821e800b7b081520250a35b1",
+  "outer_commit": "2bde2fe977570c979994ed8ae1f223e846a5d885",
+  "data_commit": "fa3f37f249f2708a5855a92549c0fd2b1d59141f",
+  "error": "STALE_REPORT",
+  "source_unchanged": true
+}
