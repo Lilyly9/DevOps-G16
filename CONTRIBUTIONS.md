@@ -130,5 +130,17 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 - 报告：`docs/students/241880496/e8-e10/`（个人报告、ADR、AI_USAGE）；本文件与根 `AI_USAGE.md` 的 A2 段落。
 - 关键结果：E8 `MISSING main.o→config.h`、`REDUNDANT main.o→unused.h`，未变化时两目标复用；E9 C1 复用、C2 刷新并新增 MD `extra.h`、C3 消除两项 MD 保留 RD；E10 六场景 30 行 `equal=True`、`gate.json rows=30 passed=true`、动态重检只剩 RD；单测 `Ran 10 tests ... OK`。
 - 服务器复核（2026-11-10）：在 A16 共享服务器（`47.96.152.132`，Linux 5.15 / 2 vCPU / 3.5 GiB / Docker 29.1.3）克隆 `main`（`aecdbb3`）到 `~/devops-students/241880496/DevOps-G16`，重建镜像 `sha256:22eae619…`，按同一手册重跑三条 A 轨道路线（E8 `work/e8-A-manual.zycx8k`、E9 `work/e9-A-manual.0kqyk4`、E10 `work/e10-A-manual.861iod`，单测 10 passed），发现与本地一致；服务器计时显示复用场景增量约为全量的 1/5.8。材料 ZIP、提交存档与服务器原件已放在 `/root/devops-submissions/241880496/`（含 `README.md`、`交付状态.json`、`双端校验.log` 与 sha256），并 scp 回本机同结构目录。
+
+## A2：E13-E14 补充（241880496）
+
+- A2 定向交付：接入 `labs/e13e14/handoff_a_to_b.py`，将已成功的 E11-A `incremental-check` 报告转换为 B 可消费的 `fixed-md`，校验目标 SHA、job/trace、artifact URI、内容 SHA 和大小。
+- C2/C3/C8：在 `labs/e11e12/pipeline.py` 增加固定报告传输 SHA 校验；新增 `labs/e11e12/test_student_241880496_e13e14.py` 与 `labs/e13e14/test_handoff.py`，覆盖旧报告拒绝、篡改哈希拒绝和幂等冲突。
+- 定向验证：交接测试 3 项、原契约测试 10 项、A2 专项测试 4 项，合计 17 项通过。
+- 服务器执行：在 `47.96.152.132` 运行本人及原契约测试 22 项通过；tokenstat E11-A 和 `fixed-md` 报告交接成功；C2 返回 `STALE_REPORT`、C3 返回 `ARTIFACT_HASH_MISMATCH`；真实 C8 同键同请求两次 HTTP 202 且同 job，不同 target HTTP 409 `IDEMPOTENCY_CONFLICT`。H1 jsmn 的 E11-A 也成功。
+- H1 jsmn：E11-A 后，使用隔离候选副本 `candidate-a2-strace.Dockerfile` 增加 `strace`，在服务器跑通完整 E12 五阶段；job `job-070b682748c64331afa1d7815439098e`，候选镜像 ID `sha256:b34e18e15363ef86412b81a3d8800c7bc922714cfd1146be857ef0e1ecec10da`，未覆盖课程原候选。
+- E14：本机 Docker Desktop 29.5.2 上固定样例五阶段通过（job `job-207b9359db854f218e24d5043f4e0f9b`）及 H1 jsmn 五阶段通过（job `job-9031e40cbcff42f1a5415e1b8eb4efa9`）；EChecker 报告 SHA、五阶段 job/trace 关联及产物 SHA 均核验。日志扫描 332 个文本文件，0 hits / 0 errors。首次本机尝试因 Windows Git CRLF 转换导致 patch 不匹配；以单次进程 `core.autocrlf=false` 重跑后通过，未改动原始提交。
+- 服务器初次 E14 DRAFT 受 Docker Hub 拉取超时阻断；后来确认本机 Docker Hub 可用并完成上述成功重跑。服务器服务测试使用的是 `course-e11e12:241880464` 的本地别名，并非新构建的服务器个人镜像。
+- 未代做：未声明真实跨组 C1-C8 全集、H2/H3、E14 配对组项目 E2E、故障恢复、RC 或远端 CI 已通过；成功与失败原始证据分别归档于个人记录目录。
+- 文档：[个人索引](docs/students/241880496/e13-e14/index.md)、[ADR](docs/students/241880496/e13-e14/ADR.md)、[AI_USAGE](docs/students/241880496/e13-e14/AI_USAGE.md)。
 - 未完成 / 未代做：未实施"按目标失效"（会改变既有测试与手册断言，需组内统一口径）；A1/B1/A3/B3 各阶段结论不由本人填写；与 B 组联调属 E11—E12。
 - 提交：`adf0421` `feat(e8-e10): report invalidation reasons and add A2 student tests`；证据与文档提交 SHA 以本分支 `git log` 为准（未在提交内填写自身 SHA）。

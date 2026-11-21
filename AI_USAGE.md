@@ -281,3 +281,14 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 - 验证：`python run_lab.py build` 退出 0；E8/E9/E10 A 轨道逐步 `STEP_EXIT_CODE=0`；`python3 -m unittest discover -s labs/e8e10 -p 'test_*.py' -v` 为 `Ran 10 tests ... OK`（原 7 + 本人 3）。
 - 边界：课程参考实现（`run_lab.py`、`labs/e8e10/lab.py` 原逻辑、`test_profile.py`、工作流）不是本人自主开发；未改动 `test_profile.py` 与工作流，未代填他人结论，Actions 结果以 GitHub 实际记录为准。
 - 证据：`e8|e9|e10/evidence/A2-241880496/`；报告：`docs/students/241880496/e8-e10/`。
+
+## A2：E13-E14 补充（241880496）
+
+- 工具：GitHub Copilot（VS Code 会话）。
+- 工作：接入教材包的 A→B 报告交接脚本，在流水线读取固定报告前校验 SHA256，并新增 C2/C3/C8 与交接定向测试。
+- 人工核对：保留原有契约和幂等实现，只补报文传输校验；定向测试使用临时目录，不修改真实项目或工作证据。
+- 验证：交接测试 3 项、原契约测试 10 项、A2 专项测试 4 项均通过；未把本机回归写成真实跨组或远端 CI 通过。
+- 服务器核验：服务器定向及契约测试 22 项通过；tokenstat E11-A 和报告导出成功；C2/C3 分别按预期返回 `STALE_REPORT` / `ARTIFACT_HASH_MISMATCH`；C8 API 两次 202 同 job、不同比 target 409 冲突。H1 jsmn 完整 E12 在隔离候选增加 `strace` 后五阶段成功。
+- E14 实测：在本机 Docker Desktop 29.5.2 跑通固定样例及 H1 jsmn 两次五阶段 E2E，核对报告 SHA、阶段 job/trace 和产物 SHA；扫描 332 个文本文件，0 hits、0 errors。第一次本机 E14 因 Windows CRLF 转换导致 patch 不匹配，按 Linux LF 方式检出后重跑成功。
+- 证据：服务器原始请求/结果见 `docs/students/241880496/e13-e14/evidence/server-2026-11-21/`；H1 E12 和两次 E14 成功结果见 `docs/students/241880496/e13-e14/evidence/successful-runs-2026-11-21/`。
+- 未代做：真实配对组项目 E2E、C1-C8 全集的独立复核、H2/H3、故障恢复、RC 发布和远端 CI；不宣称整组 E13/E14 验收通过。
