@@ -1,0 +1,76 @@
+{
+  "base_commit": "fa3f37f249f2708a5855a92549c0fd2b1d59141f",
+  "target_commit": "2bde2fe977570c979994ed8ae1f223e846a5d885",
+  "report_sha256": "b86a45502770dbbc11f6520b395638b7cedfe5836865f59f12ddc3c427e9c6e6",
+  "outer_commit": "2bde2fe977570c979994ed8ae1f223e846a5d885",
+  "data_commit": "2bde2fe977570c979994ed8ae1f223e846a5d885",
+  "edits": [
+    {
+      "target": "main.o",
+      "dependency": "config.h",
+      "style": "mixed"
+    },
+    {
+      "target": "main.o",
+      "dependency": "extra.h",
+      "style": "mixed"
+    }
+  ],
+  "verdict": {
+    "accepted": true,
+    "checks": {
+      "patch_applies": true,
+      "build": true,
+      "test": true,
+      "header_change": true,
+      "no_missing": true
+    },
+    "error": null,
+    "source_unchanged": false,
+    "rollback": false
+  },
+  "findings": [
+    {
+      "type": "REDUNDANT",
+      "target": "helper.o",
+      "dependency": "main.c",
+      "evidence": [
+        {
+          "source": "make_database",
+          "artifact": "make-db.txt",
+          "line": 1213,
+          "declaration": "helper.o: helper.c main.c unused.h"
+        }
+      ],
+      "scope": "Not observed in this recipe job under this build configuration"
+    },
+    {
+      "type": "REDUNDANT",
+      "target": "helper.o",
+      "dependency": "unused.h",
+      "evidence": [
+        {
+          "source": "make_database",
+          "artifact": "make-db.txt",
+          "line": 1213,
+          "declaration": "helper.o: helper.c main.c unused.h"
+        }
+      ],
+      "scope": "Not observed in this recipe job under this build configuration"
+    },
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h",
+      "evidence": [
+        {
+          "source": "make_database",
+          "artifact": "make-db.txt",
+          "line": 1064,
+          "declaration": "main.o: main.c unused.h config.h extra.h"
+        }
+      ],
+      "scope": "Not observed in this recipe job under this build configuration"
+    }
+  ]
+}

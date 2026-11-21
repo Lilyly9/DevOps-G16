@@ -11,7 +11,8 @@ import uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path[:0] = [str(ROOT / 'labs/e8e10'), str(ROOT / 'labs/e11e12/vendor'),
+# 保留本阶段的模块优先级，避免相邻阶段同名测试被误导入。
+sys.path[:0] = [str(ROOT / 'labs/e11e12'), str(ROOT / 'labs/e8e10'), str(ROOT / 'labs/e11e12/vendor'),
                 str(ROOT / 'labs/e11e12/environment/services/buildchecker')]
 from lab import scan, patch, validate
 
@@ -37,6 +38,13 @@ def check_envelope(report, commit, kind=None):
         raise Failure('UPSTREAM_FAILED', 'Upstream stage did not succeed')
     if kind and report.get('kind') != kind:
         raise Failure('ARTIFACT_TYPE_MISMATCH', kind)
+
+def repair_input(report, commit, kind):
+    check_envelope(report, commit, kind)
+    data = report['data']
+    if data.get('commit') != commit:
+        raise Failure('STALE_REPORT', 'Report data belongs to another commit')
+    return data
 
 def load_artifact(path, expected_sha256):
     data=path.read_bytes()
@@ -221,7 +229,7 @@ def execute(request, out, job_id=None):
                 increment_files += [out/'target-full'/f for f in ('clean-execution.json','build-execution.json')]
             if run_scans_in_draft:
                 increment_files.extend(sorted((out/'target-scan').glob('*.json')))
-            md_envelope=stage('incremental-check',target_sha,current,increment_files)
+            stage('incremental-check',target_sha,current,increment_files)
         else:
             # E11-B still consumes a fixed MD input, separately from A's live output.
             envelope=fixed_report_envelope
@@ -229,20 +237,24 @@ def execute(request, out, job_id=None):
             current=envelope['data']
             if current.get('commit') != target_sha:
                 raise Failure('STALE_REPORT','Fixed report data commit mismatch')
+            fixed=Path(request['fixed_report'])
+            envelope=json.loads(fixed.read_text(encoding='utf-8'))
+            current=repair_input(envelope,target_sha,'fixed-md')
             save(out/'fixed-md-input.json',envelope)
-            md_envelope=stage('fixed-md',target_sha,current,[out/'fixed-md-input.json'])
+            stage('fixed-md',target_sha,current,[out/'fixed-md-input.json'])
         if mode in ('e11-b','e12'):
             reference=result['stages'][-1]['artifact']
-            md_envelope=load_artifact(out/(md_envelope['kind']+'.json'),reference['sha256'])
-            check_envelope(md_envelope,target_sha)
-            current=md_envelope['data']
+            input_kind = 'fixed-md' if mode == 'e11-b' else 'incremental-check'
+            input_path = out/(input_kind+'.json')
+            md_envelope=load_artifact(input_path,reference['sha256'])
+            current=repair_input(md_envelope,target_sha,input_kind)
             before=(target/'Makefile').read_bytes()
-            diff,edits=patch(target,current)
+            diff,edits=patch(target,current,isolate_shared_macros=True)
             if not diff:
                 raise Failure('NO_MISSING_DEPENDENCY','No MD to repair')
             patchfile=out/'candidate.patch';patchfile.write_text(diff,encoding='utf-8')
             save(out/'repair-plan.json',edits)
-            stage('repair',target_sha,{'edits':edits,'input_report':artifact(out/(md_envelope['kind']+'.json'),out,job_id)},[patchfile,out/'repair-plan.json'])
+            stage('repair',target_sha,{'edits':edits,'input_report':reference},[patchfile,out/'repair-plan.json'])
             validation_runner = draft_executor.capture if draft_executor is not None else None
             verdict=validate(target,patchfile,out/'validation',profile=profile,runner=validation_runner)
             if not verdict['accepted']:

@@ -1,0 +1,32 @@
+{
+  "base_commit": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "target_commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "edits": [
+    {
+      "target": "eta_cli.o",
+      "dependency": "defaults.h",
+      "style": "direct"
+    }
+  ],
+  "verdict": {
+    "accepted": true,
+    "checks": {
+      "patch_applies": true,
+      "build": true,
+      "project_make_test": true,
+      "test": true,
+      "header_change": true,
+      "no_missing": true
+    },
+    "error": null,
+    "source_unchanged": false,
+    "rollback": false,
+    "outputs": {
+      "expected": "eta_seconds=13",
+      "actual": "eta_seconds=13",
+      "expected_after_header_change": "eta_seconds=20",
+      "actual_after_header_change": "eta_seconds=20"
+    }
+  },
+  "findings": []
+}
