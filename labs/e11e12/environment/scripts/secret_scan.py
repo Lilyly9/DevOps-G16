@@ -41,7 +41,10 @@ def scan_text(text, where):
 
 
 def git(root, *args):
-    return subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=True)
+    p = subprocess.run(["git", "-C", str(root), *args], capture_output=True)
+    return subprocess.CompletedProcess(
+        p.args, p.returncode,
+        p.stdout.decode("utf-8", "replace"), p.stderr.decode("utf-8", "replace"))
 
 
 def files(root):
