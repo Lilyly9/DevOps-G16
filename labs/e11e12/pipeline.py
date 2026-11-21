@@ -146,8 +146,6 @@ def execute(request, out, job_id=None):
             fixed_report_data_envelope=fixed_report_envelope.get('data')
             if not isinstance(fixed_report_data_envelope,dict):
                 raise Failure('SCHEMA_MISMATCH','Fixed report data must be a JSON object')
-            if fixed_report_data_envelope.get('commit') != request['target']:
-                raise Failure('STALE_REPORT','Fixed report data commit mismatch')
         repo=Path(request['repo']).resolve()
         if not repo.is_dir():
             raise Failure('INVALID_REQUEST','Repository missing')
