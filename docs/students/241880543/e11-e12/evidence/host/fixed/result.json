@@ -1,0 +1,48 @@
+{
+  "base_commit": "db5cdc945e5bb985980b2db46d4df45b5bd60c86",
+  "target_commit": "1a84ab873b39a74900fa6321679fa448384fd024",
+  "report_sha256": "5ea0fa890d3e15283eec6069c23b21d60fe66ed05a406a0d9638959ea7d4dba9",
+  "outer_commit": "1a84ab873b39a74900fa6321679fa448384fd024",
+  "data_commit": "1a84ab873b39a74900fa6321679fa448384fd024",
+  "edits": [
+    {
+      "target": "main.o",
+      "dependency": "config.h",
+      "style": "direct"
+    },
+    {
+      "target": "main.o",
+      "dependency": "extra.h",
+      "style": "direct"
+    }
+  ],
+  "verdict": {
+    "accepted": true,
+    "checks": {
+      "patch_applies": true,
+      "build": true,
+      "test": true,
+      "header_change": true,
+      "no_missing": true
+    },
+    "error": null,
+    "source_unchanged": false,
+    "rollback": false
+  },
+  "findings": [
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h",
+      "evidence": [
+        {
+          "source": "make_database",
+          "artifact": "make-db.txt",
+          "line": 1062,
+          "declaration": "main.o: main.c unused.h config.h extra.h"
+        }
+      ],
+      "scope": "Not observed in this recipe job under this build configuration"
+    }
+  ]
+}
