@@ -1,0 +1,4 @@
+e14-241880597-draft-1 Up About a minute (healthy) 127.0.0.1:18183->8080/tcp
+e14-241880597-mdfixer-1 Up About a minute (healthy) 127.0.0.1:18184->8080/tcp
+e14-241880597-echecker-1 Up About a minute (healthy) 127.0.0.1:18182->8080/tcp
+e14-241880597-buildchecker-1 Up About a minute (healthy) 127.0.0.1:18181->8080/tcp

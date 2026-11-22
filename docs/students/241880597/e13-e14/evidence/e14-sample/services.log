@@ -1,0 +1,10 @@
+--- buildchecker ---
+{"role": "buildchecker", "job_id": "job-695e68fd67f04a22b6b2f01efa3adf13", "trace_id": "trace-a3580ab57c5c484a9f3099ea7b1815b2", "status": "SUCCEEDED", "elapsed_ms": 135}
+{"role": "buildchecker", "job_id": "job-695e68fd67f04a22b6b2f01efa3adf13", "trace_id": "trace-a3580ab57c5c484a9f3099ea7b1815b2", "status": "SUCCEEDED", "elapsed_ms": 141}
+{"role": "buildchecker", "job_id": "job-695e68fd67f04a22b6b2f01efa3adf13", "trace_id": "trace-a3580ab57c5c484a9f3099ea7b1815b2", "status": "SUCCEEDED", "elapsed_ms": 130}
+--- echecker ---
+{"role": "echecker", "job_id": "job-695e68fd67f04a22b6b2f01efa3adf13", "trace_id": "trace-a3580ab57c5c484a9f3099ea7b1815b2", "status": "SUCCEEDED", "elapsed_ms": 52}
+--- draft ---
+{"role": "draft", "job_id": "job-695e68fd67f04a22b6b2f01efa3adf13", "trace_id": "trace-a3580ab57c5c484a9f3099ea7b1815b2", "status": "SUCCEEDED", "elapsed_ms": 998}
+--- mdfixer ---
+{"role": "mdfixer", "job_id": "job-695e68fd67f04a22b6b2f01efa3adf13", "trace_id": "trace-a3580ab57c5c484a9f3099ea7b1815b2", "status": "SUCCEEDED", "elapsed_ms": 1184}
