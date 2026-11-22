@@ -1,0 +1,7 @@
+[
+  {
+    "target": "eta_cli.o",
+    "dependency": "defaults.h",
+    "style": "direct"
+  }
+]

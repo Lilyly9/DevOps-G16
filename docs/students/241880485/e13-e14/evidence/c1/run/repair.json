@@ -1,0 +1,36 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-789dec04cba24db690ace58ecbe0f868",
+  "trace_id": "trace-ef57b1b5364d49b7b1f9357f4a5075b1",
+  "kind": "repair",
+  "commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "status": "SUCCEEDED",
+  "data": {
+    "edits": [
+      {
+        "target": "eta_cli.o",
+        "dependency": "defaults.h",
+        "style": "direct"
+      }
+    ],
+    "input_report": {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/incremental-check.json",
+      "sha256": "7db1a948845b5dc69bd19fa0325fc3fdad450ef9fcc2dc5435630dbed1bbdf10",
+      "bytes": 4010
+    }
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/candidate.patch",
+      "sha256": "02c5087bea9a505a77f83a2fd7955419db8c0a9aa193337a9f26aaa79a8795f0",
+      "bytes": 293
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/repair-plan.json",
+      "sha256": "c37c667d4ed358d5c2cf502268a2518871358475e52a53e70a94b98de19cee3c",
+      "bytes": 93
+    }
+  ],
+  "project_path": "projects/transfer-eta",
+  "profile_sha256": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07"
+}

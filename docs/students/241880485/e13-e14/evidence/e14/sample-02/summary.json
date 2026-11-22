@@ -1,0 +1,79 @@
+{
+  "status": "SUCCEEDED",
+  "job_id": "job-fc8b5db6f2b1408ea987ec29e4b0bd06",
+  "trace_id": "trace-cd0649b63f074cda968916ea55951966",
+  "base_commit": "a7ae98c4bc5d6ff9ddec1849d7c0aa4712027af9",
+  "target_commit": "dc9390c18168d602c4ab5824c25fffa8dcdcd069",
+  "stages": [
+    "draft",
+    "full-check",
+    "incremental-check",
+    "repair",
+    "recheck"
+  ],
+  "stage_envelopes": [
+    {
+      "name": "draft",
+      "status": "SUCCEEDED",
+      "job_id": "job-fc8b5db6f2b1408ea987ec29e4b0bd06",
+      "trace_id": "trace-cd0649b63f074cda968916ea55951966"
+    },
+    {
+      "name": "full-check",
+      "status": "SUCCEEDED",
+      "job_id": "job-fc8b5db6f2b1408ea987ec29e4b0bd06",
+      "trace_id": "trace-cd0649b63f074cda968916ea55951966"
+    },
+    {
+      "name": "incremental-check",
+      "status": "SUCCEEDED",
+      "job_id": "job-fc8b5db6f2b1408ea987ec29e4b0bd06",
+      "trace_id": "trace-cd0649b63f074cda968916ea55951966"
+    },
+    {
+      "name": "repair",
+      "status": "SUCCEEDED",
+      "job_id": "job-fc8b5db6f2b1408ea987ec29e4b0bd06",
+      "trace_id": "trace-cd0649b63f074cda968916ea55951966"
+    },
+    {
+      "name": "recheck",
+      "status": "SUCCEEDED",
+      "job_id": "job-fc8b5db6f2b1408ea987ec29e4b0bd06",
+      "trace_id": "trace-cd0649b63f074cda968916ea55951966"
+    }
+  ],
+  "artifact_count": 162,
+  "error": null,
+  "copied": [
+    "baseline-full/actual-graph.json",
+    "baseline-full/declared-graph.json",
+    "baseline-full/findings.json",
+    "baseline-full/processes.json",
+    "baseline-response.json",
+    "draft-build/result.json",
+    "draft-response.json",
+    "draft.json",
+    "final-full/actual-graph.json",
+    "final-full/declared-graph.json",
+    "final-full/findings.json",
+    "final-full/processes.json",
+    "full-check.json",
+    "incremental/baseline-cache.json",
+    "incremental/incremental-check.json",
+    "incremental-check.json",
+    "incremental-response.json",
+    "recheck-response.json",
+    "recheck.json",
+    "repair-response.json",
+    "repair-work/repair-plan.json",
+    "repair.json",
+    "request.json",
+    "result.json",
+    "target-full/actual-graph.json",
+    "target-full/declared-graph.json",
+    "target-full/findings.json",
+    "target-full/processes.json",
+    "target-response.json"
+  ]
+}

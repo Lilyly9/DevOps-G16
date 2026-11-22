@@ -1,0 +1,17 @@
+{
+  "status": "FAILED",
+  "job_id": "job-b99f47f871b54b7b9dbf867736abd844",
+  "trace_id": "trace-ce8b875938314eccbf2cacc142411873",
+  "base_commit": "a7ae98c4bc5d6ff9ddec1849d7c0aa4712027af9",
+  "target_commit": "dc9390c18168d602c4ab5824c25fffa8dcdcd069",
+  "stages": [],
+  "stage_envelopes": [],
+  "artifact_count": 36,
+  "error": "draft HTTP 422: {\"status\": \"FAILED\", \"role\": \"draft\", \"error_code\": \"TIMEOUT\", \"error\": \"DRAFT_TIMED_OUT: Docker client command exceeded 0.01s\"}\n",
+  "copied": [
+    "draft-build/result.json",
+    "draft-response.json",
+    "request.json",
+    "result.json"
+  ]
+}
