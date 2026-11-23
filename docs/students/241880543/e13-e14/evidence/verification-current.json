@@ -1,0 +1,99 @@
+{
+  "base_commit": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+  "branch": "student/241880543/e13-e14",
+  "original_stash": "6442241c59c7f469199044ba3dc0db4e544569c1",
+  "implementation_sha256": {
+    "labs/e8e10/lab.py": "5c5a91280a007872e10c629554c1a51ee198dfb54ce2336402e9fcb941576114",
+    "labs/e11e12/pipeline.py": "f94e35776cc0a57031c036e5504f10c2416c26966d6891ff639e3f25e8c59197",
+    "labs/e11e12/test_student_241880543_e13e14.py": "83187dc54ae2fd4467fe7ba9700ca41a635af44ecee64599a54cd8702201c82f",
+    "docs/students/241880543/e13-e14/run_evidence.py": "4e9d93ac1f191e15015b2f4002af827425591509417efaeeb03e28b6d912f239"
+  },
+  "tests": [
+    {
+      "log": "linux-full-tests-confirmed.log",
+      "count": 75,
+      "exit_code": 0
+    },
+    {
+      "log": "linux-handoff-tests-confirmed.log",
+      "count": 3,
+      "exit_code": 0
+    },
+    {
+      "log": "linux-lab-tests-final.log",
+      "count": 21,
+      "exit_code": 0
+    }
+  ],
+  "draft_status": "SUCCEEDED",
+  "c5_status": "SUCCEEDED",
+  "c5_command": "python3 docs/students/241880543/e13-e14/run_evidence.py --out work/e13-241880543-c5-docker-20261122-04 --draft-result work/e13-241880543-draft-20261122-01/result.json",
+  "test_environment": {
+    "os": "WSL Ubuntu 22.04",
+    "python": "3.10.12",
+    "PYTHONPATH": "labs/e11e12:labs/e8e10:labs/e11e12/vendor",
+    "lab_tests_path_order": "labs/e8e10 first",
+    "c5_git_config": "process-only safe.directory=* for WSL generated test repositories"
+  },
+  "pending": [
+    "H1 reproducible original Git project",
+    "H3 and C1 peer inputs",
+    "E14 four-container run (runtime image build network failure)",
+    "remote CI"
+  ],
+  "scan_exit_code": 0,
+  "evidence_sha256": {
+    ".gitattributes": "5601400417a70178a26a13219889ad299ec208fa098e7f375a371b30c7152aa7",
+    "contract-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "contract-tests.log": "83de7e9c68450793c61c6aa00d8af021a936a9bbcbc5d36065d064cb57e24619",
+    "docker-c5-summary.json": "9ebd4ef2754d9cf8f5d07a3233eb7a2a145f5d0eedb46582385c30afd9ba2dde",
+    "docker-c5.zip": "0379e543e1041a4721051178be819319f9c6a0419ee140ffdc3587710f0cafe2",
+    "draft-build-summary.json": "00bc54aa8bc461b62fa8f5d103aadb3adea559270a5d3bcf380fe5d6b2bfb257",
+    "draft-build.zip": "804c64df34ad088c6b3957dc74170b04d21289a1f69a7d214efa475ea875111f",
+    "e14-image-build.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "e14-image-build.log": "0baaa8b4285716afc214849054d1d2f6a92fc23f25e7af174b8b7c63b297b3cc",
+    "e14-image-final.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "e14-image-final.log": "713f9a1d5885a8801b0eebe798aee31bfbfde5010ff99cb19c6258255275fc57",
+    "e14-image-retry.exit": "ca2ebdf97d7469496b1f4b78958f9dc8447efdcb623953fee7b6996b762f6fff",
+    "e14-image-retry.log": "c24846cade23e0aa5e820bccf0dec5b6fbe08c89305c5d42e57ad3e20013b519",
+    "full-tests.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "full-tests.log": "ad4f1cbb19869086c2047a8563bc6b5762893aadec5a5f135fb8c4c61396357e",
+    "linux-c5-complete.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "linux-c5-complete.log": "2b381016d1cc9713eda13a5e8d3f70d1dfac51d6bd0d4bb83083583c0089f487",
+    "linux-c5-final.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "linux-c5-final.log": "0c1992baab95e9eea81053c19fe19e036a041df71ec53bd2ebe2823379fdc8c1",
+    "linux-c5-retry.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "linux-c5-retry.log": "77137468941f430fe50c830c78dc18e72c9611974ae2532366971d5b1d67fc3c",
+    "linux-draft-c5.exit": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "linux-draft-c5.log": "d0f5916117b4ab0c5c4ec6cfdf746e895c30b9c8543e7913b2fea7d163c90482",
+    "linux-full-tests-confirmed.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "linux-full-tests-confirmed.log": "0e9f792ff09b4653f0cc865da3209473012f20a872a564f73ccf2660204d3bad",
+    "linux-full-tests.exit": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "linux-full-tests.log": "7b07b37ad8124d5529be2b7f5d4c96f3d4487077b7383dd3342f164b636b886b",
+    "linux-handoff-tests-confirmed.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "linux-handoff-tests-confirmed.log": "9c5daa03c5cf503e84eedd8c0f383919ba0e2e0d031917b222bfaea993eb452c",
+    "linux-lab-tests-confirmed.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "linux-lab-tests-confirmed.log": "a5c82faf08d08f4e6b27a43c949a6cb383d8745fb0e0c32b4ec46b6ae0ffdd4b",
+    "linux-lab-tests-final.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "linux-lab-tests-final.log": "f4eb81a36047aa93eedf682be66fa0588021125d4021957c3ba8bf10c6650783",
+    "runtime-final.Dockerfile": "d5c421e8601cf4c4834839871d062658d980b07300b50e0fb86d25ad1a0c4373",
+    "runtime-scan.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "runtime-scan.log": "49c12e5bbb0d6a4e637873f2ae4556305105c791cea29f508e3936f161947e71",
+    "runtime.Dockerfile": "f4f8aea26e7b95443bef133d064cc21e031f8eac8ef9201ab555a78c4586a278",
+    "verification.json": "003967bc3534fa44fc0828b53c3272a5b4b2ad5a4e1a5953e4ac247834c65ab4",
+    "review-check.json": "c677f21bc0b7b10440b1a874a4aef3b1df38fd489d10a7c8b7bd34d79326e695"
+  },
+  "implementation_git_blob_sha256": {
+    "labs/e8e10/lab.py": "5c5a91280a007872e10c629554c1a51ee198dfb54ce2336402e9fcb941576114",
+    "labs/e11e12/pipeline.py": "2dc54a47f59434a9cee9e5e3c77bd667955a4c99c9b4dac87c5cd93e07c984ea",
+    "labs/e11e12/test_student_241880543_e13e14.py": "102e143b621aabc516791014626a13a3ee53d192e1bd60622f71b12cbc0b0748",
+    "docs/students/241880543/e13-e14/run_evidence.py": "a08fe92f47a5982d8e45bf1f96afa25c437788a801ca297ff15d8f5ce3b43ea9"
+  },
+  "hash_note": "implementation_sha256 describes actual tested working-tree bytes; implementation_git_blob_sha256 describes Git-normalized source bytes. All evidence files preserve raw bytes with -text across platforms; the attributes digest was updated during submission preparation. Original logs and exit bytes were not rewritten.",
+  "publication": {
+    "commit": "PENDING",
+    "push": "PENDING",
+    "pull_request": "PENDING",
+    "remote_CI": "PENDING"
+  }
+}

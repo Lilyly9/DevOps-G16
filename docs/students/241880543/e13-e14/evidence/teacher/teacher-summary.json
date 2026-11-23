@@ -1,0 +1,142 @@
+{
+  "scope": "B2 H1 execution / H3 review on supplied course-adapted repositories",
+  "archive_sha256": "d9818c5f34d6ff5b6016222dabd7f56daca09ceaa5f525be214e146e3d485435",
+  "platform": "win32",
+  "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+  "runner_commit": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+  "runner_sha256": "dd75d5d78ae88458dc731ffd4c0b1ce37300e87cbb04ecca1e2ba5428c775501",
+  "cases": {
+    "H1-jsmn": {
+      "base": "66a6dafcc20cea76bf017923d3db725d78407845",
+      "target": "948a1d30cd758d32d45a50f788e5a95fb1d89c69",
+      "upstream": "Original project: https://github.com/zserge/jsmn\nPinned upstream commit: 25647e692c7906b96ffd2b05ca54c097948e879c\nThe course fixture retains the upstream core and license; main.c, Makefile, Dockerfile and the helper wrapper are course additions.\nUpstream file hashes: {\"jsmn.h\": \"c04533e9181e1e33baceb0f55ac449b05145bb936e8c68cc77dfe0d8277514fb\"}\n",
+      "source_hashes_before": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "Dockerfile.broken": "671d99aa36739f90e971acb45f36f86a0e1f42c02bd1def74fbbd1a764b22154",
+        "extra.h": "9b7f2ff66b880085fd47117f4d643f71795b991e6d5e8f73acf0b59d21cfb7d4",
+        "helper.c": "3e7670c1c9e330db5634c198fe9029796b8023da92943849f55c0b4778ab9ec5",
+        "jsmn.h": "c04533e9181e1e33baceb0f55ac449b05145bb936e8c68cc77dfe0d8277514fb",
+        "LICENSE.upstream": "4675b94a50d2afe811c52785463c854f1156056632cce17cc7133939eac8ed55",
+        "main.c": "4f8535dc013d26d7d3f90c2b340c9adcf7c179e3afcaf4b64d51a90d96f780c8",
+        "Makefile": "a1454316799ab120853f00410eb2f2bfeb60cc62456783225ca13cf97ecaae93",
+        "unused.h": "e2780d03dc96f11919fe5856b9e3026bd1e1e76ec1a9612f789c4dd204b09b06",
+        "UPSTREAM.md": "8a6f420be5af0e8e26322a722f1dbb73f03d7c12e2e9e4b5bc981ee4ee58da4e"
+      },
+      "candidate_sha256": "2ac5ae7cd7e296cb30e78e6f740642b76d8c4286356a2a5ad1dba5d4ebc7a6e7",
+      "candidate_contains_strace": false,
+      "selected_candidate_sha256": "0de7541af05dd5c13839abaa06e46e9be69dfcaaadf22f5fa0819eaa0b30e1c0",
+      "selected_candidate": "candidate-b2-strace.Dockerfile",
+      "gcc_findings": [
+        {
+          "type": "MISSING",
+          "target": "helper.o",
+          "dependency": "extra.h"
+        }
+      ],
+      "patch_check_exit": 0,
+      "patch_sha256": "8598e9b539354b5b628a6d992932cf1602c8acf6c75e75af3a73ba32f3fe51ba",
+      "gcc_smoke": {
+        "build_exit": 0,
+        "run_exit": 0,
+        "stdout": "1",
+        "expected_output": "1"
+      },
+      "gcc_dependencies": {
+        "main.c": {
+          "exit_code": 0,
+          "output": "main.o: main.c config.h"
+        },
+        "helper.c": {
+          "exit_code": 0,
+          "output": "helper.o: helper.c jsmn.h extra.h"
+        }
+      },
+      "e12_status": "BLOCKED_BEFORE_PIPELINE",
+      "e12_exit": 2,
+      "source_hashes_after": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "Dockerfile.broken": "671d99aa36739f90e971acb45f36f86a0e1f42c02bd1def74fbbd1a764b22154",
+        "extra.h": "9b7f2ff66b880085fd47117f4d643f71795b991e6d5e8f73acf0b59d21cfb7d4",
+        "helper.c": "3e7670c1c9e330db5634c198fe9029796b8023da92943849f55c0b4778ab9ec5",
+        "jsmn.h": "c04533e9181e1e33baceb0f55ac449b05145bb936e8c68cc77dfe0d8277514fb",
+        "LICENSE.upstream": "4675b94a50d2afe811c52785463c854f1156056632cce17cc7133939eac8ed55",
+        "main.c": "4f8535dc013d26d7d3f90c2b340c9adcf7c179e3afcaf4b64d51a90d96f780c8",
+        "Makefile": "a1454316799ab120853f00410eb2f2bfeb60cc62456783225ca13cf97ecaae93",
+        "unused.h": "e2780d03dc96f11919fe5856b9e3026bd1e1e76ec1a9612f789c4dd204b09b06",
+        "UPSTREAM.md": "8a6f420be5af0e8e26322a722f1dbb73f03d7c12e2e9e4b5bc981ee4ee58da4e"
+      },
+      "source_unchanged": true,
+      "git_clean_after": true
+    },
+    "H3-tiny-aes": {
+      "base": "dc8099306d7023b7337328d718149973e7b17978",
+      "target": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+      "upstream": "Original project: https://github.com/kokke/tiny-AES-c\nPinned upstream commit: 23856752fbd139da0b8ca6e471a13d5bcc99a08d\nThe course fixture retains the upstream core and license; main.c, Makefile, Dockerfile and the helper wrapper are course additions.\nUpstream file hashes: {\"aes.h\": \"9f74a4de3bd11621ff6e8fb9b352b060f699e6c1c67f81a22d104aacad61a23b\", \"helper.c\": \"f7f78b44654efd3542b6886923dd05194286807ebcfeb078ea05d21fe901ee9e\"}\n",
+      "source_hashes_before": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "aes.h": "9f74a4de3bd11621ff6e8fb9b352b060f699e6c1c67f81a22d104aacad61a23b",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "Dockerfile.broken": "5dde1c477099516a4fbc011084a27ff9dacd52338be8e15e1c139cb25fee3988",
+        "extra.h": "b9421ebe36431c38dc5bd44e9df56524c82bfc73fad78060513ed0cdd155174c",
+        "helper.c": "004e3236eae18489e780a9fc70104267f9788dec22e01c562fe08da95dbc8f6f",
+        "LICENSE.upstream": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+        "main.c": "4f8535dc013d26d7d3f90c2b340c9adcf7c179e3afcaf4b64d51a90d96f780c8",
+        "Makefile": "d7c92dd9b740d59ac27213b8b6baab44563112fa722f4f667500211a74ac1fc8",
+        "unused.h": "e2780d03dc96f11919fe5856b9e3026bd1e1e76ec1a9612f789c4dd204b09b06",
+        "UPSTREAM.md": "775a3bacabd697eff104c95c45833f3dcebc9c5a77daf5fb9a329cc20217dc66"
+      },
+      "candidate_sha256": "08305c26b934d66ed96bd0ea149a597fcbe0be23d363511ab75037c51476eee9",
+      "candidate_contains_strace": false,
+      "selected_candidate_sha256": "9755ba74749592026ec2130a8f5ff7d3d1c94f368ba291293966a09e3f694faa",
+      "selected_candidate": "candidate-b2-strace.Dockerfile",
+      "gcc_findings": [
+        {
+          "type": "MISSING",
+          "target": "helper.o",
+          "dependency": "extra.h"
+        }
+      ],
+      "patch_check_exit": 0,
+      "patch_sha256": "ccd510fc4ebbd03405bf0f0e73c1624e9d5a88480de0820aebe8f781e41773b5",
+      "gcc_smoke": {
+        "build_exit": 0,
+        "run_exit": 0,
+        "stdout": "1",
+        "expected_output": "1"
+      },
+      "gcc_dependencies": {
+        "main.c": {
+          "exit_code": 0,
+          "output": "main.o: main.c config.h"
+        },
+        "helper.c": {
+          "exit_code": 0,
+          "output": "helper.o: helper.c aes.h extra.h"
+        }
+      },
+      "e12_status": "BLOCKED_BEFORE_PIPELINE",
+      "e12_exit": 2,
+      "source_hashes_after": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "aes.h": "9f74a4de3bd11621ff6e8fb9b352b060f699e6c1c67f81a22d104aacad61a23b",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "Dockerfile.broken": "5dde1c477099516a4fbc011084a27ff9dacd52338be8e15e1c139cb25fee3988",
+        "extra.h": "b9421ebe36431c38dc5bd44e9df56524c82bfc73fad78060513ed0cdd155174c",
+        "helper.c": "004e3236eae18489e780a9fc70104267f9788dec22e01c562fe08da95dbc8f6f",
+        "LICENSE.upstream": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+        "main.c": "4f8535dc013d26d7d3f90c2b340c9adcf7c179e3afcaf4b64d51a90d96f780c8",
+        "Makefile": "d7c92dd9b740d59ac27213b8b6baab44563112fa722f4f667500211a74ac1fc8",
+        "unused.h": "e2780d03dc96f11919fe5856b9e3026bd1e1e76ec1a9612f789c4dd204b09b06",
+        "UPSTREAM.md": "775a3bacabd697eff104c95c45833f3dcebc9c5a77daf5fb9a329cc20217dc66"
+      },
+      "source_unchanged": true,
+      "git_clean_after": true
+    }
+  },
+  "archive": "teacher-runs.zip",
+  "actual_command": "PATH=<CLion MinGW bin>:$PATH python docs/students/241880543/e13-e14/run_teacher.py --execute --with-strace --out work/e13-241880543-teacher-20261122-03",
+  "scope_note": "GCC smoke, static dependency observation and git apply --check succeeded; both official E12 entries exited 2 before starting the pipeline on Windows. No full E12, Docker, or strace success claimed.",
+  "run_archive_sha256": "c09cf268a87f57a5a56fdef796f0da9a190e0a5972feced30d4cf2831c4217a1"
+}

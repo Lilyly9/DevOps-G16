@@ -1,0 +1,11 @@
+{
+  "job_id": "job-034e6eeaa67b4131bde430f800ad09f6",
+  "trace_id": "trace-b7fc699acf2d49d5a6d7045465e0d830",
+  "commit": "c932daab12dadf97cf4a9c5ae02a02572e4d60d2",
+  "phase": "validation",
+  "rollback": true,
+  "source_sha256_before": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+  "candidate_makefile_sha256": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+  "source_sha256_after": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+  "patch_sha256": "da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55"
+}

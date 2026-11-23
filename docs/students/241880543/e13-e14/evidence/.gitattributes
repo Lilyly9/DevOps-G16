@@ -1,0 +1,2 @@
+# Preserve every raw evidence byte across Windows and Linux checkouts.
+* -text

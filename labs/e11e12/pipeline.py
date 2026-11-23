@@ -101,6 +101,40 @@ def full(project, folder, executor=None, profile=None):
 def normalized(findings, targets):
     return sorted((f['type'],f['target'],f['dependency']) for f in findings if f['target'] in targets)
 
+def validate_repair(target, patchfile, out, draft_executor, profile, *, commit, job_id, trace_id):
+    """Keep a candidate only after validation and the final dynamic check succeed."""
+    makefile = target/'Makefile'
+    before = makefile.read_bytes()
+    verified = False
+    phase = 'validation'
+    try:
+        runner = draft_executor.capture if draft_executor is not None else None
+        verdict = validate(target,patchfile,out/'validation',profile=profile,runner=runner)
+        if not verdict['accepted']:
+            raise Failure('REPAIR_REJECTED',str(verdict))
+        phase = 'recheck'
+        final = full(target,out/'final-full',draft_executor,profile)
+        if any(f['type']=='MISSING' for f in final['findings']):
+            raise Failure('RECHECK_FAILED','MD remains; working-copy declaration restored')
+        verified = True
+        return verdict, final
+    finally:
+        if not verified:
+            try:
+                rejected = makefile.read_bytes()
+            except FileNotFoundError:
+                rejected = None
+            makefile.write_bytes(before)
+            restored = makefile.read_bytes()
+            save(out/'rollback.json', {
+                'job_id':job_id, 'trace_id':trace_id, 'commit':commit, 'phase':phase,
+                'rollback':restored==before,
+                'source_sha256_before':hashlib.sha256(before).hexdigest(),
+                'candidate_makefile_sha256':None if rejected is None else hashlib.sha256(rejected).hexdigest(),
+                'source_sha256_after':hashlib.sha256(restored).hexdigest(),
+                'patch_sha256':hashlib.sha256(patchfile.read_bytes()).hexdigest(),
+            })
+
 def execute(request, out, job_id=None):
     job_id = job_id or 'job-'+uuid.uuid4().hex
     trace_id = 'trace-'+uuid.uuid4().hex
@@ -246,7 +280,6 @@ def execute(request, out, job_id=None):
             input_path = out/(input_kind+'.json')
             md_envelope=load_artifact(input_path,reference['sha256'])
             current=repair_input(md_envelope,target_sha,input_kind)
-            before=(target/'Makefile').read_bytes()
             diff,edits=patch(target,current,isolate_shared_macros=True)
             if not diff:
                 raise Failure('NO_MISSING_DEPENDENCY','No MD to repair')
@@ -254,13 +287,8 @@ def execute(request, out, job_id=None):
             save(out/'repair-plan.json',edits)
             stage('repair',target_sha,{'edits':edits,'input_report':reference},[patchfile,out/'repair-plan.json'])
             validation_runner = draft_executor.capture if draft_executor is not None else None
-            verdict=validate(target,patchfile,out/'validation',profile=profile,runner=validation_runner)
-            if not verdict['accepted']:
-                raise Failure('REPAIR_REJECTED',str(verdict))
-            final=full(target,out/'final-full',draft_executor,profile)
-            if any(f['type']=='MISSING' for f in final['findings']):
-                (target/'Makefile').write_bytes(before)
-                raise Failure('RECHECK_FAILED','MD remains; working-copy declaration restored')
+            verdict,final=validate_repair(target,patchfile,out,draft_executor,profile,
+                                         commit=target_sha,job_id=job_id,trace_id=trace_id)
             recheck_files=[out/'validation/validation.json',out/'final-full/findings.json']
             if draft_executor:
                 recheck_files += [out/'final-full'/f for f in ('clean-execution.json','build-execution.json')]

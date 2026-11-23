@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-22",
+  "student": "241880543",
+  "source_commit": "ea75b481a3ba0b4f02f68f8e80f464a4197f6252",
+  "source_branch": "student/241880543/e11-e12",
+  "uncommitted_changes": true,
+  "target_branch_pending": "student/241880543/e13-e14",
+  "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "tests": {
+    "command": "python -m unittest test_contract test_project_profile test_student_241880496_e11e12 test_student_241880543_e13e14 -v",
+    "environment": {
+      "PYTHONUTF8": "1",
+      "PYTHONPATH": "labs/e11e12;labs/e8e10;labs/e11e12/vendor",
+      "PATH_prefix": "D:/Tools/Software/CLion/bin/mingw/bin"
+    },
+    "count": 31,
+    "exit_code": 0,
+    "b2_count": 10,
+    "log_sha256": "83de7e9c68450793c61c6aa00d8af021a936a9bbcbc5d36065d064cb57e24619"
+  },
+  "full_tests": {
+    "command": "python -m unittest discover -s labs/e11e12 -p 'test_*.py' -v",
+    "count": 58,
+    "failures": 1,
+    "errors": 7,
+    "skipped": 1,
+    "exit_code": 1,
+    "log_sha256": "ad4f1cbb19869086c2047a8563bc6b5762893aadec5a5f135fb8c4c61396357e",
+    "limitations": [
+      "loopback HTTP denied",
+      "Git/MSYS subprocess denied",
+      "Linux-only DRAFT tests"
+    ]
+  },
+  "local_c5": {
+    "command": "python -X utf8 docs/students/241880543/e13-e14/run_evidence.py --out work/e13-241880543-c5-local-20261122-03",
+    "exit_code": 0,
+    "scope": "real Git malformed-patch rejection only",
+    "out": "work\\e13-241880543-c5-local-20261122-03"
+  },
+  "compiled_files": [
+    "labs/e8e10/lab.py",
+    "labs/e11e12/pipeline.py",
+    "labs/e11e12/test_student_241880543_e13e14.py",
+    "docs/students/241880543/e13-e14/run_evidence.py"
+  ],
+  "implementation_sha256": {
+    "labs/e8e10/lab.py": "5c5a91280a007872e10c629554c1a51ee198dfb54ce2336402e9fcb941576114",
+    "labs/e11e12/pipeline.py": "e28981fb0bf97489e490e68f4900b85a0b6c98af4d64574c58f3d70f7800dcee",
+    "labs/e11e12/test_student_241880543_e13e14.py": "102e143b621aabc516791014626a13a3ee53d192e1bd60622f71b12cbc0b0748",
+    "docs/students/241880543/e13-e14/run_evidence.py": "a08fe92f47a5982d8e45bf1f96afa25c437788a801ca297ff15d8f5ce3b43ea9"
+  },
+  "evidence_sha256": {
+    "local\\malformed\\candidate.patch": "da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55",
+    "local\\malformed\\Makefile": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+    "local\\malformed\\repair-plan.json": "e08d0e5ac402ea1dea41df09e3833fc31ebad8835782e093115133bf48aaf62c",
+    "local\\malformed\\request.json": "949071daa6f81902fa4f6bf16a75cab96b1d1877b33ecc4b774b742d691707f5",
+    "local\\malformed\\result.json": "6267b66491c33a6d3625c977c5ee80a283490b96930c2972fbc03591de7035b2",
+    "local\\malformed\\rollback.json": "b99972a63be72605b6b7f885c46121d5e3c1e4c5687fe21f30a185c7943b634c",
+    "local\\malformed\\validation.json": "ceba7360e8257f442d94c802fce0426b0499a5fa28388696ff1c4c71570fa661",
+    "local\\summary.json": "2f8c35ee4d329f9fbbf9b5b202c39777f0cd8026444e14efd6c20ed114560c12"
+  },
+  "pending": [
+    "fetch latest main",
+    "create personal branch and Issue",
+    "push and PR",
+    "remote CI",
+    "real Docker semantic rejection and recovery",
+    "H1 jsmn",
+    "E14 four-container E2E"
+  ]
+}

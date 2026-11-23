@@ -1,0 +1,144 @@
+{
+  "runner_sha": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+  "platform": "linux",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "image_id": "sha256:1542170ad4477d3b2b3c48e6fa6abb75aac1a2c464e3ccf31308aaebd65eddda",
+  "draft_result": {
+    "path": "/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/work/e13-241880543-draft-20261122-01/result.json",
+    "sha256": "00bc54aa8bc461b62fa8f5d103aadb3adea559270a5d3bcf380fe5d6b2bfb257",
+    "image_id": "sha256:1542170ad4477d3b2b3c48e6fa6abb75aac1a2c464e3ccf31308aaebd65eddda"
+  },
+  "cases": {
+    "malformed": {
+      "expected_rejection": true,
+      "error": {
+        "code": "REPAIR_REJECTED",
+        "message": "{'accepted': False, 'checks': {}, 'error': \"COMMAND_FAILED ['git', 'apply', '--check', '/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/work/e13-241880543-c5-docker-20261122-04/malformed/candidate.patch']\\nerror: unrecognized input\\n\", 'source_unchanged': True, 'rollback': True, 'source_sha256_before': '9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2', 'source_sha256_after': '9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2', 'patch_sha256': 'da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55'}"
+      },
+      "rollback": {
+        "job_id": "job-3d169b0d93504060962416d7a4057979",
+        "trace_id": "trace-269ffcebbd324e72962a338b4e454901",
+        "commit": "0a877368ec8e37744abdce08a05db4170d255807",
+        "phase": "validation",
+        "rollback": true,
+        "source_sha256_before": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "candidate_makefile_sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "source_sha256_after": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "patch_sha256": "da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55"
+      },
+      "job_id": "job-3d169b0d93504060962416d7a4057979",
+      "trace_id": "trace-269ffcebbd324e72962a338b4e454901",
+      "commit_before": "0a877368ec8e37744abdce08a05db4170d255807",
+      "commit_after": "0a877368ec8e37744abdce08a05db4170d255807",
+      "source_hashes_before": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      },
+      "source_hashes_after": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      },
+      "patch_sha256": "da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55"
+    },
+    "wrong-dependency": {
+      "expected_rejection": true,
+      "error": {
+        "code": "REPAIR_REJECTED",
+        "message": "{'accepted': False, 'checks': {'patch_applies': True, 'build': True, 'test': True, 'header_change': False, 'no_missing': False}, 'error': None, 'source_unchanged': True, 'rollback': True, 'source_sha256_before': '9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2', 'source_sha256_after': '9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2', 'patch_sha256': '4764d54ac7429cae9cbc66e82371fc9d989ce4da18acc21305a55f783a5479d4'}"
+      },
+      "rollback": {
+        "job_id": "job-ebda2bbd13ba4bdf94138444eaf2f1c1",
+        "trace_id": "trace-94b0223e5ca34fb8a0a5179b884e361b",
+        "commit": "f3e81727724816318d905bb036f06ea1b102ba1e",
+        "phase": "validation",
+        "rollback": true,
+        "source_sha256_before": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "candidate_makefile_sha256": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "source_sha256_after": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "patch_sha256": "4764d54ac7429cae9cbc66e82371fc9d989ce4da18acc21305a55f783a5479d4"
+      },
+      "job_id": "job-ebda2bbd13ba4bdf94138444eaf2f1c1",
+      "trace_id": "trace-94b0223e5ca34fb8a0a5179b884e361b",
+      "commit_before": "f3e81727724816318d905bb036f06ea1b102ba1e",
+      "commit_after": "f3e81727724816318d905bb036f06ea1b102ba1e",
+      "source_hashes_before": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      },
+      "source_hashes_after": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      },
+      "patch_sha256": "4764d54ac7429cae9cbc66e82371fc9d989ce4da18acc21305a55f783a5479d4"
+    },
+    "recovery": {
+      "accepted": true,
+      "findings": [
+        {
+          "type": "REDUNDANT",
+          "target": "main.o",
+          "dependency": "unused.h",
+          "evidence": [
+            {
+              "source": "make_database",
+              "artifact": "make-db.txt",
+              "line": 1036,
+              "declaration": "main.o: main.c unused.h config.h"
+            }
+          ],
+          "scope": "Not observed in this recipe job under this build configuration"
+        }
+      ],
+      "job_id": "job-393d87ec31b24335b5a3a53dfcd5701d",
+      "trace_id": "trace-25fd1aefcdbf467faa3abb615c71c9c7",
+      "commit_before": "095f0c54d3ce2941de6ff27ab5378541c053bf77",
+      "commit_after": "095f0c54d3ce2941de6ff27ab5378541c053bf77",
+      "source_hashes_before": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "Makefile": "9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      },
+      "source_hashes_after": {
+        ".gitignore": "d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe",
+        "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+        "extra.h": "5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c",
+        "helper.c": "90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c",
+        "main.c": "0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379",
+        "Makefile": "ab35bda3d5bf1ba02394a04bddcb8ec23a2e3ba67d7be938be3e49fed9b1d5d0",
+        "unused.h": "3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+      },
+      "patch_sha256": "2b3bbed7e337c71f31a0be7f1a7c8eba2a19e951dc4258917c3ad804632ce0e6"
+    }
+  },
+  "implementation_sha256": {
+    "labs/e8e10/lab.py": "5c5a91280a007872e10c629554c1a51ee198dfb54ce2336402e9fcb941576114",
+    "labs/e11e12/pipeline.py": "f94e35776cc0a57031c036e5504f10c2416c26966d6891ff639e3f25e8c59197",
+    "docs/students/241880543/e13-e14/run_evidence.py": "4e9d93ac1f191e15015b2f4002af827425591509417efaeeb03e28b6d912f239"
+  },
+  "scope": "isolated C5 with real same-image build, test and strace recheck",
+  "status": "SUCCEEDED"
+}

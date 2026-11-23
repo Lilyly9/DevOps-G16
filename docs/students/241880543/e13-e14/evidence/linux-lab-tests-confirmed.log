@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.10/unittest/__main__.py", line 18, in <module>
+    main(module=None)
+  File "/usr/lib/python3.10/unittest/main.py", line 100, in __init__
+    self.parseArgs(argv)
+  File "/usr/lib/python3.10/unittest/main.py", line 124, in parseArgs
+    self._do_discovery(argv[2:])
+  File "/usr/lib/python3.10/unittest/main.py", line 244, in _do_discovery
+    self.createTests(from_discovery=True, Loader=Loader)
+  File "/usr/lib/python3.10/unittest/main.py", line 154, in createTests
+    self.test = loader.discover(self.start, self.pattern, self.top)
+  File "/usr/lib/python3.10/unittest/loader.py", line 349, in discover
+    tests = list(self._find_tests(start_dir, pattern))
+  File "/usr/lib/python3.10/unittest/loader.py", line 405, in _find_tests
+    tests, should_recurse = self._find_test_path(
+  File "/usr/lib/python3.10/unittest/loader.py", line 458, in _find_test_path
+    raise ImportError(
+ImportError: 'test_student_241880464' module incorrectly imported from '/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/labs/e11e12'. Expected '/mnt/d/LearningResources/大三上/DevOps/Project/DevOps-G16/labs/e8e10'. Is this module globally installed?

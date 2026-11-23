@@ -1,0 +1,685 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.36kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#3 DONE 3.9s
+
+#2 [internal] load metadata for docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#2 DONE 3.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 115B 0.1s done
+#4 DONE 0.2s
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 resolve docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad 0.1s done
+#5 ...
+
+#6 [stage-1  1/10] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 resolve docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.1s done
+#6 DONE 0.4s
+
+#7 [internal] load build context
+#7 transferring context: 52.20kB 0.3s done
+#7 DONE 0.5s
+
+#6 [stage-1  1/10] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 0B / 249B 0.2s
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 0B / 11.89MB 0.2s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 0B / 29.79MB 0.2s
+#6 sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 0B / 1.29MB 0.2s
+#6 sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 249B / 249B 0.4s done
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 1.05MB / 11.89MB 1.5s
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 2.10MB / 11.89MB 1.7s
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 3.15MB / 11.89MB 1.8s
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 6.29MB / 11.89MB 2.0s
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 9.44MB / 11.89MB 2.1s
+#6 sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 11.89MB / 11.89MB 2.3s done
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 2.10MB / 29.79MB 2.4s
+#6 sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 1.29MB / 1.29MB 2.5s done
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 4.19MB / 29.79MB 2.6s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 8.39MB / 29.79MB 3.0s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 10.49MB / 29.79MB 3.2s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 14.68MB / 29.79MB 4.1s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 17.83MB / 29.79MB 5.0s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 19.92MB / 29.79MB 5.1s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 23.07MB / 29.79MB 6.0s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 27.26MB / 29.79MB 7.1s
+#6 sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 29.79MB / 29.79MB 8.0s done
+#6 extracting sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97
+#6 ...
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 sha256:2d7ba3afdf47b5c4691580b6f2e2e6e3e2b3bc9bd6a7c60aeacb0d907f06c339 116B / 116B 0.4s done
+#5 sha256:0a7ca70c232bfd9c484ad87453366b208174bdb0e87e457ce31db9b4511d07e7 1.01kB / 1.01kB 0.4s done
+#5 sha256:4ca5c7282971aeea368a994cfaadb48e02c3fd851ae30db56495310f53c981ee 540B / 540B 0.4s done
+#5 sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 21.74MB / 21.74MB 6.5s done
+#5 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 11.53MB / 22.16MB 6.0s
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 0B / 20.43MB 5.9s
+#5 sha256:37009c416213bafe8d6e7c68aa4bc36688e1d7b2974ecd8118fa29dab8c9b0e0 0B / 457B 0.3s
+#5 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0B / 32B 0.2s
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 1.05MB / 20.43MB 6.0s
+#5 ...
+
+#6 [stage-1  1/10] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 extracting sha256:72c03230f1363a3fb61d2f98504cf168bad3fe22f511ad2005dc021515d7ce97 0.6s done
+#6 DONE 9.0s
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 2.10MB / 20.43MB 6.5s
+#5 ...
+
+#6 [stage-1  1/10] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 extracting sha256:9970f4c20ff16c00981dddbf196b2a36b5b3c1a0e30e106f4f422379bbfed24c 0.1s done
+#6 extracting sha256:bae41854fae8c788c7274e02aa1ce9791a1a44317194e4213bebeb96be6e634b 0.3s done
+#6 DONE 9.5s
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 15.73MB / 22.16MB 6.8s
+#5 ...
+
+#6 [stage-1  1/10] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#6 extracting sha256:cf5110b4fa79118f46753653b48979bacfb64a8c795489a129cf6da712e6603e 0.1s done
+#6 DONE 9.5s
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 3.15MB / 20.43MB 6.6s
+#5 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 1.0s done
+#5 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 17.83MB / 22.16MB 7.1s
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 5.24MB / 20.43MB 6.8s
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 0B / 8.23MB 0.2s
+#5 sha256:37009c416213bafe8d6e7c68aa4bc36688e1d7b2974ecd8118fa29dab8c9b0e0 457B / 457B 2.0s done
+#5 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 22.02MB / 22.16MB 7.8s
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 7.34MB / 20.43MB 7.5s
+#5 sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 22.16MB / 22.16MB 7.9s done
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 9.44MB / 20.43MB 7.7s
+#5 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 0B / 3.80MB 0.2s
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 11.53MB / 20.43MB 7.8s
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 15.73MB / 20.43MB 8.6s
+#5 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 2.10MB / 3.80MB 1.2s
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 1.05MB / 8.23MB 2.3s
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 2.10MB / 8.23MB 2.4s
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 3.15MB / 8.23MB 2.6s
+#5 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 3.80MB / 3.80MB 2.0s done
+#5 extracting sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 19.92MB / 20.43MB 9.6s
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 5.24MB / 8.23MB 3.0s
+#5 extracting sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 0.1s done
+#5 sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 20.43MB / 20.43MB 9.7s done
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 7.34MB / 8.23MB 3.2s
+#5 sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 8.23MB / 8.23MB 3.9s done
+#5 extracting sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a
+#5 extracting sha256:58bd06dfc6cd22322de7d4fca516b20c2b75730c5bc85c35e92c3f2056dbfe9a 0.2s done
+#5 DONE 13.6s
+
+#8 [stage-1  2/10] RUN sed -i       -e 's|https\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g'       /etc/apt/sources.list.d/debian.sources  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#8 2.911 Get:1 https://mirrors.tuna.tsinghua.edu.cn/debian trixie InRelease [140 kB]
+#8 3.802 Get:2 https://mirrors.tuna.tsinghua.edu.cn/debian trixie-updates InRelease [47.3 kB]
+#8 4.180 Get:3 https://mirrors.tuna.tsinghua.edu.cn/debian-security trixie-security InRelease [43.4 kB]
+#8 ...
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.0s done
+#5 extracting sha256:37009c416213bafe8d6e7c68aa4bc36688e1d7b2974ecd8118fa29dab8c9b0e0 0.0s done
+#5 extracting sha256:97fde3c329d3c913ca1405c177bffc2ecf02ddd298b32e4aa4489956fc2073e6 0.2s done
+#5 DONE 13.9s
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 extracting sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8
+#5 extracting sha256:cf58801a4522ea7409a3502e3295034b91bdc972cff8ab4bbd5290b68bc215f8 0.3s done
+#5 DONE 14.2s
+
+#8 [stage-1  2/10] RUN sed -i       -e 's|https\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g'       /etc/apt/sources.list.d/debian.sources  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#8 4.646 Get:4 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 Packages [9679 kB]
+#8 ...
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 extracting sha256:e12f523aba6af55cd482ed9070373420fd68a86a955abec7599b5be4a6da2a38 0.3s done
+#5 DONE 14.5s
+
+#5 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#5 extracting sha256:4ca5c7282971aeea368a994cfaadb48e02c3fd851ae30db56495310f53c981ee 0.0s done
+#5 extracting sha256:0a7ca70c232bfd9c484ad87453366b208174bdb0e87e457ce31db9b4511d07e7 0.0s done
+#5 extracting sha256:2d7ba3afdf47b5c4691580b6f2e2e6e3e2b3bc9bd6a7c60aeacb0d907f06c339 0.0s done
+#5 DONE 14.6s
+
+#8 [stage-1  2/10] RUN sed -i       -e 's|https\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g'       /etc/apt/sources.list.d/debian.sources  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#8 8.569 Get:5 https://mirrors.tuna.tsinghua.edu.cn/debian trixie-updates/main amd64 Packages [1108 B]
+#8 8.873 Get:6 https://mirrors.tuna.tsinghua.edu.cn/debian-security trixie-security/main amd64 Packages [308 kB]
+#8 9.315 Fetched 10.2 MB in 9s (1141 kB/s)
+#8 9.315 Reading package lists...
+#8 9.940 Reading package lists...
+#8 10.59 Building dependency tree...
+#8 10.74 Reading state information...
+#8 10.95 The following additional packages will be installed:
+#8 10.95   binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-14
+#8 10.95   cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu gcc-14 gcc-14-x86-64-linux-gnu
+#8 10.95   gcc-x86-64-linux-gnu git-man libasan8 libatomic1 libbinutils libbrotli1
+#8 10.95   libc-bin libc-dev-bin libc6 libcc1-0 libcom-err2 libcrypt-dev libctf-nobfd0
+#8 10.95   libctf0 libcurl3t64-gnutls liberror-perl libexpat1 libgcc-14-dev
+#8 10.95   libgdbm-compat4t64 libgnutls30t64 libgomp1 libgprofng0 libgssapi-krb5-2
+#8 10.95   libhwasan0 libidn2-0 libisl23 libitm1 libjansson4 libk5crypto3 libkeyutils1
+#8 10.95   libkrb5-3 libkrb5support0 libldap2 liblsan0 libmpc3 libmpfr6 libnghttp2-14
+#8 10.95   libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libp11-kit0 libperl5.40
+#8 10.95   libpsl5t64 libquadmath0 librtmp1 libsasl2-2 libsasl2-modules-db libsframe1
+#8 10.95   libssh2-1t64 libtasn1-6 libtsan2 libubsan1 libunistring5 libunwind8
+#8 10.95   linux-libc-dev perl perl-base perl-modules-5.40 rpcsvc-proto
+#8 10.95 Suggested packages:
+#8 10.95   binutils-doc gprofng-gui binutils-gold cpp-doc gcc-14-locales cpp-14-doc
+#8 10.95   gcc-multilib manpages-dev autoconf automake libtool flex bison gdb gcc-doc
+#8 10.95   gcc-14-multilib gcc-14-doc gdb-x86-64-linux-gnu gettext-base git-doc
+#8 10.95   git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn libc-devtools
+#8 10.95   glibc-doc gnutls-bin krb5-doc krb5-user sensible-utils make-doc perl-doc
+#8 10.95   libterm-readline-gnu-perl | libterm-readline-perl-perl
+#8 10.95   libtap-harness-archive-perl
+#8 10.95 Recommended packages:
+#8 10.95   patch less ssh-client manpages manpages-dev krb5-locales libldap-common
+#8 10.95   publicsuffix libsasl2-modules
+#8 11.28 The following NEW packages will be installed:
+#8 11.28   binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-14
+#8 11.28   cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu gcc gcc-14
+#8 11.28   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu git git-man libasan8 libatomic1
+#8 11.28   libbinutils libbrotli1 libc-dev-bin libc6-dev libcc1-0 libcom-err2
+#8 11.28   libcrypt-dev libctf-nobfd0 libctf0 libcurl3t64-gnutls liberror-perl
+#8 11.28   libexpat1 libgcc-14-dev libgdbm-compat4t64 libgnutls30t64 libgomp1
+#8 11.28   libgprofng0 libgssapi-krb5-2 libhwasan0 libidn2-0 libisl23 libitm1
+#8 11.28   libjansson4 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap2
+#8 11.28   liblsan0 libmpc3 libmpfr6 libnghttp2-14 libnghttp3-9 libngtcp2-16
+#8 11.28   libngtcp2-crypto-gnutls8 libp11-kit0 libperl5.40 libpsl5t64 libquadmath0
+#8 11.28   librtmp1 libsasl2-2 libsasl2-modules-db libsframe1 libssh2-1t64 libtasn1-6
+#8 11.28   libtsan2 libubsan1 libunistring5 libunwind8 linux-libc-dev make perl
+#8 11.28   perl-modules-5.40 rpcsvc-proto strace
+#8 11.28 The following packages will be upgraded:
+#8 11.28   libc-bin libc6 perl-base
+#8 42.35 3 upgraded, 70 newly installed, 0 to remove and 26 not upgraded.
+#8 42.35 Need to get 88.0 MB of archives.
+#8 42.35 After this operation, 341 MB of additional disk space will be used.
+#8 42.35 Ign:1 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-base amd64 5.40.1-6+deb13u1
+#8 42.35 Ign:2 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6 amd64 2.41-12+deb13u5
+#8 42.35 Ign:3 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-bin amd64 2.41-12+deb13u5
+#8 42.35 Ign:4 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libexpat1 amd64 2.9.0-1~deb13u1
+#8 42.35 Ign:5 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6+deb13u1
+#8 42.35 Ign:6 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2
+#8 42.35 Ign:7 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6+deb13u1
+#8 42.35 Ign:8 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl amd64 5.40.1-6+deb13u1
+#8 42.35 Ign:9 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsframe1 amd64 2.44-3
+#8 42.35 Ign:10 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-common amd64 2.44-3
+#8 42.35 Ign:11 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbinutils amd64 2.44-3
+#8 43.35 Ign:11 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbinutils amd64 2.44-3
+#8 43.35 Ign:10 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-common amd64 2.44-3
+#8 43.35 Ign:9 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsframe1 amd64 2.44-3
+#8 43.35 Ign:8 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl amd64 5.40.1-6+deb13u1
+#8 43.35 Ign:7 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6+deb13u1
+#8 43.35 Ign:6 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2
+#8 43.35 Ign:5 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6+deb13u1
+#8 43.35 Ign:4 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libexpat1 amd64 2.9.0-1~deb13u1
+#8 43.35 Ign:3 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-bin amd64 2.41-12+deb13u5
+#8 43.35 Ign:2 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6 amd64 2.41-12+deb13u5
+#8 43.35 Ign:1 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-base amd64 5.40.1-6+deb13u1
+#8 45.35 Ign:1 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-base amd64 5.40.1-6+deb13u1
+#8 45.35 Ign:2 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6 amd64 2.41-12+deb13u5
+#8 45.35 Ign:3 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-bin amd64 2.41-12+deb13u5
+#8 45.35 Ign:4 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libexpat1 amd64 2.9.0-1~deb13u1
+#8 45.35 Ign:5 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6+deb13u1
+#8 45.35 Ign:6 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2
+#8 45.35 Ign:7 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6+deb13u1
+#8 45.35 Ign:8 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl amd64 5.40.1-6+deb13u1
+#8 45.35 Ign:9 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsframe1 amd64 2.44-3
+#8 45.35 Ign:10 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-common amd64 2.44-3
+#8 45.35 Ign:11 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbinutils amd64 2.44-3
+#8 49.36 Err:11 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbinutils amd64 2.44-3
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.36 Err:10 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-common amd64 2.44-3
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.36 Err:9 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsframe1 amd64 2.44-3
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.36 Err:8 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl amd64 5.40.1-6+deb13u1
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.36 Err:7 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6+deb13u1
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.36 Err:6 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.36 Err:5 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6+deb13u1
+#8 49.36   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.37 Ign:4 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libexpat1 amd64 2.9.0-1~deb13u1
+#8 49.37 Err:3 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-bin amd64 2.41-12+deb13u5
+#8 49.37   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.37 Err:2 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6 amd64 2.41-12+deb13u5
+#8 49.37   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.37 Err:1 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 perl-base amd64 5.40.1-6+deb13u1
+#8 49.37   Could not connect to mirrors.tuna.tsinghua.edu.cn:443 (198.18.0.160), connection timed out
+#8 49.37   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.37 Ign:12 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgprofng0 amd64 2.44-3
+#8 49.37 Ign:13 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3
+#8 49.37 Ign:14 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf0 amd64 2.44-3
+#8 49.37 Ign:15 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3
+#8 49.37 Ign:16 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3
+#8 49.37 Ign:17 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils amd64 2.44-3
+#8 49.37 Ign:18 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libisl23 amd64 0.27-1
+#8 49.37 Err:4 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libexpat1 amd64 2.9.0-1~deb13u1
+#8 49.37   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 49.37 Ign:19 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1
+#8 49.37 Ign:20 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3
+#8 49.37 Ign:21 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 50.38 Ign:21 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 50.38 Ign:20 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3
+#8 50.38 Ign:19 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1
+#8 50.38 Ign:18 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libisl23 amd64 0.27-1
+#8 50.38 Ign:17 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils amd64 2.44-3
+#8 50.38 Ign:16 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3
+#8 50.38 Ign:15 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3
+#8 50.38 Ign:14 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf0 amd64 2.44-3
+#8 50.38 Ign:13 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3
+#8 50.38 Ign:12 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgprofng0 amd64 2.44-3
+#8 50.38 Ign:22 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14 amd64 14.2.0-19
+#8 52.39 Ign:12 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgprofng0 amd64 2.44-3
+#8 52.39 Ign:13 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3
+#8 52.39 Ign:14 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf0 amd64 2.44-3
+#8 52.39 Ign:15 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3
+#8 52.39 Ign:16 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3
+#8 52.39 Ign:17 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils amd64 2.44-3
+#8 52.39 Ign:18 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libisl23 amd64 0.27-1
+#8 52.39 Ign:19 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1
+#8 52.39 Ign:20 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3
+#8 52.39 Ign:21 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 52.39 Ign:22 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14 amd64 14.2.0-19
+#8 56.39 Err:21 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:20 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:19 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:18 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libisl23 amd64 0.27-1
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:17 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils amd64 2.44-3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:16 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:15 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:14 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf0 amd64 2.44-3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:13 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Err:12 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgprofng0 amd64 2.44-3
+#8 56.39   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 56.39 Ign:22 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14 amd64 14.2.0-19
+#8 56.39 Ign:23 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 56.39 Ign:24 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp amd64 4:14.2.0-1
+#8 56.39 Ign:25 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcc1-0 amd64 14.2.0-19
+#8 56.39 Ign:26 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgomp1 amd64 14.2.0-19
+#8 56.39 Ign:27 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libitm1 amd64 14.2.0-19
+#8 56.39 Ign:28 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libatomic1 amd64 14.2.0-19
+#8 56.39 Ign:29 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libasan8 amd64 14.2.0-19
+#8 56.39 Ign:30 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liblsan0 amd64 14.2.0-19
+#8 56.39 Ign:31 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtsan2 amd64 14.2.0-19
+#8 56.39 Ign:32 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libubsan1 amd64 14.2.0-19
+#8 60.40 Err:22 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-14 amd64 14.2.0-19
+#8 60.40   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 60.40 Ign:32 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libubsan1 amd64 14.2.0-19
+#8 60.40 Ign:31 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtsan2 amd64 14.2.0-19
+#8 60.40 Ign:30 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liblsan0 amd64 14.2.0-19
+#8 60.40 Ign:29 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libasan8 amd64 14.2.0-19
+#8 60.40 Ign:28 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libatomic1 amd64 14.2.0-19
+#8 60.40 Ign:27 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libitm1 amd64 14.2.0-19
+#8 60.40 Ign:26 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgomp1 amd64 14.2.0-19
+#8 60.40 Ign:25 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcc1-0 amd64 14.2.0-19
+#8 60.40 Ign:24 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp amd64 4:14.2.0-1
+#8 60.40 Ign:23 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 60.40 Ign:33 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libhwasan0 amd64 14.2.0-19
+#8 62.40 Ign:23 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 62.40 Ign:24 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp amd64 4:14.2.0-1
+#8 62.40 Ign:25 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcc1-0 amd64 14.2.0-19
+#8 62.40 Ign:26 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgomp1 amd64 14.2.0-19
+#8 62.40 Ign:27 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libitm1 amd64 14.2.0-19
+#8 62.40 Ign:28 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libatomic1 amd64 14.2.0-19
+#8 62.40 Ign:29 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libasan8 amd64 14.2.0-19
+#8 62.40 Ign:30 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liblsan0 amd64 14.2.0-19
+#8 62.40 Ign:31 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtsan2 amd64 14.2.0-19
+#8 62.40 Ign:32 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libubsan1 amd64 14.2.0-19
+#8 62.40 Ign:33 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libhwasan0 amd64 14.2.0-19
+#8 66.41 Err:32 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libubsan1 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:31 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtsan2 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:30 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liblsan0 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:29 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libasan8 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:28 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libatomic1 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:27 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libitm1 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:26 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgomp1 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:25 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcc1-0 amd64 14.2.0-19
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:24 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp amd64 4:14.2.0-1
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Err:23 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 cpp-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 66.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 66.41 Ign:33 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libhwasan0 amd64 14.2.0-19
+#8 66.41 Ign:34 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libquadmath0 amd64 14.2.0-19
+#8 66.41 Ign:35 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgcc-14-dev amd64 14.2.0-19
+#8 66.41 Ign:36 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 66.41 Ign:37 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14 amd64 14.2.0-19
+#8 66.41 Ign:38 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 66.41 Ign:39 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc amd64 4:14.2.0-1
+#8 66.41 Ign:40 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+deb13u1
+#8 66.41 Ign:41 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunistring5 amd64 1.3-2
+#8 66.41 Ign:42 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2
+#8 66.41 Ign:43 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3
+#8 70.41 Err:33 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libhwasan0 amd64 14.2.0-19
+#8 70.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 70.41 Ign:43 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3
+#8 70.41 Ign:42 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2
+#8 70.41 Ign:41 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunistring5 amd64 1.3-2
+#8 70.41 Ign:40 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+deb13u1
+#8 70.41 Ign:39 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc amd64 4:14.2.0-1
+#8 70.41 Ign:38 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 70.41 Ign:37 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14 amd64 14.2.0-19
+#8 70.41 Ign:36 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 70.41 Ign:35 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgcc-14-dev amd64 14.2.0-19
+#8 70.41 Ign:34 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libquadmath0 amd64 14.2.0-19
+#8 70.41 Ign:44 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2+deb13u1
+#8 72.41 Ign:34 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libquadmath0 amd64 14.2.0-19
+#8 72.41 Ign:35 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgcc-14-dev amd64 14.2.0-19
+#8 72.41 Ign:36 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 72.41 Ign:37 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14 amd64 14.2.0-19
+#8 72.41 Ign:38 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 72.41 Ign:39 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc amd64 4:14.2.0-1
+#8 72.41 Ign:40 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+deb13u1
+#8 72.41 Ign:41 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunistring5 amd64 1.3-2
+#8 72.41 Ign:42 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2
+#8 72.41 Ign:43 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3
+#8 72.41 Ign:44 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2+deb13u1
+#8 76.41 Err:43 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:42 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:41 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunistring5 amd64 1.3-2
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Ign:40 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+deb13u1
+#8 76.41 Err:39 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc amd64 4:14.2.0-1
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:38 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-x86-64-linux-gnu amd64 4:14.2.0-1
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:37 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14 amd64 14.2.0-19
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:36 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 gcc-14-x86-64-linux-gnu amd64 14.2.0-19
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:35 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgcc-14-dev amd64 14.2.0-19
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Err:34 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libquadmath0 amd64 14.2.0-19
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Ign:44 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2+deb13u1
+#8 76.41 Ign:45 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u4
+#8 76.41 Ign:46 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5+deb13u1
+#8 76.41 Ign:47 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b12
+#8 76.41 Err:40 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+deb13u1
+#8 76.41   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 76.41 Ign:48 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5+deb13u1
+#8 76.41 Ign:49 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6
+#8 76.41 Ign:50 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5+deb13u1
+#8 76.41 Ign:51 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5+deb13u1
+#8 76.41 Ign:52 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9
+#8 76.41 Ign:53 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9
+#8 80.42 Err:44 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2+deb13u1
+#8 80.42   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 80.42 Ign:53 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9
+#8 80.42 Ign:52 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9
+#8 80.42 Ign:51 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5+deb13u1
+#8 80.42 Ign:50 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5+deb13u1
+#8 80.42 Ign:49 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6
+#8 80.42 Ign:48 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5+deb13u1
+#8 80.42 Ign:47 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b12
+#8 80.42 Ign:46 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5+deb13u1
+#8 80.42 Ign:45 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u4
+#8 80.42 Ign:54 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1
+#8 80.42 Ign:55 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1+deb13u2
+#8 82.43 Ign:45 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u4
+#8 82.43 Ign:46 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5+deb13u1
+#8 82.43 Ign:47 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b12
+#8 82.43 Ign:48 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5+deb13u1
+#8 82.43 Ign:49 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6
+#8 82.43 Ign:50 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5+deb13u1
+#8 82.43 Ign:51 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5+deb13u1
+#8 82.43 Ign:52 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9
+#8 82.43 Ign:53 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9
+#8 82.43 Ign:55 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1+deb13u2
+#8 82.43 Ign:54 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1
+#8 86.44 Err:53 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Err:52 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Ign:51 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5+deb13u1
+#8 86.44 Ign:50 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5+deb13u1
+#8 86.44 Err:49 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Ign:48 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5+deb13u1
+#8 86.44 Err:47 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b12
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Ign:46 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5+deb13u1
+#8 86.44 Ign:45 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u4
+#8 86.44 Ign:54 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1
+#8 86.44 Ign:55 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1+deb13u2
+#8 86.44 Ign:56 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1
+#8 86.44 Ign:57 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1
+#8 86.44 Err:51 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5+deb13u1
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Err:50 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5+deb13u1
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Ign:58 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1
+#8 86.44 Err:48 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5+deb13u1
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Ign:59 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1
+#8 86.44 Err:46 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5+deb13u1
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 86.44 Err:45 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u4
+#8 86.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 90.44 Err:55 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1+deb13u2
+#8 90.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 90.44 Err:54 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1
+#8 90.44   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 90.44 Ign:59 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1
+#8 90.44 Ign:58 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1
+#8 90.44 Ign:57 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1
+#8 90.44 Ign:56 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1
+#8 90.44 Ign:60 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5
+#8 90.44 Ign:61 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1+deb13u2
+#8 90.44 Ign:62 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u7
+#8 90.44 Ign:63 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liberror-perl all 0.17030-1
+#8 90.44 Ign:64 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1
+#8 90.44 Ign:65 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1
+#8 90.44 Ign:66 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-dev-bin amd64 2.41-12+deb13u5
+#8 92.45 Ign:56 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1
+#8 92.45 Ign:57 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1
+#8 92.45 Ign:58 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1
+#8 92.45 Ign:59 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1
+#8 92.45 Ign:66 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-dev-bin amd64 2.41-12+deb13u5
+#8 92.45 Ign:65 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1
+#8 92.45 Ign:64 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1
+#8 92.45 Ign:63 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liberror-perl all 0.17030-1
+#8 92.45 Ign:62 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u7
+#8 92.45 Ign:61 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1+deb13u2
+#8 92.45 Ign:60 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5
+#8 96.45 Err:59 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1
+#8 96.45   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 96.45 Ign:58 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1
+#8 96.45 Ign:57 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1
+#8 96.45 Err:56 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1
+#8 96.45   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 96.45 Ign:60 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5
+#8 96.45 Ign:61 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1+deb13u2
+#8 96.45 Ign:62 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u7
+#8 96.45 Ign:63 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liberror-perl all 0.17030-1
+#8 96.45 Ign:64 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1
+#8 96.45 Ign:65 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1
+#8 96.45 Ign:66 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-dev-bin amd64 2.41-12+deb13u5
+#8 96.45 Ign:67 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 linux-libc-dev all 6.12.117-1
+#8 96.45 Err:58 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1
+#8 96.45   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 96.45 Err:57 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1+deb13u1
+#8 96.45   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 96.45 Ign:68 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1
+#8 100.5 Err:66 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc-dev-bin amd64 2.41-12+deb13u5
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 100.5 Err:65 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 100.5 Err:64 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 100.5 Err:63 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 liberror-perl all 0.17030-1
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 100.5 Ign:62 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u7
+#8 100.5 Err:61 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1+deb13u2
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 100.5 Err:60 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 100.5 Ign:68 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1
+#8 100.5 Ign:67 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 linux-libc-dev all 6.12.117-1
+#8 100.5 Ign:69 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1
+#8 100.5 Ign:70 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6-dev amd64 2.41-12+deb13u5
+#8 100.5 Ign:71 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunwind8 amd64 1.8.1-0.1
+#8 100.5 Ign:72 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 make amd64 4.4.1-2
+#8 100.5 Ign:73 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 strace amd64 6.13+ds-1
+#8 100.5 Err:62 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u7
+#8 100.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 102.5 Ign:67 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 linux-libc-dev all 6.12.117-1
+#8 102.5 Ign:68 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1
+#8 102.5 Ign:73 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 strace amd64 6.13+ds-1
+#8 102.5 Ign:72 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 make amd64 4.4.1-2
+#8 102.5 Ign:71 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunwind8 amd64 1.8.1-0.1
+#8 102.5 Ign:70 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6-dev amd64 2.41-12+deb13u5
+#8 102.5 Ign:69 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1
+#8 106.5 Err:68 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1
+#8 106.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 106.5 Ign:67 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 linux-libc-dev all 6.12.117-1
+#8 106.5 Ign:69 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1
+#8 106.5 Ign:70 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6-dev amd64 2.41-12+deb13u5
+#8 106.5 Ign:71 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunwind8 amd64 1.8.1-0.1
+#8 106.5 Ign:72 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 make amd64 4.4.1-2
+#8 106.5 Ign:73 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 strace amd64 6.13+ds-1
+#8 106.5 Err:67 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 linux-libc-dev all 6.12.117-1
+#8 106.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 Err:73 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 strace amd64 6.13+ds-1
+#8 110.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 Err:72 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 make amd64 4.4.1-2
+#8 110.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 Err:71 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libunwind8 amd64 1.8.1-0.1
+#8 110.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 Err:70 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libc6-dev amd64 2.41-12+deb13u5
+#8 110.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 Err:69 https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1
+#8 110.5   Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 W: Tried to start delayed item https://mirrors.tuna.tsinghua.edu.cn/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1+deb13u1, but failed
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/p/perl/perl-base_5.40.1-6%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/glibc/libc6_2.41-12%2bdeb13u5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/glibc/libc-bin_2.41-12%2bdeb13u5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/e/expat/libexpat1_2.9.0-1%7edeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/p/perl/perl-modules-5.40_5.40.1-6%2bdeb13u1_all.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gdbm/libgdbm-compat4t64_1.24-2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/p/perl/libperl5.40_5.40.1-6%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/p/perl/perl_5.40.1-6%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/libsframe1_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/binutils-common_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/libbinutils_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/libgprofng0_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/libctf-nobfd0_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/libctf0_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/j/jansson/libjansson4_2.14-2%2bb3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/binutils-x86-64-linux-gnu_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/b/binutils/binutils_2.44-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/i/isl/libisl23_0.27-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/m/mpfr4/libmpfr6_4.2.2-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/m/mpclib3/libmpc3_1.3.1-1%2bb3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/cpp-14-x86-64-linux-gnu_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/cpp-14_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-defaults/cpp-x86-64-linux-gnu_14.2.0-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-defaults/cpp_14.2.0-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libcc1-0_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libgomp1_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libitm1_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libatomic1_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libasan8_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/liblsan0_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libtsan2_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libubsan1_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libhwasan0_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libquadmath0_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/libgcc-14-dev_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/gcc-14-x86-64-linux-gnu_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-14/gcc-14_14.2.0-19_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-defaults/gcc-x86-64-linux-gnu_14.2.0-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/gcc-defaults/gcc_14.2.0-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/b/brotli/libbrotli1_1.1.0-2%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libu/libunistring/libunistring5_1.3-2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libi/libidn2/libidn2-0_2.3.8-2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/p/p11-kit/libp11-kit0_0.25.5-3_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.20.0-2%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/g/gnutls28/libgnutls30t64_3.8.9-3%2bdeb13u4_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/k/krb5/libkrb5support0_1.21.3-5%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/e/e2fsprogs/libcom-err2_1.47.2-3%2bb12_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/k/krb5/libk5crypto3_1.21.3-5%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/k/keyutils/libkeyutils1_1.6.3-6_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/k/krb5/libkrb5-3_1.21.3-5%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/k/krb5/libgssapi-krb5-2_1.21.3-5%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.28%2bdfsg1-9_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.28%2bdfsg1-9_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/o/openldap/libldap2_2.6.10%2bdfsg-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/n/nghttp2/libnghttp2-14_1.64.0-1.1%2bdeb13u2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/n/nghttp3/libnghttp3-9_1.8.0-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/n/ngtcp2/libngtcp2-16_1.11.0-1%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/n/ngtcp2/libngtcp2-crypto-gnutls8_1.11.0-1%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libp/libpsl/libpsl5t64_0.21.2-1.1%2bb1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/r/rtmpdump/librtmp1_2.4%2b20151223.gitfa8646d.1-2%2bb5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libs/libssh2/libssh2-1t64_1.11.1-1%2bdeb13u2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/c/curl/libcurl3t64-gnutls_8.14.1-2%2bdeb13u7_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libe/liberror-perl/liberror-perl_0.17030-1_all.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/git/git-man_2.47.3-0%2bdeb13u1_all.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/git/git_2.47.3-0%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/glibc/libc-dev-bin_2.41-12%2bdeb13u5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/l/linux/linux-libc-dev_6.12.117-1_all.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libx/libxcrypt/libcrypt-dev_4.4.38-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.3-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/glibc/libc6-dev_2.41-12%2bdeb13u5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libu/libunwind/libunwind8_1.8.1-0.1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/m/make-dfsg/make_4.4.1-2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/s/strace/strace_6.13%2bds-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+#8 110.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#8 ERROR: process "/bin/sh -c sed -i       -e 's|https\\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g'       /etc/apt/sources.list.d/debian.sources  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo \"python3=$(python3 -c 'import platform; print(platform.python_version())')\" >> /opt/toolchain.lock  && echo \"arch=$(dpkg --print-architecture)\" >> /opt/toolchain.lock" did not complete successfully: exit code: 100
+------
+ > [stage-1  2/10] RUN sed -i       -e 's|https\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g'       /etc/apt/sources.list.d/debian.sources  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/git/git_2.47.3-0%2bdeb13u1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/glibc/libc-dev-bin_2.41-12%2bdeb13u5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian-security/pool/updates/main/l/linux/linux-libc-dev_6.12.117-1_all.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libx/libxcrypt/libcrypt-dev_4.4.38-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.3-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/g/glibc/libc6-dev_2.41-12%2bdeb13u5_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/libu/libunwind/libunwind8_1.8.1-0.1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/m/make-dfsg/make_4.4.1-2_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Failed to fetch https://mirrors.tuna.tsinghua.edu.cn/debian/pool/main/s/strace/strace_6.13%2bds-1_amd64.deb  Unable to connect to mirrors.tuna.tsinghua.edu.cn:https:
+110.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:14
+--------------------
+  13 |     # 固定基础镜像采用 Debian DEB822 源配置；保留发行版及签名校验。
+  14 | >>> RUN sed -i \
+  15 | >>>       -e 's|https\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' \
+  16 | >>>       -e 's|https\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g' \
+  17 | >>>       -e 's|https\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g' \
+  18 | >>>       /etc/apt/sources.list.d/debian.sources \
+  19 | >>>  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update \
+  20 | >>>  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git \
+  21 | >>>  && rm -rf /var/lib/apt/lists/* \
+  22 | >>>  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock \
+  23 | >>>  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock \
+  24 | >>>  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+  25 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c sed -i       -e 's|https\\?://deb.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\\?://security.debian.org/debian-security|https://mirrors.tuna.tsinghua.edu.cn/debian-security|g'       -e 's|https\\?://deb.debian.org/debian|https://mirrors.tuna.tsinghua.edu.cn/debian|g'       /etc/apt/sources.list.d/debian.sources  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 update  && apt-get -o Acquire::ForceIPv4=true -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo \"python3=$(python3 -c 'import platform; print(platform.python_version())')\" >> /opt/toolchain.lock  && echo \"arch=$(dpkg --print-architecture)\" >> /opt/toolchain.lock" did not complete successfully: exit code: 100
