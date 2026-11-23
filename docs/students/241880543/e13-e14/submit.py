@@ -24,7 +24,11 @@ PR_TITLE = 'fix(B2): roll back failed MDFixer rechecks and record C5 evidence'
 ISSUE_TITLE = 'B2 C5: failed final recheck leaves candidate Makefile in target'
 ALLOWED = ('AI_USAGE.md', 'CONTRIBUTIONS.md', 'E13-14_TASKS.md',
            'labs/e11e12/pipeline.py', 'labs/e8e10/lab.py',
-           'labs/e11e12/test_student_241880543_e13e14.py')
+           'labs/e11e12/test_student_241880543_e13e14.py',
+           'e5/A-buildchecker/scripts/secret_scan.py', 'e5/B-draft/scripts/secret_scan.py',
+           'e5/A-buildchecker/tests/tooling/test_secret_lookup_241880543.py',
+           'labs/e13e14/orchestrate.py', 'labs/e13e14/service.py',
+           'labs/e13e14/test_profile_241880543.py')
 DOC_PREFIX = 'docs/students/241880543/e13-e14/'
 
 

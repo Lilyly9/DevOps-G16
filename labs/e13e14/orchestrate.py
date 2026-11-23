@@ -12,6 +12,9 @@ from pathlib import Path
 
 PORTS = {'buildchecker': 18081, 'echecker': 18082, 'draft': 18083, 'mdfixer': 18084}
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'labs/e11e12'))
+from pipeline import project_subdir
+from project_profile import load_profile
 
 
 def save(path, data):
@@ -45,17 +48,23 @@ def command(argv, cwd, log):
     return p.stdout.strip()
 
 
-def snapshot(repo, revision, target, logs):
+def snapshot(repo, revision, target, logs, subdir=None, profile=False):
     if not re.fullmatch(r'[0-9a-f]{40}', revision):
         raise ValueError('Use a full Git commit SHA')
     head = command(['git', 'rev-parse', '--verify', revision + '^{commit}'], repo,
                    logs / (target.name + '-resolve.log'))
     command(['git', 'clone', '--no-hardlinks', '--no-checkout', str(repo), str(target)], repo,
             logs / (target.name + '-clone.log'))
+    if subdir:
+        command(['git', 'sparse-checkout', 'set', '--no-cone', '--', f'/{subdir}/'], target,
+                logs / (target.name + '-scope.log'))
     command(['git', 'checkout', '--detach', head], target, logs / (target.name + '-checkout.log'))
-    if {p.name for p in target.glob('*.c')} != {'main.c', 'helper.c'} or not (target / 'config.h').is_file():
+    project = target if subdir is None else target / subdir
+    if not project.is_dir() or project.resolve() != project:
+        raise ValueError('Project must be a regular directory in both commits')
+    if not profile and ({p.name for p in project.glob('*.c')} != {'main.c', 'helper.c'} or not (project / 'config.h').is_file()):
         raise ValueError('Unsupported teaching project profile')
-    return head
+    return head, project
 
 
 def call(role, payload, evidence):
@@ -93,7 +102,8 @@ def execute(request, out):
 
     def payload(project, folder, **extra):
         return {'project': container_path(project), 'out': container_path(folder),
-                'job_id': job, 'trace_id': trace, **extra}
+                'job_id': job, 'trace_id': trace, 'profile': request.get('profile', False),
+                'profile_project': container_path(target), **extra}
 
     def stage(name, commit, data):
         item = {'name': name, 'commit': commit, 'job_id': job, 'trace_id': trace, 'status': 'SUCCEEDED', 'data': data}
@@ -105,8 +115,15 @@ def execute(request, out):
         base = out / 'base-project'
         target = out / 'target-project'
         logs = out / 'logs'
-        base_sha = snapshot(repo, request['base'], base, logs)
-        target_sha = snapshot(repo, request['target'], target, logs)
+        if not isinstance(request.get('profile', False), bool):
+            raise ValueError('profile must be a boolean')
+        subdir = project_subdir(request['project_path']) if 'project_path' in request else None
+        base_sha, base = snapshot(repo, request['base'], base, logs, subdir, request.get('profile', False))
+        target_sha, target = snapshot(repo, request['target'], target, logs, subdir, request.get('profile', False))
+        if request.get('profile', False):
+            selected_profile = load_profile(target)
+            selected_profile.validate_sources(base)
+            selected_profile.validate_sources(target)
         result.update(base_commit=base_sha, target_commit=target_sha)
 
         drafted = call('draft', payload(target, out / 'draft-build',

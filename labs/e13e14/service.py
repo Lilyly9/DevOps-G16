@@ -8,8 +8,9 @@ import traceback
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
-sys.path[:0] = ['/course/labs/e8e10', '/course/labs/e11e12/vendor', '/app']
+sys.path[:0] = ['/course/labs/e8e10', '/course/labs/e11e12', '/course/labs/e11e12/vendor', '/app']
 from lab import scan, patch, validate
+from project_profile import load_profile
 from draft.autobuild import auto_build
 from buildchecker.fullcheck import full_check
 
@@ -39,15 +40,25 @@ def run(data):
     out = local(data['out'])
     if out.exists():
         raise ValueError('Output already exists')
+    if not isinstance(data.get('profile', False), bool):
+        raise ValueError('profile must be a boolean')
+    profile = load_profile(local(data.get('profile_project', data['project']))) if data.get('profile', False) else None
+    if profile:
+        profile.validate_sources(project)
+    targets = ('main.o', 'helper.o') if profile is None else profile.targets
+    scan_options = {} if profile is None else {'targets': targets}
     if ROLE == 'draft':
         candidate = local(data['candidate'], 'data')
-        result = auto_build(project, candidate, out, data.get('expected_output', '1'),
+        expected = data.get('expected_output', '1') if profile is None else profile.expected_output
+        result = auto_build(project, candidate, out, expected,
                             timeout=float(data.get('build_timeout', 600)))
         if result['status'] != 'SUCCEEDED':
             raise ValueError('DRAFT_' + result['status'] + ': ' + str(result.get('error')))
         return {'status': 'SUCCEEDED', 'result': result, 'artifact': str(out / 'result.json')}
     if ROLE == 'buildchecker':
-        result = full_check(project, out)
+        options = {} if profile is None else {'clean_command': f'make {profile.clean_target}',
+                                               'build_command': f'make {profile.build_target}'}
+        result = full_check(project, out, **options)
         if result['status'] != 'SUCCEEDED':
             raise ValueError('BUILDCHECKER_' + result['status'] + ': ' + str(result.get('error')))
         return {'status': 'SUCCEEDED', 'result': result, 'artifact': str(out / 'findings.json')}
@@ -55,17 +66,17 @@ def run(data):
         base = local(data['base'])
         baseline_graph = local(data['baseline_graph'])
         target_findings = local(data['target_findings'])
-        old = scan(base)
+        old = scan(base, **scan_options)
         graph = json.loads(baseline_graph.read_text())
         projected = {t: sorted({e['dependency'] for e in graph if e['target'] == t})
-                     for t in ('main.o', 'helper.o')}
+                     for t in targets}
         if old['actual'] != projected:
             raise ValueError('Baseline BuildChecker/GCC graph mismatch')
         old['actual'] = projected
-        current = scan(project, old)
+        current = scan(project, old, **scan_options)
         reference = json.loads(target_findings.read_text())
         normalize = lambda fs: sorted((x['type'], x['target'], x['dependency']) for x in fs
-                                      if x['target'] in ('main.o', 'helper.o'))
+                                      if x['target'] in targets)
         if reference['status'] != 'SUCCEEDED' or normalize(current['findings']) != normalize(reference['findings']):
             raise ValueError('Incremental/full findings mismatch')
         out.mkdir(parents=True)
@@ -89,13 +100,13 @@ def run(data):
                 data['job_id'], data['trace_id']):
             raise ValueError('Report identity mismatch')
         out.mkdir(parents=True)
-        diff, edits = patch(project, envelope['data'])
+        diff, edits = patch(project, envelope['data'], isolate_shared_macros=True)
         if not diff:
             raise ValueError('No missing dependency to repair')
         candidate = out / 'candidate.patch'
         candidate.write_text(diff, encoding='utf-8')
         save(out / 'repair-plan.json', edits)
-        verdict = validate(project, candidate, out / 'validation')
+        verdict = validate(project, candidate, out / 'validation', profile=profile)
         if not verdict['accepted']:
             raise ValueError('Patch rejected: ' + str(verdict))
         return {'status': 'SUCCEEDED', 'patch': str(candidate),

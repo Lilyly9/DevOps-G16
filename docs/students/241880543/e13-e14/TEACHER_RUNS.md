@@ -1,3 +1,5 @@
+> 2026-11-23 更新：H1 jsmn 主执行及 H3 tiny-AES-c 复核已在 Linux 官方 E12 入口跑通五阶段，各核对 20 条同镜像执行记录，最终无 MISSING。原始输入与 Git C0/C1 不变；本轮 [Linux 原件](evidence/continuation-20261123/teacher-linux.zip)、[逐项清单](evidence/continuation-20261123/verified-runs.json)。下文 Windows 阻断说明为历史记录。
+
 # B2：新发教师项目 H1 / H3 实际记录
 
 输入来自本次提供的 `学生发放包_20261116.zip`，已阅读随包操作手册及 E13/E14 课件。发放包 SHA256 为 `707cd09b37b69db0312fcef8292edac0c777b5a906bd1e82625bff53630481bc`；内部项目 ZIP 原样保存在 [e13-upstream-student.zip](evidence/teacher/e13-upstream-student.zip)，SHA256 为 `d9818c5f34d6ff5b6016222dabd7f56daca09ceaa5f525be214e146e3d485435`。保留原上游源码、许可与课程适配 Git 历史，没有使用教师预跑结果。

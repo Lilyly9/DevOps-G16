@@ -158,3 +158,5 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 - 新发材料续做：归档用户本次教师原始项目包，固定 H1/H3 的完整 C0/C1、上游身份、候选与请求；新增 run_teacher.py，实际执行 GCC 编译运行、静态依赖扫描和 Git 补丁预检，两个项目均输出 1 并定位 `helper.o -> extra.h`。原仓库前后字节相同且干净。官方 E12 因 Windows 平台在入口返回 2，保留三次尝试，完整 E12、C1 当次交接和 E14 不申报通过。见 [H1/H3 记录](docs/students/241880543/e13-e14/TEACHER_RUNS.md)。
 
 - 本地提交已保存：独立检出 `D:/workspace/DevOps-G16-B2-e13e14-snapshot-20261122` 的实现提交为 `8ec82c35c2a9a6d5774dbaf04cad33e10e564e53`，原工作区暂存与未暂存状态保留。独立检出 13 项测试和提交字节哈希核验通过；实际 fetch/push 均联网失败，Issue/PR/CI 未完成。
+
+- 2026-11-23 B2 续交付：E7 A/B 凭据读取误报修复及回归通过；H1/H3、A1 transfer-eta 当次 C1 修复和固定/H1/H3/真实项目四容器五阶段已有成功原件。新增 E14 project_path/profile 复用及基线配置兼容，详细证据见 docs/students/241880543/e13-e14/index.md。
