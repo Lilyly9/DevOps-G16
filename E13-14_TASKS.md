@@ -112,7 +112,7 @@
 | A2   | 万宇 / 241880496         | `student/241880496/e11-e12` | 已接入报告交接适配器与固定报告哈希校验；本地 17 项、服务器 22 项测试通过；tokenstat 实际 E11-A 与报告导出成功；C2 `STALE_REPORT`、C3 `ARTIFACT_HASH_MISMATCH`、C8 HTTP 409 均有服务器证据；H1 jsmn 完整 E12 五阶段通过（候选副本补装 `strace`） | E14 固定样例与 H1 jsmn 本机 Docker 五阶段均通过，阶段 job/trace、报告 SHA 核验通过，日志扫描 0 hits / 0 errors；真实配对组项目 E2E、全组门禁与远端 CI/RC 未完成 | 本轮代码、服务器及本机 Docker 证据见 [A2 E13-E14 个人记录](docs/students/241880496/e13-e14/index.md)；不声明 E13/E14 整组验收通过 |
 | A3   | 林涵 / 241880464           | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
 | B1   | 郭德林 / 241880555         | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
-| B2   | 李敏君 / 241880543 | `student/241880543/e13-e14` | C5 回滚修复及 10 项契约；真实 DRAFT / C5 三路径已有原件；本轮 10 项契约、3 项交接通过；新发 H1/H3 原始 Git、GCC 编译运行和补丁预检完成，完整 E12 被 Windows 入口阻断 | 四容器未完成；C1 当次报告与 H1/H3 的 Linux Docker/strace 运行待完成，均不申报通过 | [个人记录](docs/students/241880543/e13-e14/index.md) · [新发项目记录](docs/students/241880543/e13-e14/TEACHER_RUNS.md)；独立检出本地实现提交 `8ec82c3`，fetch/push 联网失败，PR/CI 待完成 |
+| B2   | 李敏君 / 241880543 | `student/241880543/e13-e14` | C5 回滚修复及 10 项契约；真实 DRAFT / C5 三路径已有原件；本轮 10 项契约、3 项交接通过；新发 H1/H3 原始 Git、GCC 编译运行和补丁预检完成，完整 E12 被 Windows 入口阻断 | 四容器未完成；C1 当次报告与 H1/H3 的 Linux Docker/strace 运行待完成，均不申报通过 | [个人记录](docs/students/241880543/e13-e14/index.md) · [新发项目记录](docs/students/241880543/e13-e14/TEACHER_RUNS.md)；原工作区实现提交 `52ceaef` 已 push，[草稿 PR #32](https://github.com/Lilyly9/DevOps-G16/pull/32)，远端 CI 待实际结果 |
 | B3   | 吴佳静 / 241880597         | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
 
 分工可调整，但不得由没有运行证据的成员填写“通过”。个人报告、贡献记录和证据索引须写清实际环境、完整 SHA、命令、退出码、job/trace、镜像和产物位置。
