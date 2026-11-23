@@ -34,7 +34,17 @@
 | --- | --- | --- | --- | --- |
 | H1 jsmn | A2 + B2 | A1、B1 | A2 已执行 | A2 index：隔离候选补装 `strace` 后五阶段通过 |
 | H2 inih | A1 + B1 | A3、B3 | B1 已执行 | 见 B1 报告；`[B3 复核]` 待 B1 证据归档 |
-| H3 tiny-AES-c | A3 + B3 | A2、B2 | 未执行 | 输入包 `e13-upstream-student.zip` 缺失 |
+| H3 tiny-AES-c | A3 + B3 | A2、B2 | `[B3]` 已执行 | 见下，五阶段通过，MISSING(helper.o, extra.h) 修复后 recheck 空 |
+
+### H3 tiny-AES-c 详情（B3 执行）
+
+- 输入：教师包 `e13-upstream-student/H3-tiny-aes/`（`repo` git C0/C1 + `candidate.Dockerfile` + `upstream-original`）。
+- base `dc8099306d7023b7337328d718149973e7b17978`（C0 pinned upstream library），target `5640bb69a01e64559207e9f74d15a9ae71a4d0f3`（C1 new local header use）。
+- 为满足 EChecker 运行时依赖，复制 `candidate.Dockerfile` → `candidate-strace.Dockerfile`，在 apt 安装行追加 `strace`（原候选仅 `build-essential`）。
+- job `job-a5a567707aa748059d308ff7ff4e6c7f` / trace `trace-b7a3b182c65f454ead5128ade0027ef7`，五阶段 `draft/full-check/incremental-check/repair/recheck` 全部 SUCCEEDED。
+- 增量检查发现 `MISSING(helper.o, extra.h)`（C1 在 helper.c 新增 `#include "extra.h"` 但 Makefile 未声明依赖）；repair 编辑 `{target: helper.o, dependency: extra.h, style: direct}`；recheck `findings: []`、validation accepted。
+- 候选镜像 ID `sha256:ab14d2113ccf4b652651db281e8a960f844c200e3bf6b4fb2c4c7f2b09f19159`，验证输出 `1` 匹配期望 `1`。
+- 证据目录：`evidence/h3-tiny-aes/`（result/request/draft/full-check/incremental-check/repair/recheck 七件）。
 
 ## 阻断 Issue 清单
 
@@ -42,6 +52,6 @@
 
 ## 结论
 
-- B3 本人可独立审查的完成项：B 接收、C7 B 侧、C4 复核、固定样例四容器 E2E、受控故障恢复核验、日志扫描。
-- 阻断项：真实项目四容器 E2E（profile 硬编码）、H3（输入包缺失）、RC 发布与远端 CI（全组门禁未绿 + 云机网络）。
+- B3 本人可独立审查的完成项：B 接收、C7 B 侧、C4 复核、固定样例四容器 E2E、受控故障恢复核验、日志扫描、配对真实项目四容器 E2E、H3 tiny-AES-c 五阶段。
+- 阻断项：RC 发布与远端 CI（全组门禁未绿 + 云机网络）。
 - 不声明整组 E13/E14 验收通过。

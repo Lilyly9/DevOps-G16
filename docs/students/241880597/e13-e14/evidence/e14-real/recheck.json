@@ -1,0 +1,67 @@
+{
+  "name": "recheck",
+  "commit": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+  "job_id": "job-5afabf021a0a46ff8f19088c25c8a556",
+  "trace_id": "trace-11436bef785140c9bb56516b75c220db",
+  "status": "SUCCEEDED",
+  "data": {
+    "result": {
+      "status": "SUCCEEDED",
+      "result": {
+        "status": "SUCCEEDED",
+        "detector": "BUILDCHECKER_TEACHING",
+        "detector_version": "0.2.0-teaching",
+        "trace_id": "e6-5b12fa41c33c4084af1b6b1de9856d5e",
+        "findings": [],
+        "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+        "build_command": [
+          "make",
+          "app"
+        ],
+        "clean_command": [
+          "make",
+          "clean"
+        ],
+        "input_sha256": {
+          "Dockerfile.broken": "3e7f9ee5083f11f9daeed23128cbe250799d83bc2f7e3794c9a84852028e00fa",
+          "Makefile": "4e857cb1bef37966c5f0052fffddb9f1d242c4a45a018cc202f7681fab576361",
+          "config.h": "ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696",
+          "e12-profile.json": "85540d3d8f945422bb5551cce03b421929ea1d216aed8ee72fd0dc46c3dbdc99",
+          "extra.h": "0d33bb8b361ccd28a8da109bb93ca3c27287a4a1ec6d1ab1b00c527f9934bfc9",
+          "helper.c": "38b6c73f774a6e788f4cb89970dd33a814c68f95a7dc8fa0e5ae36a95d9add7d",
+          "main.c": "4f8535dc013d26d7d3f90c2b340c9adcf7c179e3afcaf4b64d51a90d96f780c8"
+        },
+        "clean_exit_code": 0,
+        "trace_command": [
+          "strace",
+          "-ff",
+          "-s",
+          "4096",
+          "-o",
+          "/course/work/e14-b3-real-01/final-full/trace/t",
+          "-e",
+          "trace=%file,%process",
+          "make",
+          "-p",
+          "app"
+        ],
+        "build_exit_code": 0,
+        "observed_targets": [
+          "app",
+          "helper.o",
+          "main.o"
+        ],
+        "artifacts": {
+          "actual_graph": "actual-graph.json",
+          "declared_graph": "declared-graph.json",
+          "processes": "processes.json",
+          "make_database": "make-db.txt",
+          "trace_directory": "trace"
+        },
+        "elapsed_ms": 127
+      },
+      "artifact": "/course/work/e14-b3-real-01/final-full/findings.json"
+    },
+    "remaining_missing": 0
+  }
+}

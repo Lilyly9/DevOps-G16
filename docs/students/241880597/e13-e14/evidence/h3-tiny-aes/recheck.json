@@ -1,0 +1,87 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-a5a567707aa748059d308ff7ff4e6c7f",
+  "trace_id": "trace-b7a3b182c65f454ead5128ade0027ef7",
+  "kind": "recheck",
+  "commit": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+  "status": "SUCCEEDED",
+  "data": {
+    "validation": {
+      "accepted": true,
+      "checks": {
+        "patch_applies": true,
+        "build": true,
+        "test": true,
+        "header_change": true,
+        "no_missing": true
+      },
+      "error": null,
+      "source_unchanged": false,
+      "rollback": false
+    },
+    "findings": [],
+    "patched_makefile_sha256": "2a8a23e53c19bffbc8e89c406b233157b2aef38dbdff65920df5ed4e5d934350"
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/validation.json",
+      "sha256": "0aedd844e45d87669ff3c7ad42fcb15414453a14882df2fa6335997367390c37",
+      "bytes": 223
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/final-full/findings.json",
+      "sha256": "4b6f6b76bb543409ba49915b02dd7465eff35a8e943ee012d4330031aa373c0a",
+      "bytes": 1894
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/final-full/clean-execution.json",
+      "sha256": "023247f2ea1a965ca1218734fb02fa8844290f662f86bb59b2433d32b7c5087a",
+      "bytes": 1296
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/final-full/build-execution.json",
+      "sha256": "05c98f54761c1ab34abeed01dde01b8c87d434e23be6eb021730dac86bcfedba",
+      "bytes": 1625
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/01-make.json",
+      "sha256": "516c604edfd39a04cfc3f97267615a3eca7c00f5740b15ae8a9649c5e91abfdc",
+      "bytes": 1307
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/02-make.json",
+      "sha256": "f231306c780829ba4377887e34935b86fbc6fa6989a26c13771e9c87fa3893eb",
+      "bytes": 1305
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/03-app.json",
+      "sha256": "90c36ff5370d8f1f4f478f7fcd81491f514f6556db5a008f01a9efbaa23037da",
+      "bytes": 1293
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/04-make.json",
+      "sha256": "220ef115ebe5e42e7018f217abbbf8edefa0437e0555f340fe365998c193cda5",
+      "bytes": 1305
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/05-app.json",
+      "sha256": "2d5a02dc5bb969059ef9a39d97d289335f54e270021d8e522004ff743a756341",
+      "bytes": 1293
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/06-gcc.json",
+      "sha256": "167a35f10bf22b456eea018f9c3d7c36485c8e49ef28721fcdfd10a23d3a9357",
+      "bytes": 1308
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/07-gcc.json",
+      "sha256": "4e7407f3253d664bef5189d433679f1b53df671a1b08b6ef9778fdd63ea28f16",
+      "bytes": 1352
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/validation/execution/08-gcc.json",
+      "sha256": "d7b8667e849e4b5b61ce55a8285abc1bd2b7f64db1cc7554adc35e8cebea72e4",
+      "bytes": 1356
+    }
+  ]
+}

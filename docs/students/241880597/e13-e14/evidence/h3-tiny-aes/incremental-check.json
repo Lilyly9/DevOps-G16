@@ -1,0 +1,198 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-a5a567707aa748059d308ff7ff4e6c7f",
+  "trace_id": "trace-b7a3b182c65f454ead5128ade0027ef7",
+  "kind": "incremental-check",
+  "commit": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+  "status": "SUCCEEDED",
+  "data": {
+    "schema_version": "e8e10-1",
+    "profile": "GCC_LOCAL_HEADERS_EXPLICIT_MAKE",
+    "commit": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+    "key": {
+      "directives": {
+        "aes.h": [
+          "#ifndef _AES_H_",
+          "#define _AES_H_",
+          "#include <stdint.h>",
+          "#include <stddef.h>",
+          "#ifndef CBC",
+          "  #define CBC 1",
+          "#endif",
+          "#ifndef ECB",
+          "  #define ECB 1",
+          "#endif",
+          "#ifndef CTR",
+          "  #define CTR 1",
+          "#endif",
+          "#define AES128 1",
+          "#define AES_BLOCKLEN 16 // Block length in bytes - AES is 128b block only",
+          "#if defined(AES256) && (AES256 == 1)",
+          "    #define AES_KEYLEN 32",
+          "    #define AES_keyExpSize 240",
+          "#elif defined(AES192) && (AES192 == 1)",
+          "    #define AES_KEYLEN 24",
+          "    #define AES_keyExpSize 208",
+          "#else",
+          "    #define AES_KEYLEN 16   // Key length in bytes",
+          "    #define AES_keyExpSize 176",
+          "#endif",
+          "#if (defined(CBC) && (CBC == 1)) || (defined(CTR) && (CTR == 1))",
+          "#endif",
+          "#if (defined(CBC) && (CBC == 1)) || (defined(CTR) && (CTR == 1))",
+          "#endif",
+          "#if defined(ECB) && (ECB == 1)",
+          "#endif // #if defined(ECB) && (ECB == !)",
+          "#if defined(CBC) && (CBC == 1)",
+          "#endif // #if defined(CBC) && (CBC == 1)",
+          "#if defined(CTR) && (CTR == 1)",
+          "#endif // #if defined(CTR) && (CTR == 1)",
+          "#endif // _AES_H_"
+        ],
+        "config.h": [
+          "#define VALUE 1"
+        ],
+        "extra.h": [
+          "#define AES_EXPECTED_MATCH 0"
+        ],
+        "helper.c": [
+          "#include <string.h> // CBC mode, for memset",
+          "#include \"aes.h\"",
+          "#define Nb 4",
+          "#if defined(AES256) && (AES256 == 1)",
+          "    #define Nk 8",
+          "    #define Nr 14",
+          "#elif defined(AES192) && (AES192 == 1)",
+          "    #define Nk 6",
+          "    #define Nr 12",
+          "#else",
+          "    #define Nk 4        // The number of 32 bit words in a key.",
+          "    #define Nr 10       // The number of rounds in AES Cipher.",
+          "#endif",
+          "#ifndef MULTIPLY_AS_A_FUNCTION",
+          "  #define MULTIPLY_AS_A_FUNCTION 0",
+          "#endif",
+          "#if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)",
+          "#endif",
+          "#define getSBoxValue(num) (sbox[(num)])",
+          "#if defined(AES256) && (AES256 == 1)",
+          "#endif",
+          "#if (defined(CBC) && (CBC == 1)) || (defined(CTR) && (CTR == 1))",
+          "#endif",
+          "#if MULTIPLY_AS_A_FUNCTION",
+          "#else",
+          "#define Multiply(x, y)                                \\",
+          "#endif",
+          "#if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)",
+          "#define getSBoxInvert(num) (rsbox[(num)])",
+          "#endif // #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)",
+          "#if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)",
+          "#endif // #if (defined(CBC) && CBC == 1) || (defined(ECB) && ECB == 1)",
+          "#if defined(ECB) && (ECB == 1)",
+          "#endif // #if defined(ECB) && (ECB == 1)",
+          "#if defined(CBC) && (CBC == 1)",
+          "#endif // #if defined(CBC) && (CBC == 1)",
+          "#if defined(CTR) && (CTR == 1)",
+          "#endif // #if defined(CTR) && (CTR == 1)",
+          "#include <string.h>",
+          "#include \"extra.h\""
+        ],
+        "main.c": [
+          "#include <stdio.h>",
+          "#include \"config.h\""
+        ],
+        "unused.h": []
+      },
+      "recipes": [
+        "\tgcc main.o helper.o -o app",
+        "\tgcc $(CFLAGS) -c main.c -o main.o",
+        "\tgcc $(CFLAGS) -c helper.c -o helper.o",
+        "\trm -f main.o helper.o app"
+      ],
+      "flags": "-O0",
+      "compiler": "gcc (Debian 14.2.0-19) 14.2.0"
+    },
+    "actual": {
+      "main.o": [
+        "config.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "aes.h",
+        "extra.h",
+        "helper.c"
+      ]
+    },
+    "declared": {
+      "main.o": [
+        "config.h",
+        "main.c"
+      ],
+      "helper.o": [
+        "aes.h",
+        "helper.c"
+      ]
+    },
+    "findings": [
+      {
+        "type": "MISSING",
+        "target": "helper.o",
+        "dependency": "extra.h"
+      }
+    ],
+    "added": [
+      [
+        "MISSING",
+        "helper.o",
+        "extra.h"
+      ]
+    ],
+    "resolved": [],
+    "refreshed": [
+      "main.o",
+      "helper.o"
+    ],
+    "reused": [],
+    "invalidation": [
+      "helper.c"
+    ],
+    "elapsed_s": 0.5557232396677136
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/incremental-report.json",
+      "sha256": "5105b7bbb5c98b5d84bd48d6d28b512324cde0f5ed8bab5f5f95d02bdcb29b41",
+      "bytes": 4450
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/target-full/findings.json",
+      "sha256": "9ed2e86d92e01ae3c6b3c7a1eadd52155b8e3a567c053303046054367231be3d",
+      "bytes": 2426
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/target-full/clean-execution.json",
+      "sha256": "06fe9bc9f6aff6dc8dedc849af6a996910359081bc8e0a59815e5f2c1ec5a764",
+      "bytes": 1299
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/target-full/build-execution.json",
+      "sha256": "75ea35d78d0748c68495e311a569756957244f75d6118a2ba9d3e5ae4495052d",
+      "bytes": 1631
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/target-scan/01-gcc.json",
+      "sha256": "67edc885a410f29a07d52874e01a0bdc57e833a29cc5ef2d381dccde9ffa7feb",
+      "bytes": 1296
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/target-scan/02-gcc.json",
+      "sha256": "a3e32e8064a7c387bd63f24a2747c025d4b2ccd65a2d0e1c11bdc91748c92308",
+      "bytes": 1340
+    },
+    {
+      "uri": "artifact://job-a5a567707aa748059d308ff7ff4e6c7f/target-scan/03-gcc.json",
+      "sha256": "1c1a13cd0fd68c7b4f94a97b7c6e79f5780f7d5a30f0273f79312b2e10d212f4",
+      "bytes": 1344
+    }
+  ]
+}
