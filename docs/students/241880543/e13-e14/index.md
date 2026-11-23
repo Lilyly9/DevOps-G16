@@ -16,6 +16,18 @@
 
 [逐项 SHA、job/trace 与归档校验清单](evidence/continuation-20261123/verified-runs.json) · [本轮说明](CONTINUATION.md) · [报告](REPORT.md) · [ADR](ADR.md) · [教师项目来源](TEACHER_RUNS.md) · [历史记录](HISTORY.md)。最终 PR 提交的远端 CI 以 GitHub Checks 实际状态为准；已有绿色记录绑定具体源码提交，不能套用到后续提交。
 
+## 尚未完成或未单独取证
+
+| 项目 | 状态与范围 |
+| --- | --- |
+| B2 对 C2 / C3 / C7 的个人独立复核 | 未完成；本 PR 未提供这三项场景的独立复核原件，不将契约单测或其他成员结果代作本人验收 |
+| docker compose 命令与跨机共享入口 | 未执行；已验证的是四条 docker run 启动的独立 HTTP 服务 |
+| 发布级回退与回退后复验 | 未完成；C5 的 Makefile 回滚和超时恢复不等同于发布版本回退 |
+| H2、全组 C1–C8 与 E13/E14 总门禁 | 待对应成员和组长汇总，未申报通过 |
+| 合并、RC 标签和 Release | 本次不执行 |
+
+[本次复核清单](REVIEW_CHECKLIST.md) 与 [只读证据审计](evidence/review-readiness-20261123.json)单独记录核对范围；本次没有重新运行容器或覆盖既有运行证据。
+
 ## 复现与范围
 
 本轮为 WSL Ubuntu 22.04 / Docker 29.1.3 实测。运行镜像由仓库课程 Dockerfile 的独立副本构建，使用可达的官方软件源及 host 构建网络；测试命令容器仍使用原有网络隔离。独立适配层记录了 Docker 构建网络包装脚本、Git 对挂载测试目录的信任和 core.filemode 配置。教师原始源码和 Git C0/C1 不变；C1 仅派生 HTTPS 安装候选，保留原候选摘要。

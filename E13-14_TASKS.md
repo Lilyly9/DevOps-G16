@@ -99,7 +99,7 @@
 | A2   | 对手报告哈希拒绝、幂等冲突或增量报告与全量发现对照                    |
 | A3   | `handoff_a_to_b.py`/报告出口适配、C6 日志扫描或 `e13e14.yml` 接线 |
 | B1   | 真实项目候选构建、C4 超时和容器残留核查、或 Compose 镜像交接          |
-| B2   | 李敏君 / 241880543 | `student/241880543/e13-e14` | C5 真实三路径；H1/H3 官方 E12 五阶段；C1 A1 transfer-eta 当次报告交接、B2 修复与动态复验通过 | 固定、H1、H3、真实 transfer-eta 四容器五阶段通过，健康/角色日志/job/trace/报告 SHA 已核对；组门禁及 RC 待汇总 | [个人记录](docs/students/241880543/e13-e14/index.md) · [PR #32](https://github.com/Lilyly9/DevOps-G16/pull/32)；E7 修复提交四类 CI 成功，最新提交以实际 Checks 为准 |
+| B2   | C5 错误补丁回滚、旧报告拒绝、macro/mixed 声明定位或动态重检           |
 | B3   | 独立下载消费报告、C7/C8 复核、四容器编排和 RC 门禁核对                |
 
 个人分支建议 `student/<学号>/e13-e14`，镜像建议 `course-e11e12:<学号>`；每次运行使用新的 `work/e13|e14-<学号>-<序号>/`，不得覆盖旧证据。

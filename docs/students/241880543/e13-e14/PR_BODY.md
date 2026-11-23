@@ -11,6 +11,8 @@
 - 受控 DRAFT 超时返回 TIMEOUT，前后源摘要不变且无新增残留容器；随后新 job/trace 的正常任务五阶段成功。
 - E7 修复提交 b376720 的 E7 A/B、E8/E10、E11/E12 远端检查全部成功；最新提交以实际 Checks 为准。
 
-证据：docs/students/241880543/e13-e14/index.md 与 evidence/continuation-20261123/verified-runs.json。四服务按课程 Compose 的设置使用 docker run 启动；构建网络和 Git 环境适配均留原件。整组门禁与 RC 未申报通过，PR 保持草稿。
+证据：docs/students/241880543/e13-e14/index.md 与 evidence/continuation-20261123/verified-runs.json。四服务按课程 Compose 的设置使用 docker run 启动；构建网络和 Git 环境适配均留原件。整组门禁与 RC 未申报通过。本次仅提交人工审查，不合并或发布 RC。
+
+审查前再次只读核对：9 个归档、1736 项产物引用、8 次完整五阶段和 61 条同镜像执行记录均与原件一致。清单明确保留未完成项：B2 的 C2/C3/C7 独立复核、Compose 命令、跨机共享部署、发布级回退复验及整组门禁。详细记录见 docs/students/241880543/e13-e14/REVIEW_CHECKLIST.md。
 
 Closes #31
