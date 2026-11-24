@@ -42,6 +42,13 @@ def save(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
+def load_profile_dict(project):
+    p = project / 'e12-profile.json'
+    if not p.is_file():
+        return None
+    return json.loads(p.read_text(encoding='utf-8'))
+
+
 def run(data):
     project = local(data['project'])
     out = local(data['out'])
@@ -55,7 +62,12 @@ def run(data):
             raise ValueError('DRAFT_' + result['status'] + ': ' + str(result.get('error')))
         return {'status': 'SUCCEEDED', 'result': result, 'artifact': str(out / 'result.json')}
     if ROLE == 'buildchecker':
-        result = full_check(project, out)
+        prof = load_profile_dict(project)
+        kwargs = {}
+        if prof:
+            kwargs['clean_command'] = 'make ' + prof['clean_target']
+            kwargs['build_command'] = 'make ' + prof['build_target']
+        result = full_check(project, out, **kwargs)
         if result['status'] != 'SUCCEEDED':
             raise ValueError('BUILDCHECKER_' + result['status'] + ': ' + str(result.get('error')))
         return {'status': 'SUCCEEDED', 'result': result, 'artifact': str(out / 'findings.json')}
@@ -63,15 +75,21 @@ def run(data):
         base = local(data['base'])
         baseline_graph = local(data['baseline_graph'])
         target_findings = local(data['target_findings'])
-        targets = tuple(data.get('targets', ('main.o', 'helper.o')))
-        old = scan(base)
+        prof = load_profile_dict(project)
+        if prof:
+            target_map = prof['targets']
+            targets = tuple(target_map)
+        else:
+            target_map = None
+            targets = tuple(data.get('targets', ('main.o', 'helper.o')))
+        old = scan(base, targets=target_map)
         graph = json.loads(baseline_graph.read_text())
         projected = {t: sorted({e['dependency'] for e in graph if e['target'] == t})
                      for t in targets}
         if old['actual'] != projected:
             raise ValueError('Baseline BuildChecker/GCC graph mismatch')
         old['actual'] = projected
-        current = scan(project, old)
+        current = scan(project, old, targets=target_map)
         reference = json.loads(target_findings.read_text())
         normalize = lambda fs: sorted((x['type'], x['target'], x['dependency']) for x in fs
                                       if x['target'] in targets)
@@ -104,7 +122,11 @@ def run(data):
         candidate = out / 'candidate.patch'
         candidate.write_text(diff, encoding='utf-8')
         save(out / 'repair-plan.json', edits)
-        verdict = validate(project, candidate, out / 'validation')
+        kwargs = {}
+        if load_profile_dict(project):
+            from project_profile import load_profile
+            kwargs['profile'] = load_profile(project)
+        verdict = validate(project, candidate, out / 'validation', **kwargs)
         if not verdict['accepted']:
             raise ValueError('Patch rejected: ' + str(verdict))
         return {'status': 'SUCCEEDED', 'patch': str(candidate),
