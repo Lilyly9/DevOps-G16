@@ -98,6 +98,13 @@ jobs:
         if: success()
         with:
           name: e13e14-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: work/
-          if-no-files-found: warn
+          # Preserve manifest entries such as a snapshot's .gitignore.
+          path: |
+            work/
+            !work/**/.git
+            !work/**/.git/**
+            !work/**/.env
+            !work/**/.env.*
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 14
