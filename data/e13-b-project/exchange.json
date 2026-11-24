@@ -1,0 +1,22 @@
+{
+  "project": "B1-G16 exchange project (evolved from the course C/Make sample)",
+  "provider": "B1 Guo Delin 241880555",
+  "repo_bundle": "repo.bundle (full two-commit history; clone with: git clone repo.bundle repo)",
+  "repo_runtime_path": "/course/data/e13-b-project/repo",
+  "base_commit": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+  "target_commit": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+  "expected_output": "2",
+  "design_notes": {
+    "base_C0": "complete build: helper() returns HELPER_BASE from extra.h, app prints VALUE + helper() = 2",
+    "target_C1": "helper.o rule drops extra.h dependency, introducing the MD gap to detect and repair",
+    "difference_from_generated_sample": "helper returns 1 (not 0), expected output is 2 (not 1), files and Makefile rules are B1-maintained",
+    "profile": "e12-profile.json in both commits; requests carry profile=true so validate/patch use B-project expected output 2 and header change VALUE 1->2 (output 2->3)"
+  },
+  "candidate_source": "candidate.Dockerfile derived from B1 ADR-001 mirror-source pattern (tuna Debian mirrors); strace added for E12 traced in-image full-check (required by main-branch DraftExecutor path)",
+  "run_limits": {
+    "build_timeout": 600,
+    "profile": "two C files (main.c/helper.c), explicit Makefile rules, expected program output 2"
+  },
+  "not_exchanged": ".env, real keys, server passwords, personal tokens",
+  "candidate_sha256": "60c973f651cfba963675c9b19b46bd56a4071427e92bd9758509ffe8e7f39202"
+}
