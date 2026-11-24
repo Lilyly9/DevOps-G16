@@ -264,15 +264,10 @@ def execute(request, out, job_id=None):
             stage('incremental-check',target_sha,current,increment_files)
         else:
             # E11-B still consumes a fixed MD input, separately from A's live output.
-            envelope=fixed_report_envelope
-            check_envelope(envelope,target_sha,'fixed-md')
-            current=envelope['data']
-            if current.get('commit') != target_sha:
-                raise Failure('STALE_REPORT','Fixed report data commit mismatch')
-            fixed=Path(request['fixed_report'])
-            envelope=json.loads(fixed.read_text(encoding='utf-8'))
-            current=repair_input(envelope,target_sha,'fixed-md')
-            save(out/'fixed-md-input.json',envelope)
+            if fixed_report_envelope is None:
+                raise Failure('INVALID_REQUEST', 'E11-B requires a fixed report')
+            current=repair_input(fixed_report_envelope,target_sha,'fixed-md')
+            (out/'fixed-md-input.json').write_bytes(fixed_report_data)
             stage('fixed-md',target_sha,current,[out/'fixed-md-input.json'])
         if mode in ('e11-b','e12'):
             reference=result['stages'][-1]['artifact']
