@@ -129,8 +129,12 @@ def run(data):
         save(out / 'repair-plan.json', edits)
         kwargs = {}
         if load_profile_dict(project):
-            from project_profile import load_profile
-            kwargs['profile'] = load_profile(project)
+            import importlib.util
+            spec = importlib.util.spec_from_file_location(
+                'project_profile', str(ROOT / 'labs/e11e12/project_profile.py'))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            kwargs['profile'] = mod.load_profile(project)
         verdict = validate(project, candidate, out / 'validation', **kwargs)
         if not verdict['accepted']:
             raise ValueError('Patch rejected: ' + str(verdict))
