@@ -128,6 +128,12 @@ def execute(request, out):
         result.update(base_commit=base_sha, target_commit=target_sha)
         profile = read_profile(target)
         targets = sorted(profile['targets']) if profile else ['main.o', 'helper.o']
+        base_commands = {}
+        if profile:
+            # The base revision predates e12-profile.json, so the baseline
+            # buildchecker must receive its make targets through the payload.
+            base_commands = {'clean_command': 'make ' + profile['clean_target'],
+                             'build_command': 'make ' + profile['build_target']}
 
         drafted = call('draft', payload(target, out / 'draft-build',
                                         candidate=container_path(candidate),
@@ -136,7 +142,8 @@ def execute(request, out):
                        out / 'draft-response.json')
         stage('draft', target_sha, drafted)
 
-        base_full = call('buildchecker', payload(base, out / 'baseline-full'), out / 'baseline-response.json')
+        base_full = call('buildchecker', payload(base, out / 'baseline-full', **base_commands),
+                         out / 'baseline-response.json')
         target_full = call('buildchecker', payload(target, out / 'target-full'), out / 'target-response.json')
         stage('full-check', base_sha, {'base': base_full, 'target': target_full})
 

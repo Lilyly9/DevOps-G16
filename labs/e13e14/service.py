@@ -67,6 +67,11 @@ def run(data):
         if prof:
             kwargs['clean_command'] = 'make ' + prof['clean_target']
             kwargs['build_command'] = 'make ' + prof['build_target']
+        if data.get('clean_command') and data.get('build_command'):
+            # The orchestrator sends the target profile's make targets for a
+            # baseline whose own revision predates e12-profile.json.
+            kwargs = {'clean_command': data['clean_command'],
+                      'build_command': data['build_command']}
         result = full_check(project, out, **kwargs)
         if result['status'] != 'SUCCEEDED':
             raise ValueError('BUILDCHECKER_' + result['status'] + ': ' + str(result.get('error')))
