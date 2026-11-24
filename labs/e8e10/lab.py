@@ -1,5 +1,5 @@
 """E8-E10 teaching profile: explicit C/Make rules, GCC dependency observation."""
-import argparse, csv, difflib, json, re, shutil, subprocess, time
+import argparse, csv, difflib, hashlib, json, re, shutil, subprocess, time
 from pathlib import Path
 
 def save(p, data):
@@ -152,12 +152,16 @@ def validate(p, patchfile, evidence, fail_test=False, *, profile=None, runner=No
         recheck=scan(sandbox, targets=None if profile is None else profile.targets, execute=execute)
         save(evidence/'recheck.json',recheck)
         checks['no_missing']=not any(f['type']=='MISSING' for f in recheck['findings'])
-    except (ValueError,subprocess.TimeoutExpired) as ex: error=str(ex)
+    except (ValueError,OSError,subprocess.TimeoutExpired,TimeoutError) as ex: error=str(ex)
     accepted=bool(checks) and all(checks.values()) and error is None
     # Source remains untouched until all checks pass. Evidence sandbox is retained.
     if accepted: (p/'Makefile').write_bytes((sandbox/'Makefile').read_bytes())
-    unchanged=(p/'Makefile').read_bytes()==before
-    result={'accepted':accepted,'checks':checks,'error':error,'source_unchanged':unchanged,'rollback':not accepted and unchanged}
+    after=(p/'Makefile').read_bytes()
+    unchanged=after==before
+    result={'accepted':accepted,'checks':checks,'error':error,'source_unchanged':unchanged,'rollback':not accepted and unchanged,
+            'source_sha256_before':hashlib.sha256(before).hexdigest(),
+            'source_sha256_after':hashlib.sha256(after).hexdigest(),
+            'patch_sha256':hashlib.sha256(patchfile.read_bytes()).hexdigest()}
     if profile is not None:
         result['outputs'] = {'expected':expected, 'actual':output,
                              'expected_after_header_change':expected_changed,

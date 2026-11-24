@@ -1,0 +1,26 @@
+test_include_added_invalidates_cache (test_profile.ProfileTests) ... ok
+test_independent_known_edges (test_profile.ProfileTests) ... ok
+test_old_report_rejected (test_profile.ProfileTests) ... ok
+test_patch_preserves_redundant_dependency (test_profile.ProfileTests) ... ok
+test_unchanged_reuses_both_targets (test_profile.ProfileTests) ... ok
+test_unsafe_dependency_rejected (test_profile.ProfileTests) ... ok
+test_unsupported_configuration_rejected (test_profile.ProfileTests) ... ok
+test_conditional_macro_adds_exact_missing_edge (test_student_241880464.Student241880464Tests) ... ok
+test_e8_shared_header_keeps_object_job_identity (test_student_241880464.Student241880464Tests) ... ok
+test_e9_removed_indirect_include_resolves_exact_missing_edge (test_student_241880464.Student241880464Tests) ... ok
+test_header_include_invalidates_previous_dependency_graph (test_student_241880485.A1IndirectIncludeTests) ... ok
+test_body_change_records_no_invalidation_reason (test_student_241880496.StudentE8E10A2) ... ok
+test_helper_source_invalidation_keeps_conservative_refresh (test_student_241880496.StudentE8E10A2) ... ok
+test_transitive_header_include_extends_actual_set (test_student_241880496.StudentE8E10A2) ... ok
+test_duplicate_missing_records_preserve_all_three_styles (test_student_241880543.Student241880543PatchTests) ... ok
+test_same_header_on_two_targets_is_not_globally_deduplicated (test_student_241880543.Student241880543PatchTests) ... ok
+test_redundant_only_report_generates_no_deletion (test_student_241880555.StudentB1_241880555) ... ok
+test_unknown_target_rejected_and_source_intact (test_student_241880555.StudentB1_241880555) ... ok
+test_misplaced_fix_buildable_but_rejected_no_source_write (test_student_241880555.StudentE10B_MisplacedFix_241880555) ... ok
+test_macro_patch_shared_variable_expands_helper_declaration (test_student_241880555.StudentE9B_SharedDeps_241880555) ... ok
+test_build_failure_keeps_original_makefile (test_student_241880597.StudentE10B) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 3.834s
+
+OK

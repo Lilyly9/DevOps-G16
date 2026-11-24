@@ -1,0 +1,10 @@
+test_changed_inner_artifact_is_rejected (test_handoff.HandoffTests) ... ok
+test_live_a_report_becomes_b_input_with_provenance (test_handoff.HandoffTests) ... ok
+test_other_target_is_rejected (test_handoff.HandoffTests) ... ok
+test_project_path_cannot_escape_snapshot (test_profile_241880543.RealProjectSnapshots) ... ok
+test_real_profile_preserves_source_and_snapshot_identity (test_profile_241880543.RealProjectSnapshots) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.262s
+
+OK

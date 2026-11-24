@@ -1,0 +1,36 @@
+test_accept_current_report (test_contract.Contracts) ... ok
+test_api_rejects_repo_outside_data (test_contract.Contracts) ... ok
+test_artifact_uses_relative_uri_and_content_hash (test_contract.Contracts) ... ok
+test_changed_artifact_is_rejected (test_contract.Contracts) ... ok
+test_existing_evidence_not_overwritten (test_contract.Contracts) ... ok
+test_reject_failed_upstream (test_contract.Contracts) ... ok
+test_reject_old_commit (test_contract.Contracts) ... ok
+test_reject_schema (test_contract.Contracts) ... ok
+test_reject_wrong_artifact_kind (test_contract.Contracts) ... ok
+test_same_key_same_request_same_job (test_contract.Contracts) ... ok
+test_header_edit_replaces_only_one_exact_line_preserving_other_bytes (test_project_profile.ProjectProfileTests) ... ok
+test_profile_reads_configured_names_and_checks_both_git_snapshots (test_project_profile.ProjectProfileTests) ... ok
+test_rejects_paths_and_non_declarative_program_arguments (test_project_profile.ProjectProfileTests) ... ok
+test_baseline_edge_can_be_traced_to_graph (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_change_refreshes_only_affected_target (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_declared_targets_replace_fixture_names (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_executor_requires_digest_image (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_incremental_findings_equal_full_set (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_profile_rejects_duplicate_fields_and_unknown_targets (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_stale_commit_is_rejected_before_repair (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_unsupported_flag_is_rejected_explicitly (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_failed_recheck_then_fresh_attempt_succeeds_on_restored_source (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_malformed_patch_rejected_before_build_with_unchanged_source_hash (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_recheck_command_error_restores_candidate_and_saves_rollback (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_recheck_that_removes_makefile_still_restores_original_bytes (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_recheck_timeout_and_oserror_also_restore_candidate (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_remaining_missing_dependency_rejects_and_restores_candidate (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_runner_timeout_and_oserror_preserve_validation_and_source (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_success_commits_candidate_and_allows_redundant_dependency (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_validation_and_recheck_receive_the_same_draft_executor (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_validation_rejection_never_runs_final_recheck (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 17.051s
+
+OK

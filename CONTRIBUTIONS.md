@@ -144,3 +144,19 @@ A3 对 B 组实际复跑及四服务验收见 [收尾报告](e3/docs/A3_CROSS_RE
 - 文档：[个人索引](docs/students/241880496/e13-e14/index.md)、[ADR](docs/students/241880496/e13-e14/ADR.md)、[AI_USAGE](docs/students/241880496/e13-e14/AI_USAGE.md)。
 - 未完成 / 未代做：未实施"按目标失效"（会改变既有测试与手册断言，需组内统一口径）；A1/B1/A3/B3 各阶段结论不由本人填写；与 B 组联调属 E11—E12。
 - 提交：`adf0421` `feat(e8-e10): report invalidation reasons and add A2 student tests`；证据与文档提交 SHA 以本分支 `git log` 为准（未在提交内填写自身 SHA）。
+## B2：E13–E14 本地修复（李敏君，241880543，2026-11-22）
+
+- 修复范围：labs/e11e12/pipeline.py 的验证 / 最终重检回滚边界；labs/e8e10/lab.py 的异常结果与摘要记录；新增 labs/e11e12/test_student_241880543_e13e14.py（10 项契约）。
+- 个人材料：docs/students/241880543/e13-e14/，包含报告、ADR、PR 正文、可复跑 C5 留证入口及原始小件。31 项相关测试通过；实际 Git 损坏补丁被拒绝，源文件和目标提交不变。
+- 实际限制：终端网络、源 .git 写入及 WSL 被拒绝；H1、真实 Docker 语义补丁复验及 E14 四容器待执行。尚未新建本轮分支、push、创建 PR / Issue 或获得远端 CI，不申报 E13/E14 整组验收通过。
+- 当前源码起点 ea75b481a3ba0b4f02f68f8e80f464a4197f6252，工作区修改尚未提交；恢复权限后需同步最新 main 并按个人分支提交。具体环境、命令、退出码和实现文件摘要见个人证据索引。
+
+- 本轮续验：已从 main 28c94de 建立 E13/E14 分支并保留 stash；Linux 全量 75 项、交接 3 项、E8/E10 回归 21 项通过，真实 DRAFT 及同镜像 C5 三路径通过。E14 构建受软件源联网阻断，H1/H3/C1 输入不齐全；上面的权限阻断描述为历史状态，最新证据见索引。
+
+- 再次续做（2026-11-22）：本轮 Windows 10 项 B2 契约及 3 项报告交接通过；源码、证据哈希及 ZIP CRC 核验通过。补齐分工表 B2 行、Issue 正文及 submit.py。源码未再修改；Git 写入、联网、WSL 和独立 clone 的实际限制仍阻止提交 / push / PR，发布入口仅默认校验模式已运行，不宣称已完成远端交付或 E14。
+
+- 新发材料续做：归档用户本次教师原始项目包，固定 H1/H3 的完整 C0/C1、上游身份、候选与请求；新增 run_teacher.py，实际执行 GCC 编译运行、静态依赖扫描和 Git 补丁预检，两个项目均输出 1 并定位 `helper.o -> extra.h`。原仓库前后字节相同且干净。官方 E12 因 Windows 平台在入口返回 2，保留三次尝试，完整 E12、C1 当次交接和 E14 不申报通过。见 [H1/H3 记录](docs/students/241880543/e13-e14/TEACHER_RUNS.md)。
+
+- 本地提交已保存：独立检出 `D:/workspace/DevOps-G16-B2-e13e14-snapshot-20261122` 的实现提交为 `8ec82c35c2a9a6d5774dbaf04cad33e10e564e53`，原工作区暂存与未暂存状态保留。独立检出 13 项测试和提交字节哈希核验通过；实际 fetch/push 均联网失败，Issue/PR/CI 未完成。
+
+- 2026-11-23 B2 续交付：E7 A/B 凭据读取误报修复及回归通过；H1/H3、A1 transfer-eta 当次 C1 修复和固定/H1/H3/真实项目四容器五阶段已有成功原件。新增 E14 project_path/profile 复用及基线配置兼容，详细证据见 docs/students/241880543/e13-e14/index.md。

@@ -1,0 +1,41 @@
+{
+  "expected_rejection": true,
+  "error": {
+    "code": "REPAIR_REJECTED",
+    "message": "{'accepted': False, 'checks': {}, 'error': 'COMMAND_FAILED [\\'git\\', \\'apply\\', \\'--check\\', \\'D:\\\\\\\\LearningResources\\\\\\\\大三上\\\\\\\\DevOps\\\\\\\\Project\\\\\\\\DevOps-G16\\\\\\\\work\\\\\\\\e13-241880543-c5-local-20261122-03\\\\\\\\malformed\\\\\\\\candidate.patch\\']\\nerror: No valid patches in input (allow with \"--allow-empty\")\\n', 'source_unchanged': True, 'rollback': True, 'source_sha256_before': '0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a', 'source_sha256_after': '0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a', 'patch_sha256': 'da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55'}"
+  },
+  "rollback": {
+    "job_id": "job-034e6eeaa67b4131bde430f800ad09f6",
+    "trace_id": "trace-b7fc699acf2d49d5a6d7045465e0d830",
+    "commit": "c932daab12dadf97cf4a9c5ae02a02572e4d60d2",
+    "phase": "validation",
+    "rollback": true,
+    "source_sha256_before": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+    "candidate_makefile_sha256": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+    "source_sha256_after": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+    "patch_sha256": "da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55"
+  },
+  "job_id": "job-034e6eeaa67b4131bde430f800ad09f6",
+  "trace_id": "trace-b7fc699acf2d49d5a6d7045465e0d830",
+  "commit_before": "c932daab12dadf97cf4a9c5ae02a02572e4d60d2",
+  "commit_after": "c932daab12dadf97cf4a9c5ae02a02572e4d60d2",
+  "source_hashes_before": {
+    ".gitignore": "409f1ed0e6ca8fbf206bc32835f8df4812167b15423cfb52e72ef3a00820e811",
+    "config.h": "3e0a94208536b4647200d58d19ade2b8acd6cd8f7cb331533d74a0e4c16a4b10",
+    "extra.h": "7c7df2268b892c1b83edbfee39299b8e25393fa63d5b0564fbbd55c9c6be6035",
+    "helper.c": "b101efc06a8ac24eeacadf1b5fafa0666b6cc0c4c6da8f6ad109381b17172a57",
+    "main.c": "ca2613d0044667cf77d1ae418793fdcdf99562f892db10104a6e284c2a602623",
+    "Makefile": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+    "unused.h": "e0e2338f9322f463189535ea289d8821df0f4a9dd43e9e350f0728622290b92e"
+  },
+  "source_hashes_after": {
+    ".gitignore": "409f1ed0e6ca8fbf206bc32835f8df4812167b15423cfb52e72ef3a00820e811",
+    "config.h": "3e0a94208536b4647200d58d19ade2b8acd6cd8f7cb331533d74a0e4c16a4b10",
+    "extra.h": "7c7df2268b892c1b83edbfee39299b8e25393fa63d5b0564fbbd55c9c6be6035",
+    "helper.c": "b101efc06a8ac24eeacadf1b5fafa0666b6cc0c4c6da8f6ad109381b17172a57",
+    "main.c": "ca2613d0044667cf77d1ae418793fdcdf99562f892db10104a6e284c2a602623",
+    "Makefile": "0d52e5cba413195deac93215751def0cac8c63998ed60eecce6fbdedf671787a",
+    "unused.h": "e0e2338f9322f463189535ea289d8821df0f4a9dd43e9e350f0728622290b92e"
+  },
+  "patch_sha256": "da06215cdf461d129a44385579f4cb2140ac32a20176a85d58a60b3eaf7b8a55"
+}

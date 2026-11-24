@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-22",
+  "scope": "current Windows rerun and read-only audit; no new Linux/Docker run",
+  "base_commit": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+  "branch": "student/241880543/e13-e14",
+  "implementation_sha256": {
+    "labs/e8e10/lab.py": "5c5a91280a007872e10c629554c1a51ee198dfb54ce2336402e9fcb941576114",
+    "labs/e11e12/pipeline.py": "f94e35776cc0a57031c036e5504f10c2416c26966d6891ff639e3f25e8c59197",
+    "labs/e11e12/test_student_241880543_e13e14.py": "83187dc54ae2fd4467fe7ba9700ca41a635af44ecee64599a54cd8702201c82f",
+    "docs/students/241880543/e13-e14/run_evidence.py": "4e9d93ac1f191e15015b2f4002af827425591509417efaeeb03e28b6d912f239"
+  },
+  "old_evidence_hashes_match": true,
+  "archives": {
+    "draft-build.zip": {
+      "entries": 22,
+      "crc_ok": true,
+      "sha256": "804c64df34ad088c6b3957dc74170b04d21289a1f69a7d214efa475ea875111f"
+    },
+    "docker-c5.zip": {
+      "entries": 141,
+      "crc_ok": true,
+      "sha256": "0379e543e1041a4721051178be819319f9c6a0419ee140ffdc3587710f0cafe2"
+    }
+  },
+  "current_tests": [
+    {
+      "command": "python -m unittest discover -s labs/e11e12 -p test_student_241880543_e13e14.py -v",
+      "count": 10,
+      "exit_code": 0,
+      "log": "windows-b2-current.log"
+    },
+    {
+      "command": "python -m unittest discover -s labs/e13e14 -p test_handoff.py -v",
+      "count": 3,
+      "exit_code": 0,
+      "log": "windows-handoff-current.log"
+    }
+  ],
+  "submission_entry": {
+    "command": "python docs/students/241880543/e13-e14/submit.py",
+    "exit_code": 0,
+    "test_logs": "work/e13-241880543-submit-20261122-235529-36880",
+    "publication_mode_executed": false
+  },
+  "runtime_scan_exit_code": 0,
+  "diff_check_exit_code": 0,
+  "actual_blockers": [
+    {
+      "command": "git fetch origin",
+      "exit_code": 1,
+      "error": "error: cannot open '.git/FETCH_HEAD': Permission denied"
+    },
+    {
+      "command": "git ls-remote origin HEAD (with connection timeout)",
+      "exit_code": 1,
+      "error": "getaddrinfo() thread failed to start"
+    },
+    {
+      "command": "wsl -l -v",
+      "exit_code": 1,
+      "error": "Wsl/E_ACCESSDENIED"
+    },
+    {
+      "command": "git clone --local --no-hardlinks --no-checkout . D:/workspace/DevOps-G16-B2-e13e14-20261122",
+      "exit_code": 1,
+      "error": "MSYS NtCreateDirectoryObject 0xC0000022; could not read from remote repository"
+    }
+  ],
+  "publication": {
+    "date": "2026-11-22",
+    "branch": "student/241880543/e13-e14",
+    "implementation_commit": "8ec82c35c2a9a6d5774dbaf04cad33e10e564e53",
+    "base_commit": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+    "checkout": "D:/workspace/DevOps-G16-B2-e13e14-snapshot-20261122",
+    "method": "Read-only HEAD bundle from the original repository; independent clone and B2-only file copy; original Git index and working changes retained",
+    "verified": [
+      "10 B2 tests and 3 handoff tests passed in independent checkout",
+      "Staged normalized implementation hashes match the Linux evidence manifest",
+      "Staged raw evidence hashes match the manifest without newline conversion",
+      "Independent checkout clean after implementation commit"
+    ],
+    "fetch": {
+      "exit_code": 128,
+      "status": "FAILED",
+      "error": "getaddrinfo() thread failed to start"
+    },
+    "push": {
+      "exit_code": 128,
+      "status": "FAILED",
+      "error": "getaddrinfo() thread failed to start"
+    },
+    "issue": "NOT_CREATED",
+    "pull_request": "NOT_CREATED",
+    "remote_ci": "NOT_RUN",
+    "latest_remote_main_confirmed": false,
+    "group_gate": "INCOMPLETE: H1/H3 full Linux E12, current C1 report consumption and E14 four-container runs pending",
+    "remote_attempt_evidence_sha256": {
+      "local-fetch.log": "1aa9e246be1a43ab2c373eee4503fefdbd4b8b85f8af50c8faab1a6bd69f8586",
+      "local-fetch.exit": "d6a1e3465ed106cad3c49e17b247dec0b2737e0dea99ab406371fb53b22e93a7",
+      "local-push.log": "1aa9e246be1a43ab2c373eee4503fefdbd4b8b85f8af50c8faab1a6bd69f8586",
+      "local-push.exit": "d6a1e3465ed106cad3c49e17b247dec0b2737e0dea99ab406371fb53b22e93a7"
+    }
+  },
+  "teacher_inputs": {
+    "status": "ACQUIRED_FROM_USER_LOCAL_ORIGINAL",
+    "source": "evidence/teacher/source.json",
+    "results": "evidence/teacher/teacher-summary.json",
+    "executed": "H1/H3 Git integrity, GCC build/run, static scan, patch applicability",
+    "official_e12": "BLOCKED_BEFORE_PIPELINE; both exited 2 on Windows"
+  },
+  "pending_inputs_and_runs": [
+    "H1/H3 full Linux Docker/strace E12 execution",
+    "C1 current peer report handoff and consumption",
+    "E14 four-container run"
+  ],
+  "current_evidence_sha256": {
+    "windows-b2-current.log": "8944594f412d8c00b5fff2abbe81673c7e9f2f2a33d8da46fe04b88e6a60ff4b",
+    "windows-b2-current.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "windows-handoff-current.log": "76afa24ac976b6afb0170a1525ffd00e0449311672ec5635112329dc7401f08f",
+    "windows-handoff-current.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "session-runtime-scan.log": "b3b7b7ba9345f1b41b9d38af3bdc81e1bd5a5a8f86bef0401620cdc81170a954",
+    "session-runtime-scan.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "session-diff-check.log": "3757f459b915ca177d4847ffcd2e9e14c9cc0c9a7d875fc2506fbbbf434f6578",
+    "session-diff-check.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "local-fetch.log": "1aa9e246be1a43ab2c373eee4503fefdbd4b8b85f8af50c8faab1a6bd69f8586",
+    "local-fetch.exit": "d6a1e3465ed106cad3c49e17b247dec0b2737e0dea99ab406371fb53b22e93a7",
+    "local-push.log": "1aa9e246be1a43ab2c373eee4503fefdbd4b8b85f8af50c8faab1a6bd69f8586",
+    "local-push.exit": "d6a1e3465ed106cad3c49e17b247dec0b2737e0dea99ab406371fb53b22e93a7"
+  },
+  "submission_script_sha256": "0741ac2a255213bfc312c320a6a79edaf76441e00262a468ff57235956759c5a",
+  "teacher_runner_sha256": "dd75d5d78ae88458dc731ffd4c0b1ce37300e87cbb04ecca1e2ba5428c775501",
+  "teacher_evidence_sha256": {
+    "teacher/03_E13三个项目运行指南.md": "974b570d8dee17d31964af5bac398c59204ff4662115a600c327602d7122a716",
+    "teacher/e13-upstream-student.zip": "d9818c5f34d6ff5b6016222dabd7f56daca09ceaa5f525be214e146e3d485435",
+    "teacher/source.json": "572019d28ded535ad8c597311182c4e2c97c418aaded02ccbfb6a8b1e1a4793d",
+    "teacher/teacher-runs.zip": "c09cf268a87f57a5a56fdef796f0da9a190e0a5972feced30d4cf2831c4217a1",
+    "teacher/teacher-summary.json": "8549cea0ae6ce9081e64c7fd85b1e936f94ca1bdfeb7604909f242d0f2523a98"
+  }
+}
