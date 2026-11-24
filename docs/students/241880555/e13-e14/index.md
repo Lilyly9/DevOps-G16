@@ -48,7 +48,7 @@ job `job-836f2d82eba9448a892e8a1becdb3d41` / trace `trace-49b3db22184d4f1f995d58
   - `NO_VERIFY_CONTAINER_STARTED`（超时发生在第一轮构建，验证容器未启动）；
   - `NO_MATCHING_DOCKER_BUILD_CLIENT`（`ps` 无对应 docker build 客户端进程）；
   - `docker ps` 仅见他人长驻容器 `course-e11e12:241880597`（非本轮产物，未触碰）。
-- 正式交叉测试用对方实际项目复跑 C4 属组内待办（见 §6）。
+- 正式交叉测试用对方实际项目复跑 C4 已于 round2 完成（见 §6-3）。
 
 ## 3. H2 inih 主执行（E13，A1+B1 主执行，A3/B3 复核）
 
@@ -72,22 +72,57 @@ job `job-836f2d82eba9448a892e8a1becdb3d41` / trace `trace-49b3db22184d4f1f995d58
   - 恢复：原时限新目录 `work/e14-compose-recovery-241880555-01` 退出码 0 五阶段 SUCCEEDED，job `job-91cd65a0adf544fb9664f8e16fa240e5` / trace `trace-a729cc06544146aa9cb6a9b74c2d8e0c`。
   - 隔离核验（`E14_FAULT_RECOVERY_ISOLATION=PASS`）：失败与恢复任务 job/trace 不同；恢复任务五阶段同 job/trace、recheck 无 MISSING、全部产物哈希一致——失败任务标识未污染恢复任务。
 - 运行日志 Secret 扫描（`labs/e13e14/scan_runtime_logs.py`）：本轮 7 个证据目录 + `compose-services.log` 全部退出码 0（hits=0 errors=0）。
-- 四容器运行状态：截至归档仍保持 `up`（`-p e14-241880555`），供 B2/B3 复核与配对真实项目 E2E；收尾时仅 `docker compose -f labs/e13e14/compose.yaml -p e14-241880555 down` 关闭本项目。
+- 四容器运行状态：固定样例与受控故障恢复完成后保持 `up` 供复核；round2 配对真实项目 E2E（§6-4）复用同一 `-p e14-241880555` 项目运行，收尾时 `docker compose -f labs/e13e14/compose.yaml -p e14-241880555 down` 关闭，容器与网络无残留。
 
 ## 5. 已知问题与记录
 
 1. **H 项目/e12 模式候选必须含 strace**：main 版 pipeline 在 e12 模式经 `DraftExecutor` 做 traced full-check。教师三项目候选只装 build-essential，首轮必然 `FULL_CHECK_FAILED`（容器内 `strace: not found`）。已按"失败留证→候选副本补装→复测"路径处理（A2 在 H1 亦然）。建议 A3/组长评估：是否在项目包 README 或 workflow 文档中明示该前置，避免每位执行者重复消耗一轮 600s 级失败运行。
-2. **四容器 service.py 不支持 project profile**：`mdfixer` 角色调用 `lab.validate` 未传 profile，硬编码期望输出 1/2；B 项目（输出 2）进入四容器 E2E 会被 REPAIR_REJECTED。固定样例四容器不受影响。属于配对真实项目四容器 E2E 的前置改造（A3 维护入口），B1 已在 B 项目 `exchange.json` 声明 profile 字段供消费方使用。
+2. ~~四容器 service.py 不支持 project profile~~：已于 round2 解决——`service.py` 三个角色分支（buildchecker/echecker/mdfixer）均接入 `e12-profile.json`，`orchestrate.py` 传递 profile make 目标与扫描目标（见 §6-4）。
 3. **orchestrate.py 固定样例默认候选在本人网络环境超时**：与 E11 ADR-001 同因，非代码缺陷；使用换源候选复跑通过，两轮证据均保留。
 
-## 6. 待组内协调（B1 未执行，不作"通过"声明）
+## 6. Round 2 交付（2026-11-24）：round2 CI 修复、组内交叉与配对真实项目四容器 E2E
 
-- C1 完整交叉（A 侧实际项目 + A→B 当次报告交接）、对方项目 C4 正式交叉（B1 主跑）。
+### 6-1. round2 CI 错误修复（PR #29）
+
+- 根因 1：早前 `3e9e5e5` 合并冲突解决出错，分支版 `.github/workflows/e13e14.yml` 出现重复 `on:`/`jobs:` key 与步骤错乱，`E13-E14 integration gate` 直接解析失败。恢复为 main 版 workflow（含 A3 已合入的 contracts/four-services 结构）。
+- 根因 2：CI 的 secret 历史扫描命中 B2（52ceaef）引入的凭据读取 helper——以凭据名为键的映射单参 lookup，被"密钥赋值"正则误判为字面量。按 A 侧先例 `b376720`（AST 判定单参映射 lookup 放行，literal/fallback 仍拒绝）把 `credential_lookup` 例外移植到 B-draft 与 E11-E12 版扫描器（`189fcbc`）、A-buildchecker 版（`1b268ed`）。
+- 修复提交 message 自身含代码示例被历史扫描命中 → amend 后 `--force-with-lease` 重推（`189fcbc`）。
+- 修复后 CI 全绿（run `45331060021`/`45331060057`/`45331060245`/`45331060074`/`45331060165`：E7 A/B gate、E8-E10、E11-E12、E13-E14 contracts/four-services 全部 success）。
+- round2 文档提交（`759c4c2`）后的分支最新 run `45337643247`/`45337642989`/`45337643073`/`45337643004`/`45337643012` 亦全部 success。
+
+### 6-2. Cross-pair C1 复核（A 侧实际项目 transfer-eta，B1 复核执行）
+
+- 输入 `data/e13-pair-b1/`：从主仓库 `projects/transfer-eta` 子树以 `git worktree` 提取构造 standalone repo（profile 模式要求 target-project 根目录布局），`base = adf19dc421c99eb44f9be2d2fcc8f2addbd89318` / `target = 1b1b0c4712e67e38c703ef6e310776e0c4ce4cb9`，候选沿用 A1 报告对应候选。首轮用主仓库全树提交 `e7414083…` 报 `INVALID_PROFILE`，失败记录在此，改用 standalone repo 后通过。
+- 复核运行 `work/e13-c1-pair-b1-01`（退出码 0）：job `job-2142b70849d846d7b90efda22022f410` / trace `trace-1bba9b525cde40ea940ab5a3707377b1`，draft→full-check→incremental-check→repair→recheck 五阶段同 job/trace。
+- incremental 发现 `MISSING(eta_cli.o → defaults.h)`，与 A1 报告 §C1 结论一致；recheck `commit=target` 且 MISSING=0。
+
+### 6-3. partner-project C4 正式交叉（A 侧实际项目，B1 主跑）
+
+- 请求同项目（base/target 同 §6-2），`build_timeout: 0.01` → `work/e13-c4-pair-b1-01`（退出码 1）：job `job-467195f13de645508c98d2328edc270e` / trace `trace-0211ec9f22f740df9b0cb6c9b9674810`。
+- 外层 `FAILED` / `DRAFT_FAILED`，message `Docker client command exceeded 0.01s`，内层 `TIMED_OUT`；`residue-check/summary.txt` 结论 `NO_RESIDUE`（`docker ps -a` 无本轮构建容器、`ps` 无 buildkit 进程，容器未及启动）。
+
+### 6-4. 配对真实项目四容器 E2E（E14 Test plan 最后一项）
+
+代码适配（5 个提交，每轮失败根因即提交 message）：
+
+| 提交 | 内容 |
+| --- | --- |
+| `ba83663` | orchestrate `read_profile`/`snapshot` 校验 profile targets 源文件、E2E 请求 `data/e13-pair-b1/request-e14.json` |
+| `b97f3ee` | base revision 早于 profile 引入，snapshot 对无 profile 的 base 改为弱校验（有 C 源即可） |
+| `b2e444f` | `service.py` buildchecker/echecker/mdfixer 三分支读 `e12-profile.json`：make 目标、扫描 target 映射、`lab.validate` 传 profile |
+| `ea50ceb` | baseline 无 profile，orchestrate 从 target profile 推导 `clean/build` 命令经 payload 传给 baseline buildchecker |
+| `a69c763` | mdfixer 内 `project_profile` 以 `importlib.util` 按文件路径加载（容器 sys.path 无该目录） |
+
+- 排错 4 轮失败以修复提交留证（Unsupported teaching project profile → Traced build failed `make app` → baseline 同因 → `ModuleNotFoundError: project_profile`）；新增 `labs/e13e14/test_profile_targets.py` 6 用例（服务器运行 OK），覆盖 profile 接受/缺源拒绝/无效拒绝/教学项目接受/无 profile base 接受/无 C 源拒绝。
+- 最终运行 `work/e14-real-pair-b1-01`（退出码 0）：job `job-1d2b684354074d169be9870b0e270cf2` / trace `trace-2e54016d9d6a4115b5549f4989304a84`，五阶段全部 SUCCEEDED，全部 187 产物字节哈希与 `result.json` 一致（0 mismatch），stage envelope 逐一核对无 mismatch，recheck MISSING=0。
+- 收尾证据：`compose ps` 四容器 healthy（`work/e14-real-pair-b1-01-compose-ps.txt`）；四角色日志 653 行（`work/e14-real-pair-b1-01-services.log`）；`scan_runtime_logs.py` 扫描 E2E 证据目录（176 个文本文件）与服务日志均 hits=0 errors=0；`compose down` 清理后无 e14 容器/网络残留。
+
+## 7. 待组内协调（B1 未执行，不作"通过"声明）
+
 - C2/C3/C5/C7/C8 中 B1 作为复核人的项（依赖 A2/A3/B2/B3 主跑产出）。
-- 配对真实项目四容器 E2E（依赖 §5-2 的 profile 支持改造与 A 侧项目锁定）。
 - `v0.9-rc` 标签与 Release（组长）；E13 整组门禁判定（A3/B3 汇总）。
 
-## 7. 归档
+## 8. 归档
 
 - 服务器：`/root/devops-submissions/241880555/E13-E14-20261121-B1.tar.gz`（排除 .git；SHA256 见归档命令输出）。
 - 本机副本：`work-backup-e13b/`（关键 JSON/日志/核验脚本）。

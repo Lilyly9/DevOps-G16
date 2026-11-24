@@ -99,6 +99,7 @@
 | A2   | 对手报告哈希拒绝、幂等冲突或增量报告与全量发现对照                    |
 | A3   | `handoff_a_to_b.py`/报告出口适配、C6 日志扫描或 `e13e14.yml` 接线 |
 | B1   | 真实项目候选构建、C4 超时和容器残留核查、或 Compose 镜像交接          |
+| B1   | 郭德林 / 241880555         | `student/241880555/e13-e14` / 镜像 `course-e11e12:241880555` | B 侧交换项目固定（base `e9ce878b` / target `48b64156`，repo.bundle 入库，候选清华源+strace）；B 项目自测五阶段 SUCCEEDED（job-836f2d82）；H2 inih 主执行（A1+B1，job-eb0b6176）；round2 CI 修复（e13e14.yml 恢复 main 版 + secret_scan credential_lookup 例外移植 189fcbc/1b268ed）；Cross-pair C1 复核（transfer-eta，job-2142b70849d，incremental MISSING(eta_cli.o→defaults.h) 与 A1 报告一致）；partner-project C4 主跑（job-467195f13d，DRAFT_FAILED/TIMED_OUT 0.01s，NO_RESIDUE） | E14 四容器 DRAFT/Compose 主责：固定样例 E2E（job-d005a90e，162 产物哈希核验）；受控故障恢复（fault job-6c33413d → recovery job-91cd65a0，隔离 PASS）；配对真实项目四容器 E2E（适配 5 提交 ba83663…a69c763 + test_profile_targets.py 6 用例，job-1d2b68435407，五阶段 SUCCEEDED，187 产物哈希 0 mismatch，recheck MISSING=0，日志扫描 0 hits）；E2E 后 compose down 无残留 | PR #29；CI run 45331060021/57/245/74/165 全绿（E7 A/B、E8-E10、E11-E12、E13-E14）；证据见 [B1 E13-E14 个人记录](docs/students/241880555/e13-e14/index.md)；归档 E13-E14-20261121-B1.tar.gz；不声明 E13/E14 整组验收通过 |
 | B2   | C5 错误补丁回滚、旧报告拒绝、macro/mixed 声明定位或动态重检           |
 | B3   | 独立下载消费报告、C7/C8 复核、四容器编排和 RC 门禁核对                |
 
@@ -111,7 +112,8 @@
 | A1   | 焦龙 / 241880485           | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
 | A2   | 万宇 / 241880496         | `student/241880496/e11-e12` | 已接入报告交接适配器与固定报告哈希校验；本地 17 项、服务器 22 项测试通过；tokenstat 实际 E11-A 与报告导出成功；C2 `STALE_REPORT`、C3 `ARTIFACT_HASH_MISMATCH`、C8 HTTP 409 均有服务器证据；H1 jsmn 完整 E12 五阶段通过（候选副本补装 `strace`） | E14 固定样例与 H1 jsmn 本机 Docker 五阶段均通过，阶段 job/trace、报告 SHA 核验通过，日志扫描 0 hits / 0 errors；真实配对组项目 E2E、全组门禁与远端 CI/RC 未完成 | 本轮代码、服务器及本机 Docker 证据见 [A2 E13-E14 个人记录](docs/students/241880496/e13-e14/index.md)；不声明 E13/E14 整组验收通过 |
 | A3   | 林涵 / 241880464           | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
-| B1   | 郭德林 / 241880555         | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
+| B1   | 真实项目候选构建、C4 超时和容器残留核查、或 Compose 镜像交接          |
+| B1   | 郭德林 / 241880555         | `student/241880555/e13-e14` / 镜像 `course-e11e12:241880555` | B 侧交换项目固定（base `e9ce878b` / target `48b64156`，repo.bundle 入库，候选清华源+strace）；B 项目自测五阶段 SUCCEEDED（job-836f2d82）；H2 inih 主执行（A1+B1，job-eb0b6176）；round2 CI 修复（e13e14.yml 恢复 main 版 + secret_scan credential_lookup 例外移植 189fcbc/1b268ed）；Cross-pair C1 复核（transfer-eta，job-2142b70849d，incremental MISSING(eta_cli.o→defaults.h) 与 A1 报告一致）；partner-project C4 主跑（job-467195f13d，DRAFT_FAILED/TIMED_OUT 0.01s，NO_RESIDUE） | E14 四容器 DRAFT/Compose 主责：固定样例 E2E（job-d005a90e，162 产物哈希核验）；受控故障恢复（fault job-6c33413d → recovery job-91cd65a0，隔离 PASS）；配对真实项目四容器 E2E（适配 5 提交 ba83663…a69c763 + test_profile_targets.py 6 用例，job-1d2b68435407，五阶段 SUCCEEDED，187 产物哈希 0 mismatch，recheck MISSING=0，日志扫描 0 hits）；E2E 后 compose down 无残留 | PR #29；CI run 45331060021/57/245/74/165 全绿（E7 A/B、E8-E10、E11-E12、E13-E14）；证据见 [B1 E13-E14 个人记录](docs/students/241880555/e13-e14/index.md)；归档 E13-E14-20261121-B1.tar.gz；不声明 E13/E14 整组验收通过 |
 | B2   | 李敏君 / 241880543 | `student/241880543/e13-e14` | C5 真实三路径；H1/H3 官方 E12 五阶段；C1 A1 transfer-eta 当次报告交接、B2 修复与动态复验通过 | 固定、H1、H3、真实 transfer-eta 四容器五阶段通过，健康/角色日志/job/trace/报告 SHA 已核对；组门禁及 RC 待汇总 | [个人记录](docs/students/241880543/e13-e14/index.md) · [PR #32](https://github.com/Lilyly9/DevOps-G16/pull/32)；E7 修复提交四类 CI 成功，最新提交以实际 Checks 为准 |
 | B3   | 吴佳静 / 241880597         | 待本人填    | 待本人填       | 待本人填            | 待本人填       |
 
