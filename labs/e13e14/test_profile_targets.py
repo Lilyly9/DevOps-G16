@@ -66,11 +66,16 @@ class SnapshotProfileTests(unittest.TestCase):
         repo, head = self.make_repo({'main.c': '', 'helper.c': '', 'config.h': ''})
         self.assertEqual(snapshot(repo, head, self.tmp / 'target', self.tmp / 'logs'), head)
 
-    def test_teaching_project_without_config_rejected(self):
+    def test_base_without_profile_but_with_sources_accepted(self):
+        # A profile project's base revision predates e12-profile.json.
         repo, head = self.make_repo({'main.c': '', 'helper.c': ''})
+        self.assertEqual(snapshot(repo, head, self.tmp / 'target', self.tmp / 'logs'), head)
+
+    def test_snapshot_without_c_sources_rejected(self):
+        repo, head = self.make_repo({'README.md': 'not a project\n'})
         with self.assertRaises(ValueError) as ctx:
             snapshot(repo, head, self.tmp / 'target', self.tmp / 'logs')
-        self.assertIn('Unsupported teaching project profile', str(ctx.exception))
+        self.assertIn('No C sources found', str(ctx.exception))
 
 
 if __name__ == '__main__':

@@ -64,13 +64,15 @@ def snapshot(repo, revision, target, logs):
             logs / (target.name + '-clone.log'))
     command(['git', 'checkout', '--detach', head], target, logs / (target.name + '-checkout.log'))
     profile = read_profile(target)
-    if profile is None:
-        if {p.name for p in target.glob('*.c')} != {'main.c', 'helper.c'} or not (target / 'config.h').is_file():
-            raise ValueError('Unsupported teaching project profile')
-    else:
+    if profile is not None:
         missing = [src for src in profile['targets'].values() if not (target / src).is_file()]
         if missing:
             raise ValueError('Profile sources missing: ' + ', '.join(missing))
+    elif not list(target.glob('*.c')):
+        # The base revision of a profile project predates e12-profile.json, so
+        # only a checkout with C sources is required here; stage-level checks
+        # catch anything beyond that.
+        raise ValueError('No C sources found in project snapshot')
     return head
 
 
