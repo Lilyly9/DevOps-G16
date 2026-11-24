@@ -48,10 +48,12 @@ def main(argv=None) -> int:
             print(f"SCAN_ERROR missing path: {root}", file=sys.stderr)
             errors += 1
             continue
+        before = checked
         for path in candidates(root):
             try:
                 with path.open("rb") as raw:
-                    if b"\x00" in raw.read(4096):
+                    prefix = raw.read(4096)
+                    if not prefix or b"\x00" in prefix:
                         continue
                 with path.open("r", encoding="utf-8", errors="replace") as stream:
                     checked += 1
@@ -70,6 +72,9 @@ def main(argv=None) -> int:
             except OSError as exc:
                 print(f"SCAN_ERROR {path}: {exc.__class__.__name__}", file=sys.stderr)
                 errors += 1
+        if checked == before:
+            print(f"SCAN_ERROR no readable text: {root}", file=sys.stderr)
+            errors += 1
     print(f"runtime log scan: text_files={checked} hits={hits} errors={errors}")
     if errors or checked == 0:
         return 2
