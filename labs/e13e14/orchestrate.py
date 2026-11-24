@@ -45,6 +45,16 @@ def command(argv, cwd, log):
     return p.stdout.strip()
 
 
+def read_profile(project):
+    p = project / 'e12-profile.json'
+    if not p.is_file():
+        return None
+    profile = json.loads(p.read_text(encoding='utf-8'))
+    if profile.get('schema_version') != 'e12-project-1' or not profile.get('targets'):
+        raise ValueError('Invalid e12-profile.json')
+    return profile
+
+
 def snapshot(repo, revision, target, logs):
     if not re.fullmatch(r'[0-9a-f]{40}', revision):
         raise ValueError('Use a full Git commit SHA')
@@ -53,8 +63,14 @@ def snapshot(repo, revision, target, logs):
     command(['git', 'clone', '--no-hardlinks', '--no-checkout', str(repo), str(target)], repo,
             logs / (target.name + '-clone.log'))
     command(['git', 'checkout', '--detach', head], target, logs / (target.name + '-checkout.log'))
-    if {p.name for p in target.glob('*.c')} != {'main.c', 'helper.c'} or not (target / 'config.h').is_file():
-        raise ValueError('Unsupported teaching project profile')
+    profile = read_profile(target)
+    if profile is None:
+        if {p.name for p in target.glob('*.c')} != {'main.c', 'helper.c'} or not (target / 'config.h').is_file():
+            raise ValueError('Unsupported teaching project profile')
+    else:
+        missing = [src for src in profile['targets'].values() if not (target / src).is_file()]
+        if missing:
+            raise ValueError('Profile sources missing: ' + ', '.join(missing))
     return head
 
 
@@ -108,6 +124,8 @@ def execute(request, out):
         base_sha = snapshot(repo, request['base'], base, logs)
         target_sha = snapshot(repo, request['target'], target, logs)
         result.update(base_commit=base_sha, target_commit=target_sha)
+        profile = read_profile(target)
+        targets = sorted(profile['targets']) if profile else ['main.o', 'helper.o']
 
         drafted = call('draft', payload(target, out / 'draft-build',
                                         candidate=container_path(candidate),
@@ -123,7 +141,7 @@ def execute(request, out):
         increment = call('echecker', payload(target, out / 'incremental', base=container_path(base),
                                             baseline_graph=container_path(out / 'baseline-full/actual-graph.json'),
                                             target_findings=container_path(out / 'target-full/findings.json'),
-                                            target_commit=target_sha), out / 'incremental-response.json')
+                                            target_commit=target_sha, targets=targets), out / 'incremental-response.json')
         stage('incremental-check', target_sha, increment)
 
         repair = call('mdfixer', payload(target, out / 'repair-work',
