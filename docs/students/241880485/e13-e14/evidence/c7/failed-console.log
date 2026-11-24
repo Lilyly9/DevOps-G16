@@ -1,0 +1,24 @@
+IMAGE=course-e11e12:241880485
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-fce3110d7c4b483cac106e2e343d6216",
+  "trace_id": "trace-60cc0fe449654d278bcf8922c9dc2499",
+  "status": "FAILED",
+  "stages": [],
+  "error": {
+    "code": "COMMAND_FAILED",
+    "message": "git failed; see base-project-resolve.log"
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-fce3110d7c4b483cac106e2e343d6216/logs/base-project-resolve.log",
+      "sha256": "9b3fab22fc89a33cf7f4e9d08072e43f29c2999ed2af63b6e8417b2ce9d534b4",
+      "bytes": 32
+    },
+    {
+      "uri": "artifact://job-fce3110d7c4b483cac106e2e343d6216/request.json",
+      "sha256": "77c8e547358b03cb5e0f5c921d1ce733b5479cea47d3b1e2ed4069b081c85f29",
+      "bytes": 364
+    }
+  ]
+}

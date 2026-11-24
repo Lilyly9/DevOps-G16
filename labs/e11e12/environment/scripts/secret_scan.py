@@ -41,7 +41,10 @@ def scan_text(text, where):
 
 
 def git(root, *args):
-    return subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=True)
+    # History from older stages contains GBK paths and binary-ish diffs; decode
+    # with replacement so one undecodable byte cannot abort the whole scan.
+    return subprocess.run(["git", "-C", str(root), *args], capture_output=True,
+                          text=True, errors="replace")
 
 
 def files(root):

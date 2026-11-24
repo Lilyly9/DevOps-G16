@@ -1,0 +1,87 @@
+{
+  "status": "SUCCEEDED",
+  "job_id": "job-789dec04cba24db690ace58ecbe0f868",
+  "trace_id": "trace-ef57b1b5364d49b7b1f9357f4a5075b1",
+  "base_commit": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "target_commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "stages": [
+    "draft",
+    "full-check",
+    "incremental-check",
+    "repair",
+    "recheck"
+  ],
+  "artifact_count": 235,
+  "target_findings": [
+    {
+      "type": "MISSING",
+      "target": "eta_cli.o",
+      "dependency": "defaults.h",
+      "evidence": [
+        {
+          "source": "system_call",
+          "trace_file": "t.12",
+          "line": 923,
+          "pid": 12,
+          "operation": "openat"
+        },
+        {
+          "source": "system_call",
+          "trace_file": "t.13",
+          "line": 23,
+          "pid": 13,
+          "operation": "openat"
+        }
+      ],
+      "declared_dependencies": [
+        "estimate.h",
+        "eta_cli.c"
+      ]
+    }
+  ],
+  "final_findings": [],
+  "recheck_commit": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "recheck_missing": [],
+  "repair_input_report_sha256": "7db1a948845b5dc69bd19fa0325fc3fdad450ef9fcc2dc5435630dbed1bbdf10",
+  "incremental_report_sha256": "7db1a948845b5dc69bd19fa0325fc3fdad450ef9fcc2dc5435630dbed1bbdf10",
+  "copied": [
+    "baseline-cache.json",
+    "baseline-full/actual-graph.json",
+    "baseline-full/build-execution.json",
+    "baseline-full/clean-execution.json",
+    "baseline-full/declared-graph.json",
+    "baseline-full/findings.json",
+    "baseline-full/processes.json",
+    "baseline-scan/01-gcc.json",
+    "baseline-scan/02-gcc.json",
+    "baseline-scan/03-gcc.json",
+    "draft-build/result.json",
+    "draft.json",
+    "final-full/actual-graph.json",
+    "final-full/build-execution.json",
+    "final-full/clean-execution.json",
+    "final-full/declared-graph.json",
+    "final-full/findings.json",
+    "final-full/processes.json",
+    "full-check.json",
+    "incremental-check.json",
+    "incremental-report.json",
+    "project-profile.json",
+    "recheck.json",
+    "repair-plan.json",
+    "repair.json",
+    "request.json",
+    "result.json",
+    "target-full/actual-graph.json",
+    "target-full/build-execution.json",
+    "target-full/clean-execution.json",
+    "target-full/declared-graph.json",
+    "target-full/findings.json",
+    "target-full/processes.json",
+    "target-scan/01-gcc.json",
+    "target-scan/02-gcc.json",
+    "target-scan/03-gcc.json",
+    "validation/recheck.json",
+    "validation/validation.json"
+  ]
+}

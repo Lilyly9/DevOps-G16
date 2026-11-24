@@ -1,0 +1,9 @@
+MIRROR=m.daocloud.io/docker.io/library/python:3.13-slim
+TUNA=mirrors.tuna.tsinghua.edu.cn
+DIGEST=sha256:70729b46c69b4f1e97c4822c1af3df53a1476cf5ddc6c087c0c10bc3a5678c2f
+SOURCE_BASE=55e2dfcf735143d02090adf4084c8f5e1f98758d
+NEW_BASE=a7ae98c4bc5d6ff9ddec1849d7c0aa4712027af9
+NEW_TARGET=dc9390c18168d602c4ab5824c25fffa8dcdcd069
+SOURCE_CANDIDATE_SHA256=c558c658c942e0a134ce3be8b12f757ab32df1040882d014052bd69565640414
+ADAPTED_CANDIDATE_SHA256=a672ddb9d32e5478764ecf564241d289bca72d7304bc9a8e936f547f0b9306ba
+REASON=Docker Hub registry-1.docker.io is unreachable from A16 and deb.debian.org downloads at ~50 kB/s; the identical pinned digest comes from the daocloud mirror, the apt source is rewritten to Tsinghua, and the base tag stays identical so DRAFT candidate validation still applies.
