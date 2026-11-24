@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-22",
+  "scope": "read-only audit of existing evidence; no new container run",
+  "base_commit": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+  "branch": "student/241880543/e13-e14",
+  "implementation_sha256": {
+    "labs/e8e10/lab.py": "5c5a91280a007872e10c629554c1a51ee198dfb54ce2336402e9fcb941576114",
+    "labs/e11e12/pipeline.py": "f94e35776cc0a57031c036e5504f10c2416c26966d6891ff639e3f25e8c59197",
+    "labs/e11e12/test_student_241880543_e13e14.py": "83187dc54ae2fd4467fe7ba9700ca41a635af44ecee64599a54cd8702201c82f",
+    "docs/students/241880543/e13-e14/run_evidence.py": "4e9d93ac1f191e15015b2f4002af827425591509417efaeeb03e28b6d912f239"
+  },
+  "evidence_manifest_matches": true,
+  "tests": [
+    {
+      "log": "linux-full-tests-confirmed.log",
+      "count": 75,
+      "exit_code": 0,
+      "log_sha256": "0e9f792ff09b4653f0cc865da3209473012f20a872a564f73ccf2660204d3bad"
+    },
+    {
+      "log": "linux-handoff-tests-confirmed.log",
+      "count": 3,
+      "exit_code": 0,
+      "log_sha256": "9c5daa03c5cf503e84eedd8c0f383919ba0e2e0d031917b222bfaea993eb452c"
+    },
+    {
+      "log": "linux-lab-tests-final.log",
+      "count": 21,
+      "exit_code": 0,
+      "log_sha256": "f4eb81a36047aa93eedf682be66fa0588021125d4021957c3ba8bf10c6650783"
+    }
+  ],
+  "archives": {
+    "draft-build.zip": {
+      "sha256": "804c64df34ad088c6b3957dc74170b04d21289a1f69a7d214efa475ea875111f",
+      "entries": 22,
+      "crc_ok": true
+    },
+    "docker-c5.zip": {
+      "sha256": "0379e543e1041a4721051178be819319f9c6a0419ee140ffdc3587710f0cafe2",
+      "entries": 141,
+      "crc_ok": true
+    }
+  },
+  "same_image_records": 18,
+  "image_id": "sha256:1542170ad4477d3b2b3c48e6fa6abb75aac1a2c464e3ccf31308aaebd65eddda",
+  "all_recorded_container_exits_zero": true,
+  "container_record_paths": [
+    "recovery/final-full/build-execution.json",
+    "recovery/final-full/clean-execution.json",
+    "recovery/validation/execution/01-make.json",
+    "recovery/validation/execution/02-make.json",
+    "recovery/validation/execution/03-app.json",
+    "recovery/validation/execution/04-make.json",
+    "recovery/validation/execution/05-app.json",
+    "recovery/validation/execution/06-gcc.json",
+    "recovery/validation/execution/07-gcc.json",
+    "recovery/validation/execution/08-gcc.json",
+    "wrong-dependency/validation/execution/01-make.json",
+    "wrong-dependency/validation/execution/02-make.json",
+    "wrong-dependency/validation/execution/03-app.json",
+    "wrong-dependency/validation/execution/04-make.json",
+    "wrong-dependency/validation/execution/05-app.json",
+    "wrong-dependency/validation/execution/06-gcc.json",
+    "wrong-dependency/validation/execution/07-gcc.json",
+    "wrong-dependency/validation/execution/08-gcc.json"
+  ],
+  "pending": [
+    "commit",
+    "push",
+    "PR",
+    "remote CI",
+    "H1/H3/C1 current inputs and runs",
+    "E14 four-container E2E"
+  ]
+}

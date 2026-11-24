@@ -63,9 +63,9 @@ def git(root, *args):
 
 
 def files(root):
-    p = git(root, "ls-files")
+    p = git(root, "ls-files", "-z")
     if p.returncode == 0:
-        return [root / f for f in p.stdout.splitlines()], True
+        return [root / f for f in p.stdout.split("\0") if f], True
     out = []
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
@@ -100,9 +100,12 @@ def main():
     if env.exists() and os.name == "posix" and env.stat().st_mode & 0o077:
         hits.append(".env 权限过宽：执行 chmod 600 .env")
 
-    if args.history and in_git:
-        log = git(root, "log", "--all", "-p", "--no-color").stdout
-        hits += scan_text(log, "git-history")
+    if args.history:
+        history = git(root, "log", "--all", "-p", "--no-color")
+        if history.returncode != 0:
+            print("无法读取 Git 历史", file=sys.stderr)
+            return 2
+        hits += scan_text(history.stdout, "git-history")
     if args.image:
         for cmd, where in ((["docker", "history", "--no-trunc", "--format", "{{.CreatedBy}}", args.image], "image-history"),
                            (["docker", "image", "inspect", "--format", "{{range .Config.Env}}{{println .}}{{end}}", args.image], "image-env")):
@@ -116,8 +119,8 @@ def main():
         print("FOUND  " + h)
     print(f"密钥检查：{'未发现问题' if not hits else f'发现 {len(hits)} 处疑似泄露'}"
           f"（文件 {len(paths)} 个{'，含 Git 历史' if args.history else ''}{'，含镜像 ' + args.image if args.image else ''}）")
-    sys.exit(1 if hits else 0)
+    return 1 if hits else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

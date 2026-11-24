@@ -1,0 +1,3 @@
+COMMAND_FAILED ['git', 'config', 'user.name', 'TeachingFixture']
+fatal: not in a git directory
+

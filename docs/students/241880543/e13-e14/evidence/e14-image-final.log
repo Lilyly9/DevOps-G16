@@ -1,0 +1,85 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from e13-241880543-runtime.Dockerfile
+#1 transferring dockerfile:
+#1 transferring dockerfile: 1.91kB 0.3s done
+#1 DONE 0.4s
+
+#2 [internal] load metadata for docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 115B 0.1s done
+#4 DONE 0.2s
+
+#5 [stage-1  1/10] FROM docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74
+#5 resolve docker.io/library/python:3.13-slim@sha256:f82c96458eedc847b233e582eb31336f4954b39cae020b6dcf5b3ed0e5cbcd74 0.1s done
+#5 CACHED
+
+#6 [docker-cli 1/1] FROM docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad
+#6 resolve docker.io/library/docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad 0.1s done
+#6 CACHED
+
+#7 [internal] load build context
+#7 transferring context: 52.20kB 0.3s done
+#7 DONE 0.4s
+
+#8 [stage-1  2/10] RUN apt-get update  && apt-get -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+#8 60.86 Ign:1 http://deb.debian.org/debian trixie InRelease
+#8 60.86 Ign:2 http://deb.debian.org/debian trixie-updates InRelease
+#8 60.86 Ign:3 http://deb.debian.org/debian-security trixie-security InRelease
+#8 61.86 Ign:3 http://deb.debian.org/debian-security trixie-security InRelease
+#8 61.86 Ign:2 http://deb.debian.org/debian trixie-updates InRelease
+#8 61.86 Ign:1 http://deb.debian.org/debian trixie InRelease
+#8 63.86 Ign:1 http://deb.debian.org/debian trixie InRelease
+#8 63.86 Ign:2 http://deb.debian.org/debian trixie-updates InRelease
+#8 63.86 Ign:3 http://deb.debian.org/debian-security trixie-security InRelease
+#8 67.86 Err:3 http://deb.debian.org/debian-security trixie-security InRelease
+#8 67.86   Unable to connect to deb.debian.org:http:
+#8 67.86 Err:2 http://deb.debian.org/debian trixie-updates InRelease
+#8 67.86   Unable to connect to deb.debian.org:http:
+#8 67.86 Err:1 http://deb.debian.org/debian trixie InRelease
+#8 67.86   Could not connect to debian.map.fastlydns.net:80 (198.18.0.157), connection timed out Could not connect to deb.debian.org:80 (198.18.0.161), connection timed out
+#8 67.86   Unable to connect to deb.debian.org:http:
+#8 67.87 Reading package lists...
+#8 67.88 W: Failed to fetch http://deb.debian.org/debian/dists/trixie/InRelease  Unable to connect to deb.debian.org:http:
+#8 67.88 W: Failed to fetch http://deb.debian.org/debian/dists/trixie-updates/InRelease  Unable to connect to deb.debian.org:http:
+#8 67.88 W: Failed to fetch http://deb.debian.org/debian-security/dists/trixie-security/InRelease  Unable to connect to deb.debian.org:http:
+#8 67.88 W: Some index files failed to download. They have been ignored, or old ones used instead.
+#8 67.88 Reading package lists...
+#8 67.89 Building dependency tree...
+#8 67.89 Reading state information...
+#8 67.89 E: Unable to locate package gcc
+#8 67.89 E: Unable to locate package make
+#8 67.89 E: Unable to locate package libc6-dev
+#8 67.89 E: Unable to locate package strace
+#8 67.89 E: Unable to locate package git
+#8 ERROR: process "/bin/sh -c apt-get update  && apt-get -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo \"python3=$(python3 -c 'import platform; print(platform.python_version())')\" >> /opt/toolchain.lock  && echo \"arch=$(dpkg --print-architecture)\" >> /opt/toolchain.lock" did not complete successfully: exit code: 100
+------
+ > [stage-1  2/10] RUN apt-get update  && apt-get -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock:
+67.88 W: Failed to fetch http://deb.debian.org/debian-security/dists/trixie-security/InRelease  Unable to connect to deb.debian.org:http:
+67.88 W: Some index files failed to download. They have been ignored, or old ones used instead.
+67.88 Reading package lists...
+67.89 Building dependency tree...
+67.89 Reading state information...
+67.89 E: Unable to locate package gcc
+67.89 E: Unable to locate package make
+67.89 E: Unable to locate package libc6-dev
+67.89 E: Unable to locate package strace
+67.89 E: Unable to locate package git
+------
+e13-241880543-runtime.Dockerfile:14
+--------------------
+  13 |     # 固定基础镜像采用 Debian DEB822 源配置；保留发行版及签名校验。
+  14 | >>> RUN apt-get update \
+  15 | >>>  && apt-get -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git \
+  16 | >>>  && rm -rf /var/lib/apt/lists/* \
+  17 | >>>  && dpkg-query -W -f='${Package}=${Version}\n' gcc make libc6-dev strace git > /opt/toolchain.lock \
+  18 | >>>  && echo "python3=$(python3 -c 'import platform; print(platform.python_version())')" >> /opt/toolchain.lock \
+  19 | >>>  && echo "arch=$(dpkg --print-architecture)" >> /opt/toolchain.lock
+  20 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c apt-get update  && apt-get -o Acquire::Retries=3 install -y --no-install-recommends gcc make libc6-dev strace git  && rm -rf /var/lib/apt/lists/*  && dpkg-query -W -f='${Package}=${Version}\\n' gcc make libc6-dev strace git > /opt/toolchain.lock  && echo \"python3=$(python3 -c 'import platform; print(platform.python_version())')\" >> /opt/toolchain.lock  && echo \"arch=$(dpkg --print-architecture)\" >> /opt/toolchain.lock" did not complete successfully: exit code: 100

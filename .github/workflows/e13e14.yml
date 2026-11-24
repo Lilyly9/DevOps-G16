@@ -17,6 +17,7 @@ jobs:
           set -euo pipefail
           python3 -m py_compile labs/e11e12/pipeline.py labs/e13e14/*.py
           python3 -m unittest discover -s labs/e11e12 -p 'test_contract.py' -v
+          python3 -m unittest discover -s labs/e11e12 -p 'test_student_241880496_e13e14.py' -v
           python3 -m unittest discover -s labs/e13e14 -p 'test_*.py' -v
       - name: Compose schema and source secret scan
         run: |
@@ -45,7 +46,9 @@ jobs:
             --build-arg DOCKER_CLI_IMAGE=docker:28.5.1-cli@sha256:9190b0613792e658a7783cf14b2d5ace5941bb68ede7276922ea36ee457d76ad \
             -f labs/e11e12/environment/services/buildchecker/Dockerfile \
             -t course-e11e12:999999999 labs/e11e12/environment
-          docker image inspect course-e11e12:999999999 --format '{{.Id}}' > work/image-id.txt 2>/dev/null || true
+          docker image inspect course-e11e12:999999999 --format '{{.Id}}' > work/image-id.txt
+          git rev-parse HEAD > work/checkout.sha
+          python3 labs/e11e12/environment/scripts/secret_scan.py . --image course-e11e12:999999999 > work/image-scan.log
           python3 run_e11e12.py prepare
       - name: Four containers run the five stages over HTTP
         run: |
@@ -55,10 +58,12 @@ jobs:
           docker compose -f labs/e13e14/compose.yaml -p e14-ci ps > work/e14-services-ps.txt
           python3 labs/e13e14/orchestrate.py \
             --request data/integration-sample/e12.json --out work/ci-e14
-          python3 labs/e13e14/scan_runtime_logs.py work/ci-e14
-          docker compose -f labs/e13e14/compose.yaml -p e14-ci logs --no-color \
-            > work/ci-e14-services.log
-          python3 labs/e13e14/scan_runtime_logs.py work/ci-e14-services.log
+          python3 labs/e13e14/verify_e14.py work/ci-e14 > work/e14-verification.json
+          mkdir -p work/ci-roles
+          for role in buildchecker echecker draft mdfixer; do
+            docker compose -f labs/e13e14/compose.yaml -p e14-ci logs --no-color "$role" > "work/ci-roles/$role.log"
+          done
+          python3 labs/e13e14/scan_runtime_logs.py work/ci-e14 work/ci-roles/*.log
       - name: C7 failure isolation on two separate tasks
         run: |
           set -euo pipefail
@@ -80,15 +85,26 @@ jobs:
           printf 'C7_SUCCESS_EXIT=0\n'
           python3 labs/e13e14/verify_c7_isolation.py work/ci-c7-failed work/ci-c7-success \
             --out work/ci-c7-isolation.json
+      - name: Scan C7 evidence before upload
+        run: |
+          python3 labs/e13e14/scan_runtime_logs.py work/ci-c7-failed work/ci-c7-success work/ci-c7-*-console.log
+
       - name: Stop only this Compose project
         if: always()
         run: |
           E14_ROOT="$PWD" E14_IMAGE=course-e11e12:999999999 \
             docker compose -f labs/e13e14/compose.yaml -p e14-ci down || true
       - uses: actions/upload-artifact@v7.0.2
-        if: always()
+        if: success()
         with:
           name: e13e14-evidence-${{ github.run_id }}-${{ github.run_attempt }}
-          path: work/
-          if-no-files-found: warn
+          # Preserve manifest entries such as a snapshot's .gitignore.
+          path: |
+            work/
+            !work/**/.git
+            !work/**/.git/**
+            !work/**/.env
+            !work/**/.env.*
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 14

@@ -1,0 +1,272 @@
+{
+  "source_commit": "b376720",
+  "working_tree_sha256": {
+    "labs\\e13e14\\orchestrate.py": "5cabe4352150f2060dda5f716feba200e002d23ad696713dc679724729dd3592",
+    "labs\\e13e14\\service.py": "7b4c87afd67cf7c6870f54b441478cb90dfaba2a577003ef8a208e316f783332",
+    "labs\\e13e14\\test_profile_241880543.py": "ca25b5ff83c875f2a66edea3439fd02a0c1fb417aedf015e887e7d5aaeb671fb"
+  },
+  "date": "2026-11-23",
+  "cases": {
+    "H1-jsmn": {
+      "status": "SUCCEEDED",
+      "job_id": "job-28ea8e8320154730abbfaf2262513516",
+      "trace_id": "trace-1bc4328fc6f24041b5badba2890f38bb",
+      "base": "66a6dafcc20cea76bf017923d3db725d78407845",
+      "target": "948a1d30cd758d32d45a50f788e5a95fb1d89c69",
+      "verified_artifacts": 225,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": "sha256:499113010bcfe23b144ab3ac329be4d24222175d85a8438fee9aa3a1f616ef62",
+      "same_image_command_records": 20
+    },
+    "H3-tiny-aes": {
+      "status": "SUCCEEDED",
+      "job_id": "job-741caccbe8c941cf9797fc9e1a9c9fa6",
+      "trace_id": "trace-4baccc3190784001a3c5cc51ac271aa4",
+      "base": "dc8099306d7023b7337328d718149973e7b17978",
+      "target": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+      "verified_artifacts": 225,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": "sha256:09b72b9b6cb7d481c79466ddf88dddf9b2f322fd3ab9c6100c0598183846aa08",
+      "same_image_command_records": 20
+    },
+    "C1-B": {
+      "status": "SUCCEEDED",
+      "job_id": "job-a551c109139047baaa9a9d5d459e92d5",
+      "trace_id": "trace-73c87219c4064d88be182b1deb9f3b57",
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "verified_artifacts": 235,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": "sha256:79a4dde9f2e304fdcbb9001291d0fbbcc5be314756f838a19b347b702e6368bd",
+      "same_image_command_records": 21
+    },
+    "C1-A-handoff": {
+      "job_id": "job-7d0b00237b694805bce1b039c97220c0",
+      "trace_id": "trace-6087b825fa5b4286b1a5e0911262da00",
+      "report_sha256": "ede4baba7cb95d81159fc5cba40677844473a2f0208ef7b29cf67568385a062a",
+      "fixed_report_sha256": "b3aef1ea6ccc440fd0758f18bcd65a6f030e385fb5c957ed5b5fc5b7fda84c67",
+      "status": "SUCCEEDED"
+    },
+    "E14-H1": {
+      "status": "SUCCEEDED",
+      "job_id": "job-8e17cff1cb304ec7ab742496f5efee66",
+      "trace_id": "trace-ceda5b87083240cb8a62c1f8d7cac27c",
+      "base": "66a6dafcc20cea76bf017923d3db725d78407845",
+      "target": "948a1d30cd758d32d45a50f788e5a95fb1d89c69",
+      "verified_artifacts": 183,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": null,
+      "same_image_command_records": 0
+    },
+    "E14-fixed": {
+      "status": "SUCCEEDED",
+      "job_id": "job-1db2ebdb94c84a639260c5c9ea34571e",
+      "trace_id": "trace-f2fb3a1915254f31b33dc364b53d6d41",
+      "base": "db5cdc945e5bb985980b2db46d4df45b5bd60c86",
+      "target": "1a84ab873b39a74900fa6321679fa448384fd024",
+      "verified_artifacts": 162,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": null,
+      "same_image_command_records": 0
+    },
+    "E14-H3-tiny-aes": {
+      "status": "SUCCEEDED",
+      "job_id": "job-640b1273d6ed4ec1812e2c5f66b167b5",
+      "trace_id": "trace-9558fecab8834da3abac1afafa19238b",
+      "base": "dc8099306d7023b7337328d718149973e7b17978",
+      "target": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+      "verified_artifacts": 183,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": null,
+      "same_image_command_records": 0
+    },
+    "E14-transfer-eta": {
+      "status": "SUCCEEDED",
+      "job_id": "job-aa567da45f2b442a98213440824f9071",
+      "trace_id": "trace-e82f0e54b9cc43439e87f0903fc2c455",
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "verified_artifacts": 189,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": null,
+      "same_image_command_records": 0
+    },
+    "E14-timeout-recovery": {
+      "status": "SUCCEEDED",
+      "job_id": "job-c9287c8c48d1466d923e55efba23c2fc",
+      "trace_id": "trace-35e536ddb0074deeab24aac87570a5c9",
+      "base": "db5cdc945e5bb985980b2db46d4df45b5bd60c86",
+      "target": "1a84ab873b39a74900fa6321679fa448384fd024",
+      "verified_artifacts": 162,
+      "stage_count": 5,
+      "remaining_missing": 0,
+      "draft_image_id": null,
+      "same_image_command_records": 0
+    }
+  },
+  "archives": {
+    "b2-teacher-20261123-02": {
+      "path": "teacher-linux.zip",
+      "sha256": "e6e26836bf436e69ec7db02d1c5878de5b109216d37751d6a7ded02931ed75a6",
+      "bytes": 460289
+    },
+    "b2-e14-20261123-02": {
+      "path": "e14-four-services.zip",
+      "sha256": "9d12b8b32323b1d45e1c13b14845396460208f9e0afc1f0e5777c378d936f0ee",
+      "bytes": 182072
+    },
+    "b2-runtime-20261123-04": {
+      "path": "runtime-overlay.zip",
+      "sha256": "1bc4e2f43e7419f01c2a6e9c3006e4ddc7cfb6bf72f54ed5f2108dc484b6bafe",
+      "bytes": 3047
+    },
+    "b2-c1-20261123-02": {
+      "path": "c1-a-and-first-b.zip",
+      "sha256": "79ed6f042cd4ad209cf54f809ff77d8d22f8f8a7de5dc2700507389cd58fa0ea",
+      "bytes": 113317
+    },
+    "b2-c1-20261123-03": {
+      "path": "c1-b-recovery.zip",
+      "sha256": "a4b947d23ff5cec31cb4f876cc8182b3e0b709c4de47b5cd639c008c3e311936",
+      "bytes": 179118
+    },
+    "e14-fixed-h3": {
+      "path": "e14-fixed-h3.zip",
+      "sha256": "5ab58d02e2f46159e9ec8173953f4c06555b4dcb2f00350172b8109d9bc2dbce",
+      "bytes": 348334
+    },
+    "e14-real-project": {
+      "path": "e14-real-project.zip",
+      "sha256": "2859dd1349ff48d8f81dccf016320ca014a94e97e0b5a0259fb3a926f9458072",
+      "bytes": 165046
+    },
+    "e14-fault-recovery": {
+      "path": "e14-fault-recovery.zip",
+      "sha256": "579dc3a239f808d05b97beaf6cc88dd53e77f0f9c786dca7e4cd09ee17a186ff",
+      "bytes": 136430
+    },
+    "failure-attempts": {
+      "path": "failure-attempts.zip",
+      "sha256": "020eeca8e197353b5b72d37ed27f9bc77c16f28963cef3e1f349a70cc84434de",
+      "bytes": 23460
+    }
+  },
+  "timeout": {
+    "status": "TIMED_OUT",
+    "failed_job": "job-23e009fabdf94d15a7a50f90af3d4320",
+    "failed_trace": "trace-0cbaed03501d4992a14533b9617eff0f",
+    "source_unchanged": true,
+    "no_new_containers": true
+  },
+  "deployments": {
+    "b2-e14-20261123-02": {
+      "four_distinct_containers": true,
+      "all_health_ok": true,
+      "same_runtime_image": "sha256:ebd01b79be297c3afdcaaa9b260dbec969e6fbca6dcffd8e3444cd7976af62f0",
+      "job_trace_logs_verified": true,
+      "cleanup_exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "b2-e14-20261123-03": {
+      "four_distinct_containers": true,
+      "all_health_ok": true,
+      "same_runtime_image": "sha256:ebd01b79be297c3afdcaaa9b260dbec969e6fbca6dcffd8e3444cd7976af62f0",
+      "job_trace_logs_verified": true,
+      "cleanup_exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "b2-e14-20261123-04": {
+      "four_distinct_containers": true,
+      "all_health_ok": true,
+      "same_runtime_image": "sha256:ebd01b79be297c3afdcaaa9b260dbec969e6fbca6dcffd8e3444cd7976af62f0",
+      "job_trace_logs_verified": true,
+      "cleanup_exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "b2-e14-fault-20261123-01": {
+      "four_distinct_containers": true,
+      "all_health_ok": true,
+      "same_runtime_image": "sha256:ebd01b79be297c3afdcaaa9b260dbec969e6fbca6dcffd8e3444cd7976af62f0",
+      "job_trace_logs_verified": true,
+      "cleanup_exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "archive_crc_and_artifact_hashes_verified": true,
+  "normalized_source_sha256": {
+    "labs/e13e14/orchestrate.py": "100ebbc73b5be43cf3a8425d6df66c537b4e3e3f3d835c8ed0a4f672c345b007",
+    "labs/e13e14/service.py": "358b4c4b1a6e7913cd8d9e649f6073e09d19b46be1dbe5054e58027b4a4eb8c5",
+    "labs/e13e14/test_profile_241880543.py": "cc379b03c7c0f915d820886f0c7defae65443491dd46e269f67a6aeffbe36304",
+    "e5/A-buildchecker/scripts/secret_scan.py": "1935561a080477eff183bee5df33c7da5aa81c5aa9fea6afd34a2f9b1cfd9ab2",
+    "e5/B-draft/scripts/secret_scan.py": "b02ed0d5f9726588e34f76b8f838b089ee333f8a2faf829c390de2a02aa36668",
+    "e5/A-buildchecker/tests/tooling/test_secret_lookup_241880543.py": "482b8c0578f8811da433a675a29528b2ec106adbb0bc69356fd20433ddfc0c4a"
+  },
+  "runtime_scan_exit_code": 0,
+  "repository_and_history_scan_exit_codes": {
+    "A": 0,
+    "B": 0
+  },
+  "evidence_sha256": {
+    "c1-a-and-first-b.zip": "79ed6f042cd4ad209cf54f809ff77d8d22f8f8a7de5dc2700507389cd58fa0ea",
+    "c1-b-recovery.zip": "a4b947d23ff5cec31cb4f876cc8182b3e0b709c4de47b5cd639c008c3e311936",
+    "ci-scanner-fix.json": "aa013e00794ea59915e413a279aafd2ab3a4e2cdce98b53861936fb5af1bb631",
+    "e14-fault-recovery.zip": "579dc3a239f808d05b97beaf6cc88dd53e77f0f9c786dca7e4cd09ee17a186ff",
+    "e14-fixed-h3.zip": "5ab58d02e2f46159e9ec8173953f4c06555b4dcb2f00350172b8109d9bc2dbce",
+    "e14-four-services.zip": "9d12b8b32323b1d45e1c13b14845396460208f9e0afc1f0e5777c378d936f0ee",
+    "e14-real-project.zip": "2859dd1349ff48d8f81dccf016320ca014a94e97e0b5a0259fb3a926f9458072",
+    "failure-attempts.zip": "020eeca8e197353b5b72d37ed27f9bc77c16f28963cef3e1f349a70cc84434de",
+    "final-scan-A-buildchecker.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "final-scan-A-buildchecker.log": "12b1989950f2ac94faa7f7d38686d2cc8157f2185f9c0d1156893c19edc4b36c",
+    "final-scan-B-draft.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "final-scan-B-draft.log": "12b1989950f2ac94faa7f7d38686d2cc8157f2185f9c0d1156893c19edc4b36c",
+    "linux-e11e12.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "linux-e11e12.log": "c05fa98f490842c52c7cef1ce67eff0da9344ca1949d437758ed821ca9d42710",
+    "linux-e14.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "linux-e14.log": "ebfdc186f08d7eb7e4ebf69ff6ca17d424064d5368ec3ffdc719e27d340c2950",
+    "runtime-overlay.zip": "1bc4e2f43e7419f01c2a6e9c3006e4ddc7cfb6bf72f54ed5f2108dc484b6bafe",
+    "runtime-scan.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "runtime-scan.log": "65a1ff4a8125466910421243ea699846a77f529eac80db8c9cbf10b63f703ff9",
+    "scanner-A-buildchecker.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "scanner-A-buildchecker.log": "8ff5507c006e12ddb52053aedae66754e84f0cd2d40863c49eec5f286ebf9873",
+    "scanner-B-draft.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "scanner-B-draft.log": "8ff5507c006e12ddb52053aedae66754e84f0cd2d40863c49eec5f286ebf9873",
+    "scanner-tests-linux.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "scanner-tests-linux.log": "ae75a12a80c29d9dbfa37db6d1ceaa40eaf5f89d9b1d3791ec9de15599121637",
+    "scanner-tests.exit": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "scanner-tests.log": "da9d3e22c29d70423fb130379028f7753971908f3e00488576039ea40f4c7db1",
+    "teacher-linux.zip": "e6e26836bf436e69ec7db02d1c5878de5b109216d37751d6a7ded02931ed75a6",
+    "runners\\b2-audit-20261123.py": "632f70b633f4600dd7be62138d5911424f6a6b62b45c514b32b4557eacbadd50",
+    "runners\\b2-c1-20261123.py": "eb23db64d18e2950c431a795c6f1e5e8e723dd1d8e81710ad4217622130a7772",
+    "runners\\b2-c1-retry-20261123.py": "fa6db1db3d29def78aafaf28ef32076750d7e656bb82b32d5d80cedffb10fb15",
+    "runners\\b2-document-20261123.py": "ea9c898023957c08320fce12a12377ab55e3661f9e2eb5e78911ea2d4955cd98",
+    "runners\\b2-e14-20261123.py": "176fd619041ffd0e885d5f56adb79152309e666c2fc4126c631f12c1789e3e71",
+    "runners\\b2-e14-fault-20261123.py": "25e7b3ef1afaa6d19c470c1f65b67e3a0701e8ff73d4eb159bcfcefefb00adf8",
+    "runners\\b2-regression-20261123.py": "cd365817989373b4d9e1f1b528cc36af42d72ef9092cf9d80a44f823f8fa47d0",
+    "runners\\b2-runtime-20261123.py": "d7bd005653a1b0580bd6c5cdbee49fa77caa15d0bf7a945079ee6f95eb0b1faf",
+    "runners\\b2-teacher-20261123.py": "ae8e05a31ccf70ac270ed9b4fb71b26c0ead70d96416d1314293291482ff8928",
+    "runners\\e13-241880543-runtime.Dockerfile": "d5c421e8601cf4c4834839871d062658d980b07300b50e0fb86d25ad1a0c4373"
+  }
+}

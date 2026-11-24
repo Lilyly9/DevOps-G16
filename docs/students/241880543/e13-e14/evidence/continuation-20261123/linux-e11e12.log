@@ -1,0 +1,86 @@
+test_accept_current_report (test_contract.Contracts) ... ok
+test_api_rejects_repo_outside_data (test_contract.Contracts) ... ok
+test_artifact_uses_relative_uri_and_content_hash (test_contract.Contracts) ... ok
+test_changed_artifact_is_rejected (test_contract.Contracts) ... ok
+test_existing_evidence_not_overwritten (test_contract.Contracts) ... ok
+test_reject_failed_upstream (test_contract.Contracts) ... ok
+test_reject_old_commit (test_contract.Contracts) ... ok
+test_reject_schema (test_contract.Contracts) ... ok
+test_reject_wrong_artifact_kind (test_contract.Contracts) ... ok
+test_same_key_same_request_same_job (test_contract.Contracts) ... ok
+test_header_edit_replaces_only_one_exact_line_preserving_other_bytes (test_project_profile.ProjectProfileTests) ... ok
+test_profile_reads_configured_names_and_checks_both_git_snapshots (test_project_profile.ProjectProfileTests) ... ok
+test_rejects_paths_and_non_declarative_program_arguments (test_project_profile.ProjectProfileTests) ... ok
+test_nested_checkout_keeps_commit_and_excludes_sibling_content (test_project_snapshot.ProjectSnapshotTests) ... ok
+test_project_path_rejects_traversal_and_pattern_syntax (test_project_snapshot.ProjectSnapshotTests) ... ok
+test_export_rejects_incomplete_source (test_student_241880464.Student241880464) ... ok
+test_export_rejects_inner_commit_even_when_outer_matches (test_student_241880464.Student241880464) ... ok
+test_export_rejects_kind (test_student_241880464.Student241880464) ... ok
+test_export_rejects_requested_old_target (test_student_241880464.Student241880464) ... ok
+test_export_rejects_schema (test_student_241880464.Student241880464) ... ok
+test_export_rejects_tampered_bytes (test_student_241880464.Student241880464) ... ok
+test_export_rejects_trace_from_another_job (test_student_241880464.Student241880464) ... ok
+test_http_conflict_preserves_original_task_and_queue_count (test_student_241880464.Student241880464) ... 127.0.0.1 - - [23/Nov/2026 21:47:13] "POST /v1/jobs HTTP/1.1" 202 -
+127.0.0.1 - - [23/Nov/2026 21:47:13] "POST /v1/jobs HTTP/1.1" 202 -
+127.0.0.1 - - [23/Nov/2026 21:47:13] "POST /v1/jobs HTTP/1.1" 409 -
+ok
+test_http_export_downloads_original_bytes_and_three_hashes (test_student_241880464.Student241880464) ... 127.0.0.1 - - [23/Nov/2026 21:47:13] "GET /v1/jobs/job-a3-independent/reports/incremental-check?target=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa HTTP/1.1" 200 -
+127.0.0.1 - - [23/Nov/2026 21:47:13] "GET /v1/jobs/job-a3-independent/files/incremental-check.json HTTP/1.1" 200 -
+ok
+test_http_stale_target_returns_contract_code (test_student_241880464.Student241880464) ... 127.0.0.1 - - [23/Nov/2026 21:47:14] "GET /v1/jobs/job-a3-independent/reports/incremental-check?target=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb HTTP/1.1" 409 -
+ok
+test_report_export_has_current_identity_and_exact_hash (test_student_241880464.Student241880464) ... ok
+test_restart_marks_unfinished_but_preserves_completed_result (test_student_241880464.Student241880464) ... ok
+test_stage_timeout_is_saved_as_timed_out_result (test_student_241880464.Student241880464) ... ok
+test_refuses_inspected_container_with_different_image (test_student_241880485.DraftExecutorTests) ... ok
+test_rejects_mutable_or_incomplete_image_reference (test_student_241880485.DraftExecutorTests) ... ok
+test_rejects_project_outside_course_root_before_docker (test_student_241880485.DraftExecutorTests) ... ok
+test_traced_make_uses_image_id_and_host_paths_and_preserves_logs (test_student_241880485.DraftExecutorTests) ... ok
+test_baseline_edge_can_be_traced_to_graph (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_change_refreshes_only_affected_target (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_declared_targets_replace_fixture_names (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_executor_requires_digest_image (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_incremental_findings_equal_full_set (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_profile_rejects_duplicate_fields_and_unknown_targets (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_stale_commit_is_rejected_before_repair (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_unsupported_flag_is_rejected_explicitly (test_student_241880496_e11e12.ProfileMapping) ... ok
+test_c2_old_commit_is_rejected_before_repair (test_student_241880496_e13e14.A2E13Tests) ... ok
+test_c3_transferred_report_hash_mismatch_is_rejected (test_student_241880496_e13e14.A2E13Tests) ... ok
+test_c8_same_key_same_request_same_job (test_student_241880496_e13e14.A2E13Tests) ... ok
+test_handoff_module_is_available_for_a_report_export (test_student_241880496_e13e14.A2E13Tests) ... ok
+test_dynamic_report_with_verified_hash_still_requires_current_data_commit (test_student_241880543_e11e12.MDFixerB2Tests) ... ok
+test_fixed_report_with_stale_data_stops_before_repair (test_student_241880543_e11e12.MDFixerB2Tests) ... ok
+test_macro_shared_with_helper_is_repaired_only_on_main_rule (test_student_241880543_e11e12.MDFixerB2Tests) ... ok
+test_failed_recheck_then_fresh_attempt_succeeds_on_restored_source (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_malformed_patch_rejected_before_build_with_unchanged_source_hash (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_recheck_command_error_restores_candidate_and_saves_rollback (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_recheck_that_removes_makefile_still_restores_original_bytes (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_recheck_timeout_and_oserror_also_restore_candidate (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_remaining_missing_dependency_rejects_and_restores_candidate (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_runner_timeout_and_oserror_preserve_validation_and_source (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_success_commits_candidate_and_allows_redundant_dependency (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_validation_and_recheck_receive_the_same_draft_executor (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_validation_rejection_never_runs_final_recheck (test_student_241880543_e13e14.MDFixerRollbackB2Tests) ... ok
+test_build_ok_but_wrong_output_fails_verification (test_student_241880555.B1DraftConclusions) ... ok
+test_build_ok_output_matches_records_image_id (test_student_241880555.B1DraftConclusions) ... ok
+test_classify_failure_separates_make_from_infrastructure (test_student_241880555.B1DraftConclusions) ... ok
+test_first_iteration_must_reproduce_missing_make (test_student_241880555.B1DraftConclusions) ... ok
+test_repair_build_failure_is_a_different_conclusion (test_student_241880555.B1DraftConclusions) ... ok
+test_accept_current_report_and_three_hashes (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_byte_size_mismatch (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_header_sha_mismatch (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_inner_commit_expired (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_manifest_commit_mismatch (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_manifest_job_mismatch (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_manifest_schema (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_manifest_sha_mismatch (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_output_exists (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_report_trace_mismatch (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_wrong_download_path (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_wrong_kind (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+test_reject_wrong_report_uri (test_student_241880597_e11e12.B3ConsumerRejection) ... ok
+
+----------------------------------------------------------------------
+Ran 75 tests in 2.909s
+
+OK

@@ -12,6 +12,9 @@ from pathlib import Path
 
 PORTS = {'buildchecker': 18081, 'echecker': 18082, 'draft': 18083, 'mdfixer': 18084}
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'labs/e11e12'))
+from pipeline import project_subdir
+from project_profile import load_profile
 
 
 def save(path, data):
@@ -45,35 +48,23 @@ def command(argv, cwd, log):
     return p.stdout.strip()
 
 
-def read_profile(project):
-    p = project / 'e12-profile.json'
-    if not p.is_file():
-        return None
-    profile = json.loads(p.read_text(encoding='utf-8'))
-    if profile.get('schema_version') != 'e12-project-1' or not profile.get('targets'):
-        raise ValueError('Invalid e12-profile.json')
-    return profile
-
-
-def snapshot(repo, revision, target, logs):
+def snapshot(repo, revision, target, logs, subdir=None, profile=False):
     if not re.fullmatch(r'[0-9a-f]{40}', revision):
         raise ValueError('Use a full Git commit SHA')
     head = command(['git', 'rev-parse', '--verify', revision + '^{commit}'], repo,
                    logs / (target.name + '-resolve.log'))
     command(['git', 'clone', '--no-hardlinks', '--no-checkout', str(repo), str(target)], repo,
             logs / (target.name + '-clone.log'))
+    if subdir:
+        command(['git', 'sparse-checkout', 'set', '--no-cone', '--', f'/{subdir}/'], target,
+                logs / (target.name + '-scope.log'))
     command(['git', 'checkout', '--detach', head], target, logs / (target.name + '-checkout.log'))
-    profile = read_profile(target)
-    if profile is not None:
-        missing = [src for src in profile['targets'].values() if not (target / src).is_file()]
-        if missing:
-            raise ValueError('Profile sources missing: ' + ', '.join(missing))
-    elif not list(target.glob('*.c')):
-        # The base revision of a profile project predates e12-profile.json, so
-        # only a checkout with C sources is required here; stage-level checks
-        # catch anything beyond that.
-        raise ValueError('No C sources found in project snapshot')
-    return head
+    project = target if subdir is None else target / subdir
+    if not project.is_dir() or project.resolve() != project:
+        raise ValueError('Project must be a regular directory in both commits')
+    if not profile and ({p.name for p in project.glob('*.c')} != {'main.c', 'helper.c'} or not (project / 'config.h').is_file()):
+        raise ValueError('Unsupported teaching project profile')
+    return head, project
 
 
 def call(role, payload, evidence):
@@ -111,7 +102,8 @@ def execute(request, out):
 
     def payload(project, folder, **extra):
         return {'project': container_path(project), 'out': container_path(folder),
-                'job_id': job, 'trace_id': trace, **extra}
+                'job_id': job, 'trace_id': trace, 'profile': request.get('profile', False),
+                'profile_project': container_path(target), **extra}
 
     def stage(name, commit, data):
         item = {'name': name, 'commit': commit, 'job_id': job, 'trace_id': trace, 'status': 'SUCCEEDED', 'data': data}
@@ -123,17 +115,16 @@ def execute(request, out):
         base = out / 'base-project'
         target = out / 'target-project'
         logs = out / 'logs'
-        base_sha = snapshot(repo, request['base'], base, logs)
-        target_sha = snapshot(repo, request['target'], target, logs)
+        if not isinstance(request.get('profile', False), bool):
+            raise ValueError('profile must be a boolean')
+        subdir = project_subdir(request['project_path']) if 'project_path' in request else None
+        base_sha, base = snapshot(repo, request['base'], base, logs, subdir, request.get('profile', False))
+        target_sha, target = snapshot(repo, request['target'], target, logs, subdir, request.get('profile', False))
+        if request.get('profile', False):
+            selected_profile = load_profile(target)
+            selected_profile.validate_sources(base)
+            selected_profile.validate_sources(target)
         result.update(base_commit=base_sha, target_commit=target_sha)
-        profile = read_profile(target)
-        targets = sorted(profile['targets']) if profile else ['main.o', 'helper.o']
-        base_commands = {}
-        if profile:
-            # The base revision predates e12-profile.json, so the baseline
-            # buildchecker must receive its make targets through the payload.
-            base_commands = {'clean_command': 'make ' + profile['clean_target'],
-                             'build_command': 'make ' + profile['build_target']}
 
         drafted = call('draft', payload(target, out / 'draft-build',
                                         candidate=container_path(candidate),
@@ -142,15 +133,14 @@ def execute(request, out):
                        out / 'draft-response.json')
         stage('draft', target_sha, drafted)
 
-        base_full = call('buildchecker', payload(base, out / 'baseline-full', **base_commands),
-                         out / 'baseline-response.json')
+        base_full = call('buildchecker', payload(base, out / 'baseline-full'), out / 'baseline-response.json')
         target_full = call('buildchecker', payload(target, out / 'target-full'), out / 'target-response.json')
         stage('full-check', base_sha, {'base': base_full, 'target': target_full})
 
         increment = call('echecker', payload(target, out / 'incremental', base=container_path(base),
                                             baseline_graph=container_path(out / 'baseline-full/actual-graph.json'),
                                             target_findings=container_path(out / 'target-full/findings.json'),
-                                            target_commit=target_sha, targets=targets), out / 'incremental-response.json')
+                                            target_commit=target_sha), out / 'incremental-response.json')
         stage('incremental-check', target_sha, increment)
 
         repair = call('mdfixer', payload(target, out / 'repair-work',

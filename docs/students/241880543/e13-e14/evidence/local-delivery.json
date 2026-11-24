@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-22",
+  "branch": "student/241880543/e13-e14",
+  "implementation_commit": "8ec82c35c2a9a6d5774dbaf04cad33e10e564e53",
+  "base_commit": "28c94defee5af11ada42f9842cf03db2cb9da2e3",
+  "checkout": "D:/workspace/DevOps-G16-B2-e13e14-snapshot-20261122",
+  "method": "Read-only HEAD bundle from the original repository; independent clone and B2-only file copy; original Git index and working changes retained",
+  "verified": [
+    "10 B2 tests and 3 handoff tests passed in independent checkout",
+    "Staged normalized implementation hashes match the Linux evidence manifest",
+    "Staged raw evidence hashes match the manifest without newline conversion",
+    "Independent checkout clean after implementation commit"
+  ],
+  "fetch": {
+    "exit_code": 128,
+    "status": "FAILED",
+    "error": "getaddrinfo() thread failed to start"
+  },
+  "push": {
+    "exit_code": 128,
+    "status": "FAILED",
+    "error": "getaddrinfo() thread failed to start"
+  },
+  "issue": "NOT_CREATED",
+  "pull_request": "NOT_CREATED",
+  "remote_ci": "NOT_RUN",
+  "latest_remote_main_confirmed": false,
+  "group_gate": "INCOMPLETE: H1/H3 full Linux E12, current C1 report consumption and E14 four-container runs pending",
+  "remote_attempt_evidence_sha256": {
+    "local-fetch.log": "1aa9e246be1a43ab2c373eee4503fefdbd4b8b85f8af50c8faab1a6bd69f8586",
+    "local-fetch.exit": "d6a1e3465ed106cad3c49e17b247dec0b2737e0dea99ab406371fb53b22e93a7",
+    "local-push.log": "1aa9e246be1a43ab2c373eee4503fefdbd4b8b85f8af50c8faab1a6bd69f8586",
+    "local-push.exit": "d6a1e3465ed106cad3c49e17b247dec0b2737e0dea99ab406371fb53b22e93a7"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-22",
+  "source": "D:\\LearningResources\\大三上\\DevOps\\作业\\学生发放包_20261116.zip",
+  "source_bytes": 1378125,
+  "source_sha256": "707cd09b37b69db0312fcef8292edac0c777b5a906bd1e82625bff53630481bc",
+  "inner_name": "DevOps_E13_E14_学生材料/实验包/e13-upstream-student.zip",
+  "inner_sha256": "d9818c5f34d6ff5b6016222dabd7f56daca09ceaa5f525be214e146e3d485435",
+  "note": "Unmodified teacher original; contains course-adapted Git repositories and upstream licenses. No teacher results reused."
+}
