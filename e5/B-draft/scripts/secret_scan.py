@@ -8,6 +8,7 @@
 发现疑似密钥时退出码为 1。输出只显示前 4 位，避免检查本身再泄露一次。
 """
 import argparse
+import ast
 import os
 import re
 import subprocess
@@ -28,13 +29,27 @@ def mask(s):
     return s[:4] + "***" if len(s) > 4 else "***"
 
 
+def credential_lookup(expression):
+    """A one-key mapping lookup contains no literal credential or fallback."""
+    try:
+        node = ast.parse(expression.strip(), mode="eval").body
+    except (SyntaxError, ValueError):
+        return False
+    return (isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)
+            and isinstance(node.func.value, ast.Name) and node.func.attr == "get"
+            and len(node.args) == 1 and not node.keywords
+            and isinstance(node.args[0], ast.Constant)
+            and node.args[0].value in ("password", "token", "api_key", "secret"))
+
+
 def scan_text(text, where):
     hits = []
     for n, line in enumerate(text.splitlines(), 1):
         for name, pat in PATTERNS:
             for m in pat.finditer(line):
                 value = m.group(m.lastindex or 0)
-                if name == "密钥赋值" and PLACEHOLDER.search(value):
+                if name == "密钥赋值" and (PLACEHOLDER.search(value) or
+                        credential_lookup(line[m.start(1):])):
                     continue
                 hits.append(f"{where}:{n}  {name}  {mask(value)}")
     return hits
