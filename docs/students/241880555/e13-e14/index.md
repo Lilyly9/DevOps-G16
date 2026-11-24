@@ -88,6 +88,7 @@ job `job-836f2d82eba9448a892e8a1becdb3d41` / trace `trace-49b3db22184d4f1f995d58
 - 根因 2：CI 的 secret 历史扫描命中 B2（52ceaef）引入的凭据读取 helper——以凭据名为键的映射单参 lookup，被"密钥赋值"正则误判为字面量。按 A 侧先例 `b376720`（AST 判定单参映射 lookup 放行，literal/fallback 仍拒绝）把 `credential_lookup` 例外移植到 B-draft 与 E11-E12 版扫描器（`189fcbc`）、A-buildchecker 版（`1b268ed`）。
 - 修复提交 message 自身含代码示例被历史扫描命中 → amend 后 `--force-with-lease` 重推（`189fcbc`）。
 - 修复后 CI 全绿（run `45331060021`/`45331060057`/`45331060245`/`45331060074`/`45331060165`：E7 A/B gate、E8-E10、E11-E12、E13-E14 contracts/four-services 全部 success）。
+- round2 文档提交（`759c4c2`）后的分支最新 run `45337643247`/`45337642989`/`45337643073`/`45337643004`/`45337643012` 亦全部 success。
 
 ### 6-2. Cross-pair C1 复核（A 侧实际项目 transfer-eta，B1 复核执行）
 
