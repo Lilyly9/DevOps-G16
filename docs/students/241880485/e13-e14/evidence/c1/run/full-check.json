@@ -1,0 +1,113 @@
+{
+  "schema_version": "e11e12-1",
+  "job_id": "job-789dec04cba24db690ace58ecbe0f868",
+  "trace_id": "trace-ef57b1b5364d49b7b1f9357f4a5075b1",
+  "kind": "full-check",
+  "commit": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "status": "SUCCEEDED",
+  "data": {
+    "status": "SUCCEEDED",
+    "detector": "BUILDCHECKER_TEACHING",
+    "detector_version": "0.2.0-teaching",
+    "trace_id": "e6-916402a1d7de4c8e92c12c2a1ff3ee32",
+    "findings": [],
+    "scope": "Single Make process; one final output per recipe job; successful read-open observations",
+    "build_command": [
+      "make",
+      "transfer-eta"
+    ],
+    "clean_command": [
+      "make",
+      "clean"
+    ],
+    "input_sha256": {
+      ".dockerignore": "b62cb46a052729bfd832eecf492950a74b992029a2ad8637cd4868cda250388e",
+      ".gitignore": "58d1112c71ba229bbc8f48379e03a9182fa2cdb6ace7bb0de2cb9467c87cfa9d",
+      "Dockerfile.broken": "13477a1c4b56ff6fc53448404b72bb44fa960a026d252968cddf0e83081af491",
+      "Makefile": "84338a60d7e24c69a997faa64b12c86567318e4a38a4d32b8077a076e082cf29",
+      "README.md": "a650c50e288033025a98f55413f95d5eb9a7f03305efffb73a0d11dfd320adde",
+      "candidate.Dockerfile": "d634531efe4f317a72f8eb4d1ff314c67e8c40070382d031314b2afe9dda2467",
+      "estimate.c": "d4d7d905d36f981088920867e11cf56977993df6d409b9e91f6575d288c39bcb",
+      "estimate.h": "4da25ca715130882e710c767bb742b863ed97f0de93db64a89fe41fd6403f03f",
+      "eta_cli.c": "58b49fd97bd57af881e2e2b66df80493a490185f0d52b8518b68ffae4a1451b4",
+      "tests/smoke.sh": "47634c0ebc61dd53e8266d5402f50e46852cdb33abd4691291997b2571ce8ba8"
+    },
+    "clean_exit_code": 0,
+    "trace_command": [
+      "strace",
+      "-ff",
+      "-s",
+      "4096",
+      "-o",
+      "/course/work/e13-c1-a1-01/baseline-full/trace/t",
+      "-e",
+      "trace=%file,%process",
+      "make",
+      "-p",
+      "transfer-eta"
+    ],
+    "build_exit_code": 0,
+    "observed_targets": [
+      "estimate.o",
+      "eta_cli.o",
+      "transfer-eta"
+    ],
+    "artifacts": {
+      "actual_graph": "actual-graph.json",
+      "declared_graph": "declared-graph.json",
+      "processes": "processes.json",
+      "make_database": "make-db.txt",
+      "trace_directory": "trace"
+    },
+    "elapsed_ms": 558
+  },
+  "artifacts": [
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-full/actual-graph.json",
+      "sha256": "cfe81f028f52fa57ae111b83c3001d779b408756f75e57a3485152146dac4334",
+      "bytes": 1487
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-full/findings.json",
+      "sha256": "1ff1639fa840484c28464cab3f5afd1ffa5f4249c040dbede801195ed5216bde",
+      "bytes": 1870
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-cache.json",
+      "sha256": "510848016e543969423f5770579e42e3ba74d933e28740c24e197a0baafc00ed",
+      "bytes": 1539
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-full/clean-execution.json",
+      "sha256": "5aeaa3d201f21a5a6212a22a6fa9554e3954e6f872de7ba302c42f1e7a9c571f",
+      "bytes": 1336
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-full/build-execution.json",
+      "sha256": "7dbd266e334af3e718cfe3d3416b35522cf4cb9666cb2289e7e684aa2753e760",
+      "bytes": 1714
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/project-profile.json",
+      "sha256": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07",
+      "bytes": 469
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-scan/01-gcc.json",
+      "sha256": "717f79565e7fdcfbfe9e023f23e3d8f46d86a8e7b1e55f1e809a1a81b4a8e982",
+      "bytes": 1387
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-scan/02-gcc.json",
+      "sha256": "de4f6fc395559ea99f91936cc421e3363a6a0b372f86c2189e384a1e55909fa4",
+      "bytes": 1437
+    },
+    {
+      "uri": "artifact://job-789dec04cba24db690ace58ecbe0f868/baseline-scan/03-gcc.json",
+      "sha256": "c63f9da46398eb6d00d914b1d77980b82a63f60fb17e80d198080db84f412a1b",
+      "bytes": 1439
+    }
+  ],
+  "project_path": "projects/transfer-eta",
+  "profile_sha256": "b7d37051c32c3ddb7d5fc6d4f740290bfc3782d4768cbb19856211db4330ec07"
+}

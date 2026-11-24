@@ -16,6 +16,14 @@ from buildchecker.fullcheck import full_check
 ROOT = Path('/course').resolve()
 ROLE = os.environ['E14_ROLE']
 
+# The host clones the snapshot directories before the services read them. When
+# the container user differs from the workspace owner (CI runs the services as
+# root over a runner-owned checkout) git refuses with "dubious ownership", so
+# the four roles trust the paths they are already confined to below.
+os.environ.setdefault('GIT_CONFIG_COUNT', '1')
+os.environ.setdefault('GIT_CONFIG_KEY_0', 'safe.directory')
+os.environ.setdefault('GIT_CONFIG_VALUE_0', '*')
+
 
 def local(value, area='work'):
     path = Path(value).resolve()

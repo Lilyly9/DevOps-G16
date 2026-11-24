@@ -1,0 +1,22 @@
+{
+  "status": "SUCCEEDED",
+  "report": "/course/work/e14-sample-a1-02/incremental/incremental-check.json",
+  "sha256": "4c9d35fb6301eafd0b16f7bca6ec996f03d2670d9298a80bc25063ead8e6f874",
+  "findings": [
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "config.h"
+    },
+    {
+      "type": "MISSING",
+      "target": "main.o",
+      "dependency": "extra.h"
+    },
+    {
+      "type": "REDUNDANT",
+      "target": "main.o",
+      "dependency": "unused.h"
+    }
+  ]
+}
