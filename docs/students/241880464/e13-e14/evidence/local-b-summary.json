@@ -1,0 +1,46 @@
+{
+  "runner": "b9669cbe8ba89bd3c098c8e4dd1d128f426165da",
+  "environment_image": "sha256:bf248541a61cd89ef6a0c106c91807292abba395f80367c511f2b05565f174f3",
+  "e11_b": {
+    "job_id": "job-a32a462382134f2aa66e79e155475671",
+    "trace_id": "trace-bf6cec8d6c084c94b307bd7187273ce3",
+    "sha256": "e3fb46850ebdbf67663c5d77353c643de10770c939c158e184265ead4d9b880f",
+    "source_report": {
+      "job_id": "job-9c02e235828d46288b4a53f3671223ce",
+      "trace_id": "trace-3d68c9b6d14445e1afe10afa77959b9e",
+      "uri": "artifact://job-9c02e235828d46288b4a53f3671223ce/incremental-check.json",
+      "sha256": "a7a38b3185b8fe578155f1bb6ce0079abe103a46bfd90badebe1baaa89f6c2d2"
+    },
+    "accepted": true,
+    "missing": 0,
+    "exit": 0
+  },
+  "e14": {
+    "job_id": "job-569cdcef568546168cc6731c90992d61",
+    "trace_id": "trace-c4c10e13942b4d7494cce9107e901a6d",
+    "target": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+    "report_sha256": "e03009916744a46d774bbdd0e6417c7cbb9edf4e14fc004b6efa1036511280f0",
+    "artifact_count": 156,
+    "stages": [
+      "draft",
+      "full-check",
+      "incremental-check",
+      "repair",
+      "recheck"
+    ],
+    "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+    "healthy_roles": [
+      "buildchecker",
+      "draft",
+      "echecker",
+      "mdfixer"
+    ],
+    "service_calls": {
+      "buildchecker": 3,
+      "echecker": 1,
+      "draft": 1,
+      "mdfixer": 1
+    },
+    "exit": 0
+  }
+}

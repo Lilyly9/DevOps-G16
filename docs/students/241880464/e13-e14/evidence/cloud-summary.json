@@ -1,0 +1,443 @@
+{
+  "source_sha": "b9669cbe8ba89bd3c098c8e4dd1d128f426165da",
+  "image_id": "sha256:d47f5b49c8166ab47157b649cb465e7ac702a53ea4fbdc5802d4b6c96dfc0b0a",
+  "tests": {
+    "H1-jsmn": 0,
+    "H2-inih": 0,
+    "H3-tiny-aes": 0,
+    "api-service-log": 1,
+    "b-a": 0,
+    "b-b-replay": 1,
+    "b-c2": 1,
+    "b-c3": 1,
+    "b-export": 0,
+    "c6-after": 0,
+    "c6-before": 1,
+    "c6-image": 0,
+    "c6-source": 0,
+    "c8-api-final": 0,
+    "c8-api": 1,
+    "compose-config": 0,
+    "compose-health": 0,
+    "compose-mirror-health": 0,
+    "compose-mirror-up": 0,
+    "compose-up": 0,
+    "containers-after-timeout": 0,
+    "containers-before": 0,
+    "e11e12-tests": 0,
+    "e13e14-tests": 0,
+    "e14-b": 1,
+    "e14-eta": 0,
+    "e14-fixed-mirror-recovered": 0,
+    "e14-fixed-mirror": 0,
+    "e14-fixed-recovered": 1,
+    "e14-fixed": 1,
+    "e14-timeout-mirror": 1,
+    "e14-timeout": 1,
+    "eta-a": 0,
+    "eta-b-replay": 0,
+    "eta-c2": 1,
+    "eta-c3": 1,
+    "eta-export": 0,
+    "h3-original": 1,
+    "health-buildchecker": 0,
+    "health-draft": 0,
+    "health-echecker": 0,
+    "health-mdfixer": 0,
+    "mirror-containers-after": 0,
+    "mirror-containers-before": 0,
+    "mirror-health-buildchecker": 0,
+    "mirror-health-draft": 0,
+    "mirror-health-echecker": 0,
+    "mirror-health-mdfixer": 0,
+    "mirror-processes-after": 0,
+    "mirror-processes-before": 0,
+    "mirror-role-buildchecker": 0,
+    "mirror-role-draft": 0,
+    "mirror-role-echecker": 0,
+    "mirror-role-mdfixer": 0,
+    "role-buildchecker": 0,
+    "role-draft": 0,
+    "role-echecker": 0,
+    "role-mdfixer": 0,
+    "runtime-scan-complete": 0,
+    "runtime-scan-with-api": 0,
+    "runtime-scan": 0,
+    "verify-b": 1,
+    "verify-eta": 0,
+    "verify-fixed-mirror-recovered": 0,
+    "verify-fixed-mirror": 0,
+    "verify-fixed-recovered": 1,
+    "verify-fixed": 1
+  },
+  "timeout_residue": {
+    "same_container_ids": true,
+    "same_docker_processes": true
+  },
+  "runs": {
+    "a3-H1-jsmn": {
+      "job_id": "job-2919a9b718964bdeb54ce8188945f413",
+      "trace_id": "trace-f59b189a9469475e8adddd7f6947cb37",
+      "status": "SUCCEEDED",
+      "base": "66a6dafcc20cea76bf017923d3db725d78407845",
+      "target": "948a1d30cd758d32d45a50f788e5a95fb1d89c69",
+      "stages": [
+        "draft",
+        "full-check",
+        "incremental-check",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 225,
+      "request": "work/a3-H1-jsmn/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:886ecd9bb7fddeaded143401de1cc59b9892f61f8d53d8552768d1c1c533e765",
+      "accepted": true,
+      "missing": 0
+    },
+    "a3-H2-inih": {
+      "job_id": "job-d0e98d5f48fb447fb715886c1ab644b9",
+      "trace_id": "trace-7c4ef2e51bfe431e88039e142007cda5",
+      "status": "SUCCEEDED",
+      "base": "aafc740a2cac05a74541abede93b7d59ed23b87f",
+      "target": "3aadb81763c79651e4dfa99b725ba921ee2b8a39",
+      "stages": [
+        "draft",
+        "full-check",
+        "incremental-check",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 225,
+      "request": "work/a3-H2-inih/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:6691b46a9f90e9528545415950d3ea1e220d13203dd6b8ccfd2470db2430fcf1",
+      "accepted": true,
+      "missing": 0
+    },
+    "a3-H3-tiny-aes": {
+      "job_id": "job-daf2d6e8723f4ca3a4d64527c5d838b2",
+      "trace_id": "trace-b00668a229ad4684b331a5a31a61942f",
+      "status": "SUCCEEDED",
+      "base": "dc8099306d7023b7337328d718149973e7b17978",
+      "target": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+      "stages": [
+        "draft",
+        "full-check",
+        "incremental-check",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 225,
+      "request": "work/a3-H3-tiny-aes/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:1a2c8bae2d4593627a5ab6aa8702c22024ff98bc72d20037856220d3e23774a8",
+      "accepted": true,
+      "missing": 0
+    },
+    "a3-b-a": {
+      "job_id": "job-9c02e235828d46288b4a53f3671223ce",
+      "trace_id": "trace-3d68c9b6d14445e1afe10afa77959b9e",
+      "status": "SUCCEEDED",
+      "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+      "target": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+      "stages": [
+        "full-check",
+        "incremental-check"
+      ],
+      "verified_artifacts": 82,
+      "request": "work/a3-b-a/request.json",
+      "exported_report": {
+        "sha256": "e3fb46850ebdbf67663c5d77353c643de10770c939c158e184265ead4d9b880f",
+        "source": {
+          "job_id": "job-9c02e235828d46288b4a53f3671223ce",
+          "trace_id": "trace-3d68c9b6d14445e1afe10afa77959b9e",
+          "uri": "artifact://job-9c02e235828d46288b4a53f3671223ce/incremental-check.json",
+          "sha256": "a7a38b3185b8fe578155f1bb6ce0079abe103a46bfd90badebe1baaa89f6c2d2"
+        }
+      }
+    },
+    "a3-b-b-replay": {
+      "job_id": "job-abe66134e7b546dda52ceab943dea79b",
+      "trace_id": "trace-35b4086047624d8a9a363f006d2e8ffd",
+      "status": "FAILED",
+      "error": {
+        "code": "EXECUTION_FAILED",
+        "message": "Candidate changed the original base image tag"
+      },
+      "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+      "target": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+      "stages": [],
+      "verified_artifacts": 22,
+      "request": "work/a3-b-b-replay/request.json"
+    },
+    "a3-b-c2": {
+      "job_id": "job-b1b4afdcef3b4153ad9f51e74e26bc73",
+      "trace_id": "trace-7770b5e0bd1741a6ba3f5d56c4bdb028",
+      "status": "FAILED",
+      "error": {
+        "code": "STALE_REPORT",
+        "message": "Report belongs to another commit"
+      },
+      "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+      "target": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+      "stages": [],
+      "verified_artifacts": 1,
+      "request": "work/a3-b-c2/request.json"
+    },
+    "a3-b-c3": {
+      "job_id": "job-2a115cf2cdd34ba7ba7cee5bb8d1d1f3",
+      "trace_id": "trace-0a227760864344e4b38eb2d31cbbbfdb",
+      "status": "FAILED",
+      "error": {
+        "code": "ARTIFACT_HASH_MISMATCH",
+        "message": "Fixed report content changed during transfer"
+      },
+      "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+      "target": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+      "stages": [],
+      "verified_artifacts": 1,
+      "request": "work/a3-b-c3/request.json"
+    },
+    "a3-e14-b": {
+      "job_id": "job-4325950f5f53430d89a2fa6ac33d0447",
+      "trace_id": "trace-a2aaaa4b4a8e466e9b488bbabfb62fe7",
+      "status": "FAILED",
+      "error": "draft HTTP 422: {\"status\": \"FAILED\", \"role\": \"draft\", \"error_code\": \"VALUEERROR\", \"error\": \"Candidate changed the original base image tag\"}\n",
+      "base": "e9ce878b1e2c46bd7d86e463ff9115b2fc2e6158",
+      "target": "48b64156548b3fd8af1ed9ed25eee60d0f92371d",
+      "stages": [],
+      "verified_artifacts": 22,
+      "request": "work/a3-e14-b/request.json"
+    },
+    "a3-e14-eta": {
+      "job_id": "job-1f1df29efe0a406a817664839ed13263",
+      "trace_id": "trace-b290ac89bd5345f6a354e780f523c46e",
+      "status": "SUCCEEDED",
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "stages": [
+        "draft",
+        "full-check",
+        "incremental-check",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 189,
+      "request": "work/a3-e14-eta/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:dccd887cc4c93410cd4e0bb4d0f119293c3cba56a464de3edeb6638e8a5f92fc",
+      "accepted": true,
+      "missing": 0,
+      "service_calls": {
+        "buildchecker": 3,
+        "echecker": 1,
+        "draft": 1,
+        "mdfixer": 1
+      }
+    },
+    "a3-e14-fixed": {
+      "job_id": "job-3cf10baa664f4851a234f617d5d0d01d",
+      "trace_id": "trace-8f3d9528b97b45d4a3468e044ef50f3d",
+      "status": "FAILED",
+      "error": "draft HTTP 422: {\"status\": \"FAILED\", \"role\": \"draft\", \"error_code\": \"VALUEERROR\", \"error\": \"Candidate changed the original base image tag\"}\n",
+      "base": "bb28c6d01768d4ba50bfe7d2bb7ad746308cb158",
+      "target": "898f53d82cc9cfb6cc2822d47bb8f5beea3c8887",
+      "stages": [],
+      "verified_artifacts": 24,
+      "request": "work/a3-e14-fixed/request.json"
+    },
+    "a3-e14-fixed-mirror": {
+      "job_id": "job-9707776aab6d41579ffb23f1f3a5c597",
+      "trace_id": "trace-9c2d0e23a1304564b870962afce76db6",
+      "status": "SUCCEEDED",
+      "base": "c9b53217fff0ec04ea417b35d4b942c2922c7f64",
+      "target": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+      "stages": [
+        "draft",
+        "full-check",
+        "incremental-check",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 162,
+      "request": "work/a3-e14-fixed-mirror/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:8fc2dbd87f6a640c1ad183dce983de5fc42d6514891adca65d95386a0b4673cc",
+      "accepted": true,
+      "missing": 0,
+      "service_calls": {
+        "buildchecker": 3,
+        "echecker": 1,
+        "draft": 1,
+        "mdfixer": 1
+      }
+    },
+    "a3-e14-fixed-mirror-recovered": {
+      "job_id": "job-d883b57838ed4c07ad2cb9d108068c97",
+      "trace_id": "trace-ac22e33f0fca49e9a502e17be4ece3ca",
+      "status": "SUCCEEDED",
+      "base": "c9b53217fff0ec04ea417b35d4b942c2922c7f64",
+      "target": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+      "stages": [
+        "draft",
+        "full-check",
+        "incremental-check",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 162,
+      "request": "work/a3-e14-fixed-mirror-recovered/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:acf8f87ea40352b198e6ddeae88124b03e7856b41676f5dbe197d9af23c4d3a1",
+      "accepted": true,
+      "missing": 0,
+      "service_calls": {
+        "buildchecker": 3,
+        "echecker": 1,
+        "draft": 1,
+        "mdfixer": 1
+      }
+    },
+    "a3-e14-fixed-recovered": {
+      "job_id": "job-a69b360d63d842afb6275846b2d380a9",
+      "trace_id": "trace-5860e114024a4cd6ae45429421f06dad",
+      "status": "FAILED",
+      "error": "draft HTTP 422: {\"status\": \"FAILED\", \"role\": \"draft\", \"error_code\": \"VALUEERROR\", \"error\": \"Candidate changed the original base image tag\"}\n",
+      "base": "bb28c6d01768d4ba50bfe7d2bb7ad746308cb158",
+      "target": "898f53d82cc9cfb6cc2822d47bb8f5beea3c8887",
+      "stages": [],
+      "verified_artifacts": 24,
+      "request": "work/a3-e14-fixed-recovered/request.json"
+    },
+    "a3-e14-timeout": {
+      "job_id": "job-c19f3a6b5dce4fb79bb70797532f5418",
+      "trace_id": "trace-59e38208eb6d41d9a7b938ea9587984b",
+      "status": "FAILED",
+      "error": "draft HTTP 422: {\"status\": \"FAILED\", \"role\": \"draft\", \"error_code\": \"VALUEERROR\", \"error\": \"Candidate changed the original base image tag\"}\n",
+      "base": "bb28c6d01768d4ba50bfe7d2bb7ad746308cb158",
+      "target": "898f53d82cc9cfb6cc2822d47bb8f5beea3c8887",
+      "stages": [],
+      "verified_artifacts": 24,
+      "request": "work/a3-e14-timeout/request.json"
+    },
+    "a3-e14-timeout-mirror": {
+      "job_id": "job-67cc4df42c574c2081f6212d9c86f961",
+      "trace_id": "trace-2e52c682e845407d88f18c0458a78dc7",
+      "status": "FAILED",
+      "error": "draft HTTP 422: {\"status\": \"FAILED\", \"role\": \"draft\", \"error_code\": \"TIMEOUT\", \"error\": \"DRAFT_TIMED_OUT: Docker client command exceeded 0.01s\"}\n",
+      "base": "c9b53217fff0ec04ea417b35d4b942c2922c7f64",
+      "target": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+      "stages": [],
+      "verified_artifacts": 36,
+      "request": "work/a3-e14-timeout-mirror/request.json",
+      "draft": "TIMED_OUT"
+    },
+    "a3-eta-a": {
+      "job_id": "job-6dc374a5455b4cac867d4b78efaa4d4b",
+      "trace_id": "trace-03191cce963e44be8582dfa86d477400",
+      "status": "SUCCEEDED",
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "stages": [
+        "full-check",
+        "incremental-check"
+      ],
+      "verified_artifacts": 100,
+      "request": "work/a3-eta-a/request.json",
+      "exported_report": {
+        "sha256": "992ea9cd98efab954fb946d7335e5ce77be547e17446b77a800dce3d94291ce3",
+        "source": {
+          "job_id": "job-6dc374a5455b4cac867d4b78efaa4d4b",
+          "trace_id": "trace-03191cce963e44be8582dfa86d477400",
+          "uri": "artifact://job-6dc374a5455b4cac867d4b78efaa4d4b/incremental-check.json",
+          "sha256": "6c1c1639d007c93c15d516977ce91ea5fa4e5984dd05c2981d65edf38b0e06d8"
+        }
+      }
+    },
+    "a3-eta-b-replay": {
+      "job_id": "job-e53429bbbcfe4d5bb6fb09da23790add",
+      "trace_id": "trace-5cd986a08da449b88b662736a1f2c4fa",
+      "status": "SUCCEEDED",
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "stages": [
+        "draft",
+        "fixed-md",
+        "repair",
+        "recheck"
+      ],
+      "verified_artifacts": 118,
+      "request": "work/a3-eta-b-replay/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:70c2e0656c78a8e2f7433acb6558131805c07ad53242c0c244616da2d8300af0",
+      "consumed_report": {
+        "sha256": "992ea9cd98efab954fb946d7335e5ce77be547e17446b77a800dce3d94291ce3",
+        "source": {
+          "job_id": "job-6dc374a5455b4cac867d4b78efaa4d4b",
+          "trace_id": "trace-03191cce963e44be8582dfa86d477400",
+          "uri": "artifact://job-6dc374a5455b4cac867d4b78efaa4d4b/incremental-check.json",
+          "sha256": "6c1c1639d007c93c15d516977ce91ea5fa4e5984dd05c2981d65edf38b0e06d8"
+        }
+      },
+      "accepted": true,
+      "missing": 0
+    },
+    "a3-eta-c2": {
+      "job_id": "job-5b575371fcf94e2dabfab0192ef6db2d",
+      "trace_id": "trace-3046618d559e4aee81af81bc4abc863b",
+      "status": "FAILED",
+      "error": {
+        "code": "STALE_REPORT",
+        "message": "Report belongs to another commit"
+      },
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "stages": [],
+      "verified_artifacts": 1,
+      "request": "work/a3-eta-c2/request.json"
+    },
+    "a3-eta-c3": {
+      "job_id": "job-a707ab27ef2e463e96cb8b344d2d4666",
+      "trace_id": "trace-c9b74a05c37a4f30801545c0c4c9bf01",
+      "status": "FAILED",
+      "error": {
+        "code": "ARTIFACT_HASH_MISMATCH",
+        "message": "Fixed report content changed during transfer"
+      },
+      "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+      "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+      "stages": [],
+      "verified_artifacts": 1,
+      "request": "work/a3-eta-c3/request.json"
+    },
+    "a3-h3-original": {
+      "job_id": "job-f51b410aef4a45c793250c84c5a48942",
+      "trace_id": "trace-a1c72a085d28465d8211e42952f2cfb2",
+      "status": "FAILED",
+      "error": {
+        "code": "FULL_CHECK_FAILED",
+        "message": "DRAFT container did not exit; collection is incomplete"
+      },
+      "base": "dc8099306d7023b7337328d718149973e7b17978",
+      "target": "5640bb69a01e64559207e9f74d15a9ae71a4d0f3",
+      "stages": [
+        "draft"
+      ],
+      "verified_artifacts": 73,
+      "request": "work/a3-h3-original/request.json",
+      "draft": "SUCCEEDED",
+      "candidate_image_id": "sha256:c1ad7b50ffef7ceff05d0100b7d77136d4f62ff2f1f3e07059b4c0423e316bd5"
+    }
+  },
+  "c8_http": {
+    "passed": true,
+    "job_id": "job-9397444d35ba4b38b349df3538db0f15",
+    "trace_id": "trace-eb8eda38a2ba41f493bb35eb60be1976",
+    "target": "7e534c43bd3f123dc22099fe0e979b16b5e1fc34",
+    "download_count": 6,
+    "replay_same_job": true,
+    "changed_target_http_status": 409,
+    "original_state_unchanged": true
+  }
+}

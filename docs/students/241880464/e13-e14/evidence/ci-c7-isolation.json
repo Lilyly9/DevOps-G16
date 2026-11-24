@@ -1,0 +1,914 @@
+{
+  "schema_version": "e13e14-c7-1",
+  "status": "PASS",
+  "failed": {
+    "dir": "work/ci-c7-failed",
+    "job_id": "job-151de7dfb2224de89dadcd35ad2eb363",
+    "trace_id": "trace-730eae02964a483a8d32cdf8b33425b3",
+    "status": "FAILED"
+  },
+  "succeeded": {
+    "dir": "work/ci-c7-success",
+    "job_id": "job-525d2fd6092b437ea3f6d0d7b3b0b331",
+    "trace_id": "trace-5204f6b45e1c480bbeae24cfaf6f2589",
+    "status": "SUCCEEDED",
+    "artifacts": 85
+  },
+  "checks": [
+    {
+      "name": "failed_status",
+      "passed": true,
+      "detail": "failed run status='FAILED'"
+    },
+    {
+      "name": "success_status",
+      "passed": true,
+      "detail": "second run status='SUCCEEDED'"
+    },
+    {
+      "name": "failed_job_id",
+      "passed": true,
+      "detail": "failed job_id='job-151de7dfb2224de89dadcd35ad2eb363'"
+    },
+    {
+      "name": "success_job_id",
+      "passed": true,
+      "detail": "success job_id='job-525d2fd6092b437ea3f6d0d7b3b0b331'"
+    },
+    {
+      "name": "distinct_job_id",
+      "passed": true,
+      "detail": "failed='job-151de7dfb2224de89dadcd35ad2eb363' success='job-525d2fd6092b437ea3f6d0d7b3b0b331'"
+    },
+    {
+      "name": "distinct_trace_id",
+      "passed": true,
+      "detail": "failed='trace-730eae02964a483a8d32cdf8b33425b3' success='trace-5204f6b45e1c480bbeae24cfaf6f2589'"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/.gitignore' expected='d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe' actual=d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/.gitignore' expected=8 actual=8"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/Dockerfile.broken' expected='493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745' actual=493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/Dockerfile.broken' expected=122 actual=122"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/Makefile' expected='9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2' actual=9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/Makefile' expected=227 actual=227"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/config.h' expected='ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696' actual=ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/config.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/extra.h' expected='5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c' actual=5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/extra.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/helper.c' expected='90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c' actual=90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/helper.c' expected=28 actual=28"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/main.c' expected='0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379' actual=0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/main.c' expected=113 actual=113"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/unused.h' expected='3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37' actual=3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/base-project/unused.h' expected=13 actual=13"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-cache.json' expected='dcf56c13365942acf2dee761691540b07974040a1cf2107106a19e4e25bfeb48' actual=dcf56c13365942acf2dee761691540b07974040a1cf2107106a19e4e25bfeb48"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-cache.json' expected=1436 actual=1436"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/actual-graph.json' expected='63e1a0a2261c319523cfbaabf92902b1b9a59d383b66630a86ce4f166cfc0625' actual=63e1a0a2261c319523cfbaabf92902b1b9a59d383b66630a86ce4f166cfc0625"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/actual-graph.json' expected=1201 actual=1201"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/build-stderr.log' expected='e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' actual=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/build-stderr.log' expected=0 actual=0"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/clean-stderr.log' expected='e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' actual=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/clean-stderr.log' expected=0 actual=0"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/clean.log' expected='a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061' actual=a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/clean.log' expected=26 actual=26"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/declared-graph.json' expected='41981cb39b2e187b7c13d5ca0e9af2b760ab4f22d93315b963a240f7ca5bd6d9' actual=41981cb39b2e187b7c13d5ca0e9af2b760ab4f22d93315b963a240f7ca5bd6d9"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/declared-graph.json' expected=1202 actual=1202"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/findings.json' expected='6af243ff383989415935c3444eaa3de96a6eef44abeadf441943b209410b66d1' actual=6af243ff383989415935c3444eaa3de96a6eef44abeadf441943b209410b66d1"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/findings.json' expected=2546 actual=2546"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/make-db.txt' expected='eb35a9581a0dd6a4435cf80d581bfed7f234b68bd31ba1bd41ef1d39616f4175' actual=eb35a9581a0dd6a4435cf80d581bfed7f234b68bd31ba1bd41ef1d39616f4175"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/make-db.txt' expected=28141 actual=28141"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/processes.json' expected='06955edba1b49efc7f8f9b11b302576497c01d266e30792cc050fb690c7733af' actual=06955edba1b49efc7f8f9b11b302576497c01d266e30792cc050fb690c7733af"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/processes.json' expected=1184 actual=1184"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/.gitignore' expected='d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe' actual=d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/.gitignore' expected=8 actual=8"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/Dockerfile.broken' expected='493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745' actual=493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/Dockerfile.broken' expected=122 actual=122"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/Makefile' expected='9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2' actual=9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/Makefile' expected=227 actual=227"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/app' expected='046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c' actual=046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/app' expected=16016 actual=16016"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/config.h' expected='ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696' actual=ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/config.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/extra.h' expected='5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c' actual=5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/extra.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/helper.c' expected='90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c' actual=90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/helper.c' expected=28 actual=28"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/helper.o' expected='961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560' actual=961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/helper.o' expected=1104 actual=1104"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/main.c' expected='0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379' actual=0da2f94ca7b27cfeae51e4842a4a39f527929b28a82f40b3796d308cc72c1379"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/main.c' expected=113 actual=113"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/main.o' expected='cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3' actual=cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/main.o' expected=1432 actual=1432"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/unused.h' expected='3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37' actual=3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/project/unused.h' expected=13 actual=13"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.22' expected='59c721cac2713894be55192a8a86a0bf5df4f9af43492fe5e792cd4660898341' actual=59c721cac2713894be55192a8a86a0bf5df4f9af43492fe5e792cd4660898341"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.22' expected=7893 actual=7893"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.23' expected='c8d8c3d10fe6b956ce66a9e9f09118b04b1b58bce8ec1cacd34b7e34e1af7f92' actual=c8d8c3d10fe6b956ce66a9e9f09118b04b1b58bce8ec1cacd34b7e34e1af7f92"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.23' expected=10599 actual=10599"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.24' expected='91cedab957dd47c8cdca2ef3a0472af516f2c91f6138ee3e5c0692294aca7f59' actual=91cedab957dd47c8cdca2ef3a0472af516f2c91f6138ee3e5c0692294aca7f59"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.24' expected=54143 actual=54143"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.25' expected='e6f7ca5fe1da3a7fe495a95357c2104fa2da4817ae336b613ba783de39370b17' actual=e6f7ca5fe1da3a7fe495a95357c2104fa2da4817ae336b613ba783de39370b17"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.25' expected=2369 actual=2369"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.26' expected='b836369abf06e4e2d473214746def2671d0983a9e06fc6c9bdd63f8e65086566' actual=b836369abf06e4e2d473214746def2671d0983a9e06fc6c9bdd63f8e65086566"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.26' expected=10594 actual=10594"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.27' expected='528dee5619fcdeb368a078301c99e401bc56f8297cf7c54f6af27eedd72969f8' actual=528dee5619fcdeb368a078301c99e401bc56f8297cf7c54f6af27eedd72969f8"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.27' expected=9296 actual=9296"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.28' expected='a626464aace3b6235935b6a5220c78b20801553c9471cbe3a692f5ca8f2b1e16' actual=a626464aace3b6235935b6a5220c78b20801553c9471cbe3a692f5ca8f2b1e16"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.28' expected=2390 actual=2390"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.29' expected='243b120e56ab04299f3b85d9678c6d5da3bb273bfe641e47d35445c8b94a2369' actual=243b120e56ab04299f3b85d9678c6d5da3bb273bfe641e47d35445c8b94a2369"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.29' expected=12930 actual=12930"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.30' expected='a62197422c19ce71ed77aefb96fe72af9e2a64c89e1bc6e08cbb2a4e9241a4a5' actual=a62197422c19ce71ed77aefb96fe72af9e2a64c89e1bc6e08cbb2a4e9241a4a5"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.30' expected=11972 actual=11972"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.31' expected='39651b4250862ce1e978f6abd202adabecf856807131be15531802ad273018da' actual=39651b4250862ce1e978f6abd202adabecf856807131be15531802ad273018da"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/baseline-full/trace/t.31' expected=16422 actual=16422"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/full-check.json' expected='1b8d87282e085ca013be7551b7b9238ac29e15f824d882b6e95ed617baa6b601' actual=1b8d87282e085ca013be7551b7b9238ac29e15f824d882b6e95ed617baa6b601"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/full-check.json' expected=3635 actual=3635"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/incremental-check.json' expected='bd6054620ca6cf303d6506f300131923f4ee2e612e08c5a1d6c36b27e26d9933' actual=bd6054620ca6cf303d6506f300131923f4ee2e612e08c5a1d6c36b27e26d9933"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/incremental-check.json' expected=2373 actual=2373"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/incremental-report.json' expected='76a9f726c1d9d096ecb704c0e677a7b5086736393a4e5660311c32353212ffb5' actual=76a9f726c1d9d096ecb704c0e677a7b5086736393a4e5660311c32353212ffb5"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/incremental-report.json' expected=1510 actual=1510"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/base-project-checkout.log' expected='e5a380f337d9ea88dd681dc7f673ebb9684986a66a8c136beba3cffdb0fba0f4' actual=e5a380f337d9ea88dd681dc7f673ebb9684986a66a8c136beba3cffdb0fba0f4"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/base-project-checkout.log' expected=38 actual=38"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/base-project-clone.log' expected='b5afb1629840955e2817573229ddc19c134265519996e8fc064cf551b06f4571' actual=b5afb1629840955e2817573229ddc19c134265519996e8fc064cf551b06f4571"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/base-project-clone.log' expected=64 actual=64"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/base-project-resolve.log' expected='529efcc5c51512f225a9994210718156bdafc7a680a6a397d60433c412ce813e' actual=529efcc5c51512f225a9994210718156bdafc7a680a6a397d60433c412ce813e"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/base-project-resolve.log' expected=41 actual=41"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/target-project-checkout.log' expected='fa7bfb1bb3267853fac9a653e018db8476519d777774f137113d62fbafcb9d67' actual=fa7bfb1bb3267853fac9a653e018db8476519d777774f137113d62fbafcb9d67"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/target-project-checkout.log' expected=58 actual=58"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/target-project-clone.log' expected='6ba6482788647506e13fb0b0a26c2289a2a7a04e38f0f161427021a64920fc8f' actual=6ba6482788647506e13fb0b0a26c2289a2a7a04e38f0f161427021a64920fc8f"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/target-project-clone.log' expected=66 actual=66"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/target-project-resolve.log' expected='9cc71931c8b7ddbafdef6cb7c2b2d67adf5138b1862ff18198a84e145a80b4e9' actual=9cc71931c8b7ddbafdef6cb7c2b2d67adf5138b1862ff18198a84e145a80b4e9"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/logs/target-project-resolve.log' expected=41 actual=41"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/request.json' expected='42ad326b58e3eae908170d4c53b81a3e2d338cd3c5ae0a052cfcab7626d74728' actual=42ad326b58e3eae908170d4c53b81a3e2d338cd3c5ae0a052cfcab7626d74728"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/request.json' expected=370 actual=370"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/actual-graph.json' expected='0bec5f8315bfeb12c07411ad2262e9723980d2a2ff9cd56a4d798be3def579b8' actual=0bec5f8315bfeb12c07411ad2262e9723980d2a2ff9cd56a4d798be3def579b8"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/actual-graph.json' expected=1442 actual=1442"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/build-stderr.log' expected='e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' actual=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/build-stderr.log' expected=0 actual=0"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/clean-stderr.log' expected='e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' actual=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/clean-stderr.log' expected=0 actual=0"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/clean.log' expected='a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061' actual=a76da8f583000fa9357e10035a1d3064eb2b74afe0c8c102ba5850e6824ca061"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/clean.log' expected=26 actual=26"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/declared-graph.json' expected='41981cb39b2e187b7c13d5ca0e9af2b760ab4f22d93315b963a240f7ca5bd6d9' actual=41981cb39b2e187b7c13d5ca0e9af2b760ab4f22d93315b963a240f7ca5bd6d9"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/declared-graph.json' expected=1202 actual=1202"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/findings.json' expected='a2f683bd28e70d34eb06af52b40fd714f422dcd7f13a7477d53b2183bb1817df' actual=a2f683bd28e70d34eb06af52b40fd714f422dcd7f13a7477d53b2183bb1817df"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/findings.json' expected=3072 actual=3072"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/make-db.txt' expected='d8ee35dc5e61e16a9f3b68e0acaa7bd35151c66e8249bbd0436168c6fef4121c' actual=d8ee35dc5e61e16a9f3b68e0acaa7bd35151c66e8249bbd0436168c6fef4121c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/make-db.txt' expected=28138 actual=28138"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/processes.json' expected='8b55adf6898d4481d26c4d3c9106d3d23f40c56769d6067cbdd52c0512b068e6' actual=8b55adf6898d4481d26c4d3c9106d3d23f40c56769d6067cbdd52c0512b068e6"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/processes.json' expected=1184 actual=1184"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/.gitignore' expected='d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe' actual=d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/.gitignore' expected=8 actual=8"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/Dockerfile.broken' expected='493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745' actual=493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/Dockerfile.broken' expected=122 actual=122"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/Makefile' expected='9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2' actual=9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/Makefile' expected=227 actual=227"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/app' expected='046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c' actual=046d971649828a7edbea9e9b47ae60d94fa0601ea524fb5cae492eaf0fb2fd6c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/app' expected=16016 actual=16016"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/config.h' expected='ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696' actual=ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/config.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/extra.h' expected='5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c' actual=5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/extra.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/helper.c' expected='90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c' actual=90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/helper.c' expected=28 actual=28"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/helper.o' expected='961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560' actual=961fb66c8af5b2693940ee70546c54ef44408a63fab84d441fc4ac680da6e560"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/helper.o' expected=1104 actual=1104"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/main.c' expected='1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312' actual=1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/main.c' expected=132 actual=132"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/main.o' expected='cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3' actual=cf88c2521d8cc3f2a3b2c2a765cf8650204c663e820bd134be16d0a31d1583f3"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/main.o' expected=1432 actual=1432"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/unused.h' expected='3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37' actual=3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/project/unused.h' expected=13 actual=13"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.49' expected='867705cc478ce8f1fd8dd304eda37711e3215f5de8b36461e742adde5effb543' actual=867705cc478ce8f1fd8dd304eda37711e3215f5de8b36461e742adde5effb543"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.49' expected=7889 actual=7889"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.50' expected='e49ec747fb7dab992ea7ba3e64f7cfebec5d2b22dc58586c121fefa2d38620fa' actual=e49ec747fb7dab992ea7ba3e64f7cfebec5d2b22dc58586c121fefa2d38620fa"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.50' expected=10591 actual=10591"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.51' expected='5a9dfdc8fa2e8b342ebd427255904cdedaf00f46b5b9cdd84e2df85d30e93d36' actual=5a9dfdc8fa2e8b342ebd427255904cdedaf00f46b5b9cdd84e2df85d30e93d36"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.51' expected=53800 actual=53800"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.52' expected='63972ea5bdecf4ea6a4a65d05252240fd559c85c09157f1a77105361a58df945' actual=63972ea5bdecf4ea6a4a65d05252240fd559c85c09157f1a77105361a58df945"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.52' expected=2369 actual=2369"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.53' expected='81fabc3f53bbde9117da15ae3fe0b4f0d5e1373381dece5f480a87c0f4d4515c' actual=81fabc3f53bbde9117da15ae3fe0b4f0d5e1373381dece5f480a87c0f4d4515c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.53' expected=10586 actual=10586"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.54' expected='b5666e128864a4bdffa321d493e44030085092410b85ced62c6b3a9d04015b1b' actual=b5666e128864a4bdffa321d493e44030085092410b85ced62c6b3a9d04015b1b"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.54' expected=9290 actual=9290"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.55' expected='6ab2985490950839f3760119fb90988d3429f0bb4a6e03d5d3d00db929c13c12' actual=6ab2985490950839f3760119fb90988d3429f0bb4a6e03d5d3d00db929c13c12"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.55' expected=2390 actual=2390"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.56' expected='849a7c92b840cb2c8f87b3f524cb191242c46502d064cb2e309991f757cc4f57' actual=849a7c92b840cb2c8f87b3f524cb191242c46502d064cb2e309991f757cc4f57"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.56' expected=12914 actual=12914"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.57' expected='651060a2f616b9f5b6069d46c6773d290ec308c36ee0472305f04dfd6c6444e6' actual=651060a2f616b9f5b6069d46c6773d290ec308c36ee0472305f04dfd6c6444e6"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.57' expected=11959 actual=11959"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.58' expected='341b0ef399fa5a5ef69578023ce14f3952097cf7f87d715a2d9d4eaa9ebb292a' actual=341b0ef399fa5a5ef69578023ce14f3952097cf7f87d715a2d9d4eaa9ebb292a"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-full/trace/t.58' expected=16390 actual=16390"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/.gitignore' expected='d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe' actual=d7bfd39146ded6c9700eb81300e82345464db46cda1e775b8a114a811311bafe"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/.gitignore' expected=8 actual=8"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/Dockerfile.broken' expected='493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745' actual=493f94f95181dd9f4cfb8f47beeed4bfd86e3395ab354742d1d201c409a3e745"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/Dockerfile.broken' expected=122 actual=122"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/Makefile' expected='9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2' actual=9206301c23ce4cb93c3fc1434037e475cf69f53e132dc541f6028d05e30258b2"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/Makefile' expected=227 actual=227"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/config.h' expected='ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696' actual=ac32a92f4af359517c993d6e8583ea2d9b053c2ad171b4c602bc242894bd9696"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/config.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/extra.h' expected='5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c' actual=5e20ae92639ee989af5638bd0308a6a86e71bdb4345f60b962ba9db7265e4f7c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/extra.h' expected=16 actual=16"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/helper.c' expected='90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c' actual=90a60f959d215b0b91807c6dd2c94acf6684a9fe26629dc1591e9b2ea773d78c"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/helper.c' expected=28 actual=28"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/main.c' expected='1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312' actual=1e2e75d84a5a28f44438792dbb33ce888a09fad6597094d998ebaf34fa784312"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/main.c' expected=132 actual=132"
+    },
+    {
+      "name": "artifact_sha256",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/unused.h' expected='3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37' actual=3f7fec0991b34d614462e29b450c76638f07171936a12df337c578c2d1481b37"
+    },
+    {
+      "name": "artifact_bytes",
+      "passed": true,
+      "detail": "'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/target-project/unused.h' expected=13 actual=13"
+    },
+    {
+      "name": "no_shared_artifact",
+      "passed": true,
+      "detail": "shared artifacts: []"
+    },
+    {
+      "name": "stage_namespace",
+      "passed": true,
+      "detail": "stage 'full-check' artifact outside the success job: 'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/full-check.json'"
+    },
+    {
+      "name": "stage_namespace",
+      "passed": true,
+      "detail": "stage 'incremental-check' artifact outside the success job: 'artifact://job-525d2fd6092b437ea3f6d0d7b3b0b331/incremental-check.json'"
+    }
+  ]
+}
