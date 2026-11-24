@@ -1,0 +1,4 @@
+buildchecker port=18081 body={"status": "ok", "role": "buildchecker"}
+echecker port=18082 body={"status": "ok", "role": "echecker"}
+draft port=18083 body={"status": "ok", "role": "draft"}
+mdfixer port=18084 body={"status": "ok", "role": "mdfixer"}

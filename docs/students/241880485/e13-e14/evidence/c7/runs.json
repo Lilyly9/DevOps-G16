@@ -1,0 +1,29 @@
+{
+  "e13-c7-a1-01-failed": {
+    "status": "FAILED",
+    "job_id": "job-fce3110d7c4b483cac106e2e343d6216",
+    "trace_id": "trace-60cc0fe449654d278bcf8922c9dc2499",
+    "artifacts": 2,
+    "error": {
+      "code": "COMMAND_FAILED",
+      "message": "git failed; see base-project-resolve.log"
+    }
+  },
+  "e13-c7-a1-01-success": {
+    "status": "SUCCEEDED",
+    "job_id": "job-802afa939103438da815537d7d93fb5b",
+    "trace_id": "trace-69276f4cc0754138b393bf02604ba886",
+    "artifacts": 235,
+    "error": null
+  },
+  "e13-c7-a1-02-timeout": {
+    "status": "FAILED",
+    "job_id": "job-434f0696e4654f1f8335bb1e03f49a27",
+    "trace_id": "trace-e3bde1f7b74e446b9e01b826a74a0459",
+    "artifacts": 48,
+    "error": {
+      "code": "DRAFT_FAILED",
+      "message": "Docker client command exceeded 0.01s"
+    }
+  }
+}

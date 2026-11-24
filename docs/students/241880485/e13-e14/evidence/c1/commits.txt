@@ -1,0 +1,10 @@
+5ef9d829e2f893af23f60399dcb67095800d121e
+e7414083c4f1760cb234f96a9d75f2d0255e3f57
+ projects/transfer-eta/Dockerfile.broken    |  2 +-
+ projects/transfer-eta/README.md            |  8 ++++++--
+ projects/transfer-eta/candidate.Dockerfile |  2 +-
+ projects/transfer-eta/defaults.h           |  6 ++++++
+ projects/transfer-eta/e12-profile.json     | 18 ++++++++++++++++++
+ projects/transfer-eta/eta_cli.c            | 10 ++++++----
+ projects/transfer-eta/tests/smoke.sh       |  6 +++++-
+ 7 files changed, 43 insertions(+), 9 deletions(-)

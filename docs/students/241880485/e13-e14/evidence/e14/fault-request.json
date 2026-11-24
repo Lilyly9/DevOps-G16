@@ -1,0 +1,9 @@
+{
+  "mode": "e12",
+  "repo": "/course/data/e13-mirror/repo",
+  "base": "a7ae98c4bc5d6ff9ddec1849d7c0aa4712027af9",
+  "target": "dc9390c18168d602c4ab5824c25fffa8dcdcd069",
+  "candidate": "/course/data/e13-mirror/candidate.Dockerfile",
+  "expected_output": "1",
+  "build_timeout": 0.01
+}

@@ -45,6 +45,10 @@ def git(root, *args):
     return subprocess.CompletedProcess(
         p.args, p.returncode,
         p.stdout.decode("utf-8", "replace"), p.stderr.decode("utf-8", "replace"))
+    # History from older stages contains GBK paths and binary-ish diffs; decode
+    # with replacement so one undecodable byte cannot abort the whole scan.
+    return subprocess.run(["git", "-C", str(root), *args], capture_output=True,
+                          text=True, errors="replace")
 
 
 def files(root):
