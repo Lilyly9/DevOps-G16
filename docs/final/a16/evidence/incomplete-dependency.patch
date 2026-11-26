@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -6,7 +6,7 @@
+ eta_cli.o: eta_cli.c estimate.h
+ 	gcc $(CFLAGS) -c eta_cli.c -o eta_cli.o
+ 
+-estimate.o: estimate.c estimate.h
++estimate.o: estimate.c estimate.h defaults.h
+ 	gcc $(CFLAGS) -c estimate.c -o estimate.o
+ 
+ .PHONY: clean test

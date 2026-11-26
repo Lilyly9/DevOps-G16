@@ -1,0 +1,31 @@
+{
+  "job_id": "job-e09ab924d5124512ae377dbed2022147",
+  "trace_id": "trace-425e9c2f38c2464badbbde94f855e443",
+  "base": "5ef9d829e2f893af23f60399dcb67095800d121e",
+  "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "digest_count": 235,
+  "draft_image_id": "sha256:a067d9aa36300e124c8cc0f164d21abb2f428cf2fafbd8bdb9c0713eaa140b40",
+  "draft_execution_records": [
+    "baseline-full/build-execution.json",
+    "baseline-full/clean-execution.json",
+    "baseline-scan/01-gcc.json",
+    "baseline-scan/02-gcc.json",
+    "baseline-scan/03-gcc.json",
+    "final-full/build-execution.json",
+    "final-full/clean-execution.json",
+    "target-full/build-execution.json",
+    "target-full/clean-execution.json",
+    "target-scan/01-gcc.json",
+    "target-scan/02-gcc.json",
+    "target-scan/03-gcc.json",
+    "validation/execution/01-make.json",
+    "validation/execution/02-make.json",
+    "validation/execution/03-make.json",
+    "validation/execution/04-transfer-eta.json",
+    "validation/execution/05-make.json",
+    "validation/execution/06-transfer-eta.json",
+    "validation/execution/07-gcc.json",
+    "validation/execution/08-gcc.json",
+    "validation/execution/09-gcc.json"
+  ]
+}

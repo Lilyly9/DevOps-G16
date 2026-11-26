@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-11-26T15:16:57.840285+00:00",
+  "role": "echecker",
+  "job_id": "job-b9fc7601653f48d4a5c2598f9edf6efb",
+  "trace_id": "trace-897b777e186842efb346a99da4d271c2",
+  "stage_response": "incremental-response.json",
+  "event": "call_failed",
+  "error_code": "DOWNSTREAM_UNAVAILABLE",
+  "reason": "<urlopen error [Errno 111] Connection refused>",
+  "duration_ms": 1
+}

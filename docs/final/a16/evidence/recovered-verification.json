@@ -1,0 +1,14 @@
+{
+  "job_id": "job-b8b3d2107a4b49559ecf49537f59447c",
+  "trace_id": "trace-abee2ba1a9ef40c7b66648368dc557ba",
+  "target": "e7414083c4f1760cb234f96a9d75f2d0255e3f57",
+  "report_sha256": "fa2beb326f1a152e6152a386f9a87031c71ede73dbb92a31f80cbfbdc104dec4",
+  "artifact_count": 189,
+  "stages": [
+    "draft",
+    "full-check",
+    "incremental-check",
+    "repair",
+    "recheck"
+  ]
+}

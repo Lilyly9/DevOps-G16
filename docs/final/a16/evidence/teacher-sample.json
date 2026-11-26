@@ -1,0 +1,46 @@
+{
+  "timeout": {
+    "passed": true,
+    "case": "timeout",
+    "status": "TIMED_OUT",
+    "job_id": "job-5e7b15145b1a4e43b5e835993d4456a2",
+    "trace_id": "trace-da6b0df605d24244987722238983efdc",
+    "attempts": 3,
+    "duration_ms": 7006,
+    "error_code": "DOWNSTREAM_TIMEOUT",
+    "archive_member": "work/timeout-20261126T151530Z-b374a3/check.json"
+  },
+  "down": {
+    "passed": true,
+    "case": "down",
+    "status": "FAILED",
+    "job_id": "job-e65548701b984a4aaf358b670dc26da4",
+    "trace_id": "trace-6f68f5a4b76a46709b998f09cad9cbad",
+    "attempts": 3,
+    "duration_ms": 1003,
+    "error_code": "DOWNSTREAM_UNAVAILABLE",
+    "archive_member": "work/down-20261126T151523Z-d9141d/check.json"
+  },
+  "recovered": {
+    "passed": true,
+    "case": "recovered",
+    "status": "SUCCEEDED",
+    "job_id": "job-58f8fa8312df4a00b4e635962a78f934",
+    "trace_id": "trace-19fd8dd2540b41fc83ff88c4e63a400b",
+    "attempts": 1,
+    "duration_ms": 2,
+    "error_code": null,
+    "archive_member": "work/recovered-20261126T151530Z-c78fe1/check.json"
+  },
+  "normal": {
+    "passed": true,
+    "case": "normal",
+    "status": "SUCCEEDED",
+    "job_id": "job-f3dceb8221c741daa60d04d960f0e066",
+    "trace_id": "trace-34fd80931f604e0290ab91ee98168e4e",
+    "attempts": 1,
+    "duration_ms": 20,
+    "error_code": null,
+    "archive_member": "work/normal-20261126T151516Z-964e3c/check.json"
+  }
+}

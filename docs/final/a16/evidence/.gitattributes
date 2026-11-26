@@ -1,0 +1,2 @@
+# Preserve the original patch, including context lines and Make recipe tabs.
+*.patch -text whitespace=-blank-at-eol,-space-before-tab

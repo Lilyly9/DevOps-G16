@@ -1,0 +1,34 @@
+{
+  "uid": "a16-microservice-real",
+  "title": "A16 transfer-eta",
+  "schemaVersion": 39,
+  "timezone": "browser",
+  "time": {"from": "now-15m", "to": "now"},
+  "refresh": "5s",
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "实际下游健康探测",
+      "datasource": {"type": "prometheus", "uid": "a16-prometheus"},
+      "gridPos": {"x": 0, "y": 0, "w": 24, "h": 8},
+      "targets": [{"refId": "A", "expr": "a16_role_ready", "legendFormat": "{{role}}"}]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "E14 终态任务计数",
+      "datasource": {"type": "prometheus", "uid": "a16-prometheus"},
+      "gridPos": {"x": 0, "y": 8, "w": 12, "h": 8},
+      "targets": [{"refId": "A", "expr": "a16_jobs_total", "legendFormat": "{{status}}"}]
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "E14 平均任务耗时（秒）",
+      "datasource": {"type": "prometheus", "uid": "a16-prometheus"},
+      "gridPos": {"x": 12, "y": 8, "w": 12, "h": 8},
+      "targets": [{"refId": "A", "expr": "a16_job_duration_seconds_sum / a16_job_duration_seconds_count", "legendFormat": "{{status}}"}]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+services:
+  telemetry:
+    image: ${E14_IMAGE:?set E14_IMAGE}
+    pull_policy: never
+    user: "0:0"
+    command: [python3, /observe.py, serve, /observations]
+    volumes:
+      - ${FINAL_CONFIG:?set FINAL_CONFIG}/observe.py:/observe.py:ro
+      - ${FINAL_CONFIG:?set FINAL_CONFIG}/observations:/observations:ro
+  prometheus:
+    image: ${PROMETHEUS_IMAGE:?set PROMETHEUS_IMAGE}
+    pull_policy: never
+    ports:
+      - 127.0.0.1:${FINAL_PROM_PORT:?set FINAL_PROM_PORT}:9090
+    volumes:
+      - ${FINAL_CONFIG:?set FINAL_CONFIG}/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+  grafana:
+    image: ${GRAFANA_IMAGE:?set GRAFANA_IMAGE}
+    pull_policy: never
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?generate a deployment password}
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+    ports:
+      - 127.0.0.1:${FINAL_GRAFANA_PORT:?set FINAL_GRAFANA_PORT}:3000
+    volumes:
+      - ${FINAL_CONFIG:?set FINAL_CONFIG}/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ${FINAL_CONFIG:?set FINAL_CONFIG}/grafana/dashboards:/var/lib/grafana/dashboards:ro
